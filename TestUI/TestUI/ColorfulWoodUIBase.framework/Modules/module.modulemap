@@ -1,0 +1,6 @@
+framework module ColorfulWoodUIBase {
+  umbrella header "ColorfulWoodUIBase.h"
+
+  export *
+  module * { export * }
+}
