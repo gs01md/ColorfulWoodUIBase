@@ -7,7 +7,7 @@
 //
 
 #import "CWUBLeftImgFollowTitleRightImgRightTitle.h"
-#import <Masonry.h>
+#import "Masonry.h"
 
 @implementation CWUBLeftImgFollowTitleRightImgRightTitle
 

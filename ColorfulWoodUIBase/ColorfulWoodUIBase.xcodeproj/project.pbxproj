@@ -456,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7875220E2342C6B274D50122 /* Pods-ColorfulWoodUIBase.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -476,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DEB4151D44F5ED334A416C9 /* Pods-ColorfulWoodUIBase.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";

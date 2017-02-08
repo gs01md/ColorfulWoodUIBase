@@ -7,7 +7,7 @@
 //
 
 #import "CWUBViewBase.h"
-#import <Masonry.h>
+#import "Masonry.h"
 
 @implementation CWUBViewBase
 
