@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ColorfulWoodUIBase"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "User Interface Design."
 
   s.homepage     = "https://github.com/gs01md"
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "ColorfulWoodUIBase/ColorfulWoodUIBase/**/*"
 
-  s.platform     = :ios
+  s.platform     = :ios, "8.0"
 
   s.frameworks   = 'UIKit'
 
