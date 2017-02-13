@@ -20,10 +20,12 @@
 #define CWUBDefineDeviceHeight [UIScreen mainScreen].bounds.size.height
 #define CWUBDefineSViewWidth self.bounds.size.width
 #define CWUBDefineSViewHeight self.bounds.size.height
-#define CWUBDefineScreen_Frame (CGRectMake(0, 0 ,kDeviceWidth,kDeviceHeight))
+#define CWUBDefineSViewControllerWidth self.view.bounds.size.width
+#define CWUBDefineSViewControllerHeight self.view.bounds.size.height
+#define CWUBDefineScreen_Frame (CGRectMake(0, 0 ,CWUBDefineDeviceWidth,CWUBDefineDeviceHeight))
 
 
-#define CWUBDefineScaleFrom_iPhone6s_Desgin(_X_) (_X_ * (kDeviceWidth/375))
+#define CWUBDefineScaleFrom_iPhone6s_Desgin(_X_) (_X_ * (CWUBDefineDeviceWidth/375))
 
 /**
  * 创建颜色
