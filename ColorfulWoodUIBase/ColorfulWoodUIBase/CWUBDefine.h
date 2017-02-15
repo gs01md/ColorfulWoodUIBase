@@ -39,6 +39,11 @@
 #define CWUBDefineColorTitle CWUBDefineCreate_Color(0, 0, 0, 1)
 #define CWUBDefineColorContent CWUBDefineCreate_Color(0, 0, 0, 0.7)
 
+#define CWUBDefineMargin 10.
+#define CWUBDefineHeightTextField 35.
+#define CWUBDefineHeightButton 40.
+#define CWUBDefineColorLine [UIColor grayColor]
+
 #define CWUBDefineLog NSLog(@"\n %s:%d \n\n", __func__, __LINE__)
 
 #endif /* CWUBDefine_h */
