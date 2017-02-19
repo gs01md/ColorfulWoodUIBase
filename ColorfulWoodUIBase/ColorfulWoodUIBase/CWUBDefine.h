@@ -11,8 +11,8 @@
 
 #define CWUBDefine_leftMargin 10.
 #define CWUBDefine_rightMargin 10.
-#define CWUBDefine_topMargin 10.
-#define CWUBDefine_bottomMargin 10.
+#define CWUBDefine_topMargin 2.
+#define CWUBDefine_bottomMargin 2.
 
 #define CWUBDefineKeyWindow [UIApplication sharedApplication].keyWindow
 
