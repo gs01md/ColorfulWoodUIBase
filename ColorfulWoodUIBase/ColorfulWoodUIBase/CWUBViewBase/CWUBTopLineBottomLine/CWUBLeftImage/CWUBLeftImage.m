@@ -36,7 +36,7 @@
     [self addSubview:self.m_imgLeft];
     [_m_imgLeft mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.height.equalTo(self.mas_height).multipliedBy(8./10.);
+        make.height.equalTo(self.mas_height).multipliedBy(5./10.);
         make.centerY.equalTo(self);
         make.left.equalTo(self).offset(CWUBDefine_leftMargin);
         make.width.equalTo(_m_imgLeft.mas_height);
