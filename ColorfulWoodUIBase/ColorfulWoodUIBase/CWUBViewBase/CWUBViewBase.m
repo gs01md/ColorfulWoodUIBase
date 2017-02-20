@@ -34,8 +34,6 @@
 
 - (void) initWidgetCWUBViewBase{
     
-    CWUBDefineLog;
-    
     [self addTapGesture];
     
 }

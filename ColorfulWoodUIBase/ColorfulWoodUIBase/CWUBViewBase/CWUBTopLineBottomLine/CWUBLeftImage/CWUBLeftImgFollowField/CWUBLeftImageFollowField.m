@@ -34,13 +34,11 @@
 
 - (void)initWidgetCWUBLeftImageFollowField{
     
-    CWUBDefineLog;
-    
     [self addSubview:self.m_txtFieldContent];
     [_m_txtFieldContent mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self).offset(CWUBDefine_topMargin);
-        make.bottom.equalTo(self).offset(-CWUBDefine_bottomMargin);
+        make.height.equalTo(self.mas_height).multipliedBy(8./10.);
+        make.centerY.equalTo(self);
         make.left.equalTo(self.m_imgLeft.mas_right).offset(CWUBDefine_leftMargin);
         make.right.equalTo(self).offset(-CWUBDefine_rightMargin);
         

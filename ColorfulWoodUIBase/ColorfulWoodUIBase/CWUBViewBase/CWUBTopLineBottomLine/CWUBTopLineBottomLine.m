@@ -33,8 +33,6 @@
 
 - (void) initWidgetCWUBTopLineBottomLine{
     
-    CWUBDefineLog;
-    
     [self addSubview:self.m_imgTop];
     [_m_imgTop mas_makeConstraints:^(MASConstraintMaker *make) {
         

@@ -8,10 +8,13 @@
 
 #import "ViewController.h"
 #import "ColorfulWoodUIBase/ColorfulWoodUIBase.h"
+#import <Masonry.h>
 
 @interface ViewController ()<
 CWUBViewBaseDelegate
 >
+
+@property(nonatomic,strong)CWUBLeftImageFollowField * m_field;
 
 @end
 
@@ -20,13 +23,15 @@ CWUBViewBaseDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    CWUBLeftImageFollowTitle * vc = [[CWUBLeftImageFollowTitle alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 50)];
-//    vc.delegate = self;
-//    vc.m_imgBottom.backgroundColor = [UIColor redColor];
-//    vc.m_imgTop.backgroundColor = [UIColor blueColor];
-//    vc.m_labelContent.text = @"222222";
-//    [self.view addSubview:vc];
-//    vc.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:self.m_field];
+    [_m_field mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.top.equalTo(self.view);
+        make.height.equalTo(@(100));
+    }];
+    
 }
 
 
@@ -39,6 +44,15 @@ CWUBViewBaseDelegate
 }
 
 
-
+- (CWUBLeftImageFollowField*)m_field{
+    
+    if (!_m_field) {
+        _m_field = [CWUBLeftImageFollowField new];
+        _m_field.layer.borderColor = [UIColor grayColor].CGColor;
+        _m_field.layer.borderWidth = 1.;
+    }
+    
+    return _m_field;
+}
 
 @end
