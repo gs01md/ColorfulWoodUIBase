@@ -43,6 +43,7 @@
 #define CWUBDefineHeightTextField 35.
 #define CWUBDefineHeightButton 40.
 #define CWUBDefineColorLine [UIColor grayColor]
+#define CWUBDefineColorBackGround CWUBDefineCreate_Color(240,239,245,1)
 
 #define CWUBDefineLog NSLog(@"\n %s:%d \n\n", __func__, __LINE__)
 
