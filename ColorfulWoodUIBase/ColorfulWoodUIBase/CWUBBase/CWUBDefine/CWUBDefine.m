@@ -7,7 +7,7 @@
 //
 
 #import "CWUBDefine.h"
-#import <UIColor+Hex.h>
+#import <ColorfulWoodCategories/UIColor+Hex.h>
 
 @implementation CWUBDefine
 
