@@ -8,4 +8,6 @@
 
 #import "CWUBWoodUIBaseDemo.h"
 
+@implementation CWUBWoodUIBaseDemo
 
+@end

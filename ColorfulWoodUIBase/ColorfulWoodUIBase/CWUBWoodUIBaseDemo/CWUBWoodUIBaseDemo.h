@@ -15,7 +15,7 @@
 @property(nonatomic, strong)CWUBModel * m_dataView;
 - (CWUBModel*)interface_transToViewData;
 @end
-
+/*
 @implementation CWUBWoodUIBaseDemo
 
 #pragma mark - 属性
@@ -54,7 +54,7 @@
 
 }
 
-/*
+
 #pragma mark - 代理 tableview
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
