@@ -10,7 +10,7 @@
 #import "CWUBModelBase.h"
 #import <Masonry/Masonry.h>
 #import "CWUBDefine.h"
-#import <UIColor+Hex.h>
+#import <ColorfulWoodCategories/UIColor+Hex.h>
 
 @interface CWUBCellBase : UITableViewCell
 
