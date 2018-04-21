@@ -4,41 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/CWUBDefine.h</key>
-		<data>
-		vwmBxVMqQOh25ynGE19W6OUsVHg=
-		</data>
-		<key>Headers/CWUBLeftImage.h</key>
-		<data>
-		gzx/L2FIQzxSpD8mTxtHhwQnAHc=
-		</data>
-		<key>Headers/CWUBLeftImageFollowField.h</key>
-		<data>
-		mYYkuI5bXmNfMg2+SY76iqb/2oM=
-		</data>
-		<key>Headers/CWUBLeftImageFollowTitle.h</key>
-		<data>
-		eYspkBVX2q778UjlHWWEG+ufxbk=
-		</data>
-		<key>Headers/CWUBLeftImgFollowTitleRightImgRightTitle.h</key>
-		<data>
-		r1nvHpMtbMzHD130UOoBtCwjACM=
-		</data>
-		<key>Headers/CWUBTopLineBottomLine.h</key>
-		<data>
-		OCAN8C6r1g9g7nwY7O2Kmlk9NW4=
-		</data>
-		<key>Headers/CWUBViewBase.h</key>
-		<data>
-		HEUWv2fiWUxOskZEQJKgU+fQeI0=
-		</data>
 		<key>Headers/ColorfulWoodUIBase.h</key>
 		<data>
-		Iy+CkTt2W9TelMHoCHdWzGbW70E=
+		8IZ5l8WYPOT+ipash8hXjTH8xQM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LEkQmsVvW63RKJMqIwFk0t2UZUo=
+		quhusnXbDyZbxGGGXhqO3wsi2/0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,92 +19,15 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/CWUBDefine.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vwmBxVMqQOh25ynGE19W6OUsVHg=
-			</data>
-			<key>hash2</key>
-			<data>
-			5rqurCjMzPR8EZkY5+g3E/IchuibK8oIQB1CB7XoPLs=
-			</data>
-		</dict>
-		<key>Headers/CWUBLeftImage.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			gzx/L2FIQzxSpD8mTxtHhwQnAHc=
-			</data>
-			<key>hash2</key>
-			<data>
-			4ksUkWoU9Ix3CU4gg21o95GUg2wtGIKq6fbE7zADY04=
-			</data>
-		</dict>
-		<key>Headers/CWUBLeftImageFollowField.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mYYkuI5bXmNfMg2+SY76iqb/2oM=
-			</data>
-			<key>hash2</key>
-			<data>
-			4wOdn71JtyV9iSeoRNsvEUkRWqO+aX+gyr4a6Xl99wY=
-			</data>
-		</dict>
-		<key>Headers/CWUBLeftImageFollowTitle.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eYspkBVX2q778UjlHWWEG+ufxbk=
-			</data>
-			<key>hash2</key>
-			<data>
-			sCt0Bktbr+961uMo6FTzlq3RXw39z62kxEXd4/R/6k8=
-			</data>
-		</dict>
-		<key>Headers/CWUBLeftImgFollowTitleRightImgRightTitle.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			r1nvHpMtbMzHD130UOoBtCwjACM=
-			</data>
-			<key>hash2</key>
-			<data>
-			+M0brHPvRTyzXtroGfLnF2e9E/pWun7qhkLmVK5ehag=
-			</data>
-		</dict>
-		<key>Headers/CWUBTopLineBottomLine.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OCAN8C6r1g9g7nwY7O2Kmlk9NW4=
-			</data>
-			<key>hash2</key>
-			<data>
-			VxioBvgYlI7Wi0DnwPATx+5GwzZ58o4iInpKxt86dQM=
-			</data>
-		</dict>
-		<key>Headers/CWUBViewBase.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HEUWv2fiWUxOskZEQJKgU+fQeI0=
-			</data>
-			<key>hash2</key>
-			<data>
-			4SRzbQ8J8Xyxk0bUKKcE99vybi3dVB3xpFj+IgJNI0Q=
-			</data>
-		</dict>
 		<key>Headers/ColorfulWoodUIBase.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Iy+CkTt2W9TelMHoCHdWzGbW70E=
+			8IZ5l8WYPOT+ipash8hXjTH8xQM=
 			</data>
 			<key>hash2</key>
 			<data>
-			ucKKa8w+6GAjUqYZ0/yPxjtR1+T+pB4QBhZjIe8cUZ8=
+			gJ1nNuIBxTjM4nKUWKiYvlwlJr9SFUADoMiTKqG4uwc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

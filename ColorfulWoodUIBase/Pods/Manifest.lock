@@ -1,12 +1,15 @@
 PODS:
-  - Masonry (1.0.2)
+  - ColorfulWoodCategories (1.0.10)
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - ColorfulWoodCategories
   - Masonry
 
 SPEC CHECKSUMS:
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  ColorfulWoodCategories: b4b981a492dc40e266da8c56860f3192e39177c9
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 968f3b7d8ef19ccccd549acd93977e014c1ce732
+PODFILE CHECKSUM: 91cb26c32b6a08ce078746143172a8dfbf69dd93
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0
