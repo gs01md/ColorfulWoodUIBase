@@ -429,4 +429,14 @@
 
     return _m_margin_topOrBottom;
 }
+
+- (float) m_margin_leftOrRight{
+
+    if (!_m_margin_leftOrRight ||
+        _m_margin_leftOrRight <= 0.) {
+        _m_margin_leftOrRight = CWUBBaseViewConfig_Space_Side_Horizontal;
+    }
+
+    return _m_margin_leftOrRight;
+}
 @end

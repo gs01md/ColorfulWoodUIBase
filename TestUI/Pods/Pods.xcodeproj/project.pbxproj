@@ -7,163 +7,587 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01E09711F001C49F92A97060414E262B /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 475326F2A929CD1AFFB74850961F32C0 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14B65CE3038761FA8F6F5D1ECED6A562 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8229525E7067F22D3977D2628DF5F2C3 /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1AF513D8D71B663D5422760106B13723 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F937BDEB8DF93A08D20C5355C0FDB5C /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1EC363D6911160B063DB6CC87F595A5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
-		1F3BD3BC28432BB5E2F73501E06E4579 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1321572A3ED9C894C94A131BE29B81B2 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24BE4028F5C16242C4FF1EA91F61CE60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		466869E41EB306F74C8A6E87CC1539BF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CED739CF35B6D0A1D95AE17D712A7F /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		490CA524521F7D444EA58FA915D7E99C /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B179F4D3D34A3CE25A698B8D9AC9D6C2 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49B903D576E09560C52AA92FDCC31A68 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0384F145CF471A951BA8E9486AD626 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CBE1B46550A3FB90FDD1CB9CBA7B7FE /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E2395DA2EBCF6241A0DA0E1859FF45 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		548BBD5B63FA097F419829C3EE8EA068 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC2A09AC3DCD0E4A3D268DAABC5135 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		566EA65277D377CE9AF9BC125521965B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
-		5B46C39A3F939EDB676981756CC24007 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A231E76AF7DC6CB887B5B2C522A7A /* Masonry-dummy.m */; };
-		61C611ABFFC5FFF35ACE70883CB8F523 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 807FFD255E8235D5B42FE078299B5F1B /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6249770A7D163B0F3001D5A76C5FA01C /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 3162AC8E29FA7F3BF0D8641F7F4D9B60 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86EE1CB5473A4A07081D8DE3A2C45924 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E7E17DB5590A8C4D9625D67E6FBD243 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		983CB852CBBFBC04C2A6BA407E34F59B /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A9F610CB90E57B81F8F7DCA2176E0FD /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9934AEA2C891C201D8ED5746FF42FE1B /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E158FC65C5404E098F16E26F478DA504 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99E00D593F76D7E6C96300345E211282 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AB44751192F0AA8DA5F75A06138D15 /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A6436E3CFFCBFE591E2D2A68ED90CAC6 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B48867DE203BCF3BB3DFCAB8FDC7516B /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A83991D7C1373DF66020C2FDFC5D7564 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 043FB94CF93050E20D8E4C071ACFA5D2 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B953667D411D1DCD919CBD314F568A92 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C762C4F3A304C10AF7EBEA6AAA8508A0 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C88F85D3200060BD98FC13EA58121706 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FA891F8E85C079B4FB101DDD5BC7A477 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEF7E139022FFA4F5C99D4DC5DE67990 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F28AEAAF722BC62BF5B37D6663BBC2 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D133AEF310D6BD288F84EAF7D57F4E1B /* Pods-TestUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8890A49C264A36CAB33AF69A6EF761F /* Pods-TestUI-dummy.m */; };
-		D8D72BEC4364E9F77BCC6B8AB4E30DF3 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C02266037F030E22468AC86802DB57 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E072DA57403C4BFF9B10467BE05604C5 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FBE23E70FF64ACC81816A368E171B903 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1E771349813022263F549BDF33CB4BB /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 915A6FF0E04F5A5C0ACDE0E32BD2F193 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC48DE078CA5E55922CCE02354D475CD /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 780A86CEB0A0131C88BE12414D500734 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F390D582745DF3516ADD4D910A2ACFFA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EC6EDDDD3E503C5B2E967D3FEECFEB /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		00E365BE2871BD9E0C16F03A02908296 /* CWUBCell_TitleLeft_InfoRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 88785EA5E02E3FAAEFBC5AECC1E5BA07 /* CWUBCell_TitleLeft_InfoRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		02641D1D9A6ADC8078963070A40CF911 /* CWUBCell_TitleLeft_InputLeft.h in Headers */ = {isa = PBXBuildFile; fileRef = C14471D7902C3D05CADDA7F783A612F6 /* CWUBCell_TitleLeft_InputLeft.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		029B4B0D9D9AA3C088405E7F91049172 /* CWUBDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = FD665FE21A3C959A918D10B7C40869B5 /* CWUBDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		045ED6807AB9CC8303D8B19DEA1524CF /* CWUBCell_TitleLeft_InfoRight.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E5173B1F44FC9E28A59FB8A011E1B4 /* CWUBCell_TitleLeft_InfoRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05F002A87F334588DD7B6B50AEBAE9C9 /* CWUBCell_ButtonRight_SpaceBottom_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D09E65CB362B9D747AF62B815B69D9 /* CWUBCell_ButtonRight_SpaceBottom_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		08B36919B66CA1B499F5A2EDF8FEFDFB /* ColorfulWoodCategories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 087743D28C71AC8EC7074DD99CDDB405 /* ColorfulWoodCategories-dummy.m */; };
+		08DBC7159C4574BA767DF3132A199411 /* CWUBCell_CharterDiscount_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2CDB820BD92AEF4A3C39C340733BB3 /* CWUBCell_CharterDiscount_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0948736DF3CA076DE4A8F1CF7F9631AA /* CWUBLabelWithModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 11204C561FAA9AD45D0867F7593354C4 /* CWUBLabelWithModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		095B9024027BCB495FFDDBE44D4F3C24 /* CWUBCell_Trip_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CCC37983DA69760E3DC4421D1C9471 /* CWUBCell_Trip_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0A9BB2450A527BC3356DB67D6396BE5F /* UIImage+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = BC7AFE47A4A75E66B4DD9572AEDF6F41 /* UIImage+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0BCEFCC8AC72D4F6156EBAF104393320 /* CWUBCell_Address_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = CCD32ABEC95CFAA84E0502371A8F8266 /* CWUBCell_Address_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0DE73A0D52D1B6EA31A6801B52872D5D /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1528FA3E579D6562BC7EA06B12E8EB11 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0E45D948AC894939126D212B7033BD16 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F594C1E8EBA05ADB41FCDB0390B17815 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0EDC1D8AA253FE7978DBEED43282542B /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 0675CF28F9A5A2F77FFB947A7801F1A9 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0FDD7F88D2C3ECAEA1F5BDC7F9F4D309 /* CWUBCell_TitleRight_ButtonRight.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5E8668E8F76C244425BB593FBE0CB8 /* CWUBCell_TitleRight_ButtonRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		125C8EFBDF159C65C1B290E67375FAE0 /* CWUBCell_Refund_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D973E6B40D763B7B401328F60B220EB /* CWUBCell_Refund_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1568A98425F087FDC2803F822650772B /* CWUBCell_TitleLeft_InfoLeft_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF5F3BA6099D35EA76AF42830A1818A /* CWUBCell_TitleLeft_InfoLeft_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		169832129B5FC9CDADDDA467D8AA1978 /* CWUBCell_CharterDiscount_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F93B596753CC075D9E2A1723C2540B6 /* CWUBCell_CharterDiscount_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		18C4B3580C05187CAD13D67FB5FCBA69 /* CWUBCell_TitleLeft_InfoLeft.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E38C5AE1060A35A9456E14DBF75DE38 /* CWUBCell_TitleLeft_InfoLeft.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		19887CA12C8604D732905AC8FD44B38D /* CWUBCell_CharterDetail_Opt.h in Headers */ = {isa = PBXBuildFile; fileRef = D95F24D035FFCC5071037D2AB9E297E2 /* CWUBCell_CharterDetail_Opt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1A4F2AD2D1DBFCC4C7DCEE180F41510A /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EB6DE24777B4BCB9DE8BF0750214C0 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1A9965ACA650F29226C04CE457C8855E /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h in Headers */ = {isa = PBXBuildFile; fileRef = CBF008FE59084F0A5718545E56DEA715 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B87F98FF0EC7524499A1C8B9451FF97 /* Pods-TestUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8890A49C264A36CAB33AF69A6EF761F /* Pods-TestUI-dummy.m */; };
+		1C1AF3FDD2D38BA058162CB52708E52B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BE030E555FAC3221D8DF2331058C4B /* UIColor+Hex.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1DB45CFE12259DC8A3BC30DAC57B1F1A /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = AFC49DE28C848A2AB46E4B39935D1B47 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1F7F9064A17C9CBD3688F7BEAF48672C /* CWUBCell_Passenger_Opt.h in Headers */ = {isa = PBXBuildFile; fileRef = 45E319EE4BFF80196ADD0D364DFF699E /* CWUBCell_Passenger_Opt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		25E84E3328395B183D31F2F9B99B4509 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		2886F744E841B5F5FCC12BA6C671C27F /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 39464D74BDD7A8D791AB763A644A8406 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2995FCE6609BB34B4847F1A171868CF5 /* NSString+ColorfulWoodRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = DA39AA3149D84FEDD22D6643A23F98A3 /* NSString+ColorfulWoodRegex.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2DF99F8C5F542F33C6FD0835A163F5CB /* CWUBCell_Passenger_Delete_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = B755DE2398910A1261019A9BB5B2DAB0 /* CWUBCell_Passenger_Delete_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2E1D47713DC536C3BE4EF4C4F1DC94D2 /* UIViewController+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F9560BD1AFD82E6503682A4F7C33FC /* UIViewController+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F049D5DF9F99B4921F48025D17FCD85 /* CWUBCell_ButtonRight_TitleRight_ButtonRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 377389B3F86FCEF5B872397B694415B1 /* CWUBCell_ButtonRight_TitleRight_ButtonRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		31111BB5F3882C6BE137F209D5A65684 /* CWUBCell_Passenger_Opt_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 51C2C0811F5B6C8B2F023F1B97B5551F /* CWUBCell_Passenger_Opt_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		33E1295FDB2B61E62ACA4F91B64BF438 /* CWUBCell_TitleLeft_InfoRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC22D2DCE5F3A35292C716FA4C8875E /* CWUBCell_TitleLeft_InfoRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		35F652976673E60DC096445004FB3093 /* CWUBCell_ButtonLeft_TitleLeft_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4837B69FFA33E60B8D937760E38E51 /* CWUBCell_ButtonLeft_TitleLeft_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3812036C7A4CCAC939BB150814445A57 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 25062CCAB577668410EA57AEF8028A77 /* Info.plist */; };
+		38DD7E1E0AF812DDC749FD9BB9F7E127 /* CWUBCellType.h in Headers */ = {isa = PBXBuildFile; fileRef = 068AC2675BBE45ECD60E01DFE4218DF7 /* CWUBCellType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3B357A1DCB8B2C5D57BE2B7896884A53 /* CWUBCell_CharterDetail_Opt.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CCC115C62441D2B3BCA97D76504E04 /* CWUBCell_CharterDetail_Opt.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		438A1E150E6967D7956547CA60EF1CF7 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7956D19CA7F7C407D1902FAFBBD1E5 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4527A34CEEA6BFBE8685A80EAF320C67 /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C93D97AAD603B998E138E02A0F9C10F /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46087C333188CDE8FD8DC618E37AA52B /* CWUBTextfieldWithModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E5DA33E7EF22E0351A36E205D572DF /* CWUBTextfieldWithModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4750D39B2E9D22A6C3CA1BA06952DF0D /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A7E46D94C7E4D78DAFB2BB02C53EEB /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		49DEC2DC8D66BC2D462016484D6854F2 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D63689D750814ACCF38691DAB8C0FE /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4A511EDCA9664BC6C8DD07596830AD40 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DA35723FA0A159E86EAB53B6C4956F1 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4AE4DA6CF849EB026A4713F43B1E8C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4B2DCCF8E8313A8BB2379D385CB39746 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 071DDD77DEB0B96FBCF78955FE77CAF5 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4BBC7306045620BC41ED8499CF41DD43 /* CWUBCell_Trip_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A088C4AD227F59CA6DAF744F95DB33 /* CWUBCell_Trip_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C72EFE97AA32FD67757B3C6F2F3349A /* ColorfulWoodUIBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E6039F7F65664464EE128229032774 /* ColorfulWoodUIBase-dummy.m */; };
+		4CDA657B18DCA09210FD65DF2AFB1CB3 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F96FABC421E12B0880B57BA516CFE0 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4ECEBF205282AF5383D063F82B39E6CA /* CWUBCell_CharterDiscount.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F8959A74AFE40E2E2BEBEE36C7A288 /* CWUBCell_CharterDiscount.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5222E72D9AB5EC9528A99FF4C757CF5E /* CWUBCell_ButtonRight_SpaceBottom.h in Headers */ = {isa = PBXBuildFile; fileRef = 90DC0C7C3B93DD6E6FAC5E76BDBD0CE8 /* CWUBCell_ButtonRight_SpaceBottom.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		55CBF271957F8F322B42B507B60484B9 /* CWUBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978DE320EA67BE6D615BE13155FDEF41 /* CWUBModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		564C66D9205179BB25F286A4E7DAD018 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FA29B5B6A553C8A01042C7A971CDE7 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		571747E3953B5D7C21967FFB6F9033EC /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = E0CF58A2A07227AE1C027084106C79ED /* Info.plist */; };
+		5A2ABBFF5C7A9709CC19B0F6D6E22E2D /* CWUBCell_IconTitleLeft_IconTitleRight.h in Headers */ = {isa = PBXBuildFile; fileRef = 1984164C06EF3E47A9066061098963CA /* CWUBCell_IconTitleLeft_IconTitleRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5E0BAE35346F61413B0268FA59068096 /* CWUBCell_Refund.m in Sources */ = {isa = PBXBuildFile; fileRef = F7696008DF95DA964FFF79F3A94B426F /* CWUBCell_Refund.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5EC170EE6B68463FCE532F80D81B8648 /* CWUBCell_CharterDiscount.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D46184076EB8DFC37FDC06BEE1AD12 /* CWUBCell_CharterDiscount.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5F64CC4B660EB4C4F2608B5D691C2ED0 /* CWUBCell_TitleLeft_InputLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FD57497C8D7C3891E018DD390B95F1 /* CWUBCell_TitleLeft_InputLeft.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5FB1E8575E0CC8429CFC622CE994EA6F /* UIViewController+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9269F4814BB1AA58207036A1CC167 /* UIViewController+ColorfulWoodAddtional.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		62A119B592480C96257909011F891194 /* NSString+ColorfulWoodRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C7C75D0F76E062C6819E4C222D97D8 /* NSString+ColorfulWoodRegex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		651BBE065C7E6A5DD70C5AE9EE2E3AC1 /* CWUBButtonWithInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B32AC8B27AAA2A78E9CC7280C59D345 /* CWUBButtonWithInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		666F3912D610E6AA7424BA1E02DD485F /* CWUBCell_Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0D8E134B9CE7B8B034ACD361D7631 /* CWUBCell_Address.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6727D204A0EB6BFA3EDA909FF3BD4AA0 /* CWUBCell_TitleRight_ButtonRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FCBC4FC44F138BE319557542523535 /* CWUBCell_TitleRight_ButtonRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6772332A65CD4F1FC071BB462DBC9EB3 /* CWUBCell_Address_ArrowRight.h in Headers */ = {isa = PBXBuildFile; fileRef = 08026A9A09CEBFE0245FF950FACFAFF9 /* CWUBCell_Address_ArrowRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		693E20759014C5055EB64F19D034145F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D01ACB1BB14E3CED68FEF770F8A02396 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		69AF9AC0E313B5C9C36B19834FF2ECE4 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B75C38F9073A1FAA397D95AD2655728 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6C02BE00CCF3F56525209B9A509E15C3 /* CWUBCell_Passenger_Delete.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EDDB8165D64FBED8A34DA19D61ED1 /* CWUBCell_Passenger_Delete.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6D2297CC2591D1C5C9E3944CB9C92CD0 /* CWUBButtonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 52917233353F65092650840F85829308 /* CWUBButtonInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6E0F2881E0C5EF8482016B0DDC1797B4 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D11B9C8DAF8FD5797F360FBAC9C4F62A /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E3DBC0AE9608688C3D29A33C0D1F69C /* CWUBCell_Refund_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 76209BFADD138330C480DA24F0304022 /* CWUBCell_Refund_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6F8E2FC4507EC4A9D1E0B26B66C6E8E9 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C65F338E8472C567EE2FF27B45A313 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6FA9CE9D84B1B3D5DB6BD78C94F60B0D /* CWUBCell_TitleLeft_SwithRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A72C117DF3DFF4EDD378627C9B0299C /* CWUBCell_TitleLeft_SwithRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		755E6469A1C4FA7B4A3A7515C3C97C27 /* CWUBCell_ButtonLeft_TitleLeft_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0B99EDFAC39E6126DCAB04B95374E4 /* CWUBCell_ButtonLeft_TitleLeft_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		758BAE2DCD8FC5550F78441679762B1D /* CWUBTextInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79FC715E224B1D5EF142B28D904CF0 /* CWUBTextInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		764AFB2C22EF8C10C2549E5FDAC4D384 /* CWUBCell_Passenger_Opt_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B8849CFF60435CDDB3162B36A3F241 /* CWUBCell_Passenger_Opt_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7664F1DB5B819B75C169C973630EFE9F /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 249AD80B67B8780298FBCEC3BA8C645F /* Masonry-dummy.m */; };
+		77E7E13C54EE07F2F951DEDF741E4A67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		790D62C3BE1A8F40314BECA0AEBC540A /* CWUBCell_IconTitleLeft_IconTitleRight.m in Sources */ = {isa = PBXBuildFile; fileRef = B52B389831CFB3F12B2DD4D2CA5FDE7B /* CWUBCell_IconTitleLeft_IconTitleRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		799ADB51885D665852948E4BFA5D90C1 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.m in Sources */ = {isa = PBXBuildFile; fileRef = FD987B45EA5D739D6E193D8A121F3A07 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7BAB4673043A307286A7E1100CF36446 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3D5C22846F96866B4EE94566C16E6 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7C4310C53DAA5213D7ED6E108BE0182E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB34E9D00C181E9FE16DB37AD91543B /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D3CB395011F024CB06BE1C07C3C4C4E /* CWUBLableLeftTop.h in Headers */ = {isa = PBXBuildFile; fileRef = D80CAD30EB0A02DAAF0E40C7EF889384 /* CWUBLableLeftTop.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D953B7622743B47F475099213C66E55 /* CWUBCell_Passenger_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5241C6712EB87B695B5E20BD4E683 /* CWUBCell_Passenger_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7E0387A771C6BCC51096466D7041FCF1 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E992F12D5DF1A3EAE9E1BF0A184994 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7EADFE395F052A30AFD9379A316DEAC7 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.h in Headers */ = {isa = PBXBuildFile; fileRef = 844B8F88E2E748376B029B6518F55D82 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		815267594C3873AF597B49930445CBE5 /* CWUBLableLeftTop.m in Sources */ = {isa = PBXBuildFile; fileRef = D66EDB184568711FE25AC20B15C87F37 /* CWUBLableLeftTop.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8242CA37BF282FACFB3B032BEC14EA0F /* CWUBCell_Passenger_Opt.m in Sources */ = {isa = PBXBuildFile; fileRef = 980EB15E1FE01781E2BFBBEF9F8913D4 /* CWUBCell_Passenger_Opt.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		86056A5FE6B7745584596E9A16A34207 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D34CA3B94E8A66402501E20AF74DC43F /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8629E476CB2325FB605106BE53B552C4 /* CWUBCell_Address_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1CB1DEF7960A046137568DFE55DAA1 /* CWUBCell_Address_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		87DC21873D3E872DC5B0BA0A0D9D463A /* CWUBCell_ButtonRight_SpaceBottom_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 8489C3720030AD1F5AE63E22B0347B48 /* CWUBCell_ButtonRight_SpaceBottom_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		889D5AF540F8C7B993AEFA8C36A04C20 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8ABADCD8E20B74981BC56FDCCA16E7 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8BF36A42D81ECB827BAD1D04C8CF8C4A /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F13F5A35449216BD9D51796B6903973 /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8C53DEE69E7A248B16BDE443ACBEB4E8 /* CWUBCell_TitleLeft_InputLeft_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E02BB916CE2C94177778C488BB3DEDF8 /* CWUBCell_TitleLeft_InputLeft_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8C8F9AEA9B4DD4D7FC54DE703E547976 /* CWUBCell_Trip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0621595C0BE02B59E06E6EA512C2BCE7 /* CWUBCell_Trip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9080DDC257AE89CE42FA8D4237D5F285 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AF94186D7F7AEEEBC96516A0310E808 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		91FDA62C120B2D5F5C63E08A94E52E81 /* CWUBTextfieldWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46AB93FF22E4BDF30DB20F3927419CA3 /* CWUBTextfieldWithModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9278CB93685FF9DF58416EDAFCFA43CE /* CWUBCell_Passenger_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = E0A4C2F380C2D70A2015A0A1B5B2D6CC /* CWUBCell_Passenger_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		936D5834368449C17B22A666487A325C /* CWUBLabelWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D61468BA9AAA5505ED7F7333F8B7AB /* CWUBLabelWithModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		953E92D8C2EFF1BF53B5D370D26FCB90 /* CWUBCell_TitleLeft_SwithRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 9352959F90D1568F91AB3A7331AF4904 /* CWUBCell_TitleLeft_SwithRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		987E8D97CFA335939863B3D31C7265DA /* CWUBCell_ButtonLeft_TitleLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ED9C584B57C85A1A0B1955AFD06CE9 /* CWUBCell_ButtonLeft_TitleLeft.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		98CC9E74BAD50FBE03DFD718300B5CC5 /* CWUBDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = EE69F00F0085BCF9B0954E5F5EC47F07 /* CWUBDefine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9A97C8C3B345F73A00F61DA2855CBDCD /* CWUBCell_CharterDetail_Opt_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF26B71A59FACDF66AB381B29E6D403 /* CWUBCell_CharterDetail_Opt_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9AB23CA2240A8780F8575B3C56BAB677 /* CWUBButtonWithInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E45D13FFE18098193466B66EE4568B /* CWUBButtonWithInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B057FF1FC095263611FA90B9600F4E0 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E46875CF2099531FEA2DBC5826025DF /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1E8481CA7FAD9079EE4589F976969DA /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = E458CEA60246C88B5B8501766685E6F9 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A42FC14E534DFACF59BEC6F8C13F53E6 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9F92E45B0910608DACFB534CAA2E4F /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8620AC55564BB798B206828AAE72D8E /* CWUBCell_ImgLeft_TitleLeft_InfoRight.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A5452E54F6EC224151E62CFC7D4F4B8 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A95549C3DD2E3C57C91CEF5D4354C7E7 /* UINavigationItem+ColorfulWoodMargin.h in Headers */ = {isa = PBXBuildFile; fileRef = FF6C5B7EC9CBDAD66043DFF53C9D1E1E /* UINavigationItem+ColorfulWoodMargin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A95694B1578679D2E2AD2368D2325C61 /* CWUBCell_Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6CC50F4B8DB1D170E97F32C6239A24 /* CWUBCell_Trip.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A9C4D393D4755B866CB318292D734602 /* CWUBCell_Passenger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F647A7DF042657F4EA190AAA88BF140 /* CWUBCell_Passenger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC7E906C786250B7BEA040D662951549 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5BD2A4634CBEF715E025E96208A42B /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ADA56C7CA6A32F51931DD2F4F872F20C /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F0D20126433D238FFB4218EE64B5E4 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AFED58A092CF3EA3EB6AFE68F1A55834 /* CWUBCell_TitleLeft_InfoRight.h in Headers */ = {isa = PBXBuildFile; fileRef = EBD2BA744D38F37CCC9FC414AD67BF99 /* CWUBCell_TitleLeft_InfoRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B085C34E9CB41F8FD428DAAB0DAF6B6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		B260D76470E65491ED21FC3F2BBE443C /* CWUBCell_ButtonRight_SpaceBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 307F8655D062E0D7572642CB415FACBF /* CWUBCell_ButtonRight_SpaceBottom.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B4013135FCC9AB61B0CBF11DFE1B1E5A /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.h in Headers */ = {isa = PBXBuildFile; fileRef = A28D4509608469FD01D3DE3673692E52 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4FD252F28BAC0FB2655DD982A60AE89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		B68D5F7FF8B1BC37030F28A7A5343CD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		B6CBE62A03715365153A3681C4958CD1 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7534348F0FEDCF367A43158CEBB9F8 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B70FF2AF834DF74BC394451DDA556025 /* CWUBButtonInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 221821B2231EC378FAFD44F8198BC699 /* CWUBButtonInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B8317583ADC6D25124AE5361ADA52DE0 /* CWUBCellBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8410CC86D9CBD3074B953FD0BBAEAA66 /* CWUBCellBase.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BA889B8BFBA74B89F86EF9FF5E47A416 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E932B945704B2E5BF440DB0C5006537 /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BB101234E0B5B53FB7F64C5641148383 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 447000976E6F8741B647B8A3FFE4D790 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB96E55A40B95C3A27705C3B108AC9D6 /* CWUBCell_ButtonRight_TitleRight_ButtonRight.h in Headers */ = {isa = PBXBuildFile; fileRef = D45801C32B8610AB35E3C003B630BD2C /* CWUBCell_ButtonRight_TitleRight_ButtonRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BDA11EFD6F0539F3AF8A6FED74E7C2FA /* CWUBCell_TitleLeft_InfoRight_ButtonRight.m in Sources */ = {isa = PBXBuildFile; fileRef = D9724FEC82A07F10A9D76921145FDB3E /* CWUBCell_TitleLeft_InfoRight_ButtonRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BE3A5F5E45AA2CACC40AB77161C5FB9F /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE987E96C83FA57CC30B06A2E165D1F0 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BEB6F43A31ABB30A89D460D7B82AFE6D /* CWUBCell_IconTitleLeft_IconTitleRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D530EDC12F0B8E00B888678A8360E6 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C001542327C2D07011B006BABDE0C926 /* CWUBWoodUIBaseDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 207DB5B5EA0B31F3FF732185623FE6ED /* CWUBWoodUIBaseDemo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C0CAC11B7A32580B24339E3E7B486833 /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB8ACF487C5AB45AA68EB4CF09FAF0D /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C203E6AAF7A810624D963C05F19BAD30 /* CWUBCell_TitleLeft_SwithRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B738ED91C8ECA20ADD4E45D72BED1 /* CWUBCell_TitleLeft_SwithRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C4B637B0EBB4CF4A95051CC637CF4FF5 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 390E6C7031058FC039E4565F4AAF7F21 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C63926795ADA97DE55BD880A89DEFE73 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DC16C812E47D398D4693999E2043321B /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB6911AADE2368C1F2BF1E3B262CAB7F /* CWUBCell_TitleRight_ButtonRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC1A75B47B03EE6E52C75AED1B34F3D /* CWUBCell_TitleRight_ButtonRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D09F6041DE2ED77A18ECB09FFCF06A03 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E05D909E8CFA842AB53BC2C07457ACAF /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D0E9AF6EEAC676A3A2B4AFB6A9A65743 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AC714B2E537BBDFEC6A62A1834C399 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2CAC6C6B7E4E7B20C2D43E5D051CEDA /* ColorfulWoodUIBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 021F7BE1AFDE71C147BC31D5996359E5 /* ColorfulWoodUIBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2EDA63670CFC9D807390B36A4E7C27F /* CWUBCell_Passenger_Delete.h in Headers */ = {isa = PBXBuildFile; fileRef = BA7A6919E4A081409FEE36602A176DB2 /* CWUBCell_Passenger_Delete.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D4B389895CCA19E3E1A0687A5254BCBE /* CWUBModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC4F22A752697151DA995261FAAD8E /* CWUBModelBase.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D58D010087EC2C4F6AA9B68966756A1A /* CWUBCell_TitleLeft_SwithRight.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E6C733E4A7E02D5CE1DC638DAC04010 /* CWUBCell_TitleLeft_SwithRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6368246E17C19428B263AE34864551B /* CWUBCellBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 35C99A79925BC36CF6554D6BC35C8A50 /* CWUBCellBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D7A1BDCA171821927AE0D85B0113497A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C32201ED09B4093ECA078DC1D04638CC /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D944F4A925C2FEC40F4970867294EB4B /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FA21F7CE669452A4D08BE739D9074D85 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DCA9B38E010262BAF1257952DB0018A4 /* CWUBCell_ButtonLeft_TitleLeft.h in Headers */ = {isa = PBXBuildFile; fileRef = 05698C4C0C6298BC737867E3926E3DB6 /* CWUBCell_ButtonLeft_TitleLeft.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DE9F67E3522584E209EEA35CB2EB4105 /* CWUBModelBase.h in Headers */ = {isa = PBXBuildFile; fileRef = F2EE3E086E25B525D78E870C8C2668D3 /* CWUBModelBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF65FA9158A082058E1F14928AD172DF /* CWUBCell_TitleLeft_InfoLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E4DBDE164B1884B7C197A30CB9DF8 /* CWUBCell_TitleLeft_InfoLeft.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E07D9B5D20F5BB2A7710369F7AB0A582 /* CWUBModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DDEF1F05AA84983D657969E002D9A79 /* CWUBModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E2A4EB61DB5FF24D1D3A36E8E62EF8DE /* UIImage+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 9012B9D0221552ADDD2853865DFD51FF /* UIImage+ColorfulWoodAddtional.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E2E762F0897089525EE2A3A40C242288 /* UINavigationItem+ColorfulWoodMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = DFABFBB80C80A781B6D8A1088D0FF46D /* UINavigationItem+ColorfulWoodMargin.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E44A817976B6D80F73D66F76661B04DF /* CWUBWoodUIBaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB01AAB324B74556E3C9BE7DD6E9FC /* CWUBWoodUIBaseDemo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E63C7F3B41529ED617C3440F9FE0D8DE /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BDB733C5FF12EFB04D18DBBADD1460 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E8F67B61A8EEF9CE726B37D27595FCAC /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F305F72CA62C64A56AAFDC8AED0064 /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EA5397EF33EA07C0501521650441EB42 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C57423E40A87DF6DB551F16A36217AD /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EAA059045708486B58CAD550ECECA7C0 /* CWUBCell_Address.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FC7329D4B9FF0C0AC3B81CE61E3F91 /* CWUBCell_Address.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EABBC15214F8E1A9FA3DFF047FFA4E56 /* CWUBCell_Passenger_Delete_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = FA18DE77B1C4447537594F1852548DC8 /* CWUBCell_Passenger_Delete_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EBEF41C6FD5F0D740494D6CF116492C3 /* CWUBCell_TitleLeft_InfoRight_ButtonRight.h in Headers */ = {isa = PBXBuildFile; fileRef = FBD6619DFBA7020DA9C0676DDB8A5931 /* CWUBCell_TitleLeft_InfoRight_ButtonRight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC2A48E3F7BB464D0E3DBBDDC8693184 /* CWUBCell_TitleLeft_InfoLeft_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E80BBED682E86B7D019B878D772715F /* CWUBCell_TitleLeft_InfoLeft_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF2D7D979BB1731C3FFDCE8B3EA19CB5 /* CWUBCell_Address_ArrowRight.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD764827A3C534C0F5FB15209D3F17F /* CWUBCell_Address_ArrowRight.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F0A19058457F763BFC9149A5506EF018 /* CWUBCell_TitleRight_ButtonRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = F643612A795F58FD21829289BBE95639 /* CWUBCell_TitleRight_ButtonRight_Model.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F2922D6EFDEBBC12C1589106D411FD60 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AE8D65AE36E595DAD3592AD81DE5F1 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F29C15C0392520AA93A68407EEB9D0E7 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5AEF44A61AA80CFF98220DC8C2E547 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F3072191A30E40EB12565CCA5A4F45A0 /* CWUBCell_CharterDetail_Opt_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = CB5F62358404BD4B0BA55D50F1433A0F /* CWUBCell_CharterDetail_Opt_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F4B5890332F5109331D03D1BFC85C0B3 /* CWUBCell_Passenger.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE06FF342BFFC65EECA697A8F1D00F /* CWUBCell_Passenger.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F5C36E71C71565813E9233A6BA1100C2 /* ColorfulWoodCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E97CFED4634599AC0D5EFED68A60F4D /* ColorfulWoodCategories.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F614A967D30604644D5B175E9D571BAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		F630D9E82108D171EABDC851444BA037 /* CWUBTextInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F3DF561A2396077B8913CAC3F72579 /* CWUBTextInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F6B042E888653980A8AE89AE244C49F3 /* CWUBCell_TitleLeft_InputLeft_Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF4F0586AF8B88E5B70513932216501 /* CWUBCell_TitleLeft_InputLeft_Model.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F93861D0835BDAF701E0A4045E1D179F /* CWUBCell_Refund.h in Headers */ = {isa = PBXBuildFile; fileRef = EDDC99332CA0138C5BC971618A143F22 /* CWUBCell_Refund.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CA54F7E61F3ACC00209B49A52EC0CB14 /* PBXContainerItemProxy */ = {
+		3B898B9110A06EAFDE8B6B7570DC6FFE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9DC8D9E02903E93BD0B2FEC9D846EA20;
+			remoteGlobalIDString = CFDF595AA01CFB939CC0C84EC34AD49B;
 			remoteInfo = Masonry;
+		};
+		6788831AFBF512E95676A85EA20E6100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F6A40BE75EC4ABDF1731BC2DF073054;
+			remoteInfo = ColorfulWoodUIBase;
+		};
+		836A3C18DF51E9D616965A4B81172120 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDF595AA01CFB939CC0C84EC34AD49B;
+			remoteInfo = Masonry;
+		};
+		999B0B0404F8CE50A685B695889470B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60A6C62D284142E4D9035BB2102F013D;
+			remoteInfo = ColorfulWoodCategories;
+		};
+		E2C71B78D981E8867D5C50A2FDBE791B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60A6C62D284142E4D9035BB2102F013D;
+			remoteInfo = ColorfulWoodCategories;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		043FB94CF93050E20D8E4C071ACFA5D2 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		1321572A3ED9C894C94A131BE29B81B2 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		22E2395DA2EBCF6241A0DA0E1859FF45 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		021F7BE1AFDE71C147BC31D5996359E5 /* ColorfulWoodUIBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ColorfulWoodUIBase.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase.h; sourceTree = "<group>"; };
+		02E992F12D5DF1A3EAE9E1BF0A184994 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ImgLeft_TitleLeft_InfoRight/CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.m; sourceTree = "<group>"; };
+		03F8959A74AFE40E2E2BEBEE36C7A288 /* CWUBCell_CharterDiscount.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_CharterDiscount.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDiscount/CWUBCell_CharterDiscount.h; sourceTree = "<group>"; };
+		04CCC37983DA69760E3DC4421D1C9471 /* CWUBCell_Trip_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Trip_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Trip/CWUBCell_Trip_Model.h; sourceTree = "<group>"; };
+		05698C4C0C6298BC737867E3926E3DB6 /* CWUBCell_ButtonLeft_TitleLeft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ButtonLeft_TitleLeft.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonLeft_TitleLeft/CWUBCell_ButtonLeft_TitleLeft.h; sourceTree = "<group>"; };
+		0621595C0BE02B59E06E6EA512C2BCE7 /* CWUBCell_Trip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Trip.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Trip/CWUBCell_Trip.h; sourceTree = "<group>"; };
+		0675CF28F9A5A2F77FFB947A7801F1A9 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.m; sourceTree = "<group>"; };
+		068AC2675BBE45ECD60E01DFE4218DF7 /* CWUBCellType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCellType.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBCell/CWUBCellType/CWUBCellType.h; sourceTree = "<group>"; };
+		06C65F338E8472C567EE2FF27B45A313 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoLeft_ButtonRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft_ButtonRight/CWUBCell_TitleLeft_InfoLeft_ButtonRight.m; sourceTree = "<group>"; };
+		071DDD77DEB0B96FBCF78955FE77CAF5 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m; sourceTree = "<group>"; };
+		077B738ED91C8ECA20ADD4E45D72BED1 /* CWUBCell_TitleLeft_SwithRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_SwithRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_SwithRight/CWUBCell_TitleLeft_SwithRight_Model.m; sourceTree = "<group>"; };
+		08026A9A09CEBFE0245FF950FACFAFF9 /* CWUBCell_Address_ArrowRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Address_ArrowRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Address/CWUBCell_Address_ArrowRight.h; sourceTree = "<group>"; };
+		087743D28C71AC8EC7074DD99CDDB405 /* ColorfulWoodCategories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorfulWoodCategories-dummy.m"; sourceTree = "<group>"; };
+		0AE0D8E134B9CE7B8B034ACD361D7631 /* CWUBCell_Address.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Address.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Address/CWUBCell_Address.m; sourceTree = "<group>"; };
+		0D1CB1DEF7960A046137568DFE55DAA1 /* CWUBCell_Address_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Address_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Address/CWUBCell_Address_Model.m; sourceTree = "<group>"; };
+		0FB34E9D00C181E9FE16DB37AD91543B /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		11204C561FAA9AD45D0867F7593354C4 /* CWUBLabelWithModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBLabelWithModel.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBLabelWithModel/CWUBLabelWithModel.h; sourceTree = "<group>"; };
+		1528FA3E579D6562BC7EA06B12E8EB11 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		1984164C06EF3E47A9066061098963CA /* CWUBCell_IconTitleLeft_IconTitleRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_IconTitleLeft_IconTitleRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_IconTitleRight/CWUBCell_IconTitleLeft_IconTitleRight.h; sourceTree = "<group>"; };
+		1E38C5AE1060A35A9456E14DBF75DE38 /* CWUBCell_TitleLeft_InfoLeft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoLeft.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft/CWUBCell_TitleLeft_InfoLeft.h; sourceTree = "<group>"; };
+		1F5E8668E8F76C244425BB593FBE0CB8 /* CWUBCell_TitleRight_ButtonRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleRight_ButtonRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleRight_ButtonRight/CWUBCell_TitleRight_ButtonRight.h; sourceTree = "<group>"; };
+		207DB5B5EA0B31F3FF732185623FE6ED /* CWUBWoodUIBaseDemo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBWoodUIBaseDemo.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBWoodUIBaseDemo/CWUBWoodUIBaseDemo.h; sourceTree = "<group>"; };
+		221821B2231EC378FAFD44F8198BC699 /* CWUBButtonInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBButtonInfo.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBButtonInfo/CWUBButtonInfo.h; sourceTree = "<group>"; };
 		234B0AE34954C067C4BE0EA80C605ABE /* Pods-TestUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestUI-acknowledgements.plist"; sourceTree = "<group>"; };
+		249AD80B67B8780298FBCEC3BA8C645F /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		24F3DF561A2396077B8913CAC3F72579 /* CWUBTextInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBTextInfo.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBTextInfo/CWUBTextInfo.h; sourceTree = "<group>"; };
+		25062CCAB577668410EA57AEF8028A77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorfulWoodUIBase/ColorfulWoodUIBase/Info.plist; sourceTree = "<group>"; };
 		2530E41D4AA391B006922176BB997C81 /* Pods-TestUI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestUI-frameworks.sh"; sourceTree = "<group>"; };
-		25CED739CF35B6D0A1D95AE17D712A7F /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		2FCC2A09AC3DCD0E4A3D268DAABC5135 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		3162AC8E29FA7F3BF0D8641F7F4D9B60 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		37C2435217345EB29CE22B22B3ECCA6F /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		475326F2A929CD1AFFB74850961F32C0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		560C1E69006DC5A17FACDC12D09F479B /* libPods-TestUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TestUI.a"; path = "libPods-TestUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		780A86CEB0A0131C88BE12414D500734 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		7882AB8492CA4F59F730C76CC3BBF57A /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		26EB6DE24777B4BCB9DE8BF0750214C0 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.m; sourceTree = "<group>"; };
+		29BB01AAB324B74556E3C9BE7DD6E9FC /* CWUBWoodUIBaseDemo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBWoodUIBaseDemo.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBWoodUIBaseDemo/CWUBWoodUIBaseDemo.m; sourceTree = "<group>"; };
+		2A5452E54F6EC224151E62CFC7D4F4B8 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ImgLeft_TitleLeft_InfoRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ImgLeft_TitleLeft_InfoRight/CWUBCell_ImgLeft_TitleLeft_InfoRight.h; sourceTree = "<group>"; };
+		2AF94186D7F7AEEEBC96516A0310E808 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft_ButtonRight/CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.h; sourceTree = "<group>"; };
+		2B8ABADCD8E20B74981BC56FDCCA16E7 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		2C5AEF44A61AA80CFF98220DC8C2E547 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		2CDA11EC4DD2B3F39246246FC6B375C9 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		307F8655D062E0D7572642CB415FACBF /* CWUBCell_ButtonRight_SpaceBottom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ButtonRight_SpaceBottom.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_SpaceBottom/CWUBCell_ButtonRight_SpaceBottom.m; sourceTree = "<group>"; };
+		321DE383117D0F1DFC6B0F807BAE4FD0 /* ColorfulWoodUIBase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorfulWoodUIBase-prefix.pch"; sourceTree = "<group>"; };
+		32FC7329D4B9FF0C0AC3B81CE61E3F91 /* CWUBCell_Address.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Address.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Address/CWUBCell_Address.h; sourceTree = "<group>"; };
+		33D530EDC12F0B8E00B888678A8360E6 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_IconTitleLeft_IconTitleRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_IconTitleRight/CWUBCell_IconTitleLeft_IconTitleRight_Model.m; sourceTree = "<group>"; };
+		35C99A79925BC36CF6554D6BC35C8A50 /* CWUBCellBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCellBase.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBCell/CWUBCellBase/CWUBCellBase.h; sourceTree = "<group>"; };
+		377389B3F86FCEF5B872397B694415B1 /* CWUBCell_ButtonRight_TitleRight_ButtonRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ButtonRight_TitleRight_ButtonRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_TitleRight_ButtonRight/CWUBCell_ButtonRight_TitleRight_ButtonRight.m; sourceTree = "<group>"; };
+		38BE030E555FAC3221D8DF2331058C4B /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.m"; sourceTree = "<group>"; };
+		390E6C7031058FC039E4565F4AAF7F21 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		39464D74BDD7A8D791AB763A644A8406 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		3A72C117DF3DFF4EDD378627C9B0299C /* CWUBCell_TitleLeft_SwithRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_SwithRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_SwithRight/CWUBCell_TitleLeft_SwithRight.m; sourceTree = "<group>"; };
+		3CC9269F4814BB1AA58207036A1CC167 /* UIViewController+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
+		3D4EDDB8165D64FBED8A34DA19D61ED1 /* CWUBCell_Passenger_Delete.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Passenger_Delete.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Delete/CWUBCell_Passenger_Delete.m; sourceTree = "<group>"; };
+		3E6C733E4A7E02D5CE1DC638DAC04010 /* CWUBCell_TitleLeft_SwithRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_SwithRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_SwithRight/CWUBCell_TitleLeft_SwithRight.h; sourceTree = "<group>"; };
+		3E97CFED4634599AC0D5EFED68A60F4D /* ColorfulWoodCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ColorfulWoodCategories.h; path = ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories.h; sourceTree = "<group>"; };
+		3EFAFCD1887461F231034EAB9CCF0F3B /* libColorfulWoodCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libColorfulWoodCategories.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F13F5A35449216BD9D51796B6903973 /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight_ButtonRight/CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.m; sourceTree = "<group>"; };
+		3F93B596753CC075D9E2A1723C2540B6 /* CWUBCell_CharterDiscount_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_CharterDiscount_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDiscount/CWUBCell_CharterDiscount_Model.h; sourceTree = "<group>"; };
+		447000976E6F8741B647B8A3FFE4D790 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.h"; sourceTree = "<group>"; };
+		45E319EE4BFF80196ADD0D364DFF699E /* CWUBCell_Passenger_Opt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Passenger_Opt.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Opt/CWUBCell_Passenger_Opt.h; sourceTree = "<group>"; };
+		46AB93FF22E4BDF30DB20F3927419CA3 /* CWUBTextfieldWithModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBTextfieldWithModel.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBTextfieldWithModel/CWUBTextfieldWithModel.m; sourceTree = "<group>"; };
+		4B32AC8B27AAA2A78E9CC7280C59D345 /* CWUBButtonWithInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBButtonWithInfo.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBButtonWithInfo/CWUBButtonWithInfo.h; sourceTree = "<group>"; };
+		4C7956D19CA7F7C407D1902FAFBBD1E5 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m; sourceTree = "<group>"; };
+		51C2C0811F5B6C8B2F023F1B97B5551F /* CWUBCell_Passenger_Opt_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Passenger_Opt_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Opt/CWUBCell_Passenger_Opt_Model.h; sourceTree = "<group>"; };
+		52917233353F65092650840F85829308 /* CWUBButtonInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBButtonInfo.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBButtonInfo/CWUBButtonInfo.m; sourceTree = "<group>"; };
+		53ED9C584B57C85A1A0B1955AFD06CE9 /* CWUBCell_ButtonLeft_TitleLeft.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ButtonLeft_TitleLeft.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonLeft_TitleLeft/CWUBCell_ButtonLeft_TitleLeft.m; sourceTree = "<group>"; };
+		57F305F72CA62C64A56AAFDC8AED0064 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		59B8849CFF60435CDDB3162B36A3F241 /* CWUBCell_Passenger_Opt_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Passenger_Opt_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Opt/CWUBCell_Passenger_Opt_Model.m; sourceTree = "<group>"; };
+		5DA35723FA0A159E86EAB53B6C4956F1 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ImgLeft_TitleLeft_InfoRight/CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.h; sourceTree = "<group>"; };
+		5E932B945704B2E5BF440DB0C5006537 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		66A7E46D94C7E4D78DAFB2BB02C53EEB /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_TitleRight_ButtonRight/CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m; sourceTree = "<group>"; };
+		67E5DA33E7EF22E0351A36E205D572DF /* CWUBTextfieldWithModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBTextfieldWithModel.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBTextfieldWithModel/CWUBTextfieldWithModel.h; sourceTree = "<group>"; };
+		67FCBC4FC44F138BE319557542523535 /* CWUBCell_TitleRight_ButtonRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleRight_ButtonRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleRight_ButtonRight/CWUBCell_TitleRight_ButtonRight.m; sourceTree = "<group>"; };
+		6A6CC50F4B8DB1D170E97F32C6239A24 /* CWUBCell_Trip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Trip.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Trip/CWUBCell_Trip.m; sourceTree = "<group>"; };
+		6D973E6B40D763B7B401328F60B220EB /* CWUBCell_Refund_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Refund_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Refund/CWUBCell_Refund_Model.m; sourceTree = "<group>"; };
+		6DC1A75B47B03EE6E52C75AED1B34F3D /* CWUBCell_TitleRight_ButtonRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleRight_ButtonRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleRight_ButtonRight/CWUBCell_TitleRight_ButtonRight_Model.h; sourceTree = "<group>"; };
+		6E46875CF2099531FEA2DBC5826025DF /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		6E6574B9F602FF81D7DCD7ECB78020FB /* ColorfulWoodUIBase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorfulWoodUIBase.xcconfig; sourceTree = "<group>"; };
+		6E80BBED682E86B7D019B878D772715F /* CWUBCell_TitleLeft_InfoLeft_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoLeft_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft/CWUBCell_TitleLeft_InfoLeft_Model.h; sourceTree = "<group>"; };
+		6EC22D2DCE5F3A35292C716FA4C8875E /* CWUBCell_TitleLeft_InfoRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight/CWUBCell_TitleLeft_InfoRight_Model.m; sourceTree = "<group>"; };
+		70E45D13FFE18098193466B66EE4568B /* CWUBButtonWithInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBButtonWithInfo.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBButtonWithInfo/CWUBButtonWithInfo.m; sourceTree = "<group>"; };
+		71F96FABC421E12B0880B57BA516CFE0 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		74BDB733C5FF12EFB04D18DBBADD1460 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft_ButtonRight/CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m; sourceTree = "<group>"; };
+		76209BFADD138330C480DA24F0304022 /* CWUBCell_Refund_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Refund_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Refund/CWUBCell_Refund_Model.h; sourceTree = "<group>"; };
+		76CCC115C62441D2B3BCA97D76504E04 /* CWUBCell_CharterDetail_Opt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_CharterDetail_Opt.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDetail_Opt/CWUBCell_CharterDetail_Opt.m; sourceTree = "<group>"; };
+		78F0D20126433D238FFB4218EE64B5E4 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		792F0526AC93AEECA1CEC3CFF7F7D862 /* Pods-TestUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestUI.release.xcconfig"; sourceTree = "<group>"; };
-		7B5A231E76AF7DC6CB887B5B2C522A7A /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		807FFD255E8235D5B42FE078299B5F1B /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		8229525E7067F22D3977D2628DF5F2C3 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		82F28AEAAF722BC62BF5B37D6663BBC2 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		7B75C38F9073A1FAA397D95AD2655728 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		7C57423E40A87DF6DB551F16A36217AD /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h; sourceTree = "<group>"; };
+		7C93D97AAD603B998E138E02A0F9C10F /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_TitleRight_ButtonRight/CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h; sourceTree = "<group>"; };
+		7DDEF1F05AA84983D657969E002D9A79 /* CWUBModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBModel.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBModel/CWUBModel.h; sourceTree = "<group>"; };
+		8410CC86D9CBD3074B953FD0BBAEAA66 /* CWUBCellBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCellBase.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBCell/CWUBCellBase/CWUBCellBase.m; sourceTree = "<group>"; };
 		84273A4E54164BB474179BCF091DE7C0 /* Pods-TestUI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestUI-resources.sh"; sourceTree = "<group>"; };
-		8A9F610CB90E57B81F8F7DCA2176E0FD /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		8E7E17DB5590A8C4D9625D67E6FBD243 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		915A6FF0E04F5A5C0ACDE0E32BD2F193 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		844B8F88E2E748376B029B6518F55D82 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.h; sourceTree = "<group>"; };
+		8489C3720030AD1F5AE63E22B0347B48 /* CWUBCell_ButtonRight_SpaceBottom_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ButtonRight_SpaceBottom_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_SpaceBottom/CWUBCell_ButtonRight_SpaceBottom_Model.h; sourceTree = "<group>"; };
+		88785EA5E02E3FAAEFBC5AECC1E5BA07 /* CWUBCell_TitleLeft_InfoRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight/CWUBCell_TitleLeft_InfoRight_Model.h; sourceTree = "<group>"; };
+		88AE8D65AE36E595DAD3592AD81DE5F1 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		88D61468BA9AAA5505ED7F7333F8B7AB /* CWUBLabelWithModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBLabelWithModel.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBLabelWithModel/CWUBLabelWithModel.m; sourceTree = "<group>"; };
+		8B79FC715E224B1D5EF142B28D904CF0 /* CWUBTextInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBTextInfo.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBTextInfo/CWUBTextInfo.m; sourceTree = "<group>"; };
+		8CB5241C6712EB87B695B5E20BD4E683 /* CWUBCell_Passenger_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Passenger_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger/CWUBCell_Passenger_Model.m; sourceTree = "<group>"; };
+		9012B9D0221552ADDD2853865DFD51FF /* UIImage+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
+		90DC0C7C3B93DD6E6FAC5E76BDBD0CE8 /* CWUBCell_ButtonRight_SpaceBottom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ButtonRight_SpaceBottom.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_SpaceBottom/CWUBCell_ButtonRight_SpaceBottom.h; sourceTree = "<group>"; };
+		9352959F90D1568F91AB3A7331AF4904 /* CWUBCell_TitleLeft_SwithRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_SwithRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_SwithRight/CWUBCell_TitleLeft_SwithRight_Model.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93D63689D750814ACCF38691DAB8C0FE /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m; sourceTree = "<group>"; };
+		978DE320EA67BE6D615BE13155FDEF41 /* CWUBModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBModel.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBModel/CWUBModel.m; sourceTree = "<group>"; };
+		980EB15E1FE01781E2BFBBEF9F8913D4 /* CWUBCell_Passenger_Opt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Passenger_Opt.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Opt/CWUBCell_Passenger_Opt.m; sourceTree = "<group>"; };
 		9877FE1D7B6AA105D8724A7FE603A097 /* Pods-TestUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestUI-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9F937BDEB8DF93A08D20C5355C0FDB5C /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		A2F75C96947B2651F82FC18F66C43B49 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		B179F4D3D34A3CE25A698B8D9AC9D6C2 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		B48867DE203BCF3BB3DFCAB8FDC7516B /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
-		C762C4F3A304C10AF7EBEA6AAA8508A0 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		C7C02266037F030E22468AC86802DB57 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		D5EC6EDDDD3E503C5B2E967D3FEECFEB /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		E158FC65C5404E098F16E26F478DA504 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		EC0384F145CF471A951BA8E9486AD626 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		99E6039F7F65664464EE128229032774 /* ColorfulWoodUIBase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorfulWoodUIBase-dummy.m"; sourceTree = "<group>"; };
+		9CB3D5C22846F96866B4EE94566C16E6 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m; sourceTree = "<group>"; };
+		9F647A7DF042657F4EA190AAA88BF140 /* CWUBCell_Passenger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Passenger.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger/CWUBCell_Passenger.h; sourceTree = "<group>"; };
+		9F7E4DBDE164B1884B7C197A30CB9DF8 /* CWUBCell_TitleLeft_InfoLeft.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoLeft.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft/CWUBCell_TitleLeft_InfoLeft.m; sourceTree = "<group>"; };
+		9FF4F0586AF8B88E5B70513932216501 /* CWUBCell_TitleLeft_InputLeft_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InputLeft_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InputLeft/CWUBCell_TitleLeft_InputLeft_Model.h; sourceTree = "<group>"; };
+		A28D4509608469FD01D3DE3673692E52 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoLeft_ButtonRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft_ButtonRight/CWUBCell_TitleLeft_InfoLeft_ButtonRight.h; sourceTree = "<group>"; };
+		ACF26B71A59FACDF66AB381B29E6D403 /* CWUBCell_CharterDetail_Opt_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_CharterDetail_Opt_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDetail_Opt/CWUBCell_CharterDetail_Opt_Model.m; sourceTree = "<group>"; };
+		AE2CDB820BD92AEF4A3C39C340733BB3 /* CWUBCell_CharterDiscount_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_CharterDiscount_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDiscount/CWUBCell_CharterDiscount_Model.m; sourceTree = "<group>"; };
+		AFC49DE28C848A2AB46E4B39935D1B47 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight/CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.h; sourceTree = "<group>"; };
+		B2DD8D7FFEC0578B5E4BD9F24F924110 /* ColorfulWoodCategories.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorfulWoodCategories.xcconfig; sourceTree = "<group>"; };
+		B52B389831CFB3F12B2DD4D2CA5FDE7B /* CWUBCell_IconTitleLeft_IconTitleRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_IconTitleLeft_IconTitleRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_IconTitleRight/CWUBCell_IconTitleLeft_IconTitleRight.m; sourceTree = "<group>"; };
+		B5820AEDCF5F24437B7E309D87336013 /* ColorfulWoodCategories-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorfulWoodCategories-prefix.pch"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B755DE2398910A1261019A9BB5B2DAB0 /* CWUBCell_Passenger_Delete_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Passenger_Delete_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Delete/CWUBCell_Passenger_Delete_Model.m; sourceTree = "<group>"; };
+		B8BE06FF342BFFC65EECA697A8F1D00F /* CWUBCell_Passenger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Passenger.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger/CWUBCell_Passenger.m; sourceTree = "<group>"; };
+		BA7A6919E4A081409FEE36602A176DB2 /* CWUBCell_Passenger_Delete.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Passenger_Delete.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Delete/CWUBCell_Passenger_Delete.h; sourceTree = "<group>"; };
+		BC7AFE47A4A75E66B4DD9572AEDF6F41 /* UIImage+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
+		BE987E96C83FA57CC30B06A2E165D1F0 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		BFB8ACF487C5AB45AA68EB4CF09FAF0D /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight_ButtonRight/CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.h; sourceTree = "<group>"; };
+		C1216C1CFE012A6CE5417C8273ADBEA5 /* libColorfulWoodUIBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libColorfulWoodUIBase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C14471D7902C3D05CADDA7F783A612F6 /* CWUBCell_TitleLeft_InputLeft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InputLeft.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InputLeft/CWUBCell_TitleLeft_InputLeft.h; sourceTree = "<group>"; };
+		C2DC4F22A752697151DA995261FAAD8E /* CWUBModelBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBModelBase.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBModelBase/CWUBModelBase.m; sourceTree = "<group>"; };
+		C32201ED09B4093ECA078DC1D04638CC /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		C3FA29B5B6A553C8A01042C7A971CDE7 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		C9E5173B1F44FC9E28A59FB8A011E1B4 /* CWUBCell_TitleLeft_InfoRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight/CWUBCell_TitleLeft_InfoRight.m; sourceTree = "<group>"; };
+		CA1AD0ABF1D5A2784F3B46114D497066 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB5F62358404BD4B0BA55D50F1433A0F /* CWUBCell_CharterDetail_Opt_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_CharterDetail_Opt_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDetail_Opt/CWUBCell_CharterDetail_Opt_Model.h; sourceTree = "<group>"; };
+		CBF008FE59084F0A5718545E56DEA715 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h; sourceTree = "<group>"; };
+		CC4837B69FFA33E60B8D937760E38E51 /* CWUBCell_ButtonLeft_TitleLeft_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ButtonLeft_TitleLeft_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonLeft_TitleLeft/CWUBCell_ButtonLeft_TitleLeft_Model.m; sourceTree = "<group>"; };
+		CC797083EAEC7B675833AE110B3CA9A9 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		CCD32ABEC95CFAA84E0502371A8F8266 /* CWUBCell_Address_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Address_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Address/CWUBCell_Address_Model.h; sourceTree = "<group>"; };
+		CE0B99EDFAC39E6126DCAB04B95374E4 /* CWUBCell_ButtonLeft_TitleLeft_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ButtonLeft_TitleLeft_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonLeft_TitleLeft/CWUBCell_ButtonLeft_TitleLeft_Model.h; sourceTree = "<group>"; };
+		D01ACB1BB14E3CED68FEF770F8A02396 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		D11B9C8DAF8FD5797F360FBAC9C4F62A /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		D1A088C4AD227F59CA6DAF744F95DB33 /* CWUBCell_Trip_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Trip_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Trip/CWUBCell_Trip_Model.m; sourceTree = "<group>"; };
+		D2FD57497C8D7C3891E018DD390B95F1 /* CWUBCell_TitleLeft_InputLeft.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InputLeft.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InputLeft/CWUBCell_TitleLeft_InputLeft.m; sourceTree = "<group>"; };
+		D34CA3B94E8A66402501E20AF74DC43F /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		D45801C32B8610AB35E3C003B630BD2C /* CWUBCell_ButtonRight_TitleRight_ButtonRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_ButtonRight_TitleRight_ButtonRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_TitleRight_ButtonRight/CWUBCell_ButtonRight_TitleRight_ButtonRight.h; sourceTree = "<group>"; };
+		D66EDB184568711FE25AC20B15C87F37 /* CWUBLableLeftTop.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBLableLeftTop.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBLabelLeftTop/CWUBLableLeftTop.m; sourceTree = "<group>"; };
+		D80CAD30EB0A02DAAF0E40C7EF889384 /* CWUBLableLeftTop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBLableLeftTop.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBView/CWUBLabelLeftTop/CWUBLableLeftTop.h; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D95F24D035FFCC5071037D2AB9E297E2 /* CWUBCell_CharterDetail_Opt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_CharterDetail_Opt.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDetail_Opt/CWUBCell_CharterDetail_Opt.h; sourceTree = "<group>"; };
+		D9724FEC82A07F10A9D76921145FDB3E /* CWUBCell_TitleLeft_InfoRight_ButtonRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoRight_ButtonRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight_ButtonRight/CWUBCell_TitleLeft_InfoRight_ButtonRight.m; sourceTree = "<group>"; };
+		DA39AA3149D84FEDD22D6643A23F98A3 /* NSString+ColorfulWoodRegex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ColorfulWoodRegex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.m"; sourceTree = "<group>"; };
+		DB5BD2A4634CBEF715E025E96208A42B /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		DB6579C9DDAC5DA5FDF7641A4B0B9D0D /* libPods-TestUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC16C812E47D398D4693999E2043321B /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		DC7534348F0FEDCF367A43158CEBB9F8 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		DDD764827A3C534C0F5FB15209D3F17F /* CWUBCell_Address_ArrowRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Address_ArrowRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Address/CWUBCell_Address_ArrowRight.m; sourceTree = "<group>"; };
+		DEF5F3BA6099D35EA76AF42830A1818A /* CWUBCell_TitleLeft_InfoLeft_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InfoLeft_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoLeft/CWUBCell_TitleLeft_InfoLeft_Model.m; sourceTree = "<group>"; };
+		DFABFBB80C80A781B6D8A1088D0FF46D /* UINavigationItem+ColorfulWoodMargin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+ColorfulWoodMargin.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.m"; sourceTree = "<group>"; };
+		E02BB916CE2C94177778C488BB3DEDF8 /* CWUBCell_TitleLeft_InputLeft_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleLeft_InputLeft_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InputLeft/CWUBCell_TitleLeft_InputLeft_Model.m; sourceTree = "<group>"; };
+		E05D909E8CFA842AB53BC2C07457ACAF /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		E0A4C2F380C2D70A2015A0A1B5B2D6CC /* CWUBCell_Passenger_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Passenger_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger/CWUBCell_Passenger_Model.h; sourceTree = "<group>"; };
+		E0CF58A2A07227AE1C027084106C79ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorfulWoodCategories/ColorfulWoodCategories/Info.plist; sourceTree = "<group>"; };
+		E2D46184076EB8DFC37FDC06BEE1AD12 /* CWUBCell_CharterDiscount.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_CharterDiscount.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_CharterDiscount/CWUBCell_CharterDiscount.m; sourceTree = "<group>"; };
+		E458CEA60246C88B5B8501766685E6F9 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h; sourceTree = "<group>"; };
+		E4AC714B2E537BBDFEC6A62A1834C399 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_IconTitleLeft_IconTitleRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_IconTitleLeft_IconTitleRight/CWUBCell_IconTitleLeft_IconTitleRight_Model.h; sourceTree = "<group>"; };
+		E6D09E65CB362B9D747AF62B815B69D9 /* CWUBCell_ButtonRight_SpaceBottom_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ButtonRight_SpaceBottom_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_SpaceBottom/CWUBCell_ButtonRight_SpaceBottom_Model.m; sourceTree = "<group>"; };
+		EBD2BA744D38F37CCC9FC414AD67BF99 /* CWUBCell_TitleLeft_InfoRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight/CWUBCell_TitleLeft_InfoRight.h; sourceTree = "<group>"; };
+		EDDC99332CA0138C5BC971618A143F22 /* CWUBCell_Refund.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Refund.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Refund/CWUBCell_Refund.h; sourceTree = "<group>"; };
+		EE69F00F0085BCF9B0954E5F5EC47F07 /* CWUBDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBDefine.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBDefine/CWUBDefine.m; sourceTree = "<group>"; };
+		F2EE3E086E25B525D78E870C8C2668D3 /* CWUBModelBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBModelBase.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBModel/CWUBModelBase/CWUBModelBase.h; sourceTree = "<group>"; };
+		F594C1E8EBA05ADB41FCDB0390B17815 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		F5C7C75D0F76E062C6819E4C222D97D8 /* NSString+ColorfulWoodRegex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ColorfulWoodRegex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.h"; sourceTree = "<group>"; };
+		F5F9560BD1AFD82E6503682A4F7C33FC /* UIViewController+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
+		F643612A795F58FD21829289BBE95639 /* CWUBCell_TitleRight_ButtonRight_Model.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_TitleRight_ButtonRight_Model.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleRight_ButtonRight/CWUBCell_TitleRight_ButtonRight_Model.m; sourceTree = "<group>"; };
+		F7696008DF95DA964FFF79F3A94B426F /* CWUBCell_Refund.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_Refund.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Refund/CWUBCell_Refund.m; sourceTree = "<group>"; };
 		F8890A49C264A36CAB33AF69A6EF761F /* Pods-TestUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestUI-dummy.m"; sourceTree = "<group>"; };
-		F8AB44751192F0AA8DA5F75A06138D15 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		F9E040E212B7D8B03E662B78FC7DEEF0 /* Pods-TestUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestUI.debug.xcconfig"; sourceTree = "<group>"; };
-		FA891F8E85C079B4FB101DDD5BC7A477 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		FBE23E70FF64ACC81816A368E171B903 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		FA18DE77B1C4447537594F1852548DC8 /* CWUBCell_Passenger_Delete_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_Passenger_Delete_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_Passenger_Delete/CWUBCell_Passenger_Delete_Model.h; sourceTree = "<group>"; };
+		FA21F7CE669452A4D08BE739D9074D85 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		FB9F92E45B0910608DACFB534CAA2E4F /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight/CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.h; sourceTree = "<group>"; };
+		FBD6619DFBA7020DA9C0676DDB8A5931 /* CWUBCell_TitleLeft_InfoRight_ButtonRight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBCell_TitleLeft_InfoRight_ButtonRight.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_TitleLeft_InfoRight_ButtonRight/CWUBCell_TitleLeft_InfoRight_ButtonRight.h; sourceTree = "<group>"; };
+		FD665FE21A3C959A918D10B7C40869B5 /* CWUBDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CWUBDefine.h; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBBase/CWUBDefine/CWUBDefine.h; sourceTree = "<group>"; };
+		FD987B45EA5D739D6E193D8A121F3A07 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CWUBCell_ImgLeft_TitleLeft_InfoRight.m; path = ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ImgLeft_TitleLeft_InfoRight/CWUBCell_ImgLeft_TitleLeft_InfoRight.m; sourceTree = "<group>"; };
+		FF6C5B7EC9CBDAD66043DFF53C9D1E1E /* UINavigationItem+ColorfulWoodMargin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+ColorfulWoodMargin.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6FD8312A1AEB348F49A81C438DB25115 /* Frameworks */ = {
+		1D90D7BB260603D4A123435222CE095D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566EA65277D377CE9AF9BC125521965B /* Foundation.framework in Frameworks */,
-				1EC363D6911160B063DB6CC87F595A5B /* UIKit.framework in Frameworks */,
+				25E84E3328395B183D31F2F9B99B4509 /* Foundation.framework in Frameworks */,
+				77E7E13C54EE07F2F951DEDF741E4A67 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		868D474C14443CB21C5D3F2D48DDF951 /* Frameworks */ = {
+		9D6DA824E21F0E57C468740DC5770EC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24BE4028F5C16242C4FF1EA91F61CE60 /* Foundation.framework in Frameworks */,
+				4AE4DA6CF849EB026A4713F43B1E8C18 /* Foundation.framework in Frameworks */,
+				B085C34E9CB41F8FD428DAAB0DAF6B6D /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E006180563D710373D4C965F0186CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68D5F7FF8B1BC37030F28A7A5343CD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF488F6502F5ECDE34E4891DE7BE0A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F614A967D30604644D5B175E9D571BAA /* Foundation.framework in Frameworks */,
+				B4FD252F28BAC0FB2655DD982A60AE89 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B9FAC5BAEA75CAB3E20372C4D27D7EE /* Masonry */ = {
+		23000FAA7A6DB2192D44752979A59FB1 /* ColorfulWoodUIBase */ = {
 			isa = PBXGroup;
 			children = (
-				475326F2A929CD1AFFB74850961F32C0 /* MASCompositeConstraint.h */,
-				D5EC6EDDDD3E503C5B2E967D3FEECFEB /* MASCompositeConstraint.m */,
-				3162AC8E29FA7F3BF0D8641F7F4D9B60 /* MASConstraint.h */,
-				9F937BDEB8DF93A08D20C5355C0FDB5C /* MASConstraint.m */,
-				22E2395DA2EBCF6241A0DA0E1859FF45 /* MASConstraint+Private.h */,
-				780A86CEB0A0131C88BE12414D500734 /* MASConstraintMaker.h */,
-				F8AB44751192F0AA8DA5F75A06138D15 /* MASConstraintMaker.m */,
-				B48867DE203BCF3BB3DFCAB8FDC7516B /* MASLayoutConstraint.h */,
-				807FFD255E8235D5B42FE078299B5F1B /* MASLayoutConstraint.m */,
-				EC0384F145CF471A951BA8E9486AD626 /* Masonry.h */,
-				1321572A3ED9C894C94A131BE29B81B2 /* MASUtilities.h */,
-				915A6FF0E04F5A5C0ACDE0E32BD2F193 /* MASViewAttribute.h */,
-				82F28AEAAF722BC62BF5B37D6663BBC2 /* MASViewAttribute.m */,
-				043FB94CF93050E20D8E4C071ACFA5D2 /* MASViewConstraint.h */,
-				C7C02266037F030E22468AC86802DB57 /* MASViewConstraint.m */,
-				B179F4D3D34A3CE25A698B8D9AC9D6C2 /* NSArray+MASAdditions.h */,
-				8229525E7067F22D3977D2628DF5F2C3 /* NSArray+MASAdditions.m */,
-				FBE23E70FF64ACC81816A368E171B903 /* NSArray+MASShorthandAdditions.h */,
-				E158FC65C5404E098F16E26F478DA504 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				C762C4F3A304C10AF7EBEA6AAA8508A0 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				8E7E17DB5590A8C4D9625D67E6FBD243 /* View+MASAdditions.h */,
-				2FCC2A09AC3DCD0E4A3D268DAABC5135 /* View+MASAdditions.m */,
-				8A9F610CB90E57B81F8F7DCA2176E0FD /* View+MASShorthandAdditions.h */,
-				FA891F8E85C079B4FB101DDD5BC7A477 /* ViewController+MASAdditions.h */,
-				25CED739CF35B6D0A1D95AE17D712A7F /* ViewController+MASAdditions.m */,
-				4854BD850DB1ADEB02DE483F0C44E016 /* Support Files */,
+				021F7BE1AFDE71C147BC31D5996359E5 /* ColorfulWoodUIBase.h */,
+				221821B2231EC378FAFD44F8198BC699 /* CWUBButtonInfo.h */,
+				52917233353F65092650840F85829308 /* CWUBButtonInfo.m */,
+				4B32AC8B27AAA2A78E9CC7280C59D345 /* CWUBButtonWithInfo.h */,
+				70E45D13FFE18098193466B66EE4568B /* CWUBButtonWithInfo.m */,
+				32FC7329D4B9FF0C0AC3B81CE61E3F91 /* CWUBCell_Address.h */,
+				0AE0D8E134B9CE7B8B034ACD361D7631 /* CWUBCell_Address.m */,
+				08026A9A09CEBFE0245FF950FACFAFF9 /* CWUBCell_Address_ArrowRight.h */,
+				DDD764827A3C534C0F5FB15209D3F17F /* CWUBCell_Address_ArrowRight.m */,
+				CCD32ABEC95CFAA84E0502371A8F8266 /* CWUBCell_Address_Model.h */,
+				0D1CB1DEF7960A046137568DFE55DAA1 /* CWUBCell_Address_Model.m */,
+				05698C4C0C6298BC737867E3926E3DB6 /* CWUBCell_ButtonLeft_TitleLeft.h */,
+				53ED9C584B57C85A1A0B1955AFD06CE9 /* CWUBCell_ButtonLeft_TitleLeft.m */,
+				CE0B99EDFAC39E6126DCAB04B95374E4 /* CWUBCell_ButtonLeft_TitleLeft_Model.h */,
+				CC4837B69FFA33E60B8D937760E38E51 /* CWUBCell_ButtonLeft_TitleLeft_Model.m */,
+				90DC0C7C3B93DD6E6FAC5E76BDBD0CE8 /* CWUBCell_ButtonRight_SpaceBottom.h */,
+				307F8655D062E0D7572642CB415FACBF /* CWUBCell_ButtonRight_SpaceBottom.m */,
+				8489C3720030AD1F5AE63E22B0347B48 /* CWUBCell_ButtonRight_SpaceBottom_Model.h */,
+				E6D09E65CB362B9D747AF62B815B69D9 /* CWUBCell_ButtonRight_SpaceBottom_Model.m */,
+				D45801C32B8610AB35E3C003B630BD2C /* CWUBCell_ButtonRight_TitleRight_ButtonRight.h */,
+				377389B3F86FCEF5B872397B694415B1 /* CWUBCell_ButtonRight_TitleRight_ButtonRight.m */,
+				7C93D97AAD603B998E138E02A0F9C10F /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h */,
+				66A7E46D94C7E4D78DAFB2BB02C53EEB /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m */,
+				D95F24D035FFCC5071037D2AB9E297E2 /* CWUBCell_CharterDetail_Opt.h */,
+				76CCC115C62441D2B3BCA97D76504E04 /* CWUBCell_CharterDetail_Opt.m */,
+				CB5F62358404BD4B0BA55D50F1433A0F /* CWUBCell_CharterDetail_Opt_Model.h */,
+				ACF26B71A59FACDF66AB381B29E6D403 /* CWUBCell_CharterDetail_Opt_Model.m */,
+				03F8959A74AFE40E2E2BEBEE36C7A288 /* CWUBCell_CharterDiscount.h */,
+				E2D46184076EB8DFC37FDC06BEE1AD12 /* CWUBCell_CharterDiscount.m */,
+				3F93B596753CC075D9E2A1723C2540B6 /* CWUBCell_CharterDiscount_Model.h */,
+				AE2CDB820BD92AEF4A3C39C340733BB3 /* CWUBCell_CharterDiscount_Model.m */,
+				CBF008FE59084F0A5718545E56DEA715 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h */,
+				071DDD77DEB0B96FBCF78955FE77CAF5 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m */,
+				E458CEA60246C88B5B8501766685E6F9 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h */,
+				4C7956D19CA7F7C407D1902FAFBBD1E5 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m */,
+				1984164C06EF3E47A9066061098963CA /* CWUBCell_IconTitleLeft_IconTitleRight.h */,
+				B52B389831CFB3F12B2DD4D2CA5FDE7B /* CWUBCell_IconTitleLeft_IconTitleRight.m */,
+				E4AC714B2E537BBDFEC6A62A1834C399 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.h */,
+				33D530EDC12F0B8E00B888678A8360E6 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.m */,
+				7C57423E40A87DF6DB551F16A36217AD /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h */,
+				26EB6DE24777B4BCB9DE8BF0750214C0 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.m */,
+				AFC49DE28C848A2AB46E4B39935D1B47 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.h */,
+				9CB3D5C22846F96866B4EE94566C16E6 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m */,
+				2A5452E54F6EC224151E62CFC7D4F4B8 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.h */,
+				FD987B45EA5D739D6E193D8A121F3A07 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.m */,
+				5DA35723FA0A159E86EAB53B6C4956F1 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.h */,
+				02E992F12D5DF1A3EAE9E1BF0A184994 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.m */,
+				9F647A7DF042657F4EA190AAA88BF140 /* CWUBCell_Passenger.h */,
+				B8BE06FF342BFFC65EECA697A8F1D00F /* CWUBCell_Passenger.m */,
+				BA7A6919E4A081409FEE36602A176DB2 /* CWUBCell_Passenger_Delete.h */,
+				3D4EDDB8165D64FBED8A34DA19D61ED1 /* CWUBCell_Passenger_Delete.m */,
+				FA18DE77B1C4447537594F1852548DC8 /* CWUBCell_Passenger_Delete_Model.h */,
+				B755DE2398910A1261019A9BB5B2DAB0 /* CWUBCell_Passenger_Delete_Model.m */,
+				E0A4C2F380C2D70A2015A0A1B5B2D6CC /* CWUBCell_Passenger_Model.h */,
+				8CB5241C6712EB87B695B5E20BD4E683 /* CWUBCell_Passenger_Model.m */,
+				45E319EE4BFF80196ADD0D364DFF699E /* CWUBCell_Passenger_Opt.h */,
+				980EB15E1FE01781E2BFBBEF9F8913D4 /* CWUBCell_Passenger_Opt.m */,
+				51C2C0811F5B6C8B2F023F1B97B5551F /* CWUBCell_Passenger_Opt_Model.h */,
+				59B8849CFF60435CDDB3162B36A3F241 /* CWUBCell_Passenger_Opt_Model.m */,
+				EDDC99332CA0138C5BC971618A143F22 /* CWUBCell_Refund.h */,
+				F7696008DF95DA964FFF79F3A94B426F /* CWUBCell_Refund.m */,
+				76209BFADD138330C480DA24F0304022 /* CWUBCell_Refund_Model.h */,
+				6D973E6B40D763B7B401328F60B220EB /* CWUBCell_Refund_Model.m */,
+				844B8F88E2E748376B029B6518F55D82 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.h */,
+				0675CF28F9A5A2F77FFB947A7801F1A9 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.m */,
+				FB9F92E45B0910608DACFB534CAA2E4F /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.h */,
+				93D63689D750814ACCF38691DAB8C0FE /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m */,
+				1E38C5AE1060A35A9456E14DBF75DE38 /* CWUBCell_TitleLeft_InfoLeft.h */,
+				9F7E4DBDE164B1884B7C197A30CB9DF8 /* CWUBCell_TitleLeft_InfoLeft.m */,
+				A28D4509608469FD01D3DE3673692E52 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.h */,
+				06C65F338E8472C567EE2FF27B45A313 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.m */,
+				2AF94186D7F7AEEEBC96516A0310E808 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.h */,
+				74BDB733C5FF12EFB04D18DBBADD1460 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m */,
+				6E80BBED682E86B7D019B878D772715F /* CWUBCell_TitleLeft_InfoLeft_Model.h */,
+				DEF5F3BA6099D35EA76AF42830A1818A /* CWUBCell_TitleLeft_InfoLeft_Model.m */,
+				EBD2BA744D38F37CCC9FC414AD67BF99 /* CWUBCell_TitleLeft_InfoRight.h */,
+				C9E5173B1F44FC9E28A59FB8A011E1B4 /* CWUBCell_TitleLeft_InfoRight.m */,
+				FBD6619DFBA7020DA9C0676DDB8A5931 /* CWUBCell_TitleLeft_InfoRight_ButtonRight.h */,
+				D9724FEC82A07F10A9D76921145FDB3E /* CWUBCell_TitleLeft_InfoRight_ButtonRight.m */,
+				BFB8ACF487C5AB45AA68EB4CF09FAF0D /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.h */,
+				3F13F5A35449216BD9D51796B6903973 /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.m */,
+				88785EA5E02E3FAAEFBC5AECC1E5BA07 /* CWUBCell_TitleLeft_InfoRight_Model.h */,
+				6EC22D2DCE5F3A35292C716FA4C8875E /* CWUBCell_TitleLeft_InfoRight_Model.m */,
+				C14471D7902C3D05CADDA7F783A612F6 /* CWUBCell_TitleLeft_InputLeft.h */,
+				D2FD57497C8D7C3891E018DD390B95F1 /* CWUBCell_TitleLeft_InputLeft.m */,
+				9FF4F0586AF8B88E5B70513932216501 /* CWUBCell_TitleLeft_InputLeft_Model.h */,
+				E02BB916CE2C94177778C488BB3DEDF8 /* CWUBCell_TitleLeft_InputLeft_Model.m */,
+				3E6C733E4A7E02D5CE1DC638DAC04010 /* CWUBCell_TitleLeft_SwithRight.h */,
+				3A72C117DF3DFF4EDD378627C9B0299C /* CWUBCell_TitleLeft_SwithRight.m */,
+				9352959F90D1568F91AB3A7331AF4904 /* CWUBCell_TitleLeft_SwithRight_Model.h */,
+				077B738ED91C8ECA20ADD4E45D72BED1 /* CWUBCell_TitleLeft_SwithRight_Model.m */,
+				1F5E8668E8F76C244425BB593FBE0CB8 /* CWUBCell_TitleRight_ButtonRight.h */,
+				67FCBC4FC44F138BE319557542523535 /* CWUBCell_TitleRight_ButtonRight.m */,
+				6DC1A75B47B03EE6E52C75AED1B34F3D /* CWUBCell_TitleRight_ButtonRight_Model.h */,
+				F643612A795F58FD21829289BBE95639 /* CWUBCell_TitleRight_ButtonRight_Model.m */,
+				0621595C0BE02B59E06E6EA512C2BCE7 /* CWUBCell_Trip.h */,
+				6A6CC50F4B8DB1D170E97F32C6239A24 /* CWUBCell_Trip.m */,
+				04CCC37983DA69760E3DC4421D1C9471 /* CWUBCell_Trip_Model.h */,
+				D1A088C4AD227F59CA6DAF744F95DB33 /* CWUBCell_Trip_Model.m */,
+				35C99A79925BC36CF6554D6BC35C8A50 /* CWUBCellBase.h */,
+				8410CC86D9CBD3074B953FD0BBAEAA66 /* CWUBCellBase.m */,
+				068AC2675BBE45ECD60E01DFE4218DF7 /* CWUBCellType.h */,
+				FD665FE21A3C959A918D10B7C40869B5 /* CWUBDefine.h */,
+				EE69F00F0085BCF9B0954E5F5EC47F07 /* CWUBDefine.m */,
+				11204C561FAA9AD45D0867F7593354C4 /* CWUBLabelWithModel.h */,
+				88D61468BA9AAA5505ED7F7333F8B7AB /* CWUBLabelWithModel.m */,
+				D80CAD30EB0A02DAAF0E40C7EF889384 /* CWUBLableLeftTop.h */,
+				D66EDB184568711FE25AC20B15C87F37 /* CWUBLableLeftTop.m */,
+				7DDEF1F05AA84983D657969E002D9A79 /* CWUBModel.h */,
+				978DE320EA67BE6D615BE13155FDEF41 /* CWUBModel.m */,
+				F2EE3E086E25B525D78E870C8C2668D3 /* CWUBModelBase.h */,
+				C2DC4F22A752697151DA995261FAAD8E /* CWUBModelBase.m */,
+				67E5DA33E7EF22E0351A36E205D572DF /* CWUBTextfieldWithModel.h */,
+				46AB93FF22E4BDF30DB20F3927419CA3 /* CWUBTextfieldWithModel.m */,
+				24F3DF561A2396077B8913CAC3F72579 /* CWUBTextInfo.h */,
+				8B79FC715E224B1D5EF142B28D904CF0 /* CWUBTextInfo.m */,
+				207DB5B5EA0B31F3FF732185623FE6ED /* CWUBWoodUIBaseDemo.h */,
+				29BB01AAB324B74556E3C9BE7DD6E9FC /* CWUBWoodUIBaseDemo.m */,
+				25062CCAB577668410EA57AEF8028A77 /* Info.plist */,
+				B295DC3EACE020F6127A429951B58979 /* Support Files */,
 			);
-			name = Masonry;
-			path = Masonry;
+			path = ColorfulWoodUIBase;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4854BD850DB1ADEB02DE483F0C44E016 /* Support Files */ = {
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7882AB8492CA4F59F730C76CC3BBF57A /* Masonry.xcconfig */,
-				7B5A231E76AF7DC6CB887B5B2C522A7A /* Masonry-dummy.m */,
-				A2F75C96947B2651F82FC18F66C43B49 /* Masonry-prefix.pch */,
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Masonry";
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4AB3184F0E6BF6B0DB62462CBC81A436 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EFAFCD1887461F231034EAB9CCF0F3B /* libColorfulWoodCategories.a */,
+				C1216C1CFE012A6CE5417C8273ADBEA5 /* libColorfulWoodUIBase.a */,
+				CA1AD0ABF1D5A2784F3B46114D497066 /* libMasonry.a */,
+				DB6579C9DDAC5DA5FDF7641A4B0B9D0D /* libPods-TestUI.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		50E36E07620DC909A5B32A17B9DDCD91 /* Pods-TestUI */ = {
@@ -181,6 +605,17 @@
 			path = "Target Support Files/Pods-TestUI";
 			sourceTree = "<group>";
 		};
+		52350FECC6081AF42D762CB2FED19FF7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2DD8D7FFEC0578B5E4BD9F24F924110 /* ColorfulWoodCategories.xcconfig */,
+				087743D28C71AC8EC7074DD99CDDB405 /* ColorfulWoodCategories-dummy.m */,
+				B5820AEDCF5F24437B7E309D87336013 /* ColorfulWoodCategories-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ColorfulWoodCategories";
+			sourceTree = "<group>";
+		};
 		530863D00EA0F348977823D62ECEE703 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,13 +624,45 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		796058FFD3F9ACA76584F5FAD1A0C948 /* Products */ = {
+		65A15AFD9F84E4DBB2F94D2248D2733B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				37C2435217345EB29CE22B22B3ECCA6F /* libMasonry.a */,
-				560C1E69006DC5A17FACDC12D09F479B /* libPods-TestUI.a */,
+				768998539326476AE4FC2854A4418CC5 /* ColorfulWoodCategories */,
+				23000FAA7A6DB2192D44752979A59FB1 /* ColorfulWoodUIBase */,
+				82562FD86CA0159007167F92D962123C /* Masonry */,
 			);
-			name = Products;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E8FD63B0DD51ADCC5ECB81BD6084DD3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC797083EAEC7B675833AE110B3CA9A9 /* Masonry.xcconfig */,
+				249AD80B67B8780298FBCEC3BA8C645F /* Masonry-dummy.m */,
+				2CDA11EC4DD2B3F39246246FC6B375C9 /* Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		768998539326476AE4FC2854A4418CC5 /* ColorfulWoodCategories */ = {
+			isa = PBXGroup;
+			children = (
+				3E97CFED4634599AC0D5EFED68A60F4D /* ColorfulWoodCategories.h */,
+				E0CF58A2A07227AE1C027084106C79ED /* Info.plist */,
+				F5C7C75D0F76E062C6819E4C222D97D8 /* NSString+ColorfulWoodRegex.h */,
+				DA39AA3149D84FEDD22D6643A23F98A3 /* NSString+ColorfulWoodRegex.m */,
+				447000976E6F8741B647B8A3FFE4D790 /* UIColor+Hex.h */,
+				38BE030E555FAC3221D8DF2331058C4B /* UIColor+Hex.m */,
+				BC7AFE47A4A75E66B4DD9572AEDF6F41 /* UIImage+ColorfulWoodAddtional.h */,
+				9012B9D0221552ADDD2853865DFD51FF /* UIImage+ColorfulWoodAddtional.m */,
+				FF6C5B7EC9CBDAD66043DFF53C9D1E1E /* UINavigationItem+ColorfulWoodMargin.h */,
+				DFABFBB80C80A781B6D8A1088D0FF46D /* UINavigationItem+ColorfulWoodMargin.m */,
+				F5F9560BD1AFD82E6503682A4F7C33FC /* UIViewController+ColorfulWoodAddtional.h */,
+				3CC9269F4814BB1AA58207036A1CC167 /* UIViewController+ColorfulWoodAddtional.m */,
+				52350FECC6081AF42D762CB2FED19FF7 /* Support Files */,
+			);
+			path = ColorfulWoodCategories;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -203,64 +670,226 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				E9B49E9D4F6BC02AA78DCF86BCED2145 /* Pods */,
-				796058FFD3F9ACA76584F5FAD1A0C948 /* Products */,
+				65A15AFD9F84E4DBB2F94D2248D2733B /* Pods */,
+				4AB3184F0E6BF6B0DB62462CBC81A436 /* Products */,
 				530863D00EA0F348977823D62ECEE703 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
+		82562FD86CA0159007167F92D962123C /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
-				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
+				F594C1E8EBA05ADB41FCDB0390B17815 /* MASCompositeConstraint.h */,
+				57F305F72CA62C64A56AAFDC8AED0064 /* MASCompositeConstraint.m */,
+				FA21F7CE669452A4D08BE739D9074D85 /* MASConstraint.h */,
+				C3FA29B5B6A553C8A01042C7A971CDE7 /* MASConstraint.m */,
+				1528FA3E579D6562BC7EA06B12E8EB11 /* MASConstraint+Private.h */,
+				78F0D20126433D238FFB4218EE64B5E4 /* MASConstraintMaker.h */,
+				5E932B945704B2E5BF440DB0C5006537 /* MASConstraintMaker.m */,
+				D34CA3B94E8A66402501E20AF74DC43F /* MASLayoutConstraint.h */,
+				7B75C38F9073A1FAA397D95AD2655728 /* MASLayoutConstraint.m */,
+				390E6C7031058FC039E4565F4AAF7F21 /* Masonry.h */,
+				6E46875CF2099531FEA2DBC5826025DF /* MASUtilities.h */,
+				2B8ABADCD8E20B74981BC56FDCCA16E7 /* MASViewAttribute.h */,
+				71F96FABC421E12B0880B57BA516CFE0 /* MASViewAttribute.m */,
+				88AE8D65AE36E595DAD3592AD81DE5F1 /* MASViewConstraint.h */,
+				D01ACB1BB14E3CED68FEF770F8A02396 /* MASViewConstraint.m */,
+				0FB34E9D00C181E9FE16DB37AD91543B /* NSArray+MASAdditions.h */,
+				DB5BD2A4634CBEF715E025E96208A42B /* NSArray+MASAdditions.m */,
+				2C5AEF44A61AA80CFF98220DC8C2E547 /* NSArray+MASShorthandAdditions.h */,
+				DC7534348F0FEDCF367A43158CEBB9F8 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				C32201ED09B4093ECA078DC1D04638CC /* NSLayoutConstraint+MASDebugAdditions.m */,
+				DC16C812E47D398D4693999E2043321B /* View+MASAdditions.h */,
+				BE987E96C83FA57CC30B06A2E165D1F0 /* View+MASAdditions.m */,
+				E05D909E8CFA842AB53BC2C07457ACAF /* View+MASShorthandAdditions.h */,
+				D11B9C8DAF8FD5797F360FBAC9C4F62A /* ViewController+MASAdditions.h */,
+				39464D74BDD7A8D791AB763A644A8406 /* ViewController+MASAdditions.m */,
+				6E8FD63B0DD51ADCC5ECB81BD6084DD3 /* Support Files */,
 			);
-			name = iOS;
+			path = Masonry;
 			sourceTree = "<group>";
 		};
-		E9B49E9D4F6BC02AA78DCF86BCED2145 /* Pods */ = {
+		B295DC3EACE020F6127A429951B58979 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B9FAC5BAEA75CAB3E20372C4D27D7EE /* Masonry */,
+				6E6574B9F602FF81D7DCD7ECB78020FB /* ColorfulWoodUIBase.xcconfig */,
+				99E6039F7F65664464EE128229032774 /* ColorfulWoodUIBase-dummy.m */,
+				321DE383117D0F1DFC6B0F807BAE4FD0 /* ColorfulWoodUIBase-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/ColorfulWoodUIBase";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BDF73468622762862D2FB76ED4AC0D8E /* Headers */ = {
+		966FF11AB8C910E794D388C0CF098953 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E09711F001C49F92A97060414E262B /* MASCompositeConstraint.h in Headers */,
-				4CBE1B46550A3FB90FDD1CB9CBA7B7FE /* MASConstraint+Private.h in Headers */,
-				6249770A7D163B0F3001D5A76C5FA01C /* MASConstraint.h in Headers */,
-				EC48DE078CA5E55922CCE02354D475CD /* MASConstraintMaker.h in Headers */,
-				A6436E3CFFCBFE591E2D2A68ED90CAC6 /* MASLayoutConstraint.h in Headers */,
-				49B903D576E09560C52AA92FDCC31A68 /* Masonry.h in Headers */,
-				1F3BD3BC28432BB5E2F73501E06E4579 /* MASUtilities.h in Headers */,
-				E1E771349813022263F549BDF33CB4BB /* MASViewAttribute.h in Headers */,
-				A83991D7C1373DF66020C2FDFC5D7564 /* MASViewConstraint.h in Headers */,
-				490CA524521F7D444EA58FA915D7E99C /* NSArray+MASAdditions.h in Headers */,
-				E072DA57403C4BFF9B10467BE05604C5 /* NSArray+MASShorthandAdditions.h in Headers */,
-				9934AEA2C891C201D8ED5746FF42FE1B /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				86EE1CB5473A4A07081D8DE3A2C45924 /* View+MASAdditions.h in Headers */,
-				983CB852CBBFBC04C2A6BA407E34F59B /* View+MASShorthandAdditions.h in Headers */,
-				C88F85D3200060BD98FC13EA58121706 /* ViewController+MASAdditions.h in Headers */,
+				0E45D948AC894939126D212B7033BD16 /* MASCompositeConstraint.h in Headers */,
+				0DE73A0D52D1B6EA31A6801B52872D5D /* MASConstraint+Private.h in Headers */,
+				D944F4A925C2FEC40F4970867294EB4B /* MASConstraint.h in Headers */,
+				ADA56C7CA6A32F51931DD2F4F872F20C /* MASConstraintMaker.h in Headers */,
+				86056A5FE6B7745584596E9A16A34207 /* MASLayoutConstraint.h in Headers */,
+				C4B637B0EBB4CF4A95051CC637CF4FF5 /* Masonry.h in Headers */,
+				9B057FF1FC095263611FA90B9600F4E0 /* MASUtilities.h in Headers */,
+				889D5AF540F8C7B993AEFA8C36A04C20 /* MASViewAttribute.h in Headers */,
+				F2922D6EFDEBBC12C1589106D411FD60 /* MASViewConstraint.h in Headers */,
+				7C4310C53DAA5213D7ED6E108BE0182E /* NSArray+MASAdditions.h in Headers */,
+				F29C15C0392520AA93A68407EEB9D0E7 /* NSArray+MASShorthandAdditions.h in Headers */,
+				B6CBE62A03715365153A3681C4958CD1 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				C63926795ADA97DE55BD880A89DEFE73 /* View+MASAdditions.h in Headers */,
+				D09F6041DE2ED77A18ECB09FFCF06A03 /* View+MASShorthandAdditions.h in Headers */,
+				6E0F2881E0C5EF8482016B0DDC1797B4 /* ViewController+MASAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4348209E438434854ABA609FBCD2ADE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C36E71C71565813E9233A6BA1100C2 /* ColorfulWoodCategories.h in Headers */,
+				62A119B592480C96257909011F891194 /* NSString+ColorfulWoodRegex.h in Headers */,
+				BB101234E0B5B53FB7F64C5641148383 /* UIColor+Hex.h in Headers */,
+				0A9BB2450A527BC3356DB67D6396BE5F /* UIImage+ColorfulWoodAddtional.h in Headers */,
+				A95549C3DD2E3C57C91CEF5D4354C7E7 /* UINavigationItem+ColorfulWoodMargin.h in Headers */,
+				2E1D47713DC536C3BE4EF4C4F1DC94D2 /* UIViewController+ColorfulWoodAddtional.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC2B805A5E1D1892A533CF56BA039534 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CAC6C6B7E4E7B20C2D43E5D051CEDA /* ColorfulWoodUIBase.h in Headers */,
+				B70FF2AF834DF74BC394451DDA556025 /* CWUBButtonInfo.h in Headers */,
+				651BBE065C7E6A5DD70C5AE9EE2E3AC1 /* CWUBButtonWithInfo.h in Headers */,
+				EAA059045708486B58CAD550ECECA7C0 /* CWUBCell_Address.h in Headers */,
+				6772332A65CD4F1FC071BB462DBC9EB3 /* CWUBCell_Address_ArrowRight.h in Headers */,
+				0BCEFCC8AC72D4F6156EBAF104393320 /* CWUBCell_Address_Model.h in Headers */,
+				DCA9B38E010262BAF1257952DB0018A4 /* CWUBCell_ButtonLeft_TitleLeft.h in Headers */,
+				755E6469A1C4FA7B4A3A7515C3C97C27 /* CWUBCell_ButtonLeft_TitleLeft_Model.h in Headers */,
+				5222E72D9AB5EC9528A99FF4C757CF5E /* CWUBCell_ButtonRight_SpaceBottom.h in Headers */,
+				87DC21873D3E872DC5B0BA0A0D9D463A /* CWUBCell_ButtonRight_SpaceBottom_Model.h in Headers */,
+				BB96E55A40B95C3A27705C3B108AC9D6 /* CWUBCell_ButtonRight_TitleRight_ButtonRight.h in Headers */,
+				4527A34CEEA6BFBE8685A80EAF320C67 /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h in Headers */,
+				19887CA12C8604D732905AC8FD44B38D /* CWUBCell_CharterDetail_Opt.h in Headers */,
+				F3072191A30E40EB12565CCA5A4F45A0 /* CWUBCell_CharterDetail_Opt_Model.h in Headers */,
+				4ECEBF205282AF5383D063F82B39E6CA /* CWUBCell_CharterDiscount.h in Headers */,
+				169832129B5FC9CDADDDA467D8AA1978 /* CWUBCell_CharterDiscount_Model.h in Headers */,
+				1A9965ACA650F29226C04CE457C8855E /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h in Headers */,
+				A1E8481CA7FAD9079EE4589F976969DA /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h in Headers */,
+				5A2ABBFF5C7A9709CC19B0F6D6E22E2D /* CWUBCell_IconTitleLeft_IconTitleRight.h in Headers */,
+				D0E9AF6EEAC676A3A2B4AFB6A9A65743 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.h in Headers */,
+				EA5397EF33EA07C0501521650441EB42 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h in Headers */,
+				1DB45CFE12259DC8A3BC30DAC57B1F1A /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.h in Headers */,
+				A8620AC55564BB798B206828AAE72D8E /* CWUBCell_ImgLeft_TitleLeft_InfoRight.h in Headers */,
+				4A511EDCA9664BC6C8DD07596830AD40 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.h in Headers */,
+				A9C4D393D4755B866CB318292D734602 /* CWUBCell_Passenger.h in Headers */,
+				D2EDA63670CFC9D807390B36A4E7C27F /* CWUBCell_Passenger_Delete.h in Headers */,
+				EABBC15214F8E1A9FA3DFF047FFA4E56 /* CWUBCell_Passenger_Delete_Model.h in Headers */,
+				9278CB93685FF9DF58416EDAFCFA43CE /* CWUBCell_Passenger_Model.h in Headers */,
+				1F7F9064A17C9CBD3688F7BEAF48672C /* CWUBCell_Passenger_Opt.h in Headers */,
+				31111BB5F3882C6BE137F209D5A65684 /* CWUBCell_Passenger_Opt_Model.h in Headers */,
+				F93861D0835BDAF701E0A4045E1D179F /* CWUBCell_Refund.h in Headers */,
+				6E3DBC0AE9608688C3D29A33C0D1F69C /* CWUBCell_Refund_Model.h in Headers */,
+				7EADFE395F052A30AFD9379A316DEAC7 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.h in Headers */,
+				A42FC14E534DFACF59BEC6F8C13F53E6 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.h in Headers */,
+				18C4B3580C05187CAD13D67FB5FCBA69 /* CWUBCell_TitleLeft_InfoLeft.h in Headers */,
+				B4013135FCC9AB61B0CBF11DFE1B1E5A /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.h in Headers */,
+				9080DDC257AE89CE42FA8D4237D5F285 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.h in Headers */,
+				EC2A48E3F7BB464D0E3DBBDDC8693184 /* CWUBCell_TitleLeft_InfoLeft_Model.h in Headers */,
+				AFED58A092CF3EA3EB6AFE68F1A55834 /* CWUBCell_TitleLeft_InfoRight.h in Headers */,
+				EBEF41C6FD5F0D740494D6CF116492C3 /* CWUBCell_TitleLeft_InfoRight_ButtonRight.h in Headers */,
+				C0CAC11B7A32580B24339E3E7B486833 /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.h in Headers */,
+				00E365BE2871BD9E0C16F03A02908296 /* CWUBCell_TitleLeft_InfoRight_Model.h in Headers */,
+				02641D1D9A6ADC8078963070A40CF911 /* CWUBCell_TitleLeft_InputLeft.h in Headers */,
+				F6B042E888653980A8AE89AE244C49F3 /* CWUBCell_TitleLeft_InputLeft_Model.h in Headers */,
+				D58D010087EC2C4F6AA9B68966756A1A /* CWUBCell_TitleLeft_SwithRight.h in Headers */,
+				953E92D8C2EFF1BF53B5D370D26FCB90 /* CWUBCell_TitleLeft_SwithRight_Model.h in Headers */,
+				0FDD7F88D2C3ECAEA1F5BDC7F9F4D309 /* CWUBCell_TitleRight_ButtonRight.h in Headers */,
+				CB6911AADE2368C1F2BF1E3B262CAB7F /* CWUBCell_TitleRight_ButtonRight_Model.h in Headers */,
+				8C8F9AEA9B4DD4D7FC54DE703E547976 /* CWUBCell_Trip.h in Headers */,
+				095B9024027BCB495FFDDBE44D4F3C24 /* CWUBCell_Trip_Model.h in Headers */,
+				D6368246E17C19428B263AE34864551B /* CWUBCellBase.h in Headers */,
+				38DD7E1E0AF812DDC749FD9BB9F7E127 /* CWUBCellType.h in Headers */,
+				029B4B0D9D9AA3C088405E7F91049172 /* CWUBDefine.h in Headers */,
+				0948736DF3CA076DE4A8F1CF7F9631AA /* CWUBLabelWithModel.h in Headers */,
+				7D3CB395011F024CB06BE1C07C3C4C4E /* CWUBLableLeftTop.h in Headers */,
+				E07D9B5D20F5BB2A7710369F7AB0A582 /* CWUBModel.h in Headers */,
+				DE9F67E3522584E209EEA35CB2EB4105 /* CWUBModelBase.h in Headers */,
+				46087C333188CDE8FD8DC618E37AA52B /* CWUBTextfieldWithModel.h in Headers */,
+				F630D9E82108D171EABDC851444BA037 /* CWUBTextInfo.h in Headers */,
+				C001542327C2D07011B006BABDE0C926 /* CWUBWoodUIBaseDemo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */ = {
+		0689DA352BEBC0665D4637B684319E11 /* Pods-TestUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34CAE1CB89EDBF2E53735CC5D4E5E69F /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildConfigurationList = 0336E85CA624598C74755365829DF388 /* Build configuration list for PBXNativeTarget "Pods-TestUI" */;
 			buildPhases = (
-				27E8E3A06AAFF112FF7BC4F0117165D8 /* Sources */,
-				6FD8312A1AEB348F49A81C438DB25115 /* Frameworks */,
-				BDF73468622762862D2FB76ED4AC0D8E /* Headers */,
+				63B8F636793A1594A5FA5E7219232132 /* Sources */,
+				B0E006180563D710373D4C965F0186CB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C28F4C495E9FD488B98A6D569F9365D9 /* PBXTargetDependency */,
+				0B6722B1011A4373071B43CFCBC8FECC /* PBXTargetDependency */,
+				B679F62D67F503AE4FAA05BAB18BBAB0 /* PBXTargetDependency */,
+			);
+			name = "Pods-TestUI";
+			productName = "Pods-TestUI";
+			productReference = DB6579C9DDAC5DA5FDF7641A4B0B9D0D /* libPods-TestUI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		60A6C62D284142E4D9035BB2102F013D /* ColorfulWoodCategories */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72D2FA2E935A738C06E9B4B6C3605667 /* Build configuration list for PBXNativeTarget "ColorfulWoodCategories" */;
+			buildPhases = (
+				791655A06E285CA7153F5E756110EFE1 /* Sources */,
+				DAF488F6502F5ECDE34E4891DE7BE0A7 /* Frameworks */,
+				B4348209E438434854ABA609FBCD2ADE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorfulWoodCategories;
+			productName = ColorfulWoodCategories;
+			productReference = 3EFAFCD1887461F231034EAB9CCF0F3B /* libColorfulWoodCategories.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6F6A40BE75EC4ABDF1731BC2DF073054 /* ColorfulWoodUIBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD35C4559CEB652BBD106D0CCF0555A8 /* Build configuration list for PBXNativeTarget "ColorfulWoodUIBase" */;
+			buildPhases = (
+				FB4212C7AE372B0964F7B4759A40DFAE /* Sources */,
+				1D90D7BB260603D4A123435222CE095D /* Frameworks */,
+				CC2B805A5E1D1892A533CF56BA039534 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DDF4B37EFF5B163EC90FEE10941C8A1 /* PBXTargetDependency */,
+				F503C94CC0E6C7062C77258A17260DAB /* PBXTargetDependency */,
+			);
+			name = ColorfulWoodUIBase;
+			productName = ColorfulWoodUIBase;
+			productReference = C1216C1CFE012A6CE5417C8273ADBEA5 /* libColorfulWoodUIBase.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CFDF595AA01CFB939CC0C84EC34AD49B /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9C9C819D4FF5C9A29C2E2C57EF7DDB8 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				62816E8F0953543218164531EC1FFAA5 /* Sources */,
+				9D6DA824E21F0E57C468740DC5770EC5 /* Frameworks */,
+				966FF11AB8C910E794D388C0CF098953 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -268,24 +897,7 @@
 			);
 			name = Masonry;
 			productName = Masonry;
-			productReference = 37C2435217345EB29CE22B22B3ECCA6F /* libMasonry.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A12885885F1B64ECCAAD5915617BBAA9 /* Pods-TestUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DF0917C12407253C9FE675659AAB9A91 /* Build configuration list for PBXNativeTarget "Pods-TestUI" */;
-			buildPhases = (
-				68375A46F11ECC2F181A18647D852BBA /* Sources */,
-				868D474C14443CB21C5D3F2D48DDF951 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E8E0E364C759C135BCD89340E88901AA /* PBXTargetDependency */,
-			);
-			name = "Pods-TestUI";
-			productName = "Pods-TestUI";
-			productReference = 560C1E69006DC5A17FACDC12D09F479B /* libPods-TestUI.a */;
+			productReference = CA1AD0ABF1D5A2784F3B46114D497066 /* libMasonry.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -294,8 +906,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -305,257 +917,497 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 796058FFD3F9ACA76584F5FAD1A0C948 /* Products */;
+			productRefGroup = 4AB3184F0E6BF6B0DB62462CBC81A436 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */,
-				A12885885F1B64ECCAAD5915617BBAA9 /* Pods-TestUI */,
+				60A6C62D284142E4D9035BB2102F013D /* ColorfulWoodCategories */,
+				6F6A40BE75EC4ABDF1731BC2DF073054 /* ColorfulWoodUIBase */,
+				CFDF595AA01CFB939CC0C84EC34AD49B /* Masonry */,
+				0689DA352BEBC0665D4637B684319E11 /* Pods-TestUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27E8E3A06AAFF112FF7BC4F0117165D8 /* Sources */ = {
+		62816E8F0953543218164531EC1FFAA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F390D582745DF3516ADD4D910A2ACFFA /* MASCompositeConstraint.m in Sources */,
-				1AF513D8D71B663D5422760106B13723 /* MASConstraint.m in Sources */,
-				99E00D593F76D7E6C96300345E211282 /* MASConstraintMaker.m in Sources */,
-				61C611ABFFC5FFF35ACE70883CB8F523 /* MASLayoutConstraint.m in Sources */,
-				5B46C39A3F939EDB676981756CC24007 /* Masonry-dummy.m in Sources */,
-				CEF7E139022FFA4F5C99D4DC5DE67990 /* MASViewAttribute.m in Sources */,
-				D8D72BEC4364E9F77BCC6B8AB4E30DF3 /* MASViewConstraint.m in Sources */,
-				14B65CE3038761FA8F6F5D1ECED6A562 /* NSArray+MASAdditions.m in Sources */,
-				B953667D411D1DCD919CBD314F568A92 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				548BBD5B63FA097F419829C3EE8EA068 /* View+MASAdditions.m in Sources */,
-				466869E41EB306F74C8A6E87CC1539BF /* ViewController+MASAdditions.m in Sources */,
+				E8F67B61A8EEF9CE726B37D27595FCAC /* MASCompositeConstraint.m in Sources */,
+				564C66D9205179BB25F286A4E7DAD018 /* MASConstraint.m in Sources */,
+				BA889B8BFBA74B89F86EF9FF5E47A416 /* MASConstraintMaker.m in Sources */,
+				69AF9AC0E313B5C9C36B19834FF2ECE4 /* MASLayoutConstraint.m in Sources */,
+				7664F1DB5B819B75C169C973630EFE9F /* Masonry-dummy.m in Sources */,
+				4CDA657B18DCA09210FD65DF2AFB1CB3 /* MASViewAttribute.m in Sources */,
+				693E20759014C5055EB64F19D034145F /* MASViewConstraint.m in Sources */,
+				AC7E906C786250B7BEA040D662951549 /* NSArray+MASAdditions.m in Sources */,
+				D7A1BDCA171821927AE0D85B0113497A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				BE3A5F5E45AA2CACC40AB77161C5FB9F /* View+MASAdditions.m in Sources */,
+				2886F744E841B5F5FCC12BA6C671C27F /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68375A46F11ECC2F181A18647D852BBA /* Sources */ = {
+		63B8F636793A1594A5FA5E7219232132 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D133AEF310D6BD288F84EAF7D57F4E1B /* Pods-TestUI-dummy.m in Sources */,
+				1B87F98FF0EC7524499A1C8B9451FF97 /* Pods-TestUI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		791655A06E285CA7153F5E756110EFE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B36919B66CA1B499F5A2EDF8FEFDFB /* ColorfulWoodCategories-dummy.m in Sources */,
+				571747E3953B5D7C21967FFB6F9033EC /* Info.plist in Sources */,
+				2995FCE6609BB34B4847F1A171868CF5 /* NSString+ColorfulWoodRegex.m in Sources */,
+				1C1AF3FDD2D38BA058162CB52708E52B /* UIColor+Hex.m in Sources */,
+				E2A4EB61DB5FF24D1D3A36E8E62EF8DE /* UIImage+ColorfulWoodAddtional.m in Sources */,
+				E2E762F0897089525EE2A3A40C242288 /* UINavigationItem+ColorfulWoodMargin.m in Sources */,
+				5FB1E8575E0CC8429CFC622CE994EA6F /* UIViewController+ColorfulWoodAddtional.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4212C7AE372B0964F7B4759A40DFAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C72EFE97AA32FD67757B3C6F2F3349A /* ColorfulWoodUIBase-dummy.m in Sources */,
+				6D2297CC2591D1C5C9E3944CB9C92CD0 /* CWUBButtonInfo.m in Sources */,
+				9AB23CA2240A8780F8575B3C56BAB677 /* CWUBButtonWithInfo.m in Sources */,
+				666F3912D610E6AA7424BA1E02DD485F /* CWUBCell_Address.m in Sources */,
+				EF2D7D979BB1731C3FFDCE8B3EA19CB5 /* CWUBCell_Address_ArrowRight.m in Sources */,
+				8629E476CB2325FB605106BE53B552C4 /* CWUBCell_Address_Model.m in Sources */,
+				987E8D97CFA335939863B3D31C7265DA /* CWUBCell_ButtonLeft_TitleLeft.m in Sources */,
+				35F652976673E60DC096445004FB3093 /* CWUBCell_ButtonLeft_TitleLeft_Model.m in Sources */,
+				B260D76470E65491ED21FC3F2BBE443C /* CWUBCell_ButtonRight_SpaceBottom.m in Sources */,
+				05F002A87F334588DD7B6B50AEBAE9C9 /* CWUBCell_ButtonRight_SpaceBottom_Model.m in Sources */,
+				2F049D5DF9F99B4921F48025D17FCD85 /* CWUBCell_ButtonRight_TitleRight_ButtonRight.m in Sources */,
+				4750D39B2E9D22A6C3CA1BA06952DF0D /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m in Sources */,
+				3B357A1DCB8B2C5D57BE2B7896884A53 /* CWUBCell_CharterDetail_Opt.m in Sources */,
+				9A97C8C3B345F73A00F61DA2855CBDCD /* CWUBCell_CharterDetail_Opt_Model.m in Sources */,
+				5EC170EE6B68463FCE532F80D81B8648 /* CWUBCell_CharterDiscount.m in Sources */,
+				08DBC7159C4574BA767DF3132A199411 /* CWUBCell_CharterDiscount_Model.m in Sources */,
+				4B2DCCF8E8313A8BB2379D385CB39746 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m in Sources */,
+				438A1E150E6967D7956547CA60EF1CF7 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m in Sources */,
+				790D62C3BE1A8F40314BECA0AEBC540A /* CWUBCell_IconTitleLeft_IconTitleRight.m in Sources */,
+				BEB6F43A31ABB30A89D460D7B82AFE6D /* CWUBCell_IconTitleLeft_IconTitleRight_Model.m in Sources */,
+				1A4F2AD2D1DBFCC4C7DCEE180F41510A /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.m in Sources */,
+				7BAB4673043A307286A7E1100CF36446 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m in Sources */,
+				799ADB51885D665852948E4BFA5D90C1 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.m in Sources */,
+				7E0387A771C6BCC51096466D7041FCF1 /* CWUBCell_ImgLeft_TitleLeft_InfoRight_Model.m in Sources */,
+				F4B5890332F5109331D03D1BFC85C0B3 /* CWUBCell_Passenger.m in Sources */,
+				6C02BE00CCF3F56525209B9A509E15C3 /* CWUBCell_Passenger_Delete.m in Sources */,
+				2DF99F8C5F542F33C6FD0835A163F5CB /* CWUBCell_Passenger_Delete_Model.m in Sources */,
+				7D953B7622743B47F475099213C66E55 /* CWUBCell_Passenger_Model.m in Sources */,
+				8242CA37BF282FACFB3B032BEC14EA0F /* CWUBCell_Passenger_Opt.m in Sources */,
+				764AFB2C22EF8C10C2549E5FDAC4D384 /* CWUBCell_Passenger_Opt_Model.m in Sources */,
+				5E0BAE35346F61413B0268FA59068096 /* CWUBCell_Refund.m in Sources */,
+				125C8EFBDF159C65C1B290E67375FAE0 /* CWUBCell_Refund_Model.m in Sources */,
+				0EDC1D8AA253FE7978DBEED43282542B /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight.m in Sources */,
+				49DEC2DC8D66BC2D462016484D6854F2 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m in Sources */,
+				DF65FA9158A082058E1F14928AD172DF /* CWUBCell_TitleLeft_InfoLeft.m in Sources */,
+				6F8E2FC4507EC4A9D1E0B26B66C6E8E9 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight.m in Sources */,
+				E63C7F3B41529ED617C3440F9FE0D8DE /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m in Sources */,
+				1568A98425F087FDC2803F822650772B /* CWUBCell_TitleLeft_InfoLeft_Model.m in Sources */,
+				045ED6807AB9CC8303D8B19DEA1524CF /* CWUBCell_TitleLeft_InfoRight.m in Sources */,
+				BDA11EFD6F0539F3AF8A6FED74E7C2FA /* CWUBCell_TitleLeft_InfoRight_ButtonRight.m in Sources */,
+				8BF36A42D81ECB827BAD1D04C8CF8C4A /* CWUBCell_TitleLeft_InfoRight_ButtonRight_Model.m in Sources */,
+				33E1295FDB2B61E62ACA4F91B64BF438 /* CWUBCell_TitleLeft_InfoRight_Model.m in Sources */,
+				5F64CC4B660EB4C4F2608B5D691C2ED0 /* CWUBCell_TitleLeft_InputLeft.m in Sources */,
+				8C53DEE69E7A248B16BDE443ACBEB4E8 /* CWUBCell_TitleLeft_InputLeft_Model.m in Sources */,
+				6FA9CE9D84B1B3D5DB6BD78C94F60B0D /* CWUBCell_TitleLeft_SwithRight.m in Sources */,
+				C203E6AAF7A810624D963C05F19BAD30 /* CWUBCell_TitleLeft_SwithRight_Model.m in Sources */,
+				6727D204A0EB6BFA3EDA909FF3BD4AA0 /* CWUBCell_TitleRight_ButtonRight.m in Sources */,
+				F0A19058457F763BFC9149A5506EF018 /* CWUBCell_TitleRight_ButtonRight_Model.m in Sources */,
+				A95694B1578679D2E2AD2368D2325C61 /* CWUBCell_Trip.m in Sources */,
+				4BBC7306045620BC41ED8499CF41DD43 /* CWUBCell_Trip_Model.m in Sources */,
+				B8317583ADC6D25124AE5361ADA52DE0 /* CWUBCellBase.m in Sources */,
+				98CC9E74BAD50FBE03DFD718300B5CC5 /* CWUBDefine.m in Sources */,
+				936D5834368449C17B22A666487A325C /* CWUBLabelWithModel.m in Sources */,
+				815267594C3873AF597B49930445CBE5 /* CWUBLableLeftTop.m in Sources */,
+				55CBF271957F8F322B42B507B60484B9 /* CWUBModel.m in Sources */,
+				D4B389895CCA19E3E1A0687A5254BCBE /* CWUBModelBase.m in Sources */,
+				91FDA62C120B2D5F5C63E08A94E52E81 /* CWUBTextfieldWithModel.m in Sources */,
+				758BAE2DCD8FC5550F78441679762B1D /* CWUBTextInfo.m in Sources */,
+				E44A817976B6D80F73D66F76661B04DF /* CWUBWoodUIBaseDemo.m in Sources */,
+				3812036C7A4CCAC939BB150814445A57 /* Info.plist in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E8E0E364C759C135BCD89340E88901AA /* PBXTargetDependency */ = {
+		0B6722B1011A4373071B43CFCBC8FECC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorfulWoodUIBase;
+			target = 6F6A40BE75EC4ABDF1731BC2DF073054 /* ColorfulWoodUIBase */;
+			targetProxy = 6788831AFBF512E95676A85EA20E6100 /* PBXContainerItemProxy */;
+		};
+		4DDF4B37EFF5B163EC90FEE10941C8A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorfulWoodCategories;
+			target = 60A6C62D284142E4D9035BB2102F013D /* ColorfulWoodCategories */;
+			targetProxy = 999B0B0404F8CE50A685B695889470B4 /* PBXContainerItemProxy */;
+		};
+		B679F62D67F503AE4FAA05BAB18BBAB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
-			target = 9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */;
-			targetProxy = CA54F7E61F3ACC00209B49A52EC0CB14 /* PBXContainerItemProxy */;
+			target = CFDF595AA01CFB939CC0C84EC34AD49B /* Masonry */;
+			targetProxy = 3B898B9110A06EAFDE8B6B7570DC6FFE /* PBXContainerItemProxy */;
+		};
+		C28F4C495E9FD488B98A6D569F9365D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorfulWoodCategories;
+			target = 60A6C62D284142E4D9035BB2102F013D /* ColorfulWoodCategories */;
+			targetProxy = E2C71B78D981E8867D5C50A2FDBE791B /* PBXContainerItemProxy */;
+		};
+		F503C94CC0E6C7062C77258A17260DAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = CFDF595AA01CFB939CC0C84EC34AD49B /* Masonry */;
+			targetProxy = 836A3C18DF51E9D616965A4B81172120 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+		10AB2F7501C10866C10EDC88E38FEDD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+		2BEAA40D978674C3774D867863FB1229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6574B9F602FF81D7DCD7ECB78020FB /* ColorfulWoodUIBase.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorfulWoodUIBase/ColorfulWoodUIBase-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34417077E999DCB9E357B1DE5A730B3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6D6E0E0896062BB3543073DC504937CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC797083EAEC7B675833AE110B3CA9A9 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		57E0C84B2E8649E205513066B4329366 /* Debug */ = {
+		A494A19DA92BB037F963AC4F81E7B2D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC797083EAEC7B675833AE110B3CA9A9 /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADD9BC0EFCB3B84D0189DFB1BA8AC3C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6574B9F602FF81D7DCD7ECB78020FB /* ColorfulWoodUIBase.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorfulWoodUIBase/ColorfulWoodUIBase-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3E99D79BE4C60DC091C7198A7AF31F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9E040E212B7D8B03E662B78FC7DEEF0 /* Pods-TestUI.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5A6ACE61C4D128598EA7472C87982601 /* Debug */ = {
+		C59A66BD1E262F551FE924790733C69B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7882AB8492CA4F59F730C76CC3BBF57A /* Masonry.xcconfig */;
+			baseConfigurationReference = B2DD8D7FFEC0578B5E4BD9F24F924110 /* ColorfulWoodCategories.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ColorfulWoodCategories/ColorfulWoodCategories-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		6952C9B66526C43719A5F92C705DBA85 /* Release */ = {
+		D447A2AFD8CE0B58AE7852EB78FF4082 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 792F0526AC93AEECA1CEC3CFF7F7D862 /* Pods-TestUI.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		6CA42F62CE0652819ED46936FE31E065 /* Release */ = {
+		E08E0C46C528A324E6CA85DA20AC51D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7882AB8492CA4F59F730C76CC3BBF57A /* Masonry.xcconfig */;
+			baseConfigurationReference = B2DD8D7FFEC0578B5E4BD9F24F924110 /* ColorfulWoodCategories.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/ColorfulWoodCategories/ColorfulWoodCategories-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0336E85CA624598C74755365829DF388 /* Build configuration list for PBXNativeTarget "Pods-TestUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3E99D79BE4C60DC091C7198A7AF31F2 /* Debug */,
+				D447A2AFD8CE0B58AE7852EB78FF4082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
-				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+				10AB2F7501C10866C10EDC88E38FEDD5 /* Debug */,
+				34417077E999DCB9E357B1DE5A730B3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34CAE1CB89EDBF2E53735CC5D4E5E69F /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+		72D2FA2E935A738C06E9B4B6C3605667 /* Build configuration list for PBXNativeTarget "ColorfulWoodCategories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A6ACE61C4D128598EA7472C87982601 /* Debug */,
-				6CA42F62CE0652819ED46936FE31E065 /* Release */,
+				E08E0C46C528A324E6CA85DA20AC51D8 /* Debug */,
+				C59A66BD1E262F551FE924790733C69B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF0917C12407253C9FE675659AAB9A91 /* Build configuration list for PBXNativeTarget "Pods-TestUI" */ = {
+		A9C9C819D4FF5C9A29C2E2C57EF7DDB8 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				57E0C84B2E8649E205513066B4329366 /* Debug */,
-				6952C9B66526C43719A5F92C705DBA85 /* Release */,
+				A494A19DA92BB037F963AC4F81E7B2D9 /* Debug */,
+				6D6E0E0896062BB3543073DC504937CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD35C4559CEB652BBD106D0CCF0555A8 /* Build configuration list for PBXNativeTarget "ColorfulWoodUIBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEAA40D978674C3774D867863FB1229 /* Debug */,
+				ADD9BC0EFCB3B84D0189DFB1BA8AC3C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

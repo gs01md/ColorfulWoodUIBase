@@ -139,6 +139,8 @@
 		8B117D172089E05300A32AAA /* CWUBButtonWithInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B117D132089E05200A32AAA /* CWUBButtonWithInfo.m */; };
 		8B135E12208AD1D200CEF7E1 /* CWUBWoodUIBaseDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B135E10208AD1D200CEF7E1 /* CWUBWoodUIBaseDemo.h */; };
 		8B135E13208AD1D200CEF7E1 /* CWUBWoodUIBaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B135E11208AD1D200CEF7E1 /* CWUBWoodUIBaseDemo.m */; };
+		8B15271120B40FC2002CCFA7 /* CWUBLabelLeftBottom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B15270F20B40FC2002CCFA7 /* CWUBLabelLeftBottom.h */; };
+		8B15271220B40FC2002CCFA7 /* CWUBLabelLeftBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B15271020B40FC2002CCFA7 /* CWUBLabelLeftBottom.m */; };
 		8B2A0BB01E42A9CF00603D55 /* ColorfulWoodUIBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2A0BAE1E42A9CF00603D55 /* ColorfulWoodUIBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8A3F34329051572590F0D71 /* libPods-ColorfulWoodUIBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BEEA0A4944C3EB9733A344 /* libPods-ColorfulWoodUIBase.a */; };
 /* End PBXBuildFile section */
@@ -273,6 +275,10 @@
 		8B117D132089E05200A32AAA /* CWUBButtonWithInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUBButtonWithInfo.m; sourceTree = "<group>"; };
 		8B135E10208AD1D200CEF7E1 /* CWUBWoodUIBaseDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBWoodUIBaseDemo.h; sourceTree = "<group>"; };
 		8B135E11208AD1D200CEF7E1 /* CWUBWoodUIBaseDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBWoodUIBaseDemo.m; sourceTree = "<group>"; };
+		8B15270D20B40B37002CCFA7 /* CWUBBottomLineType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBBottomLineType.h; sourceTree = "<group>"; };
+		8B15270F20B40FC2002CCFA7 /* CWUBLabelLeftBottom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBLabelLeftBottom.h; sourceTree = "<group>"; };
+		8B15271020B40FC2002CCFA7 /* CWUBLabelLeftBottom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBLabelLeftBottom.m; sourceTree = "<group>"; };
+		8B15271320B41435002CCFA7 /* CWUBLabelTextVerticalType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBLabelTextVerticalType.h; sourceTree = "<group>"; };
 		8B2A0BAB1E42A9CF00603D55 /* ColorfulWoodUIBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ColorfulWoodUIBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2A0BAE1E42A9CF00603D55 /* ColorfulWoodUIBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorfulWoodUIBase.h; sourceTree = "<group>"; };
 		8B2A0BAF1E42A9CF00603D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -603,6 +609,7 @@
 		8B117CF02089B09700A32AAA /* CWUBView */ = {
 			isa = PBXGroup;
 			children = (
+				8B15270E20B40F8D002CCFA7 /* CWUBLabelLeftBottom */,
 				8B1342A6208A2FFA000DBB73 /* CWUBButtonWithInfo */,
 				8B117D0A2089DD3A00A32AAA /* CWUBTextfieldWithModel */,
 				8B117CF12089B09700A32AAA /* CWUBLabelWithModel */,
@@ -634,6 +641,8 @@
 			children = (
 				8B117CFC2089B35500A32AAA /* CWUBDefine.h */,
 				8B117CFD2089B35500A32AAA /* CWUBDefine.m */,
+				8B15270D20B40B37002CCFA7 /* CWUBBottomLineType.h */,
+				8B15271320B41435002CCFA7 /* CWUBLabelTextVerticalType.h */,
 			);
 			path = CWUBDefine;
 			sourceTree = "<group>";
@@ -690,6 +699,15 @@
 				8B135E11208AD1D200CEF7E1 /* CWUBWoodUIBaseDemo.m */,
 			);
 			path = CWUBWoodUIBaseDemo;
+			sourceTree = "<group>";
+		};
+		8B15270E20B40F8D002CCFA7 /* CWUBLabelLeftBottom */ = {
+			isa = PBXGroup;
+			children = (
+				8B15270F20B40FC2002CCFA7 /* CWUBLabelLeftBottom.h */,
+				8B15271020B40FC2002CCFA7 /* CWUBLabelLeftBottom.m */,
+			);
+			path = CWUBLabelLeftBottom;
 			sourceTree = "<group>";
 		};
 		8B16242C2078BE5B00029342 /* CWUBModules */ = {
@@ -809,6 +827,7 @@
 				8B117CFA2089B09700A32AAA /* CWUBLableLeftTop.h in Headers */,
 				8B117CB02089979500A32AAA /* CWUBCell_Passenger.h in Headers */,
 				8B117BE1208992B100A32AAA /* CWUBCellType.h in Headers */,
+				8B15271120B40FC2002CCFA7 /* CWUBLabelLeftBottom.h in Headers */,
 				8B117CCD2089979500A32AAA /* CWUBCell_TitleLeft_InputLeft_Model.h in Headers */,
 				8B117CAF2089979500A32AAA /* CWUBCell_Passenger_Model.h in Headers */,
 				8B117CBF2089979500A32AAA /* CWUBCell_Passenger_Delete_Model.h in Headers */,
@@ -1002,6 +1021,7 @@
 				8B117C8E2089979400A32AAA /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m in Sources */,
 				8B117CC62089979500A32AAA /* CWUBCell_TitleLeft_InfoLeft_Model.m in Sources */,
 				8B117CA12089979500A32AAA /* CWUBCell_CharterDiscount.m in Sources */,
+				8B15271220B40FC2002CCFA7 /* CWUBLabelLeftBottom.m in Sources */,
 				8B117D172089E05300A32AAA /* CWUBButtonWithInfo.m in Sources */,
 				8B117C8C2089979400A32AAA /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m in Sources */,
 				8B117C8F2089979400A32AAA /* CWUBCell_Passenger_Opt.m in Sources */,

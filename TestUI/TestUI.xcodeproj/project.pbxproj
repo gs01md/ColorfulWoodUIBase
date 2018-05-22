@@ -16,8 +16,6 @@
 		8B2A0B4D1E3C17AB00603D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2A0B4B1E3C17AB00603D55 /* LaunchScreen.storyboard */; };
 		8B2A0B581E3C17AB00603D55 /* TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A0B571E3C17AB00603D55 /* TestUITests.m */; };
 		8B2A0B631E3C17AB00603D55 /* TestUIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A0B621E3C17AB00603D55 /* TestUIUITests.m */; };
-		8BB8F9321E485348005396F8 /* ColorfulWoodUIBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2A0BD01E43EDD500603D55 /* ColorfulWoodUIBase.framework */; };
-		8BB8F9331E485348005396F8 /* ColorfulWoodUIBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2A0BD01E43EDD500603D55 /* ColorfulWoodUIBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE8E8D92182A292C2F432E2E /* libPods-TestUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E2943E35CC127EB69ABC09 /* libPods-TestUI.a */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8BB8F9331E485348005396F8 /* ColorfulWoodUIBase.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,7 +69,6 @@
 		8B2A0B621E3C17AB00603D55 /* TestUIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIUITests.m; sourceTree = "<group>"; };
 		8B2A0B641E3C17AB00603D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B2A0BCE1E43EDAD00603D55 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		8B2A0BD01E43EDD500603D55 /* ColorfulWoodUIBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ColorfulWoodUIBase.framework; path = TestUI/ColorfulWoodUIBase.framework; sourceTree = "<group>"; };
 		8B3A65691E49C760003694A8 /* TestUI.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUI.pch; sourceTree = "<group>"; };
 		B485B75A70CF5ABE10948B63 /* Pods-TestUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestUI/Pods-TestUI.release.xcconfig"; sourceTree = "<group>"; };
 		E24D33A24C5445A7EAF11A12 /* Pods-TestUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestUI/Pods-TestUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB8F9321E485348005396F8 /* ColorfulWoodUIBase.framework in Frameworks */,
 				CE8E8D92182A292C2F432E2E /* libPods-TestUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,7 +169,6 @@
 		8B2A0BCD1E43EDAD00603D55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8B2A0BD01E43EDD500603D55 /* ColorfulWoodUIBase.framework */,
 				8B2A0BCE1E43EDAD00603D55 /* Accelerate.framework */,
 				03E2943E35CC127EB69ABC09 /* libPods-TestUI.a */,
 			);
@@ -261,6 +255,7 @@
 				TargetAttributes = {
 					8B2A0B361E3C17AB00603D55 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8SN9TJYA97;
 						ProvisioningStyle = Automatic;
 					};
 					8B2A0B521E3C17AB00603D55 = {
@@ -346,13 +341,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestUI-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF2EF5AE428B813CEF350A84 /* [CP] Embed Pods Frameworks */ = {
@@ -531,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8SN9TJYA97;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestUI",
@@ -539,7 +537,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TestUI/TestUI.pch";
 				INFOPLIST_FILE = TestUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wood.TestUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,7 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8SN9TJYA97;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestUI",
@@ -560,7 +558,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TestUI/TestUI.pch";
 				INFOPLIST_FILE = TestUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wood.TestUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";

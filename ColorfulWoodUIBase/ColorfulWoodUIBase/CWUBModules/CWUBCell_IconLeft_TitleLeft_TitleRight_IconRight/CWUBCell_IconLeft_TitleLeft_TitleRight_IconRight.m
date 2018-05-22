@@ -9,11 +9,12 @@
 #import "CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h"
 #import "CWUBLabelWithModel.h"
 #import "CWUBLableLeftTop.h"
+#import "CWUBLabelLeftBottom.h"
 
 @interface CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight()
 
-@property (nonatomic, strong) CWUBLableLeftTop *m_lbl_left;
-@property (nonatomic, strong) CWUBLableLeftTop *m_lbl_right;
+@property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
+@property (nonatomic, strong) CWUBLabelWithModel *m_lbl_right;
 @property (nonatomic, strong) UIImageView * m_img_left;
 @property (nonatomic, strong) UIImageView * m_img_right;
 @property (nonatomic, strong) UIImageView * m_img_sep;
@@ -91,8 +92,21 @@
 
     [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
 
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+        switch (self.m_model.m_bottomLineType) {
+            case CWUBBottomLineType_left:
+                make.left.equalTo(@(0.));
+                make.right.equalTo(@(-self.m_model.m_margin_leftOrRight));
+                break;
+            case CWUBBottomLineType_right:
+                make.left.equalTo(self.m_lbl_left.mas_left);
+                make.right.equalTo(@(0.));
+                break;
+
+            default:
+                make.left.equalTo(@(self.m_model.m_margin_leftOrRight));
+                make.right.equalTo(@(-self.m_model.m_margin_leftOrRight));
+                break;
+        }
         make.bottom.equalTo(self);
         make.height.equalTo(@(1.));
         make.top.equalTo(self.m_lbl_left.mas_bottom).offset(margin_topOrBottom);
@@ -108,10 +122,25 @@
     return _m_model;
 }
 
-- (CWUBLableLeftTop *)m_lbl_left{
+- (CWUBLabelWithModel *)m_lbl_left{
 
     if (!_m_lbl_left) {
-        _m_lbl_left = [[CWUBLableLeftTop alloc] initWithModel: self.m_model.m_title_left];
+
+        switch (self.m_model.m_title_left.m_labelTextVerticalType) {
+            case CWUBLabelTextVerticalType_top:
+                _m_lbl_left = [[CWUBLableLeftTop alloc] initWithModel: self.m_model.m_title_left];
+                break;
+
+            case CWUBLabelTextVerticalType_bottom:
+                _m_lbl_left = [[CWUBLabelLeftBottom alloc] initWithModel: self.m_model.m_title_left];
+
+                break;
+
+            default:
+                _m_lbl_left = [[CWUBLabelWithModel alloc] initWithModel: self.m_model.m_title_left];
+                break;
+        }
+
         _m_lbl_left.textAlignment = NSTextAlignmentLeft;
         _m_lbl_left.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_left.numberOfLines = 0;
@@ -119,10 +148,25 @@
     return _m_lbl_left;
 }
 
-- (CWUBLableLeftTop *)m_lbl_right{
+- (CWUBLabelWithModel *)m_lbl_right{
 
     if (!_m_lbl_right) {
-        _m_lbl_right = [[CWUBLableLeftTop alloc] initWithModel: self.m_model.m_title_right];
+
+
+        switch (self.m_model.m_title_left.m_labelTextVerticalType) {
+            case CWUBLabelTextVerticalType_top:
+                _m_lbl_right = [[CWUBLableLeftTop alloc] initWithModel: self.m_model.m_title_right];
+                break;
+
+            case CWUBLabelTextVerticalType_bottom:
+                _m_lbl_right = [[CWUBLabelLeftBottom alloc] initWithModel: self.m_model.m_title_right];
+                break;
+
+            default:
+                _m_lbl_right = [[CWUBLabelWithModel alloc] initWithModel: self.m_model.m_title_right];
+                break;
+        }
+
         _m_lbl_right.textAlignment = NSTextAlignmentRight;
         _m_lbl_right.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_right.numberOfLines = 0;
