@@ -65,6 +65,7 @@ UITableViewDataSource
     model1.m_title_right = [[CWUBTextInfo alloc] initWithText:@"水需要水需要水需要水水需要水需要水需要水水需要水需要水需要水水需要水需要水需要水" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
     model1.m_color_bottomLine = [UIColor redColor];
     model1.m_bottomLineType = CWUBBottomLineType_right;
+    model1.m_title_left.m_labelTextVerticalType = CWUBLabelTextVerticalType_bottom;
     [data addObject:model1];
 
     if (data.count>0) {

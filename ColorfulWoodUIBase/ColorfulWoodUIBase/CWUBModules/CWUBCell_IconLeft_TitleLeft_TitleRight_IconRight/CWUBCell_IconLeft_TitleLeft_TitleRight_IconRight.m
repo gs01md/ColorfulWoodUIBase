@@ -87,7 +87,8 @@
     [_m_lbl_right mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_centerX).offset(CWUBBaseViewConfig_Space_Element_Horizontal/2.);
         make.right.equalTo(self.m_img_right.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
-        make.centerY.equalTo(self.m_lbl_left);
+        make.top.equalTo(self).offset(margin_topOrBottom);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
     }];
 
     [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -153,7 +154,7 @@
     if (!_m_lbl_right) {
 
 
-        switch (self.m_model.m_title_left.m_labelTextVerticalType) {
+        switch (self.m_model.m_title_right.m_labelTextVerticalType) {
             case CWUBLabelTextVerticalType_top:
                 _m_lbl_right = [[CWUBLableLeftTop alloc] initWithModel: self.m_model.m_title_right];
                 break;

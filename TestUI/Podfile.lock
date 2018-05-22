@@ -1,6 +1,6 @@
 PODS:
   - ColorfulWoodCategories (1.0.11)
-  - ColorfulWoodUIBase (1.1.8):
+  - ColorfulWoodUIBase (1.1.9):
     - ColorfulWoodCategories
     - Masonry
   - Masonry (1.1.0)
@@ -17,7 +17,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ColorfulWoodCategories: 218516748fca25f95ac6fa7fad248de0bc302c33
-  ColorfulWoodUIBase: 8167e2c6a79b38c4c3c2556556ce07bf1d946a4e
+  ColorfulWoodUIBase: 0391ff5c82552f9cc7d0694ee36575494886af15
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 5ac3e1919d099dc7fd444fb854067529a37e5e99
