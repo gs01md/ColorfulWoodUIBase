@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "CWUBLabelTextVerticalType.h"
 
 @interface CWUBTextInfo : NSObject
 @property(nonatomic,strong) NSString* m_text;
@@ -16,7 +17,8 @@
 @property(nonatomic,strong) UIColor* m_color_backGroud;
 
 @property(nonatomic,strong) NSString* m_textPlaceholder;
-@property(nonatomic,assign) BOOL* m_isHidden;
+@property(nonatomic,assign) BOOL m_isHidden;
+@property(nonatomic,assign) CWUBLabelTextVerticalType m_labelTextVerticalType;
 
 /**
  * 设置宽度

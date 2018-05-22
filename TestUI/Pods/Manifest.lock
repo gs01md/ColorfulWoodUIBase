@@ -1,6 +1,6 @@
 PODS:
-  - ColorfulWoodCategories (1.0.10)
-  - ColorfulWoodUIBase (1.1.7):
+  - ColorfulWoodCategories (1.0.11)
+  - ColorfulWoodUIBase (1.1.8):
     - ColorfulWoodCategories
     - Masonry
   - Masonry (1.1.0)
@@ -9,11 +9,17 @@ DEPENDENCIES:
   - ColorfulWoodUIBase
   - Masonry
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ColorfulWoodCategories
+    - ColorfulWoodUIBase
+    - Masonry
+
 SPEC CHECKSUMS:
-  ColorfulWoodCategories: b4b981a492dc40e266da8c56860f3192e39177c9
-  ColorfulWoodUIBase: a5d13b014334907e235a6f048001df334466139c
+  ColorfulWoodCategories: 218516748fca25f95ac6fa7fad248de0bc302c33
+  ColorfulWoodUIBase: 8167e2c6a79b38c4c3c2556556ce07bf1d946a4e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 5ac3e1919d099dc7fd444fb854067529a37e5e99
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

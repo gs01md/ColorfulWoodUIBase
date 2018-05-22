@@ -1,8 +1,9 @@
 //
 //  CWUBBottomLineType.h
-//  Pods
-//  cell底部分割线的类型
+//  ColorfulWoodUIBase
+//
 //  Created by 大新 on 2018/5/22.
+//  Copyright © 2018年 ColorfulWood. All rights reserved.
 //
 
 #ifndef CWUBBottomLineType_h
@@ -14,7 +15,7 @@
 typedef enum : NSUInteger {
     CWUBBottomLineType_center = 0,
     CWUBBottomLineType_right,
-    CWUBBottomLineType_Left,
+    CWUBBottomLineType_left,
 } CWUBBottomLineType;
 
 #endif /* CWUBBottomLineType_h */

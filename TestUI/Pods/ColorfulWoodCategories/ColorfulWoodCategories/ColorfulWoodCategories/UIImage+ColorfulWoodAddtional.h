@@ -15,4 +15,10 @@
 - (UIImage *)imageByScalingToSize:(CGSize)targetSize;
 - (UIImage *)imageRotatedByRadians:(CGFloat)radians;
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
+
++ (UIColor *) colorWithHexString: (NSString *)color;
++ (UIColor *) colorWithHexString: (NSString *)color alpha:(CGFloat)alpha;
++ (UIImage *)imageWithHexString:(NSString *)color alpha:(CGFloat)alpha  size:(CGSize)size;
++ (UIImage *)imageWithHexString:(NSString *)color size:(CGSize)size;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 @end

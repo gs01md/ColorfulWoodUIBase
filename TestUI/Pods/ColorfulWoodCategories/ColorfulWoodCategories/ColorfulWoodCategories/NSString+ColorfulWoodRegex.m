@@ -23,9 +23,9 @@
     return [self baseCheckForRegEx:regEx data:mobilePhone];
 }
 #pragma mark - 验证电话号
-+(BOOL)checkForPhoneNo:(NSString *)mobilePhone{
++(BOOL)checkForPhoneNo:(NSString *)phone{
     NSString *regEx = @"^(\\d{3,4}-)\\d{7,8}$";
-    return [self baseCheckForRegEx:regEx data:mobilePhone];
+    return [self baseCheckForRegEx:regEx data:phone];
 }
 
 #pragma mark - 身份证号验证

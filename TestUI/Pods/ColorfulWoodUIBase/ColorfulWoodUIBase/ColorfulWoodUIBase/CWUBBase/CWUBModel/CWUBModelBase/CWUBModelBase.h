@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "CWUBTextInfo.h"
 #import "CWUBDefine.h"
-
+#import "CWUBBottomLineType.h"
 
 @interface CWUBModelBase : NSObject
 
@@ -54,7 +54,7 @@
 @property(nonatomic, assign)float m_margin_topOrBottom;
 
 /**
- * 左右边距
+ * 左右边间距
  */
 @property(nonatomic, assign)float m_margin_leftOrRight;
 
@@ -67,4 +67,5 @@
  * 底部分割线的样式
  */
 @property(nonatomic, assign)CWUBBottomLineType  m_bottomLineType;
+
 @end

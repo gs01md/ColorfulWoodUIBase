@@ -12,16 +12,6 @@
 #define CWUBDefine_h
 
 /**
- * 定义底部的分割线左对齐、有对齐或者居中对齐
- */
-typedef enum : NSUInteger {
-    CWUBBottomLineType_center = 0,
-    CWUBBottomLineType_right,
-    CWUBBottomLineType_Left,
-} CWUBBottomLineType;
-
-
-/**
  * 按比例计算宽高
  */
 #define CWUBDefineWidthRatio 375.

@@ -439,5 +439,4 @@
 
     return _m_margin_leftOrRight;
 }
-
 @end
