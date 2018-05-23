@@ -10,12 +10,5 @@
 #import "CWUBDefine.h"
 
 @implementation CWUBCell_ButtonLeft_TitleLeft_Model
--(float)m_iconWidth{
 
-    if (_m_iconWidth<=0) {
-        _m_iconWidth = CWUBBaseViewConfig_Width_Icon_Little;
-    }
-
-    return _m_iconWidth;
-}
 @end
