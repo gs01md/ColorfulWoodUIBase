@@ -71,14 +71,14 @@
     [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_margin_leftOrRight);
         make.centerY.equalTo(self.m_lbl_left);
-        make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon_Little));
-        make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon_Little));
+        make.width.equalTo(@(self.m_model.m_img_left.m_width));
+        make.height.equalTo(@(self.m_model.m_img_left.m_height));
     }];
 
     [_m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-self.m_model.m_margin_leftOrRight);
-        make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon));
-        make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon));
+        make.width.equalTo(@(self.m_model.m_img_right.m_width));
+        make.height.equalTo(@(self.m_model.m_img_right.m_height));
         make.centerY.equalTo(self);
     }];
 
@@ -193,10 +193,10 @@
 
     if(!_m_img_left){
         _m_img_left = [UIImageView new];
-        [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left]];
+        [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
         _m_img_left.contentMode = UIViewContentModeScaleAspectFill;
-        _m_img_left.clipsToBounds = YES;
-        [_m_img_left setClipsToBounds:YES];
+        _m_img_left.clipsToBounds = NO;
+        [_m_img_left setClipsToBounds:NO];
     }
     return _m_img_left;
 }
@@ -205,10 +205,10 @@
 
     if(!_m_img_right){
         _m_img_right = [UIImageView new];
-        [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right]];
+        [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
         _m_img_right.contentMode = UIViewContentModeScaleAspectFill;
-        _m_img_right.clipsToBounds = YES;
-        [_m_img_right setClipsToBounds:YES];
+        _m_img_right.clipsToBounds = NO;
+        [_m_img_right setClipsToBounds:NO];
     }
     return _m_img_right;
 }
@@ -223,8 +223,8 @@
     }
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_right interface_update:model.m_title_right];
-    [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right]];
-    [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left]];
+    [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
+    [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

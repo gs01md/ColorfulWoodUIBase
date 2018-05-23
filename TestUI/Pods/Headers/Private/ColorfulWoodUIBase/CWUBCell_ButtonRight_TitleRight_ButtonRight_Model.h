@@ -1,1 +1,1 @@
-../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_TitleRight_ButtonRight/CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h
+../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBModules/CWUBCell_ButtonRight_TitleRight_ButtonRight/CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.h

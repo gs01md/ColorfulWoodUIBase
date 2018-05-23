@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "77B91C19D20DAD1A7E0CC216178A150A"
+               BlueprintIdentifier = "20390E02746FF0CAD6D3483EB9D636AA"
                BlueprintName = "ColorfulWoodUIBase"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libColorfulWoodUIBase.a">

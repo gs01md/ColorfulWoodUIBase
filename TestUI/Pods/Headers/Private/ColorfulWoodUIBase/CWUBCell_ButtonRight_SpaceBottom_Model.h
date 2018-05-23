@@ -1,1 +1,1 @@
-../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CWUBModules/CWUBCell_ButtonRight_SpaceBottom/CWUBCell_ButtonRight_SpaceBottom_Model.h
+../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBModules/CWUBCell_ButtonRight_SpaceBottom/CWUBCell_ButtonRight_SpaceBottom_Model.h

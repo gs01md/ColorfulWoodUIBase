@@ -69,8 +69,8 @@
         make.centerY.equalTo(self);
 //        make.top.equalTo(self).offset(margin_topOrBottom);
 //        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
-        make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon_Big));
-        make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon_Big));
+        make.width.equalTo(@(self.m_model.m_img_center.m_width));
+        make.height.equalTo(@(self.m_model.m_img_center.m_height));
     }];
 
     [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -90,11 +90,15 @@
     [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_left.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal/2.);
         make.centerY.equalTo(self.m_img_center).offset(4);
+        make.width.equalTo(@(self.m_model.m_img_left.m_width));
+        make.height.equalTo(@(self.m_model.m_img_left.m_height));
     }];
 
     [_m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_lbl_right.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal/2.);
         make.centerY.equalTo(self.m_img_left);
+        make.width.equalTo(@(self.m_model.m_img_right.m_width));
+        make.height.equalTo(@(self.m_model.m_img_right.m_height));
     }];
 
 
@@ -152,7 +156,7 @@
 
     if(!_m_img_left){
         _m_img_left = [UIImageView new];
-        [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left]];
+        [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
 //        _m_img_left.contentMode = UIViewContentModeScaleAspectFill;
 //        _m_img_left.clipsToBounds = YES;
 //        [_m_img_left setClipsToBounds:YES];
@@ -164,7 +168,7 @@
 
     if(!_m_img_right){
         _m_img_right = [UIImageView new];
-        [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right]];
+        [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
 //        _m_img_right.contentMode = UIViewContentModeScaleAspectFill;
 //        _m_img_right.clipsToBounds = YES;
 //        [_m_img_right setClipsToBounds:YES];
@@ -176,10 +180,10 @@
 
     if(!_m_img_center){
         _m_img_center = [UIImageView new];
-        [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center]];
+        [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center.m_imgName]];
         _m_img_center.contentMode = UIViewContentModeScaleAspectFill;
-        _m_img_center.clipsToBounds = YES;
-        [_m_img_center setClipsToBounds:YES];
+        _m_img_center.clipsToBounds = NO;
+        [_m_img_center setClipsToBounds:NO];
     }
     return _m_img_center;
 }
@@ -194,9 +198,9 @@
     }
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_right interface_update:model.m_title_right];
-    [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right]];
-    [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left]];
-    [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center]];
+    [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
+    [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
+    [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center.m_imgName]];
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

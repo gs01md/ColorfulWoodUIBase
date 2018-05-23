@@ -258,7 +258,7 @@
 
     if(!_m_img_banner){
         _m_img_banner = [UIImageView new];
-        [_m_img_banner setImage:[UIImage imageNamed:self.m_model.m_img_banner]];
+        [_m_img_banner setImage:[UIImage imageNamed:self.m_model.m_img_banner.m_imgName]];
         _m_img_banner.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_banner.clipsToBounds = YES;
         [_m_img_banner setClipsToBounds:YES];
@@ -270,7 +270,7 @@
 
     if(!_m_img_center){
         _m_img_center = [UIImageView new];
-        [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center]];
+        [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center.m_imgName]];
         _m_img_center.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_center.clipsToBounds = YES;
         [_m_img_center setClipsToBounds:YES];
@@ -327,7 +327,8 @@
     [self.m_lbl_bottom_center interface_update:model.m_title_bottom_center];
     [self.m_lbl_bottom_right interface_update:model.m_title_bottom_right];
     [self.m_lbl_bottom_left interface_update:model.m_title_bottom_left];
-    [self.m_img_center setImage:[UIImage imageNamed:model.m_img_center]];
+    [self.m_img_center setImage:[UIImage imageNamed:model.m_img_center.m_imgName]];
+    [self.m_img_banner setImage:[UIImage imageNamed:self.m_model.m_img_banner.m_imgName]];
 
     if (self.m_model.m_isSoldOut) {
 

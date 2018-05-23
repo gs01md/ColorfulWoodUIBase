@@ -1,0 +1,8 @@
+platform :ios, '8.2'
+
+target 'ColorfulWoodUIBase' do
+
+pod 'Masonry'
+pod 'ColorfulWoodCategories'
+
+end

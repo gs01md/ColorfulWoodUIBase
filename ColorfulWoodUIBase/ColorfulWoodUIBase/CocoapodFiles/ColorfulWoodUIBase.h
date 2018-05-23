@@ -47,5 +47,6 @@ FOUNDATION_EXPORT const unsigned char ColorfulWoodUIBaseVersionString[];
 #import "CWUBLabelTextVerticalType.h"
 #import "CWUBLabelLeftBottom.h"
 #import "CWUBBottomLineType.h"
+#import "CWUBImageInfo.h"
 
 #import "CWUBWoodUIBaseDemo.h"

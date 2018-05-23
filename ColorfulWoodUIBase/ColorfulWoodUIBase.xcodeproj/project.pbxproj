@@ -72,9 +72,12 @@
 		8B1F41D520B5375E00FEAFA0 /* CWUBButtonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F419520B5375E00FEAFA0 /* CWUBButtonInfo.m */; };
 		8B1F41D620B5375E00FEAFA0 /* CWUBModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F419920B5375E00FEAFA0 /* CWUBModelBase.m */; };
 		8B1F41D720B5375E00FEAFA0 /* CWUBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F419C20B5375E00FEAFA0 /* CWUBModel.m */; };
+		8B1F41DB20B54AB100FEAFA0 /* CWUBImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */; };
+		9E21318DB9D2FAC3B7401742 /* libPods-ColorfulWoodUIBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD46A07BA5CEC54A26ADB3C /* libPods-ColorfulWoodUIBase.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6966DBF4C3EEFCD98F84D668 /* Pods-ColorfulWoodUIBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulWoodUIBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase.debug.xcconfig"; sourceTree = "<group>"; };
 		8B1F40E020B5358600FEAFA0 /* ColorfulWoodUIBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorfulWoodUIBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1F40E320B5358700FEAFA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B1F40E420B5358700FEAFA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -207,6 +210,10 @@
 		8B1F419920B5375E00FEAFA0 /* CWUBModelBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUBModelBase.m; sourceTree = "<group>"; };
 		8B1F419B20B5375E00FEAFA0 /* CWUBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWUBModel.h; sourceTree = "<group>"; };
 		8B1F419C20B5375E00FEAFA0 /* CWUBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUBModel.m; sourceTree = "<group>"; };
+		8B1F41D920B54AB100FEAFA0 /* CWUBImageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBImageInfo.h; sourceTree = "<group>"; };
+		8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBImageInfo.m; sourceTree = "<group>"; };
+		EAD46A07BA5CEC54A26ADB3C /* libPods-ColorfulWoodUIBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ColorfulWoodUIBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF3D5692DBF8BE242D571F7 /* Pods-ColorfulWoodUIBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulWoodUIBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,17 +221,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E21318DB9D2FAC3B7401742 /* libPods-ColorfulWoodUIBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EEEE2EA1E34FBDC887015B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAD46A07BA5CEC54A26ADB3C /* libPods-ColorfulWoodUIBase.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B1F40D720B5358600FEAFA0 = {
 			isa = PBXGroup;
 			children = (
 				8B1F40E220B5358700FEAFA0 /* ColorfulWoodUIBase */,
 				8B1F40E120B5358600FEAFA0 /* Products */,
+				AF631702111786B2C880B58D /* Pods */,
+				1EEEE2EA1E34FBDC887015B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -350,11 +368,11 @@
 		8B1F411220B5375E00FEAFA0 /* CWUBCell_Address */ = {
 			isa = PBXGroup;
 			children = (
+				8B1F411720B5375E00FEAFA0 /* CWUBCell_Address.h */,
 				8B1F411320B5375E00FEAFA0 /* CWUBCell_Address.m */,
+				8B1F411620B5375E00FEAFA0 /* CWUBCell_Address_Model.h */,
 				8B1F411420B5375E00FEAFA0 /* CWUBCell_Address_Model.m */,
 				8B1F411520B5375E00FEAFA0 /* CWUBCell_Address_ArrowRight.h */,
-				8B1F411620B5375E00FEAFA0 /* CWUBCell_Address_Model.h */,
-				8B1F411720B5375E00FEAFA0 /* CWUBCell_Address.h */,
 				8B1F411820B5375E00FEAFA0 /* CWUBCell_Address_ArrowRight.m */,
 			);
 			path = CWUBCell_Address;
@@ -539,9 +557,9 @@
 		8B1F416920B5375E00FEAFA0 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight */ = {
 			isa = PBXGroup;
 			children = (
-				8B1F416A20B5375E00FEAFA0 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h */,
-				8B1F416B20B5375E00FEAFA0 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m */,
 				8B1F416C20B5375E00FEAFA0 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.h */,
+				8B1F416B20B5375E00FEAFA0 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.m */,
+				8B1F416A20B5375E00FEAFA0 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.h */,
 				8B1F416D20B5375E00FEAFA0 /* CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model.m */,
 			);
 			path = CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight;
@@ -666,6 +684,7 @@
 		8B1F419020B5375E00FEAFA0 /* CWUBModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B1F41D820B54A8C00FEAFA0 /* CWUBImageInfo */,
 				8B1F419120B5375E00FEAFA0 /* CWUBTextInfo */,
 				8B1F419420B5375E00FEAFA0 /* CWUBButtonInfo */,
 				8B1F419720B5375E00FEAFA0 /* CWUBModelBase */,
@@ -710,6 +729,24 @@
 			path = CWUBModel;
 			sourceTree = "<group>";
 		};
+		8B1F41D820B54A8C00FEAFA0 /* CWUBImageInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8B1F41D920B54AB100FEAFA0 /* CWUBImageInfo.h */,
+				8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */,
+			);
+			path = CWUBImageInfo;
+			sourceTree = "<group>";
+		};
+		AF631702111786B2C880B58D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6966DBF4C3EEFCD98F84D668 /* Pods-ColorfulWoodUIBase.debug.xcconfig */,
+				FAF3D5692DBF8BE242D571F7 /* Pods-ColorfulWoodUIBase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -717,6 +754,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B1F40F620B5358800FEAFA0 /* Build configuration list for PBXNativeTarget "ColorfulWoodUIBase" */;
 			buildPhases = (
+				236A6BC31B9223F1B1F5F732 /* [CP] Check Pods Manifest.lock */,
 				8B1F40DC20B5358600FEAFA0 /* Sources */,
 				8B1F40DD20B5358600FEAFA0 /* Frameworks */,
 				8B1F40DE20B5358600FEAFA0 /* Resources */,
@@ -775,6 +813,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		236A6BC31B9223F1B1F5F732 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ColorfulWoodUIBase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B1F40DC20B5358600FEAFA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -818,6 +877,7 @@
 				8B1F41C020B5375E00FEAFA0 /* CWUBCell_CharterDetail_Opt_Model.m in Sources */,
 				8B1F41B020B5375E00FEAFA0 /* CWUBCell_TitleLeft_InfoLeft_Model.m in Sources */,
 				8B1F41A120B5375E00FEAFA0 /* CWUBCell_TitleLeft_SwithRight.m in Sources */,
+				8B1F41DB20B54AB100FEAFA0 /* CWUBImageInfo.m in Sources */,
 				8B1F41B520B5375E00FEAFA0 /* CWUBCell_Passenger_Opt.m in Sources */,
 				8B1F41C320B5375E00FEAFA0 /* CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model.m in Sources */,
 				8B1F40E520B5358700FEAFA0 /* AppDelegate.m in Sources */,
@@ -979,6 +1039,7 @@
 		};
 		8B1F40F720B5358800FEAFA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6966DBF4C3EEFCD98F84D668 /* Pods-ColorfulWoodUIBase.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -997,6 +1058,7 @@
 		};
 		8B1F40F820B5358800FEAFA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAF3D5692DBF8BE242D571F7 /* Pods-ColorfulWoodUIBase.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

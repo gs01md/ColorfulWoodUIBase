@@ -1,0 +1,798 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DE773DB880CA53182E4654D72F3F80D /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B70B9026099D74CA7A2886A153F7792D /* Info.plist */; };
+		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 040E88DAC748DBD7B1149616EC841D45 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A879AB955F1BFC0478A1A8B502902E /* MASViewAttribute.m */; };
+		21207771A00116F619E860B0F003EAF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B9577E3F0DADBEC62B3AEE922ABCB1 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2291ED9056C4C6B512FC7C896BD2461A /* UINavigationItem+ColorfulWoodMargin.h in Headers */ = {isa = PBXBuildFile; fileRef = 49C7614AB84A2EEA5A93094FEE47E046 /* UINavigationItem+ColorfulWoodMargin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2C864897D9704EC6280E9D9CD31AC2A3 /* NSDictionary+BmobCheckResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CEA56B362DCF3747D9E290753CDD24 /* NSDictionary+BmobCheckResult.m */; };
+		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC8D9E485F01ED0D7858A6B6F38B0F2 /* MASViewConstraint.m */; };
+		3DF6A7E7B49255B2399150816A388676 /* UIViewController+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 5617D4795B184D4F91656E56558C154E /* UIViewController+ColorfulWoodAddtional.m */; };
+		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3789F9DA6946250018B5AA328EDF755 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		4655D2F6AB55F47AB8FB5926C7588793 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		4AAB75A1F52B7F2C8B85444D7F97FF37 /* NSDictionary+BmobCheckResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5C44CA26DD30940D28B321F9F62CA /* NSDictionary+BmobCheckResult.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = FB06631A69643AA7830B5FBDD417432C /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		54CEC601CA175E60DAD0B38E1F5A30FE /* UIImage+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB5858B55EEA090067927C04FCDDDCD /* UIImage+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F00A376374B5C4963EA66986CBCF494 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6040E633B300247A4E705E663BB13811 /* UIViewController+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F976EB26E989DB1E4E76F60293AF67 /* UIViewController+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BEBA865DDC89A0FBAE29A60352610E /* MASCompositeConstraint.m */; };
+		6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		6516F594FE7EF0B90ABFBC33C999E8EB /* NSString+ColorfulWoodRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C6AEDBA4570B0AE5E037825CB3F482 /* NSString+ColorfulWoodRegex.m */; };
+		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4B58023F9DBF02A9D7761EB0BE550F /* Masonry-dummy.m */; };
+		6E57B108663914AAC55410E0371FD170 /* NSString+ColorfulWoodRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 023F318CDE43480D6993CA4A82411AE7 /* NSString+ColorfulWoodRegex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2139CCA1201148EFF5E3555BF84C651C /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6C0899E391C5FDA4843FA55B7C214B /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B140F58CD1F2998BB75EF89191201D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		7BD0A7D71A4E5DC4831B20D3A09F74C8 /* Pods-ColorfulWoodUIBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C3C3667E946CDC69F28FC2C54FB4B /* Pods-ColorfulWoodUIBase-dummy.m */; };
+		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E94139232372593AAA56E65AFFB3B9A2 /* NSArray+MASAdditions.m */; };
+		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8335CB82162404633258C94E74809A83 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 350DA63EE4A63F7758BDD91B283FEC1E /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C98C2D1BF34D55373A4AEB3460513F2 /* MASConstraint.m */; };
+		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 881A5B71C2B7852BF852673829B97F39 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1A278556327C86AC2479FDD4209E10 /* MASLayoutConstraint.m */; };
+		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = BCCA440710B1C774AC0E784006C5F420 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0239F5A37403A0487DED0954609F3A01 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9CD23E41D6A4560C8ADB2CCB543D1CC0 /* ColorfulWoodCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 7210D04B804203EF877483BBC5E43902 /* ColorfulWoodCategories.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E37D1B5A466F93DA8985E04783E187 /* View+MASAdditions.m */; };
+		A8AF215A8E93212DCD9DF471437FC473 /* ColorfulWoodCategories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A110BDC1A8AE4CEF04A111C618872468 /* ColorfulWoodCategories-dummy.m */; };
+		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C6421071A0B5EB22D2762F93CF47B1 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C45B34AE8AE53DCE096624946B10F23F /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = B6362D456294C3B5B66E48C5689F2935 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B2A1DBC43754D2EEB537CA314DE1663B /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D1DA3FAC9CF1314CC82F7EABE0AE4D5B /* UIImage+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BCFF0836F4FC4DC31E948552E1E35 /* UIImage+ColorfulWoodAddtional.m */; };
+		D5B7AE26DB752A002826D44D8DFFD066 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A196DA368A808DD4F1B23EEF91AA151 /* UIColor+Hex.m */; };
+		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DD008E5DB9246397C166022438C5A /* ViewController+MASAdditions.m */; };
+		DEC839E3DDAF690D79CBD206A0783A27 /* UINavigationItem+ColorfulWoodMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D8A9DA5DF1112F6735D7C5D7210B1 /* UINavigationItem+ColorfulWoodMargin.m */; };
+		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1590AE4FC09287FF6B063B988CD53F /* MASConstraintMaker.m */; };
+		F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0432B2DEE404A4AFA7BC0BB2E60B2A /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A05BDC9C06C883DC6C7687ACF3CD038 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57282525A1001C6A43F94B601D407C16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74AC03F531B6AC6E7E0AB38107152B92;
+			remoteInfo = ColorfulWoodCategories;
+		};
+		A1C97BD63FD4990D38F6BAA0F10A7493 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DC8D9E02903E93BD0B2FEC9D846EA20;
+			remoteInfo = Masonry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0239F5A37403A0487DED0954609F3A01 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		023F318CDE43480D6993CA4A82411AE7 /* NSString+ColorfulWoodRegex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ColorfulWoodRegex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.h"; sourceTree = "<group>"; };
+		040E88DAC748DBD7B1149616EC841D45 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		07B50E0AD6BDAE3A0D36E409B3A8BA99 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		0A196DA368A808DD4F1B23EEF91AA151 /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.m"; sourceTree = "<group>"; };
+		0BFC135A2915323AFEAB09E101D1D2E0 /* Pods-ColorfulWoodUIBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ColorfulWoodUIBase.debug.xcconfig"; sourceTree = "<group>"; };
+		0F00A376374B5C4963EA66986CBCF494 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		14C6AEDBA4570B0AE5E037825CB3F482 /* NSString+ColorfulWoodRegex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ColorfulWoodRegex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.m"; sourceTree = "<group>"; };
+		166FDCAE160B39382996FB247AB54B22 /* libPods-ColorfulWoodUIBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ColorfulWoodUIBase.a"; path = "libPods-ColorfulWoodUIBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C6C0899E391C5FDA4843FA55B7C214B /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		20990BFD3318F4C3C02E55524A190182 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2139CCA1201148EFF5E3555BF84C651C /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		350DA63EE4A63F7758BDD91B283FEC1E /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		3FB5C44CA26DD30940D28B321F9F62CA /* NSDictionary+BmobCheckResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BmobCheckResult.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSDictionary+BmobCheckResult.h"; sourceTree = "<group>"; };
+		43A879AB955F1BFC0478A1A8B502902E /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		49C7614AB84A2EEA5A93094FEE47E046 /* UINavigationItem+ColorfulWoodMargin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+ColorfulWoodMargin.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.h"; sourceTree = "<group>"; };
+		5617D4795B184D4F91656E56558C154E /* UIViewController+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
+		579BCFF0836F4FC4DC31E948552E1E35 /* UIImage+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
+		5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorfulWoodCategories.xcconfig; sourceTree = "<group>"; };
+		5CB5858B55EEA090067927C04FCDDDCD /* UIImage+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
+		6D1590AE4FC09287FF6B063B988CD53F /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		702C3C3667E946CDC69F28FC2C54FB4B /* Pods-ColorfulWoodUIBase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ColorfulWoodUIBase-dummy.m"; sourceTree = "<group>"; };
+		7210D04B804203EF877483BBC5E43902 /* ColorfulWoodCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ColorfulWoodCategories.h; path = ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories.h; sourceTree = "<group>"; };
+		7B6DD008E5DB9246397C166022438C5A /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		7C98C2D1BF34D55373A4AEB3460513F2 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		81AECF97E174892E745B90EF6BA2BDFC /* libColorfulWoodCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libColorfulWoodCategories.a; path = libColorfulWoodCategories.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8335CB82162404633258C94E74809A83 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		881A5B71C2B7852BF852673829B97F39 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		8A97D78A2E3CF197D1249D6EA8D13C08 /* Pods-ColorfulWoodUIBase-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ColorfulWoodUIBase-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A05BDC9C06C883DC6C7687ACF3CD038 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A110BDC1A8AE4CEF04A111C618872468 /* ColorfulWoodCategories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorfulWoodCategories-dummy.m"; sourceTree = "<group>"; };
+		A2B9577E3F0DADBEC62B3AEE922ABCB1 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		A4BEBA865DDC89A0FBAE29A60352610E /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		A7E37D1B5A466F93DA8985E04783E187 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		AACBAC91506D9A63B9C4C46C88B5E602 /* Pods-ColorfulWoodUIBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ColorfulWoodUIBase.release.xcconfig"; sourceTree = "<group>"; };
+		B2A1DBC43754D2EEB537CA314DE1663B /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		B6362D456294C3B5B66E48C5689F2935 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.h"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B70B9026099D74CA7A2886A153F7792D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorfulWoodCategories/ColorfulWoodCategories/Info.plist; sourceTree = "<group>"; };
+		B7C6421071A0B5EB22D2762F93CF47B1 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		B7CEA56B362DCF3747D9E290753CDD24 /* NSDictionary+BmobCheckResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BmobCheckResult.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSDictionary+BmobCheckResult.m"; sourceTree = "<group>"; };
+		B92D8A9DA5DF1112F6735D7C5D7210B1 /* UINavigationItem+ColorfulWoodMargin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+ColorfulWoodMargin.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.m"; sourceTree = "<group>"; };
+		BA1A278556327C86AC2479FDD4209E10 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		BCCA440710B1C774AC0E784006C5F420 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		C01837BABD7391828B6761B167A23B7B /* Pods-ColorfulWoodUIBase-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ColorfulWoodUIBase-acknowledgements.plist"; sourceTree = "<group>"; };
+		C0F976EB26E989DB1E4E76F60293AF67 /* UIViewController+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DDC8D9E485F01ED0D7858A6B6F38B0F2 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		DDE4D4D2C7D54ED3C4854042C4FE6895 /* Pods-ColorfulWoodUIBase-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ColorfulWoodUIBase-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE4B58023F9DBF02A9D7761EB0BE550F /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		E94139232372593AAA56E65AFFB3B9A2 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		F3789F9DA6946250018B5AA328EDF755 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		F8D11D3E0C3360C6FB069222D5ECD305 /* ColorfulWoodCategories-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorfulWoodCategories-prefix.pch"; sourceTree = "<group>"; };
+		FB06631A69643AA7830B5FBDD417432C /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		FC0432B2DEE404A4AFA7BC0BB2E60B2A /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		FD2436E5CC393217D1609665B71FC371 /* Pods-ColorfulWoodUIBase-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ColorfulWoodUIBase-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FD8312A1AEB348F49A81C438DB25115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */,
+				6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6699232FD7D4E9E84CDBD1F1960ECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4655D2F6AB55F47AB8FB5926C7588793 /* Foundation.framework in Frameworks */,
+				21207771A00116F619E860B0F003EAF0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD2454E6FC81F7DD509D3FF542FC13C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B140F58CD1F2998BB75EF89191201D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D15C20838820C4F178F2F0D050A03EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81AECF97E174892E745B90EF6BA2BDFC /* libColorfulWoodCategories.a */,
+				20990BFD3318F4C3C02E55524A190182 /* libMasonry.a */,
+				166FDCAE160B39382996FB247AB54B22 /* libPods-ColorfulWoodUIBase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21B80D1F63DE5B697E0ABA3E3ECDAFB0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */,
+				A110BDC1A8AE4CEF04A111C618872468 /* ColorfulWoodCategories-dummy.m */,
+				F8D11D3E0C3360C6FB069222D5ECD305 /* ColorfulWoodCategories-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ColorfulWoodCategories";
+			sourceTree = "<group>";
+		};
+		283B8A27AB3C19C6FA5B3F9B6FE2727B /* ColorfulWoodCategories */ = {
+			isa = PBXGroup;
+			children = (
+				7210D04B804203EF877483BBC5E43902 /* ColorfulWoodCategories.h */,
+				B70B9026099D74CA7A2886A153F7792D /* Info.plist */,
+				3FB5C44CA26DD30940D28B321F9F62CA /* NSDictionary+BmobCheckResult.h */,
+				B7CEA56B362DCF3747D9E290753CDD24 /* NSDictionary+BmobCheckResult.m */,
+				023F318CDE43480D6993CA4A82411AE7 /* NSString+ColorfulWoodRegex.h */,
+				14C6AEDBA4570B0AE5E037825CB3F482 /* NSString+ColorfulWoodRegex.m */,
+				B6362D456294C3B5B66E48C5689F2935 /* UIColor+Hex.h */,
+				0A196DA368A808DD4F1B23EEF91AA151 /* UIColor+Hex.m */,
+				5CB5858B55EEA090067927C04FCDDDCD /* UIImage+ColorfulWoodAddtional.h */,
+				579BCFF0836F4FC4DC31E948552E1E35 /* UIImage+ColorfulWoodAddtional.m */,
+				49C7614AB84A2EEA5A93094FEE47E046 /* UINavigationItem+ColorfulWoodMargin.h */,
+				B92D8A9DA5DF1112F6735D7C5D7210B1 /* UINavigationItem+ColorfulWoodMargin.m */,
+				C0F976EB26E989DB1E4E76F60293AF67 /* UIViewController+ColorfulWoodAddtional.h */,
+				5617D4795B184D4F91656E56558C154E /* UIViewController+ColorfulWoodAddtional.m */,
+				21B80D1F63DE5B697E0ABA3E3ECDAFB0 /* Support Files */,
+			);
+			name = ColorfulWoodCategories;
+			path = ColorfulWoodCategories;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		461CB139DD6E14EF5D85D4E7F8EF1206 /* Pods-ColorfulWoodUIBase */ = {
+			isa = PBXGroup;
+			children = (
+				DDE4D4D2C7D54ED3C4854042C4FE6895 /* Pods-ColorfulWoodUIBase-acknowledgements.markdown */,
+				C01837BABD7391828B6761B167A23B7B /* Pods-ColorfulWoodUIBase-acknowledgements.plist */,
+				702C3C3667E946CDC69F28FC2C54FB4B /* Pods-ColorfulWoodUIBase-dummy.m */,
+				8A97D78A2E3CF197D1249D6EA8D13C08 /* Pods-ColorfulWoodUIBase-frameworks.sh */,
+				FD2436E5CC393217D1609665B71FC371 /* Pods-ColorfulWoodUIBase-resources.sh */,
+				0BFC135A2915323AFEAB09E101D1D2E0 /* Pods-ColorfulWoodUIBase.debug.xcconfig */,
+				AACBAC91506D9A63B9C4C46C88B5E602 /* Pods-ColorfulWoodUIBase.release.xcconfig */,
+			);
+			name = "Pods-ColorfulWoodUIBase";
+			path = "Target Support Files/Pods-ColorfulWoodUIBase";
+			sourceTree = "<group>";
+		};
+		69A78066E64E14858B2727710AA337B1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				461CB139DD6E14EF5D85D4E7F8EF1206 /* Pods-ColorfulWoodUIBase */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				D8EFC9C589F0EBD83ABCE0EB47C5E5DB /* Pods */,
+				1D15C20838820C4F178F2F0D050A03EA /* Products */,
+				69A78066E64E14858B2727710AA337B1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		820DC8BC22053C4D553BF3B241E8851A /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				FC0432B2DEE404A4AFA7BC0BB2E60B2A /* MASCompositeConstraint.h */,
+				A4BEBA865DDC89A0FBAE29A60352610E /* MASCompositeConstraint.m */,
+				2139CCA1201148EFF5E3555BF84C651C /* MASConstraint.h */,
+				7C98C2D1BF34D55373A4AEB3460513F2 /* MASConstraint.m */,
+				8335CB82162404633258C94E74809A83 /* MASConstraint+Private.h */,
+				B7C6421071A0B5EB22D2762F93CF47B1 /* MASConstraintMaker.h */,
+				6D1590AE4FC09287FF6B063B988CD53F /* MASConstraintMaker.m */,
+				BCCA440710B1C774AC0E784006C5F420 /* MASLayoutConstraint.h */,
+				BA1A278556327C86AC2479FDD4209E10 /* MASLayoutConstraint.m */,
+				FB06631A69643AA7830B5FBDD417432C /* Masonry.h */,
+				1C6C0899E391C5FDA4843FA55B7C214B /* MASUtilities.h */,
+				040E88DAC748DBD7B1149616EC841D45 /* MASViewAttribute.h */,
+				43A879AB955F1BFC0478A1A8B502902E /* MASViewAttribute.m */,
+				0F00A376374B5C4963EA66986CBCF494 /* MASViewConstraint.h */,
+				DDC8D9E485F01ED0D7858A6B6F38B0F2 /* MASViewConstraint.m */,
+				0239F5A37403A0487DED0954609F3A01 /* NSArray+MASAdditions.h */,
+				E94139232372593AAA56E65AFFB3B9A2 /* NSArray+MASAdditions.m */,
+				9A05BDC9C06C883DC6C7687ACF3CD038 /* NSArray+MASShorthandAdditions.h */,
+				A2B9577E3F0DADBEC62B3AEE922ABCB1 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				F3789F9DA6946250018B5AA328EDF755 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				B2A1DBC43754D2EEB537CA314DE1663B /* View+MASAdditions.h */,
+				A7E37D1B5A466F93DA8985E04783E187 /* View+MASAdditions.m */,
+				881A5B71C2B7852BF852673829B97F39 /* View+MASShorthandAdditions.h */,
+				350DA63EE4A63F7758BDD91B283FEC1E /* ViewController+MASAdditions.h */,
+				7B6DD008E5DB9246397C166022438C5A /* ViewController+MASAdditions.m */,
+				E57ADE045544BC66DF0A252A2ADDA3A1 /* Support Files */,
+			);
+			name = Masonry;
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		D8EFC9C589F0EBD83ABCE0EB47C5E5DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				283B8A27AB3C19C6FA5B3F9B6FE2727B /* ColorfulWoodCategories */,
+				820DC8BC22053C4D553BF3B241E8851A /* Masonry */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E57ADE045544BC66DF0A252A2ADDA3A1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */,
+				DE4B58023F9DBF02A9D7761EB0BE550F /* Masonry-dummy.m */,
+				07B50E0AD6BDAE3A0D36E409B3A8BA99 /* Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B9C92345C3DF0167603EA9273DB22468 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD23E41D6A4560C8ADB2CCB543D1CC0 /* ColorfulWoodCategories.h in Headers */,
+				4AAB75A1F52B7F2C8B85444D7F97FF37 /* NSDictionary+BmobCheckResult.h in Headers */,
+				6E57B108663914AAC55410E0371FD170 /* NSString+ColorfulWoodRegex.h in Headers */,
+				C45B34AE8AE53DCE096624946B10F23F /* UIColor+Hex.h in Headers */,
+				54CEC601CA175E60DAD0B38E1F5A30FE /* UIImage+ColorfulWoodAddtional.h in Headers */,
+				2291ED9056C4C6B512FC7C896BD2461A /* UINavigationItem+ColorfulWoodMargin.h in Headers */,
+				6040E633B300247A4E705E663BB13811 /* UIViewController+ColorfulWoodAddtional.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF73468622762862D2FB76ED4AC0D8E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */,
+				81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */,
+				6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */,
+				B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */,
+				9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */,
+				523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */,
+				7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */,
+				100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */,
+				5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */,
+				9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */,
+				FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */,
+				214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */,
+				92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */,
+				86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		624C62F3135EDE8918F17A7CEE29544C /* Pods-ColorfulWoodUIBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CABCAE06CABDDB3F5458D52315B8842 /* Build configuration list for PBXNativeTarget "Pods-ColorfulWoodUIBase" */;
+			buildPhases = (
+				BD0ABCD754ECB825D781A98E5468B087 /* Sources */,
+				EAD2454E6FC81F7DD509D3FF542FC13C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EB70063586C177683CC3F8FB5693087 /* PBXTargetDependency */,
+				EF83764920BB62CFF4BCBEDCA194ECBF /* PBXTargetDependency */,
+			);
+			name = "Pods-ColorfulWoodUIBase";
+			productName = "Pods-ColorfulWoodUIBase";
+			productReference = 166FDCAE160B39382996FB247AB54B22 /* libPods-ColorfulWoodUIBase.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74AC03F531B6AC6E7E0AB38107152B92 /* ColorfulWoodCategories */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DAA45A2E04D105A950838A8898AA42A /* Build configuration list for PBXNativeTarget "ColorfulWoodCategories" */;
+			buildPhases = (
+				F2EF2567BBE866D25EBB0CC38A719591 /* Sources */,
+				AC6699232FD7D4E9E84CDBD1F1960ECA /* Frameworks */,
+				B9C92345C3DF0167603EA9273DB22468 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorfulWoodCategories;
+			productName = ColorfulWoodCategories;
+			productReference = 81AECF97E174892E745B90EF6BA2BDFC /* libColorfulWoodCategories.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34CAE1CB89EDBF2E53735CC5D4E5E69F /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				C4BE2DC1E815E7367562323223772531 /* Sources */,
+				6FD8312A1AEB348F49A81C438DB25115 /* Frameworks */,
+				BDF73468622762862D2FB76ED4AC0D8E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masonry;
+			productName = Masonry;
+			productReference = 20990BFD3318F4C3C02E55524A190182 /* libMasonry.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1D15C20838820C4F178F2F0D050A03EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74AC03F531B6AC6E7E0AB38107152B92 /* ColorfulWoodCategories */,
+				9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */,
+				624C62F3135EDE8918F17A7CEE29544C /* Pods-ColorfulWoodUIBase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD0ABCD754ECB825D781A98E5468B087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD0A7D71A4E5DC4831B20D3A09F74C8 /* Pods-ColorfulWoodUIBase-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BE2DC1E815E7367562323223772531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */,
+				89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */,
+				DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */,
+				955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */,
+				68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */,
+				13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */,
+				2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */,
+				7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */,
+				3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */,
+				D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2EF2567BBE866D25EBB0CC38A719591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AF215A8E93212DCD9DF471437FC473 /* ColorfulWoodCategories-dummy.m in Sources */,
+				0DE773DB880CA53182E4654D72F3F80D /* Info.plist in Sources */,
+				2C864897D9704EC6280E9D9CD31AC2A3 /* NSDictionary+BmobCheckResult.m in Sources */,
+				6516F594FE7EF0B90ABFBC33C999E8EB /* NSString+ColorfulWoodRegex.m in Sources */,
+				D5B7AE26DB752A002826D44D8DFFD066 /* UIColor+Hex.m in Sources */,
+				D1DA3FAC9CF1314CC82F7EABE0AE4D5B /* UIImage+ColorfulWoodAddtional.m in Sources */,
+				DEC839E3DDAF690D79CBD206A0783A27 /* UINavigationItem+ColorfulWoodMargin.m in Sources */,
+				3DF6A7E7B49255B2399150816A388676 /* UIViewController+ColorfulWoodAddtional.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EB70063586C177683CC3F8FB5693087 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorfulWoodCategories;
+			target = 74AC03F531B6AC6E7E0AB38107152B92 /* ColorfulWoodCategories */;
+			targetProxy = 57282525A1001C6A43F94B601D407C16 /* PBXContainerItemProxy */;
+		};
+		EF83764920BB62CFF4BCBEDCA194ECBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */;
+			targetProxy = A1C97BD63FD4990D38F6BAA0F10A7493 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D739DEB7C2E4933EDF490364116CBE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorfulWoodCategories/ColorfulWoodCategories-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ColorfulWoodCategories;
+				PRODUCT_NAME = ColorfulWoodCategories;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53429C2BEB6F11CFAFEC213B1EF164FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BFC135A2915323AFEAB09E101D1D2E0 /* Pods-ColorfulWoodUIBase.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6033A2127E806DD5C86A515742F7445E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60FB92955BB09EB5CC81923070DFB307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6681B1A324732F8264BB932595DFA69B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E303F336AF1EDCE08CCD98DE0D3DD37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		95FE0E9540E78E7F31540ABA56BB469A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ColorfulWoodCategories/ColorfulWoodCategories-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ColorfulWoodCategories;
+				PRODUCT_NAME = ColorfulWoodCategories;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8AFA546E47C71C6F98B0F8DD8921A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACBAC91506D9A63B9C4C46C88B5E602 /* Pods-ColorfulWoodUIBase.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E303F336AF1EDCE08CCD98DE0D3DD37 /* Debug */,
+				60FB92955BB09EB5CC81923070DFB307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DAA45A2E04D105A950838A8898AA42A /* Build configuration list for PBXNativeTarget "ColorfulWoodCategories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D739DEB7C2E4933EDF490364116CBE1 /* Debug */,
+				95FE0E9540E78E7F31540ABA56BB469A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34CAE1CB89EDBF2E53735CC5D4E5E69F /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6033A2127E806DD5C86A515742F7445E /* Debug */,
+				6681B1A324732F8264BB932595DFA69B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CABCAE06CABDDB3F5458D52315B8842 /* Build configuration list for PBXNativeTarget "Pods-ColorfulWoodUIBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53429C2BEB6F11CFAFEC213B1EF164FA /* Debug */,
+				C8AFA546E47C71C6F98B0F8DD8921A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
