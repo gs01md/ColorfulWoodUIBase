@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ColorfulWoodUIBase"
-  s.version      = "1.1.11"
+  s.version      = "1.1.12"
   s.summary      = "User Interface Design."
 
   s.homepage     = "https://github.com/gs01md"
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/gs01md/ColorfulWoodUIBase.git", :tag => "#{s.version}" }
 
-  s.source_files = "ColorfulWoodUIBase/ColorfulWoodUIBase/**/*"
+  s.source_files = "ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/**/*"
 
   s.platform     = :ios, "8.2"
 

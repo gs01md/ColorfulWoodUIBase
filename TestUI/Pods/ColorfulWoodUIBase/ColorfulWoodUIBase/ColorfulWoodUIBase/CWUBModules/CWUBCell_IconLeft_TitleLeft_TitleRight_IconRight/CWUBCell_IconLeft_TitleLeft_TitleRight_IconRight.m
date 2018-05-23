@@ -64,14 +64,14 @@
     [self addSubview:self.m_img_sep];
 
     [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
+        make.left.equalTo(self).offset(self.m_model.m_margin_leftOrRight);
         make.centerY.equalTo(self.m_lbl_left);
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon_Little));
         make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon_Little));
     }];
 
     [_m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
+        make.right.equalTo(self).offset(-self.m_model.m_margin_leftOrRight);
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon));
         make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon));
         make.centerY.equalTo(self);

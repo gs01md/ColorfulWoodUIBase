@@ -1,0 +1,155 @@
+//
+//  CWUBCell_TitleLeft_InfoLeft_ButtonRight.m
+//  ColorfulWoodUIBase
+//
+//  Created by 大新 on 2018/3/16.
+//  Copyright © 2018年 ColorfulWood. All rights reserved.
+//
+
+#import "CWUBCell_TitleLeft_InfoLeft_ButtonRight.h"
+#import "CWUBLabelWithModel.h"
+#import "CWUBLableLeftTop.h"
+
+@interface CWUBCell_TitleLeft_InfoLeft_ButtonRight()
+
+
+@property (nonatomic, strong) CWUBLableLeftTop *m_lbl_title;
+@property (nonatomic, strong) CWUBLabelWithModel *m_lbl_info;
+@property (nonatomic, strong) UIImageView * m_img_btn;
+@property (nonatomic, strong) UIImageView * m_img_sep;
+
+@end
+
+@implementation CWUBCell_TitleLeft_InfoLeft_ButtonRight
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model*)model{
+
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.m_model = model;
+
+        if (self.m_model.m_color_bottomLine) {
+            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        }else{
+            self.m_img_sep.backgroundColor = [UIColor clearColor];
+        }
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self initWithSubViews];
+    }
+
+    return self;
+}
+
+- (void) initWithSubViews{
+
+    [self addSubview:self.m_lbl_title];
+    [self addSubview:self.m_lbl_info];
+    [self addSubview:self.m_img_btn];
+    [self addSubview:self.m_img_sep];
+
+    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
+        make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
+        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
+    }];
+
+    [_m_lbl_info mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.m_lbl_title.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
+        make.right.equalTo(self.m_img_btn.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
+        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
+    }];
+
+    [_m_img_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self);
+        make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
+        make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon));
+        make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon));
+    }];
+
+    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
+        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+        make.bottom.equalTo(self);
+        make.height.equalTo(@(1));
+        make.top.equalTo(self.m_lbl_title.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
+    }];
+}
+
+-(CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model*) m_model{
+
+    if (!_m_model) {
+        _m_model = [CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model new];
+    }
+
+    return _m_model;
+}
+
+- (CWUBLableLeftTop *)m_lbl_title{
+
+    if (!_m_lbl_title) {
+        _m_lbl_title = [[CWUBLableLeftTop alloc] initWithModel: self.m_model.m_title];
+        _m_lbl_title.textAlignment = NSTextAlignmentLeft;
+        _m_lbl_title.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
+        _m_lbl_title.numberOfLines = 0;
+    }
+    return _m_lbl_title;
+}
+
+- (CWUBLabelWithModel *)m_lbl_info{
+
+    if (!_m_lbl_info) {
+        _m_lbl_info = [[CWUBLabelWithModel alloc] initWithModel: self.m_model.m_info];
+        _m_lbl_info.textAlignment = NSTextAlignmentLeft;
+        _m_lbl_info.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
+        _m_lbl_info.numberOfLines = 0;
+    }
+    return _m_lbl_info;
+}
+
+-(UIImageView *)m_img_sep{
+
+    if(!_m_img_sep){
+        _m_img_sep = [CWUBDefine imgSep];
+        [_m_img_sep setClipsToBounds:YES];
+    }
+    return _m_img_sep;
+}
+
+-(UIImageView *)m_img_btn{
+
+    if(!_m_img_btn){
+        _m_img_btn = [UIImageView new];
+        [_m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg]];
+        _m_img_btn.contentMode = UIViewContentModeScaleAspectFill;
+        _m_img_btn.clipsToBounds = YES;
+        [_m_img_btn setClipsToBounds:YES];
+    }
+    return _m_img_btn;
+}
+
+- (void) interface_updateWithModel:(CWUBCell_TitleLeft_InfoLeft_ButtonRight_Model*)model{
+
+    self.m_model = model;
+
+    if (self.m_model.m_color_bottomLine) {
+        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    }else{
+        self.m_img_sep.backgroundColor = [UIColor clearColor];
+    }
+    [self.m_lbl_title interface_update:model.m_title];
+    [self.m_lbl_info interface_update:model.m_info];
+    [_m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg]];
+}
+
+- (NSString *)interface_get_event_opt_code{
+
+    return self.m_model.m_event_opt_code;
+}
+
+- (void)awakeFromNib {[super awakeFromNib];}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {[super setSelected:selected animated:animated];}
+
+@end
