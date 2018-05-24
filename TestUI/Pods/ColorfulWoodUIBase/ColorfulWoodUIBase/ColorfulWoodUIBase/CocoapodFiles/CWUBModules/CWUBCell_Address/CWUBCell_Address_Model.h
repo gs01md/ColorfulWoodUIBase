@@ -28,7 +28,7 @@
 /**
  * 右侧箭头
  */
-@property(nonatomic, strong) NSString * m_arrow;
+@property(nonatomic, strong) CWUBImageInfo * m_arrow;
 
 
 @end

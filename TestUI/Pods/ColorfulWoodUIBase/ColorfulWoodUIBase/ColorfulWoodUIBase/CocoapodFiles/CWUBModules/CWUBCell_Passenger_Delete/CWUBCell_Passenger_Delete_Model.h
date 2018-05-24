@@ -32,6 +32,6 @@
 /**
  * 左侧图片
  */
-@property(nonatomic, strong) NSString * m_img_btn;
+@property(nonatomic, strong) CWUBImageInfo * m_btnImg;
 
 @end

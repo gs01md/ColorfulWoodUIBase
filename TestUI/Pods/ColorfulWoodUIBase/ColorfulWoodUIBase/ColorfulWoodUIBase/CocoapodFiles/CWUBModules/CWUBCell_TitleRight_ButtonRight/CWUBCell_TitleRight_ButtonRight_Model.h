@@ -17,5 +17,5 @@
 /**
  * 按钮图标
  */
-@property(nonatomic, strong) NSString * m_btnImg;
+@property(nonatomic, strong) CWUBImageInfo * m_btnImg;
 @end

@@ -49,8 +49,8 @@
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self.m_lblShow.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon));
-        make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon));
+        make.width.equalTo(@(self.m_model.m_btnImg.m_width));
+        make.height.equalTo(@(self.m_model.m_btnImg.m_height));
     }];
 
     [_m_lblShow mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -106,10 +106,10 @@
 
     if(!_m_img_btn){
         _m_img_btn = [UIImageView new];
-        [_m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg]];
+        [_m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg.m_imgName]];
         _m_img_btn.contentMode = UIViewContentModeScaleAspectFill;
-        _m_img_btn.clipsToBounds = YES;
-        [_m_img_btn setClipsToBounds:YES];
+        _m_img_btn.clipsToBounds = NO;
+        [_m_img_btn setClipsToBounds:NO];
     }
     return _m_img_btn;
 }
@@ -123,16 +123,17 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    
+
+    [self.m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg.m_imgName]];
     [self.m_lblShow interface_update:model.m_title];
 }
 
-//- (void)awakeFromNib {[super awakeFromNib];}
-//
-//- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-//    [super setSelected:selected animated:animated];
-//    
-//}
+- (void)awakeFromNib {[super awakeFromNib];}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+}
 
 - (NSString*) interface_get_event_opt_code{
     return self.m_model.m_event_opt_code;

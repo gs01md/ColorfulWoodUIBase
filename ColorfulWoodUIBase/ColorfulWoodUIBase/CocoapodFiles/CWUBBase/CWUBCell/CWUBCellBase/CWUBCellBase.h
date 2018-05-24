@@ -16,9 +16,14 @@
 
 @property (nonatomic, weak) UIViewController * m_delegate;
 
-
+/**
+ * 返回cell
+ */
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBModelBase*)model;
 
+/**
+ * 返回视图
+ */
 - (id)initWithModel:(CWUBModelBase*)model;
 
 - (void)interface_updateWithModel:(CWUBModelBase*)model;

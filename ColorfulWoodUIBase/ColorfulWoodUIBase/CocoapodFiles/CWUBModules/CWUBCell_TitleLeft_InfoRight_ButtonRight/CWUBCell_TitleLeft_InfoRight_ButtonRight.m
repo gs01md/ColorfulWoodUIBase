@@ -11,8 +11,6 @@
 
 @interface CWUBCell_TitleLeft_InfoRight_ButtonRight()
 
-
-
 @property (nonatomic, strong) CWUBLabelWithModel *m_lblShow;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lblShowBtn;
 @property (nonatomic, strong) UIImageView * m_img_btn;

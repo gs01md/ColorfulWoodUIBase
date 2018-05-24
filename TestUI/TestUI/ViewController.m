@@ -54,7 +54,7 @@ UITableViewDataSource
     CWUBCell_TitleRight_ButtonRight_Model * model = [CWUBCell_TitleRight_ButtonRight_Model new];
     model.m_type = CWUBCellType_TitleRight_ButtonRight;
     model.m_title = [[CWUBTextInfo alloc] initWithText:@"查看详情" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
-    model.m_btnImg = @"";
+    model.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"Image" width:26. height:26.];
     model.m_event_opt_code = @"查看详情";
     model.m_color_bottomLine = [UIColor redColor];
     [data addObject:model];
@@ -64,8 +64,8 @@ UITableViewDataSource
     model1.m_title_left = [[CWUBTextInfo alloc] initWithText:@"备注" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
     model1.m_title_right = [[CWUBTextInfo alloc] initWithText:@"水需要水需要水需要水水需要水需要水需要水水需要水需要水需要水水需要水需要水需要水" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
     model1.m_color_bottomLine = [UIColor redColor];
-    model1.m_img_left = @"Image";
-    model1.m_img_right = @"Image";
+    model1.m_img_left = [[CWUBImageInfo alloc] initWithName:@"Image" width:26. height:26.];
+    model1.m_img_right = [[CWUBImageInfo alloc] initWithName:@"Image" width:20. height:12.];
     model1.m_margin_leftOrRight = 10.;
 //    model1.m_bottomLineType = CWUBBottomLineType_right;
 //    model1.m_title_left.m_labelTextVerticalType = CWUBLabelTextVerticalType_top;

@@ -31,6 +31,13 @@
 #import "CWUBCell_IconTitleLeft_IconTitleRight.h"
 #import "CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight.h"
 #import "CWUBCell_CharterDiscount.h"
+#import "CWUBCell_TitleLeft_ButtonRight.h"
+#import "CWUBCell_TitleCenter.h"
+#import "CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.h"
+#import "CWUBCell_ImgCenter.h"
+#import "CWUBCell_ImgLeft_TitleRightThree.h"
+#import "CWUBCell_TitleLeft_TitleRight.h"
+#import "CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo.h"
 
 @implementation CWUBModelBase
 /**
@@ -141,6 +148,34 @@
                 view = [self func_CWUBCell_CharterDiscount:tableView];
                 break;
 
+            case CWUBCellType_TitleCenter:
+                view = [self func_CWUBCell_TitleCenter:tableView];
+                break;
+
+            case CWUBCellType_TitleLeft_ButtonRight:
+                view = [self func_CWUBCell_TitleLeft_ButtonRight:tableView];
+                break;
+
+            case CWUBCellType_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight:
+                view = [self func_CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight:tableView];
+                break;
+
+            case CWUBCellType_ImgCenter:
+                view = [self func_CWUBCell_ImgCenter:tableView];
+                break;
+
+            case CWUBCellType_ImgLeft_TitleRightThree:
+                view = [self func_CWUBCell_ImgLeft_TitleRightThree:tableView];
+                break;
+
+            case CWUBCellType_TitleLeft_TitleRight:
+                view = [self func_CWUBCell_TitleLeft_TitleRight:tableView];
+                break;
+
+            case CWUBCellType_TitleLeftTwo_ImgCenter_TitleRightTwo:
+                view = [self func_CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo:tableView];
+                break;
+
             default:
                 break;
         }
@@ -155,7 +190,7 @@
     static NSString *identify = @"CWUBCell_TitleILeft_InfoRight";
     CWUBCell_TitleLeft_InfoRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleLeft_InfoRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleLeft_InfoRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -166,7 +201,7 @@
     static NSString *identify = @"CWUBCell_TitleLeft_InfoLeft";
     CWUBCell_TitleLeft_InfoLeft *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleLeft_InfoLeft alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleLeft_InfoLeft alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -177,7 +212,7 @@
     static NSString *identify = @"CWUBCell_TitleRight_ButtonRight";
     CWUBCell_TitleRight_ButtonRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleRight_ButtonRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleRight_ButtonRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -188,7 +223,7 @@
     static NSString *identify = @"CWUBCell_Trip";
     CWUBCell_Trip *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_Trip alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_Trip alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -199,7 +234,7 @@
     static NSString *identify = @"CWUBCell_TitleLeft_InfoRight_ButtonRight";
     CWUBCell_TitleLeft_InfoRight_ButtonRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleLeft_InfoRight_ButtonRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleLeft_InfoRight_ButtonRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -210,7 +245,7 @@
     static NSString *identify = @"CWUBCell_ButtonLeft_TitleLeft";
     CWUBCell_ButtonLeft_TitleLeft *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_ButtonLeft_TitleLeft alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_ButtonLeft_TitleLeft alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -221,7 +256,7 @@
     static NSString *identify = @"CWUBCell_Passenger";
     CWUBCell_Passenger *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_Passenger alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_Passenger alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -232,7 +267,7 @@
     static NSString *identify = @"CWUBCell_Passenger_Delete";
     CWUBCell_Passenger_Delete *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_Passenger_Delete alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_Passenger_Delete alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -243,7 +278,7 @@
     static NSString *identify = @"CWUBCell_Passenger_Opt";
     CWUBCell_Passenger_Opt *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_Passenger_Opt alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_Passenger_Opt alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -254,7 +289,7 @@
     static NSString *identify = @"CWUBCell_TitleLeft_InfoLeft_ButtonRight";
     CWUBCell_TitleLeft_InfoLeft_ButtonRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleLeft_InfoLeft_ButtonRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleLeft_InfoLeft_ButtonRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -265,7 +300,7 @@
     static NSString *identify = @"CWUBCell_Address";
     CWUBCell_Address *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_Address alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_Address alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -276,7 +311,7 @@
     static NSString *identify = @"CWUBCell_TitleLeft_InputLeft";
     CWUBCell_TitleLeft_InputLeft *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleLeft_InputLeft alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleLeft_InputLeft alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -287,7 +322,7 @@
     static NSString *identify = @"CWUBCell_ButtonRight_TitleRight_ButtonRight";
     CWUBCell_ButtonRight_TitleRight_ButtonRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_ButtonRight_TitleRight_ButtonRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_ButtonRight_TitleRight_ButtonRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -298,7 +333,7 @@
     static NSString *identify = @"CWUBCell_Refund";
     CWUBCell_Refund *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_Refund alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_Refund alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -309,7 +344,7 @@
     static NSString *identify = @"CWUBCell_ImgLeft_TitleLeft_InfoRight";
     CWUBCell_ImgLeft_TitleLeft_InfoRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_ImgLeft_TitleLeft_InfoRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_ImgLeft_TitleLeft_InfoRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -320,7 +355,7 @@
     static NSString *identify = @"CWUBCell_ButtonRight_SpaceBottom";
     CWUBCell_ButtonRight_SpaceBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_ButtonRight_SpaceBottom alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_ButtonRight_SpaceBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -331,7 +366,7 @@
     static NSString *identify = @"CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight";
     CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -342,7 +377,7 @@
     static NSString *identify = @"CWUBCell_TitleLeft_SwithRight";
     CWUBCell_TitleLeft_SwithRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleLeft_SwithRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleLeft_SwithRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -353,7 +388,7 @@
     static NSString *identify = @"CWUBCell_Address_ArrowRight";
     CWUBCell_Address_ArrowRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_Address_ArrowRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_Address_ArrowRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -364,7 +399,7 @@
     static NSString *identify = @"CWUBCell_CharterDetail_Opt";
     CWUBCell_CharterDetail_Opt *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_CharterDetail_Opt alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_CharterDetail_Opt alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -375,7 +410,7 @@
     static NSString *identify = @"CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight";
     CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -386,7 +421,7 @@
     static NSString *identify = @"CWUBCell_IconTitleLeft_IconTitleRight";
     CWUBCell_IconTitleLeft_IconTitleRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_IconTitleLeft_IconTitleRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_IconTitleLeft_IconTitleRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -398,7 +433,7 @@
     static NSString *identify = @"CWUBCell_TitleIconLeft_IconCenter_IconTitleRight";
     CWUBCell_TitleIconLeft_IconCenter_IconTitleRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_TitleIconLeft_IconCenter_IconTitleRight alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_TitleIconLeft_IconCenter_IconTitleRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
@@ -410,13 +445,130 @@
     static NSString *identify = @"CWUBCell_CharterDiscount";
     CWUBCell_CharterDiscount *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[CWUBCell_CharterDiscount alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        cell = [[CWUBCell_CharterDiscount alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
     }
 
     return cell;
 }
 
+- (CWUBCell_TitleCenter*) func_CWUBCell_TitleCenter:(UITableView*)tableView{
 
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleCenter";
+        CWUBCell_TitleCenter *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleCenter alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+    }else{
+        return [[CWUBCell_TitleCenter alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_TitleLeft_ButtonRight*) func_CWUBCell_TitleLeft_ButtonRight:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeft_ButtonRight";
+        CWUBCell_TitleLeft_ButtonRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeft_ButtonRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeft_ButtonRight alloc] initWithModel:self];
+    }
+
+}
+
+
+- (CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight*) func_CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight";
+        CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_ImgCenter*) func_CWUBCell_ImgCenter:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgCenter";
+        CWUBCell_ImgCenter *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgCenter alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgCenter alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_ImgLeft_TitleRightThree*) func_CWUBCell_ImgLeft_TitleRightThree:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgLeft_TitleRightThree";
+        CWUBCell_ImgLeft_TitleRightThree *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgLeft_TitleRightThree alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgLeft_TitleRightThree alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_TitleLeft_TitleRight*) func_CWUBCell_TitleLeft_TitleRight:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeft_TitleRight";
+        CWUBCell_TitleLeft_TitleRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeft_TitleRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeft_TitleRight alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo*) func_CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo";
+        CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo alloc] initWithModel:self];
+    }
+
+}
 
 #pragma mark - 参数设置
 
@@ -439,4 +591,5 @@
 
     return _m_margin_leftOrRight;
 }
+
 @end

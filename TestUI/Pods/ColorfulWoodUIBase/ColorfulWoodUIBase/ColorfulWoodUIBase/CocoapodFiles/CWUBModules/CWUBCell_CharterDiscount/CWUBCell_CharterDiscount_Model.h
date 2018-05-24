@@ -13,7 +13,7 @@
 /**
  * 上部图片
  */
-@property(nonatomic, strong)NSString* m_img_banner;
+@property(nonatomic, strong) CWUBImageInfo* m_img_banner;
 
 /**
  * 左侧标题
@@ -28,7 +28,7 @@
 /**
  * 中间图标
  */
-@property(nonatomic, strong) NSString * m_img_center;
+@property(nonatomic, strong) CWUBImageInfo * m_img_center;
 
 /**
  * 左侧-下侧-标题

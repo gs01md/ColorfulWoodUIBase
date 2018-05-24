@@ -12,7 +12,7 @@
 /**
  * 左侧图标
  */
-@property(nonatomic, strong) NSString * m_img_left;
+@property(nonatomic, strong) CWUBImageInfo * m_img_left;
 
 /**
  * 左侧标题
@@ -27,10 +27,10 @@
 /**
  * 右侧图标
  */
-@property(nonatomic, strong) NSString * m_img_right;
+@property(nonatomic, strong) CWUBImageInfo * m_img_right;
 
 /**
  * 中间图标
  */
-@property(nonatomic, strong) NSString * m_img_center;
+@property(nonatomic, strong) CWUBImageInfo * m_img_center;
 @end

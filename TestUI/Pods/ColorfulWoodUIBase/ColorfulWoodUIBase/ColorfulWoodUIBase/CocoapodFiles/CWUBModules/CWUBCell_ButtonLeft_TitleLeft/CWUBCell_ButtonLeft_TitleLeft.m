@@ -48,8 +48,8 @@
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.width.equalTo(@(self.m_model.m_iconWidth));
-        make.height.equalTo(@(self.m_model.m_iconWidth));
+        make.width.equalTo(@(self.m_model.m_btnImg.m_width));
+        make.height.equalTo(@(self.m_model.m_btnImg.m_height));
     }];
 
     [_m_lblShowBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -103,7 +103,7 @@
 
     if(!_m_img_btn){
         _m_img_btn = [UIImageView new];
-        [_m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg]];
+        [_m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg.m_imgName]];
         _m_img_btn.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_btn.clipsToBounds = YES;
         [_m_img_btn setClipsToBounds:YES];
@@ -120,7 +120,7 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-
+    [self.m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg.m_imgName]];
     [self.m_lblShowBtn interface_update:model.m_title_btn];
 }
 

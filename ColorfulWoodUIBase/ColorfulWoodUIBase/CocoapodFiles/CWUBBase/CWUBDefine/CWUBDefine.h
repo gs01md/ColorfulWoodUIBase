@@ -76,6 +76,11 @@
 #define CWUBBaseViewConfig_Space_Side_Vertical CWUBDefine_Width(15.)
 
 /**
+ * 垂直方向间距
+ */
+#define CWUBBaseViewConfig_Space_Element_Vertical CWUBDefine_Width(15.)
+
+/**
  * 标题宽度，默认
  */
 #define CWUBBaseViewConfig_Width_Title_Default 70.
@@ -100,6 +105,8 @@
  */
 #define CWUBBaseViewConfig_Width_Title_Big ((CWUBDefineDeviceWidth - CWUBBaseViewConfig_Space_Side_Horizontal*2.) /2. - CWUBBaseViewConfig_Space_Element_Horizontal)
 
+
+#define CWUBBaseIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 #endif /* CWUBDefine_h */
 

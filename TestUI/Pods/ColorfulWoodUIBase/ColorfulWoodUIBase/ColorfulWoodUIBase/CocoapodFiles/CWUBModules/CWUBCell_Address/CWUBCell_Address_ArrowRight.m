@@ -69,8 +69,8 @@
     [_m_img_arrow mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.width.equalTo(@(CWUBBaseViewConfig_Width_Icon));
-        make.height.equalTo(@(CWUBBaseViewConfig_Width_Icon));
+        make.width.equalTo(@(self.m_model.m_arrow.m_width));
+        make.height.equalTo(@(self.m_model.m_arrow.m_height));
     }];
 
     [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -130,7 +130,7 @@
 
     if(!_m_img_arrow){
         _m_img_arrow = [UIImageView new];
-        [_m_img_arrow setImage:[UIImage imageNamed:self.m_model.m_arrow]];
+        [_m_img_arrow setImage:[UIImage imageNamed:self.m_model.m_arrow.m_imgName]];
         _m_img_arrow.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_arrow.clipsToBounds = YES;
         [_m_img_arrow setClipsToBounds:YES];
@@ -144,6 +144,7 @@
     self.m_model = model;
     [self.m_lbl_title interface_update:model.m_title];
     [self.m_lbl_info_name_phone interface_update:model.m_title_name_Phone];
+    [self.m_img_arrow setImage:[UIImage imageNamed:self.m_model.m_arrow.m_imgName]];
     [self.m_lbl_address interface_update:model.m_address];
     if (self.m_model.m_color_bottomLine) {
         self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
