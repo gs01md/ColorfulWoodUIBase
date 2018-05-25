@@ -83,15 +83,15 @@
     }];
 
     [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.m_img_left.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal/2.);
+        make.left.equalTo(self.m_img_left.mas_right).offset(self.m_model.m_title_left.m_margin_left);
         make.right.equalTo(self.mas_centerX);
         make.top.equalTo(self).offset(margin_topOrBottom);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
     }];
 
     [_m_lbl_right mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_centerX).offset(CWUBBaseViewConfig_Space_Element_Horizontal/2.);
-        make.right.equalTo(self.m_img_right.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
+        make.left.equalTo(self.mas_centerX).offset(self.m_model.m_title_right.m_margin_left);
+        make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_title_right.m_margin_right);
         make.top.equalTo(self).offset(margin_topOrBottom);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
     }];
