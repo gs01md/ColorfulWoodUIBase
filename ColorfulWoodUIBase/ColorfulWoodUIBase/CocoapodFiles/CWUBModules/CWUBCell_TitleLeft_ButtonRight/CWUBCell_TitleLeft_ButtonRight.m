@@ -47,6 +47,8 @@
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
     [self initWithSubViews];
+
+    self.backgroundColor = self.m_model.m_color_backGround;
 }
 
 - (void) initWithSubViews{

@@ -44,6 +44,11 @@
 @property(nonatomic, assign)BOOL m_isHiddenBottom;
 
 /**
+ * 背景颜色
+ */
+@property(nonatomic, strong)UIColor *m_color_backGround;
+
+/**
  * 设置底部分割线的颜色，实心
  * 设置了之后 底部分割线自动隐藏
  */

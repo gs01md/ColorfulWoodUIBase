@@ -592,4 +592,13 @@
     return _m_margin_leftOrRight;
 }
 
+- (UIColor*)m_color_backGround{
+
+    if (!_m_color_backGround) {
+        _m_color_backGround = [UIColor clearColor];
+    }
+
+    return _m_color_backGround;
+}
+
 @end
