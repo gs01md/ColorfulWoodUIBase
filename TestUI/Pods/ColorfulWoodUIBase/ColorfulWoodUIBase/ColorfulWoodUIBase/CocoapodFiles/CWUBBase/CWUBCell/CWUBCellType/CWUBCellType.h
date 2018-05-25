@@ -43,6 +43,13 @@ typedef enum : NSUInteger {
     CWUBCellType_CharterHeader,
     CWUBCellType_CharterDiscount,
     CWUBCellType_RollingPics,
+    CWUBCellType_TitleLeft_ButtonRight,
+    CWUBCellType_TitleCenter,
+    CWUBCellType_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight,
+    CWUBCellType_ImgCenter,
+    CWUBCellType_ImgLeft_TitleRightThree,
+    CWUBCellType_TitleLeft_TitleRight,
+    CWUBCellType_TitleLeftTwo_ImgCenter_TitleRightTwo,
 
 
 } CWUBCellType;

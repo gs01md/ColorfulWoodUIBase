@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CWUBMarginBase.h"
 
-@interface CWUBImageInfo : NSObject
+@interface CWUBImageInfo : CWUBMarginBase
+
 @property(nonatomic,strong) NSString* m_imgName;
 @property(nonatomic,assign) float m_width;
 @property(nonatomic,assign) float m_height;
 
+/**
+ * 是否是圆角，默认是FALSE
+ */
+@property(nonatomic,assign) BOOL m_isCircle;
+
 - (instancetype) initWithName:(NSString*)name width:(float)width height:(float)height;
+
 @end

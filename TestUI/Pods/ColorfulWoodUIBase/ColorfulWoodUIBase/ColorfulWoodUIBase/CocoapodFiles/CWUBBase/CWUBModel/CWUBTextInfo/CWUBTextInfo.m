@@ -64,6 +64,35 @@
     return self;
 }
 
+- (NSString*)m_text{
+
+    if (!_m_text) {
+        _m_text = @"";
+    }
+
+    return _m_text;
+}
+
+- (NSString*)m_textPlaceholder{
+
+    if (!_m_textPlaceholder) {
+        _m_textPlaceholder = @"";
+    }
+
+    return _m_textPlaceholder;
+}
+
+- (int)m_numberOfLines{
+
+    if (_m_numberOfLines<0) {
+        _m_numberOfLines = 0;
+    }
+
+    return _m_numberOfLines;
+}
+
+
+
 - (UIFont*)m_font{
 
     if (!_m_font) {
@@ -89,15 +118,6 @@
     }
 
     return _m_color_backGroud;
-}
-
-- (NSString*)m_textPlaceholder{
-
-    if (!_m_textPlaceholder) {
-        _m_textPlaceholder = @"";
-    }
-
-    return _m_textPlaceholder;
 }
 
 @end

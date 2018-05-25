@@ -12,8 +12,6 @@
 
 @interface CWUBCell_Passenger_Delete()
 
-
-
 @property (nonatomic, strong) CWUBLableLeftTop *m_lbl_Show_name;
 @property (nonatomic, strong) CWUBLableLeftTop *m_lbl_Info_name;
 @property (nonatomic, strong) CWUBLableLeftTop *m_lbl_Show_id;
@@ -203,5 +201,3 @@
     }
 }
 @end
-
-

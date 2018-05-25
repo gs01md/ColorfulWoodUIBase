@@ -28,7 +28,6 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
 
         [self fun_commonInitWithModel:model];
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
     return self;
@@ -45,6 +44,7 @@
 
 - (void)fun_commonInitWithModel:(CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model*)model{
 
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.m_model = model;
     if (self.m_model.m_color_bottomLine) {
         self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;

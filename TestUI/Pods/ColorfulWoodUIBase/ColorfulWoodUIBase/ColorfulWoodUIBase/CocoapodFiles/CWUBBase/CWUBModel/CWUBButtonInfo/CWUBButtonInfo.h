@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIkit.h>
+#import "CWUBMarginBase.h"
 
-@interface CWUBButtonInfo : NSObject
+@interface CWUBButtonInfo : CWUBMarginBase
 @property(nonatomic,strong) NSString* m_text;
 @property(nonatomic,strong) UIFont* m_font;
 @property(nonatomic,strong) UIColor* m_color;
