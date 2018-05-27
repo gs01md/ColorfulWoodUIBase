@@ -11,7 +11,8 @@
 
 @interface ViewController ()<
 UITableViewDelegate,
-UITableViewDataSource
+UITableViewDataSource,
+CWUBCell_WebImgStretchDelegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -23,7 +24,7 @@ UITableViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self testView];
+    [self testTableView];
 }
 
 - (void) testView {
@@ -102,13 +103,13 @@ UITableViewDataSource
     model2.m_type = CWUBCellType_TitleLeft_TitleRight;
     model2.m_title_left = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
     model2.m_title_right = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
-    model2.m_color_bottomLine = [UIColor brownColor];
+    model2.m_bottomLineInfo.m_color = [UIColor brownColor];
 
     [data addObject:model2];
 
     CWUBCell_ImgCenter_Model * model3 = [CWUBCell_ImgCenter_Model new];
     model3.m_type = CWUBCellType_ImgCenter;
-    model3.m_color_bottomLine = [UIColor clearColor];
+    model3.m_bottomLineInfo.m_color = [UIColor clearColor];
     model3.m_image = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
 
     [data addObject:model3];
@@ -125,17 +126,16 @@ UITableViewDataSource
     model4.m_title_leftTop.m_margin_bottom = fMargin;
     model4.m_title_leftBottom.m_margin_top = fMargin;
     model4.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"提醒" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model4.m_color_bottomLine = [UIColor blueColor];
+    model4.m_bottomLineInfo.m_color = [UIColor blueColor];
     model4.m_img_center = [[CWUBImageInfo alloc] initWithName:@"sep" width:1. height:10.];
 
     [data addObject:model4];
 
     CWUBCell_ImgLeft_TitleRightThree_Model * model5 = [CWUBCell_ImgLeft_TitleRightThree_Model new];
     model5.m_type = CWUBCellType_ImgLeft_TitleRightThree;
-    model5.m_color_bottomLine = [UIColor blueColor];
+    model5.m_bottomLineInfo.m_color = [UIColor blueColor];
     model5.m_img_left = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
     model5.m_img_left.m_isCircle = YES;
-    model5.m_backColor = [UIColor redColor];
     model5.m_title_rightTop = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model5.m_title_rightCenter = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model5.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
@@ -156,7 +156,7 @@ UITableViewDataSource
 - (void) func_getOne{
 
     NSMutableArray * data = [NSMutableArray new];
-
+/*
     CWUBCell_TitleRight_ButtonRight_Model * model = [CWUBCell_TitleRight_ButtonRight_Model new];
     model.m_type = CWUBCellType_TitleRight_ButtonRight;
     model.m_title = [[CWUBTextInfo alloc] initWithText:@"查看详情" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
@@ -177,14 +177,30 @@ UITableViewDataSource
     //    model1.m_title_left.m_labelTextVerticalType = CWUBLabelTextVerticalType_top;
     [data addObject:model1];
 
-
-    CWUBCell_TitleCenter_Model * model2 = [CWUBCell_TitleCenter_Model new];
-    model2.m_type = CWUBCellType_TitleCenter;
-    model2.m_title = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
-    model2.m_color_bottomLine = [UIColor brownColor];
+*/
+    CWUBCell_WebImgStretch_Model * model2 = [CWUBCell_WebImgStretch_Model new];
+    model2.m_type = CWUBCellType_WebImgStretch;
+    model2.m_image = [[CWUBImageInfo alloc] initWithName:@"http://img.zcool.cn/community/0112a85874bd24a801219c7729e77d.jpg"  defaultName:@"back"];
+    model2.m_bottomLineInfo.m_color = [UIColor clearColor];
+    model2.m_image.m_margin_left=1;
+    model2.m_image.m_margin_right=1;
+    model2.m_image.m_margin_bottom=1;
+    model2.m_image.m_margin_top=1;
 
     [data addObject:model2];
 
+    CWUBCell_WebImgStretch_Model * model3 = [CWUBCell_WebImgStretch_Model new];
+    model3.m_type = CWUBCellType_WebImgStretch;
+    model3.m_image = [[CWUBImageInfo alloc] initWithName:@"http://img.zcool.cn/community/0112a85874bd24a801219c7729e77d.jpg"  defaultName:@"back"];
+    model3.m_bottomLineInfo.m_color = [UIColor clearColor];
+    model3.m_image.m_margin_left=1;
+    model3.m_image.m_margin_right=1;
+    model3.m_image.m_margin_bottom=1;
+    model3.m_image.m_margin_top=1;
+
+    [data addObject:model3];
+
+/*
     CWUBCell_TitleLeft_ButtonRight_Model * model3 = [CWUBCell_TitleLeft_ButtonRight_Model new];
     model3.m_type = CWUBCellType_TitleLeft_ButtonRight;
     model3.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
@@ -214,7 +230,7 @@ UITableViewDataSource
 
 
     [data addObject:model5];
-
+*/
     if (data.count>0) {
         [self.m_model.m_array_show addObject:data];
     }
@@ -246,6 +262,8 @@ UITableViewDataSource
 
     return _m_tableView;
 }
+
+
 
 #pragma mark - 代理 tableview
 
@@ -292,8 +310,10 @@ UITableViewDataSource
         CWUBModelBase * model = array[indexPath.row];
         CWUBCellBase* cell = (CWUBCellBase*)[model interface_getView:tableView];
         [cell interface_updateWithModel:model];
-        if (model.m_type == CWUBCellType_TitleRight_ButtonRight) {
-            CWUBCell_TitleRight_ButtonRight * cell1 = (CWUBCell_TitleRight_ButtonRight*)cell;
+
+        if (model.m_type == CWUBCellType_WebImgStretch) {
+            CWUBCell_WebImgStretch * cell1 = (CWUBCell_WebImgStretch*)cell;
+            cell1.delegate = self;
             //cell1.delegate = self;
         }
 
@@ -316,6 +336,9 @@ UITableViewDataSource
     }
 }
 
+- (void)CWUBCell_WebImgStretchDelegate_updateLayout{
 
+    [self.m_tableView reloadData];
+}
 
 @end

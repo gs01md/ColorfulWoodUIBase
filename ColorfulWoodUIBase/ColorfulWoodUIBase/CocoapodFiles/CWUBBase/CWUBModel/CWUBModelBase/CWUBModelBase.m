@@ -38,6 +38,7 @@
 #import "CWUBCell_ImgLeft_TitleRightThree.h"
 #import "CWUBCell_TitleLeft_TitleRight.h"
 #import "CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo.h"
+#import "CWUBCell_WebImgStretch.h"
 
 @implementation CWUBModelBase
 /**
@@ -176,6 +177,9 @@
                 view = [self func_CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo:tableView];
                 break;
 
+                case CWUBCellType_WebImgStretch:
+                view = [self func_CWUBCell_WebImgStretch:tableView];
+                break;
             default:
                 break;
         }
@@ -570,27 +574,25 @@
 
 }
 
+- (CWUBCell_WebImgStretch*) func_CWUBCell_WebImgStretch:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_WebImgStretch";
+        CWUBCell_WebImgStretch *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_WebImgStretch alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_WebImgStretch alloc] initWithModel:self];
+    }
+
+}
+
+
 #pragma mark - 参数设置
-
-- (float) m_margin_topOrBottom{
-
-    if (!_m_margin_topOrBottom ||
-        _m_margin_topOrBottom <= 0.) {
-        _m_margin_topOrBottom = CWUBBaseViewConfig_Space_Side_Vertical;
-    }
-
-    return _m_margin_topOrBottom;
-}
-
-- (float) m_margin_leftOrRight{
-
-    if (!_m_margin_leftOrRight ||
-        _m_margin_leftOrRight <= 0.) {
-        _m_margin_leftOrRight = CWUBBaseViewConfig_Space_Side_Horizontal;
-    }
-
-    return _m_margin_leftOrRight;
-}
 
 - (UIColor*)m_color_backGround{
 

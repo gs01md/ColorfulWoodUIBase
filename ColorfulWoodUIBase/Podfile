@@ -4,5 +4,7 @@ target 'ColorfulWoodUIBase' do
 
 pod 'Masonry'
 pod 'ColorfulWoodCategories'
+pod 'SDWebImage'
+
 
 end

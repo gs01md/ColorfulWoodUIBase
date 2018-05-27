@@ -38,8 +38,8 @@
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
@@ -62,12 +62,6 @@
 
 - (void) initWithSubViews{
 
-    float margin_topOrBottom = CWUBBaseViewConfig_Space_Side_Vertical;
-
-    if (self.m_model.m_margin_topOrBottom > 0.) {
-        margin_topOrBottom = self.m_model.m_margin_topOrBottom;
-    }
-
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_lbl_right];
     [self addSubview:self.m_lbl_bottom_center];
@@ -83,25 +77,25 @@
 
     [_m_img_banner mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.top.equalTo(self).offset(margin_topOrBottom*1.5);
+        make.top.equalTo(self).offset(10*1.5);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         float height = 80./145.*(CWUBDefineSViewWidth-CWUBBaseViewConfig_Space_Side_Horizontal*2.);
         make.height.equalTo(@(height));
-        make.bottom.equalTo(self.m_lbl_left.mas_top).offset(-margin_topOrBottom);
+        make.bottom.equalTo(self.m_lbl_left.mas_top).offset(-10);
     }];
 
     [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_img_banner);
         make.width.equalTo(@(CWUBDefineSViewWidth/4.));
-        make.top.equalTo(self.m_img_banner.mas_bottom).offset(margin_topOrBottom);
-        make.bottom.equalTo(self.m_img_sep_hidden.mas_top).offset(-margin_topOrBottom*0.5);
+        make.top.equalTo(self.m_img_banner.mas_bottom).offset(10);
+        make.bottom.equalTo(self.m_img_sep_hidden.mas_top).offset(-10*0.5);
     }];
 
     [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_img_banner);
         make.width.equalTo(@(CWUBDefineSViewWidth/4.));
-        make.top.equalTo(self.m_img_banner.mas_bottom).offset(margin_topOrBottom);
-        make.bottom.equalTo(self.m_img_sep_hidden.mas_top).offset(-margin_topOrBottom*0.5);
+        make.top.equalTo(self.m_img_banner.mas_bottom).offset(10);
+        make.bottom.equalTo(self.m_img_sep_hidden.mas_top).offset(-10*0.5);
         make.centerY.equalTo(self.m_lbl_left);
     }];
 
@@ -116,31 +110,31 @@
         make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
         make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
         make.height.equalTo(@(0.01));
-        make.top.equalTo(self.m_lbl_right.mas_bottom).offset(margin_topOrBottom*0.5);
-        make.bottom.equalTo(self.m_lbl_bottom_left.mas_top).offset(-margin_topOrBottom*0.5);
+        make.top.equalTo(self.m_lbl_right.mas_bottom).offset(10*0.5);
+        make.bottom.equalTo(self.m_lbl_bottom_left.mas_top).offset(-10*0.5);
     }];
 
     [_m_lbl_bottom_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_img_banner);
         make.width.equalTo(@(CWUBDefineSViewWidth/4.));
-        make.top.equalTo(self.m_img_sep_hidden.mas_bottom).offset(margin_topOrBottom*0.5);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom*1.5);
+        make.top.equalTo(self.m_img_sep_hidden.mas_bottom).offset(10*0.5);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-10*1.5);
 
     }];
 
     [_m_lbl_bottom_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_lbl_right);
         make.width.equalTo(@(CWUBDefineSViewWidth/4.));
-        make.top.equalTo(self.m_img_sep_hidden.mas_bottom).offset(margin_topOrBottom*0.5);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom*1.5);
+        make.top.equalTo(self.m_img_sep_hidden.mas_bottom).offset(10*0.5);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-10*1.5);
 
     }];
 
     [_m_lbl_bottom_center mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_lbl_bottom_right.mas_left).offset(-10);
         make.left.equalTo(self.m_lbl_bottom_left.mas_right).offset(10);
-        make.top.equalTo(self.m_img_sep_hidden.mas_bottom).offset(margin_topOrBottom*0.5);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom*1.5);
+        make.top.equalTo(self.m_img_sep_hidden.mas_bottom).offset(10*0.5);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-10*1.5);
         make.centerX.equalTo(self);
 
     }];
@@ -151,7 +145,7 @@
         make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
         make.bottom.equalTo(self);
         make.height.equalTo(@(1.));
-        make.top.equalTo(self.m_lbl_bottom_left.mas_bottom).offset(margin_topOrBottom*1.5);
+        make.top.equalTo(self.m_lbl_bottom_left.mas_bottom).offset(10*1.5);
     }];
 
     [_m_view_soldOut mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -317,8 +311,8 @@
 - (void) interface_updateWithModel:(CWUBCell_CharterDiscount_Model*)model{
 
     self.m_model = model;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }

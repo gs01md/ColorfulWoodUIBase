@@ -24,8 +24,8 @@
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
@@ -48,12 +48,6 @@
 
 - (void) initWithSubViews{
 
-    float margin_topOrBottom = CWUBBaseViewConfig_Space_Side_Vertical;
-
-    if (self.m_model.m_margin_topOrBottom > 0.) {
-        margin_topOrBottom = self.m_model.m_margin_topOrBottom;
-    }
-
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_switch];
     [self addSubview:self.m_img_sep];
@@ -63,7 +57,7 @@
         make.right.equalTo(self.m_switch.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
         //make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
         
     }];
 
@@ -78,7 +72,7 @@
         make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
         make.bottom.equalTo(self);
         make.height.equalTo(@(1));
-        make.top.equalTo(self.m_lbl_left.mas_bottom).offset(margin_topOrBottom);
+        make.top.equalTo(self.m_lbl_left.mas_bottom).offset(self.m_model.m_title.m_margin_bottom);
     }];
 }
 
@@ -135,8 +129,8 @@
 
     self.m_model = model;
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }

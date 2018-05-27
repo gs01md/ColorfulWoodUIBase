@@ -25,8 +25,8 @@
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
@@ -64,7 +64,7 @@
         make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
         make.bottom.equalTo(self);
 
-        if (self.m_model.m_isHiddenBottom) {
+        if (self.m_model.m_bottomLineInfo.m_isHiddenBottom) {
             make.height.equalTo(@(0.01));
         }else{
             make.height.equalTo(@(1));
@@ -129,8 +129,8 @@
     [self.m_lblInfo interface_update:model.m_info];
     [self.m_lblShow interface_update:model.m_title];
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }

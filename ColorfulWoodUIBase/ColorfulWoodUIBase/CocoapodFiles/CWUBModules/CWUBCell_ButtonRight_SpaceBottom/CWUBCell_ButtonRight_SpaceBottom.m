@@ -23,8 +23,8 @@
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
@@ -98,8 +98,10 @@
         [self.m_btn interface_updateWithModel:self.m_model.m_btn_info];
     }
 
-    if (self.m_model.m_color_bottomLine) {
-        _m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
+    }else{
+        self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
 
     self.delegate = (id<CWUBCell_ButtonRight_SpaceBottom_Delegate>)self.m_delegate;

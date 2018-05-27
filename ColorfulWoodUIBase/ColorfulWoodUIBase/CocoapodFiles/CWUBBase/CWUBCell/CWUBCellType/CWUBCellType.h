@@ -50,6 +50,7 @@ typedef enum : NSUInteger {
     CWUBCellType_ImgLeft_TitleRightThree,
     CWUBCellType_TitleLeft_TitleRight,
     CWUBCellType_TitleLeftTwo_ImgCenter_TitleRightTwo,
+    CWUBCellType_WebImgStretch,
 
 
 } CWUBCellType;

@@ -10,13 +10,13 @@
 
 @implementation CWUBCell_ImgLeft_TitleRightThree_Model
 
-- (UIColor*) m_backColor{
+- (CWUBImageInfo*) m_back{
 
-    if (!_m_backColor) {
-        _m_backColor = [UIColor whiteColor];
+    if (!_m_back) {
+        _m_back = [CWUBImageInfo new];
     }
 
-    return _m_backColor;
+    return _m_back;
 }
 
 - (CWUBImageInfo*) m_img_left{

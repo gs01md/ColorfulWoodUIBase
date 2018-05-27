@@ -7,134 +7,272 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DE773DB880CA53182E4654D72F3F80D /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B70B9026099D74CA7A2886A153F7792D /* Info.plist */; };
-		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 040E88DAC748DBD7B1149616EC841D45 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A879AB955F1BFC0478A1A8B502902E /* MASViewAttribute.m */; };
-		21207771A00116F619E860B0F003EAF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B9577E3F0DADBEC62B3AEE922ABCB1 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2291ED9056C4C6B512FC7C896BD2461A /* UINavigationItem+ColorfulWoodMargin.h in Headers */ = {isa = PBXBuildFile; fileRef = 49C7614AB84A2EEA5A93094FEE47E046 /* UINavigationItem+ColorfulWoodMargin.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2C864897D9704EC6280E9D9CD31AC2A3 /* NSDictionary+BmobCheckResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CEA56B362DCF3747D9E290753CDD24 /* NSDictionary+BmobCheckResult.m */; };
-		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC8D9E485F01ED0D7858A6B6F38B0F2 /* MASViewConstraint.m */; };
-		3DF6A7E7B49255B2399150816A388676 /* UIViewController+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 5617D4795B184D4F91656E56558C154E /* UIViewController+ColorfulWoodAddtional.m */; };
-		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3789F9DA6946250018B5AA328EDF755 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		4655D2F6AB55F47AB8FB5926C7588793 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		4AAB75A1F52B7F2C8B85444D7F97FF37 /* NSDictionary+BmobCheckResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5C44CA26DD30940D28B321F9F62CA /* NSDictionary+BmobCheckResult.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = FB06631A69643AA7830B5FBDD417432C /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		54CEC601CA175E60DAD0B38E1F5A30FE /* UIImage+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB5858B55EEA090067927C04FCDDDCD /* UIImage+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F00A376374B5C4963EA66986CBCF494 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6040E633B300247A4E705E663BB13811 /* UIViewController+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F976EB26E989DB1E4E76F60293AF67 /* UIViewController+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BEBA865DDC89A0FBAE29A60352610E /* MASCompositeConstraint.m */; };
-		6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		6516F594FE7EF0B90ABFBC33C999E8EB /* NSString+ColorfulWoodRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C6AEDBA4570B0AE5E037825CB3F482 /* NSString+ColorfulWoodRegex.m */; };
-		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4B58023F9DBF02A9D7761EB0BE550F /* Masonry-dummy.m */; };
-		6E57B108663914AAC55410E0371FD170 /* NSString+ColorfulWoodRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 023F318CDE43480D6993CA4A82411AE7 /* NSString+ColorfulWoodRegex.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2139CCA1201148EFF5E3555BF84C651C /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6C0899E391C5FDA4843FA55B7C214B /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7B140F58CD1F2998BB75EF89191201D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		7BD0A7D71A4E5DC4831B20D3A09F74C8 /* Pods-ColorfulWoodUIBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C3C3667E946CDC69F28FC2C54FB4B /* Pods-ColorfulWoodUIBase-dummy.m */; };
-		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E94139232372593AAA56E65AFFB3B9A2 /* NSArray+MASAdditions.m */; };
-		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8335CB82162404633258C94E74809A83 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 350DA63EE4A63F7758BDD91B283FEC1E /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C98C2D1BF34D55373A4AEB3460513F2 /* MASConstraint.m */; };
-		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 881A5B71C2B7852BF852673829B97F39 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1A278556327C86AC2479FDD4209E10 /* MASLayoutConstraint.m */; };
-		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = BCCA440710B1C774AC0E784006C5F420 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0239F5A37403A0487DED0954609F3A01 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9CD23E41D6A4560C8ADB2CCB543D1CC0 /* ColorfulWoodCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 7210D04B804203EF877483BBC5E43902 /* ColorfulWoodCategories.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E37D1B5A466F93DA8985E04783E187 /* View+MASAdditions.m */; };
-		A8AF215A8E93212DCD9DF471437FC473 /* ColorfulWoodCategories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A110BDC1A8AE4CEF04A111C618872468 /* ColorfulWoodCategories-dummy.m */; };
-		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C6421071A0B5EB22D2762F93CF47B1 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C45B34AE8AE53DCE096624946B10F23F /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = B6362D456294C3B5B66E48C5689F2935 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B2A1DBC43754D2EEB537CA314DE1663B /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D1DA3FAC9CF1314CC82F7EABE0AE4D5B /* UIImage+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BCFF0836F4FC4DC31E948552E1E35 /* UIImage+ColorfulWoodAddtional.m */; };
-		D5B7AE26DB752A002826D44D8DFFD066 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A196DA368A808DD4F1B23EEF91AA151 /* UIColor+Hex.m */; };
-		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DD008E5DB9246397C166022438C5A /* ViewController+MASAdditions.m */; };
-		DEC839E3DDAF690D79CBD206A0783A27 /* UINavigationItem+ColorfulWoodMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D8A9DA5DF1112F6735D7C5D7210B1 /* UINavigationItem+ColorfulWoodMargin.m */; };
-		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1590AE4FC09287FF6B063B988CD53F /* MASConstraintMaker.m */; };
-		F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0432B2DEE404A4AFA7BC0BB2E60B2A /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A05BDC9C06C883DC6C7687ACF3CD038 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		01E70C2C552DEA7A966543777952FB8B /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F76E7464228615BACC1EDF3F38800E7 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		05EFE2ACFDB2C59160F62EF3C8F3E6F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1262FDFD8ACCE5E2DB31369BBF7BBAE0 /* Foundation.framework */; };
+		0CE33FD3ACC1B92CCEDCD748F201C087 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EC2F7670948806EFBF73B1515814A5 /* UIButton+WebCache.m */; };
+		0DE773DB880CA53182E4654D72F3F80D /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = C1FFCCAA7427EA396C12EA755D6FF8F5 /* Info.plist */; };
+		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E8303134ED19AF9B12BEC3296D314B /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		10A24AC6D6C33D808D07C7C4E9563527 /* SDWebImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0FF62A6BD01D03403AD4CA2437F9E9 /* SDWebImageCoderHelper.m */; };
+		1204DC4F89F54067173B907EA165BDA1 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 466E273263D1DABDFD9F0AFE8B7CCBF4 /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A14EACFB3B01148DA85EAA9F4CFB5248 /* MASViewAttribute.m */; };
+		1D8FDDF0A57D513E6672F93ED480BD77 /* SDWebImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7E374C8765DBE055C3862A0915B106 /* SDWebImageGIFCoder.m */; };
+		1DDA9C79B922C3B0BCD584DD2108D6CC /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = E323CEF008774D69E73BC71D3D62E260 /* UIImage+GIF.m */; };
+		21207771A00116F619E860B0F003EAF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6B74BED6680D316FE8AC068BD3B068 /* UIKit.framework */; };
+		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BE37D2CCA0A8720902839449568E11CA /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2291ED9056C4C6B512FC7C896BD2461A /* UINavigationItem+ColorfulWoodMargin.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC6BA7AE92BADE18A64CAC9B761ABAD /* UINavigationItem+ColorfulWoodMargin.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2B9764450FF815FC163B60DA1756B316 /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2439B3EAAD34F521C52FBB454C164D20 /* SDWebImageCoder.m */; };
+		2C864897D9704EC6280E9D9CD31AC2A3 /* NSDictionary+BmobCheckResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DA79B7E8C415DC06FDDB7B0BB4AD26 /* NSDictionary+BmobCheckResult.m */; };
+		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1B3ACD0DFAF5E7F10250245F07D09 /* MASViewConstraint.m */; };
+		35E8A8221AEC300AA553091FBBD46906 /* SDWebImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 05700BFFFE446CC52A64D7A7140415AD /* SDWebImageCoderHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		35EA3D18B229F8FE57F529F768275629 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF44C9B9C76887DFEA8B4B5251AB9F5 /* UIView+WebCache.m */; };
+		3A1F1DAB20A788614D43921804052E07 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 435682BAEABCD3375D993F718504AADF /* SDWebImage-dummy.m */; };
+		3A7685CEC253E15013494C5B0DA46030 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B63381F15375A569DC1020D6D251C4C /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3DF6A7E7B49255B2399150816A388676 /* UIViewController+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9243860E1D5E2208A92E8ACA52A83B /* UIViewController+ColorfulWoodAddtional.m */; };
+		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 265CD224D3EB3FCF794DEC3AFB8F204D /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		3EE6294882DB341C34B63AF2ECF3D48C /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 33310A641666C04339182328883347FD /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41B12CC697F5A88639256E6E14881A8B /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4E83BF25904F37271ACF0A4BF207B /* SDWebImageTransition.m */; };
+		43CE5E1F84A24C1567A7A789FAA76315 /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = CC3D2053A07FC68B06F41A7FCB691F8A /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4655D2F6AB55F47AB8FB5926C7588793 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1262FDFD8ACCE5E2DB31369BBF7BBAE0 /* Foundation.framework */; };
+		494EBF8B9C13FC41F4A7C40D5C44072E /* SDWebImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2348CB3B34CE325C24489758F8D066EE /* SDWebImageFrame.m */; };
+		4AAB75A1F52B7F2C8B85444D7F97FF37 /* NSDictionary+BmobCheckResult.h in Headers */ = {isa = PBXBuildFile; fileRef = F6F779CB6DFC69828AA3B3A34436CCD8 /* NSDictionary+BmobCheckResult.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4F51ECD00FBA55BF9B4700211AFFCB36 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F145DD05F9776FBC31675FA81DABBBBA /* UIImageView+WebCache.m */; };
+		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = FCE8A9327AA396C6FDE9DB62B0645163 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		54CEC601CA175E60DAD0B38E1F5A30FE /* UIImage+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = 668FC7B16CC21889633F86C6E2AEAA3E /* UIImage+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5AAC40E883DA652AB0CA63FD925054B2 /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = CA9BDCC4EF0007445A2B6CE127DDEB9C /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5E3B9EF0D927A2E5C4166873F2F63BE2 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DBE99435E5F7765FAEBB198C7F81C8 /* UIImageView+HighlightedWebCache.m */; };
+		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = AC9AC2478C5E84518EB31223A59B6D65 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FE18B883776A0D6436D924FCB90594A /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A96AACD1AC7F5390BD8B2956520CCAA3 /* SDWebImageManager.m */; };
+		5FFCB3F94BF3D47AA12ADA0D4021665B /* SDWebImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = BC070718B3C4E96B4551FD57077FDD46 /* SDWebImageGIFCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6040E633B300247A4E705E663BB13811 /* UIViewController+ColorfulWoodAddtional.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A6EF294BF94B12073F99A99130EF15 /* UIViewController+ColorfulWoodAddtional.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8047974661D5347BFA4BCEB8A3D9CB9E /* MASCompositeConstraint.m */; };
+		6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6B74BED6680D316FE8AC068BD3B068 /* UIKit.framework */; };
+		6516F594FE7EF0B90ABFBC33C999E8EB /* NSString+ColorfulWoodRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 933B797A5A4DDC319E473AC479F1519D /* NSString+ColorfulWoodRegex.m */; };
+		654472380D3AF0F1247ED40F68C3A9AF /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 44240D1C87BB446491D31B961A1DF2E2 /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		685981CC845A4A9CCC0560A1257E117A /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B86F136B743BA2F4427D9053B0862B2 /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 606D677CAEB6CDE2BF657622471FA9F0 /* Masonry-dummy.m */; };
+		6A38D65F18FE8998B037DA6C4A4B579A /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E861D9CBF88CF93BD1192C9A59CE /* SDAnimatedImageRep.m */; };
+		6AE359E8063BBC70A12676844D1B8CD0 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD0BC5526530D2108197D8B843BCCB /* SDWebImageDownloaderOperation.m */; };
+		6E57B108663914AAC55410E0371FD170 /* NSString+ColorfulWoodRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = EB5F22879DB1FFFA55515BA82E02BFF1 /* NSString+ColorfulWoodRegex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = DF35FEFF0CD5435AB51718239B29A538 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		70FFF163BED2CC76849AB2F861B5F1A1 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4B2FAD09226C73D7DD79659BE8A8D6 /* UIView+WebCacheOperation.m */; };
+		75E9553417868D7A8D9334030082390C /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = E87A0B94A0C046BD8F6DB883F600A7DB /* NSData+ImageContentType.m */; };
+		76AD56DDA1EEC29DC94F7B4779A4119E /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 690987AE01BD851B7CED3555C49D5F84 /* NSButton+WebCache.m */; };
+		7731F3191DE8A5C70F564CBBD45D841B /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 59244639C3D358E7BC27F4EC866CD21D /* UIImage+MultiFormat.m */; };
+		78129ACB1018A7D9CEE98AECAC410BA8 /* Pods-ColorfulWoodUIBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C3C3667E946CDC69F28FC2C54FB4B /* Pods-ColorfulWoodUIBase-dummy.m */; };
+		7815E4E832A09CB322BE5C6F680EBA77 /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4610D8F1F11963A273BD3CC5796833 /* SDWebImageCodersManager.m */; };
+		78FA7E46719D0E6BDA5A8240DE12C517 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 37D70E7B75923783F572FF2507A2353A /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7E5AA2673B057761B3AF9AA1B08CCA /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC0777726D35D09EAE1883B82F7761 /* NSArray+MASAdditions.m */; };
+		803789A6EBE34F55BD8377495CB23668 /* NSButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 841E3DCE82EF090F1C8700F38F833912 /* NSButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEFA1DF980C1F7C4D5D9777FB19A4E /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86A75F29996DE01887880D27F7052F2C /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D9BF6C49DBFB037EADCFF3851BD833A4 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AFF147E73DE9F304C2C8C3DDF3712A2E /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C5327412E036F9C7D19417D6AC9F49F0 /* MASConstraint.m */; };
+		8AA05B0597942A71FB00372D2C00887A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1262FDFD8ACCE5E2DB31369BBF7BBAE0 /* Foundation.framework */; };
+		9136C5C5EA92127F52EA150181267599 /* SDWebImageImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 873B6041EF796EFCF4F70848C1A56161 /* SDWebImageImageIOCoder.m */; };
+		915A4316E2BE950522D192F58626153D /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8365291BA7853FBDF1DA130747164894 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C797B6ADB3EBB080342FD8C589FC8FCE /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED5C7B7C4329A30A764D35E45E8998 /* MASLayoutConstraint.m */; };
+		955DD0841F73C66BEC4C0833275E9806 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF430B57479FCDCF51B8DE3A4519BF /* ImageIO.framework */; };
+		98A18F0C45BA51C6F81602831004167C /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 74BDF9C178C4ED1E6894C60D949555F8 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A3963479C2D262F67326DCB5C9E4624 /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F5B1F8AB1FD8E3DB513A0B3BCEA7CF /* NSImage+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A5F716EF9E3C23F9E855AAAC4623A4A /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDC2C6C96CBC4231C52F5279522193 /* SDWebImageDownloader.m */; };
+		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 926CC7343F56B1DCE899DA8014E30E19 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9AC1660FD11D164DE1FEA2665CCF5BF5 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A5F8660787FFF27D7C53D7AD96BCBE /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BA06DEAE54551D3348F5B2702ECE65EE /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9CD23E41D6A4560C8ADB2CCB543D1CC0 /* ColorfulWoodCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7C9650F5CE64ACDD6714B4486A4519 /* ColorfulWoodCategories.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E7540FD010BD444DFB66E3B2DE097C8 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C1803C83DE0A04456B5BDEA91AFD8C27 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A0DEBDB94C8B6B4ADD50CC893928DC1F /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4717488DFFCD0D866D4572637B425720 /* SDImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA309B8CFB251951E16C0EA4E5C1E0 /* View+MASAdditions.m */; };
+		A35512F7EB04F7D2FF007B2AFDF3445C /* SDWebImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DE65C63B3877724480D220881D00F384 /* SDWebImageCodersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5B6C0BABA99953EE34E61B5985F6B80 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FA82129AF8E393D05131BCBD55A02B56 /* SDImageCache.m */; };
+		A8AF215A8E93212DCD9DF471437FC473 /* ColorfulWoodCategories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A952AC2D3F0502965C2CE128E9580048 /* ColorfulWoodCategories-dummy.m */; };
+		AB2FC2D6AB253118F6817E91FB738A9C /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0027018B212A9911D8A78B25C18370 /* SDImageCacheConfig.m */; };
+		AFCC37CC501ABA964908A93F24E5567E /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = C8CA917A942BBCFB0BFF6DA1AF8CCD59 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B207E32C30A7FD79D3DC50BAD0D7F590 /* SDWebImageImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AE7C7D4C60EF4D78AFFD68C415F2960 /* SDWebImageImageIOCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B58E6E714927E42CAF21DE11E7A8CAFD /* SDWebImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = B55743514E806FC0D081CD20E1D5FEE3 /* SDWebImageFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 496CF7E5F1C9B03A5A2FC4FFD60EFA10 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF9083A769F3D7CCFCEAE28CFF507D97 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B63D17F49D84F728997C8D7307C62C /* SDWebImagePrefetcher.m */; };
+		C01EE6B9C7EA519F2CB4BB85AD09D3B2 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F5889F033D2B4FC01388B7379090397 /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C45B34AE8AE53DCE096624946B10F23F /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 39BE4541C862B298BE1A27BD9A7B0577 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C52E5FBE46371F1E39ACE0442F23FB90 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C414B1F8815C45082FF6B870C66FB2B /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C594C15D6195F42D5E30672BA772BDBB /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F25AAB3D0DA9BC40D8D0B9680DBA0C /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 629F059BA0BE614341F066F783875FBF /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C73D3AED7AADCD127C3461364C136C3C /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2681FFBAD101C982AE4C14E9360DAD /* UIImage+ForceDecode.m */; };
+		CD8291B4B42C602B7B7C9EF35DA38FDC /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 056769EF55DF8BEAB0829A3C5D290B07 /* NSImage+WebCache.m */; };
+		D1DA3FAC9CF1314CC82F7EABE0AE4D5B /* UIImage+ColorfulWoodAddtional.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEEFDEEB7DAA355BBC9C1D41CBF068 /* UIImage+ColorfulWoodAddtional.m */; };
+		D5B7AE26DB752A002826D44D8DFFD066 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1927C52198639915AF6C0D6187158FA4 /* UIColor+Hex.m */; };
+		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD649AACB2E80007C9409D5648AD18E /* ViewController+MASAdditions.m */; };
+		DEC839E3DDAF690D79CBD206A0783A27 /* UINavigationItem+ColorfulWoodMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C90041BD7E8877A3B9BF48468EE056D /* UINavigationItem+ColorfulWoodMargin.m */; };
+		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5888B2DE909EBB6D7C11EBBA56EC9489 /* MASConstraintMaker.m */; };
+		F07FC7BFDCF1D32C581B85DE0B0452E7 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A49B932E04B35D6E8165F2F48087E34 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1262FDFD8ACCE5E2DB31369BBF7BBAE0 /* Foundation.framework */; };
+		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 965B29B9A817EF38ED28DFE526272FD8 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F87482CDDD895F730D7639041B8CDC9D /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1DB975C068D1510AC5DDF6434EE7EC /* SDWebImageCompat.m */; };
+		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 287B9599865D8170709F75E603CBAB53 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		57282525A1001C6A43F94B601D407C16 /* PBXContainerItemProxy */ = {
+		08BBD2D4880840F9D55EED182D964EB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 74AC03F531B6AC6E7E0AB38107152B92;
-			remoteInfo = ColorfulWoodCategories;
+			remoteGlobalIDString = 0FCB3483826FEE7CA04965FB54C4639B;
+			remoteInfo = SDWebImage;
 		};
-		A1C97BD63FD4990D38F6BAA0F10A7493 /* PBXContainerItemProxy */ = {
+		9BA515FF084299CF84B59BF49C658FD8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9DC8D9E02903E93BD0B2FEC9D846EA20;
 			remoteInfo = Masonry;
 		};
+		F9100C7123A67071C8515D9D1B79D821 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74AC03F531B6AC6E7E0AB38107152B92;
+			remoteInfo = ColorfulWoodCategories;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0239F5A37403A0487DED0954609F3A01 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		023F318CDE43480D6993CA4A82411AE7 /* NSString+ColorfulWoodRegex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ColorfulWoodRegex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.h"; sourceTree = "<group>"; };
-		040E88DAC748DBD7B1149616EC841D45 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		07B50E0AD6BDAE3A0D36E409B3A8BA99 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		0A196DA368A808DD4F1B23EEF91AA151 /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.m"; sourceTree = "<group>"; };
+		056769EF55DF8BEAB0829A3C5D290B07 /* NSImage+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+WebCache.m"; path = "SDWebImage/NSImage+WebCache.m"; sourceTree = "<group>"; };
+		05700BFFFE446CC52A64D7A7140415AD /* SDWebImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCoderHelper.h; path = SDWebImage/SDWebImageCoderHelper.h; sourceTree = "<group>"; };
+		0B86F136B743BA2F4427D9053B0862B2 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		0BFC135A2915323AFEAB09E101D1D2E0 /* Pods-ColorfulWoodUIBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ColorfulWoodUIBase.debug.xcconfig"; sourceTree = "<group>"; };
-		0F00A376374B5C4963EA66986CBCF494 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		14C6AEDBA4570B0AE5E037825CB3F482 /* NSString+ColorfulWoodRegex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ColorfulWoodRegex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.m"; sourceTree = "<group>"; };
-		166FDCAE160B39382996FB247AB54B22 /* libPods-ColorfulWoodUIBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ColorfulWoodUIBase.a"; path = "libPods-ColorfulWoodUIBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C6C0899E391C5FDA4843FA55B7C214B /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		20990BFD3318F4C3C02E55524A190182 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2139CCA1201148EFF5E3555BF84C651C /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		350DA63EE4A63F7758BDD91B283FEC1E /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		3FB5C44CA26DD30940D28B321F9F62CA /* NSDictionary+BmobCheckResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BmobCheckResult.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSDictionary+BmobCheckResult.h"; sourceTree = "<group>"; };
-		43A879AB955F1BFC0478A1A8B502902E /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		49C7614AB84A2EEA5A93094FEE47E046 /* UINavigationItem+ColorfulWoodMargin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+ColorfulWoodMargin.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.h"; sourceTree = "<group>"; };
-		5617D4795B184D4F91656E56558C154E /* UIViewController+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
-		579BCFF0836F4FC4DC31E948552E1E35 /* UIImage+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
-		5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorfulWoodCategories.xcconfig; sourceTree = "<group>"; };
-		5CB5858B55EEA090067927C04FCDDDCD /* UIImage+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
-		6D1590AE4FC09287FF6B063B988CD53F /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		0DF44C9B9C76887DFEA8B4B5251AB9F5 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
+		1262FDFD8ACCE5E2DB31369BBF7BBAE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		15A757B0D7F1C22515C8E22C1B272D21 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1927C52198639915AF6C0D6187158FA4 /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.m"; sourceTree = "<group>"; };
+		1BE1B3ACD0DFAF5E7F10250245F07D09 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		1E1DB975C068D1510AC5DDF6434EE7EC /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
+		1EAF0324B4EB739881A29A67DDFC7D09 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDWebImage.a; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2348CB3B34CE325C24489758F8D066EE /* SDWebImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageFrame.m; path = SDWebImage/SDWebImageFrame.m; sourceTree = "<group>"; };
+		2439B3EAAD34F521C52FBB454C164D20 /* SDWebImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoder.m; path = SDWebImage/SDWebImageCoder.m; sourceTree = "<group>"; };
+		265CD224D3EB3FCF794DEC3AFB8F204D /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		26FD0BC5526530D2108197D8B843BCCB /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		287B9599865D8170709F75E603CBAB53 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		2A49B932E04B35D6E8165F2F48087E34 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		2AE7C7D4C60EF4D78AFFD68C415F2960 /* SDWebImageImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageImageIOCoder.h; path = SDWebImage/SDWebImageImageIOCoder.h; sourceTree = "<group>"; };
+		2B0FF62A6BD01D03403AD4CA2437F9E9 /* SDWebImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoderHelper.m; path = SDWebImage/SDWebImageCoderHelper.m; sourceTree = "<group>"; };
+		33310A641666C04339182328883347FD /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		37D70E7B75923783F572FF2507A2353A /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
+		39BE4541C862B298BE1A27BD9A7B0577 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.h"; sourceTree = "<group>"; };
+		3F76E7464228615BACC1EDF3F38800E7 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		3F7C9650F5CE64ACDD6714B4486A4519 /* ColorfulWoodCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ColorfulWoodCategories.h; path = ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories.h; sourceTree = "<group>"; };
+		435682BAEABCD3375D993F718504AADF /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
+		44240D1C87BB446491D31B961A1DF2E2 /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/SDAnimatedImageRep.h; sourceTree = "<group>"; };
+		466E273263D1DABDFD9F0AFE8B7CCBF4 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		4717488DFFCD0D866D4572637B425720 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
+		48EC2F7670948806EFBF73B1515814A5 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
+		496CF7E5F1C9B03A5A2FC4FFD60EFA10 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		4A2681FFBAD101C982AE4C14E9360DAD /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
+		55BC0777726D35D09EAE1883B82F7761 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		55DA79B7E8C415DC06FDDB7B0BB4AD26 /* NSDictionary+BmobCheckResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BmobCheckResult.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSDictionary+BmobCheckResult.m"; sourceTree = "<group>"; };
+		5888B2DE909EBB6D7C11EBBA56EC9489 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		59244639C3D358E7BC27F4EC866CD21D /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		5FC6BA7AE92BADE18A64CAC9B761ABAD /* UINavigationItem+ColorfulWoodMargin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+ColorfulWoodMargin.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.h"; sourceTree = "<group>"; };
+		606D677CAEB6CDE2BF657622471FA9F0 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		61B4E83BF25904F37271ACF0A4BF207B /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/SDWebImageTransition.m; sourceTree = "<group>"; };
+		629F059BA0BE614341F066F783875FBF /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		65F25AAB3D0DA9BC40D8D0B9680DBA0C /* SDWebImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCoder.h; path = SDWebImage/SDWebImageCoder.h; sourceTree = "<group>"; };
+		65FEEFDEEB7DAA355BBC9C1D41CBF068 /* UIImage+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
+		668FC7B16CC21889633F86C6E2AEAA3E /* UIImage+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
+		690987AE01BD851B7CED3555C49D5F84 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/NSButton+WebCache.m"; sourceTree = "<group>"; };
+		6B63381F15375A569DC1020D6D251C4C /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
+		6C4B2FAD09226C73D7DD79659BE8A8D6 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		6C935D2827206A3DCDD2CD2063520442 /* libColorfulWoodCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libColorfulWoodCategories.a; path = libColorfulWoodCategories.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4610D8F1F11963A273BD3CC5796833 /* SDWebImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCodersManager.m; path = SDWebImage/SDWebImageCodersManager.m; sourceTree = "<group>"; };
+		6F5889F033D2B4FC01388B7379090397 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
 		702C3C3667E946CDC69F28FC2C54FB4B /* Pods-ColorfulWoodUIBase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ColorfulWoodUIBase-dummy.m"; sourceTree = "<group>"; };
-		7210D04B804203EF877483BBC5E43902 /* ColorfulWoodCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ColorfulWoodCategories.h; path = ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories.h; sourceTree = "<group>"; };
-		7B6DD008E5DB9246397C166022438C5A /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		7C98C2D1BF34D55373A4AEB3460513F2 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		81AECF97E174892E745B90EF6BA2BDFC /* libColorfulWoodCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libColorfulWoodCategories.a; path = libColorfulWoodCategories.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8335CB82162404633258C94E74809A83 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		881A5B71C2B7852BF852673829B97F39 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		74BDF9C178C4ED1E6894C60D949555F8 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		76DA20CE1BF1D910D9CEF337226D6A7E /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
+		7C9243860E1D5E2208A92E8ACA52A83B /* UIViewController+ColorfulWoodAddtional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ColorfulWoodAddtional.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.m"; sourceTree = "<group>"; };
+		7EED5C7B7C4329A30A764D35E45E8998 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		8047974661D5347BFA4BCEB8A3D9CB9E /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		822E742258BF02AB266E68B83DD172E9 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
+		827840681C4512D9C01C2329B272AE48 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		8365291BA7853FBDF1DA130747164894 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
+		841E3DCE82EF090F1C8700F38F833912 /* NSButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSButton+WebCache.h"; path = "SDWebImage/NSButton+WebCache.h"; sourceTree = "<group>"; };
+		84B63D17F49D84F728997C8D7307C62C /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		84E0E861D9CBF88CF93BD1192C9A59CE /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/SDAnimatedImageRep.m; sourceTree = "<group>"; };
+		873B6041EF796EFCF4F70848C1A56161 /* SDWebImageImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageImageIOCoder.m; path = SDWebImage/SDWebImageImageIOCoder.m; sourceTree = "<group>"; };
+		89F5B1F8AB1FD8E3DB513A0B3BCEA7CF /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "SDWebImage/NSImage+WebCache.h"; sourceTree = "<group>"; };
 		8A97D78A2E3CF197D1249D6EA8D13C08 /* Pods-ColorfulWoodUIBase-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ColorfulWoodUIBase-frameworks.sh"; sourceTree = "<group>"; };
+		8C414B1F8815C45082FF6B870C66FB2B /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		8C90041BD7E8877A3B9BF48468EE056D /* UINavigationItem+ColorfulWoodMargin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+ColorfulWoodMargin.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.m"; sourceTree = "<group>"; };
+		8ECA309B8CFB251951E16C0EA4E5C1E0 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		90DBE99435E5F7765FAEBB198C7F81C8 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		926CC7343F56B1DCE899DA8014E30E19 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		933B797A5A4DDC319E473AC479F1519D /* NSString+ColorfulWoodRegex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+ColorfulWoodRegex.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A05BDC9C06C883DC6C7687ACF3CD038 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		A110BDC1A8AE4CEF04A111C618872468 /* ColorfulWoodCategories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorfulWoodCategories-dummy.m"; sourceTree = "<group>"; };
-		A2B9577E3F0DADBEC62B3AEE922ABCB1 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		A4BEBA865DDC89A0FBAE29A60352610E /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		A7E37D1B5A466F93DA8985E04783E187 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		94A5F8660787FFF27D7C53D7AD96BCBE /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
+		965B29B9A817EF38ED28DFE526272FD8 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		9CFDC2C6C96CBC4231C52F5279522193 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
+		9D1EBB6C63B5CF80A284F4ACFBEB3D93 /* libPods-ColorfulWoodUIBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ColorfulWoodUIBase.a"; path = "libPods-ColorfulWoodUIBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14EACFB3B01148DA85EAA9F4CFB5248 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		A952AC2D3F0502965C2CE128E9580048 /* ColorfulWoodCategories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorfulWoodCategories-dummy.m"; sourceTree = "<group>"; };
+		A96AACD1AC7F5390BD8B2956520CCAA3 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
+		A9E8303134ED19AF9B12BEC3296D314B /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		AACBAC91506D9A63B9C4C46C88B5E602 /* Pods-ColorfulWoodUIBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ColorfulWoodUIBase.release.xcconfig"; sourceTree = "<group>"; };
-		B2A1DBC43754D2EEB537CA314DE1663B /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		B6362D456294C3B5B66E48C5689F2935 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.h"; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B70B9026099D74CA7A2886A153F7792D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorfulWoodCategories/ColorfulWoodCategories/Info.plist; sourceTree = "<group>"; };
-		B7C6421071A0B5EB22D2762F93CF47B1 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		B7CEA56B362DCF3747D9E290753CDD24 /* NSDictionary+BmobCheckResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BmobCheckResult.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSDictionary+BmobCheckResult.m"; sourceTree = "<group>"; };
-		B92D8A9DA5DF1112F6735D7C5D7210B1 /* UINavigationItem+ColorfulWoodMargin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+ColorfulWoodMargin.m"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UINavigationItem+ColorfulWoodMargin.m"; sourceTree = "<group>"; };
-		BA1A278556327C86AC2479FDD4209E10 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		BCCA440710B1C774AC0E784006C5F420 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		AAD649AACB2E80007C9409D5648AD18E /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		AC9AC2478C5E84518EB31223A59B6D65 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		AD6B74BED6680D316FE8AC068BD3B068 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		AF6F484AB6150E764D7FCD105DD020E5 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		AFF147E73DE9F304C2C8C3DDF3712A2E /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		B55743514E806FC0D081CD20E1D5FEE3 /* SDWebImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageFrame.h; path = SDWebImage/SDWebImageFrame.h; sourceTree = "<group>"; };
+		BA06DEAE54551D3348F5B2702ECE65EE /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		BC070718B3C4E96B4551FD57077FDD46 /* SDWebImageGIFCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageGIFCoder.h; path = SDWebImage/SDWebImageGIFCoder.h; sourceTree = "<group>"; };
+		BE37D2CCA0A8720902839449568E11CA /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		C01837BABD7391828B6761B167A23B7B /* Pods-ColorfulWoodUIBase-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ColorfulWoodUIBase-acknowledgements.plist"; sourceTree = "<group>"; };
-		C0F976EB26E989DB1E4E76F60293AF67 /* UIViewController+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DDC8D9E485F01ED0D7858A6B6F38B0F2 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		C1803C83DE0A04456B5BDEA91AFD8C27 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		C1FFCCAA7427EA396C12EA755D6FF8F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorfulWoodCategories/ColorfulWoodCategories/Info.plist; sourceTree = "<group>"; };
+		C2A6EF294BF94B12073F99A99130EF15 /* UIViewController+ColorfulWoodAddtional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ColorfulWoodAddtional.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/UIViewController+ColorfulWoodAddtional.h"; sourceTree = "<group>"; };
+		C5327412E036F9C7D19417D6AC9F49F0 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		C797B6ADB3EBB080342FD8C589FC8FCE /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		C8CA917A942BBCFB0BFF6DA1AF8CCD59 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		CA9BDCC4EF0007445A2B6CE127DDEB9C /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/SDWebImageTransition.h; sourceTree = "<group>"; };
+		CC3D2053A07FC68B06F41A7FCB691F8A /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
+		D9BF6C49DBFB037EADCFF3851BD833A4 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
+		D9DF430B57479FCDCF51B8DE3A4519BF /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		DB7E374C8765DBE055C3862A0915B106 /* SDWebImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageGIFCoder.m; path = SDWebImage/SDWebImageGIFCoder.m; sourceTree = "<group>"; };
 		DDE4D4D2C7D54ED3C4854042C4FE6895 /* Pods-ColorfulWoodUIBase-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ColorfulWoodUIBase-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DE4B58023F9DBF02A9D7761EB0BE550F /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
-		E94139232372593AAA56E65AFFB3B9A2 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		F3789F9DA6946250018B5AA328EDF755 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		F8D11D3E0C3360C6FB069222D5ECD305 /* ColorfulWoodCategories-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorfulWoodCategories-prefix.pch"; sourceTree = "<group>"; };
-		FB06631A69643AA7830B5FBDD417432C /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		FC0432B2DEE404A4AFA7BC0BB2E60B2A /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		DE65C63B3877724480D220881D00F384 /* SDWebImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCodersManager.h; path = SDWebImage/SDWebImageCodersManager.h; sourceTree = "<group>"; };
+		DF35FEFF0CD5435AB51718239B29A538 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		DF7E5AA2673B057761B3AF9AA1B08CCA /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		E323CEF008774D69E73BC71D3D62E260 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
+		E751CFA931B3AFBEF8BFAA161DE15234 /* ColorfulWoodCategories.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorfulWoodCategories.xcconfig; sourceTree = "<group>"; };
+		E87A0B94A0C046BD8F6DB883F600A7DB /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		EAAEFA1DF980C1F7C4D5D9777FB19A4E /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		EB5F22879DB1FFFA55515BA82E02BFF1 /* NSString+ColorfulWoodRegex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+ColorfulWoodRegex.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.h"; sourceTree = "<group>"; };
+		F145DD05F9776FBC31675FA81DABBBBA /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		F1C6C802C21EA0911CF4570C2D556D26 /* ColorfulWoodCategories-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorfulWoodCategories-prefix.pch"; sourceTree = "<group>"; };
+		F6F779CB6DFC69828AA3B3A34436CCD8 /* NSDictionary+BmobCheckResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BmobCheckResult.h"; path = "ColorfulWoodCategories/ColorfulWoodCategories/NSDictionary+BmobCheckResult.h"; sourceTree = "<group>"; };
+		FA82129AF8E393D05131BCBD55A02B56 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
+		FC0027018B212A9911D8A78B25C18370 /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/SDImageCacheConfig.m; sourceTree = "<group>"; };
+		FCE8A9327AA396C6FDE9DB62B0645163 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		FD2436E5CC393217D1609665B71FC371 /* Pods-ColorfulWoodUIBase-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ColorfulWoodUIBase-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		072182DEA236BC3B025B2503394C98EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA05B0597942A71FB00372D2C00887A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DF998E917F1DB2EBE28A1C33F333CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EFE2ACFDB2C59160F62EF3C8F3E6F2 /* Foundation.framework in Frameworks */,
+				955DD0841F73C66BEC4C0833275E9806 /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FD8312A1AEB348F49A81C438DB25115 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,76 +291,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAD2454E6FC81F7DD509D3FF542FC13C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B140F58CD1F2998BB75EF89191201D9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D15C20838820C4F178F2F0D050A03EA /* Products */ = {
+		0AD64F01685C6B066EBB917CE7CA7E7F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				81AECF97E174892E745B90EF6BA2BDFC /* libColorfulWoodCategories.a */,
-				20990BFD3318F4C3C02E55524A190182 /* libMasonry.a */,
-				166FDCAE160B39382996FB247AB54B22 /* libPods-ColorfulWoodUIBase.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		21B80D1F63DE5B697E0ABA3E3ECDAFB0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */,
-				A110BDC1A8AE4CEF04A111C618872468 /* ColorfulWoodCategories-dummy.m */,
-				F8D11D3E0C3360C6FB069222D5ECD305 /* ColorfulWoodCategories-prefix.pch */,
+				E751CFA931B3AFBEF8BFAA161DE15234 /* ColorfulWoodCategories.xcconfig */,
+				A952AC2D3F0502965C2CE128E9580048 /* ColorfulWoodCategories-dummy.m */,
+				F1C6C802C21EA0911CF4570C2D556D26 /* ColorfulWoodCategories-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ColorfulWoodCategories";
 			sourceTree = "<group>";
 		};
-		283B8A27AB3C19C6FA5B3F9B6FE2727B /* ColorfulWoodCategories */ = {
+		0D31440C4D46E03985861D5FFED6C5D6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7210D04B804203EF877483BBC5E43902 /* ColorfulWoodCategories.h */,
-				B70B9026099D74CA7A2886A153F7792D /* Info.plist */,
-				3FB5C44CA26DD30940D28B321F9F62CA /* NSDictionary+BmobCheckResult.h */,
-				B7CEA56B362DCF3747D9E290753CDD24 /* NSDictionary+BmobCheckResult.m */,
-				023F318CDE43480D6993CA4A82411AE7 /* NSString+ColorfulWoodRegex.h */,
-				14C6AEDBA4570B0AE5E037825CB3F482 /* NSString+ColorfulWoodRegex.m */,
-				B6362D456294C3B5B66E48C5689F2935 /* UIColor+Hex.h */,
-				0A196DA368A808DD4F1B23EEF91AA151 /* UIColor+Hex.m */,
-				5CB5858B55EEA090067927C04FCDDDCD /* UIImage+ColorfulWoodAddtional.h */,
-				579BCFF0836F4FC4DC31E948552E1E35 /* UIImage+ColorfulWoodAddtional.m */,
-				49C7614AB84A2EEA5A93094FEE47E046 /* UINavigationItem+ColorfulWoodMargin.h */,
-				B92D8A9DA5DF1112F6735D7C5D7210B1 /* UINavigationItem+ColorfulWoodMargin.m */,
-				C0F976EB26E989DB1E4E76F60293AF67 /* UIViewController+ColorfulWoodAddtional.h */,
-				5617D4795B184D4F91656E56558C154E /* UIViewController+ColorfulWoodAddtional.m */,
-				21B80D1F63DE5B697E0ABA3E3ECDAFB0 /* Support Files */,
-			);
-			name = ColorfulWoodCategories;
-			path = ColorfulWoodCategories;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+				1262FDFD8ACCE5E2DB31369BBF7BBAE0 /* Foundation.framework */,
+				D9DF430B57479FCDCF51B8DE3A4519BF /* ImageIO.framework */,
+				AD6B74BED6680D316FE8AC068BD3B068 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D31440C4D46E03985861D5FFED6C5D6 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		461CB139DD6E14EF5D85D4E7F8EF1206 /* Pods-ColorfulWoodUIBase */ = {
@@ -240,6 +338,134 @@
 			path = "Target Support Files/Pods-ColorfulWoodUIBase";
 			sourceTree = "<group>";
 		};
+		4B698DE41E40F8EBF134D5D8D9F976A5 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				965B29B9A817EF38ED28DFE526272FD8 /* MASCompositeConstraint.h */,
+				8047974661D5347BFA4BCEB8A3D9CB9E /* MASCompositeConstraint.m */,
+				DF35FEFF0CD5435AB51718239B29A538 /* MASConstraint.h */,
+				C5327412E036F9C7D19417D6AC9F49F0 /* MASConstraint.m */,
+				EAAEFA1DF980C1F7C4D5D9777FB19A4E /* MASConstraint+Private.h */,
+				496CF7E5F1C9B03A5A2FC4FFD60EFA10 /* MASConstraintMaker.h */,
+				5888B2DE909EBB6D7C11EBBA56EC9489 /* MASConstraintMaker.m */,
+				926CC7343F56B1DCE899DA8014E30E19 /* MASLayoutConstraint.h */,
+				7EED5C7B7C4329A30A764D35E45E8998 /* MASLayoutConstraint.m */,
+				FCE8A9327AA396C6FDE9DB62B0645163 /* Masonry.h */,
+				DF7E5AA2673B057761B3AF9AA1B08CCA /* MASUtilities.h */,
+				A9E8303134ED19AF9B12BEC3296D314B /* MASViewAttribute.h */,
+				A14EACFB3B01148DA85EAA9F4CFB5248 /* MASViewAttribute.m */,
+				AC9AC2478C5E84518EB31223A59B6D65 /* MASViewConstraint.h */,
+				1BE1B3ACD0DFAF5E7F10250245F07D09 /* MASViewConstraint.m */,
+				BA06DEAE54551D3348F5B2702ECE65EE /* NSArray+MASAdditions.h */,
+				55BC0777726D35D09EAE1883B82F7761 /* NSArray+MASAdditions.m */,
+				287B9599865D8170709F75E603CBAB53 /* NSArray+MASShorthandAdditions.h */,
+				BE37D2CCA0A8720902839449568E11CA /* NSLayoutConstraint+MASDebugAdditions.h */,
+				265CD224D3EB3FCF794DEC3AFB8F204D /* NSLayoutConstraint+MASDebugAdditions.m */,
+				629F059BA0BE614341F066F783875FBF /* View+MASAdditions.h */,
+				8ECA309B8CFB251951E16C0EA4E5C1E0 /* View+MASAdditions.m */,
+				C797B6ADB3EBB080342FD8C589FC8FCE /* View+MASShorthandAdditions.h */,
+				AFF147E73DE9F304C2C8C3DDF3712A2E /* ViewController+MASAdditions.h */,
+				AAD649AACB2E80007C9409D5648AD18E /* ViewController+MASAdditions.m */,
+				E5A305DFEEF8E0D8370183446201D8E5 /* Support Files */,
+			);
+			name = Masonry;
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		53B39D982FAA1747043883CCBA000196 /* ColorfulWoodCategories */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C9650F5CE64ACDD6714B4486A4519 /* ColorfulWoodCategories.h */,
+				C1FFCCAA7427EA396C12EA755D6FF8F5 /* Info.plist */,
+				F6F779CB6DFC69828AA3B3A34436CCD8 /* NSDictionary+BmobCheckResult.h */,
+				55DA79B7E8C415DC06FDDB7B0BB4AD26 /* NSDictionary+BmobCheckResult.m */,
+				EB5F22879DB1FFFA55515BA82E02BFF1 /* NSString+ColorfulWoodRegex.h */,
+				933B797A5A4DDC319E473AC479F1519D /* NSString+ColorfulWoodRegex.m */,
+				39BE4541C862B298BE1A27BD9A7B0577 /* UIColor+Hex.h */,
+				1927C52198639915AF6C0D6187158FA4 /* UIColor+Hex.m */,
+				668FC7B16CC21889633F86C6E2AEAA3E /* UIImage+ColorfulWoodAddtional.h */,
+				65FEEFDEEB7DAA355BBC9C1D41CBF068 /* UIImage+ColorfulWoodAddtional.m */,
+				5FC6BA7AE92BADE18A64CAC9B761ABAD /* UINavigationItem+ColorfulWoodMargin.h */,
+				8C90041BD7E8877A3B9BF48468EE056D /* UINavigationItem+ColorfulWoodMargin.m */,
+				C2A6EF294BF94B12073F99A99130EF15 /* UIViewController+ColorfulWoodAddtional.h */,
+				7C9243860E1D5E2208A92E8ACA52A83B /* UIViewController+ColorfulWoodAddtional.m */,
+				0AD64F01685C6B066EBB917CE7CA7E7F /* Support Files */,
+			);
+			name = ColorfulWoodCategories;
+			path = ColorfulWoodCategories;
+			sourceTree = "<group>";
+		};
+		5532B88AC86D917E13945FFADF909371 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				76DA20CE1BF1D910D9CEF337226D6A7E /* SDWebImage.xcconfig */,
+				435682BAEABCD3375D993F718504AADF /* SDWebImage-dummy.m */,
+				822E742258BF02AB266E68B83DD172E9 /* SDWebImage-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDWebImage";
+			sourceTree = "<group>";
+		};
+		685863FD2539DA66712D55199D3743F1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				841E3DCE82EF090F1C8700F38F833912 /* NSButton+WebCache.h */,
+				690987AE01BD851B7CED3555C49D5F84 /* NSButton+WebCache.m */,
+				466E273263D1DABDFD9F0AFE8B7CCBF4 /* NSData+ImageContentType.h */,
+				E87A0B94A0C046BD8F6DB883F600A7DB /* NSData+ImageContentType.m */,
+				89F5B1F8AB1FD8E3DB513A0B3BCEA7CF /* NSImage+WebCache.h */,
+				056769EF55DF8BEAB0829A3C5D290B07 /* NSImage+WebCache.m */,
+				44240D1C87BB446491D31B961A1DF2E2 /* SDAnimatedImageRep.h */,
+				84E0E861D9CBF88CF93BD1192C9A59CE /* SDAnimatedImageRep.m */,
+				4717488DFFCD0D866D4572637B425720 /* SDImageCache.h */,
+				FA82129AF8E393D05131BCBD55A02B56 /* SDImageCache.m */,
+				0B86F136B743BA2F4427D9053B0862B2 /* SDImageCacheConfig.h */,
+				FC0027018B212A9911D8A78B25C18370 /* SDImageCacheConfig.m */,
+				65F25AAB3D0DA9BC40D8D0B9680DBA0C /* SDWebImageCoder.h */,
+				2439B3EAAD34F521C52FBB454C164D20 /* SDWebImageCoder.m */,
+				05700BFFFE446CC52A64D7A7140415AD /* SDWebImageCoderHelper.h */,
+				2B0FF62A6BD01D03403AD4CA2437F9E9 /* SDWebImageCoderHelper.m */,
+				DE65C63B3877724480D220881D00F384 /* SDWebImageCodersManager.h */,
+				6D4610D8F1F11963A273BD3CC5796833 /* SDWebImageCodersManager.m */,
+				6F5889F033D2B4FC01388B7379090397 /* SDWebImageCompat.h */,
+				1E1DB975C068D1510AC5DDF6434EE7EC /* SDWebImageCompat.m */,
+				6B63381F15375A569DC1020D6D251C4C /* SDWebImageDownloader.h */,
+				9CFDC2C6C96CBC4231C52F5279522193 /* SDWebImageDownloader.m */,
+				74BDF9C178C4ED1E6894C60D949555F8 /* SDWebImageDownloaderOperation.h */,
+				26FD0BC5526530D2108197D8B843BCCB /* SDWebImageDownloaderOperation.m */,
+				B55743514E806FC0D081CD20E1D5FEE3 /* SDWebImageFrame.h */,
+				2348CB3B34CE325C24489758F8D066EE /* SDWebImageFrame.m */,
+				BC070718B3C4E96B4551FD57077FDD46 /* SDWebImageGIFCoder.h */,
+				DB7E374C8765DBE055C3862A0915B106 /* SDWebImageGIFCoder.m */,
+				2AE7C7D4C60EF4D78AFFD68C415F2960 /* SDWebImageImageIOCoder.h */,
+				873B6041EF796EFCF4F70848C1A56161 /* SDWebImageImageIOCoder.m */,
+				8C414B1F8815C45082FF6B870C66FB2B /* SDWebImageManager.h */,
+				A96AACD1AC7F5390BD8B2956520CCAA3 /* SDWebImageManager.m */,
+				94A5F8660787FFF27D7C53D7AD96BCBE /* SDWebImageOperation.h */,
+				2A49B932E04B35D6E8165F2F48087E34 /* SDWebImagePrefetcher.h */,
+				84B63D17F49D84F728997C8D7307C62C /* SDWebImagePrefetcher.m */,
+				CA9BDCC4EF0007445A2B6CE127DDEB9C /* SDWebImageTransition.h */,
+				61B4E83BF25904F37271ACF0A4BF207B /* SDWebImageTransition.m */,
+				8365291BA7853FBDF1DA130747164894 /* UIButton+WebCache.h */,
+				48EC2F7670948806EFBF73B1515814A5 /* UIButton+WebCache.m */,
+				CC3D2053A07FC68B06F41A7FCB691F8A /* UIImage+ForceDecode.h */,
+				4A2681FFBAD101C982AE4C14E9360DAD /* UIImage+ForceDecode.m */,
+				37D70E7B75923783F572FF2507A2353A /* UIImage+GIF.h */,
+				E323CEF008774D69E73BC71D3D62E260 /* UIImage+GIF.m */,
+				C8CA917A942BBCFB0BFF6DA1AF8CCD59 /* UIImage+MultiFormat.h */,
+				59244639C3D358E7BC27F4EC866CD21D /* UIImage+MultiFormat.m */,
+				33310A641666C04339182328883347FD /* UIImageView+HighlightedWebCache.h */,
+				90DBE99435E5F7765FAEBB198C7F81C8 /* UIImageView+HighlightedWebCache.m */,
+				3F76E7464228615BACC1EDF3F38800E7 /* UIImageView+WebCache.h */,
+				F145DD05F9776FBC31675FA81DABBBBA /* UIImageView+WebCache.m */,
+				D9BF6C49DBFB037EADCFF3851BD833A4 /* UIView+WebCache.h */,
+				0DF44C9B9C76887DFEA8B4B5251AB9F5 /* UIView+WebCache.m */,
+				C1803C83DE0A04456B5BDEA91AFD8C27 /* UIView+WebCacheOperation.h */,
+				6C4B2FAD09226C73D7DD79659BE8A8D6 /* UIView+WebCacheOperation.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		69A78066E64E14858B2727710AA337B1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,65 +478,53 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				D8EFC9C589F0EBD83ABCE0EB47C5E5DB /* Pods */,
-				1D15C20838820C4F178F2F0D050A03EA /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				FD44A6AC80DC74ED25214F921D142C77 /* Pods */,
+				C57385F31A3215E04A742DCB3F15B5F2 /* Products */,
 				69A78066E64E14858B2727710AA337B1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		820DC8BC22053C4D553BF3B241E8851A /* Masonry */ = {
+		85ADE390366A06F84F4F80EFD045747C /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
-				FC0432B2DEE404A4AFA7BC0BB2E60B2A /* MASCompositeConstraint.h */,
-				A4BEBA865DDC89A0FBAE29A60352610E /* MASCompositeConstraint.m */,
-				2139CCA1201148EFF5E3555BF84C651C /* MASConstraint.h */,
-				7C98C2D1BF34D55373A4AEB3460513F2 /* MASConstraint.m */,
-				8335CB82162404633258C94E74809A83 /* MASConstraint+Private.h */,
-				B7C6421071A0B5EB22D2762F93CF47B1 /* MASConstraintMaker.h */,
-				6D1590AE4FC09287FF6B063B988CD53F /* MASConstraintMaker.m */,
-				BCCA440710B1C774AC0E784006C5F420 /* MASLayoutConstraint.h */,
-				BA1A278556327C86AC2479FDD4209E10 /* MASLayoutConstraint.m */,
-				FB06631A69643AA7830B5FBDD417432C /* Masonry.h */,
-				1C6C0899E391C5FDA4843FA55B7C214B /* MASUtilities.h */,
-				040E88DAC748DBD7B1149616EC841D45 /* MASViewAttribute.h */,
-				43A879AB955F1BFC0478A1A8B502902E /* MASViewAttribute.m */,
-				0F00A376374B5C4963EA66986CBCF494 /* MASViewConstraint.h */,
-				DDC8D9E485F01ED0D7858A6B6F38B0F2 /* MASViewConstraint.m */,
-				0239F5A37403A0487DED0954609F3A01 /* NSArray+MASAdditions.h */,
-				E94139232372593AAA56E65AFFB3B9A2 /* NSArray+MASAdditions.m */,
-				9A05BDC9C06C883DC6C7687ACF3CD038 /* NSArray+MASShorthandAdditions.h */,
-				A2B9577E3F0DADBEC62B3AEE922ABCB1 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				F3789F9DA6946250018B5AA328EDF755 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				B2A1DBC43754D2EEB537CA314DE1663B /* View+MASAdditions.h */,
-				A7E37D1B5A466F93DA8985E04783E187 /* View+MASAdditions.m */,
-				881A5B71C2B7852BF852673829B97F39 /* View+MASShorthandAdditions.h */,
-				350DA63EE4A63F7758BDD91B283FEC1E /* ViewController+MASAdditions.h */,
-				7B6DD008E5DB9246397C166022438C5A /* ViewController+MASAdditions.m */,
-				E57ADE045544BC66DF0A252A2ADDA3A1 /* Support Files */,
+				685863FD2539DA66712D55199D3743F1 /* Core */,
+				5532B88AC86D917E13945FFADF909371 /* Support Files */,
 			);
-			name = Masonry;
-			path = Masonry;
+			name = SDWebImage;
+			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		D8EFC9C589F0EBD83ABCE0EB47C5E5DB /* Pods */ = {
+		C57385F31A3215E04A742DCB3F15B5F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				283B8A27AB3C19C6FA5B3F9B6FE2727B /* ColorfulWoodCategories */,
-				820DC8BC22053C4D553BF3B241E8851A /* Masonry */,
+				6C935D2827206A3DCDD2CD2063520442 /* libColorfulWoodCategories.a */,
+				15A757B0D7F1C22515C8E22C1B272D21 /* libMasonry.a */,
+				9D1EBB6C63B5CF80A284F4ACFBEB3D93 /* libPods-ColorfulWoodUIBase.a */,
+				1EAF0324B4EB739881A29A67DDFC7D09 /* libSDWebImage.a */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		E57ADE045544BC66DF0A252A2ADDA3A1 /* Support Files */ = {
+		E5A305DFEEF8E0D8370183446201D8E5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */,
-				DE4B58023F9DBF02A9D7761EB0BE550F /* Masonry-dummy.m */,
-				07B50E0AD6BDAE3A0D36E409B3A8BA99 /* Masonry-prefix.pch */,
+				AF6F484AB6150E764D7FCD105DD020E5 /* Masonry.xcconfig */,
+				606D677CAEB6CDE2BF657622471FA9F0 /* Masonry-dummy.m */,
+				827840681C4512D9C01C2329B272AE48 /* Masonry-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		FD44A6AC80DC74ED25214F921D142C77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53B39D982FAA1747043883CCBA000196 /* ColorfulWoodCategories */,
+				4B698DE41E40F8EBF134D5D8D9F976A5 /* Masonry */,
+				85ADE390366A06F84F4F80EFD045747C /* SDWebImage */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,25 +566,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFCAB2FBE1C5D7CC51F4949C0FBBE894 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803789A6EBE34F55BD8377495CB23668 /* NSButton+WebCache.h in Headers */,
+				1204DC4F89F54067173B907EA165BDA1 /* NSData+ImageContentType.h in Headers */,
+				9A3963479C2D262F67326DCB5C9E4624 /* NSImage+WebCache.h in Headers */,
+				654472380D3AF0F1247ED40F68C3A9AF /* SDAnimatedImageRep.h in Headers */,
+				A0DEBDB94C8B6B4ADD50CC893928DC1F /* SDImageCache.h in Headers */,
+				685981CC845A4A9CCC0560A1257E117A /* SDImageCacheConfig.h in Headers */,
+				C594C15D6195F42D5E30672BA772BDBB /* SDWebImageCoder.h in Headers */,
+				35E8A8221AEC300AA553091FBBD46906 /* SDWebImageCoderHelper.h in Headers */,
+				A35512F7EB04F7D2FF007B2AFDF3445C /* SDWebImageCodersManager.h in Headers */,
+				C01EE6B9C7EA519F2CB4BB85AD09D3B2 /* SDWebImageCompat.h in Headers */,
+				3A7685CEC253E15013494C5B0DA46030 /* SDWebImageDownloader.h in Headers */,
+				98A18F0C45BA51C6F81602831004167C /* SDWebImageDownloaderOperation.h in Headers */,
+				B58E6E714927E42CAF21DE11E7A8CAFD /* SDWebImageFrame.h in Headers */,
+				5FFCB3F94BF3D47AA12ADA0D4021665B /* SDWebImageGIFCoder.h in Headers */,
+				B207E32C30A7FD79D3DC50BAD0D7F590 /* SDWebImageImageIOCoder.h in Headers */,
+				C52E5FBE46371F1E39ACE0442F23FB90 /* SDWebImageManager.h in Headers */,
+				9AC1660FD11D164DE1FEA2665CCF5BF5 /* SDWebImageOperation.h in Headers */,
+				F07FC7BFDCF1D32C581B85DE0B0452E7 /* SDWebImagePrefetcher.h in Headers */,
+				5AAC40E883DA652AB0CA63FD925054B2 /* SDWebImageTransition.h in Headers */,
+				915A4316E2BE950522D192F58626153D /* UIButton+WebCache.h in Headers */,
+				43CE5E1F84A24C1567A7A789FAA76315 /* UIImage+ForceDecode.h in Headers */,
+				78FA7E46719D0E6BDA5A8240DE12C517 /* UIImage+GIF.h in Headers */,
+				AFCC37CC501ABA964908A93F24E5567E /* UIImage+MultiFormat.h in Headers */,
+				3EE6294882DB341C34B63AF2ECF3D48C /* UIImageView+HighlightedWebCache.h in Headers */,
+				01E70C2C552DEA7A966543777952FB8B /* UIImageView+WebCache.h in Headers */,
+				86A75F29996DE01887880D27F7052F2C /* UIView+WebCache.h in Headers */,
+				9E7540FD010BD444DFB66E3B2DE097C8 /* UIView+WebCacheOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		624C62F3135EDE8918F17A7CEE29544C /* Pods-ColorfulWoodUIBase */ = {
+		0FCB3483826FEE7CA04965FB54C4639B /* SDWebImage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CABCAE06CABDDB3F5458D52315B8842 /* Build configuration list for PBXNativeTarget "Pods-ColorfulWoodUIBase" */;
+			buildConfigurationList = D0A65407953BE9F48374133C5E32124C /* Build configuration list for PBXNativeTarget "SDWebImage" */;
 			buildPhases = (
-				BD0ABCD754ECB825D781A98E5468B087 /* Sources */,
-				EAD2454E6FC81F7DD509D3FF542FC13C /* Frameworks */,
+				C31D0642B8999C78EEBF30695AA2487F /* Sources */,
+				53DF998E917F1DB2EBE28A1C33F333CE /* Frameworks */,
+				FFCAB2FBE1C5D7CC51F4949C0FBBE894 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4EB70063586C177683CC3F8FB5693087 /* PBXTargetDependency */,
-				EF83764920BB62CFF4BCBEDCA194ECBF /* PBXTargetDependency */,
+			);
+			name = SDWebImage;
+			productName = SDWebImage;
+			productReference = 1EAF0324B4EB739881A29A67DDFC7D09 /* libSDWebImage.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		50FD8D87F73C932AAA3E69903B11DEAF /* Pods-ColorfulWoodUIBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9863FD4B0A0E59298C0BF4453560F76A /* Build configuration list for PBXNativeTarget "Pods-ColorfulWoodUIBase" */;
+			buildPhases = (
+				4ED14111D883AA7626B9B7693512E715 /* Sources */,
+				072182DEA236BC3B025B2503394C98EF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2857B1CA73B0670452D5963C6346988 /* PBXTargetDependency */,
+				D1431338AE7943632A1D0145D0EC5C80 /* PBXTargetDependency */,
+				2344A7868B9859747CB3B12995729336 /* PBXTargetDependency */,
 			);
 			name = "Pods-ColorfulWoodUIBase";
 			productName = "Pods-ColorfulWoodUIBase";
-			productReference = 166FDCAE160B39382996FB247AB54B22 /* libPods-ColorfulWoodUIBase.a */;
+			productReference = 9D1EBB6C63B5CF80A284F4ACFBEB3D93 /* libPods-ColorfulWoodUIBase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		74AC03F531B6AC6E7E0AB38107152B92 /* ColorfulWoodCategories */ = {
@@ -387,7 +653,7 @@
 			);
 			name = ColorfulWoodCategories;
 			productName = ColorfulWoodCategories;
-			productReference = 81AECF97E174892E745B90EF6BA2BDFC /* libColorfulWoodCategories.a */;
+			productReference = 6C935D2827206A3DCDD2CD2063520442 /* libColorfulWoodCategories.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */ = {
@@ -404,7 +670,7 @@
 			);
 			name = Masonry;
 			productName = Masonry;
-			productReference = 20990BFD3318F4C3C02E55524A190182 /* libMasonry.a */;
+			productReference = 15A757B0D7F1C22515C8E22C1B272D21 /* libMasonry.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -424,23 +690,58 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 1D15C20838820C4F178F2F0D050A03EA /* Products */;
+			productRefGroup = C57385F31A3215E04A742DCB3F15B5F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				74AC03F531B6AC6E7E0AB38107152B92 /* ColorfulWoodCategories */,
 				9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */,
-				624C62F3135EDE8918F17A7CEE29544C /* Pods-ColorfulWoodUIBase */,
+				50FD8D87F73C932AAA3E69903B11DEAF /* Pods-ColorfulWoodUIBase */,
+				0FCB3483826FEE7CA04965FB54C4639B /* SDWebImage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BD0ABCD754ECB825D781A98E5468B087 /* Sources */ = {
+		4ED14111D883AA7626B9B7693512E715 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD0A7D71A4E5DC4831B20D3A09F74C8 /* Pods-ColorfulWoodUIBase-dummy.m in Sources */,
+				78129ACB1018A7D9CEE98AECAC410BA8 /* Pods-ColorfulWoodUIBase-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C31D0642B8999C78EEBF30695AA2487F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76AD56DDA1EEC29DC94F7B4779A4119E /* NSButton+WebCache.m in Sources */,
+				75E9553417868D7A8D9334030082390C /* NSData+ImageContentType.m in Sources */,
+				CD8291B4B42C602B7B7C9EF35DA38FDC /* NSImage+WebCache.m in Sources */,
+				6A38D65F18FE8998B037DA6C4A4B579A /* SDAnimatedImageRep.m in Sources */,
+				A5B6C0BABA99953EE34E61B5985F6B80 /* SDImageCache.m in Sources */,
+				AB2FC2D6AB253118F6817E91FB738A9C /* SDImageCacheConfig.m in Sources */,
+				3A1F1DAB20A788614D43921804052E07 /* SDWebImage-dummy.m in Sources */,
+				2B9764450FF815FC163B60DA1756B316 /* SDWebImageCoder.m in Sources */,
+				10A24AC6D6C33D808D07C7C4E9563527 /* SDWebImageCoderHelper.m in Sources */,
+				7815E4E832A09CB322BE5C6F680EBA77 /* SDWebImageCodersManager.m in Sources */,
+				F87482CDDD895F730D7639041B8CDC9D /* SDWebImageCompat.m in Sources */,
+				9A5F716EF9E3C23F9E855AAAC4623A4A /* SDWebImageDownloader.m in Sources */,
+				6AE359E8063BBC70A12676844D1B8CD0 /* SDWebImageDownloaderOperation.m in Sources */,
+				494EBF8B9C13FC41F4A7C40D5C44072E /* SDWebImageFrame.m in Sources */,
+				1D8FDDF0A57D513E6672F93ED480BD77 /* SDWebImageGIFCoder.m in Sources */,
+				9136C5C5EA92127F52EA150181267599 /* SDWebImageImageIOCoder.m in Sources */,
+				5FE18B883776A0D6436D924FCB90594A /* SDWebImageManager.m in Sources */,
+				BF9083A769F3D7CCFCEAE28CFF507D97 /* SDWebImagePrefetcher.m in Sources */,
+				41B12CC697F5A88639256E6E14881A8B /* SDWebImageTransition.m in Sources */,
+				0CE33FD3ACC1B92CCEDCD748F201C087 /* UIButton+WebCache.m in Sources */,
+				C73D3AED7AADCD127C3461364C136C3C /* UIImage+ForceDecode.m in Sources */,
+				1DDA9C79B922C3B0BCD584DD2108D6CC /* UIImage+GIF.m in Sources */,
+				7731F3191DE8A5C70F564CBBD45D841B /* UIImage+MultiFormat.m in Sources */,
+				5E3B9EF0D927A2E5C4166873F2F63BE2 /* UIImageView+HighlightedWebCache.m in Sources */,
+				4F51ECD00FBA55BF9B4700211AFFCB36 /* UIImageView+WebCache.m in Sources */,
+				35EA3D18B229F8FE57F529F768275629 /* UIView+WebCache.m in Sources */,
+				70FFF163BED2CC76849AB2F861B5F1A1 /* UIView+WebCacheOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,24 +781,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4EB70063586C177683CC3F8FB5693087 /* PBXTargetDependency */ = {
+		2344A7868B9859747CB3B12995729336 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = ColorfulWoodCategories;
-			target = 74AC03F531B6AC6E7E0AB38107152B92 /* ColorfulWoodCategories */;
-			targetProxy = 57282525A1001C6A43F94B601D407C16 /* PBXContainerItemProxy */;
+			name = SDWebImage;
+			target = 0FCB3483826FEE7CA04965FB54C4639B /* SDWebImage */;
+			targetProxy = 08BBD2D4880840F9D55EED182D964EB1 /* PBXContainerItemProxy */;
 		};
-		EF83764920BB62CFF4BCBEDCA194ECBF /* PBXTargetDependency */ = {
+		D1431338AE7943632A1D0145D0EC5C80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */;
-			targetProxy = A1C97BD63FD4990D38F6BAA0F10A7493 /* PBXContainerItemProxy */;
+			targetProxy = 9BA515FF084299CF84B59BF49C658FD8 /* PBXContainerItemProxy */;
+		};
+		E2857B1CA73B0670452D5963C6346988 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorfulWoodCategories;
+			target = 74AC03F531B6AC6E7E0AB38107152B92 /* ColorfulWoodCategories */;
+			targetProxy = F9100C7123A67071C8515D9D1B79D821 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0D739DEB7C2E4933EDF490364116CBE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */;
+			baseConfigurationReference = E751CFA931B3AFBEF8BFAA161DE15234 /* ColorfulWoodCategories.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -518,9 +825,9 @@
 			};
 			name = Debug;
 		};
-		53429C2BEB6F11CFAFEC213B1EF164FA /* Debug */ = {
+		4CBC2EA0D24263B8198E28801A7E119C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BFC135A2915323AFEAB09E101D1D2E0 /* Pods-ColorfulWoodUIBase.debug.xcconfig */;
+			baseConfigurationReference = AACBAC91506D9A63B9C4C46C88B5E602 /* Pods-ColorfulWoodUIBase.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -536,12 +843,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		6033A2127E806DD5C86A515742F7445E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */;
+			baseConfigurationReference = AF6F484AB6150E764D7FCD105DD020E5 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -622,7 +930,7 @@
 		};
 		6681B1A324732F8264BB932595DFA69B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1A3B45AAB0595576B000835F5A9B9FE /* Masonry.xcconfig */;
+			baseConfigurationReference = AF6F484AB6150E764D7FCD105DD020E5 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -643,6 +951,29 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		6EDADCB48A6F69DB515F13C9A5FFD7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76DA20CE1BF1D910D9CEF337226D6A7E /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		7E303F336AF1EDCE08CCD98DE0D3DD37 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -707,9 +1038,30 @@
 			};
 			name = Debug;
 		};
+		93D72E9886B94A0A720AD068BE828655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BFC135A2915323AFEAB09E101D1D2E0 /* Pods-ColorfulWoodUIBase.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		95FE0E9540E78E7F31540ABA56BB469A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A19DEFFD42F73D434D074269D024A12 /* ColorfulWoodCategories.xcconfig */;
+			baseConfigurationReference = E751CFA931B3AFBEF8BFAA161DE15234 /* ColorfulWoodCategories.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -731,23 +1083,25 @@
 			};
 			name = Release;
 		};
-		C8AFA546E47C71C6F98B0F8DD8921A40 /* Release */ = {
+		C1D44F10DAB5002FEA86377F8259FA5B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AACBAC91506D9A63B9C4C46C88B5E602 /* Pods-ColorfulWoodUIBase.release.xcconfig */;
+			baseConfigurationReference = 76DA20CE1BF1D910D9CEF337226D6A7E /* SDWebImage.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -783,11 +1137,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CABCAE06CABDDB3F5458D52315B8842 /* Build configuration list for PBXNativeTarget "Pods-ColorfulWoodUIBase" */ = {
+		9863FD4B0A0E59298C0BF4453560F76A /* Build configuration list for PBXNativeTarget "Pods-ColorfulWoodUIBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53429C2BEB6F11CFAFEC213B1EF164FA /* Debug */,
-				C8AFA546E47C71C6F98B0F8DD8921A40 /* Release */,
+				93D72E9886B94A0A720AD068BE828655 /* Debug */,
+				4CBC2EA0D24263B8198E28801A7E119C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0A65407953BE9F48374133C5E32124C /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EDADCB48A6F69DB515F13C9A5FFD7E6 /* Debug */,
+				C1D44F10DAB5002FEA86377F8259FA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

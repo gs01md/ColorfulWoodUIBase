@@ -11,6 +11,18 @@
 @implementation CWUBCellBase
 
 /**
+ * 返回cell
+ */
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBModelBase*)model{
+
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+
+    }
+
+    return self;
+}
+
+/**
  * 获取该列的操作标识 - 用于点击事件
  */
 - (NSString*) interface_get_event_opt_code{

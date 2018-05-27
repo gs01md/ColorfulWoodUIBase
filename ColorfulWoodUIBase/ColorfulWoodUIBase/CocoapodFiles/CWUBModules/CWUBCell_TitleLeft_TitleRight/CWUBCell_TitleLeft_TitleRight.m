@@ -40,8 +40,8 @@
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.m_model = model;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
@@ -57,7 +57,7 @@
     [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_left.m_margin_bottom);
-        make.left.equalTo(self).offset(self.m_model.m_margin_leftOrRight);
+        make.left.equalTo(self).offset(self.m_model.m_title_left.m_margin_left);
         make.right.equalTo(self.mas_centerX).offset(-self.m_model.m_title_left.m_margin_right);
     }];
 
@@ -66,7 +66,7 @@
         make.top.equalTo(self).offset(self.m_model.m_title_right.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_right.m_margin_bottom);
         make.left.equalTo(self.mas_centerX).offset(self.m_model.m_title_right.m_margin_left);
-        make.right.equalTo(self).offset(-self.m_model.m_margin_leftOrRight);
+        make.right.equalTo(self).offset(-self.m_model.m_title_right.m_margin_right);
     }];
 
     [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -127,8 +127,8 @@
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_right interface_update:model.m_title_right];
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }

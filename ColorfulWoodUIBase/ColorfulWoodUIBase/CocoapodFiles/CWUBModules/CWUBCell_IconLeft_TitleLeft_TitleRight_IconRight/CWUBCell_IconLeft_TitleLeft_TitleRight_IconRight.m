@@ -46,8 +46,8 @@
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.m_model = model;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
@@ -56,12 +56,6 @@
 
 - (void) initWithSubViews{
 
-    float margin_topOrBottom = CWUBBaseViewConfig_Space_Side_Vertical;
-
-    if (self.m_model.m_margin_topOrBottom > 0.) {
-        margin_topOrBottom = self.m_model.m_margin_topOrBottom;
-    }
-
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_lbl_right];
     [self addSubview:self.m_img_left];
@@ -69,14 +63,14 @@
     [self addSubview:self.m_img_sep];
 
     [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(self.m_model.m_margin_leftOrRight);
+        make.left.equalTo(self).offset(self.m_model.m_img_left.m_margin_left);
         make.centerY.equalTo(self.m_lbl_left);
         make.width.equalTo(@(self.m_model.m_img_left.m_width));
         make.height.equalTo(@(self.m_model.m_img_left.m_height));
     }];
 
     [_m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(-self.m_model.m_margin_leftOrRight);
+        make.right.equalTo(self).offset(-self.m_model.m_img_right.m_margin_right);
         make.width.equalTo(@(self.m_model.m_img_right.m_width));
         make.height.equalTo(@(self.m_model.m_img_right.m_height));
         make.centerY.equalTo(self);
@@ -85,23 +79,23 @@
     [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_img_left.mas_right).offset(self.m_model.m_title_left.m_margin_left);
         make.right.equalTo(self.mas_centerX);
-        make.top.equalTo(self).offset(margin_topOrBottom);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
+        make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_left.m_margin_bottom);
     }];
 
     [_m_lbl_right mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_centerX).offset(self.m_model.m_title_right.m_margin_left);
         make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_title_right.m_margin_right);
-        make.top.equalTo(self).offset(margin_topOrBottom);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
+        make.top.equalTo(self).offset(self.m_model.m_title_right.m_margin_top);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_right.m_margin_bottom);
     }];
 
     [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
 
-        switch (self.m_model.m_bottomLineType) {
+        switch (self.m_model.m_bottomLineInfo.m_bottomLineType) {
             case CWUBBottomLineType_left:
                 make.left.equalTo(@(0.));
-                make.right.equalTo(@(-self.m_model.m_margin_leftOrRight));
+                make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
                 break;
             case CWUBBottomLineType_right:
                 make.left.equalTo(self.m_lbl_left.mas_left);
@@ -109,13 +103,13 @@
                 break;
 
             default:
-                make.left.equalTo(@(self.m_model.m_margin_leftOrRight));
-                make.right.equalTo(@(-self.m_model.m_margin_leftOrRight));
+                make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+                make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
                 break;
         }
         make.bottom.equalTo(self);
         make.height.equalTo(@(1.));
-        make.top.equalTo(self.m_lbl_left.mas_bottom).offset(margin_topOrBottom);
+        make.top.equalTo(self.m_lbl_left.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
     }];
 }
 
@@ -216,8 +210,8 @@
 - (void) interface_updateWithModel:(CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model*)model{
 
     self.m_model = model;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }

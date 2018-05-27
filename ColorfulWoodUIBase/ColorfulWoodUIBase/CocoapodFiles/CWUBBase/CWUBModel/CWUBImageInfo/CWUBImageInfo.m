@@ -21,6 +21,19 @@
     return self;
 }
 
+/**
+ * 网络图片，宽度铺满，高度按比例
+ */
+- (instancetype) initWithName:(NSString*)name defaultName:(NSString*)defaultName{
+
+    if (self = [super init]) {
+        self.m_imgName = name;
+        self.m_defaultName = defaultName;
+    }
+
+    return self;
+}
+
 - (NSString*)m_imgName{
 
     if (!_m_imgName) {
@@ -28,6 +41,15 @@
     }
 
     return _m_imgName;
+}
+
+- (NSString*)m_defaultName{
+
+    if (!_m_defaultName) {
+        _m_defaultName = @"";
+    }
+
+    return _m_defaultName;
 }
 
 - (float)m_width{

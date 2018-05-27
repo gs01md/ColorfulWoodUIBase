@@ -11,8 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "CWUBTextInfo.h"
 #import "CWUBDefine.h"
-#import "CWUBBottomLineType.h"
 #import "CWUBImageInfo.h"
+#import "CWUBBottomLineInfo.h"
 
 @interface CWUBModelBase : NSObject
 
@@ -27,7 +27,6 @@
  */
 -(UIView*)interface_getView:(UITableView*)tableView;
 
-
 /**
  * 信息主要标识，可能是订单id、用户id等
  */
@@ -39,30 +38,9 @@
 @property(nonatomic, strong)NSString * m_dataOut;
 
 /**
- * 是否隐藏底部的分割线
- */
-@property(nonatomic, assign)BOOL m_isHiddenBottom;
-
-/**
  * 背景颜色
  */
 @property(nonatomic, strong)UIColor *m_color_backGround;
-
-/**
- * 设置底部分割线的颜色，实心
- * 设置了之后 底部分割线自动隐藏
- */
-@property(nonatomic, strong)UIColor *m_color_bottomLine;
-
-/**
- * 上下间隔距离
- */
-@property(nonatomic, assign)float m_margin_topOrBottom;
-
-/**
- * 左右边间距
- */
-@property(nonatomic, assign)float m_margin_leftOrRight;
 
 /**
  * 用作点击操作标识
@@ -70,8 +48,8 @@
 @property(nonatomic, strong)NSString * m_event_opt_code;
 
 /**
- * 底部分割线的样式
+ * 底部分割线信息
  */
-@property(nonatomic, assign)CWUBBottomLineType  m_bottomLineType;
+@property(nonatomic, strong)CWUBBottomLineInfo *m_bottomLineInfo;
 
 @end

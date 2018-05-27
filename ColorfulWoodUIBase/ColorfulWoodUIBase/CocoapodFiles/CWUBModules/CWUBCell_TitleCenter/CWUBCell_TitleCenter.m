@@ -41,8 +41,8 @@
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.m_model = model;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
@@ -55,19 +55,19 @@
     [self addSubview:self.m_img_sep];
 
     [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(self.m_model.m_margin_leftOrRight);
-        make.top.equalTo(self).offset(self.m_model.m_margin_topOrBottom);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_margin_topOrBottom);
-        make.right.equalTo(@(-self.m_model.m_margin_leftOrRight));
+        make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
+        make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
+        make.right.equalTo(@(-self.m_model.m_title.m_margin_right));
     }];
 
     [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
 
-        make.left.equalTo(@(self.m_model.m_margin_leftOrRight));
-        make.right.equalTo(@(-self.m_model.m_margin_leftOrRight));
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(1));
-        make.top.equalTo(self.m_lbl_title.mas_bottom).offset(self.m_model.m_margin_topOrBottom);
+        make.top.equalTo(self.m_lbl_title.mas_bottom).offset(self.m_model.m_title.m_margin_bottom);
     }];
 }
 
@@ -105,8 +105,8 @@
 
     self.m_model = model;
     [self.m_lbl_title interface_update:model.m_title];
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }

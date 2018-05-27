@@ -47,8 +47,8 @@
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.m_model = model;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
@@ -67,8 +67,8 @@
     [self.m_back addSubview:self.m_img_sep];
 
     [_m_back mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(self.m_model.m_margin_leftOrRight);
-        make.right.equalTo(self).offset(-self.m_model.m_margin_leftOrRight);
+        make.left.equalTo(self).offset(self.m_model.m_back.m_margin_left);
+        make.right.equalTo(self).offset(-self.m_model.m_back.m_margin_right);
         make.top.equalTo(self);
         make.bottom.equalTo(self.m_img_sep).offset(-1.);
     }];
@@ -138,7 +138,7 @@
         _m_back = [UIView new];
         _m_back.layer.cornerRadius = 10.;
         _m_back.clipsToBounds = YES;
-        _m_back.backgroundColor = self.m_model.m_backColor;
+        _m_back.backgroundColor = self.m_model.m_back.m_color_background;
     }
 
     return _m_back;
@@ -228,8 +228,8 @@
     [self.m_lbl_rightBottom interface_update:model.m_title_rightBottom];
     [self.m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center.m_imgName]];
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
