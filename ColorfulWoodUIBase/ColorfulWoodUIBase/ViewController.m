@@ -162,10 +162,15 @@ CWUBCell_WebImgStretchDelegate
     model.m_bottomLineInfo.m_color = [UIColor redColor];
     model.m_bottomLineInfo.m_margin_left = 60.;
     model.m_bottomLineInfo.m_margin_right = 20.;
+    model.m_bottomLineInfo.m_margin_top = 20.;
     model.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
     model.m_title.m_margin_left = 50.;
     model.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10];
     model.m_btnImg.m_margin_right = 50.;
+    model.m_btnImg.m_margin_top = 24.;
+    model.m_btnImg.m_margin_bottom = 24.;
+    model.m_title.m_margin_top = 24.;
+    model.m_title.m_margin_bottom = 24.;
 
     [data addObject:model];
 /*

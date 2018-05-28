@@ -60,7 +60,7 @@
     [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_img_btn.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
         make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_right);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
     }];
 
@@ -80,7 +80,8 @@
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(1));
-        make.top.equalTo(self.m_lbl_title.mas_bottom).offset(self.m_model.m_title.m_margin_top);
+        make.top.equalTo(self.m_lbl_title.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+        make.top.equalTo(self.m_img_btn.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
     }];
 }
 
