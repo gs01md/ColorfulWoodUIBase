@@ -603,4 +603,13 @@
     return _m_color_backGround;
 }
 
+- (CWUBBottomLineInfo*)m_bottomLineInfo{
+
+    if (!_m_bottomLineInfo) {
+        _m_bottomLineInfo = [CWUBBottomLineInfo new];
+    }
+
+    return _m_bottomLineInfo;
+}
+
 @end

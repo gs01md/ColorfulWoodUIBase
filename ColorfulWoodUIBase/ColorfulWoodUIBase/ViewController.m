@@ -54,7 +54,7 @@ CWUBCell_WebImgStretchDelegate
     [self interface_transToViewData_table];
 
     [self.view addSubview:self.m_tableView];
-    _m_tableView.backgroundColor = [UIColor redColor];
+    _m_tableView.backgroundColor = [UIColor whiteColor];
 
     [self.m_tableView reloadData];
 
@@ -156,6 +156,18 @@ CWUBCell_WebImgStretchDelegate
 - (void) func_getOne{
 
     NSMutableArray * data = [NSMutableArray new];
+
+    CWUBCell_TitleLeft_ButtonRight_Model *model = [CWUBCell_TitleLeft_ButtonRight_Model new];
+    model.m_type = CWUBCellType_TitleLeft_ButtonRight;
+    model.m_bottomLineInfo.m_color = [UIColor redColor];
+    model.m_bottomLineInfo.m_margin_left = 60.;
+    model.m_bottomLineInfo.m_margin_right = 20.;
+    model.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model.m_title.m_margin_left = 50.;
+    model.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10];
+    model.m_btnImg.m_margin_right = 50.;
+
+    [data addObject:model];
 /*
     CWUBCell_TitleRight_ButtonRight_Model * model = [CWUBCell_TitleRight_ButtonRight_Model new];
     model.m_type = CWUBCellType_TitleRight_ButtonRight;
@@ -178,6 +190,7 @@ CWUBCell_WebImgStretchDelegate
     [data addObject:model1];
 
 */
+    /*
     CWUBCell_WebImgStretch_Model * model2 = [CWUBCell_WebImgStretch_Model new];
     model2.m_type = CWUBCellType_WebImgStretch;
     model2.m_image = [[CWUBImageInfo alloc] initWithName:@"http://img.zcool.cn/community/0112a85874bd24a801219c7729e77d.jpg"  defaultName:@"back"];
@@ -198,7 +211,7 @@ CWUBCell_WebImgStretchDelegate
     model3.m_image.m_margin_bottom=1;
     model3.m_image.m_margin_top=1;
 
-    [data addObject:model3];
+    [data addObject:model3];*/
 
 /*
     CWUBCell_TitleLeft_ButtonRight_Model * model3 = [CWUBCell_TitleLeft_ButtonRight_Model new];
