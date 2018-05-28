@@ -10,10 +10,12 @@
 #import "CWUBCell_WebImgStretch_Model.h"
 
 @protocol CWUBCell_WebImgStretchDelegate<NSObject>
-- (void)CWUBCell_WebImgStretchDelegate_updateLayout;
+- (void)CWUBCell_WebImgStretchDelegate_updateLayout:(int)row;
 @end
 
 @interface CWUBCell_WebImgStretch : CWUBCellBase
 @property (nonatomic, strong) CWUBCell_WebImgStretch_Model * m_model;
 @property (nonatomic, weak) id<CWUBCell_WebImgStretchDelegate>delegate;
+
+- (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model index:(int)index;
 @end

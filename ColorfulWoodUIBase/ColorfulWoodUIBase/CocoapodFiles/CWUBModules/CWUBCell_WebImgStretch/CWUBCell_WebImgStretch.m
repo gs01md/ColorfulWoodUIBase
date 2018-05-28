@@ -12,6 +12,11 @@
 @interface CWUBCell_WebImgStretch()
 @property (nonatomic, strong) UIImageView *m_img_center;
 @property (nonatomic, strong) UIImageView *m_img_sep;
+
+/**
+ * 刷新界面,当显示新的cell时，刷新界面
+ */
+@property (nonatomic, assign) BOOL m_isUpdate;
 @end
 
 @implementation CWUBCell_WebImgStretch
@@ -52,7 +57,7 @@
     [self addSubview:self.m_img_center];
     [self addSubview:self.m_img_sep];
 
-    [self func_updateConstraints];
+    [self interface_updateWithModel:self.m_model index:0];
 
 }
 
@@ -87,7 +92,7 @@
     return _m_img_sep;
 }
 
-- (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model{
+- (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model index:(int)row{
 
     self.m_model = model;
     if (self.m_model.m_bottomLineInfo.m_color) {
@@ -95,10 +100,12 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+    self.m_isUpdate = TRUE;
+    [self func_updateConstraints:row];
 
 }
 
-- (void)func_updateConstraints{
+- (void)func_updateConstraints:(int)row{
 
     [_m_img_center sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_image.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_image.m_defaultName] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 
@@ -123,9 +130,9 @@
             }];
 
 
-            if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayout)]) {
+            if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayout:)]) {
 
-                [self.delegate CWUBCell_WebImgStretchDelegate_updateLayout];
+                [self.delegate CWUBCell_WebImgStretchDelegate_updateLayout:row];
             }
         }
 
