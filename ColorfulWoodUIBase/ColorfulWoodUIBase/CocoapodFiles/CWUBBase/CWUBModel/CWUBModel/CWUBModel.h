@@ -23,14 +23,11 @@
 /**
  * 获取section的数目
  */
-- (NSUInteger)interface_getNumOfSection:(int)section;
-
+- (NSUInteger)interface_getNumOfSection;
 
 /**
  * 获取section里对应的cell数目
  */
 - (NSUInteger)interface_getNumInSection:(int)section;
-
-
 
 @end

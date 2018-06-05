@@ -43,7 +43,7 @@
 /**
  * 获取section对应的cell数目
  */
-- (NSUInteger)interface_getNumOfSection:(int)section{
+- (NSUInteger)interface_getNumOfSection{
 
     NSUInteger i = 0;
 
