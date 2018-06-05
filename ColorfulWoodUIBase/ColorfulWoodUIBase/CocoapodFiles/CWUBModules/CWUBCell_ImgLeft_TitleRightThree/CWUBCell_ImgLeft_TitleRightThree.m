@@ -57,6 +57,8 @@
 
 - (void) initWithSubViews{
 
+    self.backgroundColor = [UIColor clearColor];
+
     [self addSubview:self.m_back];
 
     [self.m_back addSubview:self.m_img_left];
