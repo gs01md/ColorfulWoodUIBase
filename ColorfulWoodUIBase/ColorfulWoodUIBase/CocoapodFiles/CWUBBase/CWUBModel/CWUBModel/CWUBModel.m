@@ -39,4 +39,42 @@
 
     return strValue;
 }
+
+/**
+ * 获取section对应的cell数目
+ */
+- (NSUInteger)interface_getNumOfSection:(int)section{
+
+    NSUInteger i = 0;
+
+    if (self.m_array_show) {
+
+        i = self.m_array_show.count;
+    }
+
+    return i;
+}
+
+/**
+ * 获取section里对应的cell数目
+ */
+- (NSUInteger)interface_getNumInSection:(int)section{
+
+    NSUInteger i = 0;
+
+    if (self.m_array_show) {
+
+        if (section<=self.m_array_show.count-1) {
+
+            NSArray *array = self.m_array_show[section];
+
+            if (array) {
+                i = array.count;
+            }
+        }
+    }
+
+    return i;
+
+}
 @end

@@ -24,7 +24,7 @@ CWUBCell_WebImgStretchDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self testTableView];
+    [self testView];
 }
 
 - (void) testView {
@@ -99,52 +99,77 @@ CWUBCell_WebImgStretchDelegate
 
     NSMutableArray * data = [NSMutableArray new];
 
-    CWUBCell_TitleLeft_TitleRight_Model * model2 = [CWUBCell_TitleLeft_TitleRight_Model new];
-    model2.m_type = CWUBCellType_TitleLeft_TitleRight;
-    model2.m_title_left = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
-    model2.m_title_right = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
-    model2.m_bottomLineInfo.m_color = [UIColor brownColor];
-
-    [data addObject:model2];
-
-    CWUBCell_ImgCenter_Model * model3 = [CWUBCell_ImgCenter_Model new];
-    model3.m_type = CWUBCellType_ImgCenter;
-    model3.m_bottomLineInfo.m_color = [UIColor clearColor];
-    model3.m_image = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
-
-    [data addObject:model3];
-
-    CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model * model4 = [CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model new];
-    model4.m_type = CWUBCellType_TitleLeftTwo_ImgCenter_TitleRightTwo;
-    model4.m_title_leftTop = [[CWUBTextInfo alloc] initWithText:@"1" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model4.m_title_leftBottom = [[CWUBTextInfo alloc] initWithText:@"信息" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model4.m_title_rightTop = [[CWUBTextInfo alloc] initWithText:@"0" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-
-    float fMargin = 1.;
-    model4.m_title_rightTop.m_margin_bottom = fMargin;
-    model4.m_title_rightBottom.m_margin_top = fMargin;
-    model4.m_title_leftTop.m_margin_bottom = fMargin;
-    model4.m_title_leftBottom.m_margin_top = fMargin;
-    model4.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"提醒" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model4.m_bottomLineInfo.m_color = [UIColor blueColor];
-    model4.m_img_center = [[CWUBImageInfo alloc] initWithName:@"sep" width:1. height:10.];
-
-    [data addObject:model4];
+    if (1) {
+        CWUBCell_TitleLeft_ButtonRight_Model * model1 = [CWUBCell_TitleLeft_ButtonRight_Model new];
+        model1.m_type = CWUBCellType_TitleLeft_ButtonRight;
+        model1.m_title = [[CWUBTextInfo alloc] initWithText:@"完成身份认证，解锁app功能权限" font:[UIFont fontWithName:@"PingFangSC-Regular" size:26.2] color:[CWUBDefine colorBlueDeep]];
+        model1.m_title.m_color = [UIColor blueColor];
+        model1.m_color_backGround = [UIColor yellowColor];
+        model1.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"b2" width:50. height:20.];
+        [data addObject:model1];
+    }
 
     CWUBCell_ImgLeft_TitleRightThree_Model * model5 = [CWUBCell_ImgLeft_TitleRightThree_Model new];
     model5.m_type = CWUBCellType_ImgLeft_TitleRightThree;
-    model5.m_bottomLineInfo.m_color = [UIColor blueColor];
-    model5.m_img_left = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
+    model5.m_img_left = [[CWUBImageInfo alloc] initWithName:@"FSL_M_我的个人头像" width:60. height:60.];
     model5.m_img_left.m_isCircle = YES;
-    model5.m_title_rightTop = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+    model5.m_title_rightTop = [[CWUBTextInfo alloc] initWithText:@"姓名" font:[UIFont fontWithName:@"PingFangSC-Regular" size:26.2] color:[UIColor blackColor]];
     model5.m_title_rightCenter = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model5.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+    model5.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"公司" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
 
     [data addObject:model5];
 
     if (data.count>0) {
         [self.m_model_viewHead.m_array_show addObject:data];
     }
+
+
+//    CWUBCell_TitleLeft_TitleRight_Model * model2 = [CWUBCell_TitleLeft_TitleRight_Model new];
+//    model2.m_type = CWUBCellType_TitleLeft_TitleRight;
+//    model2.m_title_left = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
+//    model2.m_title_right = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
+//    model2.m_bottomLineInfo.m_color = [UIColor brownColor];
+//
+//    [data addObject:model2];
+//
+//    CWUBCell_ImgCenter_Model * model3 = [CWUBCell_ImgCenter_Model new];
+//    model3.m_type = CWUBCellType_ImgCenter;
+//    model3.m_bottomLineInfo.m_color = [UIColor clearColor];
+//    model3.m_image = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
+//
+//    [data addObject:model3];
+//
+//    CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model * model4 = [CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model new];
+//    model4.m_type = CWUBCellType_TitleLeftTwo_ImgCenter_TitleRightTwo;
+//    model4.m_title_leftTop = [[CWUBTextInfo alloc] initWithText:@"1" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+//    model4.m_title_leftBottom = [[CWUBTextInfo alloc] initWithText:@"信息" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+//    model4.m_title_rightTop = [[CWUBTextInfo alloc] initWithText:@"0" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+//
+//    float fMargin = 1.;
+//    model4.m_title_rightTop.m_margin_bottom = fMargin;
+//    model4.m_title_rightBottom.m_margin_top = fMargin;
+//    model4.m_title_leftTop.m_margin_bottom = fMargin;
+//    model4.m_title_leftBottom.m_margin_top = fMargin;
+//    model4.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"提醒" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+//    model4.m_bottomLineInfo.m_color = [UIColor blueColor];
+//    model4.m_img_center = [[CWUBImageInfo alloc] initWithName:@"sep" width:1. height:10.];
+//
+//    [data addObject:model4];
+//
+//    CWUBCell_ImgLeft_TitleRightThree_Model * model5 = [CWUBCell_ImgLeft_TitleRightThree_Model new];
+//    model5.m_type = CWUBCellType_ImgLeft_TitleRightThree;
+//    model5.m_bottomLineInfo.m_color = [UIColor blueColor];
+//    model5.m_img_left = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
+//    model5.m_img_left.m_isCircle = YES;
+//    model5.m_title_rightTop = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+//    model5.m_title_rightCenter = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+//    model5.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
+//
+//    [data addObject:model5];
+
+//    if (data.count>0) {
+//        [self.m_model_viewHead.m_array_show addObject:data];
+//    }
 
 }
 
