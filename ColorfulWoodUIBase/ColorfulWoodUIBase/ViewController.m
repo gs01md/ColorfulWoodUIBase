@@ -235,7 +235,7 @@ CWUBCell_WebImgStretchDelegate
 
     [data addObject:model3];
 
-
+/*
     CWUBCell_ImgCenter_TitleCenter_Model *model2 = [CWUBCell_ImgCenter_TitleCenter_Model new];
     model2.m_type = CWUBCellType_ImgCenter_TitleCenter;
     model2.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
@@ -369,6 +369,8 @@ CWUBCell_WebImgStretchDelegate
 
 
     [data addObject:model5];
+
+    */
 
     if (data.count>0) {
         [self.m_model.m_array_show addObject:data];
