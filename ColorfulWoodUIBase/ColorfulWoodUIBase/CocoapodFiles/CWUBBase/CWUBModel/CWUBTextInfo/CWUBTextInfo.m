@@ -64,6 +64,15 @@
     return self;
 }
 
++ (instancetype)interface_nullCheckInit:(CWUBTextInfo*)info{
+
+    if (!info) {
+        info = [CWUBTextInfo new];
+    }
+
+    return info;
+}
+
 - (NSString*)m_text{
 
     if (!_m_text) {
@@ -118,6 +127,15 @@
     }
 
     return _m_color_backGroud;
+}
+
+- (CWUBCornerInfo*)m_cornerInfo{
+
+    if (!_m_cornerInfo) {
+        _m_cornerInfo = [CWUBCornerInfo new];
+    }
+
+    return _m_cornerInfo;
 }
 
 @end

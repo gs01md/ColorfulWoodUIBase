@@ -23,7 +23,7 @@
 
 -(id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_CharterDetail_Opt_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
         if (self.m_model.m_bottomLineInfo.m_color) {
             self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
@@ -74,7 +74,7 @@
         make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
         make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_btn_second.mas_bottom).offset(VEHICAL_MARGIN);
     }];
 }

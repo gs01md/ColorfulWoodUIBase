@@ -25,3 +25,6 @@ User Interface Design
 
 2.7. CWUBLeftImgFollowTitleRightImgHeadTitle
 左侧为图片，后面跟一个标题；最右侧有个只是图片，改图片前面有个标签
+
+2.8. CWUBCell_MyFollow_MyBusiness
+![CWUBCell_MyFollow_MyBusiness图片](https://github.com/chenyufeng1991/NewsClient/raw/master/Screenshots/2.png)

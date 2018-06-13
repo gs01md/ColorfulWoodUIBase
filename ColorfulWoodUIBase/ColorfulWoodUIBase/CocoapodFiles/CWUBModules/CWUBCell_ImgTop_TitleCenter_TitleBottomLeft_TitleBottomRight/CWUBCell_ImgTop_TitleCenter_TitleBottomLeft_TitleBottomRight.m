@@ -23,7 +23,7 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         [self fun_commonInitWithModel:model];
     }
 
@@ -94,7 +94,7 @@
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_lbl_bottom_left.mas_bottom).offset(self.m_model.m_title_bottom_left.m_margin_bottom);
         make.top.equalTo(self.m_lbl_bottom_right.mas_bottom).offset(self.m_model.m_title_bottom_right.m_margin_bottom);
     }];

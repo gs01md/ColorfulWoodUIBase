@@ -39,6 +39,11 @@
 #import "CWUBCell_TitleLeft_TitleRight.h"
 #import "CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo.h"
 #import "CWUBCell_WebImgStretch.h"
+#import "CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom.h"
+#import "CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom.h"
+#import "CWUBCell_Company_One.h"
+#import "CWUBCell_MyFollow_MyBusiness.h"
+#import "CWUBCell_ImgCenter_TitleCenter.h"
 
 @implementation CWUBModelBase
 /**
@@ -177,9 +182,31 @@
                 view = [self func_CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo:tableView];
                 break;
 
-                case CWUBCellType_WebImgStretch:
+            case CWUBCellType_WebImgStretch:
                 view = [self func_CWUBCell_WebImgStretch:tableView];
                 break;
+
+            case CWUBCellType_ImgLeft_TitleRightTopTwo_TitleRightBottom:
+                view = [self func_CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom:tableView];
+                break;
+
+            case CWUBCellType_ImgTop_TitleCenter_TitleTitleImgBottom:
+                view = [self func_CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom:tableView];
+                break;
+
+            case CWUBCellType_Company_One:
+                view = [self func_CWUBCell_Company_One:tableView];
+                break;
+
+            case CWUBCellType_MyFollow_MyBusiness:
+                view = [self func_CWUBCell_MyFollow_MyBusiness:tableView];
+                break;
+            case CWUBCellType_ImgCenter_TitleCenter:
+                view = [self func_CWUBCell_ImgCenter_TitleCenter:tableView];
+                break;
+
+
+
             default:
                 break;
         }
@@ -590,6 +617,92 @@
     }
 
 }
+
+- (CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom*) func_CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom";
+        CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom*) func_CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom";
+        CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_Company_One*) func_CWUBCell_Company_One:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Company_One";
+        CWUBCell_Company_One *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Company_One alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Company_One alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_MyFollow_MyBusiness*) func_CWUBCell_MyFollow_MyBusiness:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_MyFollow_MyBusiness";
+        CWUBCell_MyFollow_MyBusiness *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_MyFollow_MyBusiness alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_MyFollow_MyBusiness alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_ImgCenter_TitleCenter*) func_CWUBCell_ImgCenter_TitleCenter:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgCenter_TitleCenter";
+        CWUBCell_ImgCenter_TitleCenter *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgCenter_TitleCenter alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgCenter_TitleCenter alloc] initWithModel:self];
+    }
+
+}
+
 
 
 #pragma mark - 参数设置

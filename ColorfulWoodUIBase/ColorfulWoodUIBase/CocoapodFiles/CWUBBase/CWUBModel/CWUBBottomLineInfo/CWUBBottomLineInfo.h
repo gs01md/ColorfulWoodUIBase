@@ -23,11 +23,13 @@
  */
 @property(nonatomic, strong)UIColor *m_color;
 
-
 /**
  * 是否隐藏底部的分割线
  */
 @property(nonatomic, assign)BOOL m_isHiddenBottom;
 
-
+/**
+ * 分割线高度
+ */
+@property(nonatomic, assign)float m_height;
 @end

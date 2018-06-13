@@ -23,7 +23,7 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_TitleLeft_InfoLeft_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
         if (self.m_model.m_bottomLineInfo.m_color) {
             self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
@@ -67,7 +67,7 @@
         if (self.m_model.m_bottomLineInfo.m_isHiddenBottom) {
             make.height.equalTo(@(0.01));
         }else{
-            make.height.equalTo(@(1));
+            make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         }
 
         make.top.equalTo(self.m_lblInfo.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);

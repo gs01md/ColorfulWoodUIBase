@@ -17,6 +17,10 @@
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
 
+        if (model) {
+            self.backgroundColor = model.m_color_backGround;
+        }
+
     }
 
     return self;

@@ -13,4 +13,14 @@
 @property(nonatomic, assign)float m_margin_right;
 @property(nonatomic, assign)float m_margin_top;
 @property(nonatomic, assign)float m_margin_bottom;
+
+/**
+ * 用于相对某个元素的CenterY
+ */
+@property(nonatomic, assign)float m_margin_CenterY;
+
+/**
+ * 用于相对某个元素的CenterX
+ */
+@property(nonatomic, assign)float m_margin_CenterX;
 @end

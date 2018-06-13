@@ -39,6 +39,22 @@
             self.textColor = info.m_color;
         }
 
+        if (info.m_cornerInfo.m_cornerRadius>0 && info.m_cornerInfo.m_cornerWidth>0) {
+
+            self.layer.cornerRadius = info.m_cornerInfo.m_cornerRadius;
+            self.layer.borderWidth = info.m_cornerInfo.m_cornerWidth;
+            self.layer.borderColor = [info.m_cornerInfo.m_cornerColor CGColor];
+
+        }else{
+
+            self.layer.cornerRadius = 0.;
+            self.layer.borderWidth = 0.;
+            self.layer.borderColor = [[UIColor clearColor] CGColor];
+        }
+
+        self.numberOfLines = info.m_numberOfLines;
+        self.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
+
     }
 }
 

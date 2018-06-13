@@ -24,7 +24,7 @@ CWUBCell_WebImgStretchDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self testView];
+    [self testTableView];
 
     self.view.backgroundColor = [UIColor blueColor];
 }
@@ -110,6 +110,20 @@ CWUBCell_WebImgStretchDelegate
         model1.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"b2" width:50. height:20.];
         [data addObject:model1];
     }
+
+    CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model * model6 = [CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model new];
+    model6.m_type = CWUBCellType_ImgLeft_TitleRightTopTwo_TitleRightBottom;
+    model6.m_img_left = [[CWUBImageInfo alloc] initWithName:@"left" width:90. height:90.];
+    model6.m_img_left.m_isCircle = YES;
+    model6.m_title_rightTopLeft = [[CWUBTextInfo alloc] initWithText:@"姓名姓名" font:[UIFont fontWithName:@"PingFangSC-Semibold" size:22] color:CWUBDefineCreate_Color(39,39,39,1)];
+    model6.m_title_rightTopRight = [[CWUBTextInfo alloc] initWithText:@" CEOCEOCEOCEOCEOCEOCEOCEO " font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model6.m_title_rightTopRight.m_numberOfLines = 1;
+    model6.m_title_rightTopRight.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:5. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+    model6.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"公司" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model6.m_color_backGround = [UIColor whiteColor];
+
+
+    [data addObject:model6];
 
     CWUBCell_ImgLeft_TitleRightThree_Model * model5 = [CWUBCell_ImgLeft_TitleRightThree_Model new];
     model5.m_type = CWUBCellType_ImgLeft_TitleRightThree;
@@ -199,8 +213,93 @@ CWUBCell_WebImgStretchDelegate
     model.m_btnImg.m_margin_bottom = 24.;
     model.m_title.m_margin_top = 24.;
     model.m_title.m_margin_bottom = 24.;
+    model.m_bottomLineInfo.m_height = 1.;
 
     [data addObject:model];
+
+    CWUBCell_MyFollow_MyBusiness_Model *model3 = [CWUBCell_MyFollow_MyBusiness_Model new];
+    model3.m_type = CWUBCellType_MyFollow_MyBusiness;
+    model3.m_bottomLineInfo.m_color = [UIColor blueColor];
+    model3.m_bottomLineInfo.m_margin_left = 20.;
+    model3.m_bottomLineInfo.m_margin_right = 20.;
+    model3.m_bottomLineInfo.m_height = 10.;
+
+    model3.m_title_left_top = [[CWUBTextInfo alloc] initWithText:@"标题左" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model3.m_title_right_top = [[CWUBTextInfo alloc] initWithText:@"标题右" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model3.m_title_right_top.m_margin_right = 40.;
+    model3.m_title_left_top.m_margin_left = 40.;
+    model3.m_img_left_bottom = [[CWUBImageInfo alloc] initWithName:@"left" width:15. height:15.];
+    model3.m_img_right_bottom = [[CWUBImageInfo alloc] initWithName:@"left" width:15. height:15.];
+    model3.m_title_left_bottom = [[CWUBTextInfo alloc] initWithText:@"我的关注我的关注我的关注我的关注我的关注我的关注" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model3.m_title_right_bottom = [[CWUBTextInfo alloc] initWithText:@"你的" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+
+    [data addObject:model3];
+
+
+    CWUBCell_ImgCenter_TitleCenter_Model *model2 = [CWUBCell_ImgCenter_TitleCenter_Model new];
+    model2.m_type = CWUBCellType_ImgCenter_TitleCenter;
+    model2.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model2.m_image = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+//    model2.m_title.m_margin_top = 24.;
+//    model2.m_title.m_margin_bottom = 24.;
+    model2.m_bottomLineInfo.m_color = [UIColor redColor];
+    model2.m_bottomLineInfo.m_height = 10.;
+    [data addObject:model2];
+
+    CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model * model6 = [CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model new];
+    model6.m_type = CWUBCellType_ImgLeft_TitleRightTopTwo_TitleRightBottom;
+    model6.m_img_left = [[CWUBImageInfo alloc] initWithName:@"left" width:75. height:75.];
+    model6.m_img_left.m_margin_top = 40.;
+    model6.m_img_left.m_margin_bottom = 40.;
+    model6.m_img_left.m_isCircle = YES;
+    model6.m_title_rightTopLeft = [[CWUBTextInfo alloc] initWithText:@"姓名姓名" font:[UIFont fontWithName:@"PingFangSC-Semibold" size:22] color:CWUBDefineCreate_Color(39,39,39,1)];
+    model6.m_title_rightTopRight = [[CWUBTextInfo alloc] initWithText:@" CEO " font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model6.m_title_rightTopRight.m_numberOfLines = 1;
+    model6.m_title_rightTopRight.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+    model6.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司" font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model6.m_color_backGround = [UIColor yellowColor];
+    model6.m_title_rightBottom.m_numberOfLines = 1;
+    model6.m_title_rightBottom.m_margin_CenterY = 18.;
+    model6.m_title_rightTopLeft.m_margin_CenterY = -15.;
+    model6.m_bottomLineInfo.m_height = 20.;
+    model6.m_bottomLineInfo.m_color = [UIColor redColor];
+    model6.m_bottomLineInfo.m_margin_right = 0.1;
+    model6.m_bottomLineInfo.m_margin_left = 0.1;
+
+    [data addObject:model6];
+
+    CWUBCell_Company_One_Model * model7 = [CWUBCell_Company_One_Model new];
+    model7.m_type = CWUBCellType_Company_One;
+    model7.m_img_top = [[CWUBImageInfo alloc] initWithName:@"left" width:60. height:60.];
+    model7.m_img_top.m_margin_top = 12.;
+    model7.m_img_top.m_margin_bottom = 40.;
+    model7.m_img_top.m_isCircle = YES;
+
+    model7.m_title_center = [[CWUBTextInfo alloc] initWithText:@"公司公司公司公司公司公司公司公司公司公司公司公司" font:[UIFont fontWithName:@"PingFangSC-Semibold" size:20] color:CWUBDefineCreate_Color(39,39,39,1)];
+    model7.m_title_center.m_margin_CenterY = 5.;
+    model7.m_title_center.m_margin_bottom = 10.;
+    model7.m_title_center.m_numberOfLines = 1;
+
+    model7.m_title_bottomLeft = [[CWUBTextInfo alloc] initWithText:@"Hanhan" font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model7.m_title_bottomLeft.m_numberOfLines = 1;
+
+    model7.m_back = [[CWUBImageInfo alloc] initWithName:@"companyback" width:0. height:0.];
+    model7.m_back.m_margin_left = 10.;
+    model7.m_back.m_margin_right = 10.;
+    model7.m_back.m_color_background = [UIColor whiteColor];
+
+    model7.m_title_bottomCenter = [[CWUBTextInfo alloc] initWithText:@" CEO " font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model7.m_title_bottomCenter.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+    model7.m_img_bottomRight = [[CWUBImageInfo alloc] initWithName:@"button" width:75. height:35.];;
+
+    model7.m_title_bottomCenter.m_numberOfLines = 1;
+    model7.m_title_bottomLeft.m_margin_bottom = 35.;
+    model7.m_title_bottomLeft.m_margin_top = 10;
+
+
+
+
+    [data addObject:model7];
 /*
     CWUBCell_TitleRight_ButtonRight_Model * model = [CWUBCell_TitleRight_ButtonRight_Model new];
     model.m_type = CWUBCellType_TitleRight_ButtonRight;

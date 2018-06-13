@@ -10,5 +10,13 @@
 
 @implementation CWUBBottomLineInfo
 
+- (float) m_height{
+
+    if (_m_height<=0.) {
+        _m_height = 1.;
+    }
+
+    return _m_height;
+}
 
 @end
