@@ -28,7 +28,7 @@ User Interface Design
 
 2.8. CWUBCell_MyFollow_MyBusiness
 
-![CWUBCell_MyFollow_MyBusiness图片](https://github.com/gs01md/ColorfulWoodUIBase/ColorfulWoodUIBase/Screenshots/CWUBCell_MyFollow_MyBusiness.png)
+![CWUBCell_MyFollow_MyBusiness图片](https://github.com/gs01md/ColorfulWoodUIBase/Screenshots/CWUBCell_MyFollow_MyBusiness.png)
 
 CWUBCell_MyFollow_MyBusiness_Model *model3 = [CWUBCell_MyFollow_MyBusiness_Model new];
 model3.m_type = CWUBCellType_MyFollow_MyBusiness;
