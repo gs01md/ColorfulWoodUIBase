@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ColorfulWoodUIBase"
-  s.version      = "1.1.33"
+  s.version      = "1.1.34"
   s.summary      = "User Interface Design."
 
   s.homepage     = "https://github.com/gs01md"

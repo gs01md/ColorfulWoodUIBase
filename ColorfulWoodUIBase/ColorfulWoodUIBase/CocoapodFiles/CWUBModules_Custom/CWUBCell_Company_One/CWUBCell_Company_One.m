@@ -7,6 +7,7 @@
 //
 
 #import "CWUBCell_Company_One.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "CWUBLabelWithModel.h"
 #import "CWUBLableLeftTop.h"
 
@@ -210,7 +211,8 @@
 
     if(!_m_img_top){
         _m_img_top = [UIImageView new];
-        [_m_img_top setImage:[UIImage imageNamed:self.m_model.m_img_top.m_imgName]];
+
+        [_m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName] completed:nil];
         _m_img_top.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_top.clipsToBounds = YES;
         [_m_img_top setClipsToBounds:YES];
@@ -254,7 +256,6 @@
     [self.m_lbl_center interface_update:model.m_title_center];
     [self.m_lbl_bottomLeft interface_update:model.m_title_bottomLeft];
     [self.m_lbl_bottomCenter interface_update:model.m_title_bottomCenter];
-    [self.m_img_top setImage:[UIImage imageNamed:self.m_model.m_img_top.m_imgName]];
     [self.m_img_bottomRight setImage:[UIImage imageNamed:self.m_model.m_img_bottomRight.m_imgName]];
 
     if (self.m_model.m_bottomLineInfo.m_color) {
@@ -264,6 +265,7 @@
     }
 
     [self.m_back setImage:[UIImage imageNamed:self.m_model.m_back.m_imgName]];
+    [self.m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName] completed:nil];
 
 }
 
