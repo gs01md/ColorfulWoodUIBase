@@ -26,7 +26,7 @@
 
 - (float)m_margin_left{
 
-    if (_m_margin_left <= 0) {
+    if (_m_margin_left == 0) {
         _m_margin_left = CWUBBaseViewConfig_Space_Element_Horizontal;
     }
 
@@ -35,7 +35,7 @@
 
 - (float)m_margin_right{
 
-    if (_m_margin_right <= 0) {
+    if (_m_margin_right == 0) {
         _m_margin_right = CWUBBaseViewConfig_Space_Element_Horizontal;
     }
 
@@ -44,7 +44,7 @@
 
 - (float)m_margin_top{
 
-    if (_m_margin_top <= 0) {
+    if (_m_margin_top == 0) {
         _m_margin_top = CWUBBaseViewConfig_Space_Element_Vertical;
     }
 
@@ -53,7 +53,7 @@
 
 - (float)m_margin_bottom{
 
-    if (_m_margin_bottom <= 0) {
+    if (_m_margin_bottom == 0) {
         _m_margin_bottom = CWUBBaseViewConfig_Space_Element_Vertical;
     }
 
