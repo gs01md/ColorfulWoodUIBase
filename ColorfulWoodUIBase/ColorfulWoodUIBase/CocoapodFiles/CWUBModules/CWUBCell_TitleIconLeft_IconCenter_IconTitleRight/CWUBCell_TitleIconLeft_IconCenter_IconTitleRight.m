@@ -197,6 +197,12 @@
     [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center.m_imgName]];
 }
 
+#pragma mark - 接口
+
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
+}
+
 - (void)awakeFromNib {[super awakeFromNib];}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {[super setSelected:selected animated:animated];}

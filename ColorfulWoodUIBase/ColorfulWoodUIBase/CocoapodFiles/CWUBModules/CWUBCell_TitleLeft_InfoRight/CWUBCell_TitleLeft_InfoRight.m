@@ -137,6 +137,12 @@
     [self.m_lblShow interface_update:model.m_title];
 }
 
+#pragma mark - 接口
+
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
+}
+
 - (void)awakeFromNib {[super awakeFromNib];}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {[super setSelected:selected animated:animated];}

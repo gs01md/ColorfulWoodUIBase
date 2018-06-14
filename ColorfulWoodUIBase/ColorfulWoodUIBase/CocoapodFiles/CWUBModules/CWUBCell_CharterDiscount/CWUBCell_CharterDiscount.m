@@ -308,6 +308,10 @@
 
 #pragma mark - 接口
 
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
+}
+
 - (void) interface_updateWithModel:(CWUBCell_CharterDiscount_Model*)model{
 
     self.m_model = model;

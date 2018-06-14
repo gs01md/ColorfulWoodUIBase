@@ -139,6 +139,10 @@
     }];
 }
 
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
+}
+
 #pragma mark - 事件
 
 - (void)awakeFromNib {[super awakeFromNib];}
