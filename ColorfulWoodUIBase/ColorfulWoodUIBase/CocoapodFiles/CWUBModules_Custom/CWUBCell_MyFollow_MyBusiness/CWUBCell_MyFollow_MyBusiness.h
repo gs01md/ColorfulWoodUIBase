@@ -9,6 +9,14 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_MyFollow_MyBusiness_Model.h"
 
+@protocol CWUBCell_MyFollow_MyBusinessDelegate<NSObject>
+@optional
+- (void)CWUBCell_MyFollow_MyBusinessDelegate_left;
+- (void)CWUBCell_MyFollow_MyBusinessDelegate_right;
+@end
+
 @interface CWUBCell_MyFollow_MyBusiness : CWUBCellBase
 @property (nonatomic, strong) CWUBCell_MyFollow_MyBusiness_Model * m_model;
+
+@property (nonatomic, weak) id<CWUBCell_MyFollow_MyBusinessDelegate>delegate;
 @end

@@ -12,7 +12,8 @@
 @interface ViewController ()<
 UITableViewDelegate,
 UITableViewDataSource,
-CWUBCell_WebImgStretchDelegate
+CWUBCell_WebImgStretchDelegate,
+CWUBCell_MyFollow_MyBusinessDelegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -452,8 +453,8 @@ CWUBCell_WebImgStretchDelegate
         CWUBCellBase* cell = (CWUBCellBase*)[model interface_getView:tableView];
         [cell interface_updateWithModel:model];
 
-        if (model.m_type == CWUBCellType_WebImgStretch) {
-            CWUBCell_WebImgStretch * cell1 = (CWUBCell_WebImgStretch*)cell;
+        if (model.m_type == CWUBCellType_MyFollow_MyBusiness) {
+            CWUBCell_MyFollow_MyBusiness * cell1 = (CWUBCell_MyFollow_MyBusiness*)cell;
             cell1.delegate = self;
             //cell1.delegate = self;
         }
@@ -480,6 +481,13 @@ CWUBCell_WebImgStretchDelegate
 - (void)CWUBCell_WebImgStretchDelegate_updateLayout{
 
     [self.m_tableView reloadData];
+}
+
+- (void)CWUBCell_MyFollow_MyBusinessDelegate_left{
+    NSLog(@"CWUBCell_MyFollow_MyBusinessDelegate_left");
+}
+- (void)CWUBCell_MyFollow_MyBusinessDelegate_right{
+    NSLog(@"CWUBCell_MyFollow_MyBusinessDelegate_right");
 }
 
 @end

@@ -158,6 +158,9 @@
 
     if (!_m_leftBottom) {
         _m_leftBottom = [UIView new];
+
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(event_left)];
+        [_m_leftBottom addGestureRecognizer:tap];
     }
     return _m_leftBottom;
 }
@@ -166,6 +169,8 @@
 
     if (!_m_rightBottom) {
         _m_rightBottom = [UIView new];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(event_right)];
+        [_m_rightBottom addGestureRecognizer:tap];
     }
     return _m_rightBottom;
 }
@@ -177,6 +182,9 @@
         _m_lbl_leftTop.textAlignment = NSTextAlignmentCenter;
         _m_lbl_leftTop.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_leftTop.numberOfLines = 0;
+        _m_lbl_leftTop.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(event_left)];
+        [_m_lbl_leftTop addGestureRecognizer:tap];
     }
     return _m_lbl_leftTop;
 }
@@ -243,6 +251,9 @@
         _m_lbl_rightTop.textAlignment = NSTextAlignmentCenter;
         _m_lbl_rightTop.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_rightTop.numberOfLines = 0;
+        _m_lbl_rightTop.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(event_right)];
+        [_m_lbl_rightTop addGestureRecognizer:tap];
     }
     return _m_lbl_rightTop;
 }
@@ -303,9 +314,26 @@
 }
 
 - (void)event_imgRight{
-    //    if ([self.delegate respondsToSelector:@selector(CWUBCell_Passenger_Delete_Delegate_Del:)]) {
-    //
-    //        [self.delegate CWUBCell_Passenger_Delete_Delegate_Del:self.m_model.m_id];
-    //    }
+
+//    if ([self.delegate respondsToSelector:@selector(CWUBCell_Passenger_Delete_Delegate_Del:)]) {
+//
+//        [self.delegate CWUBCell_Passenger_Delete_Delegate_Del:self.m_model.m_id];
+//    }
+}
+
+- (void)event_left{
+
+        if ([self.delegate respondsToSelector:@selector(CWUBCell_MyFollow_MyBusinessDelegate_left)]) {
+
+            [self.delegate CWUBCell_MyFollow_MyBusinessDelegate_left];
+        }
+}
+
+- (void)event_right{
+    
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_MyFollow_MyBusinessDelegate_right)]) {
+
+        [self.delegate CWUBCell_MyFollow_MyBusinessDelegate_right];
+    }
 }
 @end
