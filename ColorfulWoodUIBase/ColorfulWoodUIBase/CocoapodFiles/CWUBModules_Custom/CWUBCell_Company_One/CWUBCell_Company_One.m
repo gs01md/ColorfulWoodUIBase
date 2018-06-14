@@ -154,9 +154,10 @@
     if (!_m_back) {
         _m_back = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.m_model.m_back.m_imgName]];
         _m_back.backgroundColor = self.m_model.m_back.m_color_background;
-        _m_img_bottomRight.contentMode = UIViewContentModeScaleToFill;
-        _m_img_bottomRight.clipsToBounds = YES;
-        [_m_img_bottomRight setClipsToBounds:YES];
+        _m_back.userInteractionEnabled = YES;
+        _m_back.contentMode = UIViewContentModeScaleToFill;
+        _m_back.clipsToBounds = YES;
+        [_m_back setClipsToBounds:YES];
     }
 
     return _m_back;
