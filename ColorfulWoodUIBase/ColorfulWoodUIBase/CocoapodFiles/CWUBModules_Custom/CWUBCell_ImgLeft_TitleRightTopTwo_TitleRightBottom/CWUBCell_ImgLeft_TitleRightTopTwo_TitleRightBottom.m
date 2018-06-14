@@ -191,10 +191,11 @@
 
 #pragma mark - 事件
 - (void)event_imgLeft{
-    //    if ([self.delegate respondsToSelector:@selector(CWUBCell_Passenger_Delete_Delegate_Del:)]) {
-    //
-    //        [self.delegate CWUBCell_Passenger_Delete_Delegate_Del:self.m_model.m_id];
-    //    }
+    
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottomDelegate_leftImg)]) {
+
+        [self.delegate CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottomDelegate_leftImg];
+    }
 }
 
 @end

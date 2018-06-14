@@ -9,6 +9,19 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model.h"
 
+
+@protocol CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottomDelegate <NSObject>
+
+/**
+ * 点击左侧图片
+ */
+- (void)CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottomDelegate_leftImg;
+
+@end
+
+
+
 @interface CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom : CWUBCellBase
 @property (nonatomic, strong) CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model *m_model;
+@property (nonatomic,weak) id<CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottomDelegate> delegate;
 @end

@@ -219,7 +219,7 @@
             _m_img_top.layer.cornerRadius = (self.m_model.m_img_top.m_width + Img_Top_Reduce)/2.;
             _m_img_top.layer.masksToBounds = YES;
         }
-        UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgLeft)];
+        UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgTop)];
         [_m_img_top addGestureRecognizer:tapGesturRecognizer];
     }
     return _m_img_top;
@@ -280,11 +280,12 @@
 }
 
 #pragma mark - 事件
-- (void)event_imgLeft{
-    //    if ([self.delegate respondsToSelector:@selector(CWUBCell_Passenger_Delete_Delegate_Del:)]) {
-    //
-    //        [self.delegate CWUBCell_Passenger_Delete_Delegate_Del:self.m_model.m_id];
-    //    }
+- (void)event_imgTop{
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_Company_One_topImg)]) {
+
+        [self.delegate CWUBCell_Company_One_topImg];
+    }
 }
 @end
 
