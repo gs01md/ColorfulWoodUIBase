@@ -212,7 +212,11 @@
     if(!_m_img_top){
         _m_img_top = [UIImageView new];
 
-        [_m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName] completed:nil];
+        /**
+        * 如果原来已经显示了图片，就不要再显示默认图片
+        */
+        UIImage * img = _m_img_top.image?_m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
+        [_m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:img completed:nil];
         _m_img_top.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_top.clipsToBounds = YES;
         [_m_img_top setClipsToBounds:YES];
@@ -265,7 +269,12 @@
     }
 
     [self.m_back setImage:[UIImage imageNamed:self.m_model.m_back.m_imgName]];
-    [self.m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName] completed:nil];
+
+    /**
+     * 如果原来已经显示了图片，就不要再显示默认图片
+     */
+    UIImage * img = self.m_img_top.image?self.m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
+    [self.m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:img completed:nil];
 
 }
 

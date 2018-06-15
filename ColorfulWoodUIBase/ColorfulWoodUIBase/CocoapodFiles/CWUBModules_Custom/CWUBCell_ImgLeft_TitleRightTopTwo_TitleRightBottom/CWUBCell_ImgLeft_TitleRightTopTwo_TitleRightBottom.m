@@ -148,7 +148,12 @@
 
     if(!_m_img_left){
         _m_img_left = [UIImageView new];
-        [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName] completed:nil];
+
+        /**
+         * 如果原来已经显示了图片，就不要再显示默认图片
+         */
+        UIImage * img = _m_img_left.image?_m_img_left.image:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName];
+        [_m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:img completed:nil];
         _m_img_left.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_left.clipsToBounds = YES;
         [_m_img_left setClipsToBounds:YES];
@@ -171,8 +176,11 @@
     [self.m_lbl_rightTopRight interface_update:model.m_title_rightTopRight];
     [self.m_lbl_rightBottom interface_update:model.m_title_rightBottom];
     [self.m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
-
-    [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName] completed:nil];
+   /**
+    * 如果原来已经显示了图片，就不要再显示默认图片
+    */
+    UIImage * img = self.m_img_left.image?self.m_img_left.image:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName];
+    [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:img completed:nil];
 
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
