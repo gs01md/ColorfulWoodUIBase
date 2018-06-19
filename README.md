@@ -292,7 +292,7 @@ model.m_bottomLineInfo.m_color = [UIColor blueColor];
 ## 2.17. CWUBCell_SevenImg
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_SevenImg.png)
-
+```Objective C
 CWUBCell_SevenImg_Model * model12 = [CWUBCell_SevenImg_Model new];
 
 model12.m_type = CWUBCellType_SevenImg;
@@ -330,7 +330,7 @@ model12.m_title_three.m_margin_right = CWUBDefine_Width(5.);
 
 [data addObject:model12];
 
-
+```
 ## 2.18. CWUBCell_TitleLeft_CollectionRight_ImgRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_CollectionRight_ImgRight.png)
