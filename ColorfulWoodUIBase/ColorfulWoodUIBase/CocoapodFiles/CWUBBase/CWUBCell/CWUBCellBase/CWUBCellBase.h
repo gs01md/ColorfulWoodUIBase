@@ -11,6 +11,7 @@
 #import <Masonry/Masonry.h>
 #import "CWUBDefine.h"
 #import <ColorfulWoodCategories/UIColor+Hex.h>
+#import "CWUBLabelWithModel.h"
 
 @interface CWUBCellBase : UITableViewCell
 

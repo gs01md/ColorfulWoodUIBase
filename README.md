@@ -272,7 +272,7 @@ model3.m_bottomLineInfo.m_color = [UIColor blueColor];
 
 model3.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
 
-2.16. CWUBCell_TitleRight_ButtonRight
+<font face="微软雅黑" size=28 color=#0099ff>2.16. CWUBCell_TitleRight_ButtonRight</font>
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleRight_ButtonRight.png)
 
@@ -289,5 +289,85 @@ model.m_event_opt_code = @"查看详情";
 model.m_bottomLineInfo.m_color = [UIColor blueColor];
 
 
+<font face="微软雅黑" size=28 color=#0099ff>2.17. CWUBCell_SevenImg</font>
 
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_SevenImg.png)
+
+CWUBCell_SevenImg_Model * model12 = [CWUBCell_SevenImg_Model new];
+
+model12.m_type = CWUBCellType_SevenImg;
+
+model12.m_img_one = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+
+model12.m_img_two = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+
+model12.m_img_three = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+
+model12.m_img_three.m_margin_right = CWUBDefine_Width(53.);
+
+model12.m_img_one.m_margin_left = CWUBDefine_Width(53.);
+
+model12.m_title_one.m_height = 2.;
+
+model12.m_title_one.m_color_backGroud = [UIColor blueColor];
+
+model12.m_title_one.m_margin_left = 0.01;
+
+model12.m_title_four.m_margin_right = 0.01;
+
+model12.m_title_four.m_margin_left = CWUBDefine_Width(5.);
+
+model12.m_title_one.m_margin_right = CWUBDefine_Width(5.);
+
+model12.m_title_two.m_margin_left = CWUBDefine_Width(5.);
+
+model12.m_title_two.m_margin_right = CWUBDefine_Width(5.);
+
+model12.m_title_three.m_margin_left = CWUBDefine_Width(5.);
+
+model12.m_title_three.m_margin_right = CWUBDefine_Width(5.);
+
+
+[data addObject:model12];
+
+
+<font face="微软雅黑" size=28 color=#0099ff>2.18. CWUBCell_TitleLeft_CollectionRight_ImgRight</font>
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_CollectionRight_ImgRight.png)
+
+CWUBCell_TitleLeft_CollectionRight_ImgRight_Model * model11 = [CWUBCell_TitleLeft_CollectionRight_ImgRight_Model new];
+
+model11.m_type = CWUBCellType_TitleLeft_CollectionRight_ImgRight;
+
+model11.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空航空航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空航空航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+[model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
+
+
+model11.m_img_right = [[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10];
+
+model11.m_bottomLineInfo.m_color = [UIColor redColor];
+
+[data addObject:model11];
 

@@ -44,6 +44,8 @@
 #import "CWUBCell_Company_One.h"
 #import "CWUBCell_MyFollow_MyBusiness.h"
 #import "CWUBCell_ImgCenter_TitleCenter.h"
+#import "CWUBCell_TitleLeft_CollectionRight_ImgRight.h"
+#import "CWUBCell_SevenImg.h"
 
 @implementation CWUBModelBase
 /**
@@ -201,10 +203,18 @@
             case CWUBCellType_MyFollow_MyBusiness:
                 view = [self func_CWUBCell_MyFollow_MyBusiness:tableView];
                 break;
+
             case CWUBCellType_ImgCenter_TitleCenter:
                 view = [self func_CWUBCell_ImgCenter_TitleCenter:tableView];
                 break;
 
+            case CWUBCellType_TitleLeft_CollectionRight_ImgRight:
+                view = [self func_CWUBCell_TitleLeft_CollectionRight_ImgRight:tableView];
+                break;
+
+            case CWUBCellType_SevenImg:
+                view = [self func_CWUBCell_SevenImg:tableView];
+                break;
 
 
             default:
@@ -699,6 +709,40 @@
 
     }else{
         return [[CWUBCell_ImgCenter_TitleCenter alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_TitleLeft_CollectionRight_ImgRight*) func_CWUBCell_TitleLeft_CollectionRight_ImgRight:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeft_CollectionRight_ImgRight";
+        CWUBCell_TitleLeft_CollectionRight_ImgRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeft_CollectionRight_ImgRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeft_CollectionRight_ImgRight alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_SevenImg*) func_CWUBCell_SevenImg:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_SevenImg";
+        CWUBCell_SevenImg *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_SevenImg alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_SevenImg alloc] initWithModel:self];
     }
 
 }

@@ -56,6 +56,9 @@ typedef enum : NSUInteger {
     CWUBCellType_Company_One,
     CWUBCellType_MyFollow_MyBusiness,
     CWUBCellType_ImgCenter_TitleCenter,
+    CWUBCellType_TitleLeft_CollectionRight_ImgRight,
+    CWUBCellType_SevenImg,
+
 
 } CWUBCellType;
 

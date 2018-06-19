@@ -37,6 +37,11 @@
  */
 @property(nonatomic,assign) float m_width;
 
+/**
+ * 设置高度
+ */
+@property(nonatomic,assign) float m_height;
+
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color;
 
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color backColor:(UIColor*)backColor;

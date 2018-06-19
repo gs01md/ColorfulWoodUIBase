@@ -7,7 +7,6 @@
 //
 
 #import "CWUBCell_ImgCenter_TitleCenter.h"
-#import "CWUBLabelWithModel.h"
 
 @interface CWUBCell_ImgCenter_TitleCenter()
 

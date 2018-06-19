@@ -212,7 +212,7 @@
     if(!_m_img_top){
         _m_img_top = [UIImageView new];
 
-        /**
+       /**
         * 如果原来已经显示了图片，就不要再显示默认图片
         */
         UIImage * img = _m_img_top.image?_m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];

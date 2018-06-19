@@ -80,6 +80,14 @@ FOUNDATION_EXPORT const unsigned char ColorfulWoodUIBaseVersionString[];
 #import "CWUBCell_MyFollow_MyBusiness.h"
 #import "CWUBCell_ImgCenter_TitleCenter_Model.h"
 #import "CWUBCell_ImgCenter_TitleCenter.h"
-
+#import "CWUBCollectionInfo.h"
+#import "CWUBCell_TitleLeft_CollectionRight_ImgRight.h"
+#import "CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.h"
+#import "CWUBViewModelBase.h"
+#import "CWUBView_TitleLeft_ButtonRight_Model.h"
+#import "CWUBView_TitleLeft_ButtonRight.h"
+#import "CWUBCollectionCellBase.h"
+#import "CWUBCell_SevenImg.h"
+#import "CWUBCell_SevenImg_Model.h"
 
 #import "CWUBWoodUIBaseDemo.h"
