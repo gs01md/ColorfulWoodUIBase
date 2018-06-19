@@ -29,7 +29,7 @@ User Interface Design
 ## 2.8. CWUBCell_MyFollow_MyBusiness
 
 ![CWUBCell_MyFollow_MyBusiness图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_MyFollow_MyBusiness.png)
-
+```Objective C
 CWUBCell_MyFollow_MyBusiness_Model *model3 = [CWUBCell_MyFollow_MyBusiness_Model new];
 
 model3.m_type = CWUBCellType_MyFollow_MyBusiness;
@@ -57,11 +57,12 @@ model3.m_img_right_bottom = [[CWUBImageInfo alloc] initWithName:@"left" width:15
 model3.m_title_left_bottom = [[CWUBTextInfo alloc] initWithText:@"我的关注我的关注我的关注我的关注我的关注我的关注" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 
 model3.m_title_right_bottom = [[CWUBTextInfo alloc] initWithText:@"你的" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+```
 
 ## 2.9. CWUBCell_Company_One
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Company_One.png)
-
+```Objective C
 CWUBCell_Company_One_Model * model7 = [CWUBCell_Company_One_Model new];
 
 model7.m_type = CWUBCellType_Company_One;
@@ -105,11 +106,12 @@ model7.m_title_bottomCenter.m_numberOfLines = 1;
 model7.m_title_bottomLeft.m_margin_bottom = 35.;
 
 model7.m_title_bottomLeft.m_margin_top = 10;
+```
 
 ## 2.10. CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.png)
-
+```Objective C
 CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model * model1 = [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model new];
 
 model1.m_type = CWUBCellType_IconLeft_TitleLeft_TitleRight_IconRight;
@@ -131,11 +133,12 @@ model1.m_img_right = [[CWUBImageInfo alloc] initWithName:@"big" width:20. height
 //    model1.m_title_left.m_labelTextVerticalType = CWUBLabelTextVerticalType_top;
 
 [data addObject:model1];
+```
 
 ## 2.11. CWUBCell_ImgCenter_TitleCenter
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgCenter_TitleCenter.png)
-
+```Objective C
 CWUBCell_ImgCenter_TitleCenter_Model *model2 = [CWUBCell_ImgCenter_TitleCenter_Model new];
 
 model2.m_type = CWUBCellType_ImgCenter_TitleCenter;
@@ -151,11 +154,12 @@ model2.m_image = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15
 model2.m_bottomLineInfo.m_color = [UIColor redColor];
 
 model2.m_bottomLineInfo.m_height = 10.;
+```
 
 ## 2.12. CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom.png)
-
+```Objective C
 CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model * model6 = [CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model new];
 
 model6.m_type = CWUBCellType_ImgLeft_TitleRightTopTwo_TitleRightBottom;
@@ -192,11 +196,12 @@ model6.m_bottomLineInfo.m_color = [UIColor redColor];
 
 model6.m_bottomLineInfo.m_margin_right = 0.1;
 model6.m_bottomLineInfo.m_margin_left = 0.1;
+```
 
 ## 2.13. CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.png)
-
+```Objective C
 CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight_Model * model4 = [CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight_Model new];
 
 model4.m_type = CWUBCellType_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight;
@@ -210,11 +215,12 @@ model4.m_title_bottom_right = [[CWUBTextInfo alloc] initWithText:@"职位" font:
 model4.m_bottomLineInfo.m_color = [UIColor blueColor];
 
 model4.m_img_top = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
+```
 
 ## 2.14. CWUBCell_Passenger_Delete
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Passenger_Delete.png)
-
+```Objective C
 CWUBCell_Passenger_Delete_Model * model5 = [CWUBCell_Passenger_Delete_Model new];
 
 model5.m_type = CWUBCellType_Passenger_Delete;
@@ -230,11 +236,12 @@ model5.m_title_name = [[CWUBTextInfo alloc] initWithText:@"职位职位职位职
 model5.m_bottomLineInfo.m_color = [UIColor blueColor];
 
 model5.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
+```
 
 ## 2.15. CWUBCell_TitleLeft_ButtonRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_ButtonRight.png)
-
+```Objective C
 CWUBCell_TitleLeft_ButtonRight_Model *model = [CWUBCell_TitleLeft_ButtonRight_Model new];
 
 model.m_type = CWUBCellType_TitleLeft_ButtonRight;
@@ -288,6 +295,7 @@ model.m_event_opt_code = @"查看详情";
 
 model.m_bottomLineInfo.m_color = [UIColor blueColor];
 
+```
 
 ## 2.17. CWUBCell_SevenImg
 
