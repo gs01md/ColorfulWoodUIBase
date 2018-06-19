@@ -334,7 +334,8 @@ model12.m_title_three.m_margin_right = CWUBDefine_Width(5.);
 ## 2.18. CWUBCell_TitleLeft_CollectionRight_ImgRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_CollectionRight_ImgRight.png)
-```
+<pre><code>
+
 CWUBCell_TitleLeft_CollectionRight_ImgRight_Model * model11 = [CWUBCell_TitleLeft_CollectionRight_ImgRight_Model new];
 
 model11.m_type = CWUBCellType_TitleLeft_CollectionRight_ImgRight;
@@ -371,4 +372,4 @@ model11.m_bottomLineInfo.m_color = [UIColor redColor];
 
 [data addObject:model11];
 
-```
+</code></pre>
