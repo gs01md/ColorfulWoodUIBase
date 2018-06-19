@@ -488,7 +488,9 @@ CWUBCell_MyFollow_MyBusinessDelegate
 
 
 #pragma mark - 代理 tableview
-
+/**
+ * 一成不变，甚至可以放在基类中，不作显示声明
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger i = 0;
 
@@ -508,7 +510,9 @@ CWUBCell_MyFollow_MyBusinessDelegate
 
 }
 
-
+/**
+ * 一成不变，甚至可以放在基类中，不作显示声明
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     NSUInteger i = 0;
     if (self.m_model && self.m_model.m_array_show) {
@@ -533,6 +537,9 @@ CWUBCell_MyFollow_MyBusinessDelegate
         CWUBCellBase* cell = (CWUBCellBase*)[model interface_getView:tableView];
         [cell interface_updateWithModel:model];
 
+        /**
+         * 代理
+         */
         if (model.m_type == CWUBCellType_MyFollow_MyBusiness) {
             CWUBCell_MyFollow_MyBusiness * cell1 = (CWUBCell_MyFollow_MyBusiness*)cell;
             cell1.delegate = self;
@@ -553,6 +560,10 @@ CWUBCell_MyFollow_MyBusinessDelegate
 
     CWUBCellBase *cell = (CWUBCellBase *)[tableView cellForRowAtIndexPath:indexPath];
     NSString * code = [cell interface_get_event_opt_code];
+
+    /**
+     * cell点击事件
+     */
     if ([code isEqualToString:@"查看详情"]) {
 
     }

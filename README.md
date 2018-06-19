@@ -1,32 +1,171 @@
 # ColorfulWoodUIBase
-User Interface Design 
+
+
 
 ## 1. 目的：该动态库致力于提供一些通用的界面设计，用于快速搭建界面，减少界面开发时间
+界面开发是iOS开发，或者几乎所有程序开发中重要的一环，对于用户来说，这带来很重要的体验；但是，对于开发者来说，界面开发却是最低级和没有价值的任务。而业务逻辑，程序性能更能体现程序的价值。所以，为了节省界面开发的时间，把精力放在更重要的地方，故此开发这套框架。
 
-## 2. 功能介绍
+## 2. 导入说明
 
-## 2.1. CWUBDefine
+使用时，可以直接导入，需要有多个依赖库：
+Masonry
+ColorfulWoodCategories
+SDWebImage
+
+也可使用cocoapod
+```
+pod 'ColorfulWoodUIBase'                    #界面封装
+```
+
+## 3. 使用示例
+
+## 3.1. 该框架的使用重点是CWUBModel
+
+CWUBModel 是一个数组的数组，代表着section及cell。
+每个cell对应着一个CWUBModelBase，cell的类型是CWUBCellBase。
+CWUBModelBase里面的m_type属性定义了cell的类型，里面的属性定义了布局和内容。
+
+## 3.2. 使用示例工程中的程序简单演示了使用步骤，该框架基本依赖在UITableView中，
+
+```
+- (UITableView*)m_tableView{
+
+if (!_m_tableView) {
+
+float fLeft   = 0;
+float fTop    = 0;
+float fWidth  = CWUBDefineSViewControllerWidth;
+float fHeight = CWUBDefineSViewControllerHeight;
+CGRect rect = CGRectMake(fLeft, fTop, fWidth, fHeight);
+_m_tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
+_m_tableView.delegate = self;
+_m_tableView.dataSource = self;
+_m_tableView.allowsSelection = NO;
+_m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+[_m_tableView setBackgroundColor:[UIColor whiteColor]];
+
+//设置cell的估计高度
+_m_tableView.estimatedRowHeight = 200;
+
+//iOS以后这句话是默认的，所以可以省略这句话
+_m_tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+return _m_tableView;
+}
+```
+
+## 3.3. 其代理示例如下：
+```
+#pragma mark - 代理 tableview
+/**
+* 一成不变，甚至可以放在基类中，不作显示声明
+*/
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+NSInteger i = 0;
+
+if (self.m_model && self.m_model.m_array_show) {
+
+if (section<=self.m_model.m_array_show.count-1) {
+
+NSArray *array = self.m_model.m_array_show[section];
+
+if (array) {
+i = array.count;
+}
+}
+}
+
+return i;
+
+}
+
+/**
+* 一成不变，甚至可以放在基类中，不作显示声明
+*/
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+NSUInteger i = 0;
+if (self.m_model && self.m_model.m_array_show) {
+i = self.m_model.m_array_show.count;
+}
+
+return i;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+NSArray * array =  nil;
+
+if (indexPath.section <= self.m_model.m_array_show.count-1) {
+array =self.m_model.m_array_show[indexPath.section];
+}
+
+if (array && indexPath.row <= array.count-1) {
+
+CWUBModelBase * model = array[indexPath.row];
+CWUBCellBase* cell = (CWUBCellBase*)[model interface_getView:tableView];
+[cell interface_updateWithModel:model];
+
+/**
+* 代理
+*/
+if (model.m_type == CWUBCellType_MyFollow_MyBusiness) {
+CWUBCell_MyFollow_MyBusiness * cell1 = (CWUBCell_MyFollow_MyBusiness*)cell;
+cell1.delegate = self;
+//cell1.delegate = self;
+}
+
+return cell;
+
+}else{
+
+return [UITableViewCell new];
+}
+
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+CWUBCellBase *cell = (CWUBCellBase *)[tableView cellForRowAtIndexPath:indexPath];
+NSString * code = [cell interface_get_event_opt_code];
+
+/**
+* cell点击事件
+*/
+if ([code isEqualToString:@"查看详情"]) {
+
+}
+}
+
+```
+
+
+## 4. 功能介绍
+
+## 4.1. CWUBDefine
 提供了常用的一些功能的宏定义：颜色设置、长度换算、常用长度
 
-## 2.2. CWUBViewBase
+## 4.2. CWUBViewBase
 界面基类：提供一个视图点击代理，以后会扩展tintColor等
 
-## 2.3. CWUBTopLineBottomLine
+## 4.3. CWUBTopLineBottomLine
 可以设置视图上下边的颜色，是一个图片视图
 
-## 2.4. CWUBLeftImage
+## 4.4. CWUBLeftImage
 图片位于左侧，上下边距为10，宽度等于高度（适用于高度不太高的视图，高度太高将导致图片过宽）
 
-## 2.5. CWUBLeftImageFollowField
+## 4.5. CWUBLeftImageFollowField
 左侧为图片，后面跟一个输入框
 
-## 2.6. CWUBLeftImageFollowTitle
+## 4.6. CWUBLeftImageFollowTitle
 左侧为图片，后面跟一个标题
 
-## 2.7. CWUBLeftImgFollowTitleRightImgHeadTitle
+## 4.7. CWUBLeftImgFollowTitleRightImgHeadTitle
 左侧为图片，后面跟一个标题；最右侧有个只是图片，改图片前面有个标签
 
-## 2.8. CWUBCell_MyFollow_MyBusiness
+## 4.8. CWUBCell_MyFollow_MyBusiness
 
 ![CWUBCell_MyFollow_MyBusiness图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_MyFollow_MyBusiness.png)
 ```Objective C
@@ -59,7 +198,7 @@ model3.m_title_left_bottom = [[CWUBTextInfo alloc] initWithText:@"我的关注�
 model3.m_title_right_bottom = [[CWUBTextInfo alloc] initWithText:@"你的" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 ```
 
-## 2.9. CWUBCell_Company_One
+## 4.9. CWUBCell_Company_One
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Company_One.png)
 ```Objective C
@@ -108,7 +247,7 @@ model7.m_title_bottomLeft.m_margin_bottom = 35.;
 model7.m_title_bottomLeft.m_margin_top = 10;
 ```
 
-## 2.10. CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight
+## 4.10. CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight.png)
 ```Objective C
@@ -135,7 +274,7 @@ model1.m_img_right = [[CWUBImageInfo alloc] initWithName:@"big" width:20. height
 [data addObject:model1];
 ```
 
-## 2.11. CWUBCell_ImgCenter_TitleCenter
+## 4.11. CWUBCell_ImgCenter_TitleCenter
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgCenter_TitleCenter.png)
 ```Objective C
@@ -156,7 +295,7 @@ model2.m_bottomLineInfo.m_color = [UIColor redColor];
 model2.m_bottomLineInfo.m_height = 10.;
 ```
 
-## 2.12. CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom
+## 4.12. CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom.png)
 ```Objective C
@@ -198,7 +337,7 @@ model6.m_bottomLineInfo.m_margin_right = 0.1;
 model6.m_bottomLineInfo.m_margin_left = 0.1;
 ```
 
-## 2.13. CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight
+## 4.13. CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.png)
 ```Objective C
@@ -217,7 +356,7 @@ model4.m_bottomLineInfo.m_color = [UIColor blueColor];
 model4.m_img_top = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
 ```
 
-## 2.14. CWUBCell_Passenger_Delete
+## 4.14. CWUBCell_Passenger_Delete
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Passenger_Delete.png)
 ```Objective C
@@ -238,7 +377,7 @@ model5.m_bottomLineInfo.m_color = [UIColor blueColor];
 model5.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
 ```
 
-## 2.15. CWUBCell_TitleLeft_ButtonRight
+## 4.15. CWUBCell_TitleLeft_ButtonRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_ButtonRight.png)
 ```Objective C
@@ -278,11 +417,11 @@ model3.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[UIFont fontW
 model3.m_bottomLineInfo.m_color = [UIColor blueColor];
 
 model3.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
-
-## 2.16. CWUBCell_TitleRight_ButtonRight
+```
+## 4.16. CWUBCell_TitleRight_ButtonRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleRight_ButtonRight.png)
-
+```Objective C
 CWUBCell_TitleRight_ButtonRight_Model * model = [CWUBCell_TitleRight_ButtonRight_Model new];
 
 model.m_type = CWUBCellType_TitleRight_ButtonRight;
@@ -297,7 +436,7 @@ model.m_bottomLineInfo.m_color = [UIColor blueColor];
 
 ```
 
-## 2.17. CWUBCell_SevenImg
+## 4.17. CWUBCell_SevenImg
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_SevenImg.png)
 ```Objective C
@@ -339,7 +478,7 @@ model12.m_title_three.m_margin_right = CWUBDefine_Width(5.);
 [data addObject:model12];
 
 ```
-## 2.18. CWUBCell_TitleLeft_CollectionRight_ImgRight
+## 4.18. CWUBCell_TitleLeft_CollectionRight_ImgRight
 
 ![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_CollectionRight_ImgRight.png)
 ```javascript
