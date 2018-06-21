@@ -550,3 +550,59 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Model* model = (CWUBCell_TitleLeft_C
 
 
 ```
+
+## 4.19. CWUBCell_TitleTop_TitleBottom
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleTop_TitleBottom.png)
+```Objective C
+
+CWUBCell_TitleTop_TitleBottom_Model * model15 = [CWUBCell_TitleTop_TitleBottom_Model new];
+model15.m_type = CWUBCellType_TitleTop_TitleBottom;
+
+model15.m_title_top = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+model15.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+model15.m_bottomLineInfo.m_color = [UIColor redColor];
+[data addObject:model15];
+```
+
+## 4.20. CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight.png)
+```Objective C
+
+CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model * model14 = [CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model new];
+model14.m_type = CWUBCellType_TitleLeft_InputRight_TitleRightBottom_ImgRight;
+
+model14.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+model14.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+model14.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+model14.m_input_right.m_textPlaceholder = @"请输入内容";
+model14.m_input_right.m_margin_bottom = 20.;
+model14.m_input_right.m_margin_top = 20.;
+model14.m_title_bottomRight.m_margin_bottom = 1.;
+model14.m_title_left.m_width = [model14.m_title_left interface_setWidthByContent];
+model14.m_bottomLineInfo.m_color = [UIColor blueColor];
+model14.m_img_right = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+[data addObject:model14];
+
+```
+
+## 4.21. CWUBCell_TitleLeft_InputRight_TitleRightBottom
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_InputRight_TitleRightBottom.png)
+```Objective C
+
+CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model * model13 = [CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model new];
+model13.m_type = CWUBCellType_TitleLeft_InputRight_TitleRightBottom;
+
+model13.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+model13.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+model13.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+model13.m_input_right.m_textPlaceholder = @"请输入内容";
+model13.m_input_right.m_margin_bottom = 20.;
+model13.m_input_right.m_margin_top = 20.;
+model13.m_title_bottomRight.m_margin_bottom = 1.;
+model13.m_title_left.m_width = [model13.m_title_left interface_setWidthByContent];
+model13.m_bottomLineInfo.m_color = [UIColor blueColor];
+[data addObject:model13];
+```
