@@ -108,7 +108,7 @@
                 break;
         }
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1.));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_lbl_left.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
     }];
 }

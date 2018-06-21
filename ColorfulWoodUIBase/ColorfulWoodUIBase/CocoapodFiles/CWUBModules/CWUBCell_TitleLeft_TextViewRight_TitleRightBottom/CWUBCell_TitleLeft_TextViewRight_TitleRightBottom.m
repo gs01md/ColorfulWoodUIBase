@@ -69,8 +69,8 @@ UITextViewDelegate
 
     [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_textfield_right.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
