@@ -60,7 +60,15 @@
     [self addSubview:self.m_lbl_rightBottom];
     [self addSubview:self.m_img_sep];
 
-    [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+
+}
+
+
+
+- (void)func_updateConsrtains{
+
+    [_m_img_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(self.m_model.m_img_left.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_img_left.m_margin_bottom);
         make.left.equalTo(self).offset(self.m_model.m_img_left.m_margin_left);
@@ -68,31 +76,31 @@
         make.height.equalTo(@(self.m_model.m_img_left.m_height));
     }];
 
-    [_m_lbl_rightTopLeft mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_rightTopLeft mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_img_left.mas_right).offset(self.m_model.m_title_rightTopLeft.m_margin_left);
         make.width.lessThanOrEqualTo(@(CWUBDefineDeviceWidth/2.));
         make.centerY.equalTo(self.m_img_left).offset(self.m_model.m_title_rightTopLeft.m_margin_CenterY);
     }];
 
-    [_m_lbl_rightTopRight mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_rightTopRight mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_rightTopLeft.mas_right).offset(self.m_model.m_title_rightTopRight.m_margin_left);
         make.right.lessThanOrEqualTo(self).offset(-self.m_model.m_title_rightTopRight.m_margin_right);
         make.centerY.equalTo(self.m_lbl_rightTopLeft);
     }];
 
-    [_m_lbl_rightBottom mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_rightBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_rightTopLeft);
         make.centerY.equalTo(self.m_img_left).offset(self.m_model.m_title_rightBottom.m_margin_CenterY);
         make.right.equalTo(self).offset(-self.m_model.m_title_rightBottom.m_margin_right);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_img_left.mas_bottom).offset(self.m_model.m_img_left.m_margin_bottom);
-        
+
     }];
 }
 
@@ -187,6 +195,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 
 }
 

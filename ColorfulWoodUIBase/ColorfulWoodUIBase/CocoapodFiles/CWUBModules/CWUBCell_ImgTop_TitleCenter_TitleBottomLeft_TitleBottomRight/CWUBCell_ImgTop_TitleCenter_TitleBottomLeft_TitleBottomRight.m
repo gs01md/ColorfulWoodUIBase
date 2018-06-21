@@ -59,14 +59,19 @@
     [self addSubview:self.m_lbl_bottom_right];
     [self addSubview:self.m_img_sep];
 
-    [_m_img_top mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_img_top mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(self.m_model.m_img_top.m_margin_top);
         make.width.equalTo(@(self.m_model.m_img_top.m_width));
         make.height.equalTo(@(self.m_model.m_img_top.m_height));
         make.centerX.equalTo(self);
     }];
 
-    [_m_lbl_center mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_center mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_title_center.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_title_center.m_margin_right);
         make.top.equalTo(self.m_img_top.mas_bottom).offset(self.m_model.m_title_center.m_margin_top);
@@ -74,14 +79,14 @@
         make.centerX.equalTo(self);
     }];
 
-    [_m_lbl_bottom_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_bottom_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.m_lbl_center.mas_bottom).offset(self.m_model.m_title_bottom_left.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_bottom_left.m_margin_bottom);
         make.left.equalTo(self).offset(self.m_model.m_title_bottom_left.m_margin_left);
         make.right.equalTo(self.mas_centerX).offset(-self.m_model.m_title_bottom_left.m_margin_right);
     }];
 
-    [_m_lbl_bottom_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_bottom_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self.m_lbl_center.mas_bottom).offset(self.m_model.m_title_bottom_right.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_bottom_right.m_margin_bottom);
@@ -89,7 +94,7 @@
         make.right.equalTo(self).offset(-self.m_model.m_title_bottom_right.m_margin_right);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));

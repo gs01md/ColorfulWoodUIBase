@@ -80,15 +80,19 @@
     [self.m_backBottom addSubview:self.m_img_bottomRight];
 
     [self.m_back addSubview:self.m_img_sep];
+    [self func_updateConsrtains];
+}
 
-    [_m_back mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)func_updateConsrtains{
+
+    [_m_back mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(self.m_model.m_back.m_margin_top);
         make.left.equalTo(self).offset(self.m_model.m_back.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_back.m_margin_right);
         make.bottom.equalTo(self.m_img_sep).offset(-1.);
     }];
 
-    [_m_img_top mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_top mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.m_back).offset(self.m_model.m_img_top.m_margin_top);
         make.centerX.equalTo(self);
         make.width.equalTo(@(self.m_model.m_img_top.m_width + Img_Top_Reduce));
@@ -96,26 +100,26 @@
     }];
 
 
-    [_m_lbl_center mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_center mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_back).offset(self.m_model.m_title_center.m_margin_left);
         make.right.equalTo(self.m_back).offset(-self.m_model.m_title_center.m_margin_right);
         make.centerY.equalTo(self.m_back).offset(self.m_model.m_title_center.m_margin_CenterY);
     }];
 
-    [_m_lbl_bottomLeft mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_bottomLeft mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self.m_backBottom);
         make.top.equalTo(self.m_backBottom);
         make.bottom.equalTo(self.m_backBottom);
     }];
 
-    [_m_lbl_bottomCenter mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_bottomCenter mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self.m_lbl_bottomLeft.mas_right).offset(self.m_model.m_img_bottomRight.m_margin_left);
         make.centerY.equalTo(self.m_lbl_bottomLeft);
     }];
 
-    [_m_img_bottomRight mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_bottomRight mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self.m_lbl_bottomCenter.mas_right).offset(self.m_model.m_img_bottomRight.m_margin_left);
         make.right.equalTo(self.m_backBottom);
@@ -125,13 +129,13 @@
 
     }];
 
-    [_m_backBottom mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_backBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self.m_lbl_center.mas_bottom).offset(self.m_model.m_title_bottomLeft.m_margin_top);
         make.bottom.equalTo(self.m_img_sep).offset(-self.m_model.m_title_bottomLeft.m_margin_bottom);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -141,6 +145,7 @@
     }];
 }
 
+#pragma mark - 属性
 -(CWUBCell_Company_One_Model*) m_model{
 
     if (!_m_model) {
@@ -275,6 +280,8 @@
      */
     UIImage * img = self.m_img_top.image?self.m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
     [self.m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:img completed:nil];
+
+    [self func_updateConsrtains];
 
 }
 

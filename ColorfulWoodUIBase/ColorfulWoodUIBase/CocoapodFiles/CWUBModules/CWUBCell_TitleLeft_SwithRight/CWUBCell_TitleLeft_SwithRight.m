@@ -51,22 +51,27 @@
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_switch];
     [self addSubview:self.m_img_sep];
+    
+    [self func_updateConsrtains];
+}
 
-    [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)func_updateConsrtains{
+
+    [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.right.equalTo(self.m_switch.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
         //make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
-        
+
     }];
 
-    [_m_switch mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_switch mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal + 6.);
         make.centerY.equalTo(self.m_lbl_left);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));

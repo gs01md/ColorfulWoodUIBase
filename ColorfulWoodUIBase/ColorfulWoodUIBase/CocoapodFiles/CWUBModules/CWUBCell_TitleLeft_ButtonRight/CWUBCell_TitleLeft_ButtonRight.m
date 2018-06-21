@@ -57,14 +57,19 @@
     [self addSubview:self.m_img_btn];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_img_btn.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
         make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
     }];
 
-    [_m_img_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_btn mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self).offset(self.m_model.m_btnImg.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_btnImg.m_margin_bottom);
@@ -74,7 +79,7 @@
         make.height.equalTo(@(self.m_model.m_btnImg.m_height));
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -83,6 +88,7 @@
         make.top.equalTo(self.m_lbl_title.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
         make.top.equalTo(self.m_img_btn.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
     }];
+
 }
 
 -(CWUBCell_TitleLeft_ButtonRight_Model*) m_model{

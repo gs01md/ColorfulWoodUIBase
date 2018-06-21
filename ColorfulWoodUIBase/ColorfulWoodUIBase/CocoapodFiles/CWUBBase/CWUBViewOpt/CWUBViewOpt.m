@@ -32,14 +32,14 @@
 
                 if (last) {
 
-                    [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+                    [cell mas_remakeConstraints:^(MASConstraintMaker *make) {
                         make.top.equalTo(last.mas_bottom);
                         make.left.equalTo(view);
                         make.right.equalTo(view);
                     }];
                 }else{
                     //直接再view的顶部开始排列
-                    [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+                    [cell mas_remakeConstraints:^(MASConstraintMaker *make) {
 
                         //是否是iphonex 要加上刘海的高度
                         if (CWUBBaseIsiPhoneX) {

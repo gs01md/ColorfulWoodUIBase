@@ -40,7 +40,12 @@
     [self addSubview:self.m_btn_save];
     [self addSubview:self.m_img_sep];
 
-    [_m_btn_save mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_btn_save mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical*2);
@@ -48,7 +53,7 @@
         make.height.equalTo(@(30));
     }];
 
-    [_m_btn_cancle mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_btn_cancle mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.m_btn_save);
         make.right.equalTo(self.m_btn_save.mas_left).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(self.m_btn_save);
@@ -56,7 +61,7 @@
     }];
 
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -65,6 +70,7 @@
     }];
 }
 
+#pragma mark - 属性
 - (UIButton *)m_btn_cancle{
 
     if (!_m_btn_cancle) {
@@ -117,6 +123,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 
 }
 

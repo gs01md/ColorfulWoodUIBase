@@ -64,14 +64,14 @@
 
 - (void)func_updateConstrains{
 
-    [self.m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self);
         make.width.equalTo(@(self.m_model.m_img.m_width));
         make.height.equalTo(@(self.m_model.m_img.m_height));
         make.centerY.equalTo(self.m_lbl_left);
     }];
 
-    [self.m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
         make.right.equalTo(self.m_img_right.mas_left);
         make.height.equalTo(self);

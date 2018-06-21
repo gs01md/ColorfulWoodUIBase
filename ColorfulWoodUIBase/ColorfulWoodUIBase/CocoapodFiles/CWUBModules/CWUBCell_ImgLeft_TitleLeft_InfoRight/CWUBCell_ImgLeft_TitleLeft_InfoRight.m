@@ -44,21 +44,26 @@
     [self addSubview:self.m_img_btn];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_info mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_info mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(@(CWUBDefineSViewWidth/3.));
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_img_btn.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal/2.);
         make.right.equalTo(self.m_lbl_info.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);;
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 
-    [_m_img_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_btn mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self.m_lbl_info).offset(2.);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
@@ -66,7 +71,7 @@
         make.height.equalTo(@(self.m_model.m_btnImg.m_height));
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -75,6 +80,7 @@
     }];
 }
 
+#pragma mark - 属性
 -(CWUBCell_ImgLeft_TitleLeft_InfoRight_Model*) m_model{
 
     if (!_m_model) {
@@ -139,6 +145,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 }
 
 #pragma mark - 接口

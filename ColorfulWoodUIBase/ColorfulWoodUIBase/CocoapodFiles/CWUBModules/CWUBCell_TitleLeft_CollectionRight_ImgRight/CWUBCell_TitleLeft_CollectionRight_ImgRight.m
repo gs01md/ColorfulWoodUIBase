@@ -178,6 +178,7 @@ UICollectionViewDelegateFlowLayout>
     [self.m_lbl_left interface_update:model.m_title_left];
 
     [self.m_collection_right reloadData];
+
 }
 
 /**

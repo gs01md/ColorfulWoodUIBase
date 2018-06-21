@@ -75,6 +75,11 @@
     [self addSubview:self.m_view_soldOut];
     [self addSubview:self.m_img_soldOut];
 
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
     [_m_img_banner mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(10*1.5);
@@ -161,10 +166,9 @@
         make.top.equalTo(self.m_img_banner);
 
     }];
-
-
 }
 
+#pragma mark - 属性
 -(CWUBCell_CharterDiscount_Model*) m_model{
 
     if (!_m_model) {
@@ -344,6 +348,8 @@
         self.m_view_soldOut.hidden = YES;
         self.m_img_soldOut.hidden = YES;
     }
+
+    [self func_updateConsrtains];
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

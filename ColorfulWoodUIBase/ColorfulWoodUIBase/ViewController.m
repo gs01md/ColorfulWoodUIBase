@@ -45,7 +45,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     [self.view addSubview:self.m_tableView];
 
     if (view) {
-        [self.m_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(view.mas_bottom);
             make.left.equalTo(self.view);
             make.right.equalTo(self.view);
@@ -203,6 +203,16 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 - (void) func_getOne{
 
     NSMutableArray * data = [NSMutableArray new];
+
+
+    CWUBCell_ImgBack_TitleFront_Model * model16 = [CWUBCell_ImgBack_TitleFront_Model new];
+    model16.m_type = CWUBCellType_ImgBack_TitleFront;
+
+    model16.m_title = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+    model16.m_image.m_imgName = @"button";
+    model16.m_image.m_height = 50.;
+    model16.m_bottomLineInfo.m_color = [UIColor redColor];
+    [data addObject:model16];
 
     CWUBCell_TitleTop_TitleBottom_Model * model15 = [CWUBCell_TitleTop_TitleBottom_Model new];
     model15.m_type = CWUBCellType_TitleTop_TitleBottom;

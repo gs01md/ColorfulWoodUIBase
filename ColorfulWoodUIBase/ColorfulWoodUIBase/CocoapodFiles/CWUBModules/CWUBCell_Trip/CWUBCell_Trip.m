@@ -91,7 +91,12 @@
     [self addSubview:self.m_lbl_passers];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_startDateTime_title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_startDateTime_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.height.equalTo(@(20.));
@@ -99,7 +104,7 @@
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
     }];
 
-    [_m_lbl_startDateTime mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_startDateTime mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.height.equalTo(self.m_lbl_startDateTime_title);
         //make.bottom.equalTo(_m_lbl_flyingHours.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
@@ -107,7 +112,7 @@
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_lbl_flyingHours mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_flyingHours mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical*3);
         make.bottom.equalTo(self.m_lbl_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/CENTER_SPACE_RADIO);
         make.width.equalTo(@(CWUBDefineSViewWidth/4.));
@@ -115,14 +120,14 @@
     }];
 
     if (self.m_model.m_fly_type == CWUBCell_Trip_Model_TripType_Task) {
-        [_m_lbl_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_m_lbl_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
             make.width.equalTo(@(CWUBDefineSViewWidth/4.));
             make.centerX.equalTo(self);
             make.top.equalTo(self.m_lbl_flyingHours.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/CENTER_SPACE_RADIO);
         }];
     } else {
-        [_m_lbl_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_m_lbl_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(20.));
             make.width.equalTo(@(80.));
             make.centerX.equalTo(self);
@@ -130,7 +135,7 @@
         }];
     }
 
-    [_m_lbl_passers mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_passers mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@(CWUBDefineSViewWidth/4.));
         make.centerX.equalTo(self);
         make.top.equalTo(self.m_lbl_sep.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/CENTER_SPACE_RADIO);
@@ -138,9 +143,9 @@
     }];
 
 
-    [_m_lbl_startCity mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.greaterThanOrEqualTo(_m_lbl_startDateTime.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical*2);
-//        make.bottom.greaterThanOrEqualTo(self).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
+    [_m_lbl_startCity mas_remakeConstraints:^(MASConstraintMaker *make) {
+        //        make.top.greaterThanOrEqualTo(_m_lbl_startDateTime.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical*2);
+        //        make.bottom.greaterThanOrEqualTo(self).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.right.equalTo(self.m_lbl_sep.mas_left).offset(-CWUBBaseViewConfig_Space_Side_Horizontal/2.);
         make.centerY.equalTo(self.m_lbl_sep);
@@ -148,9 +153,9 @@
 
 
 
-    [_m_lbl_arrivialCity mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.greaterThanOrEqualTo(_m_lbl_startDateTime.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical*2);
-//        make.bottom.greaterThanOrEqualTo(self).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
+    [_m_lbl_arrivialCity mas_remakeConstraints:^(MASConstraintMaker *make) {
+        //        make.top.greaterThanOrEqualTo(_m_lbl_startDateTime.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical*2);
+        //        make.bottom.greaterThanOrEqualTo(self).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self.m_lbl_sep.mas_right).offset(CWUBBaseViewConfig_Space_Side_Horizontal/2.);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.centerY.equalTo(self.m_lbl_sep);
@@ -159,7 +164,7 @@
 
 
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -168,6 +173,7 @@
     }];
 }
 
+#pragma mark - 属性
 -(CWUBCell_Trip_Model*) m_model{
 
     if (!_m_model) {
@@ -301,6 +307,8 @@
     [self.m_lbl_arrivialCity interface_update:model.m_arrivialCity];
     [self.m_lbl_flyingHours interface_update:model.m_flyingHours];
     [self.m_lbl_passers interface_update:model.m_passers];
+
+    [self func_updateConsrtains];
 
 }
 

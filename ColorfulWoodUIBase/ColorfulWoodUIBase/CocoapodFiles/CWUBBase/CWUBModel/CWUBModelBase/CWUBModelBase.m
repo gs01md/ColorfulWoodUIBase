@@ -50,6 +50,7 @@
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom.h"
 #import "CWUBCell_TitleLeft_TextViewRight_TitleRightBottom.h"
 #import "CWUBCell_TitleTop_TitleBottom.h"
+#import "CWUBCell_ImgBack_TitleFront.h"
 
 @implementation CWUBModelBase
 /**
@@ -234,6 +235,10 @@
 
             case CWUBCellType_TitleTop_TitleBottom:
                 view = [self func_CWUBCell_TitleTop_TitleBottom:tableView];
+                break;
+
+            case CWUBCellType_ImgBack_TitleFront:
+                view = [self func_CWUBCell_ImgBack_TitleFront:tableView];
                 break;
 
 
@@ -834,6 +839,25 @@
     }
 
 }
+
+- (CWUBCell_ImgBack_TitleFront*) func_CWUBCell_ImgBack_TitleFront:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgBack_TitleFront";
+        CWUBCell_ImgBack_TitleFront *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgBack_TitleFront alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgBack_TitleFront alloc] initWithModel:self];
+    }
+
+}
+
+
 
 #pragma mark - 参数设置
 

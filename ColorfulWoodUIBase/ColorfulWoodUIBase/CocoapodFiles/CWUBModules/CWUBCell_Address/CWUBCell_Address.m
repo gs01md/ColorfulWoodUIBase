@@ -59,35 +59,42 @@
     [self addSubview:self.m_lbl_address];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
     }];
-    
-    [_m_lbl_info_name_phone mas_makeConstraints:^(MASConstraintMaker *make) {
+
+    [_m_lbl_info_name_phone mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_lbl_address.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/4.);
         make.left.equalTo(self.m_lbl_title.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_lbl_address mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_address mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.m_lbl_info_name_phone.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/4.);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self.m_lbl_info_name_phone);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_lbl_address.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
     }];
+
 }
 
+#pragma mark - 属性
 -(CWUBCell_Address_Model*) m_model{
 
     if (!_m_model) {

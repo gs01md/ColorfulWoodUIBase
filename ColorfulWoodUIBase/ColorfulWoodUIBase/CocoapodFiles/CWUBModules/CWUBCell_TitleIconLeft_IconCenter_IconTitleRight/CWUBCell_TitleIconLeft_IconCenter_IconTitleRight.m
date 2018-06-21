@@ -58,37 +58,42 @@
     [self addSubview:self.m_img_center];
     [self addSubview:self.m_img_sep];
 
-    [_m_img_center mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_img_center mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.centerY.equalTo(self);
-//        make.top.equalTo(self).offset(margin_topOrBottom);
-//        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
+        //        make.top.equalTo(self).offset(margin_topOrBottom);
+        //        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
         make.width.equalTo(@(self.m_model.m_img_center.m_width));
         make.height.equalTo(@(self.m_model.m_img_center.m_height));
     }];
 
-    [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.lessThanOrEqualTo(@(CWUBDefineSViewWidth/3.2));
         make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_left.m_margin_bottom);
     }];
 
-    [_m_lbl_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.lessThanOrEqualTo(@(CWUBDefineSViewWidth/3.2));
         make.top.equalTo(self).offset(self.m_model.m_title_right.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_right.m_margin_bottom);
     }];
 
-    [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_left.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal/2.);
         make.centerY.equalTo(self.m_img_center).offset(4);
         make.width.equalTo(@(self.m_model.m_img_left.m_width));
         make.height.equalTo(@(self.m_model.m_img_left.m_height));
     }];
 
-    [_m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_lbl_right.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal/2.);
         make.centerY.equalTo(self.m_img_left);
         make.width.equalTo(@(self.m_model.m_img_right.m_width));
@@ -96,7 +101,7 @@
     }];
 
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -105,6 +110,7 @@
     }];
 }
 
+#pragma mark - 属性
 -(CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model*) m_model{
 
     if (!_m_model) {
@@ -194,6 +200,8 @@
     [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
     [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
     [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center.m_imgName]];
+
+    [self func_updateConsrtains];
 }
 
 #pragma mark - 接口

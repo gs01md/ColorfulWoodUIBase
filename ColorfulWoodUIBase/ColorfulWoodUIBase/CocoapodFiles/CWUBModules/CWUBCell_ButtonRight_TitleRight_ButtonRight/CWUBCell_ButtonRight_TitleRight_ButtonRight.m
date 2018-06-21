@@ -37,29 +37,34 @@
     [self addSubview:self.m_lbl_right];
     [self addSubview:self.m_btn_right];
 
-    [_m_btn_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_btn_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBDefine_Width(26.));
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical*1.5);
         make.bottom.equalTo(self.mas_bottom).offset(-CWUBBaseViewConfig_Space_Side_Vertical*1.5);
     }];
 
-    [_m_lbl_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.right.equalTo(self.m_btn_right.mas_left).offset(-5.);
         make.top.equalTo(self.m_btn_right);
         make.bottom.equalTo(self.m_btn_right);
     }];
 
-    [_m_btn_img mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_btn_img mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_lbl_right.mas_left).offset(-5.);
         make.top.equalTo(self.m_btn_right);
         make.bottom.equalTo(self.m_btn_right);
         make.height.equalTo(@(20));
         make.width.equalTo(@(20));
     }];
-
 }
 
+#pragma mark - 属性
 -(CWUBCell_ButtonRight_TitleRight_ButtonRight_Model*) m_model{
 
     if (!_m_model) {
@@ -121,6 +126,8 @@
     [_m_btn_right setTitleColor:self.m_model.m_button_title.m_color forState:UIControlStateNormal];
     [_m_lbl_right interface_update:self.m_model.m_title];
     [_m_btn_img setImage:[UIImage imageNamed:self.m_model.m_button_img] forState:UIControlStateNormal];
+
+    [self func_updateConsrtains];
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

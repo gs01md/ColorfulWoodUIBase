@@ -41,7 +41,7 @@ CWUBCell_WebImgStretchDelegate
     [self.view addSubview:self.m_tableView];
 
     if (view) {
-        [self.m_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(view.mas_bottom);
             make.left.equalTo(self.view);
             make.right.equalTo(self.view);

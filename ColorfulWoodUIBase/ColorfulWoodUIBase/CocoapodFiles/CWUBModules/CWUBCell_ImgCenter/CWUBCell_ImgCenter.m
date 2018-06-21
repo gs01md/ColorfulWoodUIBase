@@ -51,7 +51,12 @@
     [self addSubview:self.m_img_center];
     [self addSubview:self.m_img_sep];
 
-    [_m_img_center mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+    
+    [_m_img_center mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.top.equalTo(self).offset(self.m_model.m_image.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_image.m_margin_bottom);
@@ -59,7 +64,7 @@
         make.height.equalTo(@(self.m_model.m_image.m_height));
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -67,6 +72,7 @@
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_img_center.mas_bottom).offset(self.m_model.m_image.m_margin_bottom);
     }];
+
 }
 
 -(CWUBCell_ImgCenter_Model*) m_model{
@@ -109,6 +115,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 }
 
 #pragma mark - 接口

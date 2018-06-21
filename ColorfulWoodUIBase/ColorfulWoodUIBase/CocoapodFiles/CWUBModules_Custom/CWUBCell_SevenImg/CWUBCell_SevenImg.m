@@ -69,10 +69,15 @@
 
     [self addSubview:self.m_img_sep];
 
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
     /**
      * 把第一个图片作为标志位
      */
-    [_m_img_one mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_one mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self).offset(self.m_model.m_img_one.m_margin_left);
         make.top.equalTo(self).offset(self.m_model.m_img_one.m_margin_top);
@@ -81,7 +86,7 @@
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_one.m_margin_bottom);
     }];
 
-    [_m_img_three mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_three mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.right.equalTo(self).offset(-self.m_model.m_img_three.m_margin_right);
         make.width.equalTo(self.m_img_one);
@@ -89,7 +94,7 @@
         make.centerY.equalTo(self.m_img_one);
     }];
 
-    [_m_img_two mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_two mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerX.equalTo(self);
         make.width.equalTo(self.m_img_one);
@@ -97,7 +102,7 @@
         make.centerY.equalTo(self.m_img_one);
     }];
 
-    [_m_lbl_one mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_one mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerY.equalTo(self.m_img_one);
         make.left.equalTo(self).offset(self.m_model.m_title_one.m_margin_left);
@@ -105,7 +110,7 @@
         make.height.equalTo(@(self.m_model.m_title_one.m_height));
     }];
 
-    [_m_lbl_two mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_two mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerY.equalTo(self.m_img_one);
         make.left.equalTo(self.m_img_one.mas_right).offset(self.m_model.m_title_two.m_margin_left);
@@ -113,7 +118,7 @@
         make.height.equalTo(self.m_lbl_one);
     }];
 
-    [_m_lbl_three mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_three mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerY.equalTo(self.m_img_one);
         make.left.equalTo(self.m_img_two.mas_right).offset(self.m_model.m_title_three.m_margin_left);
@@ -121,7 +126,7 @@
         make.height.equalTo(self.m_lbl_one);
     }];
 
-    [_m_lbl_four mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_four mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerY.equalTo(self.m_img_one);
         make.left.equalTo(self.m_img_three.mas_right).offset(self.m_model.m_title_four.m_margin_left);
@@ -129,7 +134,7 @@
         make.height.equalTo(self.m_lbl_one);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -139,6 +144,7 @@
     }];
 }
 
+#pragma mark - 属性
 - (CWUBCell_SevenImg_Model*)m_model{
 
     if (!_m_model) {
@@ -247,6 +253,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 
 }
 

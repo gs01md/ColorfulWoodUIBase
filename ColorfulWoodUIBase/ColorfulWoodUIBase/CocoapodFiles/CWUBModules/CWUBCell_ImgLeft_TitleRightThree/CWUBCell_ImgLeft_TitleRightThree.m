@@ -67,21 +67,26 @@
     [self.m_back addSubview:self.m_lbl_rightBottom];
     [self.m_back addSubview:self.m_img_sep];
 
-    [_m_back mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_back mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_back.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_back.m_margin_right);
         make.top.equalTo(self);
         make.bottom.equalTo(self.m_img_sep).offset(-1.);
     }];
 
-    [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.m_back);
         make.left.equalTo(self.m_back).offset(self.m_model.m_img_left.m_margin_left);
         make.width.equalTo(@(self.m_model.m_img_left.m_width));
         make.height.equalTo(@(self.m_model.m_img_left.m_height));
     }];
 
-    [_m_lbl_rightTop mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_rightTop mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self.m_img_left.mas_right).offset(self.m_model.m_title_rightTop.m_margin_left);
         make.right.equalTo(self.m_back).offset(-self.m_model.m_title_rightTop.m_margin_right);
@@ -89,7 +94,7 @@
         make.bottom.equalTo(self.m_lbl_rightCenter.mas_top).offset(-self.m_model.m_title_rightTop.m_margin_bottom);
     }];
 
-    [_m_lbl_rightCenter mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_rightCenter mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self.m_lbl_rightTop);
         make.right.equalTo(self.m_lbl_rightTop);
@@ -97,7 +102,7 @@
         make.bottom.equalTo(self.m_lbl_rightBottom.mas_top).offset(-self.m_model.m_title_rightCenter.m_margin_bottom);
     }];
 
-    [_m_lbl_rightBottom mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_rightBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self.m_lbl_rightTop);
         make.right.equalTo(self.m_lbl_rightTop);
@@ -106,7 +111,7 @@
     }];
 
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -213,6 +218,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 
 }
 

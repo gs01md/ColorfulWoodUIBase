@@ -53,15 +53,21 @@
 
     [self addSubview:self.m_lbl_title];
     [self addSubview:self.m_img_sep];
+    
+    [self func_updateConsrtains];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
         make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
         make.right.equalTo(@(-self.m_model.m_title.m_margin_right));
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -110,6 +116,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 }
 
 #pragma mark - 接口

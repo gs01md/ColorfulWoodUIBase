@@ -67,35 +67,40 @@
     [self addSubview:self.m_lbl_time];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal+CWUBBaseViewConfig_Space_Element_Horizontal);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_lbl_info.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/2.);
     }];
 
-    [_m_lbl_info mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_info mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_title);
         make.right.equalTo(self.m_lbl_title);
         make.top.equalTo(self.m_lbl_title.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/2.);
         make.bottom.equalTo(self.m_lbl_time.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/2.);
     }];
 
-    [_m_lbl_time mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_time mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_title);
         make.right.equalTo(self.m_lbl_title);
         make.top.equalTo(self.m_lbl_info.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/2.);
         make.bottom.equalTo(self.m_img_sep).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 
-    [_m_lbl_circle mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_circle mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(@(CIRCLE_SEP_WIDTH));
         make.height.equalTo(@(CIRCLE_SEP_WIDTH));
         make.centerY.equalTo(self.m_lbl_title);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -103,15 +108,15 @@
         //make.top.equalTo(_m_lbl_time.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 
-    [_m_lbl_vertical mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_vertical mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.m_lbl_circle);
         make.top.equalTo(self.m_lbl_info).offset(4.);
         make.width.equalTo(@(1));
         make.bottom.equalTo(self);
     }];
-
 }
 
+#pragma mark - 属性
 -(CWUBCell_Refund_Model*) m_model{
 
     if (!_m_model) {
@@ -206,6 +211,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 }
 
 #pragma mark - 接口

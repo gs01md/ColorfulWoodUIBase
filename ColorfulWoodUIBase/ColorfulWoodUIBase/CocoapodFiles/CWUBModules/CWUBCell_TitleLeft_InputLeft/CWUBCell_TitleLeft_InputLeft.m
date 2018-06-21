@@ -43,14 +43,19 @@
     [self addSubview:self.m_lbl_textfield];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+    
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
     }];
 
-    [_m_lbl_textfield mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_textfield mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
@@ -58,15 +63,17 @@
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_lbl_textfield.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
     }];
+
 }
 
+#pragma mark - 属性
 -(CWUBCell_TitleLeft_InputLeft_Model*) m_model{
 
     if (!_m_model) {
@@ -118,6 +125,8 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+
+    [self func_updateConsrtains];
 }
 
 #pragma mark - 接口

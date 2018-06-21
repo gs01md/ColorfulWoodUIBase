@@ -47,14 +47,19 @@
     [self addSubview:self.m_lbl_Info_id];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_Show_name mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_Show_name mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_lbl_Info_id.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/3.);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
     }];
 
-    [_m_lbl_Info_name mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_Info_name mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_lbl_Info_id.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/3.);
@@ -62,7 +67,7 @@
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_lbl_Info_id mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_Info_id mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self.m_lbl_Info_name.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/3.);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
@@ -70,14 +75,14 @@
         make.right.equalTo(self.m_lbl_Info_name);
     }];
 
-    [_m_lbl_Show_id mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_Show_id mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_Show_name);
         make.top.equalTo(self.m_lbl_Info_id);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -86,6 +91,7 @@
     }];
 }
 
+#pragma mark - 属性
 -(CWUBCell_Passenger_Model*) m_model{
 
     if (!_m_model) {
@@ -164,6 +170,8 @@
     [self.m_lbl_Show_id interface_update:model.m_title_id];
     [self.m_lbl_Info_name interface_update:model.m_info_name];
     [self.m_lbl_Info_id interface_update:model.m_info_id];
+
+    [self func_updateConsrtains];
 
 }
 

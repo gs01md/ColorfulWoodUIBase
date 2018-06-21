@@ -41,8 +41,14 @@
 
     [self addSubview:self.m_btn];
     [self addSubview:self.m_img_sep];
+    
+    [self func_updateConsrtains];
+}
 
-    [_m_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)func_updateConsrtains{
+
+
+    [_m_btn mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical*2);
@@ -51,7 +57,7 @@
     }];
 
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -61,6 +67,7 @@
     }];
 }
 
+#pragma mark - 属性
 - (CWUBButtonWithInfo *)m_btn{
 
     if (!_m_btn) {
@@ -105,6 +112,8 @@
     }
 
     self.delegate = (id<CWUBCell_ButtonRight_SpaceBottom_Delegate>)self.m_delegate;
+
+    [self func_updateConsrtains];
 
 }
 
