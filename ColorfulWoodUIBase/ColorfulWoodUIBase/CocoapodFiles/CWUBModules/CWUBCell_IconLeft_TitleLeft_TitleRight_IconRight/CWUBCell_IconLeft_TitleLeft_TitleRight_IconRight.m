@@ -62,35 +62,40 @@
     [self addSubview:self.m_img_right];
     [self addSubview:self.m_img_sep];
 
-    [_m_img_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_constrains];
+}
+
+- (void)func_constrains{
+
+    [_m_img_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_img_left.m_margin_left);
         make.centerY.equalTo(self.m_lbl_left);
         make.width.equalTo(@(self.m_model.m_img_left.m_width));
         make.height.equalTo(@(self.m_model.m_img_left.m_height));
     }];
 
-    [_m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-self.m_model.m_img_right.m_margin_right);
         make.width.equalTo(@(self.m_model.m_img_right.m_width));
         make.height.equalTo(@(self.m_model.m_img_right.m_height));
         make.centerY.equalTo(self);
     }];
 
-    [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_img_left.mas_right).offset(self.m_model.m_title_left.m_margin_left);
         make.right.equalTo(self.mas_centerX);
         make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_left.m_margin_bottom);
     }];
 
-    [_m_lbl_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_centerX).offset(self.m_model.m_title_right.m_margin_left);
         make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_title_right.m_margin_right);
         make.top.equalTo(self).offset(self.m_model.m_title_right.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_right.m_margin_bottom);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         switch (self.m_model.m_bottomLineInfo.m_bottomLineType) {
             case CWUBBottomLineType_left:
@@ -113,7 +118,7 @@
     }];
 }
 
--(CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model*) m_model{
+- (CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model*) m_model{
 
     if (!_m_model) {
         _m_model = [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model new];
@@ -219,6 +224,7 @@
     [self.m_lbl_right interface_update:model.m_title_right];
     [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
     [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
+    [self func_constrains];
 }
 
 #pragma mark - 接口
