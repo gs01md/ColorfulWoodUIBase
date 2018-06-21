@@ -608,3 +608,18 @@ model13.m_title_left.m_width = [model13.m_title_left interface_setWidthByContent
 model13.m_bottomLineInfo.m_color = [UIColor blueColor];
 [data addObject:model13];
 ```
+## 4.22. CWUBCell_ImgBack_TitleFront
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgBack_TitleFront.png)
+```Objective C
+
+CWUBCell_ImgBack_TitleFront_Model * model16 = [CWUBCell_ImgBack_TitleFront_Model new];
+model16.m_type = CWUBCellType_ImgBack_TitleFront;
+
+model16.m_title = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+model16.m_image.m_imgName = @"button";
+model16.m_image.m_height = 50.;
+model16.m_bottomLineInfo.m_color = [UIColor redColor];
+[data addObject:model16];
+```
+
