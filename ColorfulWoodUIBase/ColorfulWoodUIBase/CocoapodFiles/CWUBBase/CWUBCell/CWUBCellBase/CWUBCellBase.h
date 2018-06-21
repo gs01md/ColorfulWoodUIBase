@@ -12,6 +12,8 @@
 #import "CWUBDefine.h"
 #import <ColorfulWoodCategories/UIColor+Hex.h>
 #import "CWUBLabelWithModel.h"
+#import "CWUBLableLeftTop.h"
+#import "CWUBTextfieldWithModel.h"
 
 @interface CWUBCellBase : UITableViewCell
 

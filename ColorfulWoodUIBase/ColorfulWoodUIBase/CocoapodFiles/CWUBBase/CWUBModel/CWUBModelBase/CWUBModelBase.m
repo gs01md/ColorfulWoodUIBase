@@ -46,6 +46,10 @@
 #import "CWUBCell_ImgCenter_TitleCenter.h"
 #import "CWUBCell_TitleLeft_CollectionRight_ImgRight.h"
 #import "CWUBCell_SevenImg.h"
+#import "CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight.h"
+#import "CWUBCell_TitleLeft_InputRight_TitleRightBottom.h"
+#import "CWUBCell_TitleLeft_TextViewRight_TitleRightBottom.h"
+#import "CWUBCell_TitleTop_TitleBottom.h"
 
 @implementation CWUBModelBase
 /**
@@ -214,6 +218,22 @@
 
             case CWUBCellType_SevenImg:
                 view = [self func_CWUBCell_SevenImg:tableView];
+                break;
+
+            case CWUBCellType_TitleLeft_InputRight_TitleRightBottom:
+                view = [self func_CWUBCell_TitleLeft_InputRight_TitleRightBottom:tableView];
+                break;
+
+            case CWUBCellType_TitleLeft_InputRight_TitleRightBottom_ImgRight:
+                view = [self func_CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight:tableView];
+                break;
+
+            case CWUBCellType_TitleLeft_TextViewRight_TitleRightBottom:
+                view = [self func_CWUBCell_TitleLeft_TextViewRight_TitleRightBottom:tableView];
+                break;
+
+            case CWUBCellType_TitleTop_TitleBottom:
+                view = [self func_CWUBCell_TitleTop_TitleBottom:tableView];
                 break;
 
 
@@ -747,7 +767,73 @@
 
 }
 
+- (CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight*) func_CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight:(UITableView*)tableView{
 
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight";
+        CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_TitleLeft_InputRight_TitleRightBottom*) func_CWUBCell_TitleLeft_InputRight_TitleRightBottom:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeft_InputRight_TitleRightBottom";
+        CWUBCell_TitleLeft_InputRight_TitleRightBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeft_InputRight_TitleRightBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeft_InputRight_TitleRightBottom alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_TitleLeft_TextViewRight_TitleRightBottom*) func_CWUBCell_TitleLeft_TextViewRight_TitleRightBottom:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeft_TextViewRight_TitleRightBottom";
+        CWUBCell_TitleLeft_TextViewRight_TitleRightBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeft_TextViewRight_TitleRightBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeft_TextViewRight_TitleRightBottom alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_TitleTop_TitleBottom*) func_CWUBCell_TitleTop_TitleBottom:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleTop_TitleBottom";
+        CWUBCell_TitleTop_TitleBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleTop_TitleBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleTop_TitleBottom alloc] initWithModel:self];
+    }
+
+}
 
 #pragma mark - 参数设置
 

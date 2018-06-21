@@ -13,7 +13,9 @@
 UITableViewDelegate,
 UITableViewDataSource,
 CWUBCell_WebImgStretchDelegate,
-CWUBCell_MyFollow_MyBusinessDelegate
+CWUBCell_MyFollow_MyBusinessDelegate,
+CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate,
+CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -201,6 +203,43 @@ CWUBCell_MyFollow_MyBusinessDelegate
 - (void) func_getOne{
 
     NSMutableArray * data = [NSMutableArray new];
+
+    CWUBCell_TitleTop_TitleBottom_Model * model15 = [CWUBCell_TitleTop_TitleBottom_Model new];
+    model15.m_type = CWUBCellType_TitleTop_TitleBottom;
+
+    model15.m_title_top = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+    model15.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model15.m_bottomLineInfo.m_color = [UIColor redColor];
+    [data addObject:model15];
+
+    CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model * model14 = [CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model new];
+    model14.m_type = CWUBCellType_TitleLeft_InputRight_TitleRightBottom_ImgRight;
+
+    model14.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+    model14.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model14.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model14.m_input_right.m_textPlaceholder = @"请输入内容";
+    model14.m_input_right.m_margin_bottom = 20.;
+    model14.m_input_right.m_margin_top = 20.;
+    model14.m_title_bottomRight.m_margin_bottom = 1.;
+    model14.m_title_left.m_width = [model14.m_title_left interface_setWidthByContent];
+    model14.m_bottomLineInfo.m_color = [UIColor blueColor];
+    model14.m_img_right = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+    [data addObject:model14];
+
+    CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model * model13 = [CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model new];
+    model13.m_type = CWUBCellType_TitleLeft_InputRight_TitleRightBottom;
+
+    model13.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
+    model13.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model13.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model13.m_input_right.m_textPlaceholder = @"请输入内容";
+    model13.m_input_right.m_margin_bottom = 20.;
+    model13.m_input_right.m_margin_top = 20.;
+    model13.m_title_bottomRight.m_margin_bottom = 1.;
+    model13.m_title_left.m_width = [model13.m_title_left interface_setWidthByContent];
+    model13.m_bottomLineInfo.m_color = [UIColor blueColor];
+    [data addObject:model13];
 
     CWUBCell_SevenImg_Model * model12 = [CWUBCell_SevenImg_Model new];
     model12.m_type = CWUBCellType_SevenImg;
@@ -540,10 +579,14 @@ CWUBCell_MyFollow_MyBusinessDelegate
         /**
          * 代理
          */
-        if (model.m_type == CWUBCellType_MyFollow_MyBusiness) {
-            CWUBCell_MyFollow_MyBusiness * cell1 = (CWUBCell_MyFollow_MyBusiness*)cell;
+        if (model.m_type == CWUBCellType_TitleLeft_InputRight_TitleRightBottom) {
+            CWUBCell_TitleLeft_InputRight_TitleRightBottom * cell1 = (CWUBCell_TitleLeft_InputRight_TitleRightBottom*)cell;
             cell1.delegate = self;
-            //cell1.delegate = self;
+        }
+
+        if (model.m_type == CWUBCellType_TitleLeft_CollectionRight_ImgRight) {
+            CWUBCell_TitleLeft_CollectionRight_ImgRight * cell1 = (CWUBCell_TitleLeft_CollectionRight_ImgRight*)cell;
+            cell1.delegate = self;
         }
 
         return cell;
@@ -579,6 +622,42 @@ CWUBCell_MyFollow_MyBusinessDelegate
 }
 - (void)CWUBCell_MyFollow_MyBusinessDelegate_right{
     NSLog(@"CWUBCell_MyFollow_MyBusinessDelegate_right");
+}
+- (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_constrains:(NSString*)str{
+//    CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model* model = (CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model*)self.m_model.m_array_show[0][0];
+//    model.m_input_right.m_text = str;
+//    [self.m_tableView setNeedsLayout];
+//    [self.m_tableView setNeedsDisplay];
+//    [self.m_tableView reloadData];
+}
+
+
+/**
+ * 返回选择的行，外面重设tableview的数据，然后刷新该界面
+ */
+- (void)CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate_constrains:(long)index{
+
+    if (index<0) {
+        return;
+    }
+
+    NSArray * array = self.m_model.m_array_show[0];
+
+    for (CWUBModelBase *temp in array) {
+        if (temp.m_type == CWUBCellType_TitleLeft_CollectionRight_ImgRight) {
+            CWUBCell_TitleLeft_CollectionRight_ImgRight_Model* model = (CWUBCell_TitleLeft_CollectionRight_ImgRight_Model*)temp;
+            [model.m_collection_right.m_array removeObjectAtIndex:index];
+        }
+    }
+
+    [self.m_tableView reloadData];
+
+    [self performSelector:@selector(func_reload) withObject:nil afterDelay:0.1];
+
+}
+
+- (void)func_reload{
+    [self.m_tableView reloadData];
 }
 
 @end

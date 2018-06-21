@@ -9,5 +9,21 @@
 #import "CWUBCell_TitleLeft_InputLeft_Model.h"
 
 @implementation CWUBCell_TitleLeft_InputLeft_Model
+- (CWUBTextInfo*) m_title{
 
+    if (!_m_title) {
+        _m_title = [CWUBTextInfo new];
+    }
+
+    return _m_title;
+}
+
+- (CWUBTextInfo*) m_input{
+
+    if (!_m_input) {
+        _m_input = [CWUBTextInfo new];
+    }
+
+    return _m_input;
+}
 @end

@@ -54,4 +54,9 @@
  * 默认的初始化接口
  */
 + (instancetype)interface_nullCheckInit:(CWUBTextInfo*)info;
+
+/**
+ * 根据内容设置宽度，适合单行的标题
+ */
+- (float)interface_setWidthByContent;
 @end

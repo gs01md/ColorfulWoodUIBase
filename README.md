@@ -2,14 +2,15 @@
 
 
 
-## 1. 目的：该动态库致力于提供一些通用的界面设计，用于快速搭建界面，减少界面开发时间
+## 1. 目的：该框架致力于提供一些通用的界面设计，用于快速搭建界面，减少界面开发时间
+
 界面开发是iOS开发，或者几乎所有程序开发中重要的一环，对于用户来说，这带来很重要的体验；但是，对于开发者来说，界面开发却是最低级和没有价值的任务。而业务逻辑，程序性能更能体现程序的价值。所以，为了节省界面开发的时间，把精力放在更重要的地方，故此开发这套框架。
 
 ## 2. 导入说明
 
 使用时，可以直接导入，需要有多个依赖库：
-Masonry
-ColorfulWoodCategories
+Masonry、
+ColorfulWoodCategories、
 SDWebImage
 
 也可使用cocoapod
@@ -25,7 +26,7 @@ CWUBModel 是一个数组的数组，代表着section及cell。
 每个cell对应着一个CWUBModelBase，cell的类型是CWUBCellBase。
 CWUBModelBase里面的m_type属性定义了cell的类型，里面的属性定义了布局和内容。
 
-## 3.2. 使用示例工程中的程序简单演示了使用步骤，该框架基本依赖在UITableView中，
+## 3.2. 使用示例工程中的程序简单演示了使用步骤，该框架基本依赖在UITableView中
 
 ```
 - (UITableView*)m_tableView{
@@ -517,5 +518,35 @@ model11.m_img_right = [[CWUBImageInfo alloc] initWithName:@"right" width:10 heig
 model11.m_bottomLineInfo.m_color = [UIColor redColor];
 
 [data addObject:model11];
+
+//涉及到删除，需要刷新两次，才能及时更新高度
+/**
+* 返回选择的行，外面重设tableview的数据，然后刷新该界面
+*/
+- (void)CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate_constrains:(long)index{
+
+if (index<0) {
+return;
+}
+
+NSArray * array = self.m_model.m_array_show[0];
+
+for (CWUBModelBase *temp in array) {
+if (temp.m_type == CWUBCellType_TitleLeft_CollectionRight_ImgRight) {
+CWUBCell_TitleLeft_CollectionRight_ImgRight_Model* model = (CWUBCell_TitleLeft_CollectionRight_ImgRight_Model*)temp;
+[model.m_collection_right.m_array removeObjectAtIndex:index];
+}
+}
+
+[self.m_tableView reloadData];
+
+[self performSelector:@selector(func_reload) withObject:nil afterDelay:0.1];
+
+}
+
+- (void)func_reload{
+[self.m_tableView reloadData];
+}
+
 
 ```

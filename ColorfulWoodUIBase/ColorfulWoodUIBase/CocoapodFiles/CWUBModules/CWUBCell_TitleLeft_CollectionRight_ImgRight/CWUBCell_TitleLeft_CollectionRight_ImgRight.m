@@ -41,13 +41,13 @@ UICollectionViewDelegateFlowLayout>
 
 - (void) func_update{
 
-    [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_collection_right.mas_left).offset(-self.m_model.m_title_left.m_margin_right);
         make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
         make.left.equalTo(self).offset(self.m_model.m_title_left.m_margin_left);
     }];
 
-    [_m_img_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerY.equalTo(self.m_lbl_left);
         make.left.equalTo(self.m_collection_right.mas_right).offset(self.m_model.m_img_right.m_margin_left);
@@ -56,7 +56,7 @@ UICollectionViewDelegateFlowLayout>
         make.height.equalTo(@(self.m_model.m_img_right.m_height));
     }];
 
-    [_m_collection_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_collection_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_collection_right.m_margin_right);
         make.top.equalTo(self.m_lbl_left);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_collection_right.m_margin_bottom);
@@ -70,7 +70,7 @@ UICollectionViewDelegateFlowLayout>
         }
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -212,6 +212,14 @@ UICollectionViewDelegateFlowLayout>
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
 
     [self func_update];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate_constrains:)]) {
+
+        [self.delegate CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate_constrains:indexPath.row];
+    }
 }
 
 #pragma mark - UICollectionViewFlowLayoutDelegate

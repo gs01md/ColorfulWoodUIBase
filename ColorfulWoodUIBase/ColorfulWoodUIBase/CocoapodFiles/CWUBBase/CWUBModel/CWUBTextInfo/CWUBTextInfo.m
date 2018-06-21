@@ -146,4 +146,16 @@
 
     return _m_height;
 }
+
+/**
+ * 根据内容设置宽度，适合单行的标题
+ */
+- (float)interface_setWidthByContent{
+
+    NSDictionary *attrs=@{NSFontAttributeName:self.m_font};
+    CGSize mySize=[self.m_text sizeWithAttributes:attrs];
+    self.m_width = mySize.width;
+
+    return self.m_width;
+}
 @end
