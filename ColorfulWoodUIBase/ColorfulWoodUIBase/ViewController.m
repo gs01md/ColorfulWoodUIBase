@@ -204,13 +204,22 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    CWUBCell_TitleCenter_Model *model17 = [CWUBCell_TitleCenter_Model new];
+    model17.m_type = CWUBCellType_TitleCenter;
+    model17.m_title.m_margin_top = 1.;
+    model17.m_title.m_margin_bottom = 1.;
+    model17.m_title.m_text = @"*资料认证未通过，点击进入修改";
+    model17.m_title.m_color = [UIColor redColor];
+    model17.m_bottomLineInfo.m_image = @"line";
+    [data addObject:model17];
 
     CWUBCell_ImgBack_TitleFront_Model * model16 = [CWUBCell_ImgBack_TitleFront_Model new];
     model16.m_type = CWUBCellType_ImgBack_TitleFront;
 
     model16.m_title = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
     model16.m_image.m_imgName = @"button";
-    model16.m_image.m_height = 50.;
+    model16.m_image.m_height = 300;
+    model16.m_image.m_contentMode = UIViewContentModeScaleToFill;
     model16.m_bottomLineInfo.m_color = [UIColor redColor];
     [data addObject:model16];
 

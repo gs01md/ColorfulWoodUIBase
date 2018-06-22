@@ -170,7 +170,9 @@
     [self.m_lbl_Show_id interface_update:model.m_title_id];
     [self.m_lbl_Info_name interface_update:model.m_info_name];
     [self.m_lbl_Info_id interface_update:model.m_info_id];
-
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
     [self func_updateConsrtains];
 
 }

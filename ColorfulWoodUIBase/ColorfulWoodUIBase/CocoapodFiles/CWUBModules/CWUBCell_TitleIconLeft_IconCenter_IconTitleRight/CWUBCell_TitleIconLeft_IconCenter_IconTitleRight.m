@@ -200,7 +200,9 @@
     [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
     [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
     [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_img_center.m_imgName]];
-
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
     [self func_updateConsrtains];
 }
 

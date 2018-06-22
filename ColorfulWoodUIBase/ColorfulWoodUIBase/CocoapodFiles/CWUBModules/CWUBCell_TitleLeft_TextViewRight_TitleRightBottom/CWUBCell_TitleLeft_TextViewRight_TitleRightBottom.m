@@ -147,7 +147,9 @@ UITextViewDelegate
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
     [self func_updateConsrtains];
 
     [self.m_textfield_right becomeFirstResponder];

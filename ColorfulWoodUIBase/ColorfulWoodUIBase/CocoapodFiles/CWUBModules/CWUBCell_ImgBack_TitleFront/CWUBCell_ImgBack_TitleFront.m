@@ -112,7 +112,7 @@
     if(!_m_img_back){
         _m_img_back = [UIImageView new];
         [_m_img_back setImage:[UIImage imageNamed:self.m_model.m_image.m_imgName]];
-        _m_img_back.contentMode = UIViewContentModeScaleToFill;
+        _m_img_back.contentMode = self.m_model.m_image.m_contentMode;
         _m_img_back.clipsToBounds = YES;
         [_m_img_back setClipsToBounds:YES];
     }
@@ -138,7 +138,9 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
     [self func_updateConsrtains];
 }
 

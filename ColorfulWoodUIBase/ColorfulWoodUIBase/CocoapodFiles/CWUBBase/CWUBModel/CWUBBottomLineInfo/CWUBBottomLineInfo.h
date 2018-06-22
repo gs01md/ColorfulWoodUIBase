@@ -24,6 +24,11 @@
 @property(nonatomic, strong)UIColor *m_color;
 
 /**
+ * 自定义分割线
+ */
+@property(nonatomic, strong)NSString *m_image;
+
+/**
  * 是否隐藏底部的分割线
  */
 @property(nonatomic, assign)BOOL m_isHiddenBottom;

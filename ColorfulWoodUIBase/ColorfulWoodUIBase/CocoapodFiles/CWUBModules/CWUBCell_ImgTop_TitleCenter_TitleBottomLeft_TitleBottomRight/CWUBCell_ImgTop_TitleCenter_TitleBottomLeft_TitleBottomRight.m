@@ -182,7 +182,9 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
     [self.m_img_top setImage:[UIImage imageNamed:self.m_model.m_img_top.m_imgName]];
 
     [self.m_lbl_center interface_update:model.m_title_center];
