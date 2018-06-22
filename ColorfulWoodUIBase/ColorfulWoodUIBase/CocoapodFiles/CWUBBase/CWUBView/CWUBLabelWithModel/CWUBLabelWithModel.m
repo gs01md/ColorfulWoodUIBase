@@ -44,16 +44,22 @@
             self.layer.cornerRadius = info.m_cornerInfo.m_cornerRadius;
             self.layer.borderWidth = info.m_cornerInfo.m_cornerWidth;
             self.layer.borderColor = [info.m_cornerInfo.m_cornerColor CGColor];
+            self.layer.masksToBounds = YES;
 
         }else{
 
             self.layer.cornerRadius = 0.;
             self.layer.borderWidth = 0.;
             self.layer.borderColor = [[UIColor clearColor] CGColor];
+            self.layer.masksToBounds = NO;
         }
 
         self.numberOfLines = info.m_numberOfLines;
         self.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
+
+        if (info.m_color_backGroud) {
+            self.backgroundColor = info.m_color_backGroud;
+        }
 
     }
 }

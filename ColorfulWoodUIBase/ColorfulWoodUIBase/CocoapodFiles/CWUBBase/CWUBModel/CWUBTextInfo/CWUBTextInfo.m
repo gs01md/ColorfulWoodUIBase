@@ -123,7 +123,7 @@
 - (UIColor*)m_color_backGroud{
 
     if (!_m_color_backGroud) {
-        _m_color_backGroud = [CWUBDefine colorBlueDeep];
+        _m_color_backGroud = [UIColor clearColor];
     }
 
     return _m_color_backGroud;
