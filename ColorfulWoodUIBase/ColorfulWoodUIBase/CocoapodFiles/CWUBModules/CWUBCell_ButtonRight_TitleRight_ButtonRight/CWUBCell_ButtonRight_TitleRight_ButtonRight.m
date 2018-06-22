@@ -126,9 +126,7 @@
     [_m_btn_right setTitleColor:self.m_model.m_button_title.m_color forState:UIControlStateNormal];
     [_m_lbl_right interface_update:self.m_model.m_title];
     [_m_btn_img setImage:[UIImage imageNamed:self.m_model.m_button_img] forState:UIControlStateNormal];
-    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
-        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
-    }
+
     [self func_updateConsrtains];
 }
 
