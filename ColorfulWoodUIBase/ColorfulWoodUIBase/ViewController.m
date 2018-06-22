@@ -292,6 +292,9 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 
     model11.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 
+    model11.m_title_right = [[CWUBTextInfo alloc] initWithText:@"请选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+
+    model11.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"请选择行业2" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 
     [model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
     [model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];

@@ -19,6 +19,24 @@
     return _m_title_left;
 }
 
+- (CWUBTextInfo*) m_title_right{
+
+    if (!_m_title_right) {
+        _m_title_right = [CWUBTextInfo new];
+    }
+
+    return _m_title_right;
+}
+
+- (CWUBTextInfo*) m_title_rightBottom{
+
+    if (!_m_title_rightBottom) {
+        _m_title_rightBottom = [CWUBTextInfo new];
+    }
+
+    return _m_title_rightBottom;
+}
+
 - (CWUBCollectionInfo*) m_collection_right{
 
     if (!_m_collection_right) {

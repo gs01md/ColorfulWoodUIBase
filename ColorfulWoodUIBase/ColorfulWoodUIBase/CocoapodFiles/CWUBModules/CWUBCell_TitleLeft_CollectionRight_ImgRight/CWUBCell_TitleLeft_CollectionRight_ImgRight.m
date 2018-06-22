@@ -16,6 +16,8 @@ UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) UICollectionView *m_collection_right;
+@property (nonatomic, strong) CWUBLabelWithModel *m_lbl_right;
+@property (nonatomic, strong) CWUBLabelWithModel *m_lbl_rightBottom;
 @property (nonatomic, strong) UIImageView * m_img_right;
 @property (nonatomic, strong) UIImageView * m_img_sep;
 
@@ -39,7 +41,7 @@ UICollectionViewDelegateFlowLayout>
     return self;
 }
 
-- (void) func_update{
+- (void) func_updateConstrains{
 
     [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_collection_right.mas_left).offset(-self.m_model.m_title_left.m_margin_right);
@@ -70,6 +72,20 @@ UICollectionViewDelegateFlowLayout>
         }
     }];
 
+    [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.centerY.equalTo(self.m_collection_right);
+        make.left.equalTo(self).offset(self.m_model.m_title_right.m_margin_left);
+        make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_title_right.m_margin_right);
+    }];
+
+    [_m_lbl_rightBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_rightBottom.m_margin_bottom);
+        make.left.equalTo(self).offset(self.m_model.m_title_rightBottom.m_margin_left);
+        make.right.equalTo(self.m_collection_right);
+    }];
+
     [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
@@ -86,8 +102,10 @@ UICollectionViewDelegateFlowLayout>
     [self addSubview:self.m_collection_right];
     [self addSubview:self.m_img_right];
     [self addSubview:self.m_img_sep];
+    [self addSubview:self.m_lbl_right];
+    [self addSubview:self.m_lbl_rightBottom];
 
-    [self func_update];
+    [self func_updateConstrains];
 
 }
 
@@ -109,6 +127,28 @@ UICollectionViewDelegateFlowLayout>
         _m_lbl_left.numberOfLines = 0;
     }
     return _m_lbl_left;
+}
+
+- (CWUBLabelWithModel *)m_lbl_right{
+
+    if (!_m_lbl_right) {
+        _m_lbl_right = [[CWUBLabelWithModel alloc] initWithModel: self.m_model.m_title_right];
+        _m_lbl_right.textAlignment = NSTextAlignmentRight;
+        _m_lbl_right.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
+        _m_lbl_right.numberOfLines = 0;
+    }
+    return _m_lbl_right;
+}
+
+- (CWUBLabelWithModel *)m_lbl_rightBottom{
+
+    if (!_m_lbl_rightBottom) {
+        _m_lbl_rightBottom = [[CWUBLabelWithModel alloc] initWithModel: self.m_model.m_title_rightBottom];
+        _m_lbl_rightBottom.textAlignment = NSTextAlignmentRight;
+        _m_lbl_rightBottom.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
+        _m_lbl_rightBottom.numberOfLines = 0;
+    }
+    return _m_lbl_rightBottom;
 }
 
 - (UICollectionView *)m_collection_right{
@@ -178,8 +218,12 @@ UICollectionViewDelegateFlowLayout>
     [self.m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
 
     [self.m_lbl_left interface_update:model.m_title_left];
+    [self.m_lbl_right interface_update:model.m_title_right];
+    [self.m_lbl_rightBottom interface_update:model.m_title_rightBottom];
 
     [self.m_collection_right reloadData];
+
+    [self func_updateConstrains];
 
 }
 
@@ -200,7 +244,6 @@ UICollectionViewDelegateFlowLayout>
 
     CWUBView_TitleLeft_ButtonRight *cell = (CWUBView_TitleLeft_ButtonRight *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CWUBCell_TitleLeft_CollectionRight_ImgRight_CellID" forIndexPath:indexPath];
 
-
     if (!cell) {
         cell = [CWUBView_TitleLeft_ButtonRight new];
     }
@@ -214,7 +257,7 @@ UICollectionViewDelegateFlowLayout>
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    [self func_update];
+    [self func_updateConstrains];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
