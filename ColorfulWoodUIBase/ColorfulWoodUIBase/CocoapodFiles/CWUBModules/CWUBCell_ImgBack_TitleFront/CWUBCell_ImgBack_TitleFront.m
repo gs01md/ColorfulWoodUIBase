@@ -10,7 +10,7 @@
 
 @interface CWUBCell_ImgBack_TitleFront()
 
-@property (nonatomic, strong) UIImageView *m_img_back;
+@property (nonatomic, strong) CWUBImageViewWithModel *m_img_back;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_front;
 @property (nonatomic, strong) UIImageView * m_img_sep;
 @end
@@ -107,14 +107,10 @@
     return _m_lbl_front;
 }
 
--(UIImageView *)m_img_back{
+-(CWUBImageViewWithModel *)m_img_back{
 
     if(!_m_img_back){
-        _m_img_back = [UIImageView new];
-        [_m_img_back setImage:[UIImage imageNamed:self.m_model.m_image.m_imgName]];
-        _m_img_back.contentMode = self.m_model.m_image.m_contentMode;
-        _m_img_back.clipsToBounds = YES;
-        [_m_img_back setClipsToBounds:YES];
+        _m_img_back = [[CWUBImageViewWithModel alloc] initWithModel:self.m_model.m_image];
     }
     return _m_img_back;
 }
@@ -131,8 +127,8 @@
 - (void) interface_updateWithModel:(CWUBCell_ImgBack_TitleFront_Model*)model{
 
     self.m_model = model;
-    [self.m_lbl_front interface_update:model.m_title];
-    [self.m_img_back setImage:[UIImage imageNamed:self.m_model.m_image.m_imgName]];
+    [self.m_lbl_front interface_update:self.m_model.m_title];
+    [self.m_img_back interface_update:self.m_model.m_image];
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{

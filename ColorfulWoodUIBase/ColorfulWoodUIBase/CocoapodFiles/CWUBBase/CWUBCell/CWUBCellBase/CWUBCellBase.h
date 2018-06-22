@@ -14,6 +14,8 @@
 #import "CWUBLabelWithModel.h"
 #import "CWUBLableLeftTop.h"
 #import "CWUBTextfieldWithModel.h"
+#import "CWUBImageViewWithModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CWUBCellBase : UITableViewCell
 

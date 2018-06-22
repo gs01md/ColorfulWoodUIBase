@@ -9,12 +9,23 @@
 #import <Foundation/Foundation.h>
 #import "CWUBMarginBase.h"
 #import <UIKit/UIKit.h>
+#import "CWUBCornerInfo.h"
 
 @interface CWUBImageInfo : CWUBMarginBase
 
 @property(nonatomic,strong) NSString* m_imgName;
+/**
+ * 网络图片
+ */
+@property(nonatomic,strong) NSString* m_imgUrl;
 @property(nonatomic,assign) float m_width;
 @property(nonatomic,assign) float m_height;
+@property(nonatomic,strong) UIColor* m_color_backGroud;
+
+/**
+ * 是否设置ClipToBounds为TRUE
+ */
+@property(nonatomic,assign) BOOL m_isClipToBounds;
 
 /**
  * 照片显示模式
@@ -30,6 +41,11 @@
  * 是否是圆角，默认是FALSE
  */
 @property(nonatomic,assign) BOOL m_isCircle;
+
+/**
+ * 圆角参数
+ */
+@property(nonatomic,strong) CWUBCornerInfo *m_cornerInfo;
 
 /**
  * 背景颜色

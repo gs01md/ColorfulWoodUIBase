@@ -52,6 +52,24 @@
     return _m_defaultName;
 }
 
+- (UIColor*)m_color_backGroud{
+
+    if (!_m_color_backGroud) {
+        _m_color_backGroud = [UIColor clearColor];
+    }
+
+    return _m_color_backGroud;
+}
+
+- (CWUBCornerInfo*)m_cornerInfo{
+
+    if (!_m_cornerInfo) {
+        _m_cornerInfo = [CWUBCornerInfo new];
+    }
+
+    return _m_cornerInfo;
+}
+
 - (float)m_width{
 
     if (!_m_width || _m_width<=0) {

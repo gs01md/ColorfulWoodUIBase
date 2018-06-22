@@ -86,6 +86,7 @@
 		8B1F41D620B5375E00FEAFA0 /* CWUBModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F419920B5375E00FEAFA0 /* CWUBModelBase.m */; };
 		8B1F41D720B5375E00FEAFA0 /* CWUBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F419C20B5375E00FEAFA0 /* CWUBModel.m */; };
 		8B1F41DB20B54AB100FEAFA0 /* CWUBImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */; };
+		8B2DAF5F20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DAF5E20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m */; };
 		8B440BC020DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B440BBF20DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.m */; };
 		8B440BC320DBA344004EEC12 /* CWUBCell_ImgBack_TitleFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B440BC220DBA344004EEC12 /* CWUBCell_ImgBack_TitleFront.m */; };
 		8B4AA09120B64E3900CA97FB /* CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AA09020B64E3900CA97FB /* CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.m */; };
@@ -289,6 +290,8 @@
 		8B1F419C20B5375E00FEAFA0 /* CWUBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUBModel.m; sourceTree = "<group>"; };
 		8B1F41D920B54AB100FEAFA0 /* CWUBImageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBImageInfo.h; sourceTree = "<group>"; };
 		8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBImageInfo.m; sourceTree = "<group>"; };
+		8B2DAF5D20DCE9B7009DE5D3 /* CWUBImageViewWithModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBImageViewWithModel.h; sourceTree = "<group>"; };
+		8B2DAF5E20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBImageViewWithModel.m; sourceTree = "<group>"; };
 		8B440BBE20DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgBack_TitleFront_Model.h; sourceTree = "<group>"; };
 		8B440BBF20DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_ImgBack_TitleFront_Model.m; sourceTree = "<group>"; };
 		8B440BC120DBA344004EEC12 /* CWUBCell_ImgBack_TitleFront.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgBack_TitleFront.h; sourceTree = "<group>"; };
@@ -839,6 +842,7 @@
 		8B1F417520B5375E00FEAFA0 /* CWUBView */ = {
 			isa = PBXGroup;
 			children = (
+				8B2DAF5C20DCE99B009DE5D3 /* CWUBImageView */,
 				8B1F417620B5375E00FEAFA0 /* CWUBButtonWithInfo */,
 				8B1F417920B5375E00FEAFA0 /* CWUBLabelWithModel */,
 				8B1F417C20B5375E00FEAFA0 /* CWUBLabelLeftBottom */,
@@ -991,6 +995,15 @@
 				8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */,
 			);
 			path = CWUBImageInfo;
+			sourceTree = "<group>";
+		};
+		8B2DAF5C20DCE99B009DE5D3 /* CWUBImageView */ = {
+			isa = PBXGroup;
+			children = (
+				8B2DAF5D20DCE9B7009DE5D3 /* CWUBImageViewWithModel.h */,
+				8B2DAF5E20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m */,
+			);
+			path = CWUBImageView;
 			sourceTree = "<group>";
 		};
 		8B440BBD20DBA2E0004EEC12 /* CWUBCell_ImgBack_TitleFront */ = {
@@ -1327,6 +1340,7 @@
 				8B1F41B620B5375E00FEAFA0 /* CWUBCell_Passenger_Opt_Model.m in Sources */,
 				8B1F41A820B5375E00FEAFA0 /* CWUBCell_Address_ArrowRight.m in Sources */,
 				8B1F41B420B5375E00FEAFA0 /* CWUBCell_TitleLeft_InfoRight_ButtonRight.m in Sources */,
+				8B2DAF5F20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m in Sources */,
 				8B170CBF20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.m in Sources */,
 				8BBB99E020B56D35002FE1EA /* CWUBCell_TitleLeft_ButtonRight_Model.m in Sources */,
 				8B1F41BE20B5375E00FEAFA0 /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m in Sources */,

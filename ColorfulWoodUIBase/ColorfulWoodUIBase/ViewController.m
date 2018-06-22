@@ -225,6 +225,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model16.m_image.m_height = 300;
     model16.m_image.m_contentMode = UIViewContentModeScaleToFill;
     model16.m_bottomLineInfo.m_color = [UIColor redColor];
+    model16.m_image.m_isClipToBounds = YES;
     [data addObject:model16];
 
     CWUBCell_TitleTop_TitleBottom_Model * model15 = [CWUBCell_TitleTop_TitleBottom_Model new];
@@ -292,8 +293,13 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 
     model11.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 
+    /**
+     * 右侧的提示文字
+     */
     model11.m_title_right = [[CWUBTextInfo alloc] initWithText:@"请选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-
+    /**
+     * 右侧下部的提示文字
+     */
     model11.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"请选择行业2" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 
     [model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:[[CWUBTextInfo alloc] initWithText:@"航空" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]] img:[[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10]]];
