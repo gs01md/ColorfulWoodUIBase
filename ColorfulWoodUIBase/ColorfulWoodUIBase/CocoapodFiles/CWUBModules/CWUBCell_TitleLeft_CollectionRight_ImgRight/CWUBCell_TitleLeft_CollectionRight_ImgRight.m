@@ -175,7 +175,7 @@ UICollectionViewDelegateFlowLayout>
         _m_collection_right = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:layout];
         _m_collection_right.delegate = self;
         _m_collection_right.dataSource = self;
-        _m_collection_right.backgroundColor = [UIColor yellowColor];
+        _m_collection_right.backgroundColor = self.m_model.m_color_backGround;
         [_m_collection_right registerClass:[CWUBView_TitleLeft_ButtonRight class] forCellWithReuseIdentifier:@"CWUBCell_TitleLeft_CollectionRight_ImgRight_CellID"];
     }
     return _m_collection_right;
@@ -221,6 +221,7 @@ UICollectionViewDelegateFlowLayout>
     [self.m_lbl_right interface_update:model.m_title_right];
     [self.m_lbl_rightBottom interface_update:model.m_title_rightBottom];
 
+    self.backgroundColor = self.m_model.m_color_backGround;
     [self.m_collection_right reloadData];
 
     [self func_updateConstrains];
