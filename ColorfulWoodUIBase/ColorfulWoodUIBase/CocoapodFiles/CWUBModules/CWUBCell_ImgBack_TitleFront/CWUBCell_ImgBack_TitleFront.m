@@ -72,7 +72,7 @@
     [_m_lbl_front mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_title.m_margin_right);
-        make.centerY.equalTo(self.m_img_back);
+        make.centerY.equalTo(self.m_img_back).offset(self.m_model.m_title.m_margin_CenterY);
     }];
 
     [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {

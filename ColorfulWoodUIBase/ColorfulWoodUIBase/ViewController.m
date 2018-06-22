@@ -226,6 +226,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model16.m_image.m_contentMode = UIViewContentModeScaleToFill;
     model16.m_bottomLineInfo.m_color = [UIColor redColor];
     model16.m_image.m_isClipToBounds = YES;
+    model16.m_title.m_margin_CenterY = -55.;
     [data addObject:model16];
 
     CWUBCell_TitleTop_TitleBottom_Model * model15 = [CWUBCell_TitleTop_TitleBottom_Model new];
