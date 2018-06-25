@@ -16,6 +16,11 @@
  */
 - (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_constrains:(NSString*)str;
 
+/**
+ * 文本改变
+ */
+- (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:(NSString*)str;
+
 @end
 
 @interface CWUBCell_TitleLeft_InputRight_TitleRightBottom : CWUBCellBase

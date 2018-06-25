@@ -161,6 +161,11 @@
 
     self.m_model.m_input_right.m_text = [theTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     self.m_model.m_dataOut = self.m_model.m_input_right.m_text;
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:)]) {
+
+        [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:self.m_model.m_dataOut];
+    }
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

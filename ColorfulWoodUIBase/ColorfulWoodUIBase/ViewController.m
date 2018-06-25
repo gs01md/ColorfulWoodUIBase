@@ -693,4 +693,12 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     [self.m_tableView reloadData];
 }
 
+/**
+ * 文本改变
+ */
+- (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:(NSString*)str{
+
+    NSLog(str);
+}
+
 @end
