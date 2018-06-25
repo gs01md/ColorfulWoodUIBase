@@ -19,6 +19,11 @@
 @property(nonatomic,strong) UIColor* m_color_backGroud;
 
 /**
+ * 是否不可输入（textfield等控件）
+ */
+@property(nonatomic,assign) BOOL m_noEnabled;
+
+/**
  * 圆角参数
  */
 @property(nonatomic,strong) CWUBCornerInfo *m_cornerInfo;

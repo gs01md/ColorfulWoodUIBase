@@ -45,6 +45,8 @@
         }
 
         self.hidden = info.m_isHidden;
+
+        self.enabled = !info.m_noEnabled;
     }
 }
 
