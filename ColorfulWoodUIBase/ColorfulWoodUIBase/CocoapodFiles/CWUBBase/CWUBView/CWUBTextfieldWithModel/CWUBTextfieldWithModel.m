@@ -44,6 +44,7 @@
             self.placeholder = info.m_textPlaceholder;
         }
 
+        self.hidden = info.m_isHidden;
     }
 }
 

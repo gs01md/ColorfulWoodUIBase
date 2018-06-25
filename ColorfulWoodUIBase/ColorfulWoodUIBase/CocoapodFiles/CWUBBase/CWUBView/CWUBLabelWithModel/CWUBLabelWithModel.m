@@ -61,6 +61,8 @@
             self.backgroundColor = info.m_color_backGroud;
         }
 
+        self.hidden = info.m_isHidden;
+
     }
 }
 
