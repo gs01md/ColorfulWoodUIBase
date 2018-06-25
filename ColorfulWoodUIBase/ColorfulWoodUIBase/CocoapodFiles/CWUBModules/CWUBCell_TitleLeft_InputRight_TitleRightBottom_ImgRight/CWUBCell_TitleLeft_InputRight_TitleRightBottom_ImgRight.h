@@ -23,6 +23,11 @@
  */
 - (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Delegate_textChanged:(NSString*)str;
 
+/**
+ * 可能是任何参数的改变，传出之后，根据参数，单独刷新cell界面，不需要tableview reloaddata ,导致输入框键盘的关闭
+ */
+- (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Delegate_changed:(CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model*)model;
+
 @end
 
 @interface CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight : CWUBCellBase
