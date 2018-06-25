@@ -35,7 +35,7 @@
              * 如果原来已经显示了图片，就不要再显示默认图片
              */
             UIImage * img = self.image?self.image:[UIImage imageNamed:info.m_defaultName];
-            [self sd_setImageWithURL:[NSURL URLWithString:info.m_imgName] placeholderImage:img completed:nil];
+            [self sd_setImageWithURL:[NSURL URLWithString:info.m_imgUrl] placeholderImage:img completed:nil];
         }else{
 
             [self setImage:[UIImage imageNamed:info.m_imgName]];
