@@ -183,4 +183,18 @@
 
     return self.m_textfield_right.text;
 }
+
+/**
+ * 根据参数刷新界面
+ */
+- (void)interface_updateWithCode:(NSString*)code{
+
+    if ([code isEqualToString:@"hiddenBottomLine"]) {
+        self.m_lbl_rightBottom.hidden = YES;
+    }
+
+    if ([code isEqualToString:@"showBottomLine"]) {
+        self.m_lbl_rightBottom.hidden = NO;
+    }
+}
 @end

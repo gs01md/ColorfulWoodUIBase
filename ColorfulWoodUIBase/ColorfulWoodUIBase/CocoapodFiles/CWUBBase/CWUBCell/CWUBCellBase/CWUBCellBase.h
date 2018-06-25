@@ -34,6 +34,11 @@
 - (void)interface_updateWithModel:(CWUBModelBase*)model;
 
 /**
+ * 根据参数刷新界面
+ */
+- (void)interface_updateWithCode:(NSString*)code;
+
+/**
  * 获取该列的操作标识 - 用于点击事件
  */
 - (NSString*) interface_get_event_opt_code;

@@ -34,6 +34,13 @@
 }
 
 /**
+ * 根据参数刷新界面
+ */
+- (void)interface_updateWithCode:(NSString*)code{
+    
+}
+
+/**
  * 隐藏底部的虚线
  */
 - (void) interface_bottomLine_hidden{
