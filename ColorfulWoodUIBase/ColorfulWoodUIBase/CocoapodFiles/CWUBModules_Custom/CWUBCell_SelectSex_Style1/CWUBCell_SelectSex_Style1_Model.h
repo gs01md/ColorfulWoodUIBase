@@ -12,4 +12,8 @@
 @property(nonatomic, strong)CWUBTextInfo * m_title_left;
 @property(nonatomic, strong)CWUBTextInfo * m_title_man;
 @property(nonatomic, strong)CWUBTextInfo * m_title_woman;
+/**
+ * 是否默认选中 女士
+ */
+@property(nonatomic, assign)BOOL * m_isSelectedWoman;
 @end

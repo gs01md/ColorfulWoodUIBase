@@ -173,6 +173,16 @@
     }
     [self func_updateConsrtains];
 
+    /**
+     * 默认设置的是选中男士，但是有时也会设置女士为默认选中
+     */
+    if (self.m_model.m_isSelectedWoman) {
+        [self event_woman];
+    }else{
+        [self event_man];
+    }
+
+
 }
 
 #pragma mark - 接口
@@ -201,7 +211,7 @@
 }
 
 - (void)event_woman{
-
+    
     [self.m_lbl_woman interface_update:self.m_model.m_title_man];
     [self.m_lbl_man interface_update:self.m_model.m_title_woman];
     self.m_lbl_woman.text = self.m_model.m_title_woman.m_text;
@@ -212,6 +222,5 @@
         [self.delegate CWUBCell_SelectSex_Style1_Delegate_selectWoman];
     }
 }
-
 
 @end
