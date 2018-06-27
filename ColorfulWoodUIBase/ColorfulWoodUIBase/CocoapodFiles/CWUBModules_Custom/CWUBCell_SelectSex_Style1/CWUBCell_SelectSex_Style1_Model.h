@@ -1,0 +1,15 @@
+//
+//  CWUBCell_SelectSex_Style1_Model.h
+//  ColorfulWoodUIBase
+//
+//  Created by 大新 on 2018/6/27.
+//  Copyright © 2018年 ColorfulWood. All rights reserved.
+//
+
+#import "CWUBModelBase.h"
+
+@interface CWUBCell_SelectSex_Style1_Model : CWUBModelBase
+@property(nonatomic, strong)CWUBTextInfo * m_title_left;
+@property(nonatomic, strong)CWUBTextInfo * m_title_man;
+@property(nonatomic, strong)CWUBTextInfo * m_title_woman;
+@end

@@ -51,6 +51,7 @@
 #import "CWUBCell_TitleLeft_TextViewRight_TitleRightBottom.h"
 #import "CWUBCell_TitleTop_TitleBottom.h"
 #import "CWUBCell_ImgBack_TitleFront.h"
+#import "CWUBCell_SelectSex_Style1.h"
 
 @implementation CWUBModelBase
 /**
@@ -240,6 +241,11 @@
             case CWUBCellType_ImgBack_TitleFront:
                 view = [self func_CWUBCell_ImgBack_TitleFront:tableView];
                 break;
+
+            case CWUBCellType_SelectSex_Style1:
+                view = [self func_CWUBCell_SelectSex_Style1:tableView];
+                break;
+
 
 
             default:
@@ -853,6 +859,23 @@
 
     }else{
         return [[CWUBCell_ImgBack_TitleFront alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_SelectSex_Style1*) func_CWUBCell_SelectSex_Style1:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_SelectSex_Style1";
+        CWUBCell_SelectSex_Style1 *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_SelectSex_Style1 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_SelectSex_Style1 alloc] initWithModel:self];
     }
 
 }
