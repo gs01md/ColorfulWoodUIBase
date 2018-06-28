@@ -15,5 +15,5 @@
 /**
  * 是否默认选中 女士
  */
-@property(nonatomic, assign)BOOL * m_isSelectedWoman;
+@property(nonatomic, assign)BOOL m_isSelectedWoman;
 @end
