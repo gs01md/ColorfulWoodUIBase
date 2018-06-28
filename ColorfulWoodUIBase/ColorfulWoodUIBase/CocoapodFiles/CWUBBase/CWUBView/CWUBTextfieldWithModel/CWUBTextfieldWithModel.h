@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CWUBTextInfo.h"
+#import <ColorfulWoodCategories/NSString+ColorfulWoodRegex.h>
 
 @interface CWUBTextfieldWithModel : UITextField
 -(instancetype) initWithModel:(CWUBTextInfo*)info;

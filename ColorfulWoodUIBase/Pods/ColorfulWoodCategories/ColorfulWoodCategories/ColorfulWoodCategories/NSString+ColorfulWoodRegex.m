@@ -9,6 +9,25 @@
 #import "NSString+ColorfulWoodRegex.h"
 
 @implementation NSString (ColorfulWoodRegex)
+
+/**
+ * 根据传入的规则，进行校验；
+ * 如果传入为空，则不进行校验，直接返回成功
+ */
+- (BOOL) interface_checkWithRegex:(NSString*)regEx{
+
+    NSPredicate *card = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regEx];
+
+    if (([card evaluateWithObject:self])) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+//----------------------------------------------------------------------
+
+
 #pragma mark - 邮箱校验
 +(BOOL)checkForEmail:(NSString *)email{
     

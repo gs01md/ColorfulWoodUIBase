@@ -73,8 +73,9 @@
 
     [self.m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self);
-        make.right.equalTo(self.m_img_right.mas_left);
-        make.height.equalTo(self);
+        make.right.equalTo(self);
+        make.top.equalTo(self);
+        make.bottom.equalTo(self);
     }];
 
 }

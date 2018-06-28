@@ -9,6 +9,26 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (ColorfulWoodRegex)
+
+/**
+ * 根据传入的规则，进行校验；
+ * 如果传入为空，则不进行校验，直接返回成功
+ */
+- (BOOL) interface_checkWithRegex:(NSString*)regEx;
+
+
+//----------------------------------------------------------------------
+#pragma mark - 常用正则
+
+/**
+ * 0~18位字母或数字，用于身份证
+ */
+#define ColorfulWoodRegex_1 @"^[a-zA-Z0-9]{0,18}+$"
+
+
+//----------------------------------------------------------------------
+#pragma mark - 常用接口
+
 /**
  *  邮箱验证
  *
@@ -122,5 +142,7 @@
  *  @return 结果
  */
 + (BOOL) checkForNumberWithLength:(NSString *)length number:(NSString *)number;
+
+
 
 @end

@@ -165,7 +165,13 @@ UITextViewDelegate
 
 - (void)event_textFieldDidChange:(UITextField *)theTextField{
 
-    self.m_model.m_input_right.m_text = [theTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (![theTextField.text interface_checkWithRegex:self.m_model.m_input_right.m_regex] ) {
+
+        theTextField.text = self.m_model.m_input_right.m_text;
+        return;
+    }
+
+    self.m_model.m_input_right.m_text = theTextField.text;
     self.m_model.m_dataOut = self.m_model.m_input_right.m_text;
 }
 

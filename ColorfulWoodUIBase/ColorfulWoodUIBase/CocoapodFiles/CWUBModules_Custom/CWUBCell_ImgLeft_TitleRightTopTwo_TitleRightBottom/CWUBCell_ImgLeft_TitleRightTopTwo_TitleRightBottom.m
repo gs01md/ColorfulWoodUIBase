@@ -64,8 +64,6 @@
 
 }
 
-
-
 - (void)func_updateConsrtains{
 
     [_m_img_left mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -138,7 +136,6 @@
         _m_lbl_rightBottom = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title_rightBottom];
         _m_lbl_rightBottom.textAlignment = NSTextAlignmentLeft;
         _m_lbl_rightBottom.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
-        _m_lbl_rightBottom.numberOfLines = 0;
     }
     return _m_lbl_rightBottom;
 }

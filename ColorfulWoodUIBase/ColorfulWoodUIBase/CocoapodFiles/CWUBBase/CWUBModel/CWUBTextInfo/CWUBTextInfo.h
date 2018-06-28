@@ -47,6 +47,11 @@
  */
 @property(nonatomic,assign) float m_height;
 
+/**
+ * 正则表达式，限制规则，不符合则禁止输入
+ */
+@property(nonatomic,strong) NSString* m_regex;
+
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color;
 
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color backColor:(UIColor*)backColor;

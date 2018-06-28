@@ -177,6 +177,9 @@ UICollectionViewDelegateFlowLayout>
         _m_collection_right.dataSource = self;
         _m_collection_right.backgroundColor = self.m_model.m_color_backGround;
         [_m_collection_right registerClass:[CWUBView_TitleLeft_ButtonRight class] forCellWithReuseIdentifier:@"CWUBCell_TitleLeft_CollectionRight_ImgRight_CellID"];
+
+
+
     }
     return _m_collection_right;
 }
@@ -275,6 +278,11 @@ UICollectionViewDelegateFlowLayout>
     CWUBView_TitleLeft_ButtonRight_Model *model = [self.m_model.m_collection_right.m_array objectAtIndex:indexPath.row];
     CGSize size = [self func_getSize:model.m_title.m_text];
     size.width += model.m_img.m_width;
+
+    size = [self func_getSizeWithModel:model.m_title];
+
+    NSLog(@" %f; %f",size.width,size.height);
+
     return size;
 }
 
@@ -292,6 +300,28 @@ UICollectionViewDelegateFlowLayout>
     NSDictionary *attrs=@{NSFontAttributeName:font};
     CGSize mySize=[str sizeWithAttributes:attrs];
     return mySize.width;
+}
+
+- (CGSize)func_getSizeWithModel:(CWUBTextInfo*)model{
+
+    NSDictionary *attrs=@{NSFontAttributeName:model.m_font};
+    CGSize mySize=[model.m_text sizeWithAttributes:attrs];
+    mySize.width += 10.;
+    mySize.height += 10.;
+
+    float width = [[UIScreen mainScreen] bounds].size.width;
+    width -= self.m_model.m_title_left.m_margin_left*2;
+    width -= [self fun_getWidth:self.m_model.m_title_left.m_text font:self.m_lbl_left.font];
+    width -= self.m_model.m_img_right.m_width;
+    width -= self.m_model.m_img_right.m_margin_right*2;
+
+    if (mySize.width > width) {
+        mySize.height = (mySize.width/width) * mySize.height;
+        mySize.width = width;
+
+    }
+
+    return mySize;
 }
 
 #pragma mark - system
