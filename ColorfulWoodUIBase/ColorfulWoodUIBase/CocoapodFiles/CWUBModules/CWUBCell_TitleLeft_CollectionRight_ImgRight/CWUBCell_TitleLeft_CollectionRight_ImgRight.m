@@ -45,7 +45,7 @@ UICollectionViewDelegateFlowLayout>
 
     [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_collection_right.mas_left).offset(-self.m_model.m_title_left.m_margin_right);
-        make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
+        make.centerY.equalTo(self);
         make.left.equalTo(self).offset(self.m_model.m_title_left.m_margin_left);
     }];
 
@@ -60,7 +60,7 @@ UICollectionViewDelegateFlowLayout>
 
     [_m_collection_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_collection_right.m_margin_right);
-        make.top.equalTo(self.m_lbl_left);
+        make.top.equalTo(self).offset(self.m_model.m_collection_right.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_collection_right.m_margin_bottom);
         make.left.equalTo(self.m_lbl_left.mas_right).offset(self.m_model.m_collection_right.m_margin_left);
 
