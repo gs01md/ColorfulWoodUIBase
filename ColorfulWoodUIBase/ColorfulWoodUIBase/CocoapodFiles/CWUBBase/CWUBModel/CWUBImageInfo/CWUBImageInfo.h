@@ -38,6 +38,14 @@
 @property(nonatomic,strong) NSString* m_defaultName;
 
 /**
+ * 有时候，传入的是图片，而不是图片名称
+ * 一般情况下，只会传入图片或者图片名称中的一种，
+ * 如果两者都传入，那应该是手误，有限显示图片，
+ * 因为显示图片成本较高，所以程序员想显示图片的几率更大
+ */
+@property(nonatomic,strong) UIImage* m_defaultImg;
+
+/**
  * 是否是圆角，默认是FALSE
  */
 @property(nonatomic,assign) BOOL m_isCircle;
