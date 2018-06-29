@@ -52,7 +52,6 @@ UICollectionViewDelegateFlowLayout>
     [_m_img_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerY.equalTo(self.m_lbl_left);
-        make.left.equalTo(self.m_collection_right.mas_right).offset(self.m_model.m_img_right.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_img_right.m_margin_right);
         make.width.equalTo(@(self.m_model.m_img_right.m_width));
         make.height.equalTo(@(self.m_model.m_img_right.m_height));
@@ -306,20 +305,47 @@ UICollectionViewDelegateFlowLayout>
 
     NSDictionary *attrs=@{NSFontAttributeName:model.m_font};
     CGSize mySize=[model.m_text sizeWithAttributes:attrs];
-    mySize.width += 10.;
-    mySize.height += 10.;
+    //mySize.height += 10.;
 
+    /**
+     * 整个CollectionView的宽度
+     */
     float width = [[UIScreen mainScreen] bounds].size.width;
-    width -= self.m_model.m_title_left.m_margin_left*2;
+    width -= self.m_model.m_title_left.m_margin_left;
     width -= [self fun_getWidth:self.m_model.m_title_left.m_text font:self.m_lbl_left.font];
+    width -= self.m_model.m_collection_right.m_margin_left;
+    width -= self.m_model.m_collection_right.m_margin_right;
     width -= self.m_model.m_img_right.m_width;
-    width -= self.m_model.m_img_right.m_margin_right*2;
+    width -= self.m_model.m_img_right.m_margin_right;
 
-    if (mySize.width > width) {
-        mySize.height = (mySize.width/width) * mySize.height;
-        mySize.width = width;
+    /**
+     * 文本框的最大宽度，需要减去图片和间距
+     */
+    float widthText = width;
+    if(self.m_model.m_collection_right.m_array>0){
+        CWUBView_TitleLeft_ButtonRight_Model *info = (CWUBView_TitleLeft_ButtonRight_Model*)self.m_model.m_collection_right.m_array[0];
+        if(info.m_img.m_width >1){
+            widthText -= info.m_img.m_width;
+            widthText -= info.m_title.m_margin_right;
+
+        }
+        mySize.width += info.m_title.m_margin_left;
+        mySize.width += info.m_title.m_margin_right;
+        if(info.m_img.m_width >1){
+            mySize.width += info.m_img.m_width;
+            mySize.width += info.m_img.m_margin_right;
+        }
+
+        mySize.width += 8;//为了减去inset
 
     }
+
+    if (mySize.width > widthText) {
+        mySize.height = ceil(mySize.width/widthText) * mySize.height;
+        mySize.width = width;
+    }
+
+    mySize.height += 15.;
 
     return mySize;
 }

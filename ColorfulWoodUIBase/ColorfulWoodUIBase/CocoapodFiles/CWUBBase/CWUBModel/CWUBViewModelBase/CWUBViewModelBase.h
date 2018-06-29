@@ -12,7 +12,8 @@
 #import "CWUBImageInfo.h"
 #import "CWUBBottomLineInfo.h"
 #import "CWUBCollectionInfo.h"
+#import "CWUBModelBase.h"
 
-@interface CWUBViewModelBase : NSObject
+@interface CWUBViewModelBase : CWUBModelBase
 
 @end

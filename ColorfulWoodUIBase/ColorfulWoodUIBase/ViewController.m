@@ -204,6 +204,31 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+
+    CWUBCell_CollectionTop_TitleBottom_Model * model19 = [CWUBCell_CollectionTop_TitleBottom_Model new];
+    model19.m_type = CWUBCellType_CollectionTop_TitleBottom;
+
+
+    float imgWidth = 10;
+    /**
+     * 下部的提示文字
+     */
+    model19.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+
+    NSArray * array = @[@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空",@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空空航空航空航空航空",@"航空航空",@"空航空",@"航空航空航空",@"航空",@"航空航空",@"航空航空",@"航空航空航空",@"空",@"航空航航空",@"空航空",@"航空航空航空",@"航空"];
+
+    for (NSString* temp in array) {
+        CWUBTextInfo * info = [[CWUBTextInfo alloc] initWithText:temp font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+        //info.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+
+        CWUBView_TitleLeft_ButtonRight_Model *m1 = [[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:info img:[[CWUBImageInfo alloc] initWithName:@"right" width:imgWidth height:imgWidth]];
+        m1.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+        [model19.m_collection_top.m_array addObject:m1];
+    }
+
+    model19.m_bottomLineInfo.m_color = [UIColor redColor];
+    [data addObject:model19];
+
     CWUBCell_SelectSex_Style1_Model *model18 = [CWUBCell_SelectSex_Style1_Model new];
     model18.m_type = CWUBCellType_SelectSex_Style1;
     model18.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择性别" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
@@ -306,6 +331,8 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 
     [data addObject:model12];
 
+
+
     CWUBCell_TitleLeft_CollectionRight_ImgRight_Model * model11 = [CWUBCell_TitleLeft_CollectionRight_ImgRight_Model new];
     model11.m_type = CWUBCellType_TitleLeft_CollectionRight_ImgRight;
 
@@ -316,19 +343,22 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
      */
     model11.m_title_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 
-    float imgWidth = 0.01;
+    float imgWidth1 = 0.01;
     /**
      * 右侧下部的提示文字
      */
     model11.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
 
-    NSArray * array = @[@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空",@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空空航空航空航空航空",@"航空航空",@"空航空",@"航空航空航空",@"航空",@"航空航空",@"航空航空",@"航空航空航空",@"空",@"航空航航空",@"空航空",@"航空航空航空",@"航空"];
+    NSArray * array1 = @[@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空",@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空空航空航空航空航空",@"航空航空",@"空航空",@"航空航空航空",@"航空",@"航空航空",@"航空航空",@"航空航空航空",@"空",@"航空航航空",@"空航空",@"航空航空航空",@"航空"];
 
-    for (NSString* temp in array) {
+    for (NSString* temp in array1) {
         CWUBTextInfo * info = [[CWUBTextInfo alloc] initWithText:temp font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-        info.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+        //info.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
 
-        [model11.m_collection_right.m_array addObject:[[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:info img:[[CWUBImageInfo alloc] initWithName:@"right" width:imgWidth height:imgWidth]]];
+        CWUBView_TitleLeft_ButtonRight_Model *m1 = [[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:info img:[[CWUBImageInfo alloc] initWithName:@"right" width:imgWidth1 height:imgWidth1]];
+        m1.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+
+        [model11.m_collection_right.m_array addObject:m1];
     }
 
 

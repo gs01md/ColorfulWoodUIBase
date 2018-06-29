@@ -14,6 +14,7 @@
 #import "CWUBImageInfo.h"
 #import "CWUBBottomLineInfo.h"
 #import "CWUBCollectionInfo.h"
+#import "CWUBCornerInfo.h"
 
 @interface CWUBModelBase : NSObject
 
@@ -52,5 +53,11 @@
  * 底部分割线信息
  */
 @property(nonatomic, strong)CWUBBottomLineInfo *m_bottomLineInfo;
+
+/**
+ * 边框
+ */
+@property(nonatomic, strong)CWUBCornerInfo *m_cornerInfo;
+
 
 @end

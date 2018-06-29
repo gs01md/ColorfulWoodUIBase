@@ -52,6 +52,7 @@
 #import "CWUBCell_TitleTop_TitleBottom.h"
 #import "CWUBCell_ImgBack_TitleFront.h"
 #import "CWUBCell_SelectSex_Style1.h"
+#import "CWUBCell_CollectionTop_TitleBottom.h"
 
 @implementation CWUBModelBase
 /**
@@ -244,6 +245,10 @@
 
             case CWUBCellType_SelectSex_Style1:
                 view = [self func_CWUBCell_SelectSex_Style1:tableView];
+                break;
+
+            case CWUBCellType_CollectionTop_TitleBottom:
+                view = [self func_CWUBCell_CollectionTop_TitleBottom:tableView];
                 break;
 
 
@@ -880,7 +885,22 @@
 
 }
 
+- (CWUBCell_CollectionTop_TitleBottom*) func_CWUBCell_CollectionTop_TitleBottom:(UITableView*)tableView{
 
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_CollectionTop_TitleBottom";
+        CWUBCell_CollectionTop_TitleBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_CollectionTop_TitleBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_CollectionTop_TitleBottom alloc] initWithModel:self];
+    }
+
+}
 
 #pragma mark - 参数设置
 

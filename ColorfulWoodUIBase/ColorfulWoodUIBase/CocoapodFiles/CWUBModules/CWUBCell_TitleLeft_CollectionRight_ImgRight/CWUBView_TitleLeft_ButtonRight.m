@@ -50,6 +50,21 @@
 
     self.m_model = model;
 
+    if (model.m_cornerInfo && model.m_cornerInfo.m_cornerRadius>0 && model.m_cornerInfo.m_cornerWidth>0) {
+
+        self.layer.cornerRadius = model.m_cornerInfo.m_cornerRadius;
+        self.layer.borderWidth = model.m_cornerInfo.m_cornerWidth;
+        self.layer.borderColor = [model.m_cornerInfo.m_cornerColor CGColor];
+        self.layer.masksToBounds = YES;
+
+    }else{
+
+        self.layer.cornerRadius = 0.;
+        self.layer.borderWidth = 0.;
+        self.layer.borderColor = [[UIColor clearColor] CGColor];
+        self.layer.masksToBounds = NO;
+    }
+
     [self.m_lbl_left interface_update:self.m_model.m_title];
     [self.m_img_right setImage:[UIImage imageNamed: self.m_model.m_img.m_imgName]];
     [self func_updateConstrains];
@@ -65,15 +80,23 @@
 - (void)func_updateConstrains{
 
     [self.m_img_right mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self);
+        make.right.equalTo(self).offset(-self.m_model.m_img.m_margin_right);
         make.width.equalTo(@(self.m_model.m_img.m_width));
         make.height.equalTo(@(self.m_model.m_img.m_height));
         make.centerY.equalTo(self.m_lbl_left);
     }];
 
     [self.m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self);
-        make.right.equalTo(self);
+        make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
+        /**
+         * 用于判断是否隐藏了图片，这时一般设置图片大小为0.1或更小值
+         */
+        if(self.m_model.m_img.m_width > 1){
+            make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_title.m_margin_right);
+        }else{
+            make.right.equalTo(self).offset(-self.m_model.m_title.m_margin_right);
+        }
+
         make.top.equalTo(self);
         make.bottom.equalTo(self);
     }];

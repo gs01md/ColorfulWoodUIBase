@@ -19,6 +19,20 @@
 
         if (model) {
             self.backgroundColor = model.m_color_backGround;
+            if (model.m_cornerInfo && model.m_cornerInfo.m_cornerRadius>0 && model.m_cornerInfo.m_cornerWidth>0) {
+
+                self.layer.cornerRadius = model.m_cornerInfo.m_cornerRadius;
+                self.layer.borderWidth = model.m_cornerInfo.m_cornerWidth;
+                self.layer.borderColor = [model.m_cornerInfo.m_cornerColor CGColor];
+                self.layer.masksToBounds = YES;
+
+            }else{
+
+                self.layer.cornerRadius = 0.;
+                self.layer.borderWidth = 0.;
+                self.layer.borderColor = [[UIColor clearColor] CGColor];
+                self.layer.masksToBounds = NO;
+            }
         }
 
     }

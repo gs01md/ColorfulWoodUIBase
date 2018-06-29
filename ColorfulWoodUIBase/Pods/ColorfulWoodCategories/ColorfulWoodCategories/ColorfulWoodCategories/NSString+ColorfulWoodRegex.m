@@ -16,13 +16,18 @@
  */
 - (BOOL) interface_checkWithRegex:(NSString*)regEx{
 
-    NSPredicate *card = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regEx];
+    if (regEx && regEx.length>0) {
 
-    if (([card evaluateWithObject:self])) {
+        NSPredicate *card = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regEx];
+
+        if (([card evaluateWithObject:self])) {
+            return YES;
+        }else{
+            return NO;
+        }
+    } else {
         return YES;
     }
-    
-    return NO;
 }
 
 //----------------------------------------------------------------------

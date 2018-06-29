@@ -1,5 +1,5 @@
 PODS:
-  - ColorfulWoodCategories (1.0.13)
+  - ColorfulWoodCategories (1.0.14)
   - Masonry (1.1.0)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -17,7 +17,7 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  ColorfulWoodCategories: 441272fca45be62566956d1a11ae69bf90f3f891
+  ColorfulWoodCategories: 73b864b6283e68202674a11f984affbd4250cd4c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
