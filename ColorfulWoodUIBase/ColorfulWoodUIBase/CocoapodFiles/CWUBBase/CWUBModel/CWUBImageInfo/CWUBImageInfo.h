@@ -42,6 +42,10 @@
  * 一般情况下，只会传入图片或者图片名称中的一种，
  * 如果两者都传入，那应该是手误，有限显示图片，
  * 因为显示图片成本较高，所以程序员想显示图片的几率更大
+ *
+ * 另外一个场景：显示图片，需要默认一张图片，当选择图片后，就需要显示默认图片了。
+ * 这时，就应该显示m_defaultImg，m_defaultImg就变成了一张有效的图片
+ * 当不再需要显示m_defaultImg时，m_defaultImg置nil
  */
 @property(nonatomic,strong) UIImage* m_defaultImg;
 
