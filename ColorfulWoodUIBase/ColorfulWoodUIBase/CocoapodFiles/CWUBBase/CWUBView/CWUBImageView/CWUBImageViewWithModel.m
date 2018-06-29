@@ -35,8 +35,8 @@
             /**
              * 如果原来已经显示了图片，就不要再显示默认图片,默认图片优先显示UIImage图片
              */
-            UIImage * img = self.image?self.image:
-            (self.m_info.m_defaultImg?self.m_info.m_defaultImg:[UIImage imageNamed:info.m_defaultName]);
+            UIImage * img = self.m_info.m_defaultImg?self.m_info.m_defaultImg:
+            (self.image?self.image:[UIImage imageNamed:info.m_imgName]);
             [self sd_setImageWithURL:[NSURL URLWithString:info.m_imgUrl] placeholderImage:img completed:nil];
 
         }else{
@@ -48,8 +48,6 @@
             } else {
                 [self setImage:[UIImage imageNamed:info.m_imgName]];
             }
-
-
         }
 
         self.clipsToBounds = info.m_isClipToBounds;
