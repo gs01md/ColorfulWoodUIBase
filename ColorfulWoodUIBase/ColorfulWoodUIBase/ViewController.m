@@ -445,7 +445,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model7.m_title_center.m_margin_bottom = 10.;
     model7.m_title_center.m_numberOfLines = 1;
 
-    model7.m_title_bottomLeft = [[CWUBTextInfo alloc] initWithText:@"Hanhan" font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model7.m_title_bottomLeft = [[CWUBTextInfo alloc] initWithText:@"HanhanHanhanHanhanHanhanHanhanHanhanHanhanHanhanHanhan" font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
     model7.m_title_bottomLeft.m_numberOfLines = 1;
 
     model7.m_back = [[CWUBImageInfo alloc] initWithName:@"companyback" width:0. height:0.];

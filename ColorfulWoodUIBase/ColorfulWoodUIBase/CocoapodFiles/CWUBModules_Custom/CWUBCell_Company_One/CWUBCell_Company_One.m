@@ -11,7 +11,7 @@
 #import "CWUBLabelWithModel.h"
 #import "CWUBLableLeftTop.h"
 
-#define Img_Top_Reduce -10
+#define Img_Top_Reduce 0
 
 @interface CWUBCell_Company_One()
 /**
@@ -72,7 +72,7 @@
     [self addSubview:self.m_back];
 
     [self.m_back addSubview:self.m_lbl_center];
-    [self.m_back addSubview:self.m_img_top];
+    [self addSubview:self.m_img_top];
 
     [self.m_back addSubview:self.m_backBottom];
     [self.m_backBottom addSubview:self.m_lbl_bottomLeft];
@@ -89,11 +89,12 @@
         make.top.equalTo(self).offset(self.m_model.m_back.m_margin_top);
         make.left.equalTo(self).offset(self.m_model.m_back.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_back.m_margin_right);
+        make.height.equalTo(@(self.m_model.m_back.m_height));
         make.bottom.equalTo(self.m_img_sep).offset(-1.);
     }];
 
     [_m_img_top mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.m_back).offset(self.m_model.m_img_top.m_margin_top);
+        make.top.equalTo(self).offset(self.m_model.m_img_top.m_margin_top);
         make.centerX.equalTo(self);
         make.width.equalTo(@(self.m_model.m_img_top.m_width + Img_Top_Reduce));
         make.height.equalTo(@(self.m_model.m_img_top.m_height + Img_Top_Reduce));
@@ -217,9 +218,9 @@
     if(!_m_img_top){
         _m_img_top = [UIImageView new];
 
-       /**
-        * 如果原来已经显示了图片，就不要再显示默认图片
-        */
+        /**
+         * 如果原来已经显示了图片，就不要再显示默认图片
+         */
         UIImage * img = _m_img_top.image?_m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
         [_m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:img completed:nil];
         _m_img_top.contentMode = UIViewContentModeScaleAspectFill;
