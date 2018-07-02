@@ -67,6 +67,7 @@
 
     [self.m_lbl_left interface_update:self.m_model.m_title];
     [self.m_img_right setImage:[UIImage imageNamed: self.m_model.m_img.m_imgName]];
+    self.backgroundColor = self.m_model.m_color_backGround;
     [self func_updateConstrains];
 }
 

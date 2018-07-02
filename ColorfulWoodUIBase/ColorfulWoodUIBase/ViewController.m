@@ -223,6 +223,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 
         CWUBView_TitleLeft_ButtonRight_Model *m1 = [[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:info img:[[CWUBImageInfo alloc] initWithName:@"right" width:imgWidth height:imgWidth]];
         m1.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+        m1.m_color_backGround = [UIColor redColor];
         [model19.m_collection_top.m_array addObject:m1];
     }
 
