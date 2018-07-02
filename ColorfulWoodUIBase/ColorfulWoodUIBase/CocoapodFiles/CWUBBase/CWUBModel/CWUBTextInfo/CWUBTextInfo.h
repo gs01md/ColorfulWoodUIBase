@@ -48,6 +48,11 @@
 @property(nonatomic,assign) float m_height;
 
 /**
+ * 设置最大宽度，用于
+ */
+@property(nonatomic,assign) float m_width_max;
+
+/**
  * 正则表达式，限制规则，不符合则禁止输入
  */
 @property(nonatomic,strong) NSString* m_regex;
