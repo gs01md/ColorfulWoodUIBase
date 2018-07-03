@@ -165,6 +165,13 @@
         return;
     }
 
+    /**
+     * 小写字母变成大写字母
+     */
+    if (self.m_model.m_input_right.m_bUppercaseString) {
+        theTextField.text = [theTextField.text uppercaseString];
+    }
+
     self.m_model.m_input_right.m_text = theTextField.text;
     self.m_model.m_dataOut = self.m_model.m_input_right.m_text;
 

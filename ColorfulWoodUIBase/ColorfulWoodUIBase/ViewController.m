@@ -262,7 +262,8 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model16.m_type = CWUBCellType_ImgBack_TitleFront;
 
     model16.m_title = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
-    model16.m_image.m_imgName = @"button";
+    model16.m_image.m_imgName = @"back";
+    model16.m_image.m_contentMode = UIViewContentModeScaleAspectFill;
     model16.m_image.m_height = 100;
     model16.m_image.m_contentMode = UIViewContentModeScaleToFill;
     model16.m_bottomLineInfo.m_color = [UIColor redColor];
@@ -285,6 +286,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model14.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
     model14.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
     model14.m_input_right.m_textPlaceholder = @"请输入内容";
+    model14.m_input_right.m_bUppercaseString = YES;
     model14.m_input_right.m_margin_bottom = 20.;
     model14.m_input_right.m_margin_top = 20.;
     model14.m_title_bottomRight.m_margin_bottom = 1.;
@@ -301,6 +303,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model13.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
     model13.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
     model13.m_input_right.m_regex = ColorfulWoodRegex_1;
+    model13.m_input_right.m_bUppercaseString = YES;
     model13.m_input_right.m_textPlaceholder = @"请输入内容";
     model13.m_input_right.m_margin_bottom = 20.;
     model13.m_input_right.m_margin_top = 20.;

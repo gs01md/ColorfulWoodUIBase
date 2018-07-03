@@ -57,6 +57,11 @@
  */
 @property(nonatomic,strong) NSString* m_regex;
 
+/**
+ * 输入时，小写字母自动变成大写
+ */
+@property(nonatomic,assign) BOOL m_bUppercaseString;
+
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color;
 
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color backColor:(UIColor*)backColor;

@@ -30,7 +30,7 @@
 /**
  * 照片显示模式
  */
-@property(nonatomic,assign) float m_contentMode;
+@property(nonatomic,assign) UIViewContentMode m_contentMode;
 
 /**
  * 可用于显示网络图片时的默认图
