@@ -154,7 +154,7 @@ UICollectionViewDelegateFlowLayout>
 
     if (!_m_collection_right) {
 
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        CWUBCollectionFlowLayout *layout = self.m_model.m_layout;
 
         float width = [[UIScreen mainScreen] bounds].size.width;
         width -= self.m_model.m_title_left.m_margin_left*2;
@@ -162,10 +162,7 @@ UICollectionViewDelegateFlowLayout>
         width -= self.m_model.m_img_right.m_width;
         width -= self.m_model.m_img_right.m_margin_right*2;
 
-        //layout.estimatedItemSize = CGSizeMake(width, 200);
-        layout.minimumLineSpacing = 15.;
-        layout.minimumInteritemSpacing= 15.;
-        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+
         float fLeft   = 0;
         float fTop    = 0;
         float fWidth  = width;

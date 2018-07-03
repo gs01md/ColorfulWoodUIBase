@@ -491,6 +491,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model27.m_back.m_color_background = [UIColor whiteColor];
     model27.m_back.m_height = 140.;
     model27.m_title_bottomCenter = [[CWUBTextInfo alloc] initWithText:[NSString stringWithFormat:@"%@", @"职位职位职位职位职位职位职位职位职位职位职位职位职位职位职位"] font:[UIFont fontWithName:@"PingFangSC-Regular" size:15] color:CWUBDefineCreate_Color(51,51,51,1)];
+    model27.m_img_bottomRight = [[CWUBImageInfo alloc] initWithName:@"button" width:75. height:35.];;
     model27.m_title_bottomCenter.m_margin_left = 10.;
     model27.m_title_bottomCenter.m_width_max = 100;
     model27.m_img_bottomRight.m_margin_left = 10.;
