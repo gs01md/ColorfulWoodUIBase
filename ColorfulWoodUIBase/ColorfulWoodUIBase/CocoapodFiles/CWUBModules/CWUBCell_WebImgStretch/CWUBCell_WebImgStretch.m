@@ -57,7 +57,7 @@
     [self addSubview:self.m_img_center];
     [self addSubview:self.m_img_sep];
 
-    [self interface_updateWithModel:self.m_model index:0];
+    //[self interface_updateWithModel:self.m_model index:0];
 
 }
 
@@ -92,7 +92,7 @@
     return _m_img_sep;
 }
 
-- (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model index:(int)row{
+- (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model{
 
     self.m_model = model;
     if (self.m_model.m_bottomLineInfo.m_color) {
@@ -101,7 +101,30 @@
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
     self.m_isUpdate = TRUE;
-    [self func_updateConstraints:row];
+
+    UIImage *image = [UIImage imageNamed:self.m_model.m_image.m_imgName];
+    float height = 1.;
+    if (image) {
+        height = image.size.height/image.size.width * CWUBDefineDeviceWidth;
+    }
+
+    [self.m_img_center setImage:image];
+    [self.m_img_center mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self).offset(self.m_model.m_image.m_margin_top);
+        make.left.equalTo(self).offset(self.m_model.m_image.m_margin_left);
+        make.right.equalTo(self).offset(-self.m_model.m_image.m_margin_right);
+        make.height.equalTo(@(height));
+        NSLog(@"%f",height);
+    }];
+
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.equalTo(@(self.m_model.m_image.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_image.m_margin_right));
+        make.bottom.equalTo(self);
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
+        make.top.equalTo(self.m_img_center.mas_bottom).offset(self.m_model.m_image.m_margin_top);
+    }];
 
 }
 
@@ -109,34 +132,47 @@
 
     [_m_img_center sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_image.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_image.m_defaultName] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 
-        float height = image.size.height/image.size.width * CWUBDefineDeviceWidth;
+        float height = 0.;
+
+        if (image) {
+            height = image.size.height/image.size.width * CWUBDefineDeviceWidth;
+        }
 
         if (height && height>0) {
 
-            [self.m_img_center mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self).offset(self.m_model.m_image.m_margin_top);
-                make.left.equalTo(self).offset(self.m_model.m_image.m_margin_left);
-                make.right.equalTo(self).offset(-self.m_model.m_image.m_margin_right);
-                make.height.equalTo(@(height));
-            }];
 
-            [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+            /**
+             * 防止重复刷新
+             */
+            if (self.m_model.m_image.m_height == 0) {
+                self.m_model.m_image.m_height = height;
+                if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayout: height:)]) {
 
-                make.left.equalTo(@(self.m_model.m_image.m_margin_left));
-                make.right.equalTo(@(-self.m_model.m_image.m_margin_right));
-                make.bottom.equalTo(self);
-                make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
-                make.top.equalTo(self.m_img_center.mas_bottom).offset(self.m_model.m_image.m_margin_top);
-            }];
-
-
-            if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayout:)]) {
-
-                [self.delegate CWUBCell_WebImgStretchDelegate_updateLayout:row];
+                    [self.delegate CWUBCell_WebImgStretchDelegate_updateLayout:row height:height];
+                }
             }
+
         }
 
     }];
+
+    [self.m_img_center mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self).offset(self.m_model.m_image.m_margin_top);
+        make.left.equalTo(self).offset(self.m_model.m_image.m_margin_left);
+        make.right.equalTo(self).offset(-self.m_model.m_image.m_margin_right);
+        make.height.equalTo(@(self.m_model.m_image.m_height));
+        NSLog(@"%f",self.m_model.m_image.m_height);
+    }];
+
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.equalTo(@(self.m_model.m_image.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_image.m_margin_right));
+        make.bottom.equalTo(self);
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
+        make.top.equalTo(self.m_img_center.mas_bottom).offset(self.m_model.m_image.m_margin_top);
+    }];
+
 }
 
 -(NSString *)interface_get_event_opt_code{
