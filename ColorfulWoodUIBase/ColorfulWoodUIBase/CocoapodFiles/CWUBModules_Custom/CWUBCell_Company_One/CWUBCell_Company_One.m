@@ -39,6 +39,8 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
 
         [self fun_commonInitWithModel:model];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification_clearImg) name:CWUB_NOTIFICATION_CWUBCell_Company_One object:nil];
     }
 
     return self;
@@ -311,5 +313,20 @@
         [self.delegate CWUBCell_Company_One_topImg];
     }
 }
+
+
+
+#pragma mark - 清除图片消息
+- (void)notification_clearImg{
+
+    [self.m_img_top setImage:nil];
+}
+
+-(void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
 @end
 

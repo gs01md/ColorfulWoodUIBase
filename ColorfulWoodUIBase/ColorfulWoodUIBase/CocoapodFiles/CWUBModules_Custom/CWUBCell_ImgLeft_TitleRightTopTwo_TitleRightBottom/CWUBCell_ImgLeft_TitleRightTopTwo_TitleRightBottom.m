@@ -26,6 +26,8 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
 
         [self fun_commonInitWithModel:model];
+
+
     }
 
     return self;
@@ -41,6 +43,8 @@
 }
 
 - (void)fun_commonInitWithModel:(CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model*)model{
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification_clearImg) name:CWUB_NOTIFICATION_CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom object:nil];
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.m_model = model;
@@ -218,4 +222,14 @@
     }
 }
 
+#pragma mark - 清除图片消息
+- (void)notification_clearImg{
+
+    [self.m_img_left setImage:nil];
+}
+
+-(void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

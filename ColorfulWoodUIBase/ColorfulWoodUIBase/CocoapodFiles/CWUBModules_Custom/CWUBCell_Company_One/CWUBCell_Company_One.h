@@ -9,6 +9,11 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_Company_One_Model.h"
 
+/**
+ * 消息，用于清除默认图片
+ */
+#define CWUB_NOTIFICATION_CWUBCell_Company_One @"CWUB_NOTIFICATION_CWUBCell_Company_One"
+
 
 @protocol CWUBCell_Company_One <NSObject>
 
