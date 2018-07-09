@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CWUBUserInteractBase.h"
 
-@interface CWUBMarginBase : NSObject
+@interface CWUBMarginBase : CWUBUserInteractBase
 @property(nonatomic, assign)float m_margin_left;
 @property(nonatomic, assign)float m_margin_right;
 @property(nonatomic, assign)float m_margin_top;

@@ -223,6 +223,12 @@ UICollectionViewDelegateFlowLayout>
     self.backgroundColor = self.m_model.m_color_backGround;
     [self.m_collection_right reloadData];
 
+    if ([self.m_model.m_collection_right.m_canUserInteract intValue] == 1) {
+        self.m_collection_right.userInteractionEnabled = YES;
+    }else{
+        self.m_collection_right.userInteractionEnabled = NO;
+    }
+
     [self func_updateConstrains];
 
 }

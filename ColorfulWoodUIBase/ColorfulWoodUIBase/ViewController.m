@@ -15,7 +15,8 @@ UITableViewDataSource,
 CWUBCell_WebImgStretchDelegate,
 CWUBCell_MyFollow_MyBusinessDelegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate,
-CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
+CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate,
+CWUBCell_CollectionTop_TitleBottom_Delegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -124,6 +125,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
     model6.m_title_rightTopRight = [[CWUBTextInfo alloc] initWithText:@" CEOCEOCEOCEOCEOCEOCEOCEO " font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
     model6.m_title_rightTopRight.m_numberOfLines = 1;
     model6.m_title_rightTopRight.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:5. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+    model6.m_title_rightTopRight.m_insets = UIEdgeInsetsMake(5., 5., 5., 5.);
     model6.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"公司" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:CWUBDefineCreate_Color(51,51,51,1)];
     model6.m_color_backGround = [UIColor whiteColor];
 
@@ -214,7 +216,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
      * 下部的提示文字
      */
     model19.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-
+    model19.m_collection_top.m_canUserInteract = @"0";
     NSArray * array = @[@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空",@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空空航空航空航空航空",@"航空航空",@"空航空",@"航空航空航空",@"航空",@"航空航空",@"航空航空",@"航空航空航空",@"空",@"航空航航空",@"空航空",@"航空航空航空",@"航空"];
 
     for (NSString* temp in array) {
@@ -226,6 +228,8 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
         m1.m_color_backGround = [UIColor redColor];
         [model19.m_collection_top.m_array addObject:m1];
     }
+
+    model19.m_event_opt_code = @"感兴趣行业";
 
     model19.m_bottomLineInfo.m_color = [UIColor redColor];
     [data addObject:model19];
@@ -352,7 +356,8 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
      * 右侧下部的提示文字
      */
     model11.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-
+    //model11.m_collection_right.m_canUserInteract = @"0";
+    model11.m_event_opt_code = @"选择行业";
     NSArray * array1 = @[@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空",@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空空航空航空航空航空",@"航空航空",@"空航空",@"航空航空航空",@"航空",@"航空航空",@"航空航空",@"航空航空航空",@"空",@"航空航航空",@"空航空",@"航空航空航空",@"航空"];
 
     for (NSString* temp in array1) {
@@ -627,7 +632,7 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
         _m_tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
         _m_tableView.delegate = self;
         _m_tableView.dataSource = self;
-        _m_tableView.allowsSelection = NO;
+        //_m_tableView.allowsSelection = NO;
         _m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_m_tableView setBackgroundColor:[UIColor whiteColor]];
 
@@ -706,6 +711,12 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
             cell1.delegate = self;
         }
 
+        if (model.m_type == CWUBCellType_CollectionTop_TitleBottom) {
+            CWUBCell_CollectionTop_TitleBottom * cell1 = (CWUBCell_CollectionTop_TitleBottom*)cell;
+            cell1.delegate = self;
+        }
+
+
         return cell;
 
     }else{
@@ -726,6 +737,14 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
      */
     if ([code isEqualToString:@"查看详情"]) {
 
+    }
+
+    if ([code isEqualToString:@"感兴趣行业"]) {
+        NSLog(@"感兴趣行业");
+    }
+
+    if ([code isEqualToString:@"选择行业"]) {
+        NSLog(@"选择行业");
     }
 }
 
@@ -783,6 +802,15 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate
 - (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:(NSString*)str{
 
     NSLog(str);
+}
+
+
+/**
+ * 返回选择的行，外面重设tableview的数据，然后刷新该界面
+ */
+- (void)CWUBCell_CollectionTop_TitleBottom_Delegate_constrains:(long)index{
+
+    NSLog(@"11111111111111");
 }
 
 @end

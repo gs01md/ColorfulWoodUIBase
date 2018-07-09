@@ -128,6 +128,7 @@
 		8BBDC5D920D8E19700315F13 /* CWUBCell_SevenImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC5D820D8E19700315F13 /* CWUBCell_SevenImg.m */; };
 		8BBDC5DC20D8E1DB00315F13 /* CWUBCell_SevenImg_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC5DB20D8E1DB00315F13 /* CWUBCell_SevenImg_Model.m */; };
 		8BBDC5E120D908D400315F13 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDC5E020D908D400315F13 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model.m */; };
+		8BEB338320F337780093A93C /* CWUBUserInteractBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB338220F337780093A93C /* CWUBUserInteractBase.m */; };
 		8BF8F6E920CF189900E21563 /* CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8F6E820CF189900E21563 /* CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom.m */; };
 		8BF8F6EC20CF18B500E21563 /* CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8F6EB20CF18B500E21563 /* CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom_Model.m */; };
 		9E21318DB9D2FAC3B7401742 /* libPods-ColorfulWoodUIBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD46A07BA5CEC54A26ADB3C /* libPods-ColorfulWoodUIBase.a */; };
@@ -380,6 +381,8 @@
 		8BBDC5DB20D8E1DB00315F13 /* CWUBCell_SevenImg_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_SevenImg_Model.m; sourceTree = "<group>"; };
 		8BBDC5DF20D908D400315F13 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model.h; sourceTree = "<group>"; };
 		8BBDC5E020D908D400315F13 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model.m; sourceTree = "<group>"; };
+		8BEB338120F337780093A93C /* CWUBUserInteractBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBUserInteractBase.h; sourceTree = "<group>"; };
+		8BEB338220F337780093A93C /* CWUBUserInteractBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBUserInteractBase.m; sourceTree = "<group>"; };
 		8BF8F6E720CF189900E21563 /* CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom.h; sourceTree = "<group>"; };
 		8BF8F6E820CF189900E21563 /* CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom.m; sourceTree = "<group>"; };
 		8BF8F6EA20CF18B500E21563 /* CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom_Model.h; sourceTree = "<group>"; };
@@ -985,6 +988,7 @@
 		8B1F419020B5375E00FEAFA0 /* CWUBModel */ = {
 			isa = PBXGroup;
 			children = (
+				8BEB338020F336E20093A93C /* CWUBUserInteractBase */,
 				8BBDC5CE20D8A2DB00315F13 /* CWUBViewModelBase */,
 				8B170CC320D7AAC100D3A3E7 /* CWUBCollectionInfo */,
 				8B1EF51220CE17BF00E48171 /* CWUBCornerInfo */,
@@ -1263,6 +1267,15 @@
 			path = CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight;
 			sourceTree = "<group>";
 		};
+		8BEB338020F336E20093A93C /* CWUBUserInteractBase */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB338120F337780093A93C /* CWUBUserInteractBase.h */,
+				8BEB338220F337780093A93C /* CWUBUserInteractBase.m */,
+			);
+			path = CWUBUserInteractBase;
+			sourceTree = "<group>";
+		};
 		8BF8F6E520CF176500E21563 /* CWUBModules_Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1400,6 +1413,7 @@
 				8B1F41A820B5375E00FEAFA0 /* CWUBCell_Address_ArrowRight.m in Sources */,
 				8B1F41B420B5375E00FEAFA0 /* CWUBCell_TitleLeft_InfoRight_ButtonRight.m in Sources */,
 				8B2DAF5F20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m in Sources */,
+				8BEB338320F337780093A93C /* CWUBUserInteractBase.m in Sources */,
 				8B170CBF20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.m in Sources */,
 				8BBB99E020B56D35002FE1EA /* CWUBCell_TitleLeft_ButtonRight_Model.m in Sources */,
 				8B1F41BE20B5375E00FEAFA0 /* CWUBCell_ButtonRight_TitleRight_ButtonRight_Model.m in Sources */,

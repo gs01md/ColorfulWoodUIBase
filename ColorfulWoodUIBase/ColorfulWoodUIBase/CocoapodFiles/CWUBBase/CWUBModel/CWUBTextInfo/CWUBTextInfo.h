@@ -62,6 +62,12 @@
  */
 @property(nonatomic,assign) BOOL m_bUppercaseString;
 
+/**
+ * 文字在label中的边框大小
+ */
+@property(nonatomic,assign) UIEdgeInsets m_insets;
+
+
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color;
 
 - (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color backColor:(UIColor*)backColor;

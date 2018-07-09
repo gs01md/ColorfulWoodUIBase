@@ -160,6 +160,12 @@ UICollectionViewDelegateFlowLayout>
 
     [self func_updateConstrains];
 
+    if ([self.m_model.m_collection_top.m_canUserInteract intValue] == 1) {
+        self.m_collection_top.userInteractionEnabled = YES;
+    }else{
+        self.m_collection_top.userInteractionEnabled = NO;
+    }
+
 }
 
 /**
