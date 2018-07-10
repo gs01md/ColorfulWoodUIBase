@@ -28,4 +28,18 @@
     return _m_array;
 }
 
+- (CWUBCollectionFlowLayout*) m_layout{
+
+    if (!_m_layout) {
+        _m_layout = [CWUBCollectionFlowLayout new];
+        _m_layout.m_cellType = CWUBCollectionFlowLayoutType_Default;
+        //layout.estimatedItemSize = CGSizeMake(width, 200);
+        _m_layout.minimumLineSpacing = 15.;
+        _m_layout.minimumInteritemSpacing= 15.;
+        _m_layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    }
+
+    return _m_layout;
+}
+
 @end

@@ -7,9 +7,13 @@
 //
 
 #import "CWUBMarginBase.h"
+#import "CWUBCollectionFlowLayout.h"
 
 @interface CWUBCollectionInfo : CWUBMarginBase
 @property(nonatomic, strong)NSMutableArray *m_array;
 
 - (instancetype) initWithArray:(NSMutableArray*)array;
+
+@property(nonatomic, strong)CWUBCollectionFlowLayout *m_layout;
+
 @end

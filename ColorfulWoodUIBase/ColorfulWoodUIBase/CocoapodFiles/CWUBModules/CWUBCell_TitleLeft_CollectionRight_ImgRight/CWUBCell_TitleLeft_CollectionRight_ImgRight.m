@@ -154,14 +154,13 @@ UICollectionViewDelegateFlowLayout>
 
     if (!_m_collection_right) {
 
-        CWUBCollectionFlowLayout *layout = self.m_model.m_layout;
+        CWUBCollectionFlowLayout *layout = self.m_model.m_collection_right.m_layout;
 
         float width = [[UIScreen mainScreen] bounds].size.width;
         width -= self.m_model.m_title_left.m_margin_left*2;
         width -= [self fun_getWidth:self.m_model.m_title_left.m_text font:self.m_lbl_left.font];
         width -= self.m_model.m_img_right.m_width;
         width -= self.m_model.m_img_right.m_margin_right*2;
-
 
         float fLeft   = 0;
         float fTop    = 0;
@@ -173,8 +172,6 @@ UICollectionViewDelegateFlowLayout>
         _m_collection_right.dataSource = self;
         _m_collection_right.backgroundColor = self.m_model.m_color_backGround;
         [_m_collection_right registerClass:[CWUBView_TitleLeft_ButtonRight class] forCellWithReuseIdentifier:@"CWUBCell_TitleLeft_CollectionRight_ImgRight_CellID"];
-
-
 
     }
     return _m_collection_right;

@@ -105,7 +105,7 @@ UICollectionViewDelegateFlowLayout>
 
     if (!_m_collection_top) {
 
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        CWUBCollectionFlowLayout *layout = self.m_model.m_collection_top.m_layout;
 
         float width = [[UIScreen mainScreen] bounds].size.width;
         width -= self.m_model.m_collection_top.m_margin_left;

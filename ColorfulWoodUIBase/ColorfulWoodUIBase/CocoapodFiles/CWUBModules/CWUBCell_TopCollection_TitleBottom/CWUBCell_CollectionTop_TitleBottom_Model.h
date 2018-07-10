@@ -7,8 +7,10 @@
 //
 
 #import "CWUBModelBase.h"
+#import "CWUBCollectionFlowLayout.h"
 
 @interface CWUBCell_CollectionTop_TitleBottom_Model : CWUBModelBase
 @property(nonatomic, strong)CWUBTextInfo* m_title_bottom;
 @property(nonatomic, strong)CWUBCollectionInfo* m_collection_top;
+
 @end
