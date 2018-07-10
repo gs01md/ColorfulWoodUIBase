@@ -88,6 +88,12 @@
         make.left.equalTo(self.m_lbl_rightTopLeft.mas_right).offset(self.m_model.m_title_rightTopRight.m_margin_left);
         make.right.lessThanOrEqualTo(self).offset(-self.m_model.m_title_rightTopRight.m_margin_right);
         make.centerY.equalTo(self.m_lbl_rightTopLeft);
+        if (self.m_model.m_title_rightTopRight.m_height>10) {
+            make.height.equalTo(@(self.m_model.m_title_rightTopRight.m_height));
+        }
+        if (self.m_model.m_title_rightTopRight.m_width>10) {
+            make.width.equalTo(@(self.m_model.m_title_rightTopRight.m_width));
+        }
     }];
 
     [_m_lbl_rightBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
