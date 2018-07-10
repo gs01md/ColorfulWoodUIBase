@@ -159,11 +159,7 @@
 
 - (void)event_textFieldDidChange:(UITextField *)theTextField{
 
-    if (![theTextField.text interface_checkWithRegex:self.m_model.m_input_right.m_regex] ) {
-
-        theTextField.text = self.m_model.m_input_right.m_text;
-        return;
-    }
+    theTextField.text = [theTextField.text interface_getWithRegex:self.m_model.m_input_right.m_regex];
 
     /**
      * 小写字母变成大写字母

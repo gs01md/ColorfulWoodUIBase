@@ -15,5 +15,4 @@
 @property(nonatomic, strong)CWUBTextInfo *m_title_rightBottom;
 @property(nonatomic, strong)CWUBCollectionInfo *m_collection_right;
 @property(nonatomic, strong)CWUBImageInfo *m_img_right;
-@property(nonatomic, strong)CWUBCollectionFlowLayout *m_layout;
 @end

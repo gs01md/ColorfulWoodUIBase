@@ -165,11 +165,7 @@ UITextViewDelegate
 
 - (void)event_textFieldDidChange:(UITextField *)theTextField{
 
-    if (![theTextField.text interface_checkWithRegex:self.m_model.m_input_right.m_regex] ) {
-
-        theTextField.text = self.m_model.m_input_right.m_text;
-        return;
-    }
+    theTextField.text = [theTextField.text interface_getWithRegex:self.m_model.m_input_right.m_regex];
 
     self.m_model.m_input_right.m_text = theTextField.text;
     self.m_model.m_dataOut = self.m_model.m_input_right.m_text;

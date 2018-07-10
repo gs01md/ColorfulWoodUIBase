@@ -16,6 +16,12 @@
  */
 - (BOOL) interface_checkWithRegex:(NSString*)regEx;
 
+/**
+ * 根据传入的规则，返回正确的字符串
+ * 如果传入为空，则不进行校验，直接返回原字符串
+ */
+- (NSString*) interface_getWithRegex:(NSString*)regEx;
+
 
 //----------------------------------------------------------------------
 #pragma mark - 常用正则

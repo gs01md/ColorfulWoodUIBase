@@ -30,6 +30,31 @@
     }
 }
 
+/**
+ * 根据传入的规则，返回正确的字符串
+ * 如果传入为空，则不进行校验，直接返回原字符串
+ */
+- (NSString*) interface_getWithRegex:(NSString*)regEx{
+
+    NSString * strChecked = @"";
+
+    if (regEx && regEx.length>0) {
+
+        NSPredicate *card = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regEx];
+
+        for (int i=0; i<self.length; i++) {
+            NSString *strTemp = [NSString stringWithFormat:@"%@%@",strChecked,[self substringWithRange:NSMakeRange(i, 1)]];
+            if (([card evaluateWithObject:strTemp])) {
+                strChecked = strTemp;
+            }
+        }
+    }else{
+        strChecked = self;
+    }
+
+    return strChecked;
+}
+
 //----------------------------------------------------------------------
 
 
