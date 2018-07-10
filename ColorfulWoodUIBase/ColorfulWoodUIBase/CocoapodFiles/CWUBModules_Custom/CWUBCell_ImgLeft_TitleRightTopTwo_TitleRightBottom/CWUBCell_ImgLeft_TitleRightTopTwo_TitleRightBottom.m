@@ -134,7 +134,7 @@
 
     if (!_m_lbl_rightTopRight) {
         _m_lbl_rightTopRight = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title_rightTopRight];
-        _m_lbl_rightTopRight.textAlignment = NSTextAlignmentLeft;
+        _m_lbl_rightTopRight.textAlignment = NSTextAlignmentCenter;
     }
 
     return _m_lbl_rightTopRight;
