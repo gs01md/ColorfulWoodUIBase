@@ -116,7 +116,7 @@
     if (!_m_textfield_right) {
         _m_textfield_right = [[CWUBTextfieldWithModel alloc] initWithModel:self.m_model.m_input_right];
         _m_textfield_right.textAlignment = NSTextAlignmentRight;
-        [_m_textfield_right addTarget:self action:@selector(event_textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+        [_m_textfield_right addTarget:self action:@selector(event_textFieldDidChange:) forControlEvents:UIControlEventEditingDidEnd];
     }
 
     return _m_textfield_right;
