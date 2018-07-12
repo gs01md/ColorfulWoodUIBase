@@ -18,7 +18,7 @@
  * 用于显示一个圆角浮层
  */
 @property (nonatomic, strong) UIImageView *m_back;
-@property (nonatomic, strong) UIImageView * m_img_top;
+@property (nonatomic, strong) CWUBImageViewWithModel * m_img_top;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_center;
 
 /**
@@ -220,22 +220,15 @@
 -(UIImageView *)m_img_top{
 
     if(!_m_img_top){
-        _m_img_top = [UIImageView new];
 
-        /**
-         * 如果原来已经显示了图片，就不要再显示默认图片
-         */
-        UIImage * img = _m_img_top.image?_m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
-        [_m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:img completed:nil];
-        _m_img_top.contentMode = UIViewContentModeScaleAspectFill;
-        _m_img_top.clipsToBounds = YES;
-        [_m_img_top setClipsToBounds:YES];
+        _m_img_top = [[CWUBImageViewWithModel alloc] initWithModel:self.m_model.m_img_top];
         [_m_img_top setUserInteractionEnabled:YES];
 
         if (self.m_model.m_img_top.m_isCircle) {
             _m_img_top.layer.cornerRadius = (self.m_model.m_img_top.m_width + Img_Top_Reduce)/2.;
             _m_img_top.layer.masksToBounds = YES;
         }
+
         UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgTop)];
         [_m_img_top addGestureRecognizer:tapGesturRecognizer];
     }
@@ -282,14 +275,10 @@
     }
     [self.m_back setImage:[UIImage imageNamed:self.m_model.m_back.m_imgName]];
 
-    if (self.m_model.m_img_top.m_imgUrl.length>0) {
-        /**
-         * 如果原来已经显示了图片，就不要再显示默认图片
-         */
-        UIImage * img = self.m_img_top.image?self.m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
-        [self.m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgUrl] placeholderImage:img completed:nil];
-    }else{
-        [self.m_img_top setImage:[UIImage imageNamed:self.m_model.m_img_top.m_imgName]];
+    [self.m_img_top interface_update:self.m_model.m_img_top];
+    if (self.m_model.m_img_top.m_isCircle) {
+        _m_img_top.layer.cornerRadius = (self.m_model.m_img_top.m_width + Img_Top_Reduce)/2.;
+        _m_img_top.layer.masksToBounds = YES;
     }
 
     [self func_updateConsrtains];

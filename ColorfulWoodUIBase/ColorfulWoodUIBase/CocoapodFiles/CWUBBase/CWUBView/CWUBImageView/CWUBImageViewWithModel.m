@@ -64,10 +64,16 @@
 
         }else{
 
-            self.layer.cornerRadius = 0.;
-            self.layer.borderWidth = 0.;
-            self.layer.borderColor = [[UIColor clearColor] CGColor];
-            self.layer.masksToBounds = NO;
+            if (self.m_info.m_isCircle) {
+                self.layer.cornerRadius = self.m_info.m_width/2.;
+                self.layer.masksToBounds = YES;
+
+            }else{
+                self.layer.cornerRadius = 0.;
+                self.layer.borderWidth = 0.;
+                self.layer.borderColor = [[UIColor clearColor] CGColor];
+                self.layer.masksToBounds = NO;
+            }
         }
 
         if (info.m_color_backGroud) {

@@ -12,7 +12,7 @@
 #import "CWUBLableLeftTop.h"
 
 @interface CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom()
-@property (nonatomic, strong) UIImageView * m_img_left;
+@property (nonatomic, strong) CWUBImageViewWithModel * m_img_left;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_rightTopLeft;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_rightTopRight;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_rightBottom;
@@ -159,25 +159,14 @@
     return _m_img_sep;
 }
 
--(UIImageView *)m_img_left{
+-(CWUBImageViewWithModel *)m_img_left{
 
     if(!_m_img_left){
-        _m_img_left = [UIImageView new];
 
-        /**
-         * 如果原来已经显示了图片，就不要再显示默认图片
-         */
-        UIImage * img = _m_img_left.image?_m_img_left.image:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName];
-        [_m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:img completed:nil];
-        _m_img_left.contentMode = UIViewContentModeScaleAspectFill;
-        _m_img_left.clipsToBounds = YES;
-        [_m_img_left setClipsToBounds:YES];
+        _m_img_left = [[CWUBImageViewWithModel alloc] initWithModel:self.m_model.m_img_left];
+
         [_m_img_left setUserInteractionEnabled:YES];
 
-        if (self.m_model.m_img_left.m_isCircle) {
-            _m_img_left.layer.cornerRadius = self.m_model.m_img_left.m_width/2.;
-            _m_img_left.layer.masksToBounds = YES;
-        }
         UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgLeft)];
         [_m_img_left addGestureRecognizer:tapGesturRecognizer];
     }
@@ -190,18 +179,7 @@
     [self.m_lbl_rightTopLeft interface_update:model.m_title_rightTopLeft];
     [self.m_lbl_rightTopRight interface_update:model.m_title_rightTopRight];
     [self.m_lbl_rightBottom interface_update:model.m_title_rightBottom];
-
-    if (self.m_model.m_img_left.m_imgUrl.length>0) {
-        /**
-         * 如果原来已经显示了图片，就不要再显示默认图片
-         */
-        UIImage * img = self.m_img_left.image?self.m_img_left.image:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName];
-        [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgUrl] placeholderImage:img completed:nil];
-    }else{
-        [self.m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
-    }
-
-
+    [self.m_img_left interface_update:model.m_img_left];
 
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;

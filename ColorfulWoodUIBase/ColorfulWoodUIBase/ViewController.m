@@ -416,7 +416,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
     CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model * model6 = [CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model new];
     model6.m_type = CWUBCellType_ImgLeft_TitleRightTopTwo_TitleRightBottom;
     model6.m_img_left = [[CWUBImageInfo alloc] initWithName:@"FSL_II_我是个人" width:75. height:75.];
-    model6.m_img_left.m_imgName = @"http://images.fangshiliu.com/fsl_api/2018-05-31/252924cf-d74c-439b-b95a-fb1650e051f2.png";
+    model6.m_img_left.m_imgUrl = @"http://images.fangshiliu.com/fsl_api/2018-05-31/252924cf-d74c-439b-b95a-fb1650e051f2.png";
     model6.m_img_left.m_defaultName = @"left";
     model6.m_img_left.m_margin_top = 40.;
     model6.m_img_left.m_margin_bottom = 40.;
@@ -443,7 +443,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
     model7.m_type = CWUBCellType_Company_One;
     model7.m_img_top = [[CWUBImageInfo alloc] initWithName:@"left" width:60. height:60.];
     model7.m_img_top.m_defaultName = @"left";
-    model7.m_img_top.m_imgName = @"http://images.fangshiliu.com/fsl_api/2018-05-31/252924cf-d74c-439b-b95a-fb1650e051f2.png";
+    model7.m_img_top.m_imgUrl = @"http://images.fangshiliu.com/fsl_api/2018-05-31/252924cf-d74c-439b-b95a-fb1650e051f2.png";
     model7.m_img_top.m_margin_top = 12.;
     model7.m_img_top.m_margin_bottom = 40.;
 
