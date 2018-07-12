@@ -190,12 +190,18 @@
     [self.m_lbl_rightTopLeft interface_update:model.m_title_rightTopLeft];
     [self.m_lbl_rightTopRight interface_update:model.m_title_rightTopRight];
     [self.m_lbl_rightBottom interface_update:model.m_title_rightBottom];
-    [self.m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
-   /**
-    * 如果原来已经显示了图片，就不要再显示默认图片
-    */
-    UIImage * img = self.m_img_left.image?self.m_img_left.image:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName];
-    [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:img completed:nil];
+
+    if (self.m_model.m_img_left.m_imgUrl.length>0) {
+        /**
+         * 如果原来已经显示了图片，就不要再显示默认图片
+         */
+        UIImage * img = self.m_img_left.image?self.m_img_left.image:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName];
+        [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:img completed:nil];
+    }else{
+        [self.m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
+    }
+
+
 
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;

@@ -282,19 +282,21 @@
     }
     [self.m_back setImage:[UIImage imageNamed:self.m_model.m_back.m_imgName]];
 
-    /**
-     * 如果原来已经显示了图片，就不要再显示默认图片
-     */
-    UIImage * img = self.m_img_top.image?self.m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
-    [self.m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:img completed:nil];
+    if (self.m_model.m_img_top.m_imgUrl.length>0) {
+        /**
+         * 如果原来已经显示了图片，就不要再显示默认图片
+         */
+        UIImage * img = self.m_img_top.image?self.m_img_top.image:[UIImage imageNamed:self.m_model.m_img_top.m_defaultName];
+        [self.m_img_top sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_top.m_imgName] placeholderImage:img completed:nil];
+    }else{
+        [self.m_img_top setImage:[UIImage imageNamed:self.m_model.m_img_top.m_imgName]];
+    }
 
     [self func_updateConsrtains];
 
 }
 
-
-
-
+#pragma mark - system
 - (void)awakeFromNib {[super awakeFromNib];}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {[super setSelected:selected animated:animated];}
@@ -313,8 +315,6 @@
         [self.delegate CWUBCell_Company_One_topImg];
     }
 }
-
-
 
 #pragma mark - 清除图片消息
 - (void)notification_clearImg{
