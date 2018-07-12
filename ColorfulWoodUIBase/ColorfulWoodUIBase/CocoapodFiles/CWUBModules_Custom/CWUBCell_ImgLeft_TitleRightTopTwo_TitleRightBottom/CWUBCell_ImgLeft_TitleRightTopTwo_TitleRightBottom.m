@@ -196,7 +196,7 @@
          * 如果原来已经显示了图片，就不要再显示默认图片
          */
         UIImage * img = self.m_img_left.image?self.m_img_left.image:[UIImage imageNamed:self.m_model.m_img_left.m_defaultName];
-        [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgName] placeholderImage:img completed:nil];
+        [self.m_img_left sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_img_left.m_imgUrl] placeholderImage:img completed:nil];
     }else{
         [self.m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
     }
