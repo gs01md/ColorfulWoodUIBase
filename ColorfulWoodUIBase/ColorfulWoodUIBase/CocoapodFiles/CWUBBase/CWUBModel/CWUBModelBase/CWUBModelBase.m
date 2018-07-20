@@ -53,6 +53,7 @@
 #import "CWUBCell_ImgBack_TitleFront.h"
 #import "CWUBCell_SelectSex_Style1.h"
 #import "CWUBCell_CollectionTop_TitleBottom.h"
+#import "CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.h"
 
 @implementation CWUBModelBase
 /**
@@ -249,6 +250,10 @@
 
             case CWUBCellType_CollectionTop_TitleBottom:
                 view = [self func_CWUBCell_CollectionTop_TitleBottom:tableView];
+                break;
+
+            case CWUBCellType_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom:
+                view = [self func_CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom:tableView];
                 break;
 
 
@@ -901,6 +906,25 @@
     }
 
 }
+
+- (CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom*) func_CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom";
+        CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom alloc] initWithModel:self];
+    }
+
+}
+
+
 
 #pragma mark - 参数设置
 
