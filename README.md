@@ -20,7 +20,8 @@ pod 'ColorfulWoodUIBase'                    #界面封装
 
 ## 3. 使用示例
 
-![ColorfulWoodUIBase图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/ColorfulWoodUIBase.gif)
+![ColorfulWoodUIBase图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/ColorfulWoodUIBase.gif)![ColorfulWoodUIBase图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_1.gif)
+
 
 ## 3.1. 该框架的使用重点是CWUBModel
 
