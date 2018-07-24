@@ -9,7 +9,7 @@
 #import "CWUBCell_Carousel_Single.h"
 #import "CWUBImageViewWithModel.h"
 #import "CWUBLabelWithModel.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 
 @interface CWUBCell_Carousel_Single ()
 @property(nonatomic, strong)NSMutableArray * m_array;
