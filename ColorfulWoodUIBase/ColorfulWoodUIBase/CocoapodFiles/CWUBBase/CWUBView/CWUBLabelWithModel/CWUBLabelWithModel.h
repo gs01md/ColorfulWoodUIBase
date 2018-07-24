@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CWUBTextInfo.h"
-#import <NSString+ColorfulWoodSize.h>
+#import <ColorfulWoodCategories/NSString+ColorfulWoodSize.h>
 
 @interface CWUBLabelWithModel : UILabel
 @property(nonatomic, strong)CWUBTextInfo* m_model;
