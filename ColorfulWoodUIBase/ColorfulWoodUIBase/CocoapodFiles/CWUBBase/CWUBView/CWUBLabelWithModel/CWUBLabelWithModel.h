@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CWUBTextInfo.h"
+#import <NSString+ColorfulWoodSize.h>
 
 @interface CWUBLabelWithModel : UILabel
--(instancetype) initWithModel:(CWUBTextInfo*)info;
--(void) interface_update:(CWUBTextInfo*)info;
+@property(nonatomic, strong)CWUBTextInfo* m_model;
+-(instancetype) initWithModel:(CWUBTextInfo*)model;
+-(void) interface_update:(CWUBTextInfo*)model;
 @end

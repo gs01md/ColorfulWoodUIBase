@@ -32,12 +32,12 @@
 /**
  * 信息主要标识，可能是订单id、用户id等
  */
-@property(nonatomic, strong)NSString* m_id;
+@property(nonatomic, strong)NSString *m_id;
 
 /**
  * 用于传出数据，通常配合m_id使用
  */
-@property(nonatomic, strong)NSString * m_dataOut;
+@property(nonatomic, strong)NSString *m_dataOut;
 
 /**
  * 背景颜色
@@ -47,7 +47,7 @@
 /**
  * 用作点击操作标识
  */
-@property(nonatomic, strong)NSString * m_event_opt_code;
+@property(nonatomic, strong)NSString *m_event_opt_code;
 
 /**
  * 底部分割线信息
@@ -59,5 +59,9 @@
  */
 @property(nonatomic, strong)CWUBCornerInfo *m_cornerInfo;
 
+/**
+ * 测试数据
+ */
++ (CWUBModelBase*) tester_data;
 
 @end

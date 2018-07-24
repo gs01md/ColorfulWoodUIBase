@@ -1,1 +1,1 @@
-../../../ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories/NSString+ColorfulWoodRegex.h
+../../../ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories/CocoapodFiles/NSString+ColorfulWoodRegex.h

@@ -11,4 +11,11 @@
 
 @interface CWUBCell_Carousel_Single : UIView
 @property(nonatomic, strong)CWUBCell_Carousel_Single_Model *m_model;
+
+-(instancetype)initWithModel:(CWUBCell_Carousel_Single_Model*)model;
+
+/**
+ * 获取总长度
+ */
+- (float) interface_getLength;
 @end

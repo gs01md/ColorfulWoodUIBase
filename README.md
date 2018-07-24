@@ -536,3 +536,38 @@ model17.m_title.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width
 [data addObject:model17];
 ```
 
+## 4.24. CWUBCell_Carousel
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Carousel.gif)
+```Objective C
+CWUBCell_Carousel_Model * modelCarousel = (CWUBCell_Carousel_Model*)[CWUBCell_Carousel_Model tester_data];
+[data addObject:modelCarousel];
+
++ (CWUBCell_Carousel_Model*)tester_data{
+
+CWUBCell_Carousel_Model *model = [CWUBCell_Carousel_Model new];
+model.m_type = CWUBCellType_Carousel;
+model.m_bottomLineInfo.m_color = [UIColor blueColor];
+
+CWUBCell_Carousel_Single_Model *single = [CWUBCell_Carousel_Single_Model new];
+CWUBTextInfo *info = [[CWUBTextInfo alloc] initWithText:@"北京CSDR公司" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+CWUBTextInfo *info1 = [[CWUBTextInfo alloc] initWithText:@"智能识别系统" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+CWUBTextInfo *info2 = [[CWUBTextInfo alloc] initWithText:@"购买成功" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
+info.m_margin_left = 5.;
+info1.m_margin_left = 5.;
+info2.m_margin_left = 5.;
+CWUBImageInfo *img = [[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10];
+img.m_margin_left = 20.;
+[single.m_array addObject:img];
+[single.m_array addObject:info];
+[single.m_array addObject:info1];
+[single.m_array addObject:info2];
+
+[model.m_array addObject:single];
+[model.m_array addObject:single];
+[model.m_array addObject:single];
+
+
+return model;
+}
+```

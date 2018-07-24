@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ColorfulWoodUIBase.h"
+#import <MJRefresh/MJRefresh.h>
 
 @interface ViewController ()<
 UITableViewDelegate,
@@ -233,6 +234,10 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
 
     model19.m_bottomLineInfo.m_color = [UIColor redColor];
     [data addObject:model19];
+
+
+    CWUBCell_Carousel_Model * modelCarousel = (CWUBCell_Carousel_Model*)[CWUBCell_Carousel_Model tester_data];
+    [data addObject:modelCarousel];
 
     CWUBCell_SelectSex_Style1_Model *model18 = [CWUBCell_SelectSex_Style1_Model new];
     model18.m_type = CWUBCellType_SelectSex_Style1;
@@ -666,6 +671,8 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
 
         //iOS以后这句话是默认的，所以可以省略这句话
         _m_tableView.rowHeight = UITableViewAutomaticDimension;
+        _m_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(event_refresh)];
+
     }
 
     return _m_tableView;
@@ -838,4 +845,10 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
     NSLog(@"11111111111111");
 }
 
+#pragma mark - tableview 刷新
+
+- (void)event_refresh{
+    [self.m_tableView.mj_header endRefreshing];
+    [self.m_tableView reloadData];
+}
 @end

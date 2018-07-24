@@ -1,0 +1,1 @@
+../../../ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories/CocoapodFiles/NSString+ColorfulWoodSize.h

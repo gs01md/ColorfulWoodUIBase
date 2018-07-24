@@ -10,6 +10,10 @@
 #import "CWUBImageInfo.h"
 
 @interface CWUBImageViewWithModel : UIImageView
--(instancetype) initWithModel:(CWUBImageInfo*)info;
--(void) interface_update:(CWUBImageInfo*)info;
+
+@property(nonatomic, strong)CWUBImageInfo *m_model;
+
+-(instancetype) initWithModel:(CWUBImageInfo*)model;
+-(void) interface_update:(CWUBImageInfo*)model;
+
 @end

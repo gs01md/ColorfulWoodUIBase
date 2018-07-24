@@ -1,1 +1,1 @@
-../../../ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories/UIImage+ColorfulWoodAddtional.h
+../../../ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories/CocoapodFiles/UIImage+ColorfulWoodAddtional.h

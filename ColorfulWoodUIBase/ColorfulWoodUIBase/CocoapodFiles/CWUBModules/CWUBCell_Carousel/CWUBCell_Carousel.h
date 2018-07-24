@@ -7,7 +7,8 @@
 //
 
 #import "CWUBCellBase.h"
+#import "CWUBCell_Carousel_Model.h"
 
 @interface CWUBCell_Carousel : CWUBCellBase
-
+@property (nonatomic, strong) CWUBCell_Carousel_Model *m_model;
 @end

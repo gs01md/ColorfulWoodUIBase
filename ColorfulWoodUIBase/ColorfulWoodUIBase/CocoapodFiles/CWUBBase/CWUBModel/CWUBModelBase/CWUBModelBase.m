@@ -54,6 +54,7 @@
 #import "CWUBCell_SelectSex_Style1.h"
 #import "CWUBCell_CollectionTop_TitleBottom.h"
 #import "CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.h"
+#import "CWUBCell_Carousel.h"
 
 @implementation CWUBModelBase
 /**
@@ -254,6 +255,10 @@
 
             case CWUBCellType_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom:
                 view = [self func_CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom:tableView];
+                break;
+
+            case CWUBCellType_Carousel:
+                view = [self func_CWUBCell_Carousel:tableView];
                 break;
 
 
@@ -924,7 +929,22 @@
 
 }
 
+- (CWUBCell_Carousel*) func_CWUBCell_Carousel:(UITableView*)tableView{
 
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Carousel";
+        CWUBCell_Carousel *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Carousel alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Carousel alloc] initWithModel:self];
+    }
+
+}
 
 #pragma mark - 参数设置
 
@@ -946,4 +966,13 @@
     return _m_bottomLineInfo;
 }
 
+#pragma mark - 测试数据
+
+/**
+ * 测试数据
+ */
++ (CWUBModelBase*)tester_data{
+
+    return [CWUBModelBase new];
+}
 @end
