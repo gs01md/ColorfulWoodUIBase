@@ -575,7 +575,7 @@ return model;
 
 ## 4.25. CWUBCell_Server_One
 
-![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Server_One.png)
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Server_One.jpg)
 ```Objective C
 CWUBCell_Server_One_Model * modelServer = (CWUBCell_Server_One_Model*)[CWUBCell_Server_One_Model tester_data];
 [data addObject:modelServer];
@@ -597,7 +597,7 @@ return model;
 
 ## 4.26. CWUBCell_Order_One
 
-![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Order_One.png)
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Order_One.jpg)
 ```Objective C
 CWUBCell_Order_One_Model * modelOrder = (CWUBCell_Order_One_Model*)[CWUBCell_Order_One_Model tester_data];
 [data addObject:modelOrder];
