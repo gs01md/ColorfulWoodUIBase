@@ -179,6 +179,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_Passenger_Delete_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_Show_name interface_update:model.m_title_name];
     [self.m_lbl_Show_id interface_update:model.m_title_id];

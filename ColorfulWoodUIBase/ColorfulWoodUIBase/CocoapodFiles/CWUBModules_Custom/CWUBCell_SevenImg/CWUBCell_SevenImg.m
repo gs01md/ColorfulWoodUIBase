@@ -239,6 +239,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_SevenImg_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_one setBackgroundColor:self.m_model.m_title_one.m_color_backGroud];
     [self.m_lbl_two setBackgroundColor:self.m_model.m_title_two.m_color_backGroud];

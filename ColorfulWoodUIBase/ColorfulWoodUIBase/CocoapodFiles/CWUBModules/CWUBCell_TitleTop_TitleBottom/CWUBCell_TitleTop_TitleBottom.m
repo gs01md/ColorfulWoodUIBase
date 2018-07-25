@@ -127,6 +127,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_TitleTop_TitleBottom_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_top interface_update:model.m_title_top];
     [self.m_lbl_bottom interface_update:model.m_title_bottom];

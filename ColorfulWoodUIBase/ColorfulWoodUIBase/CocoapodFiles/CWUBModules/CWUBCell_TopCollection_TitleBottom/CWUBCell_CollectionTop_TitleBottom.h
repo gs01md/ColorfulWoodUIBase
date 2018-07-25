@@ -11,7 +11,7 @@
 
 
 @protocol CWUBCell_CollectionTop_TitleBottom_Delegate <NSObject>
-
+@optional
 /**
  * 返回选择的行，外面重设tableview的数据，然后刷新该界面
  */

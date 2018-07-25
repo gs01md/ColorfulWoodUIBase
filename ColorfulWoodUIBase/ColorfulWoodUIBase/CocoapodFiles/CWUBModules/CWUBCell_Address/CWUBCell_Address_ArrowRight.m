@@ -146,6 +146,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_Address_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_title interface_update:model.m_title];
     [self.m_lbl_info_name_phone interface_update:model.m_title_name_Phone];

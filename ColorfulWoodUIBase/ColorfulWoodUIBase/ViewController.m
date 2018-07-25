@@ -29,7 +29,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    //self.automaticallyAdjustsScrollViewInsets = NO;
 
     [self testTableView];
 
@@ -239,11 +239,19 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
     CWUBCell_Carousel_Model * modelCarousel = (CWUBCell_Carousel_Model*)[CWUBCell_Carousel_Model tester_data];
     [data addObject:modelCarousel];
 
+    CWUBCell_Server_One_Model * modelServer = (CWUBCell_Server_One_Model*)[CWUBCell_Server_One_Model tester_data];
+    [data addObject:modelServer];
+
+    CWUBCell_Order_One_Model * modelOrder = (CWUBCell_Order_One_Model*)[CWUBCell_Order_One_Model tester_data];
+    [data addObject:modelOrder];
+
     CWUBCell_SelectSex_Style1_Model *model18 = [CWUBCell_SelectSex_Style1_Model new];
     model18.m_type = CWUBCellType_SelectSex_Style1;
     model18.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择性别" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
     model18.m_title_man = [[CWUBTextInfo alloc] initWithText:@"先生" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model18.m_title_man.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_center;
     model18.m_title_woman = [[CWUBTextInfo alloc] initWithText:@"女士" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model18.m_title_woman.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_center;
     model18.m_title_man.m_height = 23;
     model18.m_title_woman.m_height = model18.m_title_man.m_height;
     model18.m_title_man.m_width = 50;
@@ -259,6 +267,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
     model17.m_title.m_margin_top = 1.;
     model17.m_title.m_margin_bottom = 1.;
     model17.m_title.m_text = @"*资料认证未通过，点击进入修改";
+    model17.m_title.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_center;
     model17.m_title.m_color = [UIColor redColor];
     model17.m_title.m_color_backGroud = [UIColor blueColor];
     model17.m_bottomLineInfo.m_image = @"line";
@@ -285,6 +294,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
 
     model15.m_title_top = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
     model15.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model15.m_title_bottom.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right;
     model15.m_bottomLineInfo.m_color = [UIColor redColor];
     [data addObject:model15];
 
@@ -293,6 +303,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
 
     model14.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
     model14.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model14.m_title_bottomRight.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right;
     model14.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
     model14.m_input_right.m_textPlaceholder = @"请输入内容";
     model14.m_input_right.m_bUppercaseString = YES;
@@ -310,6 +321,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
 
     model13.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
     model13.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model13.m_title_bottomRight.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right;
     model13.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
     model13.m_input_right.m_regex = ColorfulWoodRegex_1;
     model13.m_input_right.m_bUppercaseString = YES;
@@ -833,7 +845,7 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
  */
 - (void)CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:(NSString*)str{
 
-    NSLog(str);
+    NSLog(@"%@", str);
 }
 
 

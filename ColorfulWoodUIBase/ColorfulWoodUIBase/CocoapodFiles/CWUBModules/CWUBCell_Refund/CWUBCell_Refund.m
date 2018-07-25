@@ -196,6 +196,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_Refund_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
 
     [self.m_lbl_title interface_update:model.m_title];

@@ -214,6 +214,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;

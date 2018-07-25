@@ -47,7 +47,7 @@
 }
 
 - (void)interface_updateWithModel:(CWUBView_TitleLeft_ButtonRight_Model*)model{
-
+    
     self.m_model = model;
 
     if (model.m_cornerInfo && model.m_cornerInfo.m_cornerRadius>0 && model.m_cornerInfo.m_cornerWidth>0) {

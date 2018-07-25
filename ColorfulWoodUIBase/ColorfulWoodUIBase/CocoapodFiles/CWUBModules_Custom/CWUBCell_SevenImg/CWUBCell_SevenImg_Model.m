@@ -7,7 +7,6 @@
 //
 
 #import "CWUBCell_SevenImg_Model.h"
-#import <ColorfulWoodCategories/ColorfulWoodCategories.h>
 
 @implementation CWUBCell_SevenImg_Model
 

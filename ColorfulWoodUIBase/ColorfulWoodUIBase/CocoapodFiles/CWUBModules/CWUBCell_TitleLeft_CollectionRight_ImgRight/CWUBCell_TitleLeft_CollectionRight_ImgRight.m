@@ -201,6 +201,8 @@ UICollectionViewDelegateFlowLayout>
 #pragma mark - 接口
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_CollectionRight_ImgRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
 
     if (self.m_model.m_bottomLineInfo.m_color) {

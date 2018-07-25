@@ -259,6 +259,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_Company_One_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_center interface_update:model.m_title_center];
     [self.m_lbl_bottomLeft interface_update:model.m_title_bottomLeft];

@@ -19,5 +19,4 @@
 @property (nonatomic, strong) CWUBCell_WebImgStretch_Model * m_model;
 @property (nonatomic, weak) id<CWUBCell_WebImgStretchDelegate>delegate;
 
-- (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model;
 @end

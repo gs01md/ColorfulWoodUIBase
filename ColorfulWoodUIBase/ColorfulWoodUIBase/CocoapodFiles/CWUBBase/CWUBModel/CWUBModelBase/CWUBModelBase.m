@@ -55,6 +55,8 @@
 #import "CWUBCell_CollectionTop_TitleBottom.h"
 #import "CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.h"
 #import "CWUBCell_Carousel.h"
+#import "CWUBCell_Server_One.h"
+#import "CWUBCell_Order_One.h"
 
 @implementation CWUBModelBase
 /**
@@ -261,6 +263,13 @@
                 view = [self func_CWUBCell_Carousel:tableView];
                 break;
 
+            case CWUBCellType_Order_One:
+                view = [self func_CWUBCell_Order_One:tableView];
+                break;
+
+            case CWUBCellType_Server_One:
+                view = [self func_CWUBCell_Server_One:tableView];
+                break;
 
 
             default:
@@ -942,6 +951,40 @@
 
     }else{
         return [[CWUBCell_Carousel alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_Order_One*) func_CWUBCell_Order_One:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Order_One";
+        CWUBCell_Order_One *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Order_One alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Order_One alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_Server_One*) func_CWUBCell_Server_One:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Server_One";
+        CWUBCell_Server_One *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Server_One alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Server_One alloc] initWithModel:self];
     }
 
 }

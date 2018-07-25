@@ -12,7 +12,7 @@
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model.h"
 
 @protocol CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Delegate <NSObject>
-
+@optional
 /**
  * 更新高度
  */

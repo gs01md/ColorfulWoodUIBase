@@ -53,6 +53,21 @@
         self.numberOfLines = model.m_numberOfLines;
         self.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
 
+        /*
+        switch (self.m_model.m_labelTextHorizontalType) {
+            case CWUBLabelTextHorizontalType_left:
+                self.textAlignment = CWUBLabelTextHorizontalType_left;
+                break;
+            case CWUBLabelTextHorizontalType_right:
+                self.textAlignment = CWUBLabelTextHorizontalType_right;
+                break;
+
+            default:
+                self.textAlignment = CWUBLabelTextHorizontalType_center;
+                break;
+        }
+         */
+
         if (model.m_color_backGroud) {
             self.backgroundColor = model.m_color_backGroud;
         }

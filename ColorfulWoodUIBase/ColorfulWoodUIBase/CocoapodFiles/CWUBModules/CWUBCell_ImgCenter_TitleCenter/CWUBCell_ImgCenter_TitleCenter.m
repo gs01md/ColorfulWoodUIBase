@@ -146,6 +146,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_ImgCenter_TitleCenter_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_center interface_update:model.m_title];
     [self.m_img_center setImage:[UIImage imageNamed:self.m_model.m_image.m_imgName]];

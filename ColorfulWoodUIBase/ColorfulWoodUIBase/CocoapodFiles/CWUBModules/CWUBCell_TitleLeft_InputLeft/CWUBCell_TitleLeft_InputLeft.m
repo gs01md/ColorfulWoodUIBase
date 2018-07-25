@@ -117,6 +117,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InputLeft_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_textfield interface_update:model.m_input];
     [self.m_lbl_title interface_update:model.m_title];

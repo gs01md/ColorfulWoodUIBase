@@ -481,10 +481,11 @@ CWUBCell_WebImgStretchDelegate
     if( 1){//个人
         self.m_titleArray = @[@"关注的企业",@"基本信息",@"账号安全",@"切换身份",@"新手引导",@"问题反馈",@"关于我们"];
         self.m_imageArray = @[@"FSL_M_关注的企业",@"FSL_M_基本信息",@"FSL_M_帐号安全",@"FSL_M_身份切换",@"FSL_M_新手引导",@"FSL_M_意见反馈",@"FSL_M_关于我们"];
-    }else{
-        self.m_titleArray = @[@"VIP会员",@"企业信息",@"账号安全",@"切换身份",@"新手引导",@"问题反馈",@"关于我们"];
-        self.m_imageArray = @[@"FSL_M_VIP会员页皇冠",@"FSL_M_企业信息",@"FSL_M_帐号安全",@"FSL_M_身份切换",@"FSL_M_新手引导",@"FSL_M_意见反馈",@"FSL_M_关于我们"];
     }
+//    else{
+//        self.m_titleArray = @[@"VIP会员",@"企业信息",@"账号安全",@"切换身份",@"新手引导",@"问题反馈",@"关于我们"];
+//        self.m_imageArray = @[@"FSL_M_VIP会员页皇冠",@"FSL_M_企业信息",@"FSL_M_帐号安全",@"FSL_M_身份切换",@"FSL_M_新手引导",@"FSL_M_意见反馈",@"FSL_M_关于我们"];
+//    }
 }
 
 /**

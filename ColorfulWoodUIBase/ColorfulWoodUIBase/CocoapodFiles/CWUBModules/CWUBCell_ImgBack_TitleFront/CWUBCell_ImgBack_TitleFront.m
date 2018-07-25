@@ -126,6 +126,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_ImgBack_TitleFront_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_front interface_update:self.m_model.m_title];
     [self.m_img_back interface_update:self.m_model.m_image];

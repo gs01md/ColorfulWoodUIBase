@@ -100,6 +100,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_ButtonRight_SpaceBottom_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     if (model) {
         self.m_model = model;
         [self.m_btn interface_updateWithModel:self.m_model.m_btn_info];

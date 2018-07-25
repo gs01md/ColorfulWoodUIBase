@@ -121,6 +121,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_TitleRight_ButtonRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
 
     if (self.m_model.m_bottomLineInfo.m_color) {

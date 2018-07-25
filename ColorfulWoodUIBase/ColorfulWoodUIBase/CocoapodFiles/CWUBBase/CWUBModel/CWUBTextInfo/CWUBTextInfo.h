@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "CWUBLabelTextVerticalType.h"
+#import "CWUBLabelTextAlignmentType.h"
 #import "CWUBMarginBase.h"
 #import "CWUBCornerInfo.h"
 
@@ -31,6 +31,7 @@
 @property(nonatomic,strong) NSString* m_textPlaceholder;
 @property(nonatomic,assign) BOOL m_isHidden;
 @property(nonatomic,assign) CWUBLabelTextVerticalType m_labelTextVerticalType;
+@property(nonatomic,assign) CWUBLabelTextHorizontalType m_labelTextHorizontalType;
 
 /**
  * 行数:0=多行

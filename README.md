@@ -20,7 +20,7 @@ pod 'ColorfulWoodUIBase'                    #界面封装
 
 ## 3. 使用示例
 
-![ColorfulWoodUIBase图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/ColorfulWoodUIBase.gif) 
+![ColorfulWoodUIBase图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/ColorfulWoodUIBase.gif) ![ColorfulWoodUIBase图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/ColorfulWoodUIBase2.gif) 
 
 
 ## 3.1. 该框架的使用重点是CWUBModel
@@ -568,6 +568,54 @@ img.m_margin_left = 20.;
 [model.m_array addObject:single];
 [model.m_array addObject:single];
 
+
+return model;
+}
+```
+
+## 4.25. CWUBCell_Server_One
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Server_One.png)
+```Objective C
+CWUBCell_Server_One_Model * modelServer = (CWUBCell_Server_One_Model*)[CWUBCell_Server_One_Model tester_data];
+[data addObject:modelServer];
+
++ (CWUBCell_Server_One_Model*)tester_data{
+
+CWUBCell_Server_One_Model *model = [CWUBCell_Server_One_Model new];
+model.m_type = CWUBCellType_Server_One;
+model.m_bottomLineInfo.m_color = [UIColor blueColor];
+
+model.m_title_one  = [[CWUBTextInfo alloc] initWithText:@"商讯撰写" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+model.m_title_two = [[CWUBTextInfo alloc] initWithText:@"杂志内刊封面展示" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+model.m_title_three = [[CWUBTextInfo alloc] initWithText:@"￥400" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
+model.m_img_one = [[CWUBImageInfo alloc] initWithName:@"left" width:50 height:50];
+
+return model;
+}
+```
+
+## 4.26. CWUBCell_Order_One
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Order_One.png)
+```Objective C
+CWUBCell_Order_One_Model * modelOrder = (CWUBCell_Order_One_Model*)[CWUBCell_Order_One_Model tester_data];
+[data addObject:modelOrder];
+
++ (CWUBCell_Order_One_Model*)tester_data{
+
+CWUBCell_Order_One_Model *model = [CWUBCell_Order_One_Model new];
+model.m_type = CWUBCellType_Order_One;
+model.m_bottomLineInfo.m_color = [UIColor blueColor];
+
+model.m_title_one  = [[CWUBTextInfo alloc] initWithText:@"2018-1-2 12:20:30" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+model.m_title_two = [[CWUBTextInfo alloc] initWithText:@"订单号：1DDADF2E232D2WE24" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+model.m_title_three = [[CWUBTextInfo alloc] initWithText:@"软文推广" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
+
+model.m_title_four = [[CWUBTextInfo alloc] initWithText:@"已接单" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
+
+model.m_title_five = [[CWUBTextInfo alloc] initWithText:@"实付款：￥400" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
+model.m_title_five.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right;
 
 return model;
 }

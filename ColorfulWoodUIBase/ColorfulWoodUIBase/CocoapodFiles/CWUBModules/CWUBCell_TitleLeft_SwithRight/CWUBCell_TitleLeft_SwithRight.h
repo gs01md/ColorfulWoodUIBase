@@ -10,7 +10,7 @@
 #import "CWUBCell_TitleLeft_SwithRight_Model.h"
 
 @protocol CWUBCell_TitleLeft_SwithRight_Delegate <NSObject>
-
+@optional
 - (void)CWUBCell_TitleLeft_SwithRight_Delegate_Switch:(BOOL)swithOn;
 @end
 

@@ -155,6 +155,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_textfield_right interface_update:model.m_input_right];
     [self.m_lbl_left interface_update:model.m_title_left];

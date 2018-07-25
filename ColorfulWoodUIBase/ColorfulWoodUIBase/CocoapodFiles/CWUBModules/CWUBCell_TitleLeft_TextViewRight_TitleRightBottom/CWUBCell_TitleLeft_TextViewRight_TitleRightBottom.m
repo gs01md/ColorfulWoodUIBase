@@ -86,7 +86,7 @@ UITextViewDelegate
     return _m_model;
 }
 
-- (CWUBLableLeftTop *)m_lbl_left{
+- (CWUBLabelWithModel *)m_lbl_left{
 
     if (!_m_lbl_left) {
         _m_lbl_left = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title_left];
@@ -98,7 +98,7 @@ UITextViewDelegate
     return _m_lbl_left;
 }
 
-- (CWUBLableLeftTop *)m_lbl_rightBottom{
+- (CWUBLabelWithModel *)m_lbl_rightBottom{
 
     if (!_m_lbl_rightBottom) {
         _m_lbl_rightBottom = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title_bottomRight];
@@ -138,6 +138,8 @@ UITextViewDelegate
 
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     //[self.m_textfield_right interface_update:model.m_input_right];
     [self.m_lbl_left interface_update:model.m_title_left];

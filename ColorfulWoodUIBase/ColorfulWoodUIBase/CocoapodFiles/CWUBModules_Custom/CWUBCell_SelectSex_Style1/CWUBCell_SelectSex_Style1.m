@@ -158,6 +158,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_SelectSex_Style1_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_woman interface_update:model.m_title_woman];

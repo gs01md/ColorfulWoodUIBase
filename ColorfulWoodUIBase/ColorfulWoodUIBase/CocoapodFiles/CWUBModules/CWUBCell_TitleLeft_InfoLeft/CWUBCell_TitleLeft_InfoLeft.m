@@ -130,6 +130,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InfoLeft_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lblInfo interface_update:model.m_info];
     [self.m_lblShow interface_update:model.m_title];

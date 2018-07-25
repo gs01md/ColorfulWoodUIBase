@@ -175,6 +175,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_rightTopLeft interface_update:model.m_title_rightTopLeft];
     [self.m_lbl_rightTopRight interface_update:model.m_title_rightTopRight];

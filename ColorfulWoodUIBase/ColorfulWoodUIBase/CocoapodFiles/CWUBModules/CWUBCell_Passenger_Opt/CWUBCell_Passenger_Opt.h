@@ -10,6 +10,7 @@
 #import "CWUBCell_Passenger_Opt_Model.h"
 
 @protocol CWUBCell_Passenger_Opt_Delegate <NSObject>
+@optional
 -(void) CWUBCell_Passenger_Opt_Delegate_save;
 -(void) CWUBCell_Passenger_Opt_Delegate_cancel;
 @end

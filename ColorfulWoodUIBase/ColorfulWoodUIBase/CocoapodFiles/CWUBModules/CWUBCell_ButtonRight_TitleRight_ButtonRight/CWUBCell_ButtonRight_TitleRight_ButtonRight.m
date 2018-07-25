@@ -119,6 +119,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_ButtonRight_TitleRight_ButtonRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [_m_btn_right setTitle:self.m_model.m_button_title.m_text forState:UIControlStateNormal];
     [_m_btn_right.titleLabel setFont:self.m_model.m_button_title.m_font];
