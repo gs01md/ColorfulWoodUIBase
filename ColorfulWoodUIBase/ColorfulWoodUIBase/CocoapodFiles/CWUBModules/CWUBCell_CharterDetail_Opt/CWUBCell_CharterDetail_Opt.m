@@ -16,7 +16,7 @@
 @property (nonatomic, strong) UIButton *m_btn_first;
 @property (nonatomic, strong) UIButton *m_btn_second;
 
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_CharterDetail_Opt
@@ -31,7 +31,7 @@
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
@@ -41,13 +41,13 @@
 
     if (self = [super initWithFrame:frame]) {
         self.m_model = model;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
--(void) initWithSubViews{
+-(void) func_initWithSubViews{
 
     [self addSubview:self.m_btn_first];
     [self addSubview:self.m_btn_second];
@@ -74,7 +74,7 @@
     }];
 
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -117,15 +117,6 @@
     }
 
     return _m_btn_second;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 - (void) interface_updateWithModel:(CWUBCell_CharterDetail_Opt_Model*)model{

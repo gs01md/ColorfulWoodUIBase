@@ -65,4 +65,9 @@
  */
 + (CWUBModelBase*) tester_data;
 
+/**
+ * 测试数据 简化声明
+ */
++ (CWUBModelBase*)tester_dataWithArray:(NSMutableArray*)data;
+
 @end

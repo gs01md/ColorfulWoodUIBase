@@ -18,4 +18,14 @@
  * 按钮图标
  */
 @property(nonatomic, strong) CWUBImageInfo * m_btnImg;
+
+/**
+ * 测试样例2
+ */
++ (CWUBCell_TitleLeft_ButtonRight_Model *)tester_dataWithArray2:(NSMutableArray *)data;
+
+/**
+ * 测试样例3
+ */
++ (CWUBCell_TitleLeft_ButtonRight_Model *)tester_dataWithArray3:(NSMutableArray *)data;
 @end

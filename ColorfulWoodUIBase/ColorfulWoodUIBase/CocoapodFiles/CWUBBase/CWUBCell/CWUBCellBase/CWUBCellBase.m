@@ -67,6 +67,15 @@
     return self;
 }
 
+-(UIImageView *)m_img_sep{
+
+    if(!_m_img_sep){
+        _m_img_sep = [CWUBDefine imgSep];
+        [_m_img_sep setClipsToBounds:YES];
+    }
+    return _m_img_sep;
+}
+
 - (void)interface_updateWithModel:(CWUBModelBase*)model{
 
 }

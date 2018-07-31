@@ -9,6 +9,16 @@
 #import "CWUBCell_TitleLeft_InputLeft_Model.h"
 
 @implementation CWUBCell_TitleLeft_InputLeft_Model
+
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_TitleLeft_InputLeft;
+    }
+
+    return self;
+}
+
 - (CWUBTextInfo*) m_title{
 
     if (!_m_title) {

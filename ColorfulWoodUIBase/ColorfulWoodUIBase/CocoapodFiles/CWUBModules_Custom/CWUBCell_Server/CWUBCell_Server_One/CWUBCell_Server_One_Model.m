@@ -9,6 +9,16 @@
 #import "CWUBCell_Server_One_Model.h"
 
 @implementation CWUBCell_Server_One_Model
+
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_Server_One;
+    }
+
+    return self;
+}
+
 - (CWUBTextInfo*)m_title_one{
 
     if (!_m_title_one) {
@@ -55,6 +65,24 @@
     model.m_title_two = [[CWUBTextInfo alloc] initWithText:@"杂志内刊封面展示" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
     model.m_title_three = [[CWUBTextInfo alloc] initWithText:@"￥400" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
     model.m_img_one = [[CWUBImageInfo alloc] initWithName:@"left" width:50 height:50];
+
+    return model;
+}
+
++ (CWUBCell_Server_One_Model*)tester_dataWithArray:(NSMutableArray*)array{
+
+    CWUBCell_Server_One_Model *model = [CWUBCell_Server_One_Model new];
+    model.m_type = CWUBCellType_Server_One;
+    model.m_bottomLineInfo.m_color = [UIColor blueColor];
+
+    model.m_title_one  = [[CWUBTextInfo alloc] initWithText:@"商讯撰写" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model.m_title_two = [[CWUBTextInfo alloc] initWithText:@"杂志内刊封面展示" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model.m_title_three = [[CWUBTextInfo alloc] initWithText:@"￥400" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
+    model.m_img_one = [[CWUBImageInfo alloc] initWithName:@"left" width:50 height:50];
+
+    if (array) {
+        [array addObject:model];
+    }
 
     return model;
 }

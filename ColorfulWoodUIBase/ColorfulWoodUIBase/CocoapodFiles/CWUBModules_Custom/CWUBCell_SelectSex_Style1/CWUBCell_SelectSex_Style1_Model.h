@@ -16,4 +16,10 @@
  * 是否默认选中 女士
  */
 @property(nonatomic, assign)BOOL m_isSelectedWoman;
+
+/**
+ * 用户是否可以点击，默认是能点击的，值为NO
+ */
+@property(nonatomic, assign)BOOL m_cantEnabled;
+
 @end

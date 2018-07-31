@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_Address_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_Address;
+    }
+
+    return self;
+}
+
 @end

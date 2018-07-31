@@ -23,13 +23,13 @@
 
         self.m_model = model;
 
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     /**
      * 根据model类型，添加对应的视图，并保存起来供布局使用

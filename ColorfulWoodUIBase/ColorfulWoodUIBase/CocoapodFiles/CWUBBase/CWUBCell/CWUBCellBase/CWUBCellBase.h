@@ -21,6 +21,8 @@
 
 @property (nonatomic, weak) UIViewController * m_delegate;
 
+@property (nonatomic, strong) UIImageView * m_img_sep;
+
 /**
  * 返回cell
  */

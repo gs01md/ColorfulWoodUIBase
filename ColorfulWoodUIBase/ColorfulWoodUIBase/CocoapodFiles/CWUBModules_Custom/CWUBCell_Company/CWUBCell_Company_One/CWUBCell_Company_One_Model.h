@@ -38,4 +38,9 @@
  * 下侧 右图片
  */
 @property(nonatomic, strong) CWUBImageInfo * m_img_bottomRight;
+
+/**
+ * 测试样例2
+ */
++ (CWUBCell_Company_One_Model *)tester_dataWithArray2:(NSMutableArray *)data;
 @end

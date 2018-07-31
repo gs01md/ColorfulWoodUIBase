@@ -11,6 +11,15 @@
 
 @implementation CWUBCell_TitleLeft_InfoLeft_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_TitleLeft_InfoLeft;
+    }
+
+    return self;
+}
+
 - (float)m_titleWidth{
 
     if(!_m_titleWidth){

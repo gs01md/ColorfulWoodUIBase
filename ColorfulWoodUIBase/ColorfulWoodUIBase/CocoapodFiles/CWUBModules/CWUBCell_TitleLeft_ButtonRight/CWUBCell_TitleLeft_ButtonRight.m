@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_title;
 @property (nonatomic, strong) UIImageView * m_img_btn;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 
 @end
 
@@ -46,12 +46,12 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 
     self.backgroundColor = self.m_model.m_color_backGround;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_title];
     [self addSubview:self.m_img_btn];
@@ -79,7 +79,7 @@
         make.height.equalTo(@(self.m_model.m_btnImg.m_height));
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -109,15 +109,6 @@
         _m_lbl_title.numberOfLines = self.m_model.m_title.m_numberOfLines;
     }
     return _m_lbl_title;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 -(UIImageView *)m_img_btn{

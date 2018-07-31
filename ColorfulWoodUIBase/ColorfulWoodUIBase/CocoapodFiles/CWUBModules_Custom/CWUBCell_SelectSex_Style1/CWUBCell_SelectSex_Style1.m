@@ -13,7 +13,7 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_man;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_woman;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_SelectSex_Style1
@@ -46,10 +46,10 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_lbl_man];
@@ -85,7 +85,7 @@
         make.width.equalTo(@(self.m_model.m_title_man.m_width));
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -147,15 +147,6 @@
     return _m_lbl_woman;
 }
 
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
-
 - (void) interface_updateWithModel:(CWUBCell_SelectSex_Style1_Model*)model{
 
     [super interface_updateWithModel:model];
@@ -184,7 +175,6 @@
         [self event_man];
     }
 
-
 }
 
 #pragma mark - 接口
@@ -201,28 +191,36 @@
 
 - (void)event_man{
 
-    [self.m_lbl_woman interface_update:self.m_model.m_title_woman];
-    [self.m_lbl_man interface_update:self.m_model.m_title_man];
-    self.m_lbl_woman.text = self.m_model.m_title_woman.m_text;
-    self.m_lbl_man.text = self.m_model.m_title_man.m_text;
+    if (!self.m_model.m_cantEnabled) {
 
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_SelectSex_Style1_Delegate_selectMan)]) {
+        [self.m_lbl_woman interface_update:self.m_model.m_title_woman];
+        [self.m_lbl_man interface_update:self.m_model.m_title_man];
+        self.m_lbl_woman.text = self.m_model.m_title_woman.m_text;
+        self.m_lbl_man.text = self.m_model.m_title_man.m_text;
 
-        [self.delegate CWUBCell_SelectSex_Style1_Delegate_selectMan];
+        if ([self.delegate respondsToSelector:@selector(CWUBCell_SelectSex_Style1_Delegate_selectMan)]) {
+
+            [self.delegate CWUBCell_SelectSex_Style1_Delegate_selectMan];
+        }
     }
 }
 
 - (void)event_woman{
-    
-    [self.m_lbl_woman interface_update:self.m_model.m_title_man];
-    [self.m_lbl_man interface_update:self.m_model.m_title_woman];
-    self.m_lbl_woman.text = self.m_model.m_title_woman.m_text;
-    self.m_lbl_man.text = self.m_model.m_title_man.m_text;
 
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_SelectSex_Style1_Delegate_selectWoman)]) {
+    if (!self.m_model.m_cantEnabled) {
 
-        [self.delegate CWUBCell_SelectSex_Style1_Delegate_selectWoman];
+        [self.m_lbl_woman interface_update:self.m_model.m_title_man];
+        [self.m_lbl_man interface_update:self.m_model.m_title_woman];
+        self.m_lbl_woman.text = self.m_model.m_title_woman.m_text;
+        self.m_lbl_man.text = self.m_model.m_title_man.m_text;
+
+        if ([self.delegate respondsToSelector:@selector(CWUBCell_SelectSex_Style1_Delegate_selectWoman)]) {
+
+            [self.delegate CWUBCell_SelectSex_Style1_Delegate_selectWoman];
+        }
     }
+    
+
 }
 
 @end

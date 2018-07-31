@@ -14,7 +14,7 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lblShow;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lblShowBtn;
 @property (nonatomic, strong) UIImageView * m_img_btn;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 
 @end
 
@@ -30,13 +30,13 @@
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lblShow];
     [self addSubview:self.m_lblShowBtn];
@@ -72,7 +72,7 @@
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -113,14 +113,7 @@
     return _m_lblShowBtn;
 }
 
--(UIImageView *)m_img_sep{
 
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
 
 -(UIImageView *)m_img_btn{
 

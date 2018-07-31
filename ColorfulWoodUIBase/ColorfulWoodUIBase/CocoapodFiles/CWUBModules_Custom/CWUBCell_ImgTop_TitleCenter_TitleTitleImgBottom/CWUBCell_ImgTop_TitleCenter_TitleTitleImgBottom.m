@@ -29,7 +29,7 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_bottomCenter;
 @property (nonatomic, strong) UIImageView *m_img_bottomRight;
 
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom
@@ -62,10 +62,10 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     self.backgroundColor = [UIColor clearColor];
 
@@ -137,7 +137,7 @@
         make.bottom.equalTo(self.m_img_sep).offset(-self.m_model.m_title_bottomLeft.m_margin_bottom);
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -243,15 +243,6 @@
         [_m_img_bottomRight setUserInteractionEnabled:YES];
     }
     return _m_img_bottomRight;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 - (void) interface_updateWithModel:(CWUBCell_ImgTop_TitleCenter_TitleTitleImgBottom_Model*)model{

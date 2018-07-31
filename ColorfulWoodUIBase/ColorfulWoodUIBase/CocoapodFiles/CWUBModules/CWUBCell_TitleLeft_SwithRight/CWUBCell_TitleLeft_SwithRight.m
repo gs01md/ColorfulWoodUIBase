@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) CWUBLableLeftTop *m_lbl_left;
 @property (nonatomic, strong) UISwitch * m_switch;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 
 @end
 
@@ -30,7 +30,7 @@
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
@@ -40,13 +40,13 @@
 
     if (self = [super init]) {
         self.m_model = model;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_switch];
@@ -71,7 +71,7 @@
         make.centerY.equalTo(self.m_lbl_left);
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -119,15 +119,6 @@
         _m_lbl_left.numberOfLines = 0;
     }
     return _m_lbl_left;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_SwithRight_Model*)model{

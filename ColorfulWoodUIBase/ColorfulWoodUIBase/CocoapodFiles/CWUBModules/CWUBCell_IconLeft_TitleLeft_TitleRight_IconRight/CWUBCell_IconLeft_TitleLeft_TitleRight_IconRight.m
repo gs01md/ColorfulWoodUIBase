@@ -17,7 +17,7 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_right;
 @property (nonatomic, strong) UIImageView * m_img_left;
 @property (nonatomic, strong) UIImageView * m_img_right;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 
 @end
 
@@ -51,10 +51,10 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_lbl_right];
@@ -95,7 +95,7 @@
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_right.m_margin_bottom);
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         switch (self.m_model.m_bottomLineInfo.m_bottomLineType) {
             case CWUBBottomLineType_left:
@@ -177,15 +177,6 @@
         _m_lbl_right.numberOfLines = 0;
     }
     return _m_lbl_right;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 -(UIImageView *)m_img_left{

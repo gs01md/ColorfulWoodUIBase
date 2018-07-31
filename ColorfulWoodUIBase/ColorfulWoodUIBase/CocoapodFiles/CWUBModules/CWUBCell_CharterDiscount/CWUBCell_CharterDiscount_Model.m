@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_CharterDiscount_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_CharterDiscount;
+    }
+
+    return self;
+}
+
 @end

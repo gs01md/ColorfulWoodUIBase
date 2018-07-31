@@ -10,6 +10,15 @@
 
 @implementation CWUBCell_SevenImg_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_SevenImg;
+    }
+
+    return self;
+}
+
 - (CWUBTextInfo*)m_title_one{
 
     if (!_m_title_one) {
@@ -73,4 +82,31 @@
     return _m_img_three;
 }
 
++ (CWUBCell_SevenImg_Model *)tester_dataWithArray:(NSMutableArray *)data{
+
+    CWUBCell_SevenImg_Model * model12 = [CWUBCell_SevenImg_Model new];
+    model12.m_type = CWUBCellType_SevenImg;
+
+    model12.m_img_one = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+    model12.m_img_two = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+    model12.m_img_three = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+    model12.m_img_three.m_margin_right = CWUBDefine_Width(53.);
+
+    model12.m_img_one.m_margin_left = CWUBDefine_Width(53.);
+    model12.m_title_one.m_height = 2.;
+    model12.m_title_one.m_color_backGroud = [UIColor blueColor];
+    model12.m_title_one.m_margin_left = 0.01;
+    model12.m_title_four.m_margin_right = 0.01;
+    model12.m_title_four.m_margin_left = CWUBDefine_Width(5.);
+    model12.m_title_one.m_margin_right = CWUBDefine_Width(5.);
+    model12.m_title_two.m_margin_left = CWUBDefine_Width(5.);
+    model12.m_title_two.m_margin_right = CWUBDefine_Width(5.);
+    model12.m_title_three.m_margin_left = CWUBDefine_Width(5.);
+    model12.m_title_three.m_margin_right = CWUBDefine_Width(5.);
+
+
+    [data addObject:model12];
+
+    return model12;
+}
 @end

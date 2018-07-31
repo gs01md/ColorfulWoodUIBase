@@ -29,4 +29,14 @@
  * 右侧 下标题
  */
 @property(nonatomic, strong) CWUBTextInfo * m_title_rightBottom;
+
+/**
+ * 测试样例2
+ */
++ (CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model *)tester_dataWithArray2:(NSMutableArray *)data;
+
+/**
+ * 测试样例3
+ */
++ (CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model *)tester_dataWithArray3:(NSMutableArray *)data;
 @end

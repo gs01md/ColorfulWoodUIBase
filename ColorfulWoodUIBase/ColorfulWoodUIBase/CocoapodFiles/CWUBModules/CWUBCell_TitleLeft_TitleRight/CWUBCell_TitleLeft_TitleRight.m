@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_right;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 @implementation CWUBCell_TitleLeft_TitleRight
 
@@ -45,10 +45,10 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_lbl_right];
@@ -73,7 +73,7 @@
         make.right.equalTo(self).offset(-self.m_model.m_title_right.m_margin_right);
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -115,15 +115,6 @@
     }
 
     return _m_lbl_right;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_TitleRight_Model*)model{

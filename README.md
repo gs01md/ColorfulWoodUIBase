@@ -620,3 +620,106 @@ model.m_title_five.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right
 return model;
 }
 ```
+
+## 4.27. CWUBCell_Carousel_One
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_Carousel_One.gif)
+```Objective C
+
+[CWUBCell_Order_One_Model tester_dataWithArray:data];
+
++ (CWUBCell_Carousel_One_Model*)tester_dataWithArray:(NSMutableArray*) array{
+
+CWUBCell_Carousel_One_Model *model = [CWUBCell_Carousel_One_Model new];
+model.m_type = CWUBCellType_Carousel_One;
+model.m_bottomLineInfo.m_color = [UIColor blueColor];
+model.m_img_left = [[CWUBImageInfo alloc] initWithName:@"left" width:25 height:25];
+model.m_img_left.m_margin_right = 1.;
+
+CWUBCell_Carousel_Single_Model *single = [CWUBCell_Carousel_Single_Model new];
+CWUBTextInfo *info = [[CWUBTextInfo alloc] initWithText:@"北京CSDR公司" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+CWUBTextInfo *info1 = [[CWUBTextInfo alloc] initWithText:@"智能识别系统" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+CWUBTextInfo *info2 = [[CWUBTextInfo alloc] initWithText:@"购买成功" font:[CWUBDefine fontOptButton] color:[UIColor blueColor]];
+info.m_margin_left = 5.;
+info1.m_margin_left = 5.;
+info2.m_margin_left = 5.;
+
+[single.m_array addObject:info];
+[single.m_array addObject:info1];
+[single.m_array addObject:info2];
+
+
+CWUBCell_Carousel_Single_Model *single2 = [CWUBCell_Carousel_Single_Model new];
+single2.m_color_backGround = [UIColor blueColor];
+[single2.m_array addObject:info];
+[single2.m_array addObject:info2];
+
+CWUBCell_Carousel_Single_Model *single3 = [CWUBCell_Carousel_Single_Model new];
+single3.m_color_backGround = [UIColor redColor];
+[single3.m_array addObject:info];
+[single3.m_array addObject:info1];
+
+[model.m_array addObject:single];
+[model.m_array addObject:single2];
+[model.m_array addObject:single3];
+
+model.m_stayTime = 3.;
+[array addObject:model];
+
+return model;
+}
+```
+
+## 4.28. CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight
+
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight.jpg)
+
+```Objective C
+
+[CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model tester_dataWithArray:data];
+
++ (CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model*)tester_dataWithArray:(NSMutableArray*) array{
+
+CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model *model = [CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model new];
+model.m_bottomLineInfo.m_color = [UIColor blueColor];
+
+TitleTop_TitleBottom_ImgRight_Model *single = [TitleTop_TitleBottom_ImgRight_Model new];
+single.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"3" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+single.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的关注" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+single.m_width = CWUBDefineDeviceWidth/4.;
+single.m_height = CWUBDefine_Width(80.);
+single.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
+
+TitleTop_TitleBottom_ImgRight_Model *single2 = [TitleTop_TitleBottom_ImgRight_Model new];
+single2.m_width = CWUBDefineDeviceWidth/4.;
+single2.m_height = CWUBDefine_Width(80.);
+single2.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"4" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+single2.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的收藏" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+single2.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
+
+TitleTop_TitleBottom_ImgRight_Model *single3 = [TitleTop_TitleBottom_ImgRight_Model new];
+single3.m_width = CWUBDefineDeviceWidth/4.;
+single3.m_height = CWUBDefine_Width(80.);
+single3.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"5" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+single3.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的资源" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+single3.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
+
+TitleTop_TitleBottom_ImgRight_Model *single4 = [TitleTop_TitleBottom_ImgRight_Model new];
+single4.m_width = CWUBDefineDeviceWidth/4.;
+single4.m_height = CWUBDefine_Width(80.);
+single4.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"6" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+single4.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的商讯" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+single4.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
+
+[model.m_array addObject:single];
+[model.m_array addObject:single2];
+[model.m_array addObject:single3];
+[model.m_array addObject:single4];
+
+[array addObject:model];
+
+return model;
+}
+
+```
+

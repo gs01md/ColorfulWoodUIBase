@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) CWUBImageViewWithModel *m_img_back;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_front;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_ImgBack_TitleFront
@@ -45,10 +45,10 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_img_back];
     [self addSubview:self.m_lbl_front];
@@ -75,7 +75,7 @@
         make.centerY.equalTo(self.m_img_back).offset(self.m_model.m_title.m_margin_CenterY);
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
@@ -100,7 +100,6 @@
     if (!_m_lbl_front) {
         _m_lbl_front = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title];
         _m_lbl_front.textAlignment = NSTextAlignmentCenter;
-
         _m_lbl_front.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_front.numberOfLines = 0;
     }
@@ -113,15 +112,6 @@
         _m_img_back = [[CWUBImageViewWithModel alloc] initWithModel:self.m_model.m_image];
     }
     return _m_img_back;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 - (void) interface_updateWithModel:(CWUBCell_ImgBack_TitleFront_Model*)model{

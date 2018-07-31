@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight;
+    }
+
+    return self;
+}
+
 @end

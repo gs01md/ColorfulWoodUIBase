@@ -57,6 +57,8 @@
 #import "CWUBCell_Carousel.h"
 #import "CWUBCell_Server_One.h"
 #import "CWUBCell_Order_One.h"
+#import "CWUBCell_Carousel_One.h"
+#import "CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight.h"
 
 @implementation CWUBModelBase
 /**
@@ -269,6 +271,14 @@
 
             case CWUBCellType_Server_One:
                 view = [self func_CWUBCell_Server_One:tableView];
+                break;
+
+            case CWUBCellType_Carousel_One:
+                view = [self func_CWUBCell_Carousel_One:tableView];
+                break;
+
+            case CWUBCellType_HorizontalScroll_TitleTop_TitleBottom_ImgRight:
+                view = [self func_CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight:tableView];
                 break;
 
 
@@ -989,6 +999,40 @@
 
 }
 
+- (CWUBCell_Carousel_One*) func_CWUBCell_Carousel_One:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Carousel_One";
+        CWUBCell_Carousel_One *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Carousel_One alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Carousel_One alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight*) func_CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight";
+        CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight alloc] initWithModel:self];
+    }
+
+}
+
 #pragma mark - 参数设置
 
 - (UIColor*)m_color_backGround{
@@ -1015,6 +1059,14 @@
  * 测试数据
  */
 + (CWUBModelBase*)tester_data{
+
+    return [CWUBModelBase new];
+}
+
+/**
+ * 测试数据 简化声明
+ */
++ (CWUBModelBase*)tester_dataWithArray:(NSMutableArray*)data{
 
     return [CWUBModelBase new];
 }

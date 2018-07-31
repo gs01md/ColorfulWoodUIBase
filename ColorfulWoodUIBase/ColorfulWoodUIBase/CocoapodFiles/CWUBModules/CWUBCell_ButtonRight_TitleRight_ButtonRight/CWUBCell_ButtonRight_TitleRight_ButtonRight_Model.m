@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_ButtonRight_TitleRight_ButtonRight_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_ButtonRight_TitleRight_ButtonRight;
+    }
+
+    return self;
+}
+
 @end

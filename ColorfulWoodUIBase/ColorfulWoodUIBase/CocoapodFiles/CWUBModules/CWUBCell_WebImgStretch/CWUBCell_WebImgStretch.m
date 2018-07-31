@@ -11,7 +11,6 @@
 
 @interface CWUBCell_WebImgStretch()
 @property (nonatomic, strong) UIImageView *m_img_center;
-@property (nonatomic, strong) UIImageView *m_img_sep;
 
 /**
  * 刷新界面,当显示新的cell时，刷新界面
@@ -49,10 +48,10 @@
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_img_center];
     [self addSubview:self.m_img_sep];
@@ -81,15 +80,6 @@
 
     }
     return _m_img_center;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 - (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model{

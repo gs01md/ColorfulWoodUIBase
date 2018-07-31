@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_CharterDetail_Opt_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_CharterDetail_Opt;
+    }
+
+    return self;
+}
+
 @end

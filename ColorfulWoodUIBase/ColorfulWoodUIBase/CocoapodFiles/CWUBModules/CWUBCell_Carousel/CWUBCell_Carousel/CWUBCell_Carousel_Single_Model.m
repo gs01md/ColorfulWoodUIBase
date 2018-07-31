@@ -9,6 +9,15 @@
 #import "CWUBCell_Carousel_Single_Model.h"
 
 @implementation CWUBCell_Carousel_Single_Model
+
+- (instancetype) init{
+
+    if (self = [super init]) {
+    }
+
+    return self;
+}
+
 /**
  * 保存图片信息或文本信息的数组
  */

@@ -36,5 +36,10 @@
  */
 @property(nonatomic, strong) CWUBTextInfo * m_title_rightBottom;
 
+/**
+ * 测试样例2
+ */
++ (CWUBCell_ImgLeft_TitleRightThree_Model *)tester_dataWithArray2:(NSMutableArray *)data;
+
 
 @end

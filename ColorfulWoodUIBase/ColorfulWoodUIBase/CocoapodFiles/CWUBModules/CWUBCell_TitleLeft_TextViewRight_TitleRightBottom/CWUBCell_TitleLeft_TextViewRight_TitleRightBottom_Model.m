@@ -9,6 +9,16 @@
 #import "CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model.h"
 
 @implementation CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model
+
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_TitleLeft_TextViewRight_TitleRightBottom;
+    }
+
+    return self;
+}
+
 - (CWUBTextInfo*) m_title_left{
 
     if (!_m_title_left) {

@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_ButtonRight_SpaceBottom_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_ButtonRight_SpaceBottom;
+    }
+
+    return self;
+}
+
 @end

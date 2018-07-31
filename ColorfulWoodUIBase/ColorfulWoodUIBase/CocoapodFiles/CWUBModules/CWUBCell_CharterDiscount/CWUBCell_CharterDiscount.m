@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong) UIImageView * m_img_banner;
 @property (nonatomic, strong) UIImageView * m_img_center;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 
 /**
  * 由于出发城市和出发时间都不确定高度，所以增加一条线
@@ -44,7 +44,7 @@
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
@@ -54,13 +54,13 @@
 
     if (self = [super init]) {
         self.m_model = model;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_lbl_right];
@@ -111,7 +111,7 @@
         make.centerY.equalTo(self.m_lbl_right);
     }];
 
-    [_m_img_sep_hidden mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep_hidden mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
         make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
         make.height.equalTo(@(0.01));
@@ -144,7 +144,7 @@
 
     }];
 
-    [_m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -231,15 +231,6 @@
         _m_lbl_bottom_center.numberOfLines = 0;
     }
     return _m_lbl_bottom_center;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 -(UIImageView *)m_img_sep_hidden{
