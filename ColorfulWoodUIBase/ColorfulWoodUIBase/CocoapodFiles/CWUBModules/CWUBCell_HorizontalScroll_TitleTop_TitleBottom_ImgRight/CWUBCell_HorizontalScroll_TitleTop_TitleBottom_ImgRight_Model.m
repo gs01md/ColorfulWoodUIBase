@@ -31,40 +31,26 @@
 + (CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model*)tester_dataWithArray:(NSMutableArray*) array{
 
     CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model *model = [CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model new];
-    model.m_bottomLineInfo.m_color = [UIColor blueColor];
+    model.m_bottomLineInfo.m_color = CWUBDefineCreate_Color(243, 243, 243, 1);
+    model.m_bottomLineInfo.m_margin_left = 0.1;
+    model.m_bottomLineInfo.m_margin_right = 0.1;
+    model.m_bottomLineInfo.m_height = 10.;
 
-    TitleTop_TitleBottom_ImgRight_Model *single = [TitleTop_TitleBottom_ImgRight_Model new];
-    single.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"3" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-    single.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的关注" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
-    single.m_width = CWUBDefineDeviceWidth/4.;
-    single.m_height = CWUBDefine_Width(80.);
-    single.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
+    NSArray * arrayNum = @[@"3",@"4",@"5",@"6"];
+    NSArray * arrayTitle = @[@"我的关注",@"我的收藏",@"我的资源",@"我的商讯"];
 
-    TitleTop_TitleBottom_ImgRight_Model *single2 = [TitleTop_TitleBottom_ImgRight_Model new];
-    single2.m_width = CWUBDefineDeviceWidth/4.;
-    single2.m_height = CWUBDefine_Width(80.);
-    single2.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"4" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-    single2.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的收藏" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
-    single2.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
-
-    TitleTop_TitleBottom_ImgRight_Model *single3 = [TitleTop_TitleBottom_ImgRight_Model new];
-    single3.m_width = CWUBDefineDeviceWidth/4.;
-    single3.m_height = CWUBDefine_Width(80.);
-    single3.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"5" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-    single3.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的资源" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
-    single3.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
-
-    TitleTop_TitleBottom_ImgRight_Model *single4 = [TitleTop_TitleBottom_ImgRight_Model new];
-    single4.m_width = CWUBDefineDeviceWidth/4.;
-    single4.m_height = CWUBDefine_Width(80.);
-    single4.m_titleTop = [[CWUBTextInfo alloc] initWithText:@"6" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
-    single4.m_titleBottom = [[CWUBTextInfo alloc] initWithText:@"我的商讯" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
-    single4.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"right" width:1 height:15];
-
-    [model.m_array addObject:single];
-    [model.m_array addObject:single2];
-    [model.m_array addObject:single3];
-    [model.m_array addObject:single4];
+    for (int i=0; i<arrayNum.count; i++) {
+        TitleTop_TitleBottom_ImgRight_Model *single = [TitleTop_TitleBottom_ImgRight_Model new];
+        single.m_titleTop = [[CWUBTextInfo alloc] initWithText:arrayNum[i] font:[UIFont fontWithName:@"PingFangSC-Semibold" size:18] color:CWUBDefineCreate_Color(51, 51, 51, 1)];
+        single.m_titleBottom = [[CWUBTextInfo alloc] initWithText:arrayTitle[i] font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51, 51, 51, 1)];
+        single.m_titleTop.m_margin_top = CWUBDefine_Width(15.);
+        single.m_titleTop.m_margin_bottom = CWUBDefine_Width(1.);
+        single.m_width = CWUBDefineDeviceWidth/4.;
+        single.m_height = CWUBDefine_Width(88.);
+        single.m_imgRight = [[CWUBImageInfo alloc] initWithName:@"left" width:1 height:17];
+        single.m_code = arrayTitle[i];
+        [model.m_array addObject:single];
+    }
 
     [array addObject:model];
 

@@ -9,7 +9,9 @@
 #import "CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight.h"
 #import "TitleTop_TitleBottom_ImgRight.h"
 
-@interface CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight()
+@interface CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight()<
+TitleTop_TitleBottom_ImgRight_Delegate
+>
 
 @property (nonatomic, strong) NSMutableArray *m_array;
 
@@ -55,7 +57,7 @@
     for (TitleTop_TitleBottom_ImgRight_Model *model in self.m_model.m_array) {
 
         TitleTop_TitleBottom_ImgRight *single = [[TitleTop_TitleBottom_ImgRight alloc] initWithModel:model];
-
+        single.delegate = self;
         [self addSubview:single];
         [self.m_array addObject:single];
     }
@@ -142,6 +144,19 @@
     return self.m_model.m_event_opt_code;
 }
 
+#pragma mark - 子视图点击事件
+
+/**
+ * code 代表该项标签
+ */
+- (void)TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:(NSString*)code{
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:)]) {
+
+        [self.delegate CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:code];
+    }
+
+}
 
 #pragma mark - system
 - (void)awakeFromNib {[super awakeFromNib];}

@@ -55,5 +55,12 @@
     return _m_height;
 }
 
+- (NSString *)m_code{
+
+    if (!_m_code) {
+        _m_code = @"";
+    }
+    return _m_code;
+}
 
 @end

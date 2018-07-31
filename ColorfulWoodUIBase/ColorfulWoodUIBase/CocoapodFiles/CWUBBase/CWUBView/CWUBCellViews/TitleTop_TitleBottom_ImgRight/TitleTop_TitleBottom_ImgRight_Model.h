@@ -14,6 +14,11 @@
 @property(nonatomic, strong)CWUBTextInfo *m_titleBottom;
 @property(nonatomic, strong)CWUBImageInfo *m_imgRight;
 
+/**
+ * 标识
+ */
+@property(nonatomic, strong)NSString *m_code;
+
 @property(nonatomic, assign)float m_width;
 @property(nonatomic, assign)float m_height;
 @end

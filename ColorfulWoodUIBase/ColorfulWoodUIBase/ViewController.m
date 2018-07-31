@@ -17,7 +17,8 @@ CWUBCell_WebImgStretchDelegate,
 CWUBCell_MyFollow_MyBusinessDelegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate,
 CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate,
-CWUBCell_CollectionTop_TitleBottom_Delegate
+CWUBCell_CollectionTop_TitleBottom_Delegate,
+CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -270,6 +271,11 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
             cell1.delegate = self;
         }
 
+        if (model.m_type == CWUBCellType_HorizontalScroll_TitleTop_TitleBottom_ImgRight) {
+            CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight * cell1 = (CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight*)cell;
+            cell1.delegate = self;
+        }
+
 
         return cell;
 
@@ -365,6 +371,11 @@ CWUBCell_CollectionTop_TitleBottom_Delegate
 - (void)CWUBCell_CollectionTop_TitleBottom_Delegate_constrains:(long)index{
 
     NSLog(@"11111111111111");
+}
+
+- (void)CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:(NSString*)code{
+
+    NSLog(@"CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode : %@",code);
 }
 
 #pragma mark - tableview 刷新

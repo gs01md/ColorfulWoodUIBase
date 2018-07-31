@@ -26,6 +26,9 @@
     [self addSubview:self.m_lbl_bottom];
     [self addSubview:self.m_img_right];
 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(event_clickThis)];
+    [self addGestureRecognizer:tap];
+
 }
 
 - (void)inner_updateConsrtains{
@@ -95,6 +98,17 @@
         [self.m_lbl_top interface_update:model.m_titleTop];
         [self.m_lbl_bottom interface_update:model.m_titleBottom];
         [self.m_img_right interface_update:model.m_imgRight];
+    }
+
+}
+
+#pragma mark - 点击事件
+- (void)event_clickThis{
+
+    if ([self.delegate respondsToSelector:@selector(TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:)]) {
+
+        TitleTop_TitleBottom_ImgRight_Model *model = (TitleTop_TitleBottom_ImgRight_Model*)self.m_model;
+        [self.delegate TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:model.m_code];
     }
 
 }

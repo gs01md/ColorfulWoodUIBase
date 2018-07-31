@@ -9,6 +9,14 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model.h"
 
+@protocol CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate <NSObject>
+@optional
+- (void)CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:(NSString*)code;
+@end
+
 @interface CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight : CWUBCellBase
+
 @property (nonatomic, strong) CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model *m_model;
+@property (nonatomic, weak)id<CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate>delegate;
+
 @end
