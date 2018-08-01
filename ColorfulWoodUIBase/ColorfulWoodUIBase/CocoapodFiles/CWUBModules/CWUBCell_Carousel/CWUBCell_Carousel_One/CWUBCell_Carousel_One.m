@@ -243,13 +243,6 @@ UIScrollViewDelegate
     return _m_scrollView;
 }
 
-#pragma mark - scrollView 代理
-
-//// scrollview滚动的时候调用
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//
-//}
-
 #pragma mark - 接口
 
 - (void) interface_updateWithModel:(CWUBCell_Carousel_One_Model*)model{

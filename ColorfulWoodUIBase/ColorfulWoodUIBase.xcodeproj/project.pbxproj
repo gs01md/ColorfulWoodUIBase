@@ -114,6 +114,9 @@
 		8B4AA0AE20B693E500CA97FB /* CWUBCell_ImgLeft_TitleRightThree_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AA0AD20B693E500CA97FB /* CWUBCell_ImgLeft_TitleRightThree_Model.m */; };
 		8B4AA0B120B693F900CA97FB /* CWUBCell_TitleLeft_TitleRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AA0B020B693F900CA97FB /* CWUBCell_TitleLeft_TitleRight_Model.m */; };
 		8B4AA0B420B6941100CA97FB /* CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AA0B320B6941100CA97FB /* CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model.m */; };
+		8B512AFE21117AF000F4238C /* CWUBAttributedTextInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B512AFD21117AF000F4238C /* CWUBAttributedTextInfo.m */; };
+		8B512B01211180E900F4238C /* CWUBAttributedSingleRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B512B00211180E900F4238C /* CWUBAttributedSingleRange.m */; };
+		8B512B042111823600F4238C /* CWUBAttributedSingleAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B512B032111823600F4238C /* CWUBAttributedSingleAttribute.m */; };
 		8B577C182101856A00355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B577C172101856A00355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.m */; };
 		8B577C1B2101858400355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B577C1A2101858400355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model.m */; };
 		8B577C1F2101AF6C00355A95 /* CWUBCell_Carousel_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B577C1E2101AF6C00355A95 /* CWUBCell_Carousel_Model.m */; };
@@ -375,6 +378,12 @@
 		8B4AA0B020B693F900CA97FB /* CWUBCell_TitleLeft_TitleRight_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_TitleLeft_TitleRight_Model.m; sourceTree = "<group>"; };
 		8B4AA0B220B6941100CA97FB /* CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model.h; sourceTree = "<group>"; };
 		8B4AA0B320B6941100CA97FB /* CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model.m; sourceTree = "<group>"; };
+		8B512AFC21117AF000F4238C /* CWUBAttributedTextInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBAttributedTextInfo.h; sourceTree = "<group>"; };
+		8B512AFD21117AF000F4238C /* CWUBAttributedTextInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBAttributedTextInfo.m; sourceTree = "<group>"; };
+		8B512AFF211180E900F4238C /* CWUBAttributedSingleRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBAttributedSingleRange.h; sourceTree = "<group>"; };
+		8B512B00211180E900F4238C /* CWUBAttributedSingleRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBAttributedSingleRange.m; sourceTree = "<group>"; };
+		8B512B022111823600F4238C /* CWUBAttributedSingleAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBAttributedSingleAttribute.h; sourceTree = "<group>"; };
+		8B512B032111823600F4238C /* CWUBAttributedSingleAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBAttributedSingleAttribute.m; sourceTree = "<group>"; };
 		8B577C162101856A00355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.h; sourceTree = "<group>"; };
 		8B577C172101856A00355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.m; sourceTree = "<group>"; };
 		8B577C192101858400355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model.h; sourceTree = "<group>"; };
@@ -1122,6 +1131,7 @@
 		8B1F419020B5375E00FEAFA0 /* CWUBModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B512AFB21117AB400F4238C /* CWUBAttributedTextInfo */,
 				8BEB338020F336E20093A93C /* CWUBUserInteractBase */,
 				8BBDC5CE20D8A2DB00315F13 /* CWUBViewModelBase */,
 				8B170CC320D7AAC100D3A3E7 /* CWUBCollectionInfo */,
@@ -1301,6 +1311,19 @@
 				8B8BB25120E611C70075F0A9 /* CWUBCell_CollectionTop_TitleBottom_Model.m */,
 			);
 			path = CWUBCell_TopCollection_TitleBottom;
+			sourceTree = "<group>";
+		};
+		8B512AFB21117AB400F4238C /* CWUBAttributedTextInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8B512AFC21117AF000F4238C /* CWUBAttributedTextInfo.h */,
+				8B512AFD21117AF000F4238C /* CWUBAttributedTextInfo.m */,
+				8B512AFF211180E900F4238C /* CWUBAttributedSingleRange.h */,
+				8B512B00211180E900F4238C /* CWUBAttributedSingleRange.m */,
+				8B512B022111823600F4238C /* CWUBAttributedSingleAttribute.h */,
+				8B512B032111823600F4238C /* CWUBAttributedSingleAttribute.m */,
+			);
+			path = CWUBAttributedTextInfo;
 			sourceTree = "<group>";
 		};
 		8B577C12210184A900355A95 /* CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom */ = {
@@ -1714,6 +1737,7 @@
 				8B0ED881210F15B9008C4C03 /* CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight.m in Sources */,
 				8B1F41AB20B5375E00FEAFA0 /* CWUBCell_Passenger_Model.m in Sources */,
 				8B1F41C220B5375E00FEAFA0 /* CWUBCell_CharterDiscount_Model.m in Sources */,
+				8B512B01211180E900F4238C /* CWUBAttributedSingleRange.m in Sources */,
 				8B0DB8A620CFD1FD00EAEA82 /* CWUBCell_MyFollow_MyBusiness.m in Sources */,
 				8BBDC5DC20D8E1DB00315F13 /* CWUBCell_SevenImg_Model.m in Sources */,
 				8B1F41AE20B5375E00FEAFA0 /* CWUBCell_ButtonLeft_TitleLeft.m in Sources */,
@@ -1769,6 +1793,7 @@
 				8B1F41D720B5375E00FEAFA0 /* CWUBModel.m in Sources */,
 				8B1F41A420B5375E00FEAFA0 /* CWUBCell_ButtonRight_SpaceBottom_Model.m in Sources */,
 				8B1F41A220B5375E00FEAFA0 /* CWUBCell_Trip.m in Sources */,
+				8B512AFE21117AF000F4238C /* CWUBAttributedTextInfo.m in Sources */,
 				8B1F41BB20B5375E00FEAFA0 /* CWUBCell_IconTitleLeft_IconTitleRight_Model.m in Sources */,
 				8B0ED88B210F1848008C4C03 /* TitleTop_TitleBottom_ImgRight.m in Sources */,
 				8B5F1D2720DA5C3F00C32B23 /* CWUBCell_TitleTop_TitleBottom_Model.m in Sources */,
@@ -1782,6 +1807,7 @@
 				8B59832720D8943200833E1F /* CWUBView_TitleLeft_ButtonRight.m in Sources */,
 				8B577C282101B65200355A95 /* CWUBCell_Carousel_Single_Model.m in Sources */,
 				8B1F419D20B5375E00FEAFA0 /* CWUBWoodUIBaseDemo.m in Sources */,
+				8B512B042111823600F4238C /* CWUBAttributedSingleAttribute.m in Sources */,
 				8BBB99D620B56689002FE1EA /* CWUBCell_TitleCenter_Model.m in Sources */,
 				8B89927720C00740006FBC17 /* TestViewController.m in Sources */,
 				8BBB99DD20B56D15002FE1EA /* CWUBCell_TitleLeft_ButtonRight.m in Sources */,

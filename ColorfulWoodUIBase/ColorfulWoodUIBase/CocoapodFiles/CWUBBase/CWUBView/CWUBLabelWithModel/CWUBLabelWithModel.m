@@ -7,6 +7,7 @@
 //
 
 #import "CWUBLabelWithModel.h"
+#import "CWUBAttributedTextInfo.h"
 
 @implementation CWUBLabelWithModel
 
@@ -25,14 +26,25 @@
     self.text = @"";
     if (model) {
 
-        self.text = model.m_text?model.m_text:@"";
+        /**
+         * 多样式属性文字
+         */
+        if ([model isKindOfClass:[CWUBAttributedTextInfo class]]) {
 
-        if (model.m_font) {
-            self.font = model.m_font;
-        }
+            CWUBAttributedTextInfo *modelAtrribute = (CWUBAttributedTextInfo *)model;
+            self.attributedText = modelAtrribute.m_attributedText;
 
-        if (model.m_color) {
-            self.textColor = model.m_color;
+        } else {
+
+            self.text = model.m_text?model.m_text:@"";
+
+            if (model.m_font) {
+                self.font = model.m_font;
+            }
+
+            if (model.m_color) {
+                self.textColor = model.m_color;
+            }
         }
 
         if (model.m_cornerInfo.m_cornerRadius>0 && model.m_cornerInfo.m_cornerWidth>0) {

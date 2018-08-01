@@ -16,6 +16,7 @@
 #import "CWUBCollectionInfo.h"
 #import "CWUBCornerInfo.h"
 #import <ColorfulWoodCategories/ColorfulWoodCategories.h>
+#import "CWUBAttributedTextInfo.h"
 
 @interface CWUBModelBase : NSObject
 

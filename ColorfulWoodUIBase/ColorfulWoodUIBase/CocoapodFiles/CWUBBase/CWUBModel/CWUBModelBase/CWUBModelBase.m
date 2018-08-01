@@ -59,6 +59,7 @@
 #import "CWUBCell_Order_One.h"
 #import "CWUBCell_Carousel_One.h"
 #import "CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight.h"
+#import "CWUBCell_Server_Two.h"
 
 @implementation CWUBModelBase
 /**
@@ -271,6 +272,10 @@
 
             case CWUBCellType_Server_One:
                 view = [self func_CWUBCell_Server_One:tableView];
+                break;
+
+            case CWUBCellType_Server_Two:
+                view = [self func_CWUBCell_Server_Two:tableView];
                 break;
 
             case CWUBCellType_Carousel_One:
@@ -995,6 +1000,23 @@
 
     }else{
         return [[CWUBCell_Server_One alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_Server_Two*) func_CWUBCell_Server_Two:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Server_Two";
+        CWUBCell_Server_Two *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Server_Two alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Server_Two alloc] initWithModel:self];
     }
 
 }

@@ -18,7 +18,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
 
         if (model) {
-            self.backgroundColor = model.m_color_backGround;
+
             if (model.m_cornerInfo && model.m_cornerInfo.m_cornerRadius>0 && model.m_cornerInfo.m_cornerWidth>0) {
 
                 self.layer.cornerRadius = model.m_cornerInfo.m_cornerRadius;
@@ -34,6 +34,8 @@
                 self.layer.masksToBounds = NO;
             }
         }
+
+        [self func_backgroundColor:model];
 
     }
 
@@ -45,7 +47,7 @@
     if (self = [super init]) {
 
         if (model) {
-            self.backgroundColor = model.m_color_backGround;
+
             if (model.m_cornerInfo && model.m_cornerInfo.m_cornerRadius>0 && model.m_cornerInfo.m_cornerWidth>0) {
 
                 self.layer.cornerRadius = model.m_cornerInfo.m_cornerRadius;
@@ -61,6 +63,8 @@
                 self.layer.masksToBounds = NO;
             }
         }
+
+        [self func_backgroundColor:model];
 
     }
 
@@ -78,6 +82,16 @@
 
 - (void)interface_updateWithModel:(CWUBModelBase*)model{
 
+    [self func_backgroundColor:model];
+}
+
+- (void)func_backgroundColor:(CWUBModelBase*)model{
+
+    if (model && model.m_color_backGround) {
+        self.backgroundColor = model.m_color_backGround;
+    }else{
+        self.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 /**

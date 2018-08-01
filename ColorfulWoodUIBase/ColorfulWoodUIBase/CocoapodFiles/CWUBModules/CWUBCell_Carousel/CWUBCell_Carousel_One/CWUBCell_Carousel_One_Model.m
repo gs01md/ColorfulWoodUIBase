@@ -78,6 +78,7 @@
 
     CWUBCell_Carousel_One_Model *model = [CWUBCell_Carousel_One_Model new];
     model.m_type = CWUBCellType_Carousel_One;
+    model.m_color_backGround = [UIColor blueColor];
     model.m_bottomLineInfo.m_color = [UIColor blueColor];
     model.m_img_left = [[CWUBImageInfo alloc] initWithName:@"left" width:25 height:25];
     model.m_img_left.m_margin_right = 1.;

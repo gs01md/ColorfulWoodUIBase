@@ -13,6 +13,7 @@
 @property(nonatomic, strong)CWUBImageInfo * m_img_one;
 @property(nonatomic, strong)CWUBTextInfo * m_title_one;
 @property(nonatomic, strong)CWUBTextInfo * m_title_two;
-@property(nonatomic, strong)CWUBTextInfo * m_title_three;
+@property(nonatomic, strong)CWUBAttributedTextInfo * m_title_three;
+@property(nonatomic, strong)CWUBTextInfo * m_title_four;
 
 @end

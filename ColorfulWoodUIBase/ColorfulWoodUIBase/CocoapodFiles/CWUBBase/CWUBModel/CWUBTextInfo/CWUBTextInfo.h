@@ -13,10 +13,10 @@
 #import "CWUBCornerInfo.h"
 
 @interface CWUBTextInfo : CWUBMarginBase
-@property(nonatomic,strong) NSString* m_text;
-@property(nonatomic,strong) UIFont* m_font;
-@property(nonatomic,strong) UIColor* m_color;
-@property(nonatomic,strong) UIColor* m_color_backGroud;
+@property(nonatomic,strong) NSString * m_text;
+@property(nonatomic,strong) UIFont * m_font;
+@property(nonatomic,strong) UIColor * m_color;
+@property(nonatomic,strong) UIColor * m_color_backGroud;
 
 /**
  * 是否不可输入（textfield等控件）
@@ -26,9 +26,9 @@
 /**
  * 圆角参数
  */
-@property(nonatomic,strong) CWUBCornerInfo *m_cornerInfo;
+@property(nonatomic,strong) CWUBCornerInfo * m_cornerInfo;
 
-@property(nonatomic,strong) NSString* m_textPlaceholder;
+@property(nonatomic,strong) NSString * m_textPlaceholder;
 @property(nonatomic,assign) BOOL m_isHidden;
 @property(nonatomic,assign) CWUBLabelTextVerticalType m_labelTextVerticalType;
 @property(nonatomic,assign) CWUBLabelTextHorizontalType m_labelTextHorizontalType;
@@ -56,7 +56,7 @@
 /**
  * 正则表达式，限制规则，不符合则禁止输入
  */
-@property(nonatomic,strong) NSString* m_regex;
+@property(nonatomic,strong) NSString * m_regex;
 
 /**
  * 输入时，小写字母自动变成大写
@@ -69,18 +69,18 @@
 @property(nonatomic,assign) UIEdgeInsets m_insets;
 
 
-- (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color;
+- (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color;
 
-- (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color backColor:(UIColor*)backColor;
+- (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color backColor:(UIColor *)backColor;
 
-- (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color holder:(NSString*)holder;
+- (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color holder:(NSString *)holder;
 
-- (instancetype)initWithText:(NSString*)text font:(UIFont*)font color:(UIColor*)color width:(float)width;
+- (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color width:(float)width;
 
 /**
  * 默认的初始化接口
  */
-+ (instancetype)interface_nullCheckInit:(CWUBTextInfo*)info;
++ (instancetype)interface_nullCheckInit:(CWUBTextInfo *)info;
 
 /**
  * 根据内容设置宽度，适合单行的标题
