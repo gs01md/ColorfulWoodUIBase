@@ -135,6 +135,7 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_Order_Two_Model tester_dataWithArray:data];
     [CWUBCell_Server_Two_Model tester_dataWithArray:data];
     [CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model tester_dataWithArray:data];
     [CWUBCell_Carousel_One_Model tester_dataWithArray:data];
