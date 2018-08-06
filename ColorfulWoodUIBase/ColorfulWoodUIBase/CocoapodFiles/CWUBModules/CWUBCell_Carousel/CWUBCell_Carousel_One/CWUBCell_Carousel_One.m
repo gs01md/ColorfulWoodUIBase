@@ -375,6 +375,24 @@ UIScrollViewDelegate
     }];
 }
 
+/**
+ * 重新启动动画
+ */
+- (void)interface_restartTimer{
+    
+    [self.m_timer invalidate];
+    self.m_timer = [NSTimer scheduledTimerWithTimeInterval:self.m_model.m_stayTime target:self selector:@selector(func_nextPage) userInfo:nil repeats:YES];
+
+}
+
+/**
+ * 重新启动动画
+ */
+- (void)interface_stopTimer{
+
+    [self.m_timer invalidate];
+}
+
 #pragma mark - system
 
 - (void)awakeFromNib {[super awakeFromNib];}

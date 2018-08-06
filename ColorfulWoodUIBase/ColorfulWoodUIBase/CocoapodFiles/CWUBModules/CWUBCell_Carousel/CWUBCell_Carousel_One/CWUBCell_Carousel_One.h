@@ -11,4 +11,14 @@
 
 @interface CWUBCell_Carousel_One : CWUBCellBase
 @property (nonatomic, strong) CWUBCell_Carousel_One_Model *m_model;
+
+/**
+ * 重新启动动画
+ */
+- (void)interface_restartTimer;
+
+/**
+ * 重新启动动画
+ */
+- (void)interface_stopTimer;
 @end

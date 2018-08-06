@@ -110,6 +110,7 @@
     [model.m_array addObject:single2];
     [model.m_array addObject:single3];
 
+    model.m_event_opt_code = @"滚动轮播";
     model.m_stayTime = 3.;
     [array addObject:model];
 

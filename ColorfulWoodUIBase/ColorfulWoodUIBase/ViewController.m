@@ -23,6 +23,9 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
 @property(nonatomic, strong)UITableView * m_tableView;
+
+
+@property(nonatomic, strong)CWUBCell_Carousel_One *m_carousel;
 @end
 
 @implementation ViewController
@@ -308,6 +311,15 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
     if ([code isEqualToString:@"选择行业"]) {
         NSLog(@"选择行业");
     }
+
+    if ([code isEqualToString:@"滚动轮播"]) {
+
+        CWUBCell_Carousel_One * cell1 = (CWUBCell_Carousel_One*)cell;
+        [cell1 interface_restartTimer];
+
+    }
+
+
 }
 
 - (void)CWUBCell_WebImgStretchDelegate_updateLayout{
