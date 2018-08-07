@@ -138,6 +138,7 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_TitleLeft_InfoLeft_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model tester_dataWithArray:data];
     [CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model tester_dataWithArray:data];
     [CWUBCell_Order_Two_Model tester_dataWithArray:data];
