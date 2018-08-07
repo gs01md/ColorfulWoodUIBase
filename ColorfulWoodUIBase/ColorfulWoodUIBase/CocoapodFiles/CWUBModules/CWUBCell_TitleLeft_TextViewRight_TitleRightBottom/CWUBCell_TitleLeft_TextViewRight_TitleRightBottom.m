@@ -40,6 +40,8 @@ UITextViewDelegate
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_textfield_right];
+    [self addSubview:self.m_lbl_rightBottom];
+
     [self addSubview:self.m_img_sep];
 
     [self func_updateConsrtains];
@@ -49,22 +51,34 @@ UITextViewDelegate
 - (void)func_updateConsrtains{
 
     [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
-        make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
+
+        make.left.equalTo(self).offset(self.m_model.m_title_left.m_margin_left);
+        make.centerY.equalTo(self.m_textfield_right);
+
+        if (self.m_model.m_title_left.m_width > 1.) {
+            make.width.equalTo(@(self.m_model.m_title_left.m_width));
+        }
+
     }];
-    _m_textfield_right.text = self.m_model.m_input_right.m_text;
+
     [_m_textfield_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
+        make.top.equalTo(self).offset(self.m_model.m_input_right.m_margin_top);
 
-        make.left.equalTo(self.m_lbl_left.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
-        make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
+        make.left.equalTo(self.m_lbl_left.mas_right).offset(self.m_model.m_input_right.m_margin_left);
+        make.right.equalTo(self).offset(-self.m_model.m_input_right.m_margin_right);
 
         make.height.mas_equalTo(self.m_textfield_right.contentSize.height);
 
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
+        make.bottom.equalTo(self.m_lbl_rightBottom.mas_top).offset(-self.m_model.m_input_right.m_margin_bottom);
+    }];
+
+    [_m_lbl_rightBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.m_textfield_right.mas_bottom).offset(self.m_model.m_title_bottomRight.m_margin_top);
+        make.left.equalTo(self).offset(self.m_model.m_title_bottomRight.m_margin_left);
+        make.right.equalTo(self).offset(-self.m_model.m_title_bottomRight.m_margin_right);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_bottomRight.m_margin_bottom);
     }];
 
     [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -73,7 +87,7 @@ UITextViewDelegate
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
-        make.top.equalTo(self.m_textfield_right.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
+        make.top.equalTo(self.m_lbl_rightBottom.mas_bottom).offset(self.m_model.m_input_right.m_margin_bottom);
     }];
 }
 
@@ -102,7 +116,7 @@ UITextViewDelegate
 
     if (!_m_lbl_rightBottom) {
         _m_lbl_rightBottom = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title_bottomRight];
-        _m_lbl_rightBottom.textAlignment = NSTextAlignmentLeft;
+        _m_lbl_rightBottom.textAlignment = NSTextAlignmentRight;
 
         _m_lbl_rightBottom.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_rightBottom.numberOfLines = 0;
@@ -116,7 +130,6 @@ UITextViewDelegate
         //_m_textfield_right = [[CWUBTextfieldWithModel alloc] initWithModel:self.m_model.m_input_right];
         _m_textfield_right = [UITextView new];
         _m_textfield_right.delegate = self;
-        _m_textfield_right.backgroundColor = [UIColor blueColor];
         _m_textfield_right.textContainer.lineFragmentPadding = 0;
         _m_textfield_right.textContainerInset = UIEdgeInsetsZero;
         _m_textfield_right.text = self.m_model.m_input_right.m_text;
@@ -132,6 +145,7 @@ UITextViewDelegate
     
     self.m_model = model;
     //[self.m_textfield_right interface_update:model.m_input_right];
+    //self.m_textfield_right.text = self.m_model.m_input_right.m_text;
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_rightBottom interface_update:model.m_title_bottomRight];
     if (self.m_model.m_bottomLineInfo.m_color) {

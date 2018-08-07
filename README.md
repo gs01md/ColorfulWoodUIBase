@@ -148,14 +148,112 @@ if ([code isEqualToString:@"查看详情"]) {
 
 ## 4. 功能介绍
 
-## 4.1. CWUBDefine
+## CWUBDefine
 提供了常用的一些功能的宏定义：颜色设置、长度换算、常用长度
 
-## 4.2. CWUBViewBase
+## CWUBViewBase
 界面基类：提供一个视图点击代理，以后会扩展tintColor等
 
-## 4.3. CWUBTopLineBottomLine
-可以设置视图上下边的颜色，是一个图片视图
+## 4.1. CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom.jpg)
+```Objective C
+
+[CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model tester_dataWithArray:data];
+
++ (CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model *)tester_dataWithArray:(NSMutableArray *)data{
+
+CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model * model28 = [CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model new];
+model28.m_type = CWUBCellType_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom;
+model28.m_img_left = [[CWUBImageInfo alloc] initWithName:@"FSL_II_我是个人" width:75. height:75.];
+model28.m_img_left.m_imgUrl = @"http://images.fangshiliu.com/fsl_api/2018-05-31/252924cf-d74c-439b-b95a-fb1650e051f2.png";
+model28.m_img_left.m_defaultName = @"left";
+model28.m_img_left.m_margin_top = 40.;
+model28.m_img_left.m_margin_bottom = 40.;
+model28.m_title_rightTopLeft = [[CWUBTextInfo alloc] initWithText:@"姓名" font:[UIFont fontWithName:@"PingFangSC-Semibold" size:22] color:CWUBDefineCreate_Color(39,39,39,1)];
+model28.m_title_rightTopRight = [[CWUBTextInfo alloc] initWithText:[NSString stringWithFormat:@" %@ ", @"职位"] font:[UIFont fontWithName:@"PingFangSC-Regular" size:13] color:CWUBDefineCreate_Color(51,51,51,1)];
+model28.m_title_rightTopRight.m_numberOfLines = 1;
+model28.m_title_rightTopRight.m_margin_top = 10;
+model28.m_title_rightTopRight.m_margin_bottom = 10;
+model28.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"公司" font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];
+model28.m_title_rightBottom.m_numberOfLines = 1;
+model28.m_title_rightBottom.m_margin_CenterY = 20.;
+model28.m_title_rightTopLeft.m_margin_CenterY = -15.;
+model28.m_bottomLineInfo.m_height = 10.;
+model28.m_bottomLineInfo.m_color = CWUBDefineCreate_Color(51,51,51,1);
+model28.m_bottomLineInfo.m_margin_right = 0.1;
+model28.m_bottomLineInfo.m_margin_left = 0.1;
+
+[data addObject:model28];
+
+return model28;
+}
+
+```
+
+## 4.2. CWUBCell_CollectionTop_TitleBottom
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_CollectionTop_TitleBottom.jpg)
+```Objective C
+
+[CWUBCell_CollectionTop_TitleBottom_Model tester_dataWithArray:data];
+
++ (CWUBCell_CollectionTop_TitleBottom_Model*) tester_dataWithArray:(NSMutableArray*) arrayIn{
+
+CWUBCell_CollectionTop_TitleBottom_Model * model19 = [CWUBCell_CollectionTop_TitleBottom_Model new];
+model19.m_type = CWUBCellType_CollectionTop_TitleBottom;
+
+
+float imgWidth = 10;
+/**
+* 下部的提示文字
+*/
+model19.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+model19.m_collection_top.m_canUserInteract = @"0";
+NSArray * array = @[@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空",@"航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空航空空航空航空航空航空",@"航空航空",@"空航空",@"航空航空航空",@"航空",@"航空航空",@"航空航空",@"航空航空航空",@"空",@"航空航航空",@"空航空",@"航空航空航空",@"航空"];
+
+for (NSString* temp in array) {
+CWUBTextInfo * info = [[CWUBTextInfo alloc] initWithText:temp font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+//info.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+
+CWUBView_TitleLeft_ButtonRight_Model *m1 = [[CWUBView_TitleLeft_ButtonRight_Model alloc] initWithTitle:info img:[[CWUBImageInfo alloc] initWithName:@"right" width:imgWidth height:imgWidth]];
+m1.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_Color(51,51,51,1)];
+m1.m_color_backGround = [UIColor redColor];
+[model19.m_collection_top.m_array addObject:m1];
+}
+
+model19.m_event_opt_code = @"感兴趣行业";
+
+model19.m_bottomLineInfo.m_color = [UIColor redColor];
+
+[arrayIn addObject:model19];
+
+return model19;
+}
+
+```
+
+## 4.3. CWUBCell_TitleLeft_TextViewRight_TitleRightBottom
+![图片](https://github.com/gs01md/ColorfulWoodUIBase/blob/master/Screenshots/CWUBCell_TitleLeft_TextViewRight_TitleRightBottom.jpg)
+```Objective C
+
+[CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model tester_dataWithArray:data];
+
++(CWUBModelBase *)tester_dataWithArray:(NSMutableArray *)data{
+
+CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model * model15 = [CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model new];
+
+model15.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请输入评论：" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+model15.m_input_right = [[CWUBTextInfo alloc] initWithText:@"今天天气不错" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+model15.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"10/300" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+model15.m_bottomLineInfo.m_color = [UIColor redColor];
+
+if (data) {
+[data addObject:model15];
+}
+
+return model15;
+
+}
+```
 
 ## 4.4. CWUBLeftImage
 图片位于左侧，上下边距为10，宽度等于高度（适用于高度不太高的视图，高度太高将导致图片过宽）

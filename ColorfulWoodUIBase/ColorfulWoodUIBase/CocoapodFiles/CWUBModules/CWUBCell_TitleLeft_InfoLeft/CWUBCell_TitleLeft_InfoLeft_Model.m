@@ -23,7 +23,7 @@
 - (float)m_titleWidth{
 
     if(!_m_titleWidth){
-        _m_titleWidth = CWUBBaseViewConfig_Width_Title_Default;
+        _m_titleWidth = 0.1;
 
     }
     return _m_titleWidth;

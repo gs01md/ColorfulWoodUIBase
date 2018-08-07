@@ -63,7 +63,7 @@
 - (void)func_updateConsrtains{
 
     [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.m_img_btn.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
+        make.right.equalTo(self.m_img_btn.mas_left).offset(-self.m_model.m_title.m_margin_right);
         make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
@@ -73,7 +73,7 @@
 
         make.top.equalTo(self).offset(self.m_model.m_btnImg.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_btnImg.m_margin_bottom);
-        make.left.equalTo(self.m_lbl_title.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
+        make.left.equalTo(self.m_lbl_title.mas_right).offset(self.m_model.m_btnImg.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_btnImg.m_margin_right);
         make.width.equalTo(@(self.m_model.m_btnImg.m_width));
         make.height.equalTo(@(self.m_model.m_btnImg.m_height));
