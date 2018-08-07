@@ -15,8 +15,8 @@
 
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_right;
-@property (nonatomic, strong) UIImageView * m_img_left;
-@property (nonatomic, strong) UIImageView * m_img_right;
+@property (nonatomic, strong) CWUBImageViewWithModel * m_img_left;
+@property (nonatomic, strong) CWUBImageViewWithModel * m_img_right;
 
 
 @end
@@ -179,10 +179,10 @@
     return _m_lbl_right;
 }
 
--(UIImageView *)m_img_left{
+-(CWUBImageViewWithModel *)m_img_left{
 
     if(!_m_img_left){
-        _m_img_left = [UIImageView new];
+        _m_img_left = [CWUBImageViewWithModel new];
         [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
         _m_img_left.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_left.clipsToBounds = NO;
@@ -191,10 +191,10 @@
     return _m_img_left;
 }
 
--(UIImageView *)m_img_right{
+-(CWUBImageViewWithModel *)m_img_right{
 
     if(!_m_img_right){
-        _m_img_right = [UIImageView new];
+        _m_img_right = [CWUBImageViewWithModel new];
         [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
         _m_img_right.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_right.clipsToBounds = NO;
@@ -218,8 +218,9 @@
     }
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_right interface_update:model.m_title_right];
-    [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
-    [_m_img_left setImage:[UIImage imageNamed:self.m_model.m_img_left.m_imgName]];
+    [self.m_img_right interface_update:model.m_img_right];
+    [self.m_img_left interface_update:model.m_img_left];
+
     [self func_constrains];
 }
 
