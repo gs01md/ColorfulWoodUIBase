@@ -48,13 +48,16 @@
 
 - (void)func_updateConsrtains{
 
+
     [_m_lblShow mas_remakeConstraints:^(MASConstraintMaker *make) {
+
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
         make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
-        if (self.m_model.m_titleWidth > 1.) {
-            make.width.equalTo(@(self.m_model.m_titleWidth));
+        if (self.m_model.m_title.m_width > 1.) {
+            make.width.equalTo(@(self.m_model.m_title.m_width));
         }
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
+        make.right.equalTo(self.m_lblInfo.mas_left).offset(-self.m_model.m_title.m_margin_right);
 
     }];
 
@@ -62,11 +65,16 @@
 
         make.top.equalTo(self).offset(self.m_model.m_info.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_info.m_margin_bottom);
+        if (self.m_model.m_info.m_width > 1.) {
+            make.width.equalTo(@(self.m_model.m_info.m_width));
+        }
         make.left.equalTo(self.m_lblShow.mas_right).offset(self.m_model.m_info.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_info.m_margin_right);
     }];
 
+
     [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
@@ -77,7 +85,9 @@
             make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         }
 
+        make.top.equalTo(self.m_lblShow.mas_bottom).offset(self.m_model.m_title.m_margin_bottom);
         make.top.equalTo(self.m_lblInfo.mas_bottom).offset(self.m_model.m_info.m_margin_bottom);
+
     }];
 }
 
@@ -123,12 +133,12 @@
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InfoLeft_Model*)model{
 
     [super interface_updateWithModel:model];
-    
+
     self.m_model = model;
 
     [self.m_lblShow interface_update:model.m_title];
     [self.m_lblInfo interface_update:model.m_info];
-    
+
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
