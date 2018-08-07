@@ -58,6 +58,7 @@
 }
 
 - (void)func_updateConsrtains{
+
     [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_left.m_margin_bottom);
@@ -98,7 +99,7 @@
 
     if (!_m_lbl_left) {
         _m_lbl_left = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title_left];
-        _m_lbl_left.textAlignment = NSTextAlignmentRight;
+        _m_lbl_left.textAlignment = NSTextAlignmentLeft;
         _m_lbl_left.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_left.numberOfLines = 0;
     }
@@ -109,7 +110,7 @@
 
     if (!_m_lbl_right) {
         _m_lbl_right = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title_right];
-        _m_lbl_right.textAlignment = NSTextAlignmentLeft;
+        _m_lbl_right.textAlignment = NSTextAlignmentRight;
         _m_lbl_right.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_right.numberOfLines = 0;
     }

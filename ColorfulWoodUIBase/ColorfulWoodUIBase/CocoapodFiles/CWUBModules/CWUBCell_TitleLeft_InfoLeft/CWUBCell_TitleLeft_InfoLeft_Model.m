@@ -112,4 +112,28 @@
 
     return model1;
 }
+
+/**
+ * 只显示标题
+ */
++ (CWUBModelBase *)tester_dataWithArray2:(NSMutableArray *)data {
+
+    CWUBCell_TitleLeft_InfoLeft_Model *model3 = [CWUBCell_TitleLeft_InfoLeft_Model new];
+
+    NSString *content = @"只显示标题只显示标题只显示标题只显示标题只显示标题只显示标题只显示标题只显示标题只显示标题只显示标题只显示标题";
+
+    model3.m_title = [[CWUBTextInfo alloc] initWithText:content font:[UIFont fontWithName:@"PingFangSC-Regular" size:13] color:CWUBDefineCreate_Color(102, 102, 102, 1)];
+    model3.m_info = [[CWUBTextInfo alloc] initWithText:@"" font:[UIFont fontWithName:@"PingFangSC-Regular" size:13] color:CWUBDefineCreate_Color(102, 102, 102, 1)];
+    model3.m_info.m_width = 1.1;
+    model3.m_title.m_margin_top = 6;
+    model3.m_title.m_margin_left = 10;
+    model3.m_bottomLineInfo.m_height = 10.;
+    model3.m_bottomLineInfo.m_margin_left = 1.;
+    model3.m_bottomLineInfo.m_margin_right = 1.;
+    model3.m_bottomLineInfo.m_color = CWUBDefineCreate_Color(243, 243, 243, 1);
+
+    [data addObject:model3];
+
+    return model3;
+}
 @end
