@@ -51,7 +51,6 @@
     [_m_lblShow mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
         make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
-        make.right.equalTo(self.m_lblInfo.mas_left).offset(-self.m_model.m_info.m_margin_left);
         if (self.m_model.m_titleWidth > 1.) {
             make.width.equalTo(@(self.m_model.m_titleWidth));
         }
