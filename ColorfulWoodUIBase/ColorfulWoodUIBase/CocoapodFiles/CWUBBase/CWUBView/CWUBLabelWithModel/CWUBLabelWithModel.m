@@ -68,14 +68,15 @@
         switch (self.m_model.m_labelTextHorizontalType) {
                 
             case CWUBLabelTextHorizontalType_left:
-                self.textAlignment = CWUBLabelTextHorizontalType_left;
+                self.textAlignment = NSTextAlignmentLeft;
                 break;
+                
             case CWUBLabelTextHorizontalType_right:
-                self.textAlignment = CWUBLabelTextHorizontalType_right;
+                self.textAlignment = NSTextAlignmentRight;
                 break;
 
             case CWUBLabelTextHorizontalType_center:
-                self.textAlignment = CWUBLabelTextHorizontalType_center;
+                self.textAlignment = NSTextAlignmentCenter;
                 break;
 
             default:
