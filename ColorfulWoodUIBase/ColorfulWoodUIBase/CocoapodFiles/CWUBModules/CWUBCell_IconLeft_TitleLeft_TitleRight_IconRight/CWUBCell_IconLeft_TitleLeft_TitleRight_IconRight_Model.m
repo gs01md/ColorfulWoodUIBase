@@ -26,6 +26,7 @@
     model1.m_title_left = [[CWUBTextInfo alloc] initWithText:@"标题" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
     model1.m_title_right = [[CWUBTextInfo alloc] initWithText:@"内容内" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
     model1.m_bottomLineInfo.m_color = [UIColor redColor];
+    model1.m_title_right.m_event_opt_code = @"内容";
     model1.m_img_left = [[CWUBImageInfo alloc] initWithName:@"left" width:26. height:26.];
     model1.m_img_right = [[CWUBImageInfo alloc] initWithName:@"big" width:20. height:12.];
     //    model1.m_margin_leftOrRight = 10.;

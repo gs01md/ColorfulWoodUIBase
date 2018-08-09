@@ -401,4 +401,14 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
     [self.m_tableView.mj_header endRefreshing];
     [self.m_tableView reloadData];
 }
+
+#pragma mark - 事件
+/**
+ * 通用点击CWUBLabelWithModel 事件
+ */
+- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)label{
+    NSString * code = [CWUBLabelWithModel interface_getEventCode:label];
+    NSLog(@"%@",code);
+}
+
 @end

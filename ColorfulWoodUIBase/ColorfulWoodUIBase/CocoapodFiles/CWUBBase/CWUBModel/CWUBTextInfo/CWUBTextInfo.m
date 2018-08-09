@@ -73,6 +73,15 @@
     return info;
 }
 
+- (NSString*)m_event_opt_code{
+
+    if (!_m_event_opt_code) {
+        _m_event_opt_code = @"";
+    }
+
+    return _m_event_opt_code;
+}
+
 - (NSString*)m_text{
 
     if (!_m_text) {

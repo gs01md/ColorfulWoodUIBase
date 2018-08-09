@@ -9,6 +9,11 @@
 #import "CWUBLabelWithModel.h"
 #import "CWUBAttributedTextInfo.h"
 
+
+@interface CWUBLabelWithModel()
+@property(nonatomic, strong)UITapGestureRecognizer *m_tap;
+@end
+
 @implementation CWUBLabelWithModel
 
 -(instancetype)initWithModel:(CWUBTextInfo*)model{
@@ -89,10 +94,75 @@
 
         self.hidden = model.m_isHidden;
 
+        [self performSelector:@selector(func_setEvent) withObject:nil afterDelay:1.];
     }
+}
+#pragma mark - 属性
+- (UIViewController *)m_controller{
+
+    if(!_m_controller){
+        _m_controller = [self inner_findViewController];
+    }
+
+    return _m_controller;
 }
 
 
+#pragma mark - 功能
+/**
+ * 设置该控件的点击事件
+ */
+- (void)func_setEvent{
 
+    NSString * code = [self.m_model.m_event_opt_code stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if(code.length > 0 ){
+
+        self.userInteractionEnabled = YES;
+        if(self.m_controller){
+            self.m_tap = [[UITapGestureRecognizer alloc] initWithTarget:self.m_controller action:@selector(CWUBLabel_clickEvent:)];
+            [self addGestureRecognizer:self.m_tap];
+        }
+
+    }else{
+
+        self.userInteractionEnabled = NO;
+    }
+
+}
+
+/**
+ * 获取控制器，获取视图控制器
+ */
+- (UIViewController *)inner_findViewController{
+
+    for (UIView* next = self; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
+
+
+#pragma mark - 接口
+
+/**
+ * 获取点击事件对应Label的标识
+ */
++ (NSString *)interface_getEventCode:(UITapGestureRecognizer*)tap{
+
+    NSString * code = @"";
+
+    if(tap && [tap isKindOfClass:[UITapGestureRecognizer class]] && [tap.view isKindOfClass:[CWUBLabelWithModel class]]){
+        CWUBLabelWithModel * label =  (CWUBLabelWithModel *)tap.view;
+
+        if(label){
+            code = label.m_model.m_event_opt_code;
+        }
+    }
+
+    return code;
+}
 
 @end

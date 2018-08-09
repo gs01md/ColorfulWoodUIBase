@@ -14,4 +14,16 @@
 @property(nonatomic, strong)CWUBTextInfo* m_model;
 -(instancetype) initWithModel:(CWUBTextInfo*)model;
 -(void) interface_update:(CWUBTextInfo*)model;
+
+@property(nonatomic, strong) UIViewController *m_controller;
+/**
+ * 获取控制器，获取视图控制器
+ */
+- (UIViewController *)inner_findViewController;
+
+/**
+ * 获取点击事件对应Label的标识
+ */
++ (NSString *)interface_getEventCode:(UITapGestureRecognizer*)tap;
+
 @end

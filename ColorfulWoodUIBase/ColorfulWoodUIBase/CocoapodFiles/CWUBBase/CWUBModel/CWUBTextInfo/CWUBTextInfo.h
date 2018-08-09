@@ -13,60 +13,65 @@
 #import "CWUBCornerInfo.h"
 
 @interface CWUBTextInfo : CWUBMarginBase
-@property(nonatomic,strong) NSString * m_text;
-@property(nonatomic,strong) UIFont * m_font;
-@property(nonatomic,strong) UIColor * m_color;
-@property(nonatomic,strong) UIColor * m_color_backGroud;
+@property(nonatomic, strong) NSString * m_text;
+@property(nonatomic, strong) UIFont * m_font;
+@property(nonatomic, strong) UIColor * m_color;
+@property(nonatomic, strong) UIColor * m_color_backGroud;
+
+/**
+ * 点击该Label时的操作
+ */
+@property(nonatomic, strong) NSString  * m_event_opt_code;
 
 /**
  * 是否不可输入（textfield等控件）
  */
-@property(nonatomic,assign) BOOL m_noEnabled;
+@property(nonatomic, assign) BOOL m_noEnabled;
 
 /**
  * 圆角参数
  */
-@property(nonatomic,strong) CWUBCornerInfo * m_cornerInfo;
+@property(nonatomic, strong) CWUBCornerInfo * m_cornerInfo;
 
-@property(nonatomic,strong) NSString * m_textPlaceholder;
-@property(nonatomic,assign) BOOL m_isHidden;
-@property(nonatomic,assign) CWUBLabelTextVerticalType m_labelTextVerticalType;
-@property(nonatomic,assign) CWUBLabelTextHorizontalType m_labelTextHorizontalType;
+@property(nonatomic, strong) NSString * m_textPlaceholder;
+@property(nonatomic, assign) BOOL m_isHidden;
+@property(nonatomic, assign) CWUBLabelTextVerticalType m_labelTextVerticalType;
+@property(nonatomic, assign) CWUBLabelTextHorizontalType m_labelTextHorizontalType;
 
 /**
  * 行数:0=多行
  */
-@property(nonatomic,assign) int m_numberOfLines;
+@property(nonatomic, assign) int m_numberOfLines;
 
 /**
  * 设置宽度
  */
-@property(nonatomic,assign) float m_width;
+@property(nonatomic, assign) float m_width;
 
 /**
  * 设置高度
  */
-@property(nonatomic,assign) float m_height;
+@property(nonatomic, assign) float m_height;
 
 /**
  * 设置最大宽度，用于
  */
-@property(nonatomic,assign) float m_width_max;
+@property(nonatomic, assign) float m_width_max;
 
 /**
  * 正则表达式，限制规则，不符合则禁止输入
  */
-@property(nonatomic,strong) NSString * m_regex;
+@property(nonatomic, strong) NSString * m_regex;
 
 /**
  * 输入时，小写字母自动变成大写
  */
-@property(nonatomic,assign) BOOL m_bUppercaseString;
+@property(nonatomic, assign) BOOL m_bUppercaseString;
 
 /**
  * 文字在label中的边框大小
  */
-@property(nonatomic,assign) UIEdgeInsets m_insets;
+@property(nonatomic, assign) UIEdgeInsets m_insets;
 
 
 - (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color;
