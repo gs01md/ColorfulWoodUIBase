@@ -92,6 +92,10 @@
             self.backgroundColor = model.m_color_backGroud;
         }
 
+        if (self.m_model.m_event_opt_code.length > 0) {
+            self.userInteractionEnabled = YES;
+        }
+
         self.hidden = model.m_isHidden;
 
         [self performSelector:@selector(func_setEvent) withObject:nil afterDelay:1.];
