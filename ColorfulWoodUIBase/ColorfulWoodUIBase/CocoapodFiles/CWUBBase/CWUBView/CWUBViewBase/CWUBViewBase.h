@@ -17,6 +17,16 @@
  */
 - (void)CWUBViewBaseDelegate_clickWithCode:(NSString*)code;
 
+/**
+ * 下拉刷新
+ */
+- (void)CWUBViewBaseDelegate_tableViewHeaderRefresh;
+
+
+/**
+ * 上拉刷新
+ */
+- (void)CWUBViewBaseDelegate_tableViewFooterRefresh;
 @end
 
 @interface CWUBViewBase : UIView

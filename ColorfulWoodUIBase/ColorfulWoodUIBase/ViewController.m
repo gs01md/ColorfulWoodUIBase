@@ -406,8 +406,8 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 /**
  * 通用点击CWUBLabelWithModel 事件
  */
-- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)label{
-    NSString * code = [CWUBLabelWithModel interface_getEventCode:label];
+- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
+    NSString * code = [CWUBLabelWithModel interface_getEventCode:tap];
     NSLog(@"%@",code);
 }
 

@@ -166,6 +166,14 @@
     }
     [self func_updateConsrtains];
 
+    if (self.m_model.m_cantEnabled) {
+        self.m_lbl_man.userInteractionEnabled = NO;
+        self.m_lbl_woman.userInteractionEnabled = NO;
+    } else {
+        self.m_lbl_man.userInteractionEnabled = YES;
+        self.m_lbl_woman.userInteractionEnabled = YES;
+    }
+
     /**
      * 默认设置的是选中男士，但是有时也会设置女士为默认选中
      */

@@ -45,7 +45,15 @@
  */
 #define CWUBDefineCreate_Color(r,g,b,a) [UIColor colorWithRed:r/255. green:g/255. blue:b/255. alpha:a]
 #define CWUBDefineCreate_Color_Same(r)  [UIColor colorWithRed:r/255. green:r/255. blue:r/255. alpha:1.]
+#define CWUBDefineCreate_ColorRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1]//十六进制颜色(不带透明度)
 
+#define CWUBDefineCreate_ColorRGBAlpha(rgbValue,alphaValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带透明度)
 
 #define CWUBDefineFontTitle [UIFont systemFontOfSize:16]
 #define CWUBDefineFontContent [UIFont systemFontOfSize:12]

@@ -7,7 +7,7 @@
 //
 
 #import "CWUBViewBase.h"
-
+#import <MJRefresh/MJRefresh.h>
 
 @interface CWUBViewBase()<
 UITableViewDelegate,
@@ -193,6 +193,43 @@ UITableViewDataSource
         }
     }
     return nil;
+}
+
+
+#pragma mark - 设置table刷新
+- (void)inner_setTableHeader{
+
+    __weak __typeof(CWUBViewBase*) weakSelf = self;
+
+    self.m_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+
+        CWUBViewBase* strongSelf = weakSelf;
+        if (strongSelf) {
+
+            if ([strongSelf.m_baseDelegate respondsToSelector:@selector(CWUBViewBaseDelegate_tableViewHeaderRefresh)]) {
+
+                [strongSelf.m_baseDelegate CWUBViewBaseDelegate_tableViewHeaderRefresh];
+            }
+        }
+    }];
+}
+
+- (void)inner_setTableFooter{
+
+    __weak __typeof(CWUBViewBase*) weakSelf = self;
+
+    self.m_tableView.mj_footer = [MJRefreshBackGifFooter footerWithRefreshingBlock:^{
+
+        CWUBViewBase* strongSelf = weakSelf;
+        if (strongSelf) {
+
+            if ([strongSelf.m_baseDelegate respondsToSelector:@selector(CWUBViewBaseDelegate_tableViewFooterRefresh)]) {
+
+                [strongSelf.m_baseDelegate CWUBViewBaseDelegate_tableViewFooterRefresh];
+            }
+        }
+
+    }];
 }
 
 @end
