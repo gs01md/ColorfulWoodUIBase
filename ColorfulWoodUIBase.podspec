@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ColorfulWoodUIBase"
-  s.version      = "1.2.3"
+  s.version      = "1.2.6"
   s.summary      = "User Interface Design."
 
   s.homepage     = "https://github.com/gs01md"
@@ -20,9 +20,11 @@ Pod::Spec.new do |s|
 
   s.frameworks   = 'UIKit'
 
-  s.dependency    'Masonry'
-  s.dependency    'ColorfulWoodCategories'
-  s.dependency    'SDWebImage'
+  s.dependency     'Masonry'
+  s.dependency     'ColorfulWoodCategories'
+  s.dependency     'SDWebImage'
+  s.dependency     'MJRefresh'
+
 
 
 end

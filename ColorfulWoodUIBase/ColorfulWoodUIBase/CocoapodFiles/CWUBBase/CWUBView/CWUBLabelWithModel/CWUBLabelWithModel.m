@@ -130,6 +130,10 @@
 
 }
 
+- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
+    NSLog(@"消除警告");
+}
+
 /**
  * 获取控制器，获取视图控制器
  */
