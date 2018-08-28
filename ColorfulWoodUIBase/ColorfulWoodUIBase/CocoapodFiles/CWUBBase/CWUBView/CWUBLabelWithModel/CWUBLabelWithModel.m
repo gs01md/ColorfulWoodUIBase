@@ -117,15 +117,11 @@
     NSString * code = [self.m_model.m_event_opt_code stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if(code.length > 0 ){
 
-        self.userInteractionEnabled = YES;
         if(self.m_controller){
             self.m_tap = [[UITapGestureRecognizer alloc] initWithTarget:self.m_controller action:@selector(CWUBLabel_clickEvent:)];
             [self addGestureRecognizer:self.m_tap];
         }
 
-    }else{
-
-        self.userInteractionEnabled = NO;
     }
 
 }
