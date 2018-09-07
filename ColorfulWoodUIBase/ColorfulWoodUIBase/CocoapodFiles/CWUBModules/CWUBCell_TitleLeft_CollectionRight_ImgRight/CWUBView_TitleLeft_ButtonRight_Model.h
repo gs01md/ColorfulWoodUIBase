@@ -6,9 +6,9 @@
 //  Copyright © 2018年 ColorfulWood. All rights reserved.
 //
 
-#import "CWUBViewModelBase.h"
+#import "CWUBModelBase.h"
 
-@interface CWUBView_TitleLeft_ButtonRight_Model : CWUBViewModelBase
+@interface CWUBView_TitleLeft_ButtonRight_Model : CWUBModelBase
 @property(nonatomic,strong)CWUBTextInfo *m_title;
 @property(nonatomic,strong)CWUBImageInfo *m_img;
 
