@@ -19,6 +19,7 @@ FOUNDATION_EXPORT const unsigned char ColorfulWoodUIBaseVersionString[];
 #import "CWUBDefine.h"
 #import "CWUBCellBase.h"
 #import "CWUBModelBase.h"
+#import "CWUBModel.h"
 #import "CWUBViewModelBase.h"
 #import "CWUBControllerBase.h"
 #import "CWUBCellViewBase.h"
