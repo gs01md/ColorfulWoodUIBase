@@ -138,6 +138,8 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_TitleCenter_Model tester_dataWithArray:data];
+
     [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_InfoLeft_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model tester_dataWithArray:data];
@@ -151,7 +153,6 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
     [CWUBCell_Server_One_Model tester_dataWithArray:data];
     [CWUBCell_Order_One_Model tester_dataWithArray:data];
     [CWUBCell_SelectSex_Style1_Model tester_dataWithArray:data];
-    [CWUBCell_TitleCenter_Model tester_dataWithArray:data];
     [CWUBCell_ImgBack_TitleFront_Model tester_dataWithArray:data];
     [CWUBCell_TitleTop_TitleBottom_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Model tester_dataWithArray:data];
