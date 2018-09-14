@@ -50,4 +50,6 @@
  * 获取控制器，获取视图控制器
  */
 - (UIViewController *)inner_findViewController;
+
+- (void)interface_updateWithModel:(CWUBModel *)model;
 @end

@@ -1,30 +1,38 @@
 PODS:
-  - ColorfulWoodCategories (1.0.17)
+  - ColorfulWoodCategories (1.0.18)
+  - JSONModel (1.7.0)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.3)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
+  - WRNavigationBar (1.2.0)
 
 DEPENDENCIES:
   - ColorfulWoodCategories
+  - JSONModel
   - Masonry
   - MJRefresh
   - SDWebImage
+  - WRNavigationBar
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ColorfulWoodCategories
+    - JSONModel
     - Masonry
     - MJRefresh
     - SDWebImage
+    - WRNavigationBar
 
 SPEC CHECKSUMS:
-  ColorfulWoodCategories: 905a2ea34c85b4d6831407f2000a55089a22089a
+  ColorfulWoodCategories: 74173fa70ef860621afa102bfb03dc3f9b542979
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
 
-PODFILE CHECKSUM: 054f1810a34b20767c449d304d1ee5d4c8265532
+PODFILE CHECKSUM: 2d4499c32259fc63ef038627dd857b7a8fa9757c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

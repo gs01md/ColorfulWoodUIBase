@@ -12,7 +12,10 @@
 @interface CWUBViewBase()<
 UITableViewDelegate,
 UITableViewDataSource
->
+>{
+
+    BOOL m_isAddTableView;
+}
 @end
 
 @implementation CWUBViewBase
@@ -54,6 +57,11 @@ UITableViewDataSource
 //    return _m_defaultNoNetView;
 //}
 
+- (void)interface_updateWithModel:(CWUBModel*)model{
+    self.m_model = model;
+    [self.m_tableView reloadData];
+}
+
 #pragma mark - 列表
 
 /**
@@ -62,8 +70,14 @@ UITableViewDataSource
  */
 - (void)interface_addTableView{
 
-    [self addSubview:self.m_tableView];
-    [_m_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    if (m_isAddTableView == FALSE) {
+
+        [self addSubview:self.m_tableView];
+
+        m_isAddTableView = TRUE;
+    }
+
+    [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self);
         make.left.equalTo(self);
@@ -78,8 +92,14 @@ UITableViewDataSource
  */
 - (void)interface_addTableViewFrom:(UIView*)view offset:(float)top{
 
-    [self addSubview:self.m_tableView];
-    [_m_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    if (m_isAddTableView == FALSE) {
+
+        [self addSubview:self.m_tableView];
+
+        m_isAddTableView = TRUE;
+    }
+    
+    [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(view.mas_bottom).offset(top);
         make.left.equalTo(self);

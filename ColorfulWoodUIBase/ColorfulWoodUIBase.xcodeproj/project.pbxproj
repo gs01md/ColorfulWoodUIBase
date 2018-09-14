@@ -696,6 +696,13 @@
 			path = CWUBCollectionInfo;
 			sourceTree = "<group>";
 		};
+		8B1B8035214273B3003FAD11 /* CWUBJSONModelBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CWUBJSONModelBase;
+			sourceTree = "<group>";
+		};
 		8B1EF50B20CE128700E48171 /* CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1086,6 +1093,7 @@
 		8B1F417420B5375E00FEAFA0 /* CWUBBase */ = {
 			isa = PBXGroup;
 			children = (
+				8B1B8035214273B3003FAD11 /* CWUBJSONModelBase */,
 				8B1F419A20B5375E00FEAFA0 /* CWUBModel */,
 				8B1286CB2138A57600B9E585 /* CWUBModelBase */,
 				8B1286CA2138A51600B9E585 /* CWUBViewModelBase */,
@@ -1757,7 +1765,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1766,7 +1774,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
