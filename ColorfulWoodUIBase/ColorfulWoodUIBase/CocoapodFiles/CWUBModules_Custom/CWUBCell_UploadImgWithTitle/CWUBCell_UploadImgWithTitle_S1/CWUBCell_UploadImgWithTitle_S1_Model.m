@@ -92,7 +92,7 @@
     model7.m_img_main.m_margin_top = CWUBDefine_Width(88);
     model7.m_img_front = [[CWUBImageInfo alloc] initWithName:@"pass" width:CWUBDefine_Width(80) height:CWUBDefine_Width(80)];
     model7.m_img_front.m_contentMode = UIViewContentModeScaleAspectFit;
-
+    model7.m_img_front.m_canUserInteract = @"1";
     model7.m_title_top = [[CWUBTextInfo alloc] initWithText:@"请上传营业执照" font:[UIFont fontWithName:@"PingFangSC-Regular" size:18] color:CWUBDefineCreate_Color(51,51,51,1)];
     model7.m_title_top.m_margin_top = CWUBDefine_Width(25);
 

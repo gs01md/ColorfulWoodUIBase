@@ -23,6 +23,11 @@
 @property(nonatomic,strong) UIColor* m_color_backGroud;
 
 /**
+ * 是否隐藏，默认是0 所以不隐藏
+ */
+@property(nonatomic,assign) BOOL m_isHidden;
+
+/**
  * 是否设置ClipToBounds为TRUE
  */
 @property(nonatomic,assign) BOOL m_isClipToBounds;

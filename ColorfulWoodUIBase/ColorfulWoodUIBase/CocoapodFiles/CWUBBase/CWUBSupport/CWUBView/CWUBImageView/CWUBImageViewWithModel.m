@@ -76,6 +76,13 @@
             self.backgroundColor = model.m_color_backGroud;
         }
 
+        if ([model.m_canUserInteract isEqualToString:@"1"]) {
+            self.userInteractionEnabled = YES;
+        } else {
+            self.userInteractionEnabled = NO;
+        }
+
+        self.hidden = model.m_isHidden;
     }
 }
 
