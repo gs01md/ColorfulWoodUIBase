@@ -61,6 +61,7 @@
 #import "CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight.h"
 #import "CWUBCell_Server_Two.h"
 #import "CWUBCell_Order_Two.h"
+#import "CWUBCell_UploadImgWithTitle_S1.h"
 
 @implementation CWUBModelBase
 /**
@@ -289,6 +290,10 @@
 
             case CWUBCellType_Order_Two:
                 view = [self func_CWUBCell_Order_Two:tableView];
+                break;
+
+            case CWUBCellType_UploadImgWithTitle_S1:
+                view = [self func_CWUBCell_UploadImgWithTitle_S1:tableView];
                 break;
 
             default:
@@ -1072,6 +1077,23 @@
 
     }else{
         return [[CWUBCell_Order_Two alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_UploadImgWithTitle_S1*) func_CWUBCell_UploadImgWithTitle_S1:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_UploadImgWithTitle_S1";
+        CWUBCell_UploadImgWithTitle_S1 *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_UploadImgWithTitle_S1 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_UploadImgWithTitle_S1 alloc] initWithModel:self];
     }
 
 }

@@ -18,7 +18,8 @@ CWUBCell_MyFollow_MyBusinessDelegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate,
 CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate,
 CWUBCell_CollectionTop_TitleBottom_Delegate,
-CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
+CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate,
+CWUBCell_UploadImgWithTitle_S1_Delegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -138,6 +139,9 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_UploadImgWithTitle_S1_Model tester_dataWithArray2:data];
+    [CWUBCell_UploadImgWithTitle_S1_Model tester_dataWithArray:data];
+
     [CWUBCell_TitleCenter_Model tester_dataWithArray:data];
 
     [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model tester_dataWithArray:data];
@@ -172,9 +176,6 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
     [CWUBCell_TitleLeft_ButtonRight_Model tester_dataWithArray2:data];
     [CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight_Model tester_dataWithArray:data];
     [CWUBCell_Passenger_Delete_Model tester_dataWithArray:data];
-
-
-    
 
     if (data.count>0) {
         [self.m_model.m_array_show addObject:data];
@@ -285,6 +286,11 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
             cell1.delegate = self;
         }
 
+        if (model.m_type == CWUBCellType_UploadImgWithTitle_S1) {
+            CWUBCell_UploadImgWithTitle_S1 * cell1 = (CWUBCell_UploadImgWithTitle_S1*)cell;
+            cell1.delegate = self;
+        }
+
 
         return cell;
 
@@ -320,6 +326,12 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 
         CWUBCell_Carousel_One * cell1 = (CWUBCell_Carousel_One*)cell;
         [cell1 interface_restartTimer];
+
+    }
+
+    if ([code isEqualToString:@"上传营业执照"]) {
+
+        NSLog(@"点击了cell CWUBCell_UploadImgWithTitle_S1");
 
     }
 
@@ -410,6 +422,19 @@ CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate
 - (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
     NSString * code = [CWUBLabelWithModel interface_getEventCode:tap];
     NSLog(@"%@",code);
+}
+
+/**
+ * 修改信息事件
+ */
+- (void)CWUBCell_UploadImgWithTitle_S1_Delegate_ClickModify{
+
+    NSLog(@"CWUBCell_UploadImgWithTitle_S1_Delegate_ClickModify");
+}
+
+- (void)CWUBCell_UploadImgWithTitle_S1_Delegate_ClickCenterImg{
+
+    NSLog(@"CWUBCell_UploadImgWithTitle_S1_Delegate_ClickCenterImg");
 }
 
 @end

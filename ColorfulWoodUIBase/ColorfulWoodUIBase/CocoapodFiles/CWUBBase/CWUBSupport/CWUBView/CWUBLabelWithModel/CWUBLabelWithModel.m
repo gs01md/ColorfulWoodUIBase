@@ -94,11 +94,19 @@
 
         if (self.m_model.m_event_opt_code.length > 0) {
             self.userInteractionEnabled = YES;
+            [self performSelector:@selector(func_setEvent) withObject:self.m_model.m_event_opt_code afterDelay:1.];
+        }else{
+            self.userInteractionEnabled = NO;
+        }
+
+        if (self.m_model.m_lblCanClick) {
+            self.userInteractionEnabled = YES;
+        } else {
+            self.userInteractionEnabled = NO;
         }
 
         self.hidden = model.m_isHidden;
 
-        [self performSelector:@selector(func_setEvent) withObject:nil afterDelay:1.];
     }
 }
 #pragma mark - 属性
@@ -130,6 +138,9 @@
 
 }
 
+/**
+ * 不执行，因为在 self.m_controller 中执行
+ */
 - (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
     NSLog(@"消除警告");
 }

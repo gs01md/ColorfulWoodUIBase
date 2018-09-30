@@ -24,6 +24,11 @@
 @property(nonatomic, strong) NSString  * m_event_opt_code;
 
 /**
+ * Label是否可以点击
+ */
+@property(nonatomic, assign) BOOL m_lblCanClick;
+
+/**
  * 是否不可输入（textfield等控件）
  */
 @property(nonatomic, assign) BOOL m_noEnabled;
