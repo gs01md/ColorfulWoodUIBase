@@ -47,6 +47,24 @@
         self.hidden = info.m_isHidden;
 
         self.enabled = !info.m_noEnabled;
+
+        switch (self.m_info.m_labelTextHorizontalType) {
+
+            case CWUBLabelTextHorizontalType_left:
+                self.textAlignment = NSTextAlignmentLeft;
+                break;
+
+            case CWUBLabelTextHorizontalType_right:
+                self.textAlignment = NSTextAlignmentRight;
+                break;
+
+            case CWUBLabelTextHorizontalType_center:
+                self.textAlignment = NSTextAlignmentCenter;
+                break;
+
+            default:
+                break;
+        }
     }
 }
 

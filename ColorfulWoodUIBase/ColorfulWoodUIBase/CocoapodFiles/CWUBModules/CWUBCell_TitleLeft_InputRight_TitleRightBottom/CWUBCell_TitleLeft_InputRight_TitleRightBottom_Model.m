@@ -52,9 +52,10 @@
     model13.m_type = CWUBCellType_TitleLeft_InputRight_TitleRightBottom;
 
     model13.m_title_left = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
-    model13.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
+    model13.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"选择行业222" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
     model13.m_title_bottomRight.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right;
     model13.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+    model13.m_input_right.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_left;
     model13.m_input_right.m_regex = ColorfulWoodRegex_1;
     model13.m_input_right.m_bUppercaseString = YES;
     model13.m_input_right.m_textPlaceholder = @"请输入内容";
