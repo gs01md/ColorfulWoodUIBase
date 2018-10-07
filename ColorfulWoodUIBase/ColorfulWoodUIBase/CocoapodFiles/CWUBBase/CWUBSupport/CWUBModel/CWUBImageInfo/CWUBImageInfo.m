@@ -52,13 +52,13 @@
     return _m_defaultName;
 }
 
-- (UIColor*)m_color_backGroud{
+- (UIColor*)m_color_backGround{
 
-    if (!_m_color_backGroud) {
-        _m_color_backGroud = [UIColor clearColor];
+    if (!_m_color_backGround) {
+        _m_color_backGround = [UIColor clearColor];
     }
 
-    return _m_color_backGroud;
+    return _m_color_backGround;
 }
 
 - (CWUBCornerInfo*)m_cornerInfo{

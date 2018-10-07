@@ -20,7 +20,7 @@
 @property(nonatomic,strong) NSString* m_imgUrl;
 @property(nonatomic,assign) float m_width;
 @property(nonatomic,assign) float m_height;
-@property(nonatomic,strong) UIColor* m_color_backGroud;
+@property(nonatomic,strong) UIColor* m_color_backGround;
 
 /**
  * 是否隐藏，默认是0 所以不隐藏

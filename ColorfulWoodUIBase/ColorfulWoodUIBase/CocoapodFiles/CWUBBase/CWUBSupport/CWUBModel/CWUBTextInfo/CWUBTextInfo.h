@@ -16,7 +16,7 @@
 @property(nonatomic, strong) NSString * m_text;
 @property(nonatomic, strong) UIFont * m_font;
 @property(nonatomic, strong) UIColor * m_color;
-@property(nonatomic, strong) UIColor * m_color_backGroud;
+@property(nonatomic, strong) UIColor * m_color_backGround;
 
 /**
  * 点击该Label时的操作

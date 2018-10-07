@@ -132,7 +132,7 @@
 
     if (!_m_lbl_one) {
         _m_lbl_one = [CWUBLabelWithModel new];
-        _m_lbl_one.backgroundColor = self.m_model.m_title_one.m_color_backGroud;
+        _m_lbl_one.backgroundColor = self.m_model.m_title_one.m_color_backGround;
     }
     return _m_lbl_one;
 }
@@ -141,7 +141,7 @@
 
     if (!_m_lbl_two) {
         _m_lbl_two = [CWUBLabelWithModel new];
-        _m_lbl_two.backgroundColor = self.m_model.m_title_two.m_color_backGroud;
+        _m_lbl_two.backgroundColor = self.m_model.m_title_two.m_color_backGround;
     }
     return _m_lbl_two;
 }
@@ -150,7 +150,7 @@
 
     if (!_m_lbl_three) {
         _m_lbl_three = [CWUBLabelWithModel new];
-        _m_lbl_three.backgroundColor = self.m_model.m_title_three.m_color_backGroud;
+        _m_lbl_three.backgroundColor = self.m_model.m_title_three.m_color_backGround;
     }
     return _m_lbl_three;
 }

@@ -37,7 +37,7 @@
     model17.m_title.m_text = @"*资料认证未通过，点击进入修改";
     model17.m_title.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_center;
     model17.m_title.m_color = [UIColor redColor];
-    model17.m_title.m_color_backGroud = [UIColor blueColor];
+    model17.m_title.m_color_backGround = [UIColor blueColor];
     model17.m_bottomLineInfo.m_image = @"line";
     model17.m_title.m_height = 50.;
     model17.m_color_backGround = [UIColor redColor];

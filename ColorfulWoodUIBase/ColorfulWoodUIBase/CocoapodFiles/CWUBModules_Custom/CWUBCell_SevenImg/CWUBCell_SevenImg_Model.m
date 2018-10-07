@@ -23,7 +23,7 @@
 
     if (!_m_title_one) {
         _m_title_one = [CWUBTextInfo new];
-        _m_title_one.m_color_backGroud = [UIColor colorWithHexString:@"#cccccc" alpha:1];
+        _m_title_one.m_color_backGround = [UIColor colorWithHexString:@"#cccccc" alpha:1];
     }
     return _m_title_one;
 }
@@ -32,7 +32,7 @@
 
     if (!_m_title_two) {
         _m_title_two = [CWUBTextInfo new];
-        _m_title_two.m_color_backGroud = [UIColor colorWithHexString:@"#cccccc" alpha:1];
+        _m_title_two.m_color_backGround = [UIColor colorWithHexString:@"#cccccc" alpha:1];
     }
     return _m_title_two;
 }
@@ -41,7 +41,7 @@
 
     if (!_m_title_three) {
         _m_title_three = [CWUBTextInfo new];
-        _m_title_three.m_color_backGroud = [UIColor colorWithHexString:@"#cccccc" alpha:1];
+        _m_title_three.m_color_backGround = [UIColor colorWithHexString:@"#cccccc" alpha:1];
     }
     return _m_title_three;
 }
@@ -50,7 +50,7 @@
 
     if (!_m_title_four) {
         _m_title_four = [CWUBTextInfo new];
-        _m_title_four.m_color_backGroud = [UIColor colorWithHexString:@"#cccccc" alpha:1];
+        _m_title_four.m_color_backGround = [UIColor colorWithHexString:@"#cccccc" alpha:1];
     }
     return _m_title_four;
 }
@@ -94,7 +94,7 @@
 
     model12.m_img_one.m_margin_left = CWUBDefine_Width(53.);
     model12.m_title_one.m_height = 2.;
-    model12.m_title_one.m_color_backGroud = [UIColor blueColor];
+    model12.m_title_one.m_color_backGround = [UIColor blueColor];
     model12.m_title_one.m_margin_left = 0.01;
     model12.m_title_four.m_margin_right = 0.01;
     model12.m_title_four.m_margin_left = CWUBDefine_Width(5.);

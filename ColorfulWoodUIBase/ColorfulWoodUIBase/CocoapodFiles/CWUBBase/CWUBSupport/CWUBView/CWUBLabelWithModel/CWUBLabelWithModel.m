@@ -88,8 +88,8 @@
                 break;
         }
 
-        if (model.m_color_backGroud) {
-            self.backgroundColor = model.m_color_backGroud;
+        if (model.m_color_backGround) {
+            self.backgroundColor = model.m_color_backGround;
         }
 
         if (self.m_model.m_event_opt_code.length > 0) {

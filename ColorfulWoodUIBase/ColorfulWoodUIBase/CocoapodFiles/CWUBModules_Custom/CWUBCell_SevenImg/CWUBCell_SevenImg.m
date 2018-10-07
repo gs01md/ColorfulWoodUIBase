@@ -160,7 +160,7 @@
 
     if (!_m_lbl_one) {
         _m_lbl_one = [UILabel new];
-        _m_lbl_one.backgroundColor = self.m_model.m_title_one.m_color_backGroud;
+        _m_lbl_one.backgroundColor = self.m_model.m_title_one.m_color_backGround;
     }
     return _m_lbl_one;
 }
@@ -169,7 +169,7 @@
 
     if (!_m_lbl_two) {
         _m_lbl_two = [UILabel new];
-        _m_lbl_two.backgroundColor = self.m_model.m_title_two.m_color_backGroud;
+        _m_lbl_two.backgroundColor = self.m_model.m_title_two.m_color_backGround;
     }
     return _m_lbl_two;
 }
@@ -178,7 +178,7 @@
 
     if (!_m_lbl_three) {
         _m_lbl_three = [UILabel new];
-        _m_lbl_three.backgroundColor = self.m_model.m_title_three.m_color_backGroud;
+        _m_lbl_three.backgroundColor = self.m_model.m_title_three.m_color_backGround;
     }
     return _m_lbl_three;
 }
@@ -187,7 +187,7 @@
 
     if (!_m_lbl_four) {
         _m_lbl_four = [UILabel new];
-        _m_lbl_four.backgroundColor = self.m_model.m_title_four.m_color_backGroud;
+        _m_lbl_four.backgroundColor = self.m_model.m_title_four.m_color_backGround;
     }
     return _m_lbl_four;
 }
@@ -233,10 +233,10 @@
     [super interface_updateWithModel:model];
     
     self.m_model = model;
-    [self.m_lbl_one setBackgroundColor:self.m_model.m_title_one.m_color_backGroud];
-    [self.m_lbl_two setBackgroundColor:self.m_model.m_title_two.m_color_backGroud];
-    [self.m_lbl_three setBackgroundColor:self.m_model.m_title_three.m_color_backGroud];
-    [self.m_lbl_four setBackgroundColor:self.m_model.m_title_four.m_color_backGroud];
+    [self.m_lbl_one setBackgroundColor:self.m_model.m_title_one.m_color_backGround];
+    [self.m_lbl_two setBackgroundColor:self.m_model.m_title_two.m_color_backGround];
+    [self.m_lbl_three setBackgroundColor:self.m_model.m_title_three.m_color_backGround];
+    [self.m_lbl_four setBackgroundColor:self.m_model.m_title_four.m_color_backGround];
     [self.m_img_one setImage:[UIImage imageNamed:self.m_model.m_img_one.m_imgName]];
     [self.m_img_two setImage:[UIImage imageNamed:self.m_model.m_img_two.m_imgName]];
     [self.m_img_three setImage:[UIImage imageNamed:self.m_model.m_img_three.m_imgName]];

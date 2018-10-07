@@ -101,7 +101,7 @@
     model7.m_title_click.m_width =  CWUBDefine_Width(150);
     model7.m_title_click.m_height =  CWUBDefine_Width(44);
     model7.m_title_click.m_canUserInteract = @"1";
-    model7.m_title_click.m_color_backGroud = CWUBDefineCreate_ColorRGB(0xEBEBEB);
+    model7.m_title_click.m_color_backGround = CWUBDefineCreate_ColorRGB(0xEBEBEB);
     model7.m_title_click.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_ColorRGB(0xEBEBEB)];
 
     model7.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"请确保营业执照的编号、文字、照片清晰可见" font:[UIFont fontWithName:@"PingFangSC-Regular" size:14] color:CWUBDefineCreate_Color(51,51,51,1)];

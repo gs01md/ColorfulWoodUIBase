@@ -135,7 +135,7 @@
         [_m_btn_first setTitle:model.m_info_first.m_text forState:UIControlStateNormal];
         [_m_btn_first setTitleColor:model.m_info_first.m_color forState:UIControlStateNormal];
         [_m_btn_first.titleLabel setFont:model.m_info_first.m_font];
-        [_m_btn_first setBackgroundColor:model.m_info_first.m_color_backGroud];
+        [_m_btn_first setBackgroundColor:model.m_info_first.m_color_backGround];
         [_m_btn_first.titleLabel setTextColor:model.m_info_first.m_color];
 
 
@@ -152,7 +152,7 @@
         [_m_btn_second setTitle:model.m_info_second.m_text forState:UIControlStateNormal];
         [_m_btn_second setTitleColor:model.m_info_second.m_color forState:UIControlStateNormal];
         [_m_btn_second.titleLabel setFont:model.m_info_second.m_font];
-        [_m_btn_second setBackgroundColor:model.m_info_second.m_color_backGroud];
+        [_m_btn_second setBackgroundColor:model.m_info_second.m_color_backGround];
         [_m_btn_second.titleLabel setTextColor:model.m_info_second.m_color];
 
         if (model.m_info_second.m_isHidden) {

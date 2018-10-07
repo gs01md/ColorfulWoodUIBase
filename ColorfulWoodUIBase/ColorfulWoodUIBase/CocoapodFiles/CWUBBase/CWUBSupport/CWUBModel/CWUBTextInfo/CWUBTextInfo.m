@@ -44,7 +44,7 @@
         self.m_text = text?text:@"";
         self.m_font = font;
         self.m_color = color;
-        self.m_color_backGroud = backColor;
+        self.m_color_backGround = backColor;
     }
 
     return self;
@@ -129,13 +129,13 @@
     return _m_color;
 }
 
-- (UIColor*)m_color_backGroud{
+- (UIColor*)m_color_backGround{
 
-    if (!_m_color_backGroud) {
-        _m_color_backGroud = [UIColor clearColor];
+    if (!_m_color_backGround) {
+        _m_color_backGround = [UIColor clearColor];
     }
 
-    return _m_color_backGroud;
+    return _m_color_backGround;
 }
 
 - (CWUBCornerInfo*)m_cornerInfo{
