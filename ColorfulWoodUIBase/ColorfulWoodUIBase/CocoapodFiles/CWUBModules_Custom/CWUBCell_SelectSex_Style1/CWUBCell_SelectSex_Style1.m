@@ -66,6 +66,10 @@
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_left.m_margin_bottom);
         make.left.equalTo(self).offset(self.m_model.m_title_left.m_margin_left);
 
+        if (self.m_model.m_title_left.m_width > 0.01) {
+            make.width.equalTo(@(self.m_model.m_title_left.m_width));
+        }
+
     }];
 
     [_m_lbl_man mas_remakeConstraints:^(MASConstraintMaker *make) {
