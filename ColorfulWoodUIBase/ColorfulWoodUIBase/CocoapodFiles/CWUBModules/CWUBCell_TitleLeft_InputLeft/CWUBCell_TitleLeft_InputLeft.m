@@ -49,18 +49,28 @@
 - (void)func_updateConsrtains{
     
     [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
-        make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
+        make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
+        make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
+
+        if (self.m_model.m_title.m_width > 0.01) {
+            make.width.equalTo(@(self.m_model.m_title.m_width));
+        }else{
+            make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
+        }
     }];
 
     [_m_lbl_textfield mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
-        make.left.equalTo(self.m_lbl_title.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
-        make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
+        make.top.equalTo(self).offset(self.m_model.m_input.m_margin_top);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_input.m_margin_bottom);
+        make.right.equalTo(self).offset(-self.m_model.m_input.m_margin_right);
+
+        if (self.m_model.m_input.m_width > 0.01) {
+            make.width.equalTo(@(self.m_model.m_input.m_width));
+        }else{
+            make.left.equalTo(self.m_lbl_title.mas_right).offset(self.m_model.m_input.m_margin_left);
+        }
     }];
 
     [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -68,7 +78,7 @@
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
-        make.top.equalTo(self.m_lbl_textfield.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
+        make.top.equalTo(self.m_lbl_textfield.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
     }];
 
 }

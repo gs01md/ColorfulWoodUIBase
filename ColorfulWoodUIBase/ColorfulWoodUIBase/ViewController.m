@@ -139,6 +139,7 @@ CWUBCell_UploadImgWithTitle_S1_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_TitleLeft_InputLeft_Model tester_dataWithArray:data];
     [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
 
     [CWUBCell_UploadImgWithTitle_S1_Model tester_dataWithArray2:data];
