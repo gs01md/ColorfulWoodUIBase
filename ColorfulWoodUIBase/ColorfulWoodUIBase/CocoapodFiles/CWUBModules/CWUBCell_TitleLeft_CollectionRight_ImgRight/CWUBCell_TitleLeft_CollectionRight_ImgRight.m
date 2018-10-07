@@ -74,7 +74,7 @@ UICollectionViewDelegateFlowLayout>
     [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.centerY.equalTo(self.m_collection_right);
-        make.left.equalTo(self).offset(self.m_model.m_title_right.m_margin_left);
+        make.left.equalTo(self.m_lbl_left.mas_right).offset(self.m_model.m_title_right.m_margin_left);
         make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_title_right.m_margin_right);
     }];
 
