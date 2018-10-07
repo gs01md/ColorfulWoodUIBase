@@ -9,7 +9,7 @@
 #import "CWUBCell_ImgCenter.h"
 
 @interface CWUBCell_ImgCenter()
-@property (nonatomic, strong) UIImageView *m_img_center;
+@property (nonatomic, strong) CWUBImageViewWithModel *m_img_center;
 @end
 
 @implementation CWUBCell_ImgCenter
@@ -83,16 +83,10 @@
     return _m_model;
 }
 
--(UIImageView *)m_img_center{
+-(CWUBImageViewWithModel *)m_img_center{
 
     if(!_m_img_center){
-        _m_img_center = [UIImageView new];
-        [_m_img_center setImage:[UIImage imageNamed:self.m_model.m_image.m_imgName]];
-        _m_img_center.contentMode = UIViewContentModeScaleAspectFill;
-        _m_img_center.clipsToBounds = YES;
-        [_m_img_center setClipsToBounds:YES];
-        _m_img_center.layer.cornerRadius = self.m_model.m_image.m_width/2.;
-        _m_img_center.layer.masksToBounds = YES;
+        _m_img_center = [CWUBImageViewWithModel new];
     }
     return _m_img_center;
 }
@@ -110,6 +104,9 @@
     if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
         [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
     }
+
+    [self.m_img_center interface_update:model.m_image];
+    
     [self func_updateConsrtains];
 }
 
