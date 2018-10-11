@@ -62,6 +62,9 @@
 #import "CWUBCell_Server_Two.h"
 #import "CWUBCell_Order_Two.h"
 #import "CWUBCell_UploadImgWithTitle_S1.h"
+#import "CWUBCell_Message_S1.h"
+#import "CWUBCell_Person_S1.h"
+#import "CWUBCell_Publish_Collection.h"
 
 @implementation CWUBModelBase
 /**
@@ -294,6 +297,14 @@
 
             case CWUBCellType_UploadImgWithTitle_S1:
                 view = [self func_CWUBCell_UploadImgWithTitle_S1:tableView];
+                break;
+
+            case CWUBCellType_Person_S1:
+                view = [self func_CWUBCell_Person_S1:tableView];
+                break;
+
+            case CWUBCellType_Publish_Collection:
+                view = [self func_CWUBCell_Publish_Collection:tableView];
                 break;
 
             default:
@@ -1094,6 +1105,40 @@
 
     }else{
         return [[CWUBCell_UploadImgWithTitle_S1 alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_Person_S1*) func_CWUBCell_Person_S1:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Person_S1";
+        CWUBCell_Person_S1 *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Person_S1 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Person_S1 alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_Publish_Collection*) func_CWUBCell_Publish_Collection:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_Publish_Collection";
+        CWUBCell_Publish_Collection *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_Publish_Collection alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_Publish_Collection alloc] initWithModel:self];
     }
 
 }

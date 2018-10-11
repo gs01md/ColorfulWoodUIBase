@@ -47,6 +47,11 @@
 @property(nonatomic, strong)UIColor *m_color_backGround;
 
 /**
+ * 背景图片
+ */
+@property(nonatomic, strong)CWUBImageInfo *m_img_backGround;
+
+/**
  * 用作点击操作标识
  */
 @property(nonatomic, strong)NSString *m_event_opt_code;

@@ -80,6 +80,14 @@
     return _m_img_sep;
 }
 
+-(CWUBImageViewWithModel *)m_img_backGround{
+
+    if(!_m_img_backGround){
+        _m_img_backGround = [CWUBImageViewWithModel new];
+    }
+    return _m_img_backGround;
+}
+
 - (void)interface_updateWithModel:(CWUBModelBase*)model{
 
     [self func_backgroundColor:model];
@@ -91,6 +99,31 @@
         self.backgroundColor = model.m_color_backGround;
     }else{
         self.backgroundColor = [UIColor whiteColor];
+    }
+
+    if (model && model.m_img_backGround) {
+
+        if (self.m_img_backGround.superview == nil) {
+            [self addSubview:self.m_img_backGround];
+        }
+
+        [self.m_img_backGround interface_update:model.m_img_backGround];
+
+        [_m_img_backGround mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(model.m_img_backGround.m_margin_left);
+            make.right.equalTo(self).offset(-model.m_img_backGround.m_margin_right);
+//            make.top.equalTo(self).offset(model.m_img_backGround.m_margin_top);
+//            make.bottom.equalTo(self).offset(-model.m_img_backGround.m_margin_bottom);
+            make.centerY.equalTo(self);
+            make.height.equalTo(self);
+        }];
+
+    }else{
+
+        if (self.m_img_backGround.superview != nil) {
+            [self.m_img_backGround removeFromSuperview];
+        }
+
     }
 }
 

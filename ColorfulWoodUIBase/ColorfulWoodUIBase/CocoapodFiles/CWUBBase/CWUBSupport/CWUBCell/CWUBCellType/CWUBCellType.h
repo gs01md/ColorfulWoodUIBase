@@ -74,6 +74,9 @@ typedef enum : NSUInteger {
     CWUBCellType_HorizontalScroll_TitleTop_TitleBottom_ImgRight,
     CWUBCellType_Order_Two,
     CWUBCellType_UploadImgWithTitle_S1,
+    CWUBCellType_Message_S1,
+    CWUBCellType_Person_S1,
+    CWUBCellType_Publish_Collection,
 
 } CWUBCellType;
 

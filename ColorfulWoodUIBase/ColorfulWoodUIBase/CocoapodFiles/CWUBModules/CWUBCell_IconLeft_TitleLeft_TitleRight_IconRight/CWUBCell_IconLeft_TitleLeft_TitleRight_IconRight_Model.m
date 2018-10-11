@@ -29,9 +29,20 @@
     model1.m_title_right.m_event_opt_code = @"内容";
     model1.m_img_left = [[CWUBImageInfo alloc] initWithName:@"left" width:26. height:26.];
     model1.m_img_right = [[CWUBImageInfo alloc] initWithName:@"big" width:20. height:12.];
+
+    model1.m_img_left.m_margin_left = 25.;
+    model1.m_img_right.m_margin_right = 25.;
+
     //    model1.m_margin_leftOrRight = 10.;
     //    model1.m_bottomLineType = CWUBBottomLineType_right;
     //    model1.m_title_left.m_labelTextVerticalType = CWUBLabelTextVerticalType_top;
+    model1.m_img_backGround = [[CWUBImageInfo alloc] initWithName:@"back1" width:345 height:55];
+    model1.m_img_backGround.m_imgName = @"back1";
+    model1.m_img_backGround.m_margin_left = 3.;
+    model1.m_img_backGround.m_margin_right = 3.;
+    model1.m_img_backGround.m_margin_top = 0.;
+    model1.m_img_backGround.m_margin_bottom = 0.;
+
     [data addObject:model1];
 
     return model1;

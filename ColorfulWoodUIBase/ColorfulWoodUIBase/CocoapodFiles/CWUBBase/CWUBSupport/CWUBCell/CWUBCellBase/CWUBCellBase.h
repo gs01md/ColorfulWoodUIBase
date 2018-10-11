@@ -24,6 +24,11 @@
 @property (nonatomic, strong) UIImageView * m_img_sep;
 
 /**
+ * 背景图片
+ */
+@property (nonatomic, strong) CWUBImageViewWithModel * m_img_backGround;
+
+/**
  * 返回cell
  */
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBModelBase*)model;
