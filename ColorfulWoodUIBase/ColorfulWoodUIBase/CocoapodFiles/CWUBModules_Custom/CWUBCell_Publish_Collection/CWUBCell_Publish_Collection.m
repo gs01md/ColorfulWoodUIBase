@@ -17,6 +17,13 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_Left;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_right;
 @property (nonatomic, strong) CWUBImageViewWithModel * m_img_right;
+
+/**
+ * 点击区域
+ */
+@property (nonatomic, strong) UIView *m_viewLeft;
+@property (nonatomic, strong) UIView *m_viewRight;
+
 @end
 
 @implementation CWUBCell_Publish_Collection
@@ -58,6 +65,8 @@
 
 - (void) func_initWithSubViews{
 
+    [self addSubview:self.m_viewLeft];
+    [self addSubview:self.m_viewRight];
     [self addSubview:self.m_img_left];
     [self addSubview:self.m_lbl_Left];
     [self addSubview:self.m_lbl_right];
@@ -95,6 +104,22 @@
         make.centerY.equalTo(self.m_lbl_Left);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_Left.m_margin_bottom);
 
+    }];
+
+    [_m_viewLeft mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.m_img_left);
+        make.bottom.equalTo(self.m_lbl_Left);
+        make.left.equalTo(self.m_lbl_Left);
+        make.right.equalTo(self.m_lbl_Left);
+    }];
+
+    [_m_viewRight mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.top.equalTo(self.m_img_right);
+        make.bottom.equalTo(self.m_lbl_right);
+        make.left.equalTo(self.m_lbl_right);
+        make.right.equalTo(self.m_lbl_right);
     }];
 
     [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -141,11 +166,6 @@
     if(!_m_img_left){
 
         _m_img_left = [[CWUBImageViewWithModel alloc] initWithModel:self.m_model.m_img_left];
-
-        [_m_img_left setUserInteractionEnabled:YES];
-
-        UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgLeft)];
-        [_m_img_left addGestureRecognizer:tapGesturRecognizer];
     }
     return _m_img_left;
 }
@@ -156,12 +176,36 @@
 
         _m_img_right = [[CWUBImageViewWithModel alloc] initWithModel:self.m_model.m_img_right];
 
-        [_m_img_right setUserInteractionEnabled:YES];
-
-        UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgRight)];
-        [_m_img_right addGestureRecognizer:tapGesturRecognizer];
     }
     return _m_img_right;
+}
+
+-(UIView *)m_viewLeft{
+
+    if(!_m_viewLeft){
+
+        _m_viewLeft = [UIView new];
+
+        [_m_viewLeft setUserInteractionEnabled:YES];
+
+        UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgLeft)];
+        [_m_viewLeft addGestureRecognizer:tapGesturRecognizer];
+    }
+    return _m_viewLeft;
+}
+
+-(UIView *)m_viewRight{
+
+    if(!_m_viewRight){
+
+        _m_viewRight = [UIView new];
+
+        [_m_viewRight setUserInteractionEnabled:YES];
+
+        UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event_imgRight)];
+        [_m_viewRight addGestureRecognizer:tapGesturRecognizer];
+    }
+    return _m_viewRight;
 }
 
 - (void) interface_updateWithModel:(CWUBCell_Publish_Collection_Model*)model{

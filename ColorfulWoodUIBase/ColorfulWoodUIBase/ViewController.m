@@ -19,7 +19,8 @@ CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate,
 CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate,
 CWUBCell_CollectionTop_TitleBottom_Delegate,
 CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate,
-CWUBCell_UploadImgWithTitle_S1_Delegate
+CWUBCell_UploadImgWithTitle_S1_Delegate,
+CWUBCell_Publish_CollectionDelegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -301,6 +302,11 @@ CWUBCell_UploadImgWithTitle_S1_Delegate
             cell1.delegate = self;
         }
 
+        if (model.m_type == CWUBCellType_Publish_Collection) {
+            CWUBCell_Publish_Collection * cell1 = (CWUBCell_Publish_Collection*)cell;
+            cell1.delegate = self;
+        }
+
 
         return cell;
 
@@ -447,4 +453,17 @@ CWUBCell_UploadImgWithTitle_S1_Delegate
     NSLog(@"CWUBCell_UploadImgWithTitle_S1_Delegate_ClickCenterImg");
 }
 
+/**
+ * 点击左侧图片
+ */
+- (void)CWUBCell_Publish_CollectionDelegate_leftImg{
+    NSLog(@"CWUBCell_Publish_CollectionDelegate_leftImg");
+}
+
+/**
+ * 点击右侧图片
+ */
+- (void)CWUBCell_Publish_CollectionDelegate_rightImg{
+    NSLog(@"CWUBCell_Publish_CollectionDelegate_rightImg");
+}
 @end
