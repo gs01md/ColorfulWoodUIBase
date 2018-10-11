@@ -107,6 +107,8 @@
             [self addSubview:self.m_img_backGround];
         }
 
+        [self sendSubviewToBack:self.m_img_backGround];
+
         [self.m_img_backGround interface_update:model.m_img_backGround];
 
         [_m_img_backGround mas_remakeConstraints:^(MASConstraintMaker *make) {
