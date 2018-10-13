@@ -151,6 +151,11 @@
 
     self.m_model.m_input.m_text = theTextField.text;
     self.m_model.m_dataOut = self.m_model.m_input.m_text;
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputLeft_Delegate_changed:)]) {
+
+        [self.delegate CWUBCell_TitleLeft_InputLeft_Delegate_changed:self.m_model];
+    }
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}
