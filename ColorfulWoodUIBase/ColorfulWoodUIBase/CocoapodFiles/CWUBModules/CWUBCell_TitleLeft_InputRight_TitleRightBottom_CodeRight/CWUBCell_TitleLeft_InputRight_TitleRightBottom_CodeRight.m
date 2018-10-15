@@ -250,9 +250,9 @@
         [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_textChanged:self.m_model.m_dataOut];
     }
 
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_changed:)]) {
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_changed:)]) {
 
-        [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_changed:self.m_model];
+        [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_changed:self.m_model];
     }
 }
 
