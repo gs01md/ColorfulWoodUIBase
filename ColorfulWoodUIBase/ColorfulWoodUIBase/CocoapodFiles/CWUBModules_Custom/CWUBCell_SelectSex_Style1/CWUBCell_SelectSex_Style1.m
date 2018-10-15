@@ -9,11 +9,9 @@
 #import "CWUBCell_SelectSex_Style1.h"
 
 @interface CWUBCell_SelectSex_Style1()
-
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_man;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_woman;
-
 @end
 
 @implementation CWUBCell_SelectSex_Style1
