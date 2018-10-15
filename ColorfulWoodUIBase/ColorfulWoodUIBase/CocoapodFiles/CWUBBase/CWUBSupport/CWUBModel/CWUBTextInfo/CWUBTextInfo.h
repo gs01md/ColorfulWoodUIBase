@@ -19,6 +19,11 @@
 @property(nonatomic, strong) UIColor * m_color_backGround;
 
 /**
+ * 另外一个数值，用于倒计时等操作
+ */
+@property(nonatomic, assign) int m_valueOpt;
+
+/**
  * 点击该Label时的操作
  */
 @property(nonatomic, strong) NSString  * m_event_opt_code;

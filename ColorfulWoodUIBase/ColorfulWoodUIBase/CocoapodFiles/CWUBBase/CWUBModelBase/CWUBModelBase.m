@@ -65,7 +65,8 @@
 #import "CWUBCell_Message_S1.h"
 #import "CWUBCell_Person_S1.h"
 #import "CWUBCell_Publish_Collection.h"
-
+#import "CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.h"
+#import "CWUBCell_InputLeft_CodeRight.h"
 @implementation CWUBModelBase
 /**
  * 根据类型获取视图
@@ -306,6 +307,15 @@
             case CWUBCellType_Publish_Collection:
                 view = [self func_CWUBCell_Publish_Collection:tableView];
                 break;
+
+            case CWUBCellType_TitleLeft_InputRight_TitleRightBottom_CodeRight:
+                view = [self func_CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight:tableView];
+                break;
+
+            case CWUBCellType_InputLeft_CodeRight:
+                view = [self func_CWUBCell_InputLeft_CodeRight:tableView];
+                break;
+
 
             default:
                 break;
@@ -1142,6 +1152,42 @@
     }
 
 }
+
+- (CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight*) func_CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight";
+        CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight alloc] initWithModel:self];
+    }
+
+}
+
+- (CWUBCell_InputLeft_CodeRight*) func_CWUBCell_InputLeft_CodeRight:(UITableView*)tableView{
+
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_InputLeft_CodeRight";
+        CWUBCell_InputLeft_CodeRight *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_InputLeft_CodeRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_InputLeft_CodeRight alloc] initWithModel:self];
+    }
+
+}
+
+
 
 #pragma mark - 参数设置
 

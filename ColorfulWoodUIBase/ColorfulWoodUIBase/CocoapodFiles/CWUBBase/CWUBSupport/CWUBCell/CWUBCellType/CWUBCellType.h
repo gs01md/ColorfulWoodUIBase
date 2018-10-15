@@ -77,7 +77,8 @@ typedef enum : NSUInteger {
     CWUBCellType_Message_S1,
     CWUBCellType_Person_S1,
     CWUBCellType_Publish_Collection,
-
+    CWUBCellType_TitleLeft_InputRight_TitleRightBottom_CodeRight,
+    CWUBCellType_InputLeft_CodeRight,
 } CWUBCellType;
 
 

@@ -140,6 +140,10 @@ CWUBCell_Publish_CollectionDelegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_InputLeft_CodeRight_Model tester_dataWithArray:data];
+    
+    [CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model tester_dataWithArray:data];
+
     [CWUBCell_Publish_Collection_Model tester_dataWithArray:data];
     
     [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model tester_dataWithArray:data];
