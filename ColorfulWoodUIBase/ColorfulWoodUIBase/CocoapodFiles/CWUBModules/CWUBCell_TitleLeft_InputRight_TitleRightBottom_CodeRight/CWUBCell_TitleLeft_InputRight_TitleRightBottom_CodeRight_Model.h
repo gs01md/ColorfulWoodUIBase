@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong)CWUBTextInfo* m_input_right;
 @property(nonatomic, strong)CWUBTextInfo *m_title_bottomRight;
 @property(nonatomic, strong)CWUBTextInfo *m_title_right;
+
+/**
+ * 停止计时器
+ */
+@property(nonatomic, assign)BOOL m_stopTimer;
 @end
 
 NS_ASSUME_NONNULL_END

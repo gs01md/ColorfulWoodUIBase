@@ -9,7 +9,9 @@
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom.h"
 
 
-@interface CWUBCell_TitleLeft_InputRight_TitleRightBottom()
+@interface CWUBCell_TitleLeft_InputRight_TitleRightBottom()<
+UITextFieldDelegate
+>
 
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) CWUBTextfieldWithModel *m_textfield_right;
@@ -116,7 +118,8 @@
     if (!_m_textfield_right) {
         _m_textfield_right = [[CWUBTextfieldWithModel alloc] initWithModel:self.m_model.m_input_right];
         _m_textfield_right.textAlignment = NSTextAlignmentRight;
-        [_m_textfield_right addTarget:self action:@selector(event_textFieldDidChange:) forControlEvents:UIControlEventEditingDidEnd];
+        _m_textfield_right.delegate = self;
+        [_m_textfield_right addTarget:self action:@selector(event_textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
 
     return _m_textfield_right;
@@ -125,7 +128,7 @@
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model*)model{
 
     [super interface_updateWithModel:model];
-    
+
     self.m_model = model;
     [self.m_textfield_right interface_update:model.m_input_right];
     [self.m_lbl_left interface_update:model.m_title_left];
@@ -147,10 +150,41 @@
     return self.m_model.m_event_opt_code;
 }
 
+#pragma mark - textfield
+
+- (BOOL)textField:(UITextField *)theTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+
+    NSString * new_text_str = [theTextField.text stringByReplacingCharactersInRange:range withString:string];
+
+    /**
+     * 小写字母变成大写字母
+     */
+    if (self.m_model.m_input_right.m_bUppercaseString) {
+        new_text_str = [new_text_str uppercaseString];
+    }
+
+    self.m_model.m_input_right.m_text = new_text_str;
+    self.m_model.m_dataOut = self.m_model.m_input_right.m_text;
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:)]) {
+
+        [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_textChanged:self.m_model.m_dataOut];
+    }
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_changed:)]) {
+
+        [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate_changed:self.m_model];
+    }
+
+    return YES;
+}
 #pragma mark - 事件
 
 - (void)event_textFieldDidChange:(UITextField *)theTextField{
 
+    /**
+     * 之所以保留改事件，就是因为 正则表达式需要最后来判断
+     */
     theTextField.text = [theTextField.text interface_getWithRegex:self.m_model.m_input_right.m_regex];
 
     /**

@@ -178,6 +178,12 @@
     if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
         [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
     }
+
+    if (self.m_model.m_stopTimer) {
+        [self func_endTimer];
+        self.m_model.m_stopTimer = FALSE;
+    }
+    
     [self func_updateConsrtains];
 }
 
@@ -219,18 +225,27 @@
 
     if (_m_iNum <= 0) {
 
-        self.m_lbl_right.text = self.m_model.m_title_right.m_text;
-        [self.m_lbl_right setUserInteractionEnabled:YES];
-        [_m_timer invalidate];
+        [self func_endTimer];
 
         return;
     }
+
+    [self.m_lbl_right setUserInteractionEnabled:NO];
 
     NSString * str = [NSString stringWithFormat:@"剩余%dS",_m_iNum--];
     self.m_lbl_right.text = str;
 
 }
 
+- (void)func_endTimer{
+
+    self.m_lbl_right.text = self.m_model.m_title_right.m_text;
+    [self.m_lbl_right setUserInteractionEnabled:YES];
+    [_m_timer invalidate];
+
+}
+
+#pragma mark - 事件
 - (void)event_textFieldDidChange:(UITextField *)theTextField{
 
     theTextField.text = [theTextField.text interface_getWithRegex:self.m_model.m_input_right.m_regex];
