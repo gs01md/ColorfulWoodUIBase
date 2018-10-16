@@ -24,6 +24,11 @@
 @property(nonatomic, assign) int m_valueOpt;
 
 /**
+ * 是否实时监听textfield变化
+ */
+@property(nonatomic, assign) BOOL m_textField_realTime;
+
+/**
  * 点击该Label时的操作
  */
 @property(nonatomic, strong) NSString  * m_event_opt_code;

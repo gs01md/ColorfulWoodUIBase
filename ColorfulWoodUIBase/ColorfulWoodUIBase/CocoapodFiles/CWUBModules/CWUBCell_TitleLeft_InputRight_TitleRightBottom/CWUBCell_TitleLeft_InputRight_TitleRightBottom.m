@@ -118,7 +118,12 @@ UITextFieldDelegate
     if (!_m_textfield_right) {
         _m_textfield_right = [[CWUBTextfieldWithModel alloc] initWithModel:self.m_model.m_input_right];
         _m_textfield_right.textAlignment = NSTextAlignmentRight;
-        _m_textfield_right.delegate = self;
+        if (self.m_model.m_input_right.m_textField_realTime) {
+            _m_textfield_right.delegate = self;
+        } else {
+            _m_textfield_right.delegate = nil;
+        }
+
         [_m_textfield_right addTarget:self action:@selector(event_textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     }
 
@@ -141,6 +146,13 @@ UITextFieldDelegate
     if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
         [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
     }
+
+    if (self.m_model.m_input_right.m_textField_realTime) {
+        self.m_textfield_right.delegate = self;
+    } else {
+        self.m_textfield_right.delegate = nil;
+    }
+
     [self func_updateConsrtains];
 }
 
@@ -151,7 +163,11 @@ UITextFieldDelegate
 }
 
 #pragma mark - textfield
-
+/**
+ * 可能是代理的原因：输入汉字时，对应的英文也会输入进去
+ * 所以该方法不便经常使用，需要加个条件，默认是关闭的
+ * 我是因为输入手机号码后，点击按钮，不能及时获取手机号码才加入该功能的
+ */
 - (BOOL)textField:(UITextField *)theTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
 
     NSString * new_text_str = [theTextField.text stringByReplacingCharactersInRange:range withString:string];
