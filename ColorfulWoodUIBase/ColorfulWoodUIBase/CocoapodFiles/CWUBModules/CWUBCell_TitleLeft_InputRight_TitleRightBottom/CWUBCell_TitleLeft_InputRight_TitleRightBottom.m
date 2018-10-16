@@ -124,7 +124,7 @@ UITextFieldDelegate
             _m_textfield_right.delegate = nil;
         }
 
-        [_m_textfield_right addTarget:self action:@selector(event_textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+        [_m_textfield_right addTarget:self action:@selector(event_textFieldDidChange:) forControlEvents:UIControlEventEditingDidEnd];
     }
 
     return _m_textfield_right;

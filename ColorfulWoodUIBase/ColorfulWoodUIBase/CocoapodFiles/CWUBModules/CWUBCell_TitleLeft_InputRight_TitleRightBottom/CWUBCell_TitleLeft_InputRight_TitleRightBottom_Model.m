@@ -56,8 +56,8 @@
     model13.m_title_bottomRight.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right;
     model13.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
     model13.m_input_right.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_left;
-    model13.m_input_right.m_regex = ColorfulWoodRegex_1;
-    model13.m_input_right.m_bUppercaseString = YES;
+    //model13.m_input_right.m_regex = ColorfulWoodRegex_1;
+    //model13.m_input_right.m_bUppercaseString = YES;
     model13.m_input_right.m_textPlaceholder = @"请输入内容";
     model13.m_input_right.m_margin_bottom = 20.;
     model13.m_input_right.m_margin_top = 20.;
