@@ -161,7 +161,11 @@ UICollectionViewDelegateFlowLayout>
 
         float width = [[UIScreen mainScreen] bounds].size.width;
         width -= self.m_model.m_title_left.m_margin_left*2;
-        width -= [self fun_getWidth:self.m_model.m_title_left.m_text font:self.m_lbl_left.font];
+        if (self.m_model.m_title_left.m_width > 0.1) {
+            width -= self.m_model.m_title_left.m_width;
+        } else {
+            width -= [self fun_getWidth:self.m_model.m_title_left.m_text font:self.m_lbl_left.font];
+        }
         width -= self.m_model.m_img_right.m_width;
         width -= self.m_model.m_img_right.m_margin_right*2;
 
@@ -308,7 +312,13 @@ UICollectionViewDelegateFlowLayout>
      */
     float width = [[UIScreen mainScreen] bounds].size.width;
     width -= self.m_model.m_title_left.m_margin_left;
-    width -= [self fun_getWidth:self.m_model.m_title_left.m_text font:self.m_lbl_left.font];
+
+    if (self.m_model.m_title_left.m_width > 0.1) {
+        width -= self.m_model.m_title_left.m_width;
+    } else {
+        width -= [self fun_getWidth:self.m_model.m_title_left.m_text font:self.m_lbl_left.font];
+    }
+
     width -= self.m_model.m_collection_right.m_margin_left;
     width -= self.m_model.m_collection_right.m_margin_right;
     width -= self.m_model.m_img_right.m_width;

@@ -10,6 +10,7 @@
 #import "CWUBCell_SelectSex_Style1_Model.h"
 
 @protocol CWUBCell_SelectSex_Style1_Delegate<NSObject>
+@optional
 - (void)CWUBCell_SelectSex_Style1_Delegate_selectMan;
 - (void)CWUBCell_SelectSex_Style1_Delegate_selectWoman;
 @end
