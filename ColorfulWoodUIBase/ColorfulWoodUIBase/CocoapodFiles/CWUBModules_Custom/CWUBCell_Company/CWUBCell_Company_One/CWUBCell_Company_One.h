@@ -16,7 +16,7 @@
 
 
 @protocol CWUBCell_Company_One <NSObject>
-
+@optional
 /**
  * 点击顶部图片
  */

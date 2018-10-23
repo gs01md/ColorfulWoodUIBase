@@ -87,6 +87,9 @@
 
     if(!_m_img_center){
         _m_img_center = [CWUBImageViewWithModel new];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(event_clickImg)];
+
+        [_m_img_center addGestureRecognizer:tap];
     }
     return _m_img_center;
 }
@@ -117,6 +120,15 @@
 }
 
 #pragma mark - 事件
+
+- (void)event_clickImg{
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_ImgCenter_delegate_clickImg)]) {
+
+        [self.delegate CWUBCell_ImgCenter_delegate_clickImg];
+    }
+
+}
 
 - (void)awakeFromNib {[super awakeFromNib];}
 

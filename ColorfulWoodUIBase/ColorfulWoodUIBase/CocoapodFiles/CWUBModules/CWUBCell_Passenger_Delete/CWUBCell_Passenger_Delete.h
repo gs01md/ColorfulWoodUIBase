@@ -10,6 +10,7 @@
 #import "CWUBCell_Passenger_Delete_Model.h"
 
 @protocol CWUBCell_Passenger_Delete_Delegate<NSObject>
+@optional
 - (void)CWUBCell_Passenger_Delete_Delegate_Del:(NSString*)strId;
 @end
 

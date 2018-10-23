@@ -20,7 +20,8 @@ CWUBCell_TitleLeft_CollectionRight_ImgRight_Delegate,
 CWUBCell_CollectionTop_TitleBottom_Delegate,
 CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate,
 CWUBCell_UploadImgWithTitle_S1_Delegate,
-CWUBCell_Publish_CollectionDelegate
+CWUBCell_Publish_CollectionDelegate,
+CWUBCell_ImgCenter_delegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -140,6 +141,8 @@ CWUBCell_Publish_CollectionDelegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
+
     [CWUBCell_TitleLeft_CollectionRight_ImgRight_Model tester_dataWithArray:data];
 
     [CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model tester_dataWithArray:data];
@@ -156,7 +159,7 @@ CWUBCell_Publish_CollectionDelegate
     [CWUBCell_MyFollow_MyBusiness_Model tester_dataWithArray:data];
     
     [CWUBCell_TitleLeft_InputLeft_Model tester_dataWithArray:data];
-    [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
+
 
     [CWUBCell_UploadImgWithTitle_S1_Model tester_dataWithArray2:data];
     [CWUBCell_UploadImgWithTitle_S1_Model tester_dataWithArray:data];
@@ -312,6 +315,11 @@ CWUBCell_Publish_CollectionDelegate
 
         if (model.m_type == CWUBCellType_Publish_Collection) {
             CWUBCell_Publish_Collection * cell1 = (CWUBCell_Publish_Collection*)cell;
+            cell1.delegate = self;
+        }
+
+        if (model.m_type == CWUBCellType_ImgCenter) {
+            CWUBCell_ImgCenter * cell1 = (CWUBCell_ImgCenter*)cell;
             cell1.delegate = self;
         }
 
@@ -473,5 +481,10 @@ CWUBCell_Publish_CollectionDelegate
  */
 - (void)CWUBCell_Publish_CollectionDelegate_rightImg{
     NSLog(@"CWUBCell_Publish_CollectionDelegate_rightImg");
+}
+
+- (void)CWUBCell_ImgCenter_delegate_clickImg{
+
+    NSLog(@"CWUBCell_ImgCenter_delegate_clickImg");
 }
 @end

@@ -35,6 +35,7 @@
     model3.m_bottomLineInfo.m_color = [UIColor clearColor];
     model3.m_image = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
     model3.m_image.m_isCircle = YES;
+    model3.m_image.m_canUserInteract = @"1";
     [data addObject:model3];
     return model3;
 }

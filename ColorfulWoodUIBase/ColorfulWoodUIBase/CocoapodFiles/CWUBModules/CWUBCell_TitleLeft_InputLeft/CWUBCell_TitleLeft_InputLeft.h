@@ -10,7 +10,7 @@
 #import "CWUBCell_TitleLeft_InputLeft_Model.h"
 
 @protocol CWUBCell_TitleLeft_InputLeft_Delegate <NSObject>
-
+@optional
 /**
  * 可能是任何参数的改变，传出之后，根据参数，单独刷新cell界面，不需要tableview reloaddata ,导致输入框键盘的关闭
  */
