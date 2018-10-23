@@ -65,6 +65,12 @@
             default:
                 break;
         }
+
+        self.keyboardType = self.m_info.m_keyboard.m_keyBoardType;
+        self.keyboardAppearance = self.m_info.m_keyboard.m_keyboardAppearance;
+        self.autocapitalizationType = self.m_info.m_keyboard.m_autocapitalizationType;
+        self.autocorrectionType = self.m_info.m_keyboard.m_autocorrectionType;
+        self.secureTextEntry = self.m_info.m_keyboard.m_secureTextEntry;
     }
 }
 

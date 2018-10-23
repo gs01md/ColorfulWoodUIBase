@@ -31,6 +31,7 @@
 		8B14DDBF20D0A66F001F17A3 /* CWUBCell_ImgCenter_TitleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14DDBE20D0A66F001F17A3 /* CWUBCell_ImgCenter_TitleCenter.m */; };
 		8B14DDC220D0A687001F17A3 /* CWUBCell_ImgCenter_TitleCenter_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14DDC120D0A687001F17A3 /* CWUBCell_ImgCenter_TitleCenter_Model.m */; };
 		8B14F14220EADAE3004E1112 /* CWUBCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14F14120EADAE3004E1112 /* CWUBCollectionFlowLayout.m */; };
+		8B15A82A217EEE4200F7D851 /* CWUBModelKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B15A829217EEE4200F7D851 /* CWUBModelKeyboard.m */; };
 		8B170CBF20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B170CBE20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.m */; };
 		8B170CC220D7AA4700D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B170CC120D7AA4700D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.m */; };
 		8B170CC620D7AAF600D3A3E7 /* CWUBCollectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B170CC520D7AAF600D3A3E7 /* CWUBCollectionInfo.m */; };
@@ -233,6 +234,8 @@
 		8B14F14020EADAE3004E1112 /* CWUBCollectionFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCollectionFlowLayout.h; sourceTree = "<group>"; };
 		8B14F14120EADAE3004E1112 /* CWUBCollectionFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCollectionFlowLayout.m; sourceTree = "<group>"; };
 		8B14F14320EADB27004E1112 /* CWUBCollectionFlowLayoutType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCollectionFlowLayoutType.h; sourceTree = "<group>"; };
+		8B15A828217EEE4200F7D851 /* CWUBModelKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBModelKeyboard.h; sourceTree = "<group>"; };
+		8B15A829217EEE4200F7D851 /* CWUBModelKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBModelKeyboard.m; sourceTree = "<group>"; };
 		8B170CBD20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_TitleLeft_CollectionRight_ImgRight.h; sourceTree = "<group>"; };
 		8B170CBE20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_TitleLeft_CollectionRight_ImgRight.m; sourceTree = "<group>"; };
 		8B170CC020D7AA4700D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.h; sourceTree = "<group>"; };
@@ -728,6 +731,15 @@
 				8B14F14120EADAE3004E1112 /* CWUBCollectionFlowLayout.m */,
 			);
 			path = CWUBCollectionFlowLayout;
+			sourceTree = "<group>";
+		};
+		8B15A827217EEDBE00F7D851 /* CWUBModelKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8B15A828217EEE4200F7D851 /* CWUBModelKeyboard.h */,
+				8B15A829217EEE4200F7D851 /* CWUBModelKeyboard.m */,
+			);
+			path = CWUBModelKeyboard;
 			sourceTree = "<group>";
 		};
 		8B170CBC20D7A9AE00D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight */ = {
@@ -1267,6 +1279,7 @@
 		8B1F419020B5375E00FEAFA0 /* CWUBModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B15A827217EEDBE00F7D851 /* CWUBModelKeyboard */,
 				8B512AFB21117AB400F4238C /* CWUBAttributedTextInfo */,
 				8BEB338020F336E20093A93C /* CWUBUserInteractBase */,
 				8B170CC320D7AAC100D3A3E7 /* CWUBCollectionInfo */,
@@ -1957,6 +1970,7 @@
 				8B440BC020DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.m in Sources */,
 				8B1F41D620B5375E00FEAFA0 /* CWUBModelBase.m in Sources */,
 				8B1F41A720B5375E00FEAFA0 /* CWUBCell_Address_Model.m in Sources */,
+				8B15A82A217EEE4200F7D851 /* CWUBModelKeyboard.m in Sources */,
 				8B1F41CB20B5375E00FEAFA0 /* CWUBCell_TitleRight_ButtonRight.m in Sources */,
 				8B1F41AA20B5375E00FEAFA0 /* CWUBCell_TitleLeft_InputLeft.m in Sources */,
 				8B5F1D2A20DA5C5700C32B23 /* CWUBCell_TitleTop_TitleBottom.m in Sources */,

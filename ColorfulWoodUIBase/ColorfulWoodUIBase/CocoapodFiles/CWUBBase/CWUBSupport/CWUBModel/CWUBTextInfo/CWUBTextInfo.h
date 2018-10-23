@@ -11,6 +11,7 @@
 #import "CWUBLabelTextAlignmentType.h"
 #import "CWUBMarginBase.h"
 #import "CWUBCornerInfo.h"
+#import "CWUBModelKeyboard.h"
 
 @interface CWUBTextInfo : CWUBMarginBase
 @property(nonatomic, strong) NSString * m_text;
@@ -88,6 +89,10 @@
  */
 @property(nonatomic, assign) UIEdgeInsets m_insets;
 
+/**
+ * 键盘样式
+ */
+@property(nonatomic, strong) CWUBModelKeyboard *m_keyboard;
 
 - (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color;
 

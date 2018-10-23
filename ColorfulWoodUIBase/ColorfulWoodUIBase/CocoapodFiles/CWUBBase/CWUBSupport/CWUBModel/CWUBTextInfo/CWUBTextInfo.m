@@ -156,6 +156,16 @@
     return _m_height;
 }
 
+- (CWUBModelKeyboard *)m_keyboard{
+
+    if (!_m_keyboard) {
+        _m_keyboard = [CWUBModelKeyboard new];
+    }
+
+    return _m_keyboard;
+}
+
+
 /**
  * 根据内容设置宽度，适合单行的标题
  */
