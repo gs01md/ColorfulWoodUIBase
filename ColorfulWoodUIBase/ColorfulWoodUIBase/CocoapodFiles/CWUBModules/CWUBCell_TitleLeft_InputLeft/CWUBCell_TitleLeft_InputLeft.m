@@ -145,8 +145,7 @@
 
     if (![theTextField.text interface_checkWithRegex:self.m_model.m_input.m_regex] ) {
 
-        theTextField.text = self.m_model.m_input.m_text;
-        return;
+        theTextField.text = [theTextField.text interface_getWithRegex:self.m_model.m_input.m_regex];
     }
 
     self.m_model.m_input.m_text = theTextField.text;
