@@ -239,7 +239,7 @@
 
 - (void)func_endTimer{
 
-    self.m_lbl_right.text = self.m_model.m_title_right.m_text;
+    self.m_lbl_right.text = self.m_model.m_title_right.m_textPlaceholder;
     [self.m_lbl_right setUserInteractionEnabled:YES];
     [_m_timer invalidate];
 
