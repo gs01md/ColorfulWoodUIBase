@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CWUBUserInteractBase.h"
+#import "CWUBModelPoint.h"
 
 @interface CWUBMarginBase : CWUBUserInteractBase
 @property(nonatomic, assign)float m_margin_left;

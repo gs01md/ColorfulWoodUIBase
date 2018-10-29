@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE72143A8ACA976F60A6543A65244111"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "12B1C51D64D8DE6383D0068EE1554346"
+               BlueprintName = "ColorfulWoodPoint"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libSDWebImage.a">
+               BuildableName = "libColorfulWoodPoint.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -6,6 +6,7 @@ target 'ColorfulWoodUIBase' do
 
 pod 'Masonry'
 pod 'ColorfulWoodCategories'
+pod 'ColorfulWoodPoint'
 pod 'SDWebImage'
 pod 'MJRefresh'
 pod 'WRNavigationBar'

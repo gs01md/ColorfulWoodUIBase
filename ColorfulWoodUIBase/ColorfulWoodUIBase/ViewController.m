@@ -141,6 +141,8 @@ CWUBCell_ImgCenter_delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model tester_dataWithArray:data];
+
     [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
 
     [CWUBCell_TitleLeft_CollectionRight_ImgRight_Model tester_dataWithArray:data];
@@ -153,7 +155,7 @@ CWUBCell_ImgCenter_delegate
 
     [CWUBCell_Publish_Collection_Model tester_dataWithArray:data];
     
-    [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model tester_dataWithArray:data];
+
 
     [CWUBCell_Person_S1_Model tester_dataWithArray:data];
     [CWUBCell_MyFollow_MyBusiness_Model tester_dataWithArray:data];

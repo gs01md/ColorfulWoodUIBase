@@ -69,6 +69,11 @@
  */
 @property(nonatomic,strong) UIColor * m_color_background;
 
+/**
+ * 设置边角圆点属性
+ */
+@property(nonatomic, strong) CWUBModelPoint *m_modelPoint;
+
 - (instancetype) initWithName:(NSString*)name width:(float)width height:(float)height;
 
 /**

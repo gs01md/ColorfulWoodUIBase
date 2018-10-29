@@ -83,6 +83,19 @@
         }
 
         self.hidden = model.m_isHidden;
+
+        if(self.m_model.m_modelPoint){
+
+            ColorfulWoodPointView *pointView0 = [[ColorfulWoodPointView alloc] init];
+            pointView0.m_offset = self.m_model.m_modelPoint.m_offset;
+            pointView0.m_pointRadius = self.m_model.m_modelPoint.m_size;
+            pointView0.m_color = self.m_model.m_modelPoint.m_color;
+            [pointView0 interface_showTargetView:self forCount:self.m_model.m_modelPoint.m_count location:self.m_model.m_modelPoint.m_direct];
+        }else{
+            ColorfulWoodPointView *pointView0 = [[ColorfulWoodPointView alloc] init];
+            [pointView0 interface_dissmiss:self];
+        }
+
     }
 }
 

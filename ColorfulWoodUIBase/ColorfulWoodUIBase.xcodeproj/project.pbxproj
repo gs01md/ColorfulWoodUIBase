@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0D63762186E753002DA530 /* CWUBModelPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D63752186E753002DA530 /* CWUBModelPoint.m */; };
 		8B0DA15A210C78F7005299F3 /* CWUBViewDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0DA159210C78F7005299F3 /* CWUBViewDefault.m */; };
 		8B0DA15D210C7B66005299F3 /* CWUBViewDefault_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0DA15C210C7B66005299F3 /* CWUBViewDefault_Model.m */; };
 		8B0DB89A20CF992100EAEA82 /* CWUBView_ImgTop_TitleCenter_TitleTitleImgBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0DB89920CF992100EAEA82 /* CWUBView_ImgTop_TitleCenter_TitleTitleImgBottom.m */; };
@@ -185,6 +186,8 @@
 
 /* Begin PBXFileReference section */
 		6966DBF4C3EEFCD98F84D668 /* Pods-ColorfulWoodUIBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulWoodUIBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase.debug.xcconfig"; sourceTree = "<group>"; };
+		8B0D63742186E753002DA530 /* CWUBModelPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBModelPoint.h; sourceTree = "<group>"; };
+		8B0D63752186E753002DA530 /* CWUBModelPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBModelPoint.m; sourceTree = "<group>"; };
 		8B0DA158210C78F7005299F3 /* CWUBViewDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBViewDefault.h; sourceTree = "<group>"; };
 		8B0DA159210C78F7005299F3 /* CWUBViewDefault.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBViewDefault.m; sourceTree = "<group>"; };
 		8B0DA15B210C7B66005299F3 /* CWUBViewDefault_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBViewDefault_Model.h; sourceTree = "<group>"; };
@@ -554,6 +557,15 @@
 				EAD46A07BA5CEC54A26ADB3C /* libPods-ColorfulWoodUIBase.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B0D63732186E714002DA530 /* CWUBModelPoint */ = {
+			isa = PBXGroup;
+			children = (
+				8B0D63742186E753002DA530 /* CWUBModelPoint.h */,
+				8B0D63752186E753002DA530 /* CWUBModelPoint.m */,
+			);
+			path = CWUBModelPoint;
 			sourceTree = "<group>";
 		};
 		8B0DA157210C7735005299F3 /* CWUBViewDefault */ = {
@@ -1279,6 +1291,7 @@
 		8B1F419020B5375E00FEAFA0 /* CWUBModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B0D63732186E714002DA530 /* CWUBModelPoint */,
 				8B15A827217EEDBE00F7D851 /* CWUBModelKeyboard */,
 				8B512AFB21117AB400F4238C /* CWUBAttributedTextInfo */,
 				8BEB338020F336E20093A93C /* CWUBUserInteractBase */,
@@ -1962,6 +1975,7 @@
 				8B13A8F720E3CD04000CD9EB /* CWUBCell_SelectSex_Style1_Model.m in Sources */,
 				8B0ED884210F15CE008C4C03 /* CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model.m in Sources */,
 				8B0DA15A210C78F7005299F3 /* CWUBViewDefault.m in Sources */,
+				8B0D63762186E753002DA530 /* CWUBModelPoint.m in Sources */,
 				8B4AA0AB20B693D500CA97FB /* CWUBCell_ImgCenter_Model.m in Sources */,
 				8B14F14220EADAE3004E1112 /* CWUBCollectionFlowLayout.m in Sources */,
 				8B1F419F20B5375E00FEAFA0 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m in Sources */,

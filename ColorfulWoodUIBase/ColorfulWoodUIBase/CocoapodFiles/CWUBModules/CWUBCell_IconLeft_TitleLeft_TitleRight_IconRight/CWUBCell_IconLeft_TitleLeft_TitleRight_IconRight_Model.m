@@ -32,6 +32,7 @@
 
     model1.m_img_left.m_margin_left = 25.;
     model1.m_img_right.m_margin_right = 25.;
+    model1.m_img_right.m_modelPoint =  [[CWUBModelPoint alloc] initWithDirect:CWPV_LEFT_TOP size:5 offset:5];
 
     //    model1.m_margin_leftOrRight = 10.;
     //    model1.m_bottomLineType = CWUBBottomLineType_right;

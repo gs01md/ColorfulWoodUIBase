@@ -94,6 +94,11 @@
  */
 @property(nonatomic, strong) CWUBModelKeyboard *m_keyboard;
 
+/**
+ * 设置边角圆点属性
+ */
+@property(nonatomic, strong) CWUBModelPoint *m_modelPoint;
+
 - (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color;
 
 - (instancetype)initWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color backColor:(UIColor *)backColor;
