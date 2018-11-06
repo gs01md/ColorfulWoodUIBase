@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0B8C7321916CC400C352B7 /* CWUBModelNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B8C7221916CC400C352B7 /* CWUBModelNotification.m */; };
 		8B0D63762186E753002DA530 /* CWUBModelPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D63752186E753002DA530 /* CWUBModelPoint.m */; };
 		8B0DA15A210C78F7005299F3 /* CWUBViewDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0DA159210C78F7005299F3 /* CWUBViewDefault.m */; };
 		8B0DA15D210C7B66005299F3 /* CWUBViewDefault_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0DA15C210C7B66005299F3 /* CWUBViewDefault_Model.m */; };
@@ -186,6 +187,8 @@
 
 /* Begin PBXFileReference section */
 		6966DBF4C3EEFCD98F84D668 /* Pods-ColorfulWoodUIBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorfulWoodUIBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase.debug.xcconfig"; sourceTree = "<group>"; };
+		8B0B8C7121916CC400C352B7 /* CWUBModelNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBModelNotification.h; sourceTree = "<group>"; };
+		8B0B8C7221916CC400C352B7 /* CWUBModelNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBModelNotification.m; sourceTree = "<group>"; };
 		8B0D63742186E753002DA530 /* CWUBModelPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBModelPoint.h; sourceTree = "<group>"; };
 		8B0D63752186E753002DA530 /* CWUBModelPoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBModelPoint.m; sourceTree = "<group>"; };
 		8B0DA158210C78F7005299F3 /* CWUBViewDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBViewDefault.h; sourceTree = "<group>"; };
@@ -557,6 +560,15 @@
 				EAD46A07BA5CEC54A26ADB3C /* libPods-ColorfulWoodUIBase.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B0B8C7021916C9100C352B7 /* CWUBModelNotification */ = {
+			isa = PBXGroup;
+			children = (
+				8B0B8C7121916CC400C352B7 /* CWUBModelNotification.h */,
+				8B0B8C7221916CC400C352B7 /* CWUBModelNotification.m */,
+			);
+			path = CWUBModelNotification;
 			sourceTree = "<group>";
 		};
 		8B0D63732186E714002DA530 /* CWUBModelPoint */ = {
@@ -1291,6 +1303,7 @@
 		8B1F419020B5375E00FEAFA0 /* CWUBModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B0B8C7021916C9100C352B7 /* CWUBModelNotification */,
 				8B0D63732186E714002DA530 /* CWUBModelPoint */,
 				8B15A827217EEDBE00F7D851 /* CWUBModelKeyboard */,
 				8B512AFB21117AB400F4238C /* CWUBAttributedTextInfo */,
@@ -2027,6 +2040,7 @@
 				8B0ED888210F179B008C4C03 /* CWUBCellViewBase.m in Sources */,
 				8B1F41B120B5375E00FEAFA0 /* CWUBCell_TitleIconLeft_IconCenter_IconTitleRight_Model.m in Sources */,
 				8B1F41BF20B5375E00FEAFA0 /* CWUBCell_CharterDetail_Opt.m in Sources */,
+				8B0B8C7321916CC400C352B7 /* CWUBModelNotification.m in Sources */,
 				8B5F1D1920D9EA1200C32B23 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight.m in Sources */,
 				8B1F41C720B5375E00FEAFA0 /* CWUBCell_Passenger_Delete.m in Sources */,
 				8B1F41A520B5375E00FEAFA0 /* CWUBCell_ButtonRight_SpaceBottom.m in Sources */,

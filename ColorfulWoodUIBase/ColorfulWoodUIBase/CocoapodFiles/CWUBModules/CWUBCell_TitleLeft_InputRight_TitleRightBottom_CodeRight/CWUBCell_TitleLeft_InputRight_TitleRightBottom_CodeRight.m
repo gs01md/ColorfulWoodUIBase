@@ -21,6 +21,13 @@
 @property int m_iNum;
 @property (nonatomic, strong) NSTimer * m_timer;
 
+/**
+ * 逻辑上，比如手机号码不符合格式，不应该进行倒计时的处理，这时，通过该参数进行判断。
+ * 需要注册消息，通过消息来判断。
+ * 因为通过刷新页面，会导致输入框的收起
+ */
+@property (nonatomic, assign) BOOL m_canTimer;
+
 @end
 
 @implementation CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight
@@ -36,6 +43,9 @@
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self func_initWithSubViews];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noti_change:) name:CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_NOTI object:nil];
+
     }
 
     return self;
@@ -197,15 +207,19 @@
 
 - (void)onClick_right{
 
-    /**
-     * 倒计时
-     */
-    [self func_timer];
+    if (self.m_canTimer) {
 
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right)]) {
+        /**
+         * 倒计时
+         */
+        [self func_timer];
 
-        [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right];
+        if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right)]) {
+
+            [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right];
+        }
     }
+
 }
 
 - (void)func_timer{
@@ -216,6 +230,19 @@
 
     self.m_timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(func_resetTimer) userInfo:nil repeats:YES];
     [self.m_timer fire];
+
+}
+
+- (void)noti_change:(NSNotification*)noti{
+
+    self.m_canTimer = NO;
+
+    if (noti && noti.object) {
+        CWUBModelNotification *model = (CWUBModelNotification*)noti.object;
+        if ([NSString checkForMobilePhoneNo: model.m_value]) {
+            self.m_canTimer = YES;
+        }
+    }
 
 }
 
@@ -294,6 +321,11 @@
     if ([code isEqualToString:@"showBottomLine"]) {
         self.m_lbl_rightBottom.hidden = NO;
     }
+}
+
+- (void)dealloc {
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
 

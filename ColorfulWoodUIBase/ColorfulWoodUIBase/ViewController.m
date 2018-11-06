@@ -145,13 +145,13 @@ CWUBCell_ImgCenter_delegate
 
     [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
 
+    [CWUBCell_InputLeft_CodeRight_Model tester_dataWithArray:data];
+
+    [CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model tester_dataWithArray:data];
+
     [CWUBCell_TitleLeft_CollectionRight_ImgRight_Model tester_dataWithArray:data];
 
     [CWUBCell_TitleLeft_InputRight_TitleRightBottom_Model tester_dataWithArray:data];
-    
-    [CWUBCell_InputLeft_CodeRight_Model tester_dataWithArray:data];
-    
-    [CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model tester_dataWithArray:data];
 
     [CWUBCell_Publish_Collection_Model tester_dataWithArray:data];
     
@@ -456,6 +456,7 @@ CWUBCell_ImgCenter_delegate
 - (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
     NSString * code = [CWUBLabelWithModel interface_getEventCode:tap];
     NSLog(@"%@",code);
+
 }
 
 /**
@@ -488,5 +489,10 @@ CWUBCell_ImgCenter_delegate
 - (void)CWUBCell_ImgCenter_delegate_clickImg{
 
     NSLog(@"CWUBCell_ImgCenter_delegate_clickImg");
+
+    CWUBModelNotification * NOTI = [CWUBModelNotification new];
+    NOTI.m_value = @"13859832121";
+    [[NSNotificationCenter defaultCenter] postNotificationName:CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_NOTI object:NOTI];
+
 }
 @end

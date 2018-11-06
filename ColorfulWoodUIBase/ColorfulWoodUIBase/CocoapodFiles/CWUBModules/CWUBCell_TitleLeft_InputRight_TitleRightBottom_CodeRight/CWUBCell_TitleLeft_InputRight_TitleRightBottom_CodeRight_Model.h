@@ -8,6 +8,8 @@
 
 #import "CWUBModelBase.h"
 
+#define CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_NOTI @"CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_NOTI"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model : CWUBModelBase
