@@ -114,10 +114,25 @@
         [_m_img_backGround mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(model.m_img_backGround.m_margin_left);
             make.right.equalTo(self).offset(-model.m_img_backGround.m_margin_right);
-//            make.top.equalTo(self).offset(model.m_img_backGround.m_margin_top);
-//            make.bottom.equalTo(self).offset(-model.m_img_backGround.m_margin_bottom);
-            make.centerY.equalTo(self);
-            make.height.equalTo(self);
+
+            /**
+             * 不等于默认值时，则说明要自定义背景的上边距
+             */
+            if (model.m_img_backGround.m_margin_top != CWUBBaseViewConfig_Space_Element_Vertical) {
+                make.top.equalTo(self).offset(model.m_img_backGround.m_margin_top);
+            } else {
+                make.top.equalTo(self);
+            }
+
+            /**
+             * 不等于默认值时，则说明要自定义背景的下边距
+             */
+            if (model.m_img_backGround.m_margin_bottom != CWUBBaseViewConfig_Space_Element_Vertical) {
+                make.bottom.equalTo(self).offset(-model.m_img_backGround.m_margin_bottom);
+            } else {
+                make.bottom.equalTo(self);
+            }
+
         }];
 
     }else{

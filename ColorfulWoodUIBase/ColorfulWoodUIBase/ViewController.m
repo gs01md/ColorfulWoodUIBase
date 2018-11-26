@@ -26,12 +26,19 @@ CWUBCell_ImgCenter_delegate
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
 @property(nonatomic, strong)UITableView * m_tableView;
-
+@property(nonatomic, strong)NSMutableDictionary * indexPathArray;
 
 @property(nonatomic, strong)CWUBCell_Carousel_One *m_carousel;
 @end
 
 @implementation ViewController
+
+- (NSMutableDictionary * )indexPathArray{
+    if (!_indexPathArray) {
+        _indexPathArray = [NSMutableDictionary new];
+    }
+    return _indexPathArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -141,6 +148,9 @@ CWUBCell_ImgCenter_delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Model tester_dataWithArray:data];
+    [CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Model tester_dataWithArray1:data];
+
     [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model tester_dataWithArray:data];
 
     [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
@@ -170,7 +180,7 @@ CWUBCell_ImgCenter_delegate
 
 
     [CWUBCell_TitleLeft_InfoLeft_Model tester_dataWithArray:data];
-    [CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model tester_dataWithArray:data];
+    //[CWUBCell_TitleLeft_TextViewRight_TitleRightBottom_Model tester_dataWithArray:data];
     [CWUBCell_ImgLeft_TitleTopLeft_TitleTopRight_TitleBottom_Model tester_dataWithArray:data];
     [CWUBCell_Order_Two_Model tester_dataWithArray:data];
     [CWUBCell_Server_Two_Model tester_dataWithArray:data];
@@ -335,6 +345,29 @@ CWUBCell_ImgCenter_delegate
 
 }
 
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    NSNumber *height = [self.indexPathArray objectForKey:indexPath];
+
+    if(height){
+
+        return height.floatValue;
+
+    }else{
+
+        return 100;
+
+    }
+
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    NSNumber *height = @(cell.frame.size.height);
+
+    [self.indexPathArray setObject:height forKey:indexPath];
+
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 

@@ -67,6 +67,8 @@
 #import "CWUBCell_Publish_Collection.h"
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.h"
 #import "CWUBCell_InputLeft_CodeRight.h"
+#import "CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow.h"
+
 @implementation CWUBModelBase
 /**
  * 根据类型获取视图
@@ -314,6 +316,10 @@
 
             case CWUBCellType_InputLeft_CodeRight:
                 view = [self func_CWUBCell_InputLeft_CodeRight:tableView];
+                break;
+
+            case CWUBCellType_TitleTopLeft_TitleBottomLeft_TitleBottomFollow:
+                view = [self func_CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow:tableView];
                 break;
 
 
@@ -1187,7 +1193,22 @@
 
 }
 
+- (CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow*) func_CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow:(UITableView*)tableView{
 
+    if (tableView) {
+        static NSString *identify = @"CWUBCell_InputLeft_CodeRight";
+        CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if (!cell) {
+            cell = [[CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+        }
+
+        return cell;
+
+    }else{
+        return [[CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow alloc] initWithModel:self];
+    }
+
+}
 
 #pragma mark - 参数设置
 
