@@ -301,7 +301,7 @@
 - (void)makeRowDefaultBar{
     [self.view addSubview:self.customNavigationBar];
     self.customNavigationBar.barBackgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
-    UIImage *image = [UIImage imageNamed:@"CWUBBundle_Back" inBundle:CWUBBDefine_bundle compatibleWithTraitCollection:nil];
+    UIImage *image = CWUBBDefine_bundle_pngImg(@"CWUBBundle_Back");
     [self.customNavigationBar cw_setLeftButtonWithImage:image];
     _customNavigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
     _customNavigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);

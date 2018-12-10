@@ -175,15 +175,25 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
 /**
  * 图片资源名称
  */
-#define CWUBBDefine_bundleName   @"CWUBBundle.bundle"
+//#define CWUBBDefine_bundleName   @"CWUBBundle.bundle"
 /**
  * 图片资源路径
  */
-#define CWUBBDefine_bundlePath   [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:CWUBBDefine_bundleName]
+//#define CWUBBDefine_bundlePath   [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:CWUBBDefine_bundleName]
 /**
  * 图片资源bundle
  */
-#define CWUBBDefine_bundle       [NSBundle bundleWithPath:CWUBBDefine_bundlePath]
+//#define CWUBBDefine_bundle       [NSBundle bundleWithPath:CWUBBDefine_bundlePath]
+
+/**
+ * 图片资源bundle
+ */
+#define CWUBBDefine_bundle       [NSBundle bundleWithPath:[[NSBundle bundleForClass:[CWUBControllerBase class]] pathForResource:@"CWUBBundle" ofType:@"bundle"]]
+
+/**
+ * bundle中的图片
+ */
+#define CWUBBDefine_bundle_pngImg(name) [[UIImage imageWithContentsOfFile:[CWUBBDefine_bundle pathForResource:name ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
 
 
 #endif /* CWUBDefine_h */
