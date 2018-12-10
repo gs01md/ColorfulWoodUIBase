@@ -172,6 +172,20 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
 
 #define CWUBBDefine_WeakSelf __weak typeof(self) weakSelf = self;
 
+/**
+ * 图片资源名称
+ */
+#define CWUBBDefine_bundleName   @"CWUBBundle.bundle"
+/**
+ * 图片资源路径
+ */
+#define CWUBBDefine_bundlePath   [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:CWUBBDefine_bundleName]
+/**
+ * 图片资源bundle
+ */
+#define CWUBBDefine_bundle       [NSBundle bundleWithPath:CWUBBDefine_bundlePath]
+
+
 #endif /* CWUBDefine_h */
 
 

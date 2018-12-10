@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ColorfulWoodNavigationBar.h>
+#import "ColorfulWoodNavigationBar/ColorfulWoodNavigationBar.h"
 #import "CWUBDefaultView.h"
 #import "CWUBSelectImg.h"
 #import "ColorfulWoodUIBase.h"

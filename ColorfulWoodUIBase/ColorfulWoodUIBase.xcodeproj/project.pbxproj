@@ -111,6 +111,7 @@
 		8B1F41D620B5375E00FEAFA0 /* CWUBModelBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F419920B5375E00FEAFA0 /* CWUBModelBase.m */; };
 		8B1F41D720B5375E00FEAFA0 /* CWUBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F419C20B5375E00FEAFA0 /* CWUBModel.m */; };
 		8B1F41DB20B54AB100FEAFA0 /* CWUBImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */; };
+		8B208AB121BE175D00895866 /* CWUBBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B208AB021BE175D00895866 /* CWUBBundle.bundle */; };
 		8B228FFC212039D200F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottom_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B228FFB212039D200F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottom_Model.m */; };
 		8B228FFF212039E400F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B228FFE212039E400F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottomTableViewCell.m */; };
 		8B22900321203A7800F6C0E3 /* CWUBCell_TitleTop_ ButtonBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B22900221203A7800F6C0E3 /* CWUBCell_TitleTop_ ButtonBottom.m */; };
@@ -401,6 +402,7 @@
 		8B1F419C20B5375E00FEAFA0 /* CWUBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUBModel.m; sourceTree = "<group>"; };
 		8B1F41D920B54AB100FEAFA0 /* CWUBImageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBImageInfo.h; sourceTree = "<group>"; };
 		8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBImageInfo.m; sourceTree = "<group>"; };
+		8B208AB021BE175D00895866 /* CWUBBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CWUBBundle.bundle; sourceTree = "<group>"; };
 		8B228FFA212039D200F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottom_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottom_Model.h; sourceTree = "<group>"; };
 		8B228FFB212039D200F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottom_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottom_Model.m; sourceTree = "<group>"; };
 		8B228FFD212039E400F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottomTableViewCell.h; sourceTree = "<group>"; };
@@ -910,6 +912,7 @@
 				8B1F417320B5375E00FEAFA0 /* ColorfulWoodUIBase.h */,
 				8B1F417420B5375E00FEAFA0 /* CWUBBase */,
 				8B1F40FD20B5375E00FEAFA0 /* CWUBModules */,
+				8B208AAF21BE16DB00895866 /* CWUBBundle */,
 				8BF8F6E520CF176500E21563 /* CWUBModules_Custom */,
 				8B1F40FA20B5375E00FEAFA0 /* CWUBWoodUIBaseDemo */,
 			);
@@ -919,10 +922,10 @@
 		8B1F40FA20B5375E00FEAFA0 /* CWUBWoodUIBaseDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8B1A7F39211882B000577109 /* README.md */,
 				8B4BD91921193CFE00F11B8E /* ColorfulWoodUIBase.podspec */,
-				8B1F40FB20B5375E00FEAFA0 /* CWUBWoodUIBaseDemo.m */,
+				8B1A7F39211882B000577109 /* README.md */,
 				8B1F40FC20B5375E00FEAFA0 /* CWUBWoodUIBaseDemo.h */,
+				8B1F40FB20B5375E00FEAFA0 /* CWUBWoodUIBaseDemo.m */,
 			);
 			path = CWUBWoodUIBaseDemo;
 			sourceTree = "<group>";
@@ -1404,6 +1407,14 @@
 				8B1F41DA20B54AB100FEAFA0 /* CWUBImageInfo.m */,
 			);
 			path = CWUBImageInfo;
+			sourceTree = "<group>";
+		};
+		8B208AAF21BE16DB00895866 /* CWUBBundle */ = {
+			isa = PBXGroup;
+			children = (
+				8B208AB021BE175D00895866 /* CWUBBundle.bundle */,
+			);
+			path = CWUBBundle;
 			sourceTree = "<group>";
 		};
 		8B228FF92120395600F6C0E3 /* CWUBCell_ImgLeft_TitleLeftTop_ImgLeftBottom_TitleLeftBottom */ = {
@@ -1963,6 +1974,7 @@
 			files = (
 				8B4BD91A21193CFF00F11B8E /* ColorfulWoodUIBase.podspec in Resources */,
 				8B1F40F020B5358800FEAFA0 /* LaunchScreen.storyboard in Resources */,
+				8B208AB121BE175D00895866 /* CWUBBundle.bundle in Resources */,
 				8B1F40ED20B5358800FEAFA0 /* Assets.xcassets in Resources */,
 				8B1A7F3A211882B100577109 /* README.md in Resources */,
 				8B1F40EB20B5358700FEAFA0 /* Main.storyboard in Resources */,

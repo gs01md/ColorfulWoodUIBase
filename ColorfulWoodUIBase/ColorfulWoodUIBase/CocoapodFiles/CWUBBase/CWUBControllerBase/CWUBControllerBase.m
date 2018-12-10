@@ -301,7 +301,8 @@
 - (void)makeRowDefaultBar{
     [self.view addSubview:self.customNavigationBar];
     self.customNavigationBar.barBackgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
-    [self.customNavigationBar cw_setLeftButtonWithImage:[UIImage imageNamed:@"消息-返回"]];
+    UIImage *image = [UIImage imageNamed:@"CWUBBundle_Back" inBundle:CWUBBDefine_bundle compatibleWithTraitCollection:nil];
+    [self.customNavigationBar cw_setLeftButtonWithImage:image];
     _customNavigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
     _customNavigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
     _m_isNaviBarShow = TRUE;
@@ -325,6 +326,7 @@
         _customNavigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
     }
     return _customNavigationBar;
+    
 }
 
 /**
