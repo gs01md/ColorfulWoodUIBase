@@ -9,7 +9,7 @@ pod 'ColorfulWoodCategories'
 pod 'ColorfulWoodPoint'
 pod 'SDWebImage'
 pod 'MJRefresh'
-pod 'WRNavigationBar'
 pod 'JSONModel'
-
+pod 'ColorfulWoodNavigationBar'
+pod 'ColorfulWoodTools'                     #弹窗提示等
 end

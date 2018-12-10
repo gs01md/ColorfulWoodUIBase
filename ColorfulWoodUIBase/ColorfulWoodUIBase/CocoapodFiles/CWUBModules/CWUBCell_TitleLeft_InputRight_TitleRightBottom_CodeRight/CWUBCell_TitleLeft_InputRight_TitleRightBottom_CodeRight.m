@@ -179,7 +179,14 @@
     [self.m_textfield_right interface_update:model.m_input_right];
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_rightBottom interface_update:model.m_title_bottomRight];
-    [self.m_lbl_right interface_update:model.m_title_right];
+
+    /**
+     * 可以通过这个属性来判断是否在进行倒计时操作
+     */
+    if (self.m_lbl_right.isUserInteractionEnabled) {
+        [self.m_lbl_right interface_update:model.m_title_right];
+    }
+
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{

@@ -33,6 +33,8 @@
 		8B14DDBF20D0A66F001F17A3 /* CWUBCell_ImgCenter_TitleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14DDBE20D0A66F001F17A3 /* CWUBCell_ImgCenter_TitleCenter.m */; };
 		8B14DDC220D0A687001F17A3 /* CWUBCell_ImgCenter_TitleCenter_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14DDC120D0A687001F17A3 /* CWUBCell_ImgCenter_TitleCenter_Model.m */; };
 		8B14F14220EADAE3004E1112 /* CWUBCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B14F14120EADAE3004E1112 /* CWUBCollectionFlowLayout.m */; };
+		8B152C7E21BBC2CF0094C3CA /* CWUBDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B152C7C21BBC2CF0094C3CA /* CWUBDefaultView.m */; };
+		8B152C8321BBC5D20094C3CA /* CWUBSelectImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B152C8121BBC5D20094C3CA /* CWUBSelectImg.m */; };
 		8B15A82A217EEE4200F7D851 /* CWUBModelKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B15A829217EEE4200F7D851 /* CWUBModelKeyboard.m */; };
 		8B170CBF20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B170CBE20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.m */; };
 		8B170CC220D7AA4700D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B170CC120D7AA4700D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.m */; };
@@ -242,6 +244,10 @@
 		8B14F14020EADAE3004E1112 /* CWUBCollectionFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCollectionFlowLayout.h; sourceTree = "<group>"; };
 		8B14F14120EADAE3004E1112 /* CWUBCollectionFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCollectionFlowLayout.m; sourceTree = "<group>"; };
 		8B14F14320EADB27004E1112 /* CWUBCollectionFlowLayoutType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCollectionFlowLayoutType.h; sourceTree = "<group>"; };
+		8B152C7C21BBC2CF0094C3CA /* CWUBDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUBDefaultView.m; sourceTree = "<group>"; };
+		8B152C7D21BBC2CF0094C3CA /* CWUBDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWUBDefaultView.h; sourceTree = "<group>"; };
+		8B152C8121BBC5D20094C3CA /* CWUBSelectImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUBSelectImg.m; sourceTree = "<group>"; };
+		8B152C8221BBC5D20094C3CA /* CWUBSelectImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWUBSelectImg.h; sourceTree = "<group>"; };
 		8B15A828217EEE4200F7D851 /* CWUBModelKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBModelKeyboard.h; sourceTree = "<group>"; };
 		8B15A829217EEE4200F7D851 /* CWUBModelKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBModelKeyboard.m; sourceTree = "<group>"; };
 		8B170CBD20D7AA2600D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_TitleLeft_CollectionRight_ImgRight.h; sourceTree = "<group>"; };
@@ -763,6 +769,33 @@
 			path = CWUBCollectionFlowLayout;
 			sourceTree = "<group>";
 		};
+		8B152C7B21BBC2A00094C3CA /* CWUBDefaultView */ = {
+			isa = PBXGroup;
+			children = (
+				8B152C7D21BBC2CF0094C3CA /* CWUBDefaultView.h */,
+				8B152C7C21BBC2CF0094C3CA /* CWUBDefaultView.m */,
+			);
+			path = CWUBDefaultView;
+			sourceTree = "<group>";
+		};
+		8B152C7F21BBC3A40094C3CA /* CWUBViewBase */ = {
+			isa = PBXGroup;
+			children = (
+				8BE8AB8E210884F500694272 /* CWUBViewBase.h */,
+				8BE8AB8F210884F500694272 /* CWUBViewBase.m */,
+			);
+			path = CWUBViewBase;
+			sourceTree = "<group>";
+		};
+		8B152C8021BBC5A80094C3CA /* CWUBSelectImg */ = {
+			isa = PBXGroup;
+			children = (
+				8B152C8221BBC5D20094C3CA /* CWUBSelectImg.h */,
+				8B152C8121BBC5D20094C3CA /* CWUBSelectImg.m */,
+			);
+			path = CWUBSelectImg;
+			sourceTree = "<group>";
+		};
 		8B15A827217EEDBE00F7D851 /* CWUBModelKeyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1212,7 +1245,7 @@
 				8B1B8035214273B3003FAD11 /* CWUBJSONModelBase */,
 				8B1F419A20B5375E00FEAFA0 /* CWUBModel */,
 				8B1286CA2138A51600B9E585 /* CWUBViewModelBase */,
-				8BE8AB8D2108846500694272 /* CWUBViewBase */,
+				8BE8AB8D2108846500694272 /* CWUBView */,
 				8B1286C92138A4F200B9E585 /* CWUBControllerBase */,
 				8B14F13E20EADA06004E1112 /* CWUBSupport */,
 			);
@@ -1809,13 +1842,14 @@
 			path = CWUBCell_Company;
 			sourceTree = "<group>";
 		};
-		8BE8AB8D2108846500694272 /* CWUBViewBase */ = {
+		8BE8AB8D2108846500694272 /* CWUBView */ = {
 			isa = PBXGroup;
 			children = (
-				8BE8AB8E210884F500694272 /* CWUBViewBase.h */,
-				8BE8AB8F210884F500694272 /* CWUBViewBase.m */,
+				8B152C8021BBC5A80094C3CA /* CWUBSelectImg */,
+				8B152C7F21BBC3A40094C3CA /* CWUBViewBase */,
+				8B152C7B21BBC2A00094C3CA /* CWUBDefaultView */,
 			);
-			path = CWUBViewBase;
+			path = CWUBView;
 			sourceTree = "<group>";
 		};
 		8BEB338020F336E20093A93C /* CWUBUserInteractBase */ = {
@@ -2009,6 +2043,7 @@
 				8B0DA15A210C78F7005299F3 /* CWUBViewDefault.m in Sources */,
 				8B0D63762186E753002DA530 /* CWUBModelPoint.m in Sources */,
 				8B4AA0AB20B693D500CA97FB /* CWUBCell_ImgCenter_Model.m in Sources */,
+				8B152C8321BBC5D20094C3CA /* CWUBSelectImg.m in Sources */,
 				8B14F14220EADAE3004E1112 /* CWUBCollectionFlowLayout.m in Sources */,
 				8B1F419F20B5375E00FEAFA0 /* CWUBCell_IconTitleLeft_InfoBottomLeft_IconTitleRight_InfoBottomRight_Model.m in Sources */,
 				8B1F41D120B5375E00FEAFA0 /* CWUBTextfieldWithModel.m in Sources */,
@@ -2100,6 +2135,7 @@
 				8B1F41CD20B5375E00FEAFA0 /* CWUBButtonWithInfo.m in Sources */,
 				8B1EF50E20CE12E700E48171 /* CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model.m in Sources */,
 				8B4AA0B420B6941100CA97FB /* CWUBCell_TitleLeftTwo_ImgCenter_TitleRightTwo_Model.m in Sources */,
+				8B152C7E21BBC2CF0094C3CA /* CWUBDefaultView.m in Sources */,
 				8B0DB89F20CFC14B00EAEA82 /* CWUBCell_Company_One_Model.m in Sources */,
 				8B170CC620D7AAF600D3A3E7 /* CWUBCollectionInfo.m in Sources */,
 				8B170CC220D7AA4700D3A3E7 /* CWUBCell_TitleLeft_CollectionRight_ImgRight_Model.m in Sources */,
@@ -2297,6 +2333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SN9TJYA97;
 				INFOPLIST_FILE = ColorfulWoodUIBase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2316,6 +2353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SN9TJYA97;
 				INFOPLIST_FILE = ColorfulWoodUIBase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

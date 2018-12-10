@@ -59,6 +59,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
 #define CWUBDefineFontContent [UIFont systemFontOfSize:12]
 #define CWUBDefineColorTitle CWUBDefineCreate_Color(0, 0, 0, 1)
 #define CWUBDefineColorContent CWUBDefineCreate_Color(0, 0, 0, 0.7)
+#define CWUBDefine_Font_Regular_Size(x) [UIFont fontWithName:@"PingFangSC-Regular" size:x]
 
 #define CWUBDefineMargin 10.
 #define CWUBDefineHeightTextField 35.
@@ -113,8 +114,63 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
  */
 #define CWUBBaseViewConfig_Width_Title_Big ((CWUBDefineDeviceWidth - CWUBBaseViewConfig_Space_Side_Horizontal*2.) /2. - CWUBBaseViewConfig_Space_Element_Horizontal)
 
-
+/**
+ * 弃用
+ */
 #define CWUBBaseIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+/**
+ * 判断iPHoneXr
+ */
+#define CWUBBDefine_IS_XR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) && !UI_IS_IPAD : NO)
+
+/**
+ * 判断iPHoneX
+ */
+#define CWUBBDefine_IS_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !UI_IS_IPAD : NO)
+
+/**
+ * 判断iPHoneXs
+ */
+#define CWUBBDefine_IS_XS ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !UI_IS_IPAD : NO)
+
+/**
+ * 判断iPhoneXs Max
+ */
+#define CWUBBDefine_IS_XS_MAX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) && !UI_IS_IPAD : NO)
+
+/**
+ * 判断iPhoneX系列
+ */
+#define CWUBBDefine_IPhoneX_All ([UIScreen mainScreen].bounds.size.height == 812 || [UIScreen mainScreen].bounds.size.height == 896)
+
+/**
+ * 状态栏、导航栏、标签栏高度
+ */
+#define CWUBBDefine_Height_StatusBar [[UIApplication sharedApplication] statusBarFrame].size.height
+
+/**
+ * 导航栏高度
+ */
+#define CWUBBDefine_Height_NavBar 44.0f
+
+/**
+ * 顶部高度： 状态栏 + 导航栏高度
+ */
+#define CWUBBDefine_Height_TopBar (Height_StatusBar + Height_NavBar)
+
+/**
+ * 底部分页Tabbar高度
+ */
+#define CWUBBDefine_Height_TapBar (CWUBBDefine_IPhoneX_All ? 83.0f:49.0f)
+
+/**
+ * 底部安全区高度 iPhoneX系列有值
+ */
+#define CWUBBDefine_Height_BottomSafe (CWUBBDefine_IPhoneX_All? 34.0f:0.0f)
+
+
+#define CWUBBDefine_WeakSelf __weak typeof(self) weakSelf = self;
 
 #endif /* CWUBDefine_h */
 
