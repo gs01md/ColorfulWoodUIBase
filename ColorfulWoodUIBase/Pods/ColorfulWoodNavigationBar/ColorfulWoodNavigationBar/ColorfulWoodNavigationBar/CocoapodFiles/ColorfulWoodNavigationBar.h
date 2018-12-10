@@ -40,7 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cw_setRightButtonWithNormal:(UIImage *)normal highlighted:(UIImage *)highlighted;
 - (void)cw_setRightButtonWithImage:(UIImage *)image;
 - (void)cw_setRightButtonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor;
-+ (BOOL)isIphoneX;
+
++ (BOOL)isIPhoneX;
 @end
 
 NS_ASSUME_NONNULL_END

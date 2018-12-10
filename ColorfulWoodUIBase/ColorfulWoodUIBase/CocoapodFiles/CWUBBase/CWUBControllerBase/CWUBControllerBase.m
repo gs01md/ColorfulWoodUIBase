@@ -83,7 +83,7 @@
 
         } else {
 
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.top.equalTo(self.view).offset(44);
             } else {
                 make.top.equalTo(self.view).offset(22);
@@ -92,13 +92,13 @@
         }
 
         if (hasTabbar) {
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-84.);
             } else {
                 make.bottom.equalTo(self.view).offset(-49.);
             }
         } else {
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-35.);
             } else {
                 make.bottom.equalTo(self.view);
@@ -132,14 +132,14 @@
         }
 
         if (hasTabbar) {
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-84.);
             } else {
                 make.bottom.equalTo(self.view).offset(-49.);
             }
         } else {
 
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-35.);
             } else {
                 make.bottom.equalTo(self.view);
@@ -162,8 +162,6 @@
     [self.view addSubview:self.m_tableView];
     [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-
-
         if (self.m_isNaviBarShow) {
             make.top.equalTo(self.customNavigationBar.mas_bottom).offset(top);
         } else {
@@ -171,14 +169,14 @@
         }
 
         if (hasTabbar) {
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-84.);
             } else {
                 make.bottom.equalTo(self.view).offset(-49.);
             }
         } else {
 
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-35.);
             } else {
                 make.bottom.equalTo(self.view);
@@ -212,14 +210,14 @@
         }
 
         if (hasTabbar) {
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-84.);
             } else {
                 make.bottom.equalTo(self.view).offset(-49.);
             }
         } else {
 
-            if ([ColorfulWoodNavigationBar isIphoneX]) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
                 make.bottom.equalTo(self.view).offset(-35.);
             } else {
                 make.bottom.equalTo(self.view);

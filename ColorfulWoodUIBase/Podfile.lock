@@ -1,6 +1,6 @@
 PODS:
   - ColorfulWoodCategories (1.0.18)
-  - ColorfulWoodNavigationBar (0.0.1)
+  - ColorfulWoodNavigationBar (1.0.1)
   - ColorfulWoodPoint (1.0.6)
   - ColorfulWoodTools (1.0.18):
     - MBProgressHUD
@@ -36,7 +36,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ColorfulWoodCategories: 74173fa70ef860621afa102bfb03dc3f9b542979
-  ColorfulWoodNavigationBar: a00a4ea64275d058bd87100f1181e078fa9aa3d1
+  ColorfulWoodNavigationBar: f98081d1bd446cac2b74f62ebe7ad779bb2dc436
   ColorfulWoodPoint: 8d7e960cde283aabf7c2242c1a17b85401eee049
   ColorfulWoodTools: 9e0927b431b5e406686b5b1a54de7fadd71b8937
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
