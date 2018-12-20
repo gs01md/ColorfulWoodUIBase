@@ -9,6 +9,13 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_ImgCenter_Model.h"
 
+@protocol CWUBCell_ImgCenter_delegate <NSObject>
+@optional
+- (void)CWUBCell_ImgCenter_delegate_clickImg;
+
+@end
+
 @interface CWUBCell_ImgCenter : CWUBCellBase
 @property (nonatomic, strong) CWUBCell_ImgCenter_Model * m_model;
+@property (nonatomic, weak) id<CWUBCell_ImgCenter_delegate> delegate;
 @end

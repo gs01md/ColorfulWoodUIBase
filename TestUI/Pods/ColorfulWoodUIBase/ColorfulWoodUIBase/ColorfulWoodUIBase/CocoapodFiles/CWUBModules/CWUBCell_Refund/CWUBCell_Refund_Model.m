@@ -10,4 +10,14 @@
 
 @implementation CWUBCell_Refund_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_Refund;
+    }
+
+    return self;
+}
+
+
 @end

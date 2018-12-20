@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) CWUBLableLeftTop *m_lbl_left;
 @property (nonatomic, strong) UISwitch * m_switch;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 
 @end
 
@@ -22,15 +22,15 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_TitleLeft_SwithRight_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
@@ -40,45 +40,44 @@
 
     if (self = [super init]) {
         self.m_model = model;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
-
-    float margin_topOrBottom = CWUBBaseViewConfig_Space_Side_Vertical;
-
-    if (self.m_model.m_margin_topOrBottom > 0.) {
-        margin_topOrBottom = self.m_model.m_margin_topOrBottom;
-    }
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_switch];
     [self addSubview:self.m_img_sep];
+    
+    [self func_updateConsrtains];
+}
 
-    [_m_lbl_left mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)func_updateConsrtains{
+
+    [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.right.equalTo(self.m_switch.mas_left).offset(-CWUBBaseViewConfig_Space_Element_Horizontal);
         //make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-margin_topOrBottom);
-        
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
+
     }];
 
-    [_m_switch mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_switch mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal + 6.);
         make.centerY.equalTo(self.m_lbl_left);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
-        make.top.equalTo(self.m_lbl_left.mas_bottom).offset(margin_topOrBottom);
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
+        make.top.equalTo(self.m_lbl_left.mas_bottom).offset(self.m_model.m_title.m_margin_bottom);
     }];
 }
 
@@ -122,24 +121,21 @@
     return _m_lbl_left;
 }
 
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
-
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_SwithRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
+    
     [self.m_lbl_left interface_update:model.m_title];
     _m_switch.onTintColor = self.m_model.m_color_swith;
 

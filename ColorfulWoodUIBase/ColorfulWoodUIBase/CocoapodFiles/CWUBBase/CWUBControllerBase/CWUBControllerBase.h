@@ -17,6 +17,7 @@
 #import "CWUBCell_SelectSex_Style1.h"
 #import "CWUBCell_ImgCenter.h"
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.h"
+#import <RITLPhotos/RITLPhotos.h>
 
 @interface CWUBControllerBase : UIViewController<
 UITableViewDelegate,
@@ -31,6 +32,37 @@ CWUBCell_SelectSex_Style1_Delegate,
 CWUBCell_ImgCenter_delegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate
 >
+
+#pragma mark - 选择图片 RITLPhotosViewController
+
+
+/**
+ * 选择图片
+ */
+- (void)interface_selectePhoto;
+
+/**
+ * 选择图片 多图 单图
+ * 自定义的选择图片，是添加了一个视图
+ * 该类提供了更多选择
+ */
+@property (nonatomic, strong) RITLPhotosViewController *m_photoController;
+
+/**
+ * 选择相机
+ */
+@property (nonatomic, strong) UIImagePickerController *m_imagePicker;
+
+/**
+ * 单图上传
+ */
+@property (nonatomic, copy)void (^blockCtrlBase_uploadImg)(UIImage *image);
+
+/**
+ * 多图上传
+ */
+@property (nonatomic, copy)void (^blockCtrlBase_uploadBatch)(NSMutableArray *photoArrayM);
+
 #pragma mark - tableView
 @property(nonatomic, strong)UITableView *m_tableView;
 
@@ -73,7 +105,7 @@ CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate
 - (void)CWUBControllerBase_clickWithCode:(NSString *)code;
 
 #pragma mark - 导航
-@property (nonatomic, strong) ColorfulWoodNavigationBar *customNavigationBar;
+@property (nonatomic, strong) ColorfulWoodNavigationBar *m_navigationBar;
 /**
  * 导航栏左侧标题
  */
@@ -94,9 +126,15 @@ CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate
  */
 @property (nonatomic, strong) CWUBSelectImg *m_selectImgView;
 
-- (void)makeNaviWithTitle:(NSString*)title;
-- (void)makeDefaultBar;//只有文字
-- (void)makeRowDefaultBar;//返回及文字
+/**
+ * 只有标题
+ */
+- (void)interface_addNaviWithTitle:(NSString*)title;
+
+/**
+ * 返回按钮和标题
+ */
+- (void)interface_addNaviBarBackTitle:(NSString *)title;
 
 /**
  * 左侧按钮 自定义字体颜色

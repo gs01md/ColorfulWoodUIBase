@@ -65,7 +65,7 @@
 - (void)clickCameraBtn
 {
     NSLog(@"点击了相机");
-    if (![self usableCamera]) {
+    if (![CWUBSelectImg interface_usableCamera]) {
         return;
     }
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -77,7 +77,7 @@
 - (void)clickPhotoBtn
 {
     NSLog(@"点击了手机相册");
-    if (![self usablePhoto]) {
+    if (![CWUBSelectImg interface_usablePhoto]) {
         return;
     }
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -87,7 +87,7 @@
 }
 
 // 相机是否可用
-- (BOOL)usableCamera
++ (BOOL)interface_usableCamera
 {
     NSString *mediaType = AVMediaTypeVideo;//读取媒体类型
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];//读取设备授权状态
@@ -101,7 +101,7 @@
 }
 
 // 相册是否可用
-- (BOOL)usablePhoto
++ (BOOL)interface_usablePhoto
 {
     ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
     

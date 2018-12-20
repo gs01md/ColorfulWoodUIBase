@@ -10,6 +10,7 @@
 #import "CWUBCell_CharterDetail_Opt_Model.h"
 
 @protocol CWUBCell_CharterDetail_Opt_Delegate <NSObject>
+@optional
 -(void) CWUBCell_CharterDetail_Opt_Delegate_First;
 -(void) CWUBCell_CharterDetail_Opt_Delegate_Second;
 @end

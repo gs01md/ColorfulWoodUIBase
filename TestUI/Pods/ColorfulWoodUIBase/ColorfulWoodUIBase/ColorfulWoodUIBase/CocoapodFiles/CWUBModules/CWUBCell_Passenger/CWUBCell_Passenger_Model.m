@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_Passenger_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_Passenger;
+    }
+
+    return self;
+}
+
 @end

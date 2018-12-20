@@ -1,0 +1,1 @@
+../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBModules_Custom/CWUBCell_Message/CWUBCell_Message_S1/CWUBCell_Message_S1_Model.h

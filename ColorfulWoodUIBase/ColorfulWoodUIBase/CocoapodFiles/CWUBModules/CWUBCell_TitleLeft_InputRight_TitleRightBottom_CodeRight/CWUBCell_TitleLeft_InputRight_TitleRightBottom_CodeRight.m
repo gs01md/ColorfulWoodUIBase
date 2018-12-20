@@ -221,10 +221,12 @@
          */
         [self func_timer];
 
-        if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right)]) {
 
-            [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right];
-        }
+    }
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right)]) {
+
+        [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right];
     }
 
 }

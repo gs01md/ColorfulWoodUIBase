@@ -16,64 +16,82 @@
 
 @property (nonatomic, strong) CWUBLableLeftTop *m_lblShow;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lblInfo;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_TitleLeft_InfoLeft
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_TitleLeft_InfoLeft_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lblShow];
     [self addSubview:self.m_lblInfo];
     [self addSubview:self.m_img_sep];
 
-    [_m_lblShow mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
-        make.width.equalTo(@(self.m_model.m_titleWidth));
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+
+    [_m_lblShow mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
+        make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
+        if (self.m_model.m_title.m_width > 1.) {
+            make.width.equalTo(@(self.m_model.m_title.m_width));
+        }
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
+        make.right.equalTo(self.m_lblInfo.mas_left).offset(-self.m_model.m_title.m_margin_right);
+
     }];
 
-    [_m_lblInfo mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lblInfo mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
-        make.left.equalTo(self.m_lblShow.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
-        make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
+        make.top.equalTo(self).offset(self.m_model.m_info.m_margin_top);
+        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_info.m_margin_bottom);
+        if (self.m_model.m_info.m_width > 1.) {
+            make.width.equalTo(@(self.m_model.m_info.m_width));
+        }
+        make.left.equalTo(self.m_lblShow.mas_right).offset(self.m_model.m_info.m_margin_left);
+        make.right.equalTo(self).offset(-self.m_model.m_info.m_margin_right);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
 
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
 
-        if (self.m_model.m_isHiddenBottom) {
+        if (self.m_model.m_bottomLineInfo.m_isHiddenBottom) {
             make.height.equalTo(@(0.01));
         }else{
-            make.height.equalTo(@(1));
+            make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         }
 
-        make.top.equalTo(self.m_lblInfo.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
+        make.top.equalTo(self.m_lblShow.mas_bottom).offset(self.m_model.m_title.m_margin_bottom);
+        make.top.equalTo(self.m_lblInfo.mas_bottom).offset(self.m_model.m_info.m_margin_bottom);
+
     }];
 }
 
+#pragma mark - 属性
 -(CWUBCell_TitleLeft_InfoLeft_Model*) m_model{
 
     if (!_m_model) {
@@ -112,28 +130,24 @@
     return _m_lblInfo;
 }
 
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
-
-
-
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InfoLeft_Model*)model{
 
-    self.m_model = model;
-    [self.m_lblInfo interface_update:model.m_info];
-    [self.m_lblShow interface_update:model.m_title];
+    [super interface_updateWithModel:model];
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    self.m_model = model;
+
+    [self.m_lblShow interface_update:model.m_title];
+    [self.m_lblInfo interface_update:model.m_info];
+
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
+    [self func_updateConsrtains];
 }
 
 /**
@@ -141,6 +155,12 @@
  */
 - (void) interface_bottomLine_hidden{
     [self.m_img_sep setImage:[UIImage imageNamed:@""]];
+}
+
+#pragma mark - 接口
+
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

@@ -14,7 +14,7 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lblShow;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lblShowBtn;
 @property (nonatomic, strong) UIImageView * m_img_btn;
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 
 @end
 
@@ -22,35 +22,40 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_TitleLeft_InfoRight_ButtonRight_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lblShow];
     [self addSubview:self.m_lblShowBtn];
     [self addSubview:self.m_img_btn];
     [self addSubview:self.m_img_sep];
 
-    [_m_lblShow mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lblShow mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_lblShowBtn.mas_left).offset(-10.);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_img_btn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_img_btn mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
@@ -60,23 +65,23 @@
         make.height.equalTo(@(self.m_model.m_btnImg.m_height));
     }];
 
-    [_m_lblShowBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lblShowBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_img_btn.mas_left).offset(-10.);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
-
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_lblShow.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 }
 
+#pragma mark - 属性
 -(CWUBCell_TitleLeft_InfoRight_ButtonRight_Model*) m_model{
 
     if (!_m_model) {
@@ -108,14 +113,7 @@
     return _m_lblShowBtn;
 }
 
--(UIImageView *)m_img_sep{
 
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
 
 -(UIImageView *)m_img_btn{
 
@@ -131,10 +129,12 @@
 
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InfoRight_ButtonRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
@@ -142,6 +142,10 @@
     [self.m_img_btn setImage:[UIImage imageNamed:self.m_model.m_btnImg.m_imgName]];
 
     [self.m_lblShow interface_update:model.m_title];
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
+    [self func_updateConsrtains];
 }
 
 /**

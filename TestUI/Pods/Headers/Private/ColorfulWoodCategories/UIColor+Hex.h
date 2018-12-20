@@ -1,1 +1,1 @@
-../../../ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories/UIColor+Hex.h
+../../../ColorfulWoodCategories/ColorfulWoodCategories/ColorfulWoodCategories/CocoapodFiles/UIColor+Hex.h

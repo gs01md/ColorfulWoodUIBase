@@ -13,34 +13,39 @@
 @property (nonatomic, strong) UIButton *m_btn_cancle;
 @property (nonatomic, strong) UIButton *m_btn_save;
 
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_Passenger_Opt
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_Passenger_Opt_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_btn_cancle];
     [self addSubview:self.m_btn_save];
     [self addSubview:self.m_img_sep];
 
-    [_m_btn_save mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_btn_save mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical*2);
@@ -48,7 +53,7 @@
         make.height.equalTo(@(30));
     }];
 
-    [_m_btn_cancle mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_btn_cancle mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.m_btn_save);
         make.right.equalTo(self.m_btn_save.mas_left).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(self.m_btn_save);
@@ -56,16 +61,16 @@
     }];
 
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
-
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_btn_save.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 }
 
+#pragma mark - 属性
 - (UIButton *)m_btn_cancle{
 
     if (!_m_btn_cancle) {
@@ -101,23 +106,27 @@
     return _m_btn_save;
 }
 
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
-
 - (void) interface_updateWithModel:(CWUBCell_Passenger_Opt_Model*)model{
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    [super interface_updateWithModel:model];
+    
+    self.m_model = model;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
+    [self func_updateConsrtains];
 
+}
+
+#pragma mark - 接口
+
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

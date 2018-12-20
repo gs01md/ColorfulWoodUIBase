@@ -1,0 +1,1 @@
+../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBModules/CWUBCell_Carousel/CWUBCell_Carousel/CWUBCell_Carousel_Model.h

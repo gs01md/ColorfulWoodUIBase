@@ -2010,10 +2010,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ColorfulWoodUIBase/Pods-ColorfulWoodUIBase-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/RITLPhotos/RITLPhotos/Resource/RITLPhotos.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RITLPhotos.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

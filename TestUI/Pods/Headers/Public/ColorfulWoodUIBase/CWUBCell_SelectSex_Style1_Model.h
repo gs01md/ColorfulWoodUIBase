@@ -1,0 +1,1 @@
+../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBModules_Custom/CWUBCell_SelectSex_Style1/CWUBCell_SelectSex_Style1_Model.h

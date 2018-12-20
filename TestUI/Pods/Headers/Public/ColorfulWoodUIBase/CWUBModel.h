@@ -1,1 +1,1 @@
-../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBBase/CWUBModel/CWUBModel/CWUBModel.h
+../../../ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBBase/CWUBModel/CWUBModel.h

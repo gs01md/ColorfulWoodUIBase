@@ -1,8 +1,6 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ColorfulWoodUIBase
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ColorfulWoodUIBase" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ColorfulWoodCategories" "${PODS_ROOT}/Headers/Public/ColorfulWoodUIBase" "${PODS_ROOT}/Headers/Public/Masonry"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ColorfulWoodCategories" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry"
-OTHER_LDFLAGS = -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ColorfulWoodUIBase" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ColorfulWoodCategories" "${PODS_ROOT}/Headers/Public/ColorfulWoodNavigationBar" "${PODS_ROOT}/Headers/Public/ColorfulWoodPoint" "${PODS_ROOT}/Headers/Public/ColorfulWoodTools" "${PODS_ROOT}/Headers/Public/ColorfulWoodUIBase" "${PODS_ROOT}/Headers/Public/JSONModel" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MJRefresh" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/SDWebImage"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

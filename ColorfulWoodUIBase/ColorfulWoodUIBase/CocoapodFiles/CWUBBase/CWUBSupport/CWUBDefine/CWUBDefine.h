@@ -188,12 +188,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
 /**
  * 图片资源bundle
  */
-#define CWUBBDefine_bundle       [NSBundle bundleWithPath:[[NSBundle bundleForClass:[CWUBControllerBase class]] pathForResource:@"CWUBBundle" ofType:@"bundle"]]
+#define CWUBBDefine_bundle       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"CWUBBundle" ofType:@"bundle"]]
 
 /**
  * bundle中的图片
  */
-#define CWUBBDefine_bundle_pngImg(name) [[UIImage imageWithContentsOfFile:[CWUBBDefine_bundle pathForResource:name ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
+#define CWUBBDefine_bundle_pngImg(name) [UIImage imageWithContentsOfFile:[CWUBBDefine_bundle pathForResource:name ofType:@"png"]]
+
 
 
 #endif /* CWUBDefine_h */

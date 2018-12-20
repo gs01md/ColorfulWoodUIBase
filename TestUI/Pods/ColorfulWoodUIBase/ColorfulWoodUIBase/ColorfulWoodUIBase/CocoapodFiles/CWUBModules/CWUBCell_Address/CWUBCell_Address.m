@@ -17,14 +17,14 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_info_name_phone;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_address;
 
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_Address
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_Address_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         [self fun_commonInitWithModel:model];
     }
 
@@ -44,51 +44,57 @@
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.m_model = model;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
-    [self initWithSubViews];
+    [self func_initWithSubViews];
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_title];
     [self addSubview:self.m_lbl_info_name_phone];
     [self addSubview:self.m_lbl_address];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(@(CWUBBaseViewConfig_Width_Title_Default));
     }];
-    
-    [_m_lbl_info_name_phone mas_makeConstraints:^(MASConstraintMaker *make) {
+
+    [_m_lbl_info_name_phone mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_lbl_address.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/4.);
         make.left.equalTo(self.m_lbl_title.mas_right).offset(CWUBBaseViewConfig_Space_Element_Horizontal);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_lbl_address mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_address mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.m_lbl_info_name_phone.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/4.);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
         make.left.equalTo(self.m_lbl_info_name_phone);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
-
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_lbl_address.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
     }];
+
 }
 
+#pragma mark - 属性
 -(CWUBCell_Address_Model*) m_model{
 
     if (!_m_model) {
@@ -132,28 +138,23 @@
     return _m_lbl_address;
 }
 
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
-
-
-
 - (void) interface_updateWithModel:(CWUBCell_Address_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [self.m_lbl_title interface_update:model.m_title];
     [self.m_lbl_info_name_phone interface_update:model.m_title_name_Phone];
     [self.m_lbl_address interface_update:model.m_address];
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
+    [self func_updateConsrtains];
 }
 
 -(NSString *)interface_get_event_opt_code{

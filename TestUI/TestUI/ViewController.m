@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <Masonry.h>
 #import <ColorfulWoodUIBase/ColorfulWoodUIBase.h>
+#import "TestViewController.h"
 
 @interface ViewController ()<
 UITableViewDelegate,
@@ -25,11 +26,16 @@ UITableViewDataSource
     [super viewDidLoad];
 
     [self testView];
+
+    TestViewController *vc = [TestViewController new];
+    [vc makeRowDefaultBar];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void) testView {
 
-    [self interface_transToViewData_view];
+    //[self interface_transToViewData_view];
 
     [self interface_transToViewData_table];
 
@@ -103,13 +109,12 @@ UITableViewDataSource
     model2.m_type = CWUBCellType_TitleLeft_TitleRight;
     model2.m_title_left = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
     model2.m_title_right = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
-    model2.m_color_bottomLine = [UIColor brownColor];
+
 
     [data addObject:model2];
 
     CWUBCell_ImgCenter_Model * model3 = [CWUBCell_ImgCenter_Model new];
     model3.m_type = CWUBCellType_ImgCenter;
-    model3.m_color_bottomLine = [UIColor clearColor];
     model3.m_image = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
 
     [data addObject:model3];
@@ -126,17 +131,16 @@ UITableViewDataSource
     model4.m_title_leftTop.m_margin_bottom = fMargin;
     model4.m_title_leftBottom.m_margin_top = fMargin;
     model4.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"提醒" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model4.m_color_bottomLine = [UIColor blueColor];
+
     model4.m_img_center = [[CWUBImageInfo alloc] initWithName:@"sep" width:1. height:10.];
 
     [data addObject:model4];
 
     CWUBCell_ImgLeft_TitleRightThree_Model * model5 = [CWUBCell_ImgLeft_TitleRightThree_Model new];
     model5.m_type = CWUBCellType_ImgLeft_TitleRightThree;
-    model5.m_color_bottomLine = [UIColor blueColor];
+
     model5.m_img_left = [[CWUBImageInfo alloc] initWithName:@"back" width:90. height:90.];
     model5.m_img_left.m_isCircle = YES;
-    model5.m_backColor = [UIColor redColor];
     model5.m_title_rightTop = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model5.m_title_rightCenter = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model5.m_title_rightBottom = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
@@ -163,14 +167,13 @@ UITableViewDataSource
     model.m_title = [[CWUBTextInfo alloc] initWithText:@"查看详情" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
     model.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"left" width:26. height:26.];
     model.m_event_opt_code = @"查看详情";
-    model.m_color_bottomLine = [UIColor blueColor];
     [data addObject:model];
 
     CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model * model1 = [CWUBCell_IconLeft_TitleLeft_TitleRight_IconRight_Model new];
     model1.m_type = CWUBCellType_IconLeft_TitleLeft_TitleRight_IconRight;
     model1.m_title_left = [[CWUBTextInfo alloc] initWithText:@"标题" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
     model1.m_title_right = [[CWUBTextInfo alloc] initWithText:@"内容内" font:[CWUBDefine fontOptButton] color:[CWUBDefine colorBlueDeep]];
-    model1.m_color_bottomLine = [UIColor redColor];
+
     model1.m_img_left = [[CWUBImageInfo alloc] initWithName:@"left" width:26. height:26.];
     model1.m_img_right = [[CWUBImageInfo alloc] initWithName:@"big" width:20. height:12.];
     //    model1.m_margin_leftOrRight = 10.;
@@ -182,14 +185,12 @@ UITableViewDataSource
     CWUBCell_TitleCenter_Model * model2 = [CWUBCell_TitleCenter_Model new];
     model2.m_type = CWUBCellType_TitleCenter;
     model2.m_title = [[CWUBTextInfo alloc] initWithText:@"大标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:23.2] color:[CWUBDefine colorBlueDeep]];
-    model2.m_color_bottomLine = [UIColor brownColor];
 
     [data addObject:model2];
 
     CWUBCell_TitleLeft_ButtonRight_Model * model3 = [CWUBCell_TitleLeft_ButtonRight_Model new];
     model3.m_type = CWUBCellType_TitleLeft_ButtonRight;
     model3.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model3.m_color_bottomLine = [UIColor blueColor];
     model3.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
 
     CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight_Model * model4 = [CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight_Model new];
@@ -197,7 +198,6 @@ UITableViewDataSource
     model4.m_title_center = [[CWUBTextInfo alloc] initWithText:@"公司" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model4.m_title_bottom_left = [[CWUBTextInfo alloc] initWithText:@"姓名" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model4.m_title_bottom_right = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model4.m_color_bottomLine = [UIColor blueColor];
     model4.m_img_top = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
 
     [data addObject:model4];
@@ -210,7 +210,7 @@ UITableViewDataSource
     model5.m_info_id = [[CWUBTextInfo alloc] initWithText:@"姓名" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model5.m_info_name = [[CWUBTextInfo alloc] initWithText:@"职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
     model5.m_title_name = [[CWUBTextInfo alloc] initWithText:@"职位职位职位职位职位职位职位职位职位职位职位职位职位职位职位职位" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16.2] color:[CWUBDefine colorBlueDeep]];
-    model5.m_color_bottomLine = [UIColor blueColor];
+
     model5.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"button" width:90. height:40.];
 
 
@@ -234,7 +234,7 @@ UITableViewDataSource
         _m_tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
         _m_tableView.delegate = self;
         _m_tableView.dataSource = self;
-        _m_tableView.allowsSelection = NO;
+        _m_tableView.allowsSelection = YES;
         _m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_m_tableView setBackgroundColor:[UIColor whiteColor]];
 
@@ -315,6 +315,12 @@ UITableViewDataSource
     if ([code isEqualToString:@"查看详情"]) {
 
     }
+
+    TestViewController *vc = [TestViewController new];
+    [vc makeRowDefaultBar];
+    vc.customNavigationBar.backgroundColor = [UIColor redColor];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

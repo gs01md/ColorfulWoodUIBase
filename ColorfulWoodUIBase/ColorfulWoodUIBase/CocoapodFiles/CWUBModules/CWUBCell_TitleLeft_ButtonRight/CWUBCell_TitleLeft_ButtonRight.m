@@ -57,7 +57,7 @@
     [self addSubview:self.m_img_btn];
     [self addSubview:self.m_img_sep];
 
-        [self func_updateConsrtains];
+    [self func_updateConsrtains];
 }
 
 - (void)func_updateConsrtains{
@@ -65,14 +65,12 @@
     [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_img_btn.mas_left).offset(-self.m_model.m_title.m_margin_right);
         make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
     }];
 
     [_m_img_btn mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(self).offset(self.m_model.m_btnImg.m_margin_top);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_btnImg.m_margin_bottom);
+        make.centerY.equalTo(self.m_lbl_title);
         make.left.equalTo(self.m_lbl_title.mas_right).offset(self.m_model.m_btnImg.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_btnImg.m_margin_right);
         make.width.equalTo(@(self.m_model.m_btnImg.m_width));
@@ -85,8 +83,8 @@
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
-        make.top.equalTo(self.m_lbl_title.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
-        make.top.equalTo(self.m_img_btn.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+        make.top.equalTo(self.m_lbl_title.mas_bottom).offset(self.m_model.m_title.m_margin_bottom);
+
     }];
 
 }
@@ -126,7 +124,7 @@
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_ButtonRight_Model*)model{
 
     [super interface_updateWithModel:model];
-    
+
     self.m_model = model;
 
     if (self.m_model.m_bottomLineInfo.m_color) {
@@ -141,6 +139,8 @@
 
     [self.m_lbl_title interface_update:model.m_title];
     self.backgroundColor = self.m_model.m_color_backGround;
+
+    [self func_updateConsrtains];
 }
 
 /**

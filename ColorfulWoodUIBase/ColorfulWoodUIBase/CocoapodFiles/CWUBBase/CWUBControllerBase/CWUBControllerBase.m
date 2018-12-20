@@ -10,18 +10,23 @@
 #import <Masonry/Masonry.h>
 #import "CWUBDefine.h"
 #import "CWUBDefaultView.h"
+#import <ColorfulWoodTools/ColorfulWoodAlert.h>
 
-@interface CWUBControllerBase ()
+@interface CWUBControllerBase ()<
+RITLPhotosViewControllerDelegate
+>
 
 /**
  * 是否添加了导航栏，用于tableview布局
  */
 @property(nonatomic, assign)BOOL m_isNaviBarShow;
+
+//@property(nonatomic, strong)UIImage * m_image;
 @end
 
+static UIImage * m_image;
+
 @implementation CWUBControllerBase
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +36,11 @@
     if (@available(iOS 11.0, *)){
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
+
+    if (!m_image) {
+        m_image = CWUBBDefine_bundle_pngImg(@"CWUBBundle_Back@2x");
+    }
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -40,6 +50,9 @@
     UITableView.appearance.estimatedRowHeight = 200;
     UITableView.appearance.estimatedSectionFooterHeight = 0;
     UITableView.appearance.estimatedSectionHeaderHeight = 0;
+
+    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 #pragma mark - tableView
@@ -79,7 +92,7 @@
 
         if (self.m_isNaviBarShow) {
 
-            make.top.equalTo(self.customNavigationBar.mas_bottom);
+            make.top.equalTo(self.m_navigationBar.mas_bottom);
 
         } else {
 
@@ -126,7 +139,7 @@
     [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         if (self.m_isNaviBarShow) {
-            make.top.equalTo(self.customNavigationBar.mas_bottom).offset(top);
+            make.top.equalTo(self.m_navigationBar.mas_bottom).offset(top);
         } else {
             make.top.equalTo(self.view).offset(top);
         }
@@ -163,7 +176,7 @@
     [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         if (self.m_isNaviBarShow) {
-            make.top.equalTo(self.customNavigationBar.mas_bottom).offset(top);
+            make.top.equalTo(self.m_navigationBar.mas_bottom).offset(top);
         } else {
             make.top.equalTo(self.view).offset(top);
         }
@@ -287,43 +300,38 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark 只有文字
-- (void)makeDefaultBar{
-    [self.view addSubview:self.customNavigationBar];
-    self.customNavigationBar.barBackgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
-    self.customNavigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
-    self.customNavigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
-}
-
 #pragma mark  返回及文字
-- (void)makeRowDefaultBar{
-    [self.view addSubview:self.customNavigationBar];
-    self.customNavigationBar.barBackgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
-    UIImage *image = CWUBBDefine_bundle_pngImg(@"CWUBBundle_Back");
-    [self.customNavigationBar cw_setLeftButtonWithImage:image];
-    _customNavigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
-    _customNavigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
+- (void)interface_addNaviBarBackTitle:(NSString *)title{
+    [self.view addSubview:self.m_navigationBar];
+
+    _m_navigationBar.title = title;
+    _m_navigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
+    _m_navigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
+    _m_isNaviBarShow = TRUE;
+
+    [self.m_navigationBar cw_setLeftButtonWithImage:m_image];
+
+}
+
+- (void)interface_addNaviWithTitle:(NSString*)title{
+    [self.view addSubview:self.m_navigationBar];
+    self.m_navigationBar.title = title;
+    self.m_navigationBar.barBackgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
+    _m_navigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
+    _m_navigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
     _m_isNaviBarShow = TRUE;
 }
 
-- (void)makeNaviWithTitle:(NSString*)title{
-    [self.view addSubview:self.customNavigationBar];
-    self.customNavigationBar.title = title;
-    self.customNavigationBar.barBackgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
-    _customNavigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
-    _customNavigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
-    _m_isNaviBarShow = TRUE;
-}
 
-
-- (ColorfulWoodNavigationBar *)customNavigationBar{
-    if (!_customNavigationBar) {
-        _customNavigationBar = [ColorfulWoodNavigationBar CustomNavigationBar];
-        [_customNavigationBar cw_setBottomLineHidden:YES];
-        _customNavigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
-        _customNavigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
+- (ColorfulWoodNavigationBar *)m_navigationBar{
+    if (!_m_navigationBar) {
+        _m_navigationBar = [ColorfulWoodNavigationBar CustomNavigationBar];
+        [_m_navigationBar cw_setBottomLineHidden:YES];
+        _m_navigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
+        _m_navigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
+        _m_navigationBar.backgroundColor = [UIColor blueColor];
     }
-    return _customNavigationBar;
+    return _m_navigationBar;
     
 }
 
@@ -332,11 +340,11 @@
  */
 - (void)interface_addNaviLeft:(UILabel*)lable{
 
-    [self.customNavigationBar addSubview:lable];
+    [self.m_navigationBar addSubview:lable];
 
     [lable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.customNavigationBar).offset(15);
-        make.centerY.equalTo(self.customNavigationBar.titleLable);
+        make.left.equalTo(self.m_navigationBar).offset(15);
+        make.centerY.equalTo(self.m_navigationBar.titleLable);
     }];
 
 }
@@ -346,11 +354,11 @@
  */
 - (void)interface_addNaviRight:(UILabel*)lable{
 
-    [self.customNavigationBar addSubview:lable];
+    [self.m_navigationBar addSubview:lable];
 
     [lable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.customNavigationBar).offset(-15);
-        make.centerY.equalTo(self.customNavigationBar.titleLable);
+        make.right.equalTo(self.m_navigationBar).offset(-15);
+        make.centerY.equalTo(self.m_navigationBar.titleLable);
     }];
 
 }
@@ -359,14 +367,14 @@
  * 左侧按钮 自定义字体颜色
  */
 - (void)interface_addNaviLeft:(NSString *)title color:(UIColor*)color{
-    [self.customNavigationBar addSubview:self.m_lbl_naviLeft];
+    [self.m_navigationBar addSubview:self.m_lbl_naviLeft];
 
     self.m_lbl_naviLeft.text = title;
     self.m_lbl_naviLeft.textColor = color;
 
     [self.m_lbl_naviLeft mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.customNavigationBar).offset(15);
-        make.centerY.equalTo(self.customNavigationBar.titleLable);
+        make.left.equalTo(self.m_navigationBar).offset(15);
+        make.centerY.equalTo(self.m_navigationBar.titleLable);
     }];
 }
 
@@ -374,14 +382,14 @@
  * 右侧按钮 自定义字体颜色
  */
 - (void)interface_addNaviRight:(NSString *)title color:(UIColor*)color{
-    [self.customNavigationBar addSubview:self.m_lbl_naviRight];
+    [self.m_navigationBar addSubview:self.m_lbl_naviRight];
 
     self.m_lbl_naviRight.text = title;
     self.m_lbl_naviRight.textColor = color;
 
     [self.m_lbl_naviRight mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.customNavigationBar).offset(-15);
-        make.centerY.equalTo(self.customNavigationBar.titleLable);
+        make.right.equalTo(self.m_navigationBar).offset(-15);
+        make.centerY.equalTo(self.m_navigationBar.titleLable);
     }];
 }
 
@@ -404,6 +412,20 @@
 }
 
 #pragma mark - 选择图片
+
+- (UIImagePickerController *)m_imagePicker{
+
+    if (!_m_imagePicker) {
+        _m_imagePicker = [[UIImagePickerController alloc] init];
+        _m_imagePicker.editing = YES;
+        _m_imagePicker.allowsEditing = NO;
+        _m_imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        _m_imagePicker.navigationBar.tintColor = [UIColor whiteColor];;
+        _m_imagePicker.delegate = self;
+    }
+
+    return _m_imagePicker;
+}
 
 - (CWUBSelectImg *)m_selectImgView{
 
@@ -459,6 +481,115 @@
     //模态方式退出uiimagepickercontroller
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+#pragma mark - 选择图片相关 RITLPhotosViewControllerDelegate
+
+- (void)interface_selectePhoto{
+
+    if (@available(iOS 11.0, *)) {
+        UIScrollView.appearance.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+    }
+
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+        if ([CWUBSelectImg interface_usableCamera] == NO) {   //无权限
+
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许方石榴访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alertVC animated:YES completion:nil];
+        }else {
+
+            [self presentViewController:self.m_imagePicker animated:YES completion:nil];
+        }
+    }]];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+        if ([CWUBSelectImg interface_usablePhoto] == NO) {
+
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相册”选项中，允许方石榴访问你的相册。" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alertVC animated:YES completion:nil];
+        } else {
+
+            [self presentViewController:self.m_photoController animated:YES completion:nil];
+        }
+
+    }]];
+
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+
+- (RITLPhotosViewController *)m_photoController{
+
+    if (!_m_photoController) {
+        _m_photoController = RITLPhotosViewController.photosViewController;
+
+        _m_photoController.configuration.maxCount = 1;//最大的选择数目
+
+        _m_photoController.configuration.containVideo = false;//选择类型，目前只选择图片不选择视频
+        _m_photoController.photo_delegate = self;
+
+    }
+
+    return _m_photoController;
+}
+
+
+#pragma mark RITLPhotosViewControllerDelegate
+- (void)photosViewController:(UIViewController *)viewController images:(NSArray<UIImage *> *)images infos:(NSArray<NSDictionary *> *)infos{
+
+    if (images.count == 0) {
+        [ColorfulWoodAlert showAlertAutoHideWithTitle:@"未能选中图片，请重新选择" afterDelay:2.5];
+        return;
+    }
+
+    NSMutableArray *arr = [NSMutableArray array];
+    for (UIImage *img in images) {
+        [arr addObject:img];
+    }
+
+    if (arr.count == 1) {
+        UIImage *image = [arr objectAtIndex:0];
+        if (self.blockCtrlBase_uploadImg) {
+            self.blockCtrlBase_uploadImg(image);
+        }
+    } else {
+        if (self.blockCtrlBase_uploadBatch) {
+            self.blockCtrlBase_uploadBatch(arr);
+        }
+    }
+
+
+    //    if (self.photoArrayM.count >= 3 || self.photoArrayM.count >= 6) {
+    //        if (self.RefenshPhotoBlock) {
+    //            self.RefenshPhotoBlock(self.indexPath);
+    //        }
+    //    }
+    //    [self updateLayoutSubviews];
+    //    [self.collectionView reloadData];
+
+    //    NSLog(@"%@",infos);
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    //获取到的图片
+    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    if (self.blockCtrlBase_uploadImg) {
+        self.blockCtrlBase_uploadImg(image);
+    }
+}
+
 
 #pragma mark - 背景设置
 - (CWUBDefaultView *)m_defaultView{
@@ -649,20 +780,6 @@
 - (void)CWUBControllerBase_clickWithCode:(NSString *)code{
 
 
-}
-
-/**
- * 获取控制器，获取视图控制器
- */
-- (UIViewController *)inner_findViewController{
-
-    for (UIView* next = self; next; next = next.superview) {
-        UIResponder* nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController*)nextResponder;
-        }
-    }
-    return nil;
 }
 
 @end

@@ -9,5 +9,7 @@
 #import "CWUBWoodUIBaseDemo.h"
 
 @implementation CWUBWoodUIBaseDemo
-
+- (CWUBModel*)interface_transToViewData{
+    return [CWUBModel new];
+}
 @end

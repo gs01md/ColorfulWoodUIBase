@@ -9,6 +9,16 @@
 #import "CWUBCell_TitleLeft_InfoRight_Model.h"
 
 @implementation CWUBCell_TitleLeft_InfoRight_Model
+
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_TitleLeft_InfoRight;
+    }
+
+    return self;
+}
+
 -(CWUBTextInfo*)m_title{
     if (!_m_title) {
         _m_title = [CWUBTextInfo new];

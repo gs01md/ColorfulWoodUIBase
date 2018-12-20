@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B208AB421BE638500895866 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B208AB321BE638500895866 /* TestViewController.m */; };
 		8B2A0B3C1E3C17AB00603D55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A0B3B1E3C17AB00603D55 /* main.m */; };
 		8B2A0B3F1E3C17AB00603D55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A0B3E1E3C17AB00603D55 /* AppDelegate.m */; };
 		8B2A0B421E3C17AB00603D55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A0B411E3C17AB00603D55 /* ViewController.m */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		03E2943E35CC127EB69ABC09 /* libPods-TestUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B208AB221BE638500895866 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		8B208AB321BE638500895866 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		8B2A0B371E3C17AB00603D55 /* TestUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2A0B3B1E3C17AB00603D55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B2A0B3D1E3C17AB00603D55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				8B2A0B4E1E3C17AB00603D55 /* Info.plist */,
 				8B2A0B461E3C17AB00603D55 /* TestUI.xcdatamodeld */,
 				8B2A0B3A1E3C17AB00603D55 /* Supporting Files */,
+				8B208AB221BE638500895866 /* TestViewController.h */,
+				8B208AB321BE638500895866 /* TestViewController.m */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				8B2A0B341E3C17AB00603D55 /* Frameworks */,
 				8B2A0B351E3C17AB00603D55 /* Resources */,
 				8B04F4A91E4687FA0095C2EC /* Embed Frameworks */,
+				0B3F9313EC4EC831A9546BEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,6 +324,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B3F9313EC4EC831A9546BEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestUI/Pods-TestUI-resources.sh",
+				"${PODS_ROOT}/ColorfulWoodUIBase/ColorfulWoodUIBase/ColorfulWoodUIBase/CocoapodFiles/CWUBBundle/CWUBBundle.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CWUBBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestUI/Pods-TestUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A2123B36C118EC5CA423BBC8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +377,7 @@
 				8B2A0B481E3C17AB00603D55 /* TestUI.xcdatamodeld in Sources */,
 				8B2A0B3F1E3C17AB00603D55 /* AppDelegate.m in Sources */,
 				8B2A0B3C1E3C17AB00603D55 /* main.m in Sources */,
+				8B208AB421BE638500895866 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -483,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,7 +536,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TestUI/TestUI.pch";
 				INFOPLIST_FILE = TestUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wood.TestUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -526,7 +557,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TestUI/TestUI.pch";
 				INFOPLIST_FILE = TestUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wood.TestUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";

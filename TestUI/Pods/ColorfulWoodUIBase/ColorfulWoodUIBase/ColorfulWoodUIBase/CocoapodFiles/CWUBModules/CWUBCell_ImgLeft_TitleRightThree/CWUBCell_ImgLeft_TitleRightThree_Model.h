@@ -12,8 +12,9 @@
 
 /**
  * 背景浮层颜色：可以设置为透明，这样就相当于不显示
+ * 虽然显示为图片，但是只是用到其中一些属性，不需要图片名称
  */
-@property(nonatomic, strong) UIColor * m_backColor;
+@property(nonatomic, strong) CWUBImageInfo * m_back;
 
 /**
  * 左侧图片
@@ -34,6 +35,11 @@
  * 右侧 下标题
  */
 @property(nonatomic, strong) CWUBTextInfo * m_title_rightBottom;
+
+/**
+ * 测试样例2
+ */
++ (CWUBCell_ImgLeft_TitleRightThree_Model *)tester_dataWithArray2:(NSMutableArray *)data;
 
 
 @end

@@ -36,28 +36,28 @@
  */
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_time;
 
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_Refund
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_Refund_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_lbl_circle];
     [self addSubview:self.m_lbl_vertical];
@@ -67,52 +67,56 @@
     [self addSubview:self.m_lbl_time];
     [self addSubview:self.m_img_sep];
 
-    [_m_lbl_title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_lbl_title mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal+CWUBBaseViewConfig_Space_Element_Horizontal);
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical);
         make.bottom.equalTo(self.m_lbl_info.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/2.);
     }];
 
-    [_m_lbl_info mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_info mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_title);
         make.right.equalTo(self.m_lbl_title);
         make.top.equalTo(self.m_lbl_title.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/2.);
         make.bottom.equalTo(self.m_lbl_time.mas_top).offset(-CWUBBaseViewConfig_Space_Side_Vertical/2.);
     }];
 
-    [_m_lbl_time mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_time mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.m_lbl_title);
         make.right.equalTo(self.m_lbl_title);
         make.top.equalTo(self.m_lbl_info.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical/2.);
         make.bottom.equalTo(self.m_img_sep).offset(-CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 
-    [_m_lbl_circle mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_circle mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
         make.width.equalTo(@(CIRCLE_SEP_WIDTH));
         make.height.equalTo(@(CIRCLE_SEP_WIDTH));
         make.centerY.equalTo(self.m_lbl_title);
     }];
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
-
-        make.left.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Horizontal);
-        make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         //make.top.equalTo(_m_lbl_time.mas_bottom).offset(CWUBBaseViewConfig_Space_Side_Vertical);
     }];
 
-    [_m_lbl_vertical mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_vertical mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.m_lbl_circle);
         make.top.equalTo(self.m_lbl_info).offset(4.);
         make.width.equalTo(@(1));
         make.bottom.equalTo(self);
     }];
-
 }
 
+#pragma mark - 属性
 -(CWUBCell_Refund_Model*) m_model{
 
     if (!_m_model) {
@@ -120,15 +124,6 @@
     }
 
     return _m_model;
-}
-
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [UIImageView new];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
 }
 
 - (CWUBLabelWithModel *)m_lbl_title{
@@ -192,6 +187,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_Refund_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
 
     [self.m_lbl_title interface_update:model.m_title];
@@ -202,11 +199,21 @@
     }
     _m_lbl_vertical.backgroundColor = self.m_model.m_title.m_color;
     _m_lbl_circle.backgroundColor = self.m_model.m_title.m_color;
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
+    [self func_updateConsrtains];
+}
+
+#pragma mark - 接口
+
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}

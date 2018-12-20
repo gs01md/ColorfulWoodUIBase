@@ -22,44 +22,49 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_ButtonRight_TitleRight_ButtonRight_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
     
     return self;
 }
 
-- (void) initWithSubViews{
+- (void) func_initWithSubViews{
 
     [self addSubview:self.m_btn_img];
     [self addSubview:self.m_lbl_right];
     [self addSubview:self.m_btn_right];
 
-    [_m_btn_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_btn_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBDefine_Width(26.));
         make.top.equalTo(self).offset(CWUBBaseViewConfig_Space_Side_Vertical*1.5);
         make.bottom.equalTo(self.mas_bottom).offset(-CWUBBaseViewConfig_Space_Side_Vertical*1.5);
     }];
 
-    [_m_lbl_right mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.right.equalTo(self.m_btn_right.mas_left).offset(-5.);
         make.top.equalTo(self.m_btn_right);
         make.bottom.equalTo(self.m_btn_right);
     }];
 
-    [_m_btn_img mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_btn_img mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.m_lbl_right.mas_left).offset(-5.);
         make.top.equalTo(self.m_btn_right);
         make.bottom.equalTo(self.m_btn_right);
         make.height.equalTo(@(20));
         make.width.equalTo(@(20));
     }];
-
 }
 
+#pragma mark - 属性
 -(CWUBCell_ButtonRight_TitleRight_ButtonRight_Model*) m_model{
 
     if (!_m_model) {
@@ -114,6 +119,8 @@
 
 - (void) interface_updateWithModel:(CWUBCell_ButtonRight_TitleRight_ButtonRight_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
     [_m_btn_right setTitle:self.m_model.m_button_title.m_text forState:UIControlStateNormal];
     [_m_btn_right.titleLabel setFont:self.m_model.m_button_title.m_font];
@@ -121,11 +128,19 @@
     [_m_btn_right setTitleColor:self.m_model.m_button_title.m_color forState:UIControlStateNormal];
     [_m_lbl_right interface_update:self.m_model.m_title];
     [_m_btn_img setImage:[UIImage imageNamed:self.m_model.m_button_img] forState:UIControlStateNormal];
+
+    [self func_updateConsrtains];
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {[super setSelected:selected animated:animated];}
+
+#pragma mark - 接口
+
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
+}
 
 #pragma mark - 事件
 - (void)event_btn_protocol{

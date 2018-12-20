@@ -10,6 +10,16 @@
 #import "CWUBDefine.h"
 
 @implementation CWUBCell_TitleLeft_SwithRight_Model
+
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_TitleLeft_SwithRight;
+    }
+
+    return self;
+}
+
 - (UIColor *) m_color_swith{
 
     if (!_m_color_swith) {

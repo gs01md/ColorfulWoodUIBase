@@ -25,4 +25,8 @@
 @property(nonatomic, assign) float m_titleWidth;
 
 
+/**
+ * 只显示标题
+ */
++ (CWUBModelBase *)tester_dataWithArray2:(NSMutableArray *)data;
 @end

@@ -16,22 +16,22 @@
 @property (nonatomic, strong) UIButton *m_btn_first;
 @property (nonatomic, strong) UIButton *m_btn_second;
 
-@property (nonatomic, strong) UIImageView * m_img_sep;
+
 @end
 
 @implementation CWUBCell_CharterDetail_Opt
 
 -(id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier model:(CWUBCell_CharterDetail_Opt_Model*)model{
 
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier model:model]) {
         self.m_model = model;
-        if (self.m_model.m_color_bottomLine) {
-            self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+        if (self.m_model.m_bottomLineInfo.m_color) {
+            self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
         }else{
             self.m_img_sep.backgroundColor = [UIColor clearColor];
         }
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
@@ -41,19 +41,24 @@
 
     if (self = [super initWithFrame:frame]) {
         self.m_model = model;
-        [self initWithSubViews];
+        [self func_initWithSubViews];
     }
 
     return self;
 }
 
--(void) initWithSubViews{
+-(void) func_initWithSubViews{
 
     [self addSubview:self.m_btn_first];
     [self addSubview:self.m_btn_second];
     [self addSubview:self.m_img_sep];
 
-    [_m_btn_second mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self func_updateConsrtains];
+}
+
+- (void)func_updateConsrtains{
+
+    [_m_btn_second mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-CWUBBaseViewConfig_Space_Side_Horizontal);
         make.top.equalTo(self).offset(VEHICAL_MARGIN);
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-VEHICAL_MARGIN);
@@ -61,7 +66,7 @@
         make.height.equalTo(@(30));
     }];
 
-    [_m_btn_first mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_m_btn_first mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.m_btn_second);
         make.right.equalTo(self.m_btn_second.mas_left).offset(-CWUBBaseViewConfig_Space_Side_Horizontal/2.);
         make.width.equalTo(self.m_btn_second);
@@ -69,16 +74,16 @@
     }];
 
 
-    [_m_img_sep mas_makeConstraints:^(MASConstraintMaker *make) {
-
-        make.left.equalTo(@(CWUBBaseViewConfig_Space_Side_Horizontal));
-        make.right.equalTo(@(-CWUBBaseViewConfig_Space_Side_Horizontal));
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
-        make.height.equalTo(@(1));
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_btn_second.mas_bottom).offset(VEHICAL_MARGIN);
     }];
 }
 
+#pragma mark - 属性
 - (UIButton *)m_btn_first{
 
     if (!_m_btn_first) {
@@ -114,21 +119,14 @@
     return _m_btn_second;
 }
 
--(UIImageView *)m_img_sep{
-
-    if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
-        [_m_img_sep setClipsToBounds:YES];
-    }
-    return _m_img_sep;
-}
-
 - (void) interface_updateWithModel:(CWUBCell_CharterDetail_Opt_Model*)model{
 
+    [super interface_updateWithModel:model];
+    
     self.m_model = model;
 
-    if (self.m_model.m_color_bottomLine) {
-        self.m_img_sep.backgroundColor = self.m_model.m_color_bottomLine;
+    if (self.m_model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
         self.m_img_sep.backgroundColor = [UIColor clearColor];
     }
@@ -137,7 +135,7 @@
         [_m_btn_first setTitle:model.m_info_first.m_text forState:UIControlStateNormal];
         [_m_btn_first setTitleColor:model.m_info_first.m_color forState:UIControlStateNormal];
         [_m_btn_first.titleLabel setFont:model.m_info_first.m_font];
-        [_m_btn_first setBackgroundColor:model.m_info_first.m_color_backGroud];
+        [_m_btn_first setBackgroundColor:model.m_info_first.m_color_backGround];
         [_m_btn_first.titleLabel setTextColor:model.m_info_first.m_color];
 
 
@@ -154,7 +152,7 @@
         [_m_btn_second setTitle:model.m_info_second.m_text forState:UIControlStateNormal];
         [_m_btn_second setTitleColor:model.m_info_second.m_color forState:UIControlStateNormal];
         [_m_btn_second.titleLabel setFont:model.m_info_second.m_font];
-        [_m_btn_second setBackgroundColor:model.m_info_second.m_color_backGroud];
+        [_m_btn_second setBackgroundColor:model.m_info_second.m_color_backGround];
         [_m_btn_second.titleLabel setTextColor:model.m_info_second.m_color];
 
         if (model.m_info_second.m_isHidden) {
@@ -165,11 +163,21 @@
     }else{
         [_m_btn_second setHidden:YES];
     }
+    if (self.m_model.m_bottomLineInfo.m_image && self.m_model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:self.m_model.m_bottomLineInfo.m_image]];
+    }
+    [self func_updateConsrtains];
 }
 
 - (void)awakeFromNib {[super awakeFromNib];}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {[super setSelected:selected animated:animated];}
+
+#pragma mark - 接口
+
+-(NSString *)interface_get_event_opt_code{
+    return self.m_model.m_event_opt_code;
+}
 
 #pragma mark - 事件
 

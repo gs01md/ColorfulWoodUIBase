@@ -10,4 +10,13 @@
 
 @implementation CWUBCell_Trip_Model
 
+- (instancetype) init{
+
+    if (self = [super init]) {
+        self.m_type = CWUBCellType_Trip;
+    }
+
+    return self;
+}
+
 @end

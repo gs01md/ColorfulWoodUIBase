@@ -17,4 +17,14 @@
 @property (nonatomic, copy)void (^ClickCameraBlock)(UIImagePickerController *imgPicker);
 
 - (void)interface_img:(NSString*)img;
+
+/**
+ * 相机是否可用
+ */
++ (BOOL)interface_usableCamera;
+
+/**
+ * 相册是否可用
+ */
++ (BOOL)interface_usablePhoto;
 @end
