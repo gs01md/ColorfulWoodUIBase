@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * 图片资源bundle
+ */
+#define ColorfulWoodNavigationBar_bundle       [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"CWNBBundle" ofType:@"bundle"]]
+
+/**
+ * bundle中的图片
+ */
+#define ColorfulWoodNavigationBar_bundle_pngImg(name) [UIImage imageWithContentsOfFile:[ColorfulWoodNavigationBar_bundle pathForResource:name ofType:@"png"]]
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ColorfulWoodNavigationBar : UIView

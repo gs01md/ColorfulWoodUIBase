@@ -17,5 +17,5 @@ FOUNDATION_EXPORT const unsigned char ColorfulWoodToolsVersionString[];
 #import "ColorfulWoodCheckArray.h"
 #import "ColorfulWoodMultiDelegate.h"
 #import "UIImage+ColorfulWood.h"
-
+#import "ColorfulWoodImageBrowser.h"
 

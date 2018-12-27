@@ -10,7 +10,6 @@ pod 'ColorfulWoodPoint'
 pod 'SDWebImage'
 pod 'MJRefresh'
 pod 'JSONModel'
-pod 'ColorfulWoodNavigationBar'
 pod 'ColorfulWoodTools'                     #弹窗提示等
 pod 'RITLPhotos'                            #选择图片
 end

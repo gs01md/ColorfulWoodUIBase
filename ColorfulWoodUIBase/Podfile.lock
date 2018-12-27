@@ -1,9 +1,12 @@
 PODS:
   - ColorfulWoodCategories (1.0.18)
-  - ColorfulWoodNavigationBar (1.0.1)
+  - ColorfulWoodNavigationBar (1.0.5)
   - ColorfulWoodPoint (1.0.6)
-  - ColorfulWoodTools (1.0.18):
+  - ColorfulWoodTools (1.0.24):
+    - ColorfulWoodNavigationBar
+    - Masonry
     - MBProgressHUD
+    - SDWebImage
   - JSONModel (1.7.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
@@ -132,7 +135,6 @@ PODS:
 
 DEPENDENCIES:
   - ColorfulWoodCategories
-  - ColorfulWoodNavigationBar
   - ColorfulWoodPoint
   - ColorfulWoodTools
   - JSONModel
@@ -158,9 +160,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ColorfulWoodCategories: 74173fa70ef860621afa102bfb03dc3f9b542979
-  ColorfulWoodNavigationBar: f98081d1bd446cac2b74f62ebe7ad779bb2dc436
+  ColorfulWoodNavigationBar: aa725c7fe7a235811708c248ecaa9e6202caabac
   ColorfulWoodPoint: 8d7e960cde283aabf7c2242c1a17b85401eee049
-  ColorfulWoodTools: 9e0927b431b5e406686b5b1a54de7fadd71b8937
+  ColorfulWoodTools: 427107c26dab0238ad49959d92f9a5671a667511
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -170,6 +172,6 @@ SPEC CHECKSUMS:
   RITLViewFrame: 4e38e6333e6b4691c1980c3fcda9ff4d08f0d2c8
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 47daee01c3de981b8baecced939032a779386637
+PODFILE CHECKSUM: 95096a2fca0296b57477609fb01d989dde7352fb
 
 COCOAPODS: 1.6.0.beta.1

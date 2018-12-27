@@ -9,14 +9,36 @@
 #import "ColorfulWoodAlert.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
-#define ColorfulWoodAlertKeyWindow [UIApplication sharedApplication].keyWindow
+//#define ColorfulWoodAlertKeyWindow [UIApplication sharedApplication].keyWindow
+#define ColorfulWoodAlertKeyWindow [[[UIApplication sharedApplication] delegate] window]
+
 
 @implementation ColorfulWoodAlert
 
+#pragma mark - 单例
+static ColorfulWoodAlert * share = nil;
+
++ (id)shareInstance {
+
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+
+        share = [[self alloc] init];
+
+    });
+
+    return share;
+}
+
 + (void) showAlertWaitingNetwork{
+
+    UIWindow * window = ColorfulWoodAlertKeyWindow;
     
     [ColorfulWoodAlert hidden];
-    
+    if (!window) {
+        return;
+    }
+
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:ColorfulWoodAlertKeyWindow animated:YES];
     hud.bezelView.backgroundColor = [UIColor blackColor];
     hud.contentColor = [UIColor whiteColor];
@@ -28,7 +50,10 @@
 + (void) showAlertAutoHideWithTitle:(NSString*)title afterDelay:(NSTimeInterval)delay{
     
     [ColorfulWoodAlert hidden];
-    
+    if (!ColorfulWoodAlertKeyWindow) {
+        return;
+    }
+
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:ColorfulWoodAlertKeyWindow animated:YES];
     hud.bezelView.backgroundColor = [UIColor blackColor];
     hud.contentColor = [UIColor whiteColor];
@@ -52,6 +77,9 @@
 + (void) showAlertWithTitle:(NSString*)title{
     
     [ColorfulWoodAlert hidden];
+    if (!ColorfulWoodAlertKeyWindow) {
+        return;
+    }
     
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:ColorfulWoodAlertKeyWindow animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -66,6 +94,9 @@
 + (void) showAlertAutoHideWithTitle:(NSString*)title afterDelay:(NSTimeInterval)delay font:(UIFont*)font{
 
     [ColorfulWoodAlert hidden];
+    if (!ColorfulWoodAlertKeyWindow) {
+        return;
+    }
 
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:ColorfulWoodAlertKeyWindow animated:YES];
     hud.bezelView.backgroundColor = [UIColor blackColor];
@@ -96,6 +127,10 @@
 + (void) showAlertWithTitle:(NSString*)title font:(UIFont*)font{
 
     [ColorfulWoodAlert hidden];
+    if (!ColorfulWoodAlertKeyWindow) {
+        return;
+    }
+
 
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:ColorfulWoodAlertKeyWindow animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
