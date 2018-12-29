@@ -200,7 +200,7 @@
         [self func_endTimer];
         self.m_model.m_stopTimer = FALSE;
     }
-    
+
     [self func_updateConsrtains];
 }
 
@@ -213,16 +213,6 @@
 #pragma mark - 事件
 
 - (void)onClick_right{
-
-    if (self.m_canTimer) {
-
-        /**
-         * 倒计时
-         */
-        [self func_timer];
-
-
-    }
 
     if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate_right)]) {
 
@@ -329,6 +319,15 @@
 
     if ([code isEqualToString:@"showBottomLine"]) {
         self.m_lbl_rightBottom.hidden = NO;
+    }
+
+    if ([code isEqualToString:CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_startTimer]) {
+
+        /**
+         * 倒计时
+         */
+        [self func_timer];
+
     }
 }
 

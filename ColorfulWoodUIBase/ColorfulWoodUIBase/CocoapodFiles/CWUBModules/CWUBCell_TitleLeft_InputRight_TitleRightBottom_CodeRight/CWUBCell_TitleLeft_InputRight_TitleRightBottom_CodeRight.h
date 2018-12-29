@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_startTimer @"CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_startTimer"
+
 @protocol CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate <NSObject>
 @optional
 

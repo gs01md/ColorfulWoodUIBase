@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ColorfulWoodUIBase.h"
 #import <MJRefresh/MJRefresh.h>
+#import "CWUBCtrlStartPage.h"
 
 @interface ViewController ()<
 UITableViewDelegate,
@@ -48,6 +49,17 @@ CWUBCell_ImgCenter_delegate
     [self testTableView];
 
     self.view.backgroundColor = [UIColor blueColor];
+
+    [self testStart];
+}
+
+- (void) testStart{
+
+    CWUBCtrlStartPage *vc = [CWUBCtrlStartPage new];
+    [vc interface_setupWithImgs:@[@"big", @"companyback", @"back"] xImgs:nil btnImg:@"button"];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 - (void) testView {
