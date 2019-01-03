@@ -132,7 +132,7 @@ CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate
 - (void)interface_addNaviWithTitle:(NSString*)title;
 
 /**
- * 返回按钮和标题
+ * 返回按钮和标题 标题为空时，则表现为只有左侧按钮
  */
 - (void)interface_addNaviBarBackTitle:(NSString *)title;
 

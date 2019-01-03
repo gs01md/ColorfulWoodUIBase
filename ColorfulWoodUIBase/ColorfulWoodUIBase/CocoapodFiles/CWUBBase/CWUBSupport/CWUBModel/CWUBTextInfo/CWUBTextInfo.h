@@ -20,6 +20,11 @@
 @property(nonatomic, strong) UIColor * m_color_backGround;
 
 /**
+ * textView 是否需要滚动，默认不需要
+ */
+@property(nonatomic, assign) BOOL m_textView_scroll;
+
+/**
  * 另外一个数值，用于倒计时等操作
  */
 @property(nonatomic, assign) int m_valueOpt;
@@ -50,6 +55,11 @@
 @property(nonatomic, strong) CWUBCornerInfo * m_cornerInfo;
 
 @property(nonatomic, strong) NSString * m_textPlaceholder;
+/**
+ * textView用到设置默认文字颜色
+ */
+@property(nonatomic, strong) UIColor * m_colorPlaceholder;
+
 @property(nonatomic, assign) BOOL m_isHidden;
 @property(nonatomic, assign) CWUBLabelTextVerticalType m_labelTextVerticalType;
 @property(nonatomic, assign) CWUBLabelTextHorizontalType m_labelTextHorizontalType;
@@ -58,6 +68,11 @@
  * 行数:0=多行
  */
 @property(nonatomic, assign) int m_numberOfLines;
+
+/**
+ * 限制输入框输入的字数
+ */
+@property(nonatomic, assign) int m_limitInputNum;
 
 /**
  * 设置宽度
@@ -70,9 +85,14 @@
 @property(nonatomic, assign) float m_height;
 
 /**
- * 设置最大宽度，用于
+ * 设置最大宽度
  */
 @property(nonatomic, assign) float m_width_max;
+
+/**
+ * 设置最小高度
+ */
+@property(nonatomic, assign) float m_height_min;
 
 /**
  * 正则表达式，限制规则，不符合则禁止输入

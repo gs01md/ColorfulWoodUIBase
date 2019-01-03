@@ -78,7 +78,11 @@
 
     UIView * view = nil;
 
-    if (self.m_type) {
+    /**
+     * 前期用的是m_type来判断是否有效
+     * 后面的就用m_typeName类判断是否有效
+     */
+    if (self.m_type || self.m_typeName.length>0) {
 
         switch (self.m_type) {
 
@@ -324,11 +328,38 @@
 
 
             default:
+                view = [self func_CWUBCellBaseWithTableView:tableView cellName:self.m_typeName];
                 break;
         }
     }
 
     return view;
+
+}
+
+/**
+ * 通用创建cell
+ */
+- (CWUBCellBase*) func_CWUBCellBaseWithTableView:(UITableView*)tableView cellName:(NSString*)cellName{
+
+    if (cellName && cellName.length > 0) {
+        if (tableView) {
+            NSString *identify = cellName;
+
+            CWUBCellBase *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+            if (!cell) {
+                cell = [[NSClassFromString(cellName) alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
+                cell.m_tableView = tableView;
+            }
+
+            return cell;
+
+        }else{
+            return [[CWUBCellBase alloc] initWithModel:self];
+        }
+    }else{
+        return [[CWUBCellBase alloc] initWithModel:self];
+    }
 
 }
 
@@ -1196,7 +1227,7 @@
 - (CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow*) func_CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow:(UITableView*)tableView{
 
     if (tableView) {
-        static NSString *identify = @"CWUBCell_InputLeft_CodeRight";
+        static NSString *identify = @"CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow";
         CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow *cell = [tableView dequeueReusableCellWithIdentifier:identify];
         if (!cell) {
             cell = [[CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify model:self];
@@ -1209,6 +1240,8 @@
     }
 
 }
+
+
 
 #pragma mark - 参数设置
 
@@ -1228,6 +1261,14 @@
     }
 
     return _m_bottomLineInfo;
+}
+
+- (NSString *)m_typeName{
+    if (!_m_typeName) {
+        _m_typeName = @"CWUBCellBase";
+    }
+
+    return _m_typeName;
 }
 
 #pragma mark - 测试数据

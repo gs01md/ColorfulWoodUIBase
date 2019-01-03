@@ -100,6 +100,14 @@
     return _m_textPlaceholder;
 }
 
+- (UIColor *) m_colorPlaceholder{
+
+    if (!_m_colorPlaceholder) {
+        _m_colorPlaceholder = CWUBDefineCreate_ColorRGB(0xCCCCCC);
+    }
+    return _m_colorPlaceholder;
+}
+
 - (int)m_numberOfLines{
 
     if (_m_numberOfLines<0) {
@@ -173,7 +181,7 @@
 
     NSDictionary *attrs=@{NSFontAttributeName:self.m_font};
     CGSize mySize=[self.m_text sizeWithAttributes:attrs];
-    self.m_width = mySize.width;
+    self.m_width = mySize.width + 5;
 
     return self.m_width;
 }

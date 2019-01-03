@@ -50,7 +50,7 @@ CWUBCell_ImgCenter_delegate
 
     self.view.backgroundColor = [UIColor blueColor];
 
-    [self testStart];
+    //[self testStart];
 }
 
 - (void) testStart{
@@ -159,6 +159,8 @@ CWUBCell_ImgCenter_delegate
 - (void) func_getOne{
 
     NSMutableArray * data = [NSMutableArray new];
+    [CWUBCell_TitleLeft_InputRight_NumRightBottom_Model tester_dataWithArray:data];
+    [CWUBCell_TitleLeft_InputRight_NumRight_Model tester_dataWithArray:data];
 
     [CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Model tester_dataWithArray:data];
     [CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Model tester_dataWithArray1:data];

@@ -14,10 +14,13 @@
 #import "CWUBLabelWithModel.h"
 #import "CWUBLableLeftTop.h"
 #import "CWUBTextfieldWithModel.h"
+#import "CWUBTextView.h"
 #import "CWUBImageViewWithModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CWUBCellBase : UITableViewCell
+
+@property (nonatomic, weak) UITableView *m_tableView;
 
 @property (nonatomic, weak) UIViewController * m_delegate;
 

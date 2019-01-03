@@ -26,6 +26,10 @@
  * 界面类型
  */
 @property(nonatomic, assign)CWUBCellType m_type;
+/**
+ * 界面类型类名称，用于创建类
+ */
+@property(nonatomic, strong)NSString *m_typeName;
 
 /**
  * 根据类型获取视图
