@@ -22,7 +22,9 @@ CWUBCell_CollectionTop_TitleBottom_Delegate,
 CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate,
 CWUBCell_UploadImgWithTitle_S1_Delegate,
 CWUBCell_Publish_CollectionDelegate,
-CWUBCell_ImgCenter_delegate
+CWUBCell_ImgCenter_delegate,
+CWUBCell_TitleLeft_InputRight_NumRight_Delegate,
+CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 >
 @property(nonatomic, strong)CWUBModel * m_model;
 @property(nonatomic, strong)CWUBModel * m_model_viewHead;
@@ -349,6 +351,17 @@ CWUBCell_ImgCenter_delegate
             cell1.delegate = self;
         }
 
+        if ([model.m_typeName isEqualToString:@"CWUBCell_TitleLeft_InputRight_NumRight"]) {
+            CWUBCell_TitleLeft_InputRight_NumRight * cell1 = (CWUBCell_TitleLeft_InputRight_NumRight*)cell;
+            cell1.delegate = self;
+        }
+
+
+        if ([model.m_typeName isEqualToString:@"CWUBCell_TitleLeft_InputRight_NumRightBottom"]) {
+            CWUBCell_TitleLeft_InputRight_NumRightBottom * cell1 = (CWUBCell_TitleLeft_InputRight_NumRightBottom*)cell;
+            cell1.delegate = self;
+        }
+
 
         return cell;
 
@@ -541,5 +554,10 @@ CWUBCell_ImgCenter_delegate
     NOTI.m_value = @"13859832121";
     [[NSNotificationCenter defaultCenter] postNotificationName:CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_NOTI object:NOTI];
 
+}
+
+- (void)CWUBCellBaseDelegate_textView_endEditing:(CWUBModelBase *)model{
+
+    NSLog(@"");
 }
 @end

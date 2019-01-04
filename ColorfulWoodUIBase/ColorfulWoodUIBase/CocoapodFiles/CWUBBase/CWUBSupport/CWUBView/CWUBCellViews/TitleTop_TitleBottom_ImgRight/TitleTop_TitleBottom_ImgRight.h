@@ -8,6 +8,7 @@
 
 #import "CWUBCellViewBase.h"
 #import "TitleTop_TitleBottom_ImgRight_Model.h"
+
 @protocol TitleTop_TitleBottom_ImgRight_Delegate <NSObject>
 @optional
 /**

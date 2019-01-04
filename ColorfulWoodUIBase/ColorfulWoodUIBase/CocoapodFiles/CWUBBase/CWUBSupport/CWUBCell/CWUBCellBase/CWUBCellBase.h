@@ -18,11 +18,17 @@
 #import "CWUBImageViewWithModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
+@protocol CWUBCellBaseDelegate <NSObject>
+@optional
+- (void)CWUBCellBaseDelegate_textView_endEditing:(CWUBModelBase *)model;
+
+@end
+
 @interface CWUBCellBase : UITableViewCell
 
 @property (nonatomic, weak) UITableView *m_tableView;
 
-@property (nonatomic, weak) UIViewController * m_delegate;
+@property (nonatomic, weak) id<CWUBCellBaseDelegate> m_delegate;
 
 @property (nonatomic, strong) UIImageView * m_img_sep;
 

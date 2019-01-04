@@ -18,6 +18,9 @@
 #import "CWUBCell_ImgCenter.h"
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.h"
 #import <RITLPhotos/RITLPhotos.h>
+#import "CWUBCell_TitleLeft_InputRight_NumRight.h"
+#import "CWUBCell_TitleLeft_InputRight_NumRightBottom.h"
+
 
 @interface CWUBControllerBase : UIViewController<
 UITableViewDelegate,
@@ -30,7 +33,10 @@ CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Delegate,
 CWUBCell_SelectSex_Style1_Delegate,
 CWUBCell_ImgCenter_delegate,
-CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate
+CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate,
+CWUBCellBaseDelegate,
+CWUBCell_TitleLeft_InputRight_NumRight_Delegate,
+CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 >
 
 #pragma mark - 选择图片 RITLPhotosViewController

@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol CWUBCell_TitleLeft_InputRight_NumRight_Delegate <NSObject>
+@protocol CWUBCell_TitleLeft_InputRight_NumRight_Delegate <CWUBCellBaseDelegate>
 @optional
 /**
  * 更新高度
@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 可能是任何参数的改变，传出之后，根据参数，单独cell刷新界面，不需要tableview reloaddata ,导致输入框键盘的关闭
  */
 - (void)CWUBCell_TitleLeft_InputRight_NumRight_Delegate_changed:(CWUBCell_TitleLeft_InputRight_NumRight_Model*)model;
+
 @end
 
 @interface CWUBCell_TitleLeft_InputRight_NumRight : CWUBCellBase

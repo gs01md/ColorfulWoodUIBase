@@ -10,7 +10,7 @@
 #import "CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model.h"
 
 #define CWUB_NOTIFICATION_CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom @"CWUB_NOTIFICATION_CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom"
-@protocol CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottomDelegate <NSObject>
+@protocol CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottomDelegate <CWUBCellBaseDelegate>
 @optional
 /**
  * 点击左侧图片

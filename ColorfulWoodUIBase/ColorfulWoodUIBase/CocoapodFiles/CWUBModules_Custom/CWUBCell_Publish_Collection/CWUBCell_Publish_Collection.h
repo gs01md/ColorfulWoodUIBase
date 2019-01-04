@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #define CWUB_NOTIFICATION_CWUBCell_Publish_Collection @"CWUB_NOTIFICATION_CWUBCell_Publish_Collection"
-@protocol CWUBCell_Publish_CollectionDelegate <NSObject>
+@protocol CWUBCell_Publish_CollectionDelegate <CWUBCellBaseDelegate>
 @optional
 /**
  * 点击左侧图片

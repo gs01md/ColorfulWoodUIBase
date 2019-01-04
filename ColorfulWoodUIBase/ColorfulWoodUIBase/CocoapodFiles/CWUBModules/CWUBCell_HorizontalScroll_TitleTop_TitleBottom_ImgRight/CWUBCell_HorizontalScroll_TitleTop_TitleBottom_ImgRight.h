@@ -9,7 +9,7 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Model.h"
 
-@protocol CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate <NSObject>
+@protocol CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate <CWUBCellBaseDelegate>
 @optional
 - (void)CWUBCell_HorizontalScroll_TitleTop_TitleBottom_ImgRight_Delegate_clickWithCode:(NSString*)code;
 @end

@@ -9,7 +9,7 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_Passenger_Opt_Model.h"
 
-@protocol CWUBCell_Passenger_Opt_Delegate <NSObject>
+@protocol CWUBCell_Passenger_Opt_Delegate <CWUBCellBaseDelegate>
 @optional
 -(void) CWUBCell_Passenger_Opt_Delegate_save;
 -(void) CWUBCell_Passenger_Opt_Delegate_cancel;

@@ -10,7 +10,7 @@
 #import "CWUBCell_CollectionTop_TitleBottom_Model.h"
 
 
-@protocol CWUBCell_CollectionTop_TitleBottom_Delegate <NSObject>
+@protocol CWUBCell_CollectionTop_TitleBottom_Delegate <CWUBCellBaseDelegate>
 @optional
 /**
  * 返回选择的行，外面重设tableview的数据，然后刷新该界面

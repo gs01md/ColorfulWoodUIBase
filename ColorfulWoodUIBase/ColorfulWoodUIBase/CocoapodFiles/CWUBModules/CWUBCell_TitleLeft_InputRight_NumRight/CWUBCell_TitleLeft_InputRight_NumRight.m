@@ -300,6 +300,14 @@ UITextViewDelegate
 
 }
 
+-(void)textViewDidEndEditing:(UITextView *)textView{
+
+    if ([self.delegate respondsToSelector:@selector(CWUBCellBaseDelegate_textView_endEditing:)]) {
+
+        [self.delegate CWUBCellBaseDelegate_textView_endEditing:self.m_model];
+    }
+}
+
 - (void)awakeFromNib {[super awakeFromNib];}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {[super setSelected:selected animated:animated];}

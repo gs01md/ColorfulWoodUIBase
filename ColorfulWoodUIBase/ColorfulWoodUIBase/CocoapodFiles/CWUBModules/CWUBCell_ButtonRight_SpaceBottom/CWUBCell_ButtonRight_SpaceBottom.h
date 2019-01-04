@@ -9,7 +9,7 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_ButtonRight_SpaceBottom_Model.h"
 
-@protocol CWUBCell_ButtonRight_SpaceBottom_Delegate <NSObject>
+@protocol CWUBCell_ButtonRight_SpaceBottom_Delegate <CWUBCellBaseDelegate>
 @optional
 /**
  * 详情

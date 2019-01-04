@@ -299,44 +299,15 @@ UITextViewDelegate
     }
 
 }
-#pragma mark - 事件
 
-- (void)event_textFieldDidChange:(UITextField *)theTextField{
+-(void)textViewDidEndEditing:(UITextView *)textView{
 
-    /**
-     * 之所以保留改事件，就是因为 正则表达式需要最后来判断
-     */
-    theTextField.text = [theTextField.text interface_getWithRegex:self.m_model.m_input_center.m_regex];
+    if ([self.delegate respondsToSelector:@selector(CWUBCellBaseDelegate_textView_endEditing:)]) {
 
-    /**
-     * 小写字母变成大写字母
-     */
-    if (self.m_model.m_input_center.m_bUppercaseString) {
-        theTextField.text = [theTextField.text uppercaseString];
-    }
-
-    self.m_model.m_input_center.m_text = theTextField.text;
-    self.m_model.m_dataOut = self.m_model.m_input_center.m_text;
-
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate_textChanged:)]) {
-
-        [self.delegate CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate_textChanged:self.m_model.m_dataOut];
-    }
-
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate_changed:)]) {
-
-        [self.delegate CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate_changed:self.m_model];
-    }
-
-    [self func_updateConsrtains];
-
-    if (self.m_tableView) {
-        [UIView performWithoutAnimation:^{
-            [self.m_tableView beginUpdates];
-            [self.m_tableView endUpdates];
-        }];
+        [self.delegate CWUBCellBaseDelegate_textView_endEditing:self.m_model];
     }
 }
+
 
 - (void)awakeFromNib {[super awakeFromNib];}
 

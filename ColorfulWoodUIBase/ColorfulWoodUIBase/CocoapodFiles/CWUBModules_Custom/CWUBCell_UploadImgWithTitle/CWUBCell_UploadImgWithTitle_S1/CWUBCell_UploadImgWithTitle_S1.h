@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol CWUBCell_UploadImgWithTitle_S1_Delegate <NSObject>
+@protocol CWUBCell_UploadImgWithTitle_S1_Delegate <CWUBCellBaseDelegate>
 
 @optional
 /**

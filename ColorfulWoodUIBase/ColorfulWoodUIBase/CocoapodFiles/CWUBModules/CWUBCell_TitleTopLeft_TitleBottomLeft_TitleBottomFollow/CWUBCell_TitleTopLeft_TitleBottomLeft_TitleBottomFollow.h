@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@protocol CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Delegate <NSObject>
+@protocol CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Delegate <CWUBCellBaseDelegate>
 @optional
 
 /**

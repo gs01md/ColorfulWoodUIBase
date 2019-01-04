@@ -9,7 +9,7 @@
 #import "CWUBCellBase.h"
 #import "CWUBCell_ImgCenter_Model.h"
 
-@protocol CWUBCell_ImgCenter_delegate <NSObject>
+@protocol CWUBCell_ImgCenter_delegate <CWUBCellBaseDelegate>
 @optional
 - (void)CWUBCell_ImgCenter_delegate_clickImg;
 

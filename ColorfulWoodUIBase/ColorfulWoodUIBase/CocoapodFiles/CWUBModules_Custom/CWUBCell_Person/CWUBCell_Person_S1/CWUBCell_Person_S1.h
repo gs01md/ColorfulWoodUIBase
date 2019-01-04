@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 #define CWUB_NOTIFICATION_CWUBCell_Person_S1 @"CWUB_NOTIFICATION_CWUBCell_Person_S1"
-@protocol CWUBCell_Person_S1Delegate <NSObject>
+@protocol CWUBCell_Person_S1Delegate <CWUBCellBaseDelegate>
 @optional
 /**
  * 点击左侧图片

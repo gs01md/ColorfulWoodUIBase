@@ -35,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ColorfulWoodUIBase/CocoapodFiles/CWUBModules/CWUBCell_TitleLeft_InputRight_NumRightBottom/CWUBCell_TitleLeft_InputRight_NumRightBottom.m"
-            timestampString = "568259307.1303149"
+            filePath = "ColorfulWoodUIBase/ViewController.m"
+            timestampString = "568277262.6234241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
-            landmarkName = "-event_textFieldDidChange:"
+            startingLineNumber = "561"
+            endingLineNumber = "561"
+            landmarkName = "-CWUBCellBaseDelegate_textView_endEditing:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

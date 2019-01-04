@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol CWUBCell_InputLeft_CodeRight_Delegate <NSObject>
+@protocol CWUBCell_InputLeft_CodeRight_Delegate <CWUBCellBaseDelegate>
 @optional
 
 /**
