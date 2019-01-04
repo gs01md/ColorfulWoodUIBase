@@ -225,6 +225,14 @@ UITextViewDelegate
     NSString * new_text_str = [textView.text stringByReplacingCharactersInRange:range withString:text];
 
     /**
+     * 如果不符合正则表达式，则不改变
+     */
+    NSString *str = [new_text_str interface_getWithRegex:self.m_model.m_input_center.m_regex];
+    if (![new_text_str isEqualToString: str]) {
+        return FALSE;
+    }
+
+    /**
      * 更新限制个数
      * 如果超过限制，则返回
      */
@@ -235,6 +243,7 @@ UITextViewDelegate
             return FALSE;
         } else {
             self.m_lbl_numRight.text = [NSString stringWithFormat:@"%lu/%d",(unsigned long)new_text_str.length,self.m_model.m_input_center.m_limitInputNum];
+            self.m_model.m_title_numRightBottom.m_text = self.m_lbl_numRight.text;
         }
 
     }
@@ -253,6 +262,11 @@ UITextViewDelegate
 }
 
 - (void)textViewDidChange:(UITextView *)textView{
+
+    NSString * str = textView.text;
+    self.m_lbl_numRight.text = [NSString stringWithFormat:@"%lu/%d",(unsigned long)str.length,self.m_model.m_input_center.m_limitInputNum];
+    self.m_model.m_input_center.m_text = str;
+
 
     if (self.m_model.m_input_center.m_text.length > 0) {
         [self.m_textfield_place setHidden:YES];

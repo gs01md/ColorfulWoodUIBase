@@ -77,7 +77,7 @@
 
     model13.m_input_center = [[CWUBTextInfo alloc] initWithText:@"" font:[UIFont fontWithName:@"PingFang-SC-Regular" size:14] color:CWUBDefineCreate_ColorRGB(0x212121)];
     model13.m_input_center.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_left;
-    //model13.m_input_right.m_regex = ColorfulWoodRegex_1;
+    //model13.m_input_center.m_regex = @"^[0-9]*$";
     //model13.m_input_right.m_bUppercaseString = YES;
     model13.m_input_center.m_textField_realTime = YES;
     model13.m_input_center.m_textPlaceholder = @"请填写优惠券的名称";

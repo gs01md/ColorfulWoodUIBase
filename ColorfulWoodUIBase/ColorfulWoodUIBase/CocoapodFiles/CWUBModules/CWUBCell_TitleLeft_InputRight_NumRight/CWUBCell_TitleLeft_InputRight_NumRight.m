@@ -223,6 +223,13 @@ UITextViewDelegate
     NSString * new_text_str = [textView.text stringByReplacingCharactersInRange:range withString:text];
 
     /**
+     * 如果不符合正则表达式，则不改变
+     */
+    NSString *str = [new_text_str interface_getWithRegex:self.m_model.m_input_center.m_regex];
+    if (![new_text_str isEqualToString: str]) {
+        return FALSE;
+    }
+    /**
      * 更新限制个数
      * 如果超过限制，则返回
      */
@@ -248,6 +255,19 @@ UITextViewDelegate
     self.m_model.m_input_center.m_text = new_text_str;
     self.m_model.m_dataOut = self.m_model.m_input_center.m_text;
 
+
+    return YES;
+}
+#pragma mark - 事件
+
+
+- (void)textViewDidChange:(UITextView *)textView{
+
+    NSString *str = textView.text;
+
+    self.m_lbl_numRight.text = [NSString stringWithFormat:@"%lu/%d",(unsigned long)str.length,self.m_model.m_input_center.m_limitInputNum];
+    self.m_model.m_input_center.m_text = str;
+
     if (self.m_model.m_input_center.m_text.length > 0) {
         [self.m_textfield_place setHidden:YES];
     } else {
@@ -256,8 +276,6 @@ UITextViewDelegate
         self.m_textfield_place.text = self.m_model.m_input_center.m_textPlaceholder;
     }
 
-
-
     if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_NumRight_Delegate_textChanged:)]) {
 
         [self.delegate CWUBCell_TitleLeft_InputRight_NumRight_Delegate_textChanged:self.m_model.m_dataOut];
@@ -279,52 +297,6 @@ UITextViewDelegate
         }];
     }
 
-
-    return YES;
-}
-#pragma mark - 事件
-
-- (void)event_textFieldDidChange:(UITextField *)theTextField{
-
-    /**
-     * 之所以保留改事件，就是因为 正则表达式需要最后来判断
-     */
-    theTextField.text = [theTextField.text interface_getWithRegex:self.m_model.m_input_center.m_regex];
-
-    /**
-     * 小写字母变成大写字母
-     */
-    if (self.m_model.m_input_center.m_bUppercaseString) {
-        theTextField.text = [theTextField.text uppercaseString];
-    }
-
-    self.m_model.m_input_center.m_text = theTextField.text;
-    self.m_model.m_dataOut = self.m_model.m_input_center.m_text;
-
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_NumRight_Delegate_textChanged:)]) {
-
-        [self.delegate CWUBCell_TitleLeft_InputRight_NumRight_Delegate_textChanged:self.m_model.m_dataOut];
-    }
-
-    if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_NumRight_Delegate_changed:)]) {
-
-        [self.delegate CWUBCell_TitleLeft_InputRight_NumRight_Delegate_changed:self.m_model];
-    }
-
-}
-
-- (void)textViewDidChange:(UITextView *)textView{
-
-    /**
-     * 刷新界面
-     */
-    [self func_updateConsrtains];
-    if (self.m_tableView) {
-        [UIView performWithoutAnimation:^{
-            [self.m_tableView beginUpdates];
-            [self.m_tableView endUpdates];
-        }];
-    }
 
 }
 
