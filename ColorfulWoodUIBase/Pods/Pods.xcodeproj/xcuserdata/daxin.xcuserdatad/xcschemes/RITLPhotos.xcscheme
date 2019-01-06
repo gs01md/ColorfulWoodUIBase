@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D569A8B8F449B6E7271C6D85A7A80C55"
+               BlueprintIdentifier = "BBA70E646AC5C3907BDE0224831ACBA4"
                BlueprintName = "RITLPhotos"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libRITLPhotos.a">

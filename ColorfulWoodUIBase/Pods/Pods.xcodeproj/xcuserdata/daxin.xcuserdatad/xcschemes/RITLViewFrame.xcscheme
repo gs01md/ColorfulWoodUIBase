@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD73E1209757D040ADA9BD468559DC4E"
+               BlueprintIdentifier = "C61F820F1D69BF6B7901884C2B67F193"
                BlueprintName = "RITLViewFrame"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libRITLViewFrame.a">

@@ -164,6 +164,7 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
     [CWUBCell_TitleLeft_InputRight_NumRightBottom_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_InputRight_NumRight_Model tester_dataWithArray:data];
 
+
     [CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Model tester_dataWithArray:data];
     [CWUBCell_TitleTopLeft_TitleBottomLeft_TitleBottomFollow_Model tester_dataWithArray1:data];
 
@@ -560,4 +561,5 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 
     NSLog(@"");
 }
+
 @end

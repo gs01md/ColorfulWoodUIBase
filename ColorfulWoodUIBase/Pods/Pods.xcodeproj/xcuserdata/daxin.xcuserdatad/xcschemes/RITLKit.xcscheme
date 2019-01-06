@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13A472D73E1E30E67C3297F50B53C55E"
+               BlueprintIdentifier = "38EA586DF2F0ACA807E759C01C27A8DD"
                BlueprintName = "RITLKit"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libRITLKit.a">

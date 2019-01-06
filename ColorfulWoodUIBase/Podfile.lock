@@ -7,7 +7,7 @@ PODS:
     - Masonry
     - MBProgressHUD
     - SDWebImage
-  - JSONModel (1.7.0)
+  - IQKeyboardManager (6.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.15.3)
@@ -137,7 +137,7 @@ DEPENDENCIES:
   - ColorfulWoodCategories
   - ColorfulWoodPoint
   - ColorfulWoodTools
-  - JSONModel
+  - IQKeyboardManager
   - Masonry
   - MJRefresh
   - RITLPhotos
@@ -149,7 +149,7 @@ SPEC REPOS:
     - ColorfulWoodNavigationBar
     - ColorfulWoodPoint
     - ColorfulWoodTools
-    - JSONModel
+    - IQKeyboardManager
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -163,7 +163,7 @@ SPEC CHECKSUMS:
   ColorfulWoodNavigationBar: aa725c7fe7a235811708c248ecaa9e6202caabac
   ColorfulWoodPoint: 8d7e960cde283aabf7c2242c1a17b85401eee049
   ColorfulWoodTools: 427107c26dab0238ad49959d92f9a5671a667511
-  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
@@ -172,6 +172,6 @@ SPEC CHECKSUMS:
   RITLViewFrame: 4e38e6333e6b4691c1980c3fcda9ff4d08f0d2c8
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 95096a2fca0296b57477609fb01d989dde7352fb
+PODFILE CHECKSUM: 196ddf3e2196bc19d8e796c815ae8a9bdda77687
 
 COCOAPODS: 1.6.0.beta.1

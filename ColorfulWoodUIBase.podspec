@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "ColorfulWoodUIBase"
-s.version      = "1.2.56"
+s.version      = "1.2.57"
 s.summary      = "User Interface Design."
 
 s.homepage     = "https://github.com/gs01md"
@@ -31,5 +31,6 @@ s.dependency     'ColorfulWoodNavigationBar'
 s.dependency     'ColorfulWoodPoint'
 s.dependency     'ColorfulWoodTools'
 s.dependency     'RITLPhotos' #选择图片
+s.dependency     'IQKeyboardManager'
 
 end

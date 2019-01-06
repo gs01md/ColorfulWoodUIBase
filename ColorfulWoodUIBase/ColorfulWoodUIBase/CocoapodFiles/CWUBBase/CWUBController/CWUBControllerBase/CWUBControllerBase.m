@@ -11,6 +11,7 @@
 #import "CWUBDefine.h"
 #import "CWUBDefaultView.h"
 #import <ColorfulWoodTools/ColorfulWoodAlert.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface CWUBControllerBase ()<
 RITLPhotosViewControllerDelegate
@@ -40,6 +41,8 @@ static UIImage * m_image;
     if (!m_image) {
         m_image = CWUBBDefine_bundle_pngImg(@"CWUBBundle_Back@2x");
     }
+    
+    [self func_configKeyboard];
 
 }
 
@@ -53,6 +56,7 @@ static UIImage * m_image;
 
     [self.navigationController setNavigationBarHidden:YES];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+
 }
 
 #pragma mark - tableView
@@ -329,7 +333,7 @@ static UIImage * m_image;
         [_m_navigationBar cw_setBottomLineHidden:YES];
         _m_navigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
         _m_navigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
-        _m_navigationBar.backgroundColor = [UIColor blueColor];
+        _m_navigationBar.backgroundColor = [UIColor whiteColor];
     }
     return _m_navigationBar;
     
@@ -590,6 +594,14 @@ static UIImage * m_image;
     }
 }
 
+#pragma mark - 配制键盘
+- (void)func_configKeyboard{
+
+    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
+    keyboardManager.enable = YES; // 控制整个功能是否启用
+    keyboardManager.shouldResignOnTouchOutside = YES; // 控制点击背景是否收起键盘
+    keyboardManager.enableAutoToolbar = NO; // 控制是否显示键盘上的工具条
+}
 
 #pragma mark - 背景设置
 - (CWUBDefaultView *)m_defaultView{
