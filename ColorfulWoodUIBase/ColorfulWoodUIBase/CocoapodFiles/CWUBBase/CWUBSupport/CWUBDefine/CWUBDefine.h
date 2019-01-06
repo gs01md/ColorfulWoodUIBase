@@ -152,7 +152,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
 /**
  * 导航栏高度
  */
-#define CWUBBDefine_Height_NavBar 44.0f
+#define CWUBBDefine_Height_NavBar (CWUBBDefine_IPhoneX_All ? 88.0f:64.0f)
 
 /**
  * 顶部高度： 状态栏 + 导航栏高度

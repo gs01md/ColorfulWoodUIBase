@@ -41,7 +41,7 @@ static UIImage * m_image;
     if (!m_image) {
         m_image = CWUBBDefine_bundle_pngImg(@"CWUBBundle_Back@2x");
     }
-    
+
     [self func_configKeyboard];
 
 }
@@ -50,35 +50,39 @@ static UIImage * m_image;
 
     [super viewWillAppear:animated];
 
-    UITableView.appearance.estimatedRowHeight = 200;
-    UITableView.appearance.estimatedSectionFooterHeight = 0;
-    UITableView.appearance.estimatedSectionHeaderHeight = 0;
+    //    UITableView.appearance.estimatedRowHeight = 200;
+    //    UITableView.appearance.estimatedSectionFooterHeight = 0;
+    //    UITableView.appearance.estimatedSectionHeaderHeight = 0;
 
     [self.navigationController setNavigationBarHidden:YES];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
 
+
+#pragma mark - 配制键盘
+- (void)func_configKeyboard{
+
+    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
+    keyboardManager.enable = YES; // 控制整个功能是否启用
+    keyboardManager.shouldResignOnTouchOutside = YES; // 控制点击背景是否收起键盘
+    keyboardManager.enableAutoToolbar = NO; // 控制是否显示键盘上的工具条
 }
 
 #pragma mark - tableView
+
 - (UITableView*)m_tableView{
 
     if (!_m_tableView) {
-        _m_tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-        _m_tableView.tag = 2;
-        _m_tableView.delegate = self;
+
+        _m_tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _m_tableView.dataSource = self;
-        _m_tableView.allowsSelection = YES;
+        _m_tableView.delegate = self;
         _m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_m_tableView setBackgroundColor:[UIColor clearColor]];
-        //设置cell的估计高度
-        _m_tableView.estimatedRowHeight = 200;
-        _m_tableView.backgroundView = self.m_defaultView;
-
-        //iOS以后这句话是默认的，所以可以省略这句话
+        _m_tableView.estimatedRowHeight = 50;
         _m_tableView.rowHeight = UITableViewAutomaticDimension;
-        //        [_m_tableView setContentSize:CGSizeMake(kDeviceWidth, kDeviceHeight-(header_height)+1)];
-
-
+        _m_tableView.backgroundView = self.m_defaultView;
+        _m_tableView.allowsSelection = YES;
+        _m_tableView.backgroundColor = [UIColor clearColor];
     }
 
     return _m_tableView;
@@ -177,6 +181,7 @@ static UIImage * m_image;
 - (void)interface_addTableViewWithTop:(float)top lrSize:(float)lr hasTabbar:(BOOL)hasTabbar{
 
     [self.view addSubview:self.m_tableView];
+
     [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         if (self.m_isNaviBarShow) {
@@ -220,8 +225,7 @@ static UIImage * m_image;
     [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         if (self.m_isNaviBarShow) {
-            float height = 44 + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) + top;
-            make.top.equalTo(self.view).offset(height);
+            make.top.equalTo(self.m_navigationBar.mas_bottom).offset(top);
         } else {
             make.top.equalTo(self.view).offset(top);
         }
@@ -255,6 +259,18 @@ static UIImage * m_image;
     [self presentViewController:alertController animated:YES completion:nil];
 }
 #pragma mark - 导航栏
+
+- (ColorfulWoodNavigationBar *)m_navigationBar{
+    if (!_m_navigationBar) {
+        _m_navigationBar = [ColorfulWoodNavigationBar CustomNavigationBar];
+        [_m_navigationBar cw_setBottomLineHidden:YES];
+        _m_navigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
+        _m_navigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
+        _m_navigationBar.backgroundColor = [UIColor whiteColor];
+    }
+    return _m_navigationBar;
+
+}
 
 - (UILabel*)m_lbl_naviLeft{
 
@@ -324,19 +340,6 @@ static UIImage * m_image;
     _m_navigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
     _m_navigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
     _m_isNaviBarShow = TRUE;
-}
-
-
-- (ColorfulWoodNavigationBar *)m_navigationBar{
-    if (!_m_navigationBar) {
-        _m_navigationBar = [ColorfulWoodNavigationBar CustomNavigationBar];
-        [_m_navigationBar cw_setBottomLineHidden:YES];
-        _m_navigationBar.titleLabelFont = [UIFont fontWithName:@"PingFangSC-Medium" size:17];
-        _m_navigationBar.titleLabelColor = CWUBDefineCreate_ColorRGB(0X1A1A1A);
-        _m_navigationBar.backgroundColor = [UIColor whiteColor];
-    }
-    return _m_navigationBar;
-    
 }
 
 /**
@@ -594,14 +597,6 @@ static UIImage * m_image;
     }
 }
 
-#pragma mark - 配制键盘
-- (void)func_configKeyboard{
-
-    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
-    keyboardManager.enable = YES; // 控制整个功能是否启用
-    keyboardManager.shouldResignOnTouchOutside = YES; // 控制点击背景是否收起键盘
-    keyboardManager.enableAutoToolbar = NO; // 控制是否显示键盘上的工具条
-}
 
 #pragma mark - 背景设置
 - (CWUBDefaultView *)m_defaultView{
@@ -756,7 +751,7 @@ static UIImage * m_image;
         if (model.m_type == CWUBCellType_ImgCenter) {
             CWUBCell_ImgCenter * cell1 = (CWUBCell_ImgCenter*)cell;
             cell1.delegate = self;
- 
+
         }
 
         if (model.m_type == CWUBCellType_TitleLeft_InputRight_TitleRightBottom_CodeRight) {
@@ -791,6 +786,25 @@ static UIImage * m_image;
  */
 - (void)CWUBControllerBase_clickWithCode:(NSString *)code{
 
+
+}
+
+/**
+ * 更新数据
+ */
+- (void)interface_updateWithModel:(CWUBModel*)model{
+
+    if (model.m_array_show.count > 0) {
+
+        [self interface_defaultShow:NO];
+        self.m_model = model;
+        [self.m_tableView reloadData];
+
+    } else {
+        self.m_model = model;
+        [self.m_tableView reloadData];
+        [self interface_defaultShow:YES];
+    }
 
 }
 

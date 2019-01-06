@@ -171,4 +171,10 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
  * 导航栏右侧Label返回事件
  */
 - (void)onEvent_naviLabelRight;
+
+
+/**
+ * 更新数据
+ */
+- (void)interface_updateWithModel:(CWUBModel*)model;
 @end
