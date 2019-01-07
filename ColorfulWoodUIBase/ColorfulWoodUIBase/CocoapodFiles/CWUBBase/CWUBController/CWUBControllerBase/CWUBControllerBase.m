@@ -82,7 +82,9 @@ static UIImage * m_image;
         _m_tableView.rowHeight = UITableViewAutomaticDimension;
         _m_tableView.backgroundView = self.m_defaultView;
         _m_tableView.allowsSelection = YES;
-        _m_tableView.backgroundColor = [UIColor clearColor];
+        _m_tableView.backgroundColor = [UIColor whiteColor];
+        _m_tableView.showsHorizontalScrollIndicator = NO;
+        _m_tableView.showsVerticalScrollIndicator = NO;
     }
 
     return _m_tableView;
