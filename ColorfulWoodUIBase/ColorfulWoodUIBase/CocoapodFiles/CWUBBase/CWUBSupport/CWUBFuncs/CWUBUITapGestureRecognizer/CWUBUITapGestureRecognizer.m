@@ -9,6 +9,7 @@
 #import "CWUBUITapGestureRecognizer.h"
 
 @implementation CWUBUITapGestureRecognizer
+
 - (NSString *)m_event_opt_code{
 
     if (!_m_event_opt_code) {
@@ -17,4 +18,5 @@
 
     return _m_event_opt_code;
 }
+
 @end
