@@ -9,55 +9,55 @@
 #import "CWUBTextView.h"
 
 @interface CWUBTextView()
-@property(nonatomic, strong)CWUBTextInfo* m_info;
+@property(nonatomic, strong)CWUBTextInfo* m_model;
 @end
 
 @implementation CWUBTextView
 
--(instancetype)initWithModel:(CWUBTextInfo*)info{
+-(instancetype)initWithModel:(CWUBTextInfo*)model{
 
     if (self = [super init]) {
-        [self interface_update:info];
+        [self interface_update:model];
     }
 
     return self;
 }
 
--(void) interface_update:(CWUBTextInfo*)info{
+-(void) interface_update:(CWUBTextInfo*)model{
 
     /**
      * 默认不能滚动
      */
-    self.scrollEnabled = info.m_textView_scroll;
+    self.scrollEnabled = model.m_textView_scroll;
 
     /**
      * 不要内边距
      */
     self.textContainerInset = UIEdgeInsetsZero;
 
-    self.m_info = info;
+    self.m_model = model;
     self.text = @"";
-    if (info) {
+    if (model) {
 
-        self.text = info.m_text?info.m_text:@"";
+        self.text = model.m_text?model.m_text:@"";
 
-        if (info.m_font) {
-            self.font = info.m_font;
+        if (model.m_font) {
+            self.font = model.m_font;
         }
 
-        if (info.m_color) {
-            self.textColor = info.m_color;
+        if (model.m_color) {
+            self.textColor = model.m_color;
         }
 
-        if (info.m_textPlaceholder) {
-            //self.placeholder = info.m_textPlaceholder;
+        if (model.m_textPlaceholder) {
+            //self.placeholder = model.m_textPlaceholder;
         }
 
-        self.hidden = info.m_isHidden;
+        self.hidden = model.m_isHidden;
 
-        //self.enabled = !info.m_noEnabled;
+        //self.enabled = !model.m_noEnabled;
 
-        switch (self.m_info.m_labelTextHorizontalType) {
+        switch (self.m_model.m_labelTextHorizontalType) {
 
                 case CWUBLabelTextHorizontalType_left:
                 self.textAlignment = NSTextAlignmentLeft;
@@ -75,11 +75,17 @@
                 break;
         }
 
-        self.keyboardType = self.m_info.m_keyboard.m_keyBoardType;
-        self.keyboardAppearance = self.m_info.m_keyboard.m_keyboardAppearance;
-        self.autocapitalizationType = self.m_info.m_keyboard.m_autocapitalizationType;
-        self.autocorrectionType = self.m_info.m_keyboard.m_autocorrectionType;
-        self.secureTextEntry = self.m_info.m_keyboard.m_secureTextEntry;
+        self.keyboardType = self.m_model.m_keyboard.m_keyBoardType;
+        self.keyboardAppearance = self.m_model.m_keyboard.m_keyboardAppearance;
+        self.autocapitalizationType = self.m_model.m_keyboard.m_autocapitalizationType;
+        self.autocorrectionType = self.m_model.m_keyboard.m_autocorrectionType;
+        self.secureTextEntry = self.m_model.m_keyboard.m_secureTextEntry;
+
+        if (self.m_model.m_canNotEdit) {
+            [self setEditable:NO];
+        } else {
+            [self setEditable:YES];
+        }
     }
 }
 

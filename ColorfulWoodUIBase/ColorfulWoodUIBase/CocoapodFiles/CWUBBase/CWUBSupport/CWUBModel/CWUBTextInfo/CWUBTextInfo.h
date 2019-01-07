@@ -20,6 +20,11 @@
 @property(nonatomic, strong) UIColor * m_color_backGround;
 
 /**
+ * textView inputView 是否不可以编辑；默认是可以
+ */
+@property(nonatomic, assign) BOOL m_canNotEdit;
+
+/**
  * textView 是否需要滚动，默认不需要
  */
 @property(nonatomic, assign) BOOL m_textView_scroll;
