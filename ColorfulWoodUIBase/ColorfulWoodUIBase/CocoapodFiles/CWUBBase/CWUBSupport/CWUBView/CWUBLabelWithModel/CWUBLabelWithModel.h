@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CWUBTextInfo.h"
 #import <ColorfulWoodCategories/NSString+ColorfulWoodSize.h>
+#import "CWUBUITapGestureRecognizer.h"
 
 @interface CWUBLabelWithModel : UILabel
 @property(nonatomic, strong)CWUBTextInfo* m_model;
@@ -24,6 +25,6 @@
 /**
  * 获取点击事件对应Label的标识
  */
-+ (NSString *)interface_getEventCode:(UITapGestureRecognizer*)tap;
++ (NSString *)interface_getEventCode:(CWUBUITapGestureRecognizer*)tap;
 
 @end

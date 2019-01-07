@@ -11,7 +11,7 @@
 
 
 @interface CWUBLabelWithModel()
-@property(nonatomic, strong)UITapGestureRecognizer *m_tap;
+@property(nonatomic, strong)CWUBUITapGestureRecognizer *m_tap;
 @end
 
 @implementation CWUBLabelWithModel
@@ -92,16 +92,16 @@
             self.backgroundColor = model.m_color_backGround;
         }
 
+        if (self.m_model.m_lblCanClick) {
+            self.userInteractionEnabled = YES;
+        } else {
+            self.userInteractionEnabled = NO;
+        }
+
         if (self.m_model.m_event_opt_code.length > 0) {
             self.userInteractionEnabled = YES;
             [self performSelector:@selector(func_setEvent) withObject:self.m_model.m_event_opt_code afterDelay:1.];
         }else{
-            self.userInteractionEnabled = NO;
-        }
-
-        if (self.m_model.m_lblCanClick) {
-            self.userInteractionEnabled = YES;
-        } else {
             self.userInteractionEnabled = NO;
         }
 
@@ -130,7 +130,8 @@
     if(code.length > 0 ){
 
         if(self.m_controller){
-            self.m_tap = [[UITapGestureRecognizer alloc] initWithTarget:self.m_controller action:@selector(CWUBLabel_clickEvent:)];
+            self.m_tap = [[CWUBUITapGestureRecognizer alloc] initWithTarget:self.m_controller action:@selector(CWUBLabel_clickEvent:)];
+            self.m_tap.m_event_opt_code = code;
             [self addGestureRecognizer:self.m_tap];
         }
 
@@ -141,7 +142,7 @@
 /**
  * 不执行，因为在 self.m_controller 中执行
  */
-- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
+- (void)CWUBLabel_clickEvent:(CWUBUITapGestureRecognizer*)tap{
     NSLog(@"消除警告");
 }
 

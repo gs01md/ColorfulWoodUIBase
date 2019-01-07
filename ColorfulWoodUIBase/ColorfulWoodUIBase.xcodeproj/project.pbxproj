@@ -22,6 +22,7 @@
 		8B0ED888210F179B008C4C03 /* CWUBCellViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0ED887210F179B008C4C03 /* CWUBCellViewBase.m */; };
 		8B0ED88B210F1848008C4C03 /* TitleTop_TitleBottom_ImgRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0ED88A210F1848008C4C03 /* TitleTop_TitleBottom_ImgRight.m */; };
 		8B0ED890210F194A008C4C03 /* TitleTop_TitleBottom_ImgRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0ED88F210F194A008C4C03 /* TitleTop_TitleBottom_ImgRight_Model.m */; };
+		8B0F83BC21E2E7E000D96B81 /* CWUBUITapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0F83BB21E2E7E000D96B81 /* CWUBUITapGestureRecognizer.m */; };
 		8B1045D821747FFE00ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1045D721747FFE00ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.m */; };
 		8B1045DB2174802600ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1045DA2174802600ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model.m */; };
 		8B1045DF217496A800ED9D02 /* CWUBCell_InputLeft_CodeRight_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1045DE217496A800ED9D02 /* CWUBCell_InputLeft_CodeRight_Model.m */; };
@@ -228,6 +229,8 @@
 		8B0ED88A210F1848008C4C03 /* TitleTop_TitleBottom_ImgRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleTop_TitleBottom_ImgRight.m; sourceTree = "<group>"; };
 		8B0ED88E210F194A008C4C03 /* TitleTop_TitleBottom_ImgRight_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleTop_TitleBottom_ImgRight_Model.h; sourceTree = "<group>"; };
 		8B0ED88F210F194A008C4C03 /* TitleTop_TitleBottom_ImgRight_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleTop_TitleBottom_ImgRight_Model.m; sourceTree = "<group>"; };
+		8B0F83BA21E2E7E000D96B81 /* CWUBUITapGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBUITapGestureRecognizer.h; sourceTree = "<group>"; };
+		8B0F83BB21E2E7E000D96B81 /* CWUBUITapGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBUITapGestureRecognizer.m; sourceTree = "<group>"; };
 		8B1045D621747FFE00ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.h; sourceTree = "<group>"; };
 		8B1045D721747FFE00ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight.m; sourceTree = "<group>"; };
 		8B1045D92174802600ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model.h; sourceTree = "<group>"; };
@@ -685,6 +688,23 @@
 			path = TitleTop_TitleBottom_ImgRight;
 			sourceTree = "<group>";
 		};
+		8B0F83B821E2E79B00D96B81 /* CWUBFuncs */ = {
+			isa = PBXGroup;
+			children = (
+				8B0F83B921E2E7A600D96B81 /* CWUBUITapGestureRecognizer */,
+			);
+			path = CWUBFuncs;
+			sourceTree = "<group>";
+		};
+		8B0F83B921E2E7A600D96B81 /* CWUBUITapGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				8B0F83BA21E2E7E000D96B81 /* CWUBUITapGestureRecognizer.h */,
+				8B0F83BB21E2E7E000D96B81 /* CWUBUITapGestureRecognizer.m */,
+			);
+			path = CWUBUITapGestureRecognizer;
+			sourceTree = "<group>";
+		};
 		8B1045D521747FA600ED9D02 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight */ = {
 			isa = PBXGroup;
 			children = (
@@ -770,6 +790,7 @@
 		8B14F13E20EADA06004E1112 /* CWUBSupport */ = {
 			isa = PBXGroup;
 			children = (
+				8B0F83B821E2E79B00D96B81 /* CWUBFuncs */,
 				8B1F419020B5375E00FEAFA0 /* CWUBModel */,
 				8B1F418B20B5375E00FEAFA0 /* CWUBDefine */,
 				8B1F418520B5375E00FEAFA0 /* CWUBCell */,
@@ -2274,6 +2295,7 @@
 				8B4AA09120B64E3900CA97FB /* CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.m in Sources */,
 				8B4AA0A220B6938F00CA97FB /* CWUBCell_ImgLeft_TitleRightThree.m in Sources */,
 				8B5F1D1C20D9EA3000C32B23 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom.m in Sources */,
+				8B0F83BC21E2E7E000D96B81 /* CWUBUITapGestureRecognizer.m in Sources */,
 				8B22900621203A9000F6C0E3 /* CWUBCell_TitleTop_ ButtonBottom_Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
