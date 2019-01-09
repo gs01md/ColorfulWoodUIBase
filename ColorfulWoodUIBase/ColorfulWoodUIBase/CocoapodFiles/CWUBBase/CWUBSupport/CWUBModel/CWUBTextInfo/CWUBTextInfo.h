@@ -99,6 +99,13 @@
  */
 @property(nonatomic, assign) float m_height_min;
 
+
+/**
+ * 是否跟其它控件垂直居中对齐，还是垂直居上对齐
+ * 默认为FALSE ,居中
+ */
+@property(nonatomic, assign) BOOL m_bVeticalTop;
+
 /**
  * 正则表达式，限制规则，不符合则禁止输入
  */

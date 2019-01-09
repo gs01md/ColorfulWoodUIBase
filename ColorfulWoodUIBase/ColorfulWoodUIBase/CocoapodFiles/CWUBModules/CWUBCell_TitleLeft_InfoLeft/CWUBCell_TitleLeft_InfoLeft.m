@@ -48,16 +48,19 @@
 
 - (void)func_updateConsrtains{
 
-
     [_m_lblShow mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(self).offset(self.m_model.m_title.m_margin_left);
-        make.top.equalTo(self).offset(self.m_model.m_title.m_margin_top);
         if (self.m_model.m_title.m_width > 1.) {
             make.width.equalTo(@(self.m_model.m_title.m_width));
         }
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title.m_margin_bottom);
         make.right.equalTo(self.m_lblInfo.mas_left).offset(-self.m_model.m_title.m_margin_right);
+
+        if (self.m_model.m_title.m_bVeticalTop) {
+            make.top.equalTo(self.m_lblInfo);
+        } else {
+            make.centerY.equalTo(self.m_lblInfo);
+        }
 
     }];
 
@@ -72,7 +75,6 @@
         make.right.equalTo(self).offset(-self.m_model.m_info.m_margin_right);
     }];
 
-
     [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
@@ -85,7 +87,6 @@
             make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         }
 
-        make.top.equalTo(self.m_lblShow.mas_bottom).offset(self.m_model.m_title.m_margin_bottom);
         make.top.equalTo(self.m_lblInfo.mas_bottom).offset(self.m_model.m_info.m_margin_bottom);
 
     }];
