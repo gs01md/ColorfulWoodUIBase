@@ -74,6 +74,11 @@
  */
 @property(nonatomic, strong) CWUBModelPoint *m_modelPoint;
 
+/**
+ * 点击标识
+ */
+@property(nonatomic, strong)NSString *m_event_opt_code;
+
 - (instancetype) initWithName:(NSString*)name width:(float)width height:(float)height;
 
 /**

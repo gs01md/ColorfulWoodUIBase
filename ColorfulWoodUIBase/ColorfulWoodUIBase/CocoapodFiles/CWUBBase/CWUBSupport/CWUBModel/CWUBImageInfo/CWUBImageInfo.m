@@ -89,4 +89,12 @@
 
     return _m_height;
 }
+
+- (NSString *)m_event_opt_code{
+
+    if (!_m_event_opt_code) {
+        _m_event_opt_code = @"";
+    }
+    return _m_event_opt_code;
+}
 @end

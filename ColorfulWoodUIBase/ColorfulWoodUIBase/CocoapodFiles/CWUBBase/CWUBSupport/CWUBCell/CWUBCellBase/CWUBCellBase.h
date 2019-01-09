@@ -30,7 +30,7 @@
 
 @property (nonatomic, weak) id<CWUBCellBaseDelegate> m_delegate;
 
-@property (nonatomic, strong) UIImageView * m_img_sep;
+@property (nonatomic, strong) CWUBImageViewWithModel * m_img_sep;
 
 /**
  * 背景图片
@@ -63,4 +63,9 @@
  * 隐藏底部的虚线
  */
 - (void) interface_bottomLine_hidden;
+
+/**
+ * 设置底部分割线
+ */
+- (void) interface_updateBottomLine;
 @end

@@ -8,6 +8,11 @@
 
 #import "CWUBImageViewWithModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "CWUBUITapGestureRecognizer.h"
+
+@interface CWUBImageViewWithModel()
+@property(nonatomic, strong)CWUBUITapGestureRecognizer *m_tap;
+@end
 
 @implementation CWUBImageViewWithModel
 
@@ -96,7 +101,84 @@
             [pointView0 interface_dissmiss:self];
         }
 
+        if (self.m_model.m_event_opt_code.length > 0) {
+            self.userInteractionEnabled = YES;
+            [self performSelector:@selector(func_setEvent) withObject:self.m_model.m_event_opt_code afterDelay:1.];
+        }else{
+            self.userInteractionEnabled = NO;
+        }
+
     }
 }
 
+#pragma mark - 属性
+- (UIViewController *)m_controller{
+
+    if(!_m_controller){
+        _m_controller = [self inner_findViewController];
+    }
+
+    return _m_controller;
+}
+
+
+#pragma mark - 功能
+/**
+ * 设置该控件的点击事件
+ */
+- (void)func_setEvent{
+
+    NSString * code = [self.m_model.m_event_opt_code stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if(code.length > 0 ){
+
+        if(self.m_controller){
+            self.m_tap = [[CWUBUITapGestureRecognizer alloc] initWithTarget:self.m_controller action:@selector(CWUBImageView_clickEvent:)];
+            self.m_tap.m_event_opt_code = code;
+            [self addGestureRecognizer:self.m_tap];
+        }
+
+    }
+
+}
+
+/**
+ * 不执行，因为在 self.m_controller 中执行
+ */
+- (void)CWUBImageView_clickEvent:(UITapGestureRecognizer*)tap{
+    NSLog(@"消除警告");
+}
+
+/**
+ * 获取控制器，获取视图控制器
+ */
+- (UIViewController *)inner_findViewController{
+
+    for (UIView* next = self; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
+
+#pragma mark - 接口
+
+/**
+ * 获取点击事件对应的标识
+ */
++ (NSString *)interface_getEventCode:(UITapGestureRecognizer*)tap{
+
+    NSString * code = @"";
+
+    if(tap && [tap isKindOfClass:[UITapGestureRecognizer class]] && [tap.view isKindOfClass:[CWUBImageViewWithModel class]]){
+        CWUBImageViewWithModel * imgView =  (CWUBImageViewWithModel *)tap.view;
+
+        if(imgView){
+            code = imgView.m_model.m_event_opt_code;
+        }
+    }
+
+    return code;
+}
 @end

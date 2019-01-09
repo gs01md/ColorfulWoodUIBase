@@ -71,10 +71,10 @@
     return self;
 }
 
--(UIImageView *)m_img_sep{
+-(CWUBImageViewWithModel *)m_img_sep{
 
     if(!_m_img_sep){
-        _m_img_sep = [CWUBDefine imgSep];
+        _m_img_sep = [CWUBImageViewWithModel new];
         [_m_img_sep setClipsToBounds:YES];
     }
     return _m_img_sep;
@@ -91,6 +91,15 @@
 - (void)interface_updateWithModel:(CWUBModelBase*)model{
 
     [self func_backgroundColor:model];
+
+    if (model.m_bottomLineInfo.m_color) {
+        self.m_img_sep.backgroundColor = model.m_bottomLineInfo.m_color;
+    }else{
+        self.m_img_sep.backgroundColor = [UIColor clearColor];
+    }
+    if (model.m_bottomLineInfo.m_image && model.m_bottomLineInfo.m_image.length>0) {
+        [self.m_img_sep setImage:[UIImage imageNamed:model.m_bottomLineInfo.m_image]];
+    }
 }
 
 - (void)func_backgroundColor:(CWUBModelBase*)model{

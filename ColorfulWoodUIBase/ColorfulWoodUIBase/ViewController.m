@@ -161,6 +161,8 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 - (void) func_getOne{
 
     NSMutableArray * data = [NSMutableArray new];
+
+    [CWUBCell_TitleLeft_ImgFollow_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_InputRight_NumRightBottom_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_InputRight_NumRight_Model tester_dataWithArray:data];
 
@@ -562,4 +564,11 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
     NSLog(@"");
 }
 
+- (void)CWUBImageView_clickEvent:(UITapGestureRecognizer *)tap{
+
+    NSString * code = [CWUBImageViewWithModel interface_getEventCode:tap];
+
+    NSLog(@"%@",code);
+    
+}
 @end

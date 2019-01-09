@@ -12,8 +12,19 @@
 @interface CWUBImageViewWithModel : UIImageView
 
 @property(nonatomic, strong)CWUBImageInfo *m_model;
+@property(nonatomic, strong) UIViewController *m_controller;
 
 -(instancetype) initWithModel:(CWUBImageInfo*)model;
 -(void) interface_update:(CWUBImageInfo*)model;
 
+
+/**
+ * 不执行，因为在 self.m_controller 中执行
+ */
+- (void)CWUBImageView_clickEvent:(UITapGestureRecognizer*)tap;
+
+/**
+ * 获取点击事件对应的标识
+ */
++ (NSString *)interface_getEventCode:(UITapGestureRecognizer*)tap;
 @end
