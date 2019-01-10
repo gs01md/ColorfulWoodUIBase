@@ -27,4 +27,15 @@
  @param btnImg 立即体验按钮图片
  */
 - (void)interface_setupWithImgs:(NSArray *)imgArray xImgs:(NSArray *)imgXArray btnImg:(NSString *)btnImg;
+
+/**
+ 生成启动页面
+ 如果是X系列的手机，优先使用imgXArray，如果没有imgXArray，则使用imgArray
+
+ @param vc 主页
+ @param imgArray 图片数组
+ @param imgXArray iphoneX 图片数组
+ @param btnImg 立即体验按钮图片
+ */
++ (void)interface_startVC:(UIViewController*)vc imgs:(NSArray *)imgArray imgXs:(NSArray*)imgXArray btnImg:(NSString*)btnImg;
 @end

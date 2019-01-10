@@ -203,6 +203,8 @@ UITextViewDelegate
         self.m_textfield_center.delegate = nil;
     }
 
+    self.m_lbl_numRight.text = [NSString stringWithFormat:@"%lu/%d",(unsigned long)model.m_input_center.m_text.length,self.m_model.m_input_center.m_limitInputNum];
+
     [self func_updateConsrtains];
 }
 

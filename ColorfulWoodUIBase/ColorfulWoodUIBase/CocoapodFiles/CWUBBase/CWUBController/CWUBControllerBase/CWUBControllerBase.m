@@ -38,6 +38,11 @@ static UIImage * m_image;
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
 
+    /**
+     * 支持左侧滑动返回
+     */
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+
     if (!m_image) {
         m_image = CWUBBDefine_bundle_pngImg(@"CWUBBundle_Back@2x");
     }

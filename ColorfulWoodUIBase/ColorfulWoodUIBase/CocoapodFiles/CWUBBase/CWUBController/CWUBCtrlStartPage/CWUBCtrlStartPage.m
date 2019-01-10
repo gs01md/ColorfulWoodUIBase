@@ -9,6 +9,7 @@
 #import "CWUBCtrlStartPage.h"
 #import "CWUBDefine.h"
 #import "ColorfulWoodNavigationBar.h"
+#import "AppDelegate.h"
 
 @interface CWUBCtrlStartPage ()
 
@@ -111,6 +112,44 @@
     if (self.block_enter) {
         self.block_enter();
     }
+}
+
+#pragma mark - 接口
+
++ (void)interface_startVC:(UIViewController*)vc imgs:(NSArray *)imgArray imgXs:(NSArray*)imgXArray btnImg:(NSString*)btnImg{
+
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    if([[NSUserDefaults standardUserDefaults] boolForKey:CWUBCtrlStartPage_isStartUp] == NO){//首次启动进入引导页
+
+        CWUBCtrlStartPage *bootPageVC = [[CWUBCtrlStartPage alloc]init];
+        [bootPageVC interface_setupWithImgs:imgArray xImgs:imgXArray btnImg:btnImg];
+        bootPageVC.view.backgroundColor = [UIColor whiteColor];
+        UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:bootPageVC];
+        bootPageVC.navigationController.navigationBar.hidden = YES;
+        delegate.window.rootViewController = navi;
+        bootPageVC.block_enter = ^{
+            [CWUBCtrlStartPage func_enterMain:vc];
+        };
+        [delegate.window makeKeyAndVisible];
+
+    }else{
+        [CWUBCtrlStartPage func_enterMain:vc];
+    }
+}
+
+/**
+ * 进入首页
+ */
++ (void)func_enterMain:(UIViewController *)vc{
+
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.navigationController.navigationBar.hidden = YES;
+    delegate.window.rootViewController = navi;
+    [delegate.window makeKeyAndVisible];
+
 }
 
 @end
