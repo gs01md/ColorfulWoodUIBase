@@ -815,4 +815,12 @@ static UIImage * m_image;
 
 }
 
+/**
+ * 不执行，在子类执行
+ */
+- (void)CWUBImageView_clickEvent:(UITapGestureRecognizer*)tap{
+
+    
+}
+
 @end

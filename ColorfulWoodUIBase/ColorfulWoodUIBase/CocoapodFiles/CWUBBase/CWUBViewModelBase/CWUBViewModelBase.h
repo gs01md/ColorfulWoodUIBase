@@ -12,7 +12,14 @@
 #import "CWUBImageInfo.h"
 #import "CWUBBottomLineInfo.h"
 #import "CWUBCollectionInfo.h"
+#import "CWUBModel.h"
 
 @interface CWUBViewModelBase : NSObject
 
+@property(nonatomic, strong)CWUBModel *m_model;
+
+/**
+ * 获取TableView显示的模型
+ */
+- (CWUBModel*)interface_getShowModel;
 @end

@@ -9,5 +9,20 @@
 #import "CWUBViewModelBase.h"
 
 @implementation CWUBViewModelBase
+/**
+ * 获取TableView显示的模型
+ */
+- (CWUBModel *)interface_getShowModel{
 
+    return self.m_model;
+}
+
+- (CWUBModel *)m_model{
+
+    if (!_m_model) {
+        _m_model = [CWUBModel new];
+    }
+
+    return _m_model;
+}
 @end
