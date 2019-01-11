@@ -172,6 +172,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
 
 #define CWUBBDefine_WeakSelf __weak typeof(self) weakSelf = self;
 
+#define CWUBBDefine_Weak(type)  __weak typeof(type) weak##type = type;//弱引用
+#define CWUBBDefine_Stong(type)  __strong typeof(type) strong##type = weak##type;//强引用
+
+#define CWUBBDefine_StringCheckInit(a) a?a:@""
+#define CWUBBDefine_StringTrim(a) a?[a stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]:@""
+
+
 /**
  * 图片资源名称
  */
