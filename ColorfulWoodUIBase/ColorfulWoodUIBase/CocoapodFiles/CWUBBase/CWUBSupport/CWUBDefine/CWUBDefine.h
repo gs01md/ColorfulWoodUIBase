@@ -169,15 +169,35 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]//十六进制颜色(带�
  */
 #define CWUBBDefine_Height_BottomSafe (CWUBBDefine_IPhoneX_All? 34.0f:0.0f)
 
-
+/**
+ * self 生成若引用
+ */
 #define CWUBBDefine_WeakSelf __weak typeof(self) weakSelf = self;
 
-#define CWUBBDefine_Weak(type)  __weak typeof(type) weak##type = type;//弱引用
-#define CWUBBDefine_Stong(type)  __strong typeof(type) strong##type = weak##type;//强引用
+/**
+ * 生成弱引用对象
+ */
+#define CWUBBDefine_Weak(type)  __weak typeof(type) weak##type = type;
 
+/**
+ * 把若引用转成强引用
+ */
+#define CWUBBDefine_Stong(type)  __strong typeof(type) strong##type = weak##type;
+
+/**
+ * 检查字符串是否有效，无效则初始化
+ */
 #define CWUBBDefine_StringCheckInit(a) a?a:@""
+
+/**
+ * 去掉字符串两边的空格或者换行符
+ */
 #define CWUBBDefine_StringTrim(a) a?[a stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]:@""
 
+/**
+ * 时间戳
+ */
+#define CWUBBDefine_timeStamp [NSString stringWithFormat:@"%.f",[[NSDate date] timeIntervalSince1970]]
 
 /**
  * 图片资源名称

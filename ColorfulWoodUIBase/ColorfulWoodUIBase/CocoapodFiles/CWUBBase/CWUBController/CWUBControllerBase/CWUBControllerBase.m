@@ -816,11 +816,20 @@ static UIImage * m_image;
 }
 
 /**
- * 不执行，在子类执行
+ * 点击图片事件
+ * 此处解决崩溃，需要时可在子类重写
  */
 - (void)CWUBImageView_clickEvent:(UITapGestureRecognizer*)tap{
 
     
+}
+
+/**
+ * 点击Label事件
+ * 此处解决崩溃，需要时可在子类重写
+ */
+- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
+
 }
 
 @end

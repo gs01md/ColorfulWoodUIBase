@@ -101,8 +101,6 @@
         if (self.m_model.m_event_opt_code.length > 0) {
             self.userInteractionEnabled = YES;
             [self performSelector:@selector(func_setEvent) withObject:self.m_model.m_event_opt_code afterDelay:1.];
-        }else{
-            self.userInteractionEnabled = NO;
         }
 
         self.hidden = model.m_isHidden;

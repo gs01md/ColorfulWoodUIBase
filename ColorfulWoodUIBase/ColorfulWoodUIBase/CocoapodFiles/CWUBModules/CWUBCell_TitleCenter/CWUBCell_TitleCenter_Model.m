@@ -49,4 +49,28 @@
 
     return model17;
 }
+
+- (CWUBCell_TitleCenter_Model*)func_btn:(NSMutableArray*)array{
+
+    CWUBCell_TitleCenter_Model *model17 = [CWUBCell_TitleCenter_Model new];
+    model17.m_type = CWUBCellType_TitleCenter;
+    model17.m_title.m_margin_top = 50.;
+    model17.m_title.m_margin_bottom = 20.;
+    model17.m_title.m_text = @"提交";
+    model17.m_title.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_center;
+    model17.m_title.m_color = [UIColor whiteColor];
+    model17.m_title.m_color_backGround = CWUBDefineCreate_ColorRGB(0xFF6634);
+    model17.m_title.m_height = CWUBDefine_Width(40);
+    model17.m_color_backGround = [UIColor whiteColor];
+    model17.m_title.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_ColorRGB(0xFF6634)];
+    model17.m_title.m_event_opt_code = @"提交";
+    model17.m_title.m_font = [UIFont fontWithName:@"PingFang-SC-Medium" size:16];
+    model17.m_title.m_lblCanClick = YES;
+
+    if (array) {
+        [array addObject:model17];
+    }
+
+    return model17;
+}
 @end

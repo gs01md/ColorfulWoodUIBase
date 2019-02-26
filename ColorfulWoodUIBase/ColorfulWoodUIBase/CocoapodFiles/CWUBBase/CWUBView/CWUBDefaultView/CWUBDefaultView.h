@@ -56,4 +56,31 @@ typedef void (^CWUBDefaultViewClickBlock)(void);
  */
 - (void)interface_setNoContent_withBtn;
 
+/**
+ * 设置提示文字字体
+ */
+- (void)interface_font:(UIFont *)font;
+
+/**
+ * 设置提示文字颜色
+ */
+- (void)interface_color:(UIColor *)color;
+
+/**
+ * 更新界面显示的图片和文字
+ * 有可能从无网络状态变成无数据状态
+ * 设置提示文字颜色
+ * 设置提示文字字体
+ */
+- (void)interface_updateImg:(NSString *)img title:(NSString*)title color:(UIColor *)color font:(UIFont *)font;
+
+/**
+ * 更新界面显示的图片和文字
+ * 有可能从无网络状态变成无数据状态
+ * color：设置提示文字颜色
+ * font：设置提示文字字体
+ * hidden：隐藏
+ * btnHidden：隐藏按钮
+ */
+- (void)interface_updateImg:(NSString *)img title:(NSString*)title color:(UIColor *)color font:(UIFont *)font hidden:(BOOL)hidden btnHidden:(BOOL)btnHidden;
 @end

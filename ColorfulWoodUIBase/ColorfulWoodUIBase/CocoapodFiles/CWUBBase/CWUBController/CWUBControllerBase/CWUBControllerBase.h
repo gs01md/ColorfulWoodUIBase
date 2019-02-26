@@ -177,4 +177,17 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
  * 更新数据
  */
 - (void)interface_updateWithModel:(CWUBModel*)model;
+
+#pragma mark - 背景页
+- (void)interface_defaultShow:(BOOL)show;
+
+- (void)interface_defaultImg:(NSString*)img title:(NSString*)title;
+
+- (void)interface_defaultNoContent;
+
+- (void)interface_defaultNoNet;
+
+- (void)interface_defaultNoContentWithView:(UIView*)view;
+
+- (void)interface_defaultNoNetWithView:(UIView*)view;
 @end
