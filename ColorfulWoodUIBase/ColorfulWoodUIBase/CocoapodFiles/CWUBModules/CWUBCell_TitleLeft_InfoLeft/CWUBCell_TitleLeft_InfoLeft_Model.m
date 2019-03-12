@@ -125,7 +125,7 @@
     model3.m_title = [[CWUBTextInfo alloc] initWithText:content font:[UIFont fontWithName:@"PingFangSC-Regular" size:13] color:CWUBDefineCreate_Color(102, 102, 102, 1)];
     model3.m_info = [[CWUBTextInfo alloc] initWithText:@"" font:[UIFont fontWithName:@"PingFangSC-Regular" size:13] color:CWUBDefineCreate_Color(102, 102, 102, 1)];
     model3.m_info.m_width = 1.1;
-    model3.m_title.m_margin_top = 6;
+    model3.m_info.m_margin_top = 6;
     model3.m_title.m_margin_left = 10;
     model3.m_bottomLineInfo.m_height = 10.;
     model3.m_bottomLineInfo.m_margin_left = 1.;

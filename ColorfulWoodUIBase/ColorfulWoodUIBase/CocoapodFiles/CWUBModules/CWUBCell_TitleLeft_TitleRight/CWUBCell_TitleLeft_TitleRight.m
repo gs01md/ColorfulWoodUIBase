@@ -68,8 +68,7 @@
 
     [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(self).offset(self.m_model.m_title_right.m_margin_top);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_right.m_margin_bottom);
+        make.centerY.equalTo(self.m_lbl_left);
         make.left.equalTo(self.mas_centerX).offset(self.m_model.m_title_right.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_title_right.m_margin_right);
     }];
@@ -121,7 +120,7 @@
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_TitleRight_Model*)model{
 
     [super interface_updateWithModel:model];
-    
+
     self.m_model = model;
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_right interface_update:model.m_title_right];

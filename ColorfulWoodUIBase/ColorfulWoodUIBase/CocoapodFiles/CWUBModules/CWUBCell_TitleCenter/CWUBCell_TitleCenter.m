@@ -93,7 +93,13 @@
 
     if (!_m_lbl_title) {
         _m_lbl_title = [[CWUBLabelWithModel alloc] initWithModel:self.m_model.m_title];
-        _m_lbl_title.textAlignment = NSTextAlignmentCenter;
+
+        /**
+         * 默认居中
+         */
+        if (self.m_model.m_title.m_labelTextHorizontalType == CWUBLabelTextHorizontalType_default) {
+            _m_lbl_title.textAlignment = NSTextAlignmentCenter;
+        }
 
         _m_lbl_title.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         _m_lbl_title.numberOfLines = 0;

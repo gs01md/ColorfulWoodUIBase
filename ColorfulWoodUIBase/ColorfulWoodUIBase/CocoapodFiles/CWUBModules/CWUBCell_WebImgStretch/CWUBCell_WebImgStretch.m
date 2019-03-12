@@ -120,6 +120,54 @@
 
 }
 
+- (void)func_updateConstraints{
+
+    [_m_img_center sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_image.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_image.m_defaultName] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+
+        float height = 0.;
+
+        if (image) {
+            height = image.size.height/image.size.width * CWUBDefineDeviceWidth;
+        }
+
+        if (height && height>0) {
+
+
+            /**
+             * 防止重复刷新
+             */
+            if (self.m_model.m_image.m_height != height) {
+                self.m_model.m_image.m_height = height;
+                if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayoutWithheight:)]) {
+
+                    [self.delegate CWUBCell_WebImgStretchDelegate_updateLayoutWithheight:height];
+                }
+            }
+
+        }
+
+    }];
+
+    [self.m_img_center mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self).offset(self.m_model.m_image.m_margin_top);
+        make.left.equalTo(self).offset(self.m_model.m_image.m_margin_left);
+        make.right.equalTo(self).offset(-self.m_model.m_image.m_margin_right);
+        make.height.equalTo(@(self.m_model.m_image.m_height));
+        NSLog(@"%f",self.m_model.m_image.m_height);
+    }];
+
+    [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.equalTo(@(self.m_model.m_image.m_margin_left));
+        make.right.equalTo(@(-self.m_model.m_image.m_margin_right));
+        make.bottom.equalTo(self);
+        make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
+        make.top.equalTo(self.m_img_center.mas_bottom).offset(self.m_model.m_image.m_margin_top);
+    }];
+
+}
+
+
 - (void)func_updateConstraints:(int)row{
 
     [_m_img_center sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_image.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_image.m_defaultName] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
@@ -136,7 +184,7 @@
             /**
              * 防止重复刷新
              */
-            if (self.m_model.m_image.m_height == 0) {
+            if (self.m_model.m_image.m_height != height) {
                 self.m_model.m_image.m_height = height;
                 if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayout: height:)]) {
 

@@ -767,6 +767,12 @@ static UIImage * m_image;
 
         }
 
+        if (model.m_type == CWUBCellType_WebImgStretch) {
+            CWUBCell_WebImgStretch * cell1 = (CWUBCell_WebImgStretch*)cell;
+            cell1.delegate = self;
+
+        }
+
         return cell;
 
     }else{

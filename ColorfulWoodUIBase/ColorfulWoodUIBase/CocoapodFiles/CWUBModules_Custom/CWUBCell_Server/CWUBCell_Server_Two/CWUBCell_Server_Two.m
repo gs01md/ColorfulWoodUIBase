@@ -81,7 +81,7 @@
 
     [_m_lbl_one mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(self.m_img_one);
+        make.top.equalTo(self.m_img_one).offset(self.m_model.m_title_one.m_margin_CenterY);
 
         make.left.equalTo(self.m_img_one.mas_right).offset(self.m_model.m_title_one.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_title_one.m_margin_right);
@@ -89,7 +89,15 @@
 
     [_m_lbl_two mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.top.equalTo(self.m_lbl_one.mas_bottom).offset(self.m_model.m_title_two.m_margin_top);
+        /**
+         * 默认居中对齐
+         */
+        if (self.m_model.m_title_two.m_margin_top != CWUBBaseViewConfig_Space_Element_Vertical) {
+            make.top.equalTo(self.m_lbl_one.mas_bottom).offset(self.m_model.m_title_two.m_margin_top);
+        }else{
+            make.centerY.equalTo(self.m_img_one).offset(self.m_model.m_title_two.m_margin_CenterY);
+        }
+
 
         make.left.equalTo(self.m_lbl_one);
         make.right.equalTo(self).offset(-self.m_model.m_title_two.m_margin_right);
@@ -97,7 +105,7 @@
 
     [_m_lbl_three mas_remakeConstraints:^(MASConstraintMaker *make) {
 
-        make.bottom.equalTo(self.m_img_one);
+        make.bottom.equalTo(self.m_img_one).offset(self.m_model.m_title_three.m_margin_CenterY);
 
         make.left.equalTo(self.m_lbl_one);
         make.right.equalTo(self.m_lbl_four.mas_left).offset(-self.m_model.m_title_four.m_margin_right);
@@ -178,7 +186,7 @@
 - (void) interface_updateWithModel:(CWUBCell_Server_Two_Model*)model{
 
     [super interface_updateWithModel:model];
-    
+
     self.m_model = model;
     [self.m_lbl_one interface_update:self.m_model.m_title_one];
     [self.m_lbl_two interface_update:self.m_model.m_title_two];

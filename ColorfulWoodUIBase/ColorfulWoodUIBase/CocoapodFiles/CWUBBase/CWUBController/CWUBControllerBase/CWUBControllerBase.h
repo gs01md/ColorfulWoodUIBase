@@ -20,6 +20,7 @@
 #import <RITLPhotos/RITLPhotos.h>
 #import "CWUBCell_TitleLeft_InputRight_NumRight.h"
 #import "CWUBCell_TitleLeft_InputRight_NumRightBottom.h"
+#import "CWUBCell_WebImgStretch.h"
 
 
 @interface CWUBControllerBase : UIViewController<
@@ -36,7 +37,8 @@ CWUBCell_ImgCenter_delegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Delegate,
 CWUBCellBaseDelegate,
 CWUBCell_TitleLeft_InputRight_NumRight_Delegate,
-CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
+CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate,
+CWUBCell_WebImgStretchDelegate
 >
 
 #pragma mark - 选择图片 RITLPhotosViewController

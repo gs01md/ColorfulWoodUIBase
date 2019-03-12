@@ -13,6 +13,7 @@
 @optional
 - (void)CWUBCell_WebImgStretchDelegate_updateLayout:(int)row;
 - (void)CWUBCell_WebImgStretchDelegate_updateLayout:(int)row height:(float)height;
+- (void)CWUBCell_WebImgStretchDelegate_updateLayoutWithheight:(float)height;
 @end
 
 @interface CWUBCell_WebImgStretch : CWUBCellBase
