@@ -118,6 +118,8 @@
         make.top.equalTo(self.m_img_center.mas_bottom).offset(self.m_model.m_image.m_margin_top);
     }];
 
+    [self func_updateConstraints];
+
 }
 
 - (void)func_updateConstraints{
@@ -138,9 +140,9 @@
              */
             if (self.m_model.m_image.m_height != height) {
                 self.m_model.m_image.m_height = height;
-                if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayoutWithheight:)]) {
+                if ([self.delegate respondsToSelector:@selector(CWUBCell_WebImgStretchDelegate_updateLayoutWithHeight:)]) {
 
-                    [self.delegate CWUBCell_WebImgStretchDelegate_updateLayoutWithheight:height];
+                    [self.delegate CWUBCell_WebImgStretchDelegate_updateLayoutWithHeight:height];
                 }
             }
 
