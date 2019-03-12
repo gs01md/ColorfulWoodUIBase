@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "CWUBCornerInfo.h"
 
+#define CWUBImageInfo_defaultSize 16.0
+
 @interface CWUBImageInfo : CWUBMarginBase
 
 @property(nonatomic,strong) NSString* m_imgName;

@@ -74,7 +74,7 @@
 
     if (!_m_width || _m_width<=0) {
 
-        _m_width = 16.;
+        _m_width = CWUBImageInfo_defaultSize;
     }
 
     return _m_width;
@@ -84,7 +84,7 @@
 
     if (!_m_height || _m_height<=0) {
 
-        _m_height = 16.;
+        _m_height = CWUBImageInfo_defaultSize;
     }
 
     return _m_height;

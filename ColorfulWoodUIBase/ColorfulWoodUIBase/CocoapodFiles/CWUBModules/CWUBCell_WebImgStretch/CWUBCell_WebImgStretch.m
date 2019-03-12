@@ -10,7 +10,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CWUBCell_WebImgStretch()
-@property (nonatomic, strong) UIImageView *m_img_center;
+@property (nonatomic, strong) CWUBImageViewWithModel *m_img_center;
 
 /**
  * 刷新界面,当显示新的cell时，刷新界面
@@ -69,10 +69,10 @@
     return _m_model;
 }
 
--(UIImageView *)m_img_center{
+-(CWUBImageViewWithModel *)m_img_center{
 
     if(!_m_img_center){
-        _m_img_center = [UIImageView new];
+        _m_img_center = [CWUBImageViewWithModel new];
         //[_m_img_center sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_image.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_image.m_defaultName]];
         _m_img_center.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_center.clipsToBounds = NO;
@@ -85,8 +85,11 @@
 - (void)interface_updateWithModel:(CWUBCell_WebImgStretch_Model*)model{
 
     [super interface_updateWithModel:model];
-    
+
     self.m_model = model;
+
+    [self.m_img_center interface_update:self.m_model.m_image];
+
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{
@@ -95,18 +98,22 @@
     self.m_isUpdate = TRUE;
 
     UIImage *image = [UIImage imageNamed:self.m_model.m_image.m_imgName];
-    float height = 1.;
-    if (image) {
-        height = image.size.height/image.size.width * CWUBDefineDeviceWidth;
+
+    /**
+     * 要判断是否已经显示了图片，如果已经显示，则不再重复显示，不再更改self.m_model.m_image.m_height的值
+     */
+    if (image && self.m_model.m_image.m_height == CWUBImageInfo_defaultSize) {
+        self.m_model.m_image.m_height = image.size.height/image.size.width * (CWUBDefineDeviceWidth - self.m_model.m_image.m_margin_left*2 - self.m_model.m_image.m_margin_tableViewX*2);
+        [self.m_img_center setImage:image];
     }
 
-    [self.m_img_center setImage:image];
+
     [self.m_img_center mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(self.m_model.m_image.m_margin_top);
         make.left.equalTo(self).offset(self.m_model.m_image.m_margin_left);
         make.right.equalTo(self).offset(-self.m_model.m_image.m_margin_right);
-        make.height.equalTo(@(height));
-        NSLog(@"%f",height);
+        make.height.equalTo(@(self.m_model.m_image.m_height));
+        NSLog(@"%f",self.m_model.m_image.m_height);
     }];
 
     [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -124,12 +131,12 @@
 
 - (void)func_updateConstraints{
 
-    [_m_img_center sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_image.m_imgName] placeholderImage:[UIImage imageNamed:self.m_model.m_image.m_defaultName] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    [_m_img_center sd_setImageWithURL:[NSURL URLWithString:self.m_model.m_image.m_imgUrl] placeholderImage:[UIImage imageNamed:self.m_model.m_image.m_defaultName] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 
         float height = 0.;
 
         if (image) {
-            height = image.size.height/image.size.width * CWUBDefineDeviceWidth;
+            height = image.size.height/image.size.width * (CWUBDefineDeviceWidth - self.m_model.m_image.m_margin_left*2 - self.m_model.m_image.m_margin_tableViewX*2);
         }
 
         if (height && height>0) {

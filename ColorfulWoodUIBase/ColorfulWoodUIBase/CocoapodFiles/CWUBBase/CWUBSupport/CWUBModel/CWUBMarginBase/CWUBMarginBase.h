@@ -25,4 +25,9 @@
  * 用于相对某个元素的CenterX
  */
 @property(nonatomic, assign)float m_margin_CenterX;
+
+/**
+ * tableView的左边距 用于计算控件宽度
+ */
+@property(nonatomic, assign)float m_margin_tableViewX;
 @end
