@@ -90,9 +90,9 @@
     [_m_lbl_two mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         /**
-         * 默认居中对齐
+         * m_margin_CenterY 不等于 0 时，使用m_margin_CenterY参数，如m_margin_CenterY = 0.1
          */
-        if (self.m_model.m_title_two.m_margin_top != CWUBBaseViewConfig_Space_Element_Vertical) {
+        if (self.m_model.m_title_two.m_margin_CenterY == 0.0) {
             make.top.equalTo(self.m_lbl_one.mas_bottom).offset(self.m_model.m_title_two.m_margin_top);
         }else{
             make.centerY.equalTo(self.m_img_one).offset(self.m_model.m_title_two.m_margin_CenterY);
