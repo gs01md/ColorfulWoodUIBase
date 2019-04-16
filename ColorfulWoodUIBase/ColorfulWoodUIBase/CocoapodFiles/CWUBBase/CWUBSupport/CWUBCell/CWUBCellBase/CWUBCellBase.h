@@ -17,6 +17,7 @@
 #import "CWUBTextView.h"
 #import "CWUBImageViewWithModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "CWUBLabelVerticalWithModel.h"
 
 @protocol CWUBCellBaseDelegate <NSObject>
 @optional

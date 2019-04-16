@@ -129,6 +129,7 @@
 		8B22900D21203B1900F6C0E3 /* CWUBCell_ImgList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B22900C21203B1900F6C0E3 /* CWUBCell_ImgList.m */; };
 		8B2DAF5F20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DAF5E20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m */; };
 		8B37EB4A210D6470001B27B8 /* CWUBCell_Carousel_One_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37EB49210D6470001B27B8 /* CWUBCell_Carousel_One_Model.m */; };
+		8B3AABC12265783500363E18 /* CWUBLabelVerticalWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AABC02265783500363E18 /* CWUBLabelVerticalWithModel.m */; };
 		8B440BC020DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B440BBF20DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.m */; };
 		8B440BC320DBA344004EEC12 /* CWUBCell_ImgBack_TitleFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B440BC220DBA344004EEC12 /* CWUBCell_ImgBack_TitleFront.m */; };
 		8B4AA09120B64E3900CA97FB /* CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4AA09020B64E3900CA97FB /* CWUBCell_ImgTop_TitleCenter_TitleBottomLeft_TitleBottomRight.m */; };
@@ -446,6 +447,8 @@
 		8B2DAF5E20DCE9B7009DE5D3 /* CWUBImageViewWithModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBImageViewWithModel.m; sourceTree = "<group>"; };
 		8B37EB48210D6470001B27B8 /* CWUBCell_Carousel_One_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_Carousel_One_Model.h; sourceTree = "<group>"; };
 		8B37EB49210D6470001B27B8 /* CWUBCell_Carousel_One_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_Carousel_One_Model.m; sourceTree = "<group>"; };
+		8B3AABBF2265783500363E18 /* CWUBLabelVerticalWithModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBLabelVerticalWithModel.h; sourceTree = "<group>"; };
+		8B3AABC02265783500363E18 /* CWUBLabelVerticalWithModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBLabelVerticalWithModel.m; sourceTree = "<group>"; };
 		8B440BBE20DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgBack_TitleFront_Model.h; sourceTree = "<group>"; };
 		8B440BBF20DBA32F004EEC12 /* CWUBCell_ImgBack_TitleFront_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWUBCell_ImgBack_TitleFront_Model.m; sourceTree = "<group>"; };
 		8B440BC120DBA344004EEC12 /* CWUBCell_ImgBack_TitleFront.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUBCell_ImgBack_TitleFront.h; sourceTree = "<group>"; };
@@ -1350,6 +1353,7 @@
 		8B1F417520B5375E00FEAFA0 /* CWUBView */ = {
 			isa = PBXGroup;
 			children = (
+				8B3AABBE226577B700363E18 /* CWUBLabelVerticalWithModel */,
 				8B18ED2D21DC9D0A005BACFC /* CWUBTextView */,
 				8B0ED88C210F18A9008C4C03 /* CWUBCellViews */,
 				8B0DA157210C7735005299F3 /* CWUBViewDefault */,
@@ -1576,6 +1580,15 @@
 				8B577C272101B65200355A95 /* CWUBCell_Carousel_Single_Model.m */,
 			);
 			path = CWUBCell_Carousel;
+			sourceTree = "<group>";
+		};
+		8B3AABBE226577B700363E18 /* CWUBLabelVerticalWithModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B3AABBF2265783500363E18 /* CWUBLabelVerticalWithModel.h */,
+				8B3AABC02265783500363E18 /* CWUBLabelVerticalWithModel.m */,
+			);
+			path = CWUBLabelVerticalWithModel;
 			sourceTree = "<group>";
 		};
 		8B440BBD20DBA2E0004EEC12 /* CWUBCell_ImgBack_TitleFront */ = {
@@ -2223,6 +2236,7 @@
 				8B5F1D1920D9EA1200C32B23 /* CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight.m in Sources */,
 				8B1F41C720B5375E00FEAFA0 /* CWUBCell_Passenger_Delete.m in Sources */,
 				8B1F41A520B5375E00FEAFA0 /* CWUBCell_ButtonRight_SpaceBottom.m in Sources */,
+				8B3AABC12265783500363E18 /* CWUBLabelVerticalWithModel.m in Sources */,
 				8B1F41C520B5375E00FEAFA0 /* CWUBCell_ImgLeft_TitleLeft_InfoRight.m in Sources */,
 				8BE8AB8121080D0800694272 /* CWUBCell_Order_One.m in Sources */,
 				8B13E8F3210ACF1C001CBB41 /* CWUBCell_Server_Two.m in Sources */,

@@ -22,7 +22,30 @@
         [self interface_update:model];
     }
 
+
+
     return self;
+}
+
+-(void) interface_update:(CWUBTextInfo*)model isBorder:(BOOL)isBorder{
+
+    [self interface_update:model];
+
+
+    if (model.m_cornerInfo.m_cornerRadius>0 && model.m_cornerInfo.m_cornerWidth>0 && isBorder) {
+
+        self.layer.cornerRadius = model.m_cornerInfo.m_cornerRadius;
+        self.layer.borderWidth = model.m_cornerInfo.m_cornerWidth;
+        self.layer.borderColor = [model.m_cornerInfo.m_cornerColor CGColor];
+        self.layer.masksToBounds = YES;
+
+    }else{
+
+        self.layer.cornerRadius = 0.;
+        self.layer.borderWidth = 0.;
+        self.layer.borderColor = [[UIColor clearColor] CGColor];
+        self.layer.masksToBounds = NO;
+    }
 }
 
 -(void) interface_update:(CWUBTextInfo*)model{
@@ -90,6 +113,8 @@
 
         if (model.m_color_backGround) {
             self.backgroundColor = model.m_color_backGround;
+        }else{
+            self.backgroundColor = [UIColor clearColor];
         }
 
         if (self.m_model.m_lblCanClick) {

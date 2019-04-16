@@ -32,4 +32,35 @@
     }
     return _m_info;
 }
+
++(CWUBCell_TitleLeft_InfoRight_Model *)tester_dataWithArray:(NSMutableArray *)data{
+
+    CWUBCell_TitleLeft_InfoRight_Model *model =[CWUBCell_TitleLeft_InfoRight_Model new];
+    model.m_title = [[CWUBTextInfo alloc] initWithText:@"智能审核" font:[UIFont systemFontOfSize:17.] color:CWUBDefineCreate_ColorRGB(0xFF6634)];
+    model.m_title.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_center;
+    model.m_title.m_labelTextVerticalType = CWUBLabelTextVerticalType_center;
+
+    model.m_title.m_height = CWUBDefine_Width(44.);
+    model.m_title.m_width = CWUBDefine_Width(138);
+    model.m_title.m_margin_top = CWUBDefine_Width(30);
+    model.m_title.m_margin_bottom = CWUBDefine_Width(30);
+
+    model.m_info = [[CWUBTextInfo alloc] initWithText:@"平台审核" font:[UIFont systemFontOfSize:17.] color:CWUBDefineCreate_ColorRGB(0xFF6634)];
+    model.m_info.m_height = CWUBDefine_Width(44.);
+    model.m_info.m_width = CWUBDefine_Width(138);
+    model.m_info.m_margin_top = CWUBDefine_Width(30);
+    model.m_info.m_margin_bottom = CWUBDefine_Width(30);
+    model.m_info.m_labelTextVerticalType = CWUBLabelTextVerticalType_center;
+
+    model.m_title.m_event_opt_code = @"智能审核";
+    model.m_info.m_event_opt_code = @"下一步";
+
+    model.m_info.m_color_backGround = CWUBDefineCreate_ColorRGB(0xFF6634);
+    model.m_title.m_cornerInfo = [CWUBCornerInfo interface_initWithRadius:4. width:0.5 color:CWUBDefineCreate_ColorRGB(0xD03B36)];
+
+    [data addObject:model];
+
+    return model;
+}
+
 @end
