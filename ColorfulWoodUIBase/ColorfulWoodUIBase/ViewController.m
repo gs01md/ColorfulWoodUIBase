@@ -162,6 +162,8 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_ImgAdd_Model tester_dataWithArray:data];
+
     [CWUBCell_TitleLeft_InfoRight_Model tester_dataWithArray:data];
 
     [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
