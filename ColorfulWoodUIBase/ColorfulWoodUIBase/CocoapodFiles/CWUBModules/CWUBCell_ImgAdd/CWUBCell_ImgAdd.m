@@ -129,7 +129,12 @@
         make.right.mas_equalTo(self).offset(-self.m_model.m_bottomLineInfo.m_margin_right);
         make.bottom.mas_equalTo(self);
         make.height.mas_equalTo(self.m_model.m_bottomLineInfo.m_height);
-        make.top.mas_equalTo(imgView.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+
+        if (imgView) {
+            make.top.mas_equalTo(imgView.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+        } else {
+            make.top.mas_equalTo(self).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+        }
     }];
 
 }

@@ -13,6 +13,7 @@
 
     if (self = [super init]) {
         self.m_typeName = @"CWUBCell_TitleLeft_InputRight_NumRight";
+        self.m_type = CWUBCellType_TitleLeft_InputRight_NumRight;
     }
 
     return self;

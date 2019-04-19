@@ -80,6 +80,7 @@ typedef enum : NSUInteger {
     CWUBCellType_TitleLeft_InputRight_TitleRightBottom_CodeRight,
     CWUBCellType_InputLeft_CodeRight,
     CWUBCellType_TitleTopLeft_TitleBottomLeft_TitleBottomFollow,
+    CWUBCellType_TitleLeft_InputRight_NumRight,
 } CWUBCellType;
 
 

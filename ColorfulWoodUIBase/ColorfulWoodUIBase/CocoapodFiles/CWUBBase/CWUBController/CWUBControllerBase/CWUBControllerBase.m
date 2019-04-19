@@ -773,6 +773,17 @@ static UIImage * m_image;
 
         }
 
+        if (model.m_type == CWUBCellType_TitleLeft_InputRight_NumRight) {
+            CWUBCell_TitleLeft_InputRight_NumRight * cell1 = (CWUBCell_TitleLeft_InputRight_NumRight*)cell;
+            cell1.delegate = self;
+
+        }
+
+        if(model.m_typeName && [model.m_typeName isEqualToString:@"CWUBCell_TitleLeft_InputRight_NumRightBottom"]){
+            CWUBCell_TitleLeft_InputRight_NumRightBottom * cell1 = (CWUBCell_TitleLeft_InputRight_NumRightBottom*)cell;
+            cell1.delegate = self;
+        }
+
         return cell;
 
     }else{

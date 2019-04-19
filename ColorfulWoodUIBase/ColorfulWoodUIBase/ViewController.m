@@ -574,7 +574,7 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 
     NSString * code = [CWUBImageViewWithModel interface_getEventCode:tap];
 
-    NSLog(@"%@",code);
+    NSLog(@"CWUBImageView_clickEvent : %@",code);
     
 }
 @end
