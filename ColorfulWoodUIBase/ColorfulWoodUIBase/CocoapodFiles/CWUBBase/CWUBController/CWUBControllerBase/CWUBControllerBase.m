@@ -433,7 +433,7 @@ static UIImage * m_image;
         _m_imagePicker = [[UIImagePickerController alloc] init];
         _m_imagePicker.editing = YES;
         _m_imagePicker.allowsEditing = NO;
-        _m_imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        _m_imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         _m_imagePicker.navigationBar.tintColor = [UIColor whiteColor];;
         _m_imagePicker.delegate = self;
     }

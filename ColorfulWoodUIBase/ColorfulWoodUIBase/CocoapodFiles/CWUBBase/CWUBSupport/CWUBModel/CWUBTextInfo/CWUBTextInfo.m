@@ -181,7 +181,7 @@
 
     NSDictionary *attrs=@{NSFontAttributeName:self.m_font};
     CGSize mySize=[self.m_text sizeWithAttributes:attrs];
-    self.m_width = mySize.width + 5;
+    self.m_width = mySize.width + 15;
 
     return self.m_width;
 }
