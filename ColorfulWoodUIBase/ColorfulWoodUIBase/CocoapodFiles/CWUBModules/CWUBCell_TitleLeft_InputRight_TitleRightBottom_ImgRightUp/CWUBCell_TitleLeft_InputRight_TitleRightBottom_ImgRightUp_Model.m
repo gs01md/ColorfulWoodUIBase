@@ -72,6 +72,7 @@
     model14.m_title_left.m_width = [model14.m_title_left interface_setWidthByContent];
     model14.m_bottomLineInfo.m_color = [UIColor blueColor];
     model14.m_img_right = [[CWUBImageInfo alloc] initWithName:@"right" width:15 height:15];
+    model14.m_img_right.m_event_opt_code = @"核销";
     [data addObject:model14];
 
     return model14;
