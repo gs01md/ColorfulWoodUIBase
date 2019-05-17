@@ -100,8 +100,10 @@
 
     [_m_lbl_two mas_remakeConstraints:^(MASConstraintMaker *make) {
 
+        float width = [self.m_model.m_title_two interface_setWidthByContent];
         make.centerY.equalTo(self.m_img_two);
         make.left.equalTo(self.m_img_two.mas_right).offset(self.m_model.m_title_two.m_margin_left);
+        make.width.mas_equalTo(width);
     }];
 
     [_m_img_three mas_remakeConstraints:^(MASConstraintMaker *make) {

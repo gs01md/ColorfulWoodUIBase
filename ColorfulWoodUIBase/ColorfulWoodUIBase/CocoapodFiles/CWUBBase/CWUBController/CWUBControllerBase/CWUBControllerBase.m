@@ -219,6 +219,47 @@ static UIImage * m_image;
     }];
 }
 
+/**
+ * 添加列表
+ * 如果有导航栏，则添加到导航栏下面
+ * left 左边距
+ * right 右边距
+ */
+- (void)interface_addTableViewWithTop:(float)top left:(float)left right:(float)right hasTabbar:(BOOL)hasTabbar{
+
+    [self.view addSubview:self.m_tableView];
+    [_m_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+
+
+
+        if (self.m_isNaviBarShow) {
+            make.top.equalTo(self.m_navigationBar.mas_bottom).offset(top);
+        } else {
+            make.top.equalTo(self.view).offset(top);
+        }
+
+        if (hasTabbar) {
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
+                make.bottom.equalTo(self.view).offset(-84.);
+            } else {
+                make.bottom.equalTo(self.view).offset(-49.);
+            }
+        } else {
+
+            if ([ColorfulWoodNavigationBar isIPhoneX]) {
+                make.bottom.equalTo(self.view).offset(-35.);
+            } else {
+                make.bottom.equalTo(self.view);
+            }
+        }
+        //        make.left.equalTo(self);
+        //        make.right.equalTo(self);
+        make.left.equalTo(self.view).offset(left);
+        make.right.equalTo(self.view).offset(-right);
+
+    }];
+}
+
 
 /**
  * 添加列表

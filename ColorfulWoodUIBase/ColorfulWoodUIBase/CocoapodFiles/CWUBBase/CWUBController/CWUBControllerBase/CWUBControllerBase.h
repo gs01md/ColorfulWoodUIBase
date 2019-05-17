@@ -102,6 +102,15 @@ CWUBCell_WebImgStretchDelegate
 /**
  * 添加列表
  * 如果有导航栏，则添加到导航栏下面
+ * left 左边距
+ * right 右边距
+ */
+- (void)interface_addTableViewWithTop:(float)top left:(float)left right:(float)right hasTabbar:(BOOL)hasTabbar;
+
+
+/**
+ * 添加列表
+ * 如果有导航栏，则添加到导航栏下面
  * hasNavi 通过该参数判断controller里是否增加了Navi
  */
 - (void)interface_addTableViewWithTop:(float)top hasTabbar:(BOOL)hasTabbar hasNavi:(BOOL)hasNavi;
