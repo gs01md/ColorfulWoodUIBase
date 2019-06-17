@@ -547,6 +547,52 @@ static UIImage * m_image;
 
 #pragma mark - 选择图片相关 RITLPhotosViewControllerDelegate
 
+/**
+ * 选择单张照片
+ */
+- (void)interface_selectePhotoSingle{
+
+    if (@available(iOS 11.0, *)) {
+        UIScrollView.appearance.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+    }
+
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+        if ([CWUBSelectImg interface_usableCamera] == NO) {   //无权限
+
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许方石榴访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alertVC animated:YES completion:nil];
+        }else {
+
+            [self presentViewController:self.m_imagePicker animated:YES completion:nil];
+        }
+    }]];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+        if ([CWUBSelectImg interface_usablePhoto] == NO) {
+
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相册”选项中，允许方石榴访问你的相册。" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alertVC animated:YES completion:nil];
+
+        } else {
+
+            self.m_imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:self.m_imagePicker animated:YES completion:nil];
+
+        }
+
+    }]];
+
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 - (void)interface_selectePhoto{
 
     if (@available(iOS 11.0, *)) {
@@ -579,12 +625,8 @@ static UIImage * m_image;
             [self presentViewController:alertVC animated:YES completion:nil];
         } else {
 
-            if (self.m_photoController.configuration.maxCount == 1) {
-                self.m_imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-                [self presentViewController:self.m_imagePicker animated:YES completion:nil];
-            } else {
-                [self presentViewController:self.m_photoController animated:YES completion:nil];
-            }
+            [self presentViewController:self.m_photoController animated:YES completion:nil];
+
         }
 
     }]];
