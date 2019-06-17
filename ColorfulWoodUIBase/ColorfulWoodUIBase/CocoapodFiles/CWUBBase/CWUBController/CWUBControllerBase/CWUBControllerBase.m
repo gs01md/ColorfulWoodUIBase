@@ -32,6 +32,9 @@ static UIImage * m_image;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    //清空默认选中图片
+    self.m_photoController.defaultIdentifers = [NSArray new];
+
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.hidden = YES;
     if (@available(iOS 11.0, *)){
@@ -474,7 +477,11 @@ static UIImage * m_image;
         _m_imagePicker = [[UIImagePickerController alloc] init];
         _m_imagePicker.editing = YES;
         _m_imagePicker.allowsEditing = NO;
+#if TARGET_IPHONE_SIMULATOR  //模拟器
+
+#elif TARGET_OS_IPHONE      //真机
         _m_imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+#endif
         _m_imagePicker.navigationBar.tintColor = [UIColor whiteColor];;
         _m_imagePicker.delegate = self;
     }
@@ -572,7 +579,12 @@ static UIImage * m_image;
             [self presentViewController:alertVC animated:YES completion:nil];
         } else {
 
-            [self presentViewController:self.m_photoController animated:YES completion:nil];
+            if (self.m_photoController.configuration.maxCount == 1) {
+                self.m_imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                [self presentViewController:self.m_imagePicker animated:YES completion:nil];
+            } else {
+                [self presentViewController:self.m_photoController animated:YES completion:nil];
+            }
         }
 
     }]];
