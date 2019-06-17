@@ -49,6 +49,11 @@ CWUBCell_WebImgStretchDelegate
  */
 - (void)interface_selectePhoto;
 
+/**
+ * 选择单张照片
+ */
+- (void)interface_selectePhotoSingle;
+
 - (void)interface_selectPictureWithBackImg:(NSString*)img;
 
 /**
