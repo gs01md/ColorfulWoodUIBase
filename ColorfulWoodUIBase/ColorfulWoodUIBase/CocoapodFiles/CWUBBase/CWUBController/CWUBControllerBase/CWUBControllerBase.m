@@ -478,7 +478,7 @@ static UIImage * m_image;
         _m_imagePicker.editing = YES;
         _m_imagePicker.allowsEditing = NO;
 #if TARGET_IPHONE_SIMULATOR  //模拟器
-
+        _m_imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 #elif TARGET_OS_IPHONE      //真机
         _m_imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
 #endif
@@ -569,6 +569,11 @@ static UIImage * m_image;
             [self presentViewController:alertVC animated:YES completion:nil];
         }else {
 
+#if TARGET_IPHONE_SIMULATOR  //模拟器
+            self.m_imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+#elif TARGET_OS_IPHONE      //真机
+            self.m_imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+#endif
             [self presentViewController:self.m_imagePicker animated:YES completion:nil];
         }
     }]];
@@ -933,7 +938,7 @@ static UIImage * m_image;
  */
 - (void)CWUBImageView_clickEvent:(UITapGestureRecognizer*)tap{
 
-    
+
 }
 
 /**
