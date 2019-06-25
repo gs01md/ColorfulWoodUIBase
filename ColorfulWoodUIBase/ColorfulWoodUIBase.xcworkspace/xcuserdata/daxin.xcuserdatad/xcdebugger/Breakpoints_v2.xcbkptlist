@@ -29,37 +29,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ColorfulWoodUIBase/CocoapodFiles/CWUBModules/CWUBCell_TitleLeft_InputRight_TitleRightBottom/CWUBCell_TitleLeft_InputRight_TitleRightBottom2/CWUBCell_TitleLeft_InputRight_TitleRightBottom2.m"
-            timestampString = "583135979.87055"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "-m_textfield_right"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ColorfulWoodUIBase/CocoapodFiles/CWUBModules/CWUBCell_TitleLeft_InputRight_TitleRightBottom/CWUBCell_TitleLeft_InputRight_TitleRightBottom2/CWUBCell_TitleLeft_InputRight_TitleRightBottom2.m"
-            timestampString = "583135979.870587"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "-m_textfield_right"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

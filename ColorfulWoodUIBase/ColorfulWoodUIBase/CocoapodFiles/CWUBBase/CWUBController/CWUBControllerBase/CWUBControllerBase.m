@@ -843,6 +843,12 @@ static UIImage * m_image;
 
         }
 
+        if (model.m_typeName && [model.m_typeName isEqualToString:@"CWUBCell_TitleLeft_InputRight_TitleRightBottom2"]) {
+            CWUBCell_TitleLeft_InputRight_TitleRightBottom2 * cell1 = (CWUBCell_TitleLeft_InputRight_TitleRightBottom2*)cell;
+            cell1.delegate = self;
+
+        }
+
         if (model.m_type == CWUBCellType_TitleLeft_InputRight_TitleRightBottom_ImgRight) {
             CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight * cell1 = (CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight*)cell;
             cell1.delegate = self;
