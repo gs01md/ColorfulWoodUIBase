@@ -7,9 +7,12 @@
 //
 
 #import "CWUBTextView.h"
+#import <Masonry/Masonry.h>
+#import "CWUBDefine.h"
 
 @interface CWUBTextView()
 @property(nonatomic, strong)CWUBTextInfo* m_model;
+@property(nonatomic, strong)UILabel* m_placeholder;
 @end
 
 @implementation CWUBTextView
@@ -18,6 +21,18 @@
 
     if (self = [super init]) {
         [self interface_update:model];
+
+        [self addSubview:self.m_placeholder];
+
+        if (self.m_placeholder.superview != NULL) {
+            [self.m_placeholder mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.top.bottom.equalTo(self);
+                if (self.m_placeholder.superview.superview != NULL) {
+                    make.right.equalTo(self.m_placeholder.superview.superview).offset(-self.m_model.m_margin_right);
+                }
+
+            }];
+        }
     }
 
     return self;
@@ -43,6 +58,7 @@
 
         if (model.m_font) {
             self.font = model.m_font;
+            self.m_placeholder.font = model.m_font;
         }
 
         if (model.m_color) {
@@ -50,7 +66,13 @@
         }
 
         if (model.m_textPlaceholder) {
-            //self.placeholder = model.m_textPlaceholder;
+            self.m_placeholder.text = model.m_textPlaceholder;
+        }
+
+        if (self.text.length > 0) {
+            [self.m_placeholder setHidden:YES];
+        }else{
+            [self.m_placeholder setHidden:NO];
         }
 
         self.hidden = model.m_isHidden;
@@ -59,16 +81,19 @@
 
         switch (self.m_model.m_labelTextHorizontalType) {
 
-                case CWUBLabelTextHorizontalType_left:
+            case CWUBLabelTextHorizontalType_left:
                 self.textAlignment = NSTextAlignmentLeft;
+                self.m_placeholder.textAlignment = NSTextAlignmentLeft;
                 break;
 
-                case CWUBLabelTextHorizontalType_right:
+            case CWUBLabelTextHorizontalType_right:
                 self.textAlignment = NSTextAlignmentRight;
+                self.m_placeholder.textAlignment = NSTextAlignmentRight;
                 break;
 
-                case CWUBLabelTextHorizontalType_center:
+            case CWUBLabelTextHorizontalType_center:
                 self.textAlignment = NSTextAlignmentCenter;
+                self.m_placeholder.textAlignment = NSTextAlignmentCenter;
                 break;
 
             default:
@@ -86,8 +111,28 @@
         } else {
             [self setEditable:YES];
         }
+
+        if (self.m_placeholder.superview != NULL) {
+            [self.m_placeholder mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.left.top.bottom.equalTo(self);
+                if (self.m_placeholder.superview.superview != NULL) {
+                    make.right.equalTo(self.m_placeholder.superview.superview).offset(-self.m_model.m_margin_right);
+                }
+            }];
+        }
+
     }
 }
 
+- (UILabel*) m_placeholder{
+
+    if (!_m_placeholder) {
+        _m_placeholder = [UILabel new];
+        _m_placeholder.textColor = CWUBDefineCreate_Color(200, 200, 200, 1);
+        _m_placeholder.font = self.m_model.m_font;
+    }
+
+    return _m_placeholder;
+}
 
 @end
