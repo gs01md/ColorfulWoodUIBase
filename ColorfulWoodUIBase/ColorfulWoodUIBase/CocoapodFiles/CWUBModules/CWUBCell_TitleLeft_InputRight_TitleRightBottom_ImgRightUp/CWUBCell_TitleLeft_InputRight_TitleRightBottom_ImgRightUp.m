@@ -64,14 +64,33 @@
 
     [_m_lbl_rightBottom mas_remakeConstraints:^(MASConstraintMaker *make) {
 
+        /**
+         * 两种布局，一种是以右边的图片为参考，这时设置宽度
+         * 另外一种以输入框为参考
+         */
+        if (self.m_model.m_title_bottomRight.m_width >0) {
+            make.width.mas_equalTo(self.m_model.m_title_bottomRight.m_width);
+            make.centerX.equalTo(self.m_img_right);
+            make.top.equalTo(self.m_img_right.mas_bottom).offset(self.m_model.m_title_bottomRight.m_margin_top);
+        } else {
+            make.left.equalTo(self.m_textfield_right);
+            make.right.equalTo(self).offset(-self.m_model.m_title_bottomRight.m_margin_right);
+            make.top.equalTo(self.m_textfield_right.mas_bottom).offset(self.m_model.m_title_bottomRight.m_margin_top);
+        }
+
         make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_title_bottomRight.m_margin_bottom);
-        make.centerX.equalTo(self.m_img_right);
+
     }];
 
     [_m_textfield_right mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.top.equalTo(self).offset(self.m_model.m_input_right.m_margin_top);
-        make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_input_right.m_margin_bottom);
+        if (self.m_model.m_title_bottomRight.m_width >0) {
+            make.bottom.equalTo(self.m_img_sep.mas_top).offset(-self.m_model.m_input_right.m_margin_bottom);
+        } else {
+            make.bottom.equalTo(self.m_lbl_rightBottom.mas_top).offset(-self.m_model.m_input_right.m_margin_bottom);
+        }
+
         make.left.equalTo(self.m_lbl_left.mas_right).offset(self.m_model.m_input_right.m_margin_left);
         make.right.equalTo(self.m_img_right.mas_left).offset(-self.m_model.m_input_right.m_margin_right);
     }];
@@ -84,7 +103,12 @@
         make.right.equalTo(@(-self.m_model.m_bottomLineInfo.m_margin_right));
         make.bottom.equalTo(self);
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
-        make.top.equalTo(self.m_textfield_right.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+        if (self.m_lbl_rightBottom.text.length > 0) {
+            make.top.equalTo(self.m_lbl_rightBottom.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+        } else {
+            make.top.equalTo(self.m_textfield_right.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
+        }
+
     }];
 }
 
@@ -148,7 +172,7 @@
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRightUp_Model*)model{
 
     [super interface_updateWithModel:model];
-    
+
     self.m_model = model;
     [self.m_textfield_right interface_update:model.m_input_right];
     [self.m_lbl_left interface_update:model.m_title_left];
