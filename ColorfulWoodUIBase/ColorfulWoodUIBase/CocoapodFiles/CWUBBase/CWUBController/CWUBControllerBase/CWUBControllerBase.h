@@ -13,6 +13,7 @@
 #import "ColorfulWoodUIBase.h"
 #import "CWUBCell_TitleLeft_InputLeft.h"
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom.h"
+#import "CWUBCell_TitleLeft_InputRight_TitleRightBottom2.h"
 #import "CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight.h"
 #import "CWUBCell_SelectSex_Style1.h"
 #import "CWUBCell_ImgCenter.h"
@@ -31,6 +32,7 @@ UINavigationControllerDelegate,
 UIImagePickerControllerDelegate,
 CWUBCell_TitleLeft_InputLeft_Delegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_Delegate,
+CWUBCell_TitleLeft_InputRight_TitleRightBottom2_Delegate,
 CWUBCell_TitleLeft_InputRight_TitleRightBottom_ImgRight_Delegate,
 CWUBCell_SelectSex_Style1_Delegate,
 CWUBCell_ImgCenter_delegate,
