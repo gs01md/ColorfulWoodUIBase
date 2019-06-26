@@ -196,6 +196,8 @@ UITextViewDelegate
     self.m_model.m_input_right.m_text = new_text_str;
     self.m_model.m_dataOut = self.m_model.m_input_right.m_text;
 
+    [self.m_textfield_right interface_update:self.m_model.m_input_right];
+
     if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom2_Delegate_textChanged:)]) {
 
         [self.delegate CWUBCell_TitleLeft_InputRight_TitleRightBottom2_Delegate_textChanged:self.m_model.m_dataOut];
@@ -225,6 +227,8 @@ UITextViewDelegate
 
     self.m_model.m_input_right.m_text = theTextField.text;
     self.m_model.m_dataOut = self.m_model.m_input_right.m_text;
+
+    [self.m_textfield_right interface_update:self.m_model.m_input_right];
 
     if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_TitleRightBottom2_Delegate_textChanged:)]) {
 
