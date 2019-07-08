@@ -15,7 +15,6 @@ UITextViewDelegate
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) CWUBTextView *m_textfield_center;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_numRight;
-@property (nonatomic, strong) CWUBTextView *m_textfield_place;
 
 @end
 
@@ -41,7 +40,6 @@ UITextViewDelegate
 
     [self addSubview:self.m_lbl_left];
     [self addSubview:self.m_textfield_center];
-    [self addSubview:self.m_textfield_place];
     [self addSubview:self.m_lbl_numRight];
     [self addSubview:self.m_img_sep];
 
@@ -93,14 +91,6 @@ UITextViewDelegate
 
     }];
 
-    [_m_textfield_place mas_remakeConstraints:^(MASConstraintMaker *make) {
-
-        make.left.top.right.bottom.equalTo(self.m_textfield_center);
-
-    }];
-
-
-
     [self.m_img_sep mas_remakeConstraints:^(MASConstraintMaker *make) {
 
         make.left.equalTo(@(self.m_model.m_bottomLineInfo.m_margin_left));
@@ -109,6 +99,7 @@ UITextViewDelegate
         make.height.equalTo(@(self.m_model.m_bottomLineInfo.m_height));
         make.top.equalTo(self.m_textfield_center.mas_bottom).offset(self.m_model.m_bottomLineInfo.m_margin_top);
     }];
+
 }
 
 -(CWUBCell_TitleLeft_InputRight_NumRight_Model*) m_model{
@@ -157,34 +148,12 @@ UITextViewDelegate
     return _m_textfield_center;
 }
 
-- (CWUBTextView *)m_textfield_place{
-
-    if (!_m_textfield_place) {
-        _m_textfield_place = [[CWUBTextView alloc] initWithModel:self.m_model.m_input_center];
-        _m_textfield_place.userInteractionEnabled = NO;
-        _m_textfield_place.editable = NO;
-        _m_textfield_place.backgroundColor = [UIColor clearColor];
-    }
-
-    return _m_textfield_place;
-}
-
 - (void) interface_updateWithModel:(CWUBCell_TitleLeft_InputRight_NumRight_Model*)model{
 
     [super interface_updateWithModel:model];
 
     self.m_model = model;
     [self.m_textfield_center interface_update:model.m_input_center];
-
-    if (model.m_input_center.m_text.length > 0) {
-        [self.m_textfield_place setHidden:YES];
-    } else {
-        [self.m_textfield_place setHidden:NO];
-        [self.m_textfield_place interface_update:model.m_input_center];
-        self.m_textfield_place.textColor = model.m_input_center.m_colorPlaceholder;
-        self.m_textfield_place.text = model.m_input_center.m_textPlaceholder;
-    }
-
 
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_numRight interface_update:model.m_title_numRight];
@@ -270,13 +239,7 @@ UITextViewDelegate
     self.m_lbl_numRight.text = [NSString stringWithFormat:@"%lu/%d",(unsigned long)str.length,self.m_model.m_input_center.m_limitInputNum];
     self.m_model.m_input_center.m_text = str;
 
-    if (self.m_model.m_input_center.m_text.length > 0) {
-        [self.m_textfield_place setHidden:YES];
-    } else {
-        [self.m_textfield_place setHidden:NO];
-        self.m_textfield_place.textColor = self.m_model.m_input_center.m_colorPlaceholder;
-        self.m_textfield_place.text = self.m_model.m_input_center.m_textPlaceholder;
-    }
+    [self.m_textfield_center interface_update:self.m_model.m_input_center];
 
     if ([self.delegate respondsToSelector:@selector(CWUBCell_TitleLeft_InputRight_NumRight_Delegate_textChanged:)]) {
 

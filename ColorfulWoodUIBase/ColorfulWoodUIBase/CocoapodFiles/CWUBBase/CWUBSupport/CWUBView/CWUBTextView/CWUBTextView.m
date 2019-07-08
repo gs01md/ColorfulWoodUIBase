@@ -114,7 +114,8 @@
 
         if (self.m_placeholder.superview != NULL) {
             [self.m_placeholder mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.left.top.bottom.equalTo(self);
+                make.left.mas_equalTo(4);
+                make.top.bottom.equalTo(self);
                 if (self.m_placeholder.superview.superview != NULL) {
                     make.right.equalTo(self.m_placeholder.superview.superview).offset(-self.m_model.m_margin_right);
                 }
@@ -130,6 +131,7 @@
         _m_placeholder = [UILabel new];
         _m_placeholder.textColor = CWUBDefineCreate_Color(200, 200, 200, 1);
         _m_placeholder.font = self.m_model.m_font;
+        _m_placeholder.numberOfLines = 0;
     }
 
     return _m_placeholder;
