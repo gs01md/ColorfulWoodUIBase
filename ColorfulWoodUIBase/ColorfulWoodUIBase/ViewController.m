@@ -162,6 +162,15 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 
     NSMutableArray * data = [NSMutableArray new];
 
+    [CWUBCell_ImgRightTopTwo_TitleRightBottomTwo_Model tester_dataWithArray:data];
+
+    [CWUBCell_TitleRightTwo_Model tester_dataWithArray:data];
+
+    [CWUBCell_TitleLeft_ImgFollow_Model tester_dataWithArray:data];
+    
+    [CWUBCell_TitleLeft_ButtonRight_Model tester_dataWithArray:data];
+    [CWUBCell_TitleLeft_ButtonRight_Model tester_dataWithArray3:data];
+
     [CWUBCell_TitleLeft_InputRight_TitleRightBottom2_Model tester_dataWithArray:data];
     [CWUBCell_Company_Two_Model tester_dataWithArray:data];
     [CWUBCell_Company_Two_Model tester_dataWithArray:data];
@@ -174,7 +183,7 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 
     [CWUBCell_ImgCenter_Model tester_dataWithArray:data];
 
-    [CWUBCell_TitleLeft_ImgFollow_Model tester_dataWithArray:data];
+
     [CWUBCell_TitleLeft_InputRight_NumRightBottom_Model tester_dataWithArray:data];
     [CWUBCell_TitleLeft_InputRight_NumRight_Model tester_dataWithArray:data];
 
@@ -228,8 +237,7 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 
     [CWUBCell_SevenImg_Model tester_dataWithArray:data];
 
-    [CWUBCell_TitleLeft_ButtonRight_Model tester_dataWithArray:data];
-    [CWUBCell_TitleLeft_ButtonRight_Model tester_dataWithArray3:data];
+
 
     [CWUBCell_ImgLeft_TitleRightTopTwo_TitleRightBottom_Model tester_dataWithArray:data];
     [CWUBCell_Company_One_Model tester_dataWithArray:data];

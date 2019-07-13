@@ -41,11 +41,40 @@
 
     CWUBCell_TitleLeft_ButtonRight_Model *model = [CWUBCell_TitleLeft_ButtonRight_Model new];
     model.m_type = CWUBCellType_TitleLeft_ButtonRight;
-    model.m_bottomLineInfo.m_color = [UIColor redColor];
-    model.m_bottomLineInfo.m_margin_left = 60.;
-    model.m_bottomLineInfo.m_margin_right = 20.;
-    model.m_bottomLineInfo.m_margin_top = 20.;
-    model.m_title = [[CWUBTextInfo alloc] initWithText:@"标题" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+
+    model.m_title = [[CWUBTextInfo alloc] initWithText:@"标题\n标题222222" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];
+
+
+    NSUInteger loc1 = 0, len1 = 0,loc2 = 0, len2 = 0;
+    NSString * str = @"订单：\n", *strT1 = @"笔    金额：";
+    len1 = str.length;
+
+    str = [NSString stringWithFormat:@"%@%@",str , strT1];
+    loc2 = len1;
+    len2 = strT1.length;
+
+
+    CWUBAttributedTextInfo * info = [[CWUBAttributedTextInfo alloc] initWithText: str];
+    model.m_title = info;
+    [info interface_addSingle:[[CWUBAttributedSingleRange alloc]
+                                initWithRange:NSMakeRange(loc1, len1)
+                                attributes:[CWUBAttributedSingleAttribute
+                                            createWithName:NSForegroundColorAttributeName
+                                            value:CWUBDefineCreate_ColorRGB(0x86ADFB)],
+                                [CWUBAttributedSingleAttribute
+                                 createWithName:NSFontAttributeName
+                                 value:[UIFont fontWithName:@"PingFang-SC-Regular" size:15.]],nil],nil
+     ];
+    [info interface_addSingle:[[CWUBAttributedSingleRange alloc]
+                                initWithRange:NSMakeRange(loc2, len2)
+                                attributes:[CWUBAttributedSingleAttribute
+                                            createWithName:NSForegroundColorAttributeName
+                                            value:CWUBDefineCreate_ColorRGB(0x999999)],
+                                [CWUBAttributedSingleAttribute
+                                 createWithName:NSFontAttributeName
+                                 value:[UIFont fontWithName:@"PingFang-SC-Regular" size:11.]],nil],nil
+     ];
+
     model.m_title.m_margin_left = 50.;
     model.m_btnImg = [[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10];
     model.m_btnImg.m_margin_right = 50.;
@@ -53,7 +82,12 @@
     model.m_btnImg.m_margin_bottom = 24.;
     model.m_title.m_margin_top = 24.;
     model.m_title.m_margin_bottom = 24.;
+    
     model.m_bottomLineInfo.m_height = 1.;
+    model.m_bottomLineInfo.m_color = [UIColor redColor];
+    model.m_bottomLineInfo.m_margin_left = 60.;
+    model.m_bottomLineInfo.m_margin_right = 20.;
+    model.m_bottomLineInfo.m_margin_top = 20.;
 
     [data addObject:model];
 

@@ -54,7 +54,13 @@ UITextViewDelegate
 
     [_m_lbl_left mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.m_model.m_title_left.m_margin_left);
-        make.centerY.equalTo(self.m_imgView_follow);
+
+        if(!self.m_model.m_title_isTopView){
+            make.top.equalTo(self).offset(self.m_model.m_title_left.m_margin_top);
+        }else{
+            make.centerY.equalTo(self.m_imgView_follow);
+        }
+
         if (self.m_model.m_title_left.m_width > 1) {
             make.width.equalTo(@(self.m_model.m_title_left.m_width));
         }

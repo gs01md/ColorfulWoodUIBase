@@ -27,7 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, strong) CWUBImageInfo * m_img_followLogo;
 
-
+/**
+ * 标题 是否与该视图顶部对齐 ；
+ * 默认为否：与图片对齐
+ */
+@property(nonatomic, assign)BOOL m_title_isTopView;
 
 @end
 
