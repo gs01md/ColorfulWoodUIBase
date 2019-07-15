@@ -165,7 +165,7 @@
 /**
  * 不执行，因为在 self.m_controller 中执行
  */
-- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
+- (void)CWUBLabel_clickEvent:(CWUBUITapGestureRecognizer*)tap{
     NSLog(@"消除警告");
 }
 

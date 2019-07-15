@@ -951,7 +951,7 @@ static UIImage * m_image;
  * 点击Label事件
  * 此处解决崩溃，需要时可在子类重写
  */
-- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
+- (void)CWUBLabel_clickEvent:(CWUBUITapGestureRecognizer*)tap{
 
 }
 

@@ -536,7 +536,7 @@ CWUBCell_TitleLeft_InputRight_NumRightBottom_Delegate
 /**
  * 通用点击CWUBLabelWithModel 事件
  */
-- (void)CWUBLabel_clickEvent:(UITapGestureRecognizer*)tap{
+- (void)CWUBLabel_clickEvent:(CWUBUITapGestureRecognizer*)tap{
     NSString * code = [CWUBLabelWithModel interface_getEventCode:tap];
     NSLog(@"%@",code);
 
