@@ -71,7 +71,7 @@
         make.width.mas_equalTo(self.m_model.m_img_right.m_width);
         make.height.mas_equalTo(self.m_model.m_img_right.m_height);
     }];
-    
+
     [_m_lbl_right mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.m_img_right.mas_bottom).offset(self.m_model.m_title_right.m_margin_top);
         make.centerX.equalTo(self.m_img_right);
@@ -202,6 +202,8 @@
 
     [self.m_lbl_right interface_update:model.m_title_right];
     [self.m_lbl_right2 interface_update:model.m_title_right2];
+    [self.m_img_right interface_update:model.m_img_right];
+    [self.m_img_right2 interface_update:model.m_img_right2];
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{

@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 停止计时器
  */
 @property(nonatomic, assign)BOOL m_stopTimer;
++(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model *)tester_dataWithArray2:(NSMutableArray *)data;
 @end
 
 NS_ASSUME_NONNULL_END

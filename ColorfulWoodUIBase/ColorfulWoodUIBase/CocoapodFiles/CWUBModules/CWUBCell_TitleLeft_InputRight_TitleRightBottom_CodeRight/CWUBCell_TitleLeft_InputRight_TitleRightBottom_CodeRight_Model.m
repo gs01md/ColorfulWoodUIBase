@@ -82,4 +82,29 @@
     return model33;
 }
 
++(CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model *)tester_dataWithArray2:(NSMutableArray *)data{
+
+    CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model * model33 = [CWUBCell_TitleLeft_InputRight_TitleRightBottom_CodeRight_Model new];
+    model33.m_title_left = [[CWUBTextInfo alloc] initWithText:@"产品单价" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16] color:CWUBDefineCreate_Color(39., 39., 39., 1)];
+    model33.m_title_bottomRight = [[CWUBTextInfo alloc] initWithText:@"" font:[UIFont fontWithName:@"PingFangSC-Regular" size:12] color:CWUBDefineCreate_Color(222, 67, 64, 1)];
+    model33.m_title_bottomRight.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_right;
+    model33.m_input_right = [[CWUBTextInfo alloc] initWithText:@"" font:[UIFont fontWithName:@"PingFangSC-Regular" size:16] color:CWUBDefineCreate_ColorRGB(0x1A1A1A)];
+    model33.m_input_right.m_labelTextHorizontalType = CWUBLabelTextHorizontalType_left;
+    //model33.m_input_right.m_regex = ColorfulWoodRegex_1;
+    model33.m_input_right.m_textPlaceholder = @"请输入内容";
+    model33.m_input_right.m_margin_bottom = 20.;
+    model33.m_input_right.m_margin_top = 20.;
+    model33.m_title_bottomRight.m_margin_bottom = 1.;
+    model33.m_title_left.m_width = [model33.m_title_left interface_setWidthByContent];
+    model33.m_bottomLineInfo.m_color = [UIColor blueColor];
+    model33.m_title_right = [[CWUBTextInfo alloc] initWithText:@"元" font:[UIFont fontWithName:@"PingFangSC-Regular" size:13.] color:CWUBDefineCreate_ColorRGB(0x999999)];
+    model33.m_title_right.m_width = 20.;
+    model33.m_title_right.m_height = 25;
+    model33.m_title_right.m_valueOpt = 60;
+    [data addObject:model33];
+
+    return model33;
+}
+
+
 @end
