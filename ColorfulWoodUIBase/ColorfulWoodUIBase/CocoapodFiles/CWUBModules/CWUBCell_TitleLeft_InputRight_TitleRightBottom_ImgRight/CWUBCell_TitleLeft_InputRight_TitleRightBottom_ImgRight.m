@@ -13,7 +13,7 @@
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_left;
 @property (nonatomic, strong) CWUBTextfieldWithModel *m_textfield_right;
 @property (nonatomic, strong) CWUBLabelWithModel *m_lbl_rightBottom;
-@property (nonatomic, strong) UIImageView * m_img_right;
+@property (nonatomic, strong) CWUBImageViewWithModel * m_img_right;
 
 
 @end
@@ -132,10 +132,10 @@
     return _m_textfield_right;
 }
 
--(UIImageView *)m_img_right{
+-(CWUBImageViewWithModel *)m_img_right{
 
     if(!_m_img_right){
-        _m_img_right = [UIImageView new];
+        _m_img_right = [CWUBImageViewWithModel new];
         [_m_img_right setImage:[UIImage imageNamed:self.m_model.m_img_right.m_imgName]];
         _m_img_right.contentMode = UIViewContentModeScaleAspectFill;
         _m_img_right.clipsToBounds = YES;
@@ -152,6 +152,8 @@
     [self.m_textfield_right interface_update:model.m_input_right];
     [self.m_lbl_left interface_update:model.m_title_left];
     [self.m_lbl_rightBottom interface_update:model.m_title_bottomRight];
+    [self.m_img_right interface_update:model.m_img_right];
+    
     if (self.m_model.m_bottomLineInfo.m_color) {
         self.m_img_sep.backgroundColor = self.m_model.m_bottomLineInfo.m_color;
     }else{

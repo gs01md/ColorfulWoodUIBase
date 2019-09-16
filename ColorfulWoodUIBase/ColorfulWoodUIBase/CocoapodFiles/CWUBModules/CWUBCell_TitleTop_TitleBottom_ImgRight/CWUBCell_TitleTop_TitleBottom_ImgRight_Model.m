@@ -50,19 +50,23 @@
 
 +(CWUBModelBase *)tester_dataWithArray:(NSMutableArray *)data{
 
-    CWUBCell_TitleTop_TitleBottom_ImgRight_Model * model15 = [CWUBCell_TitleTop_TitleBottom_ImgRight_Model new];
+    CWUBCell_TitleTop_TitleBottom_ImgRight_Model * model = [CWUBCell_TitleTop_TitleBottom_ImgRight_Model new];
 
-    model15.m_title_top = [[CWUBTextInfo alloc] initWithText:@"请选择行业" font:[CWUBDefine fontOptButton] color:[UIColor blackColor]];;
-    model15.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"选择行业1" font:[CWUBDefine fontOptButton] color:[UIColor redColor]];
-    model15.m_bottomLineInfo.m_color = [UIColor redColor];
+    model.m_title_top = [[CWUBTextInfo alloc] initWithText:@"请选择行业请选择行业请选择行业请选择行业请选择行业请选择行业请选择行业" font:[UIFont fontWithName:@"PingFang-SC-Regular" size:15.] color:CWUBDefineCreate_ColorRGB(0x86ADFB)];;
+    model.m_title_bottom = [[CWUBTextInfo alloc] initWithText:@"选择行业1请选择行业请选择行业请选择行业请选择行业" font:[UIFont fontWithName:@"PingFang-SC-Regular" size:11.] color:CWUBDefineCreate_ColorRGB(0x999999)];
+    model.m_title_top.m_margin_bottom = 1;
 
-    model15.m_img_right = [[CWUBImageInfo alloc] initWithName:@"right" width:10 height:10];
+    model.m_img_right = [[CWUBImageInfo alloc] initWithName:@"right" width:6 height:8];
 
+    model.m_bottomLineInfo.m_color = CWUBDefineCreate_ColorRGB(0xE8E8E8);
+    model.m_bottomLineInfo.m_margin_left = CWUBDefine_Width(15);
+    model.m_bottomLineInfo.m_margin_right = CWUBDefine_Width(1);
+    model.m_bottomLineInfo.m_margin_top = CWUBDefine_Width(15);
     if (data) {
-        [data addObject:model15];
+        [data addObject:model];
     }
 
-    return model15;
+    return model;
 
 }
 @end
